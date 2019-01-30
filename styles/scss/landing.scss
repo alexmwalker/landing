@@ -19,6 +19,7 @@ $br: 3px;
 
 @import 'footer';
 
+@import 'media-tweaks';
 //@import '3d';
 
 
@@ -70,8 +71,3 @@ button.pink{
 [class~="grid"], [class*="grid-"], [class*="grid_"] {
   margin: 0 0.5rem;  }*/
 
-@media (max-width: 48em) {
-  .landing-parent .laptop {
-    margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1);
-  }
-}

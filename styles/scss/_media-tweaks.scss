@@ -1,0 +1,8 @@
+/* While our default is to  try to scale everything relative to the  HTML{} there are elements 
+that need device level targeting. This is where we do it. */
+
+@media (max-width: 48em) {
+  .landing-parent .laptop {
+    margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1);
+  }
+}
