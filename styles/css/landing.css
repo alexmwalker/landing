@@ -2016,7 +2016,9 @@ footer.mainfooter {
 that need device level targeting. This is where we do it. */
 @media (max-width: 48em) {
   .landing-parent .laptop {
-    margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1); } }
+    margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1); }
+  .landing-parent {
+    background-size: auto 100%; } }
 
 .pink {
   height: calc(var(--baseline));
