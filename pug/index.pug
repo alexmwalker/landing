@@ -1,40 +1,32 @@
-doctype html
-head
-  meta(charset="utf-8")
-  title Styles - Styles 
-  meta(name="description" content="")
-  meta(name="author" content="")
-  link(rel="stylesheet" type="test/css" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css")
-  // The Grid system
-  link(rel="stylesheet" type="test/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,600,700")
-  // Font
-  link(rel="stylesheet" type="text/css" href="styles/css/base.css")
-  
-body.borders.-labelling.vertical-rhythm
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title SitePoint - Learn with Books, Video and Code
+    meta(name='description', content='SitePoint Library')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
 
-  include header.pug
-  
-  include titling.pug
+    link(rel='stylesheet', type='text/css', href='styles/css/landing.css')
 
-  include hero-book.pug
+    script(src="https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js", type="text/javascript")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
 
-  include who.pug
+  body.-vr.-labelling.-borders
 
-  include readers-say.pug
+    include header-simple.pug
 
-  include what.pug
+    include hero-landing.pug 
 
-  include authors.pug
+    include tech-landing.pug 
 
-  include feedback.pug
+    include book-sushi-train.pug
 
-  include outline.pug
+    include reeeder.pug
 
-  include footer.pug
+    include authors.pug
 
-  include modal-book.pug
+    include community-landing.pug
 
-  include scripts.pug
+    include reviews-1.pug
 
-
-
+    include footer.pug
