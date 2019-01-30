@@ -1,0 +1,157 @@
+doctype html
+head
+  meta(charset="utf-8")
+  title Styles - Styles 
+  meta(name="description" content="")
+  meta(name="author" content="")
+  link(rel="stylesheet" type="test/css" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css")
+  // The Grid system
+  link(rel="stylesheet" type="test/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,600,700")
+  // Font
+  link(rel="stylesheet" type="text/css" href="styles/css/base.css")
+  link(rel="stylesheet" type="text/css" href="styles/css/hopscotch.min.css")
+  link(rel="stylesheet" type="text/css" href="styles/css/demo.css")
+
+body.-borders.-labelling.-vertical-rhythm
+
+  include header.pug
+  
+  section.topoffset
+    .container
+      .grid-12
+        .col-7
+          h1 Welcome to your library
+          p Manage all your books and course here. 
+            button#startTourBtn
+              | Take a tour 
+          .library.grid-12
+            h3#slide1 Your Personal Library
+            table.library-list
+              tr
+                td
+                  .book.size-thumbnail.oclock-12.aspect8-10
+                    a(href="#openModal")
+                      .cover
+                        img(src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png" alt="Book cover: HTML5 Games")
+                td
+                  h3.product-title
+                  | HTML5 Games: Novice to Ninja 
+                  .text-center
+                    a(href="#downloadPDF"  class="button download") PDF
+                    a(href="#downloadepub" class="button epub")     ePub
+                    a(href="#openModal"    class="button download") Read Now
+              tr.placeholder
+                td 
+                td Add books and courses here
+              tr.placeholder
+                td
+                td Add books and courses here
+
+        .col-5
+          .profile.grid-12
+            .col-3 
+              img(src="https://api.adorable.io/avatars/285/daniel.graziano@sitepoint.com.png" class="avatar")
+            .col-9
+              div.profile-name
+               | daniel.graziano@sitepoint.com
+              .small 
+                | Member since December 2017
+              .interests
+                .small 
+                  | Interested in:
+                ul.small#slide5 
+                  li
+                    a(href="HTML" class="topic-html")
+                      | HTML
+                  li
+                    a(href="HTML" class="topic-design")
+                      | DESIGN
+                  li
+                    a(href="HTML" class="topic-php")
+                      | PHP     
+                  li
+                    a(href="HTML" class="change")
+                      | Change &#9660;                   
+          .freebie-now.grid-12
+            .col-12
+              h3 This Week's Freebie
+              p.small Add this to your personal library. 
+            .col-3.placeholder#slide2 
+              .book.size-thumbnail.oclock-12
+                a(href="#openModal")
+                  .cover
+                    img(src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/master/cssmaster1/cssmaster1.png" alt="Book cover: CSS Master")
+
+            .col-9
+              h4.product-title 
+                | CSS Master
+              .text-center
+                a(href="#downloadPDF" class="button download") Add to Library
+          .freebie-now.grid-12
+            .col-12
+              h3 Next Week’s Freebie
+              p.small Come back next 
+               b Monday, 25th June 
+               | to grab this course for free. 
+            .col-3.placeholder#slide3 
+              .book.size-thumbnail.oclock-12
+                a(href="#openModal")
+                  .cover
+                    img(src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/master/react1/react-tools.png" alt="Book cover: CSS Master")
+            .col-9
+              h4.product-title 
+                | React: Tools &amp; Resources
+              .text-center
+                a(href="#downloadPDF" class="button download") 	&#9200; Alert me when this is FREE
+
+
+
+
+      .grid-12-equalHeight
+        h2.col-12
+          | Premium Resources (Access the lot for $9)
+        .col-3
+          .card#slide4 
+            div(class="card-banner" style="background-image:url(https://learnable-images.s3.amazonaws.com/courses/fc200e21-78f4-4a8b-a7e4-3557ac658711.png)")
+              p.avatar
+                | Manjunath M
+                img(src="https://secure.gravatar.com/avatar/c5f37e5df341ee87b4379a1393d7d66e?s=96&d=mm&r=g")
+
+            h3 React Router v4: The Complete Guide
+            p When you need to navigate through a React application with multiple views, you’ll need a router to manage the URLs. React Router takes care of that.
+        .col-3
+          .card
+            div(class="card-banner" style="background-image:url(https://learnable-images.s3.amazonaws.com/courses/bbbc343d-0677-4ee0-989b-3f3aebb91f24.png)")
+              p.avatar
+                | Adelle Charles
+                img(src="https://secure.gravatar.com/avatar/e24947ec7363c053987c1a29d2f24b15?s=96&d=mm&r=g")
+            h3 Quick Tip: How to Build Your Custom Theme for Telescope Nova  
+            p In this quick tip, Jelena Jovanovic shows how to customize the Telescope Nova theme, both markup and stylesheet with these easy-to-follow steps.
+        .col-3
+          .card
+            div(class="card-banner" style="background-image:url(https://d2sis3lil8ndrq.cloudfront.net/courses/d02936b1-6ecd-45e8-8a86-f9534f72e7e7_medium.png)")
+              p.avatar
+                | Maria Antonietta Perna
+                img(src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/01/1422003380perna-96x96.jpg")
+            h3 How to Tell if React is the Best Fit for Your Next Project 
+            p If you’re new to React, you could benefit from learning from React developers who’ve learned valuable lessons about the framework.
+        .col-3
+          .card
+            div(class="card-banner" style="background-image:url(https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/04/1492644427RvsA_B-01.png)")
+              p.avatar
+                | Pavels Jelisejevs
+                img(src="https://s3.amazonaws.com/uifaces/faces/twitter/kareemhmostafa/128.jpg")
+            h3 React vs Angular: An In-depth Comparison
+            p Today’s bipolar landscape of JavaScript frameworks has left many developers struggling to pick a side in this debate.
+
+  include footer.pug
+
+  include modal-book.pug
+
+  script(src='scripts/jquery-1.10.2.js')
+  script(src='scripts/hopscotch.min.js')
+  script(src='scripts/tour.js')
+  //include scripts.pug
+
+
+

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 549 45">
+<style>
+.navtext{
+  fill: #F5EFEA;
+  font-family: Roboto; sans-serif,
+  font-size: 9; letter-spacing: 0em; white-space:pre;
+}
+</style>
+  <path fill="#000" d="M.321.993h547.99v43.111H.321z"/>
+  <path fill="#222" d="M.321 23.027h547.99v21.076H.321z"/>
+  <text class="navtext">
+    <tspan x="471.669" y="37.125">Download</tspan>
+  </text>
+  <text class="navtext">
+    <tspan x="47.264" y="37.125">Chapters</tspan>
+  </text>
+  <text class="navtext">
+    <tspan x="124.864" y="37.125">My Bookmarks</tspan>
+  </text>
+  <text class="navtext">
+    <tspan x="231.205" y="37.125">Add Bookmarks</tspan>
+  </text>
+  <path fill="#fff" d="M98.519 36.44l-.959-.959 3.833-3.832 3.832 3.832-.958.958-2.874-2.874-2.874 2.874zM196.716 36.44l-.958-.959 3.832-3.832 3.832 3.832-.958.958-2.874-2.874-2.874 2.874z"/>
+  <text class="navtext">
+    <tspan x="468.795" y="16.048">Dashboard</tspan>
+  </text>
+  <text class="navtext">
+    <tspan x="411.313" y="16.048">Library</tspan>
+  </text>
+  <text fill="#F5EFEA" font-family="Roboto" font-size="11" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+    <tspan x="38.642" y="17.904">Your First Week with Bootstrap</tspan>
+  </text>
+  <path fill="#fff" d="M219.708 30.733a1 1 0 0 1 1-1h4.707a1 1 0 0 1 1 1v7.622l-3.353-2.155-3.354 2.155v-7.622z"/>
+  <path stroke="#5F5F5F" stroke-width=".5" d="M211.336 26.859v15.329M112.66 26.859v15.329"/>
+  <path fill="#F5EFEA" d="M394.069 8.657h1.916v4.79h-1.916zM396.943 8.657h1.916v4.79h-1.916zM398.959 7.861l2.775-.747 2.024 7.514-2.775.747zM394.069 14.405h1.916v.958h-1.916zM396.943 14.405h1.916v.958h-1.916zM394.069 6.741h1.916v.958h-1.916zM396.943 6.741h1.916v.958h-1.916z"/>
+  <path fill="#F5EFEA" fill-rule="evenodd" d="M365.893 13.586h3.115l.598 1.777h1.889l-3.227-8.622h-1.646l-3.21 8.622h1.889l.592-1.777zm2.636-1.439h-2.156l1.072-3.227 1.084 3.227z" clip-rule="evenodd"/>
+  <path fill="#F5EFEA" d="M374.396 7.645h-1.102v1.103h-1.103V9.85h1.103v1.103h1.102V9.85h1.103V8.748h-1.103V7.645zM372.191 12.055h3.308v1.103h-3.308v-1.103zM459.349 28.775c.191 0 .345.161.345.36v2.634h1.562c.308 0 .462.387.244.613l-2.52 2.626a.336.336 0 0 1-.488 0l-2.52-2.626c-.218-.226-.064-.613.243-.613h1.563v-2.634c0-.199.154-.36.345-.36h1.226z"/>
+  <path fill="#F5EFEA" fill-rule="evenodd" d="M458.459 35.667l-1.16-1.144h-2.529a.352.352 0 0 0-.345.36v2.155c0 .199.154.36.345.36h7.932c.191 0 .345-.161.345-.36v-2.155a.352.352 0 0 0-.345-.36h-2.529l-1.193 1.144a.336.336 0 0 1-.521 0zm2.26 1.371a.44.44 0 0 0 .431-.449.44.44 0 0 0-.431-.449.44.44 0 0 0-.431.45.44.44 0 0 0 .431.448zm1.638-.449a.44.44 0 0 1-.431.45.44.44 0 0 1-.431-.45.44.44 0 0 1 .431-.449.44.44 0 0 1 .431.45z" clip-rule="evenodd"/>
+  <path fill="#F5EFEA" d="M459.215 7.699h-.958v.958h-3.832v.958h3.832v.958h.958v-.958h3.832v-.958h-3.832v-.958zM463.047 11.53h-1.916v-.957h-.958v.958h-5.748v.958h5.748v.958h.958v-.958h1.916v-.958zM463.047 14.405v.958h-5.748v.958h-.958v-.958h-1.916v-.958h1.916v-.958h.958v.958h5.748z"/>
+</svg>

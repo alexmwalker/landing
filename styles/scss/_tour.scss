@@ -1,0 +1,54 @@
+$color-html: #f60;
+$color-php: rgb(111, 11, 241);
+$color-design: rgb(24, 211, 102);
+$color-js: rgb(212, 209, 11);
+$color-react: rgb(1, 186, 211);
+$color-angular: rgb(241, 46, 11);
+$color-nodejs: rgb(77, 236, 3);
+$color-css: rgb(11, 115, 212);
+
+.product-title{
+  font-weight: 500;
+}
+.placeholder{
+  background-color: #ddd;
+  border: 1px #bbb solid;
+  padding-top: $line-height/2;
+  text-align: center;
+}
+.interests{
+  padding-top: $line-height/2;
+  ul li{
+    display: inline-block;
+    margin: $line-height/2 .25rem;
+    font-size: .5rem;
+    a {
+      padding: 0.15rem 0.25rem;
+      border: 1px rgba(255,255,255,0.3) solid;
+      color: #fff;
+      &.topic-html{    background:  $color-html;}
+      &.topic-php{     background:  $color-php;}
+      &.topic-design{  background:  $color-design;}
+      &.topic-js{      background:  $color-js;}
+      &.topic-react{   background:  $color-react;}
+      &.topic-angular{ background:  $color-angular;}
+      &.topic-nodejs{  background:  $color-nodejs;}
+      &.topic-css{     background:  $color-css;}
+    }
+  }
+}
+.freebie-now{
+  .size-thumbnail{
+    transform: scale(.75);
+    margin: -1em 0rem -1rem -0.5rem;
+  }
+  h3{
+    margin-bottom: 0;
+  }
+}
+.library{
+  background: #eee; 
+  margin: 0 .25rem;
+  border: 1px solid #555;
+  border-radius: 2px;
+}

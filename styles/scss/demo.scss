@@ -1,0 +1,111 @@
+$line-height: 1.7778rem;
+
+.profile{
+  background: #435069;
+  padding: 1.7778rem 1rem 0;
+  color: #fff;
+  border-radius: 3px;
+  .avatar{
+    width: 80%;
+    border-radius: 50%;
+    border: 3px solid #000;
+  }
+}
+
+.product-title{
+  font-weight: 500;
+  margin-bottom: 0
+}
+
+.button{
+  color:#fff;
+  background-color: #9B51E0;
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 1.7778rem*2;
+  padding: .45rem 1rem;
+  margin-right: 1rem;
+}
+
+
+.card {
+  //padding: $line-height/2 0;
+  background: #f4f6f8;
+  border-radius: 3px;
+  text-align: left;
+  line-height: $line-height/2;
+  color: #445;
+  box-shadow: 3px 3px 4px rgba(38, 38, 38, 0.1);
+  margin-bottom: $line-height/2;
+  //padding-bottom: 0.8889rem;
+  h3{
+    margin: $line-height 1rem 0.8889rem;
+  }
+  p {
+    font-size: .75rem;
+    margin: 0 1rem 0.8889rem;
+  }
+}
+
+.card-banner{
+  height: $line-height * 4;
+  background-size: 100% auto;
+  position: relative;
+  p {
+    margin: 0 1rem;
+    color:#fff;
+    position: absolute;
+    bottom: 0;
+    line-height: $line-height *1.5;
+    right: 0;
+    //outline: 1px green dashed;
+    &.avatar {
+      text-align: right;
+      font-size: .65rem;
+      padding-right: 4.2rem;
+      margin: $line-height/2 0 $line-height/-2;
+      //outline: 1px red dashed;
+      text-shadow: 0 0 4px rgba(0,0,0,.4);
+      img {
+        position: absolute;
+        bottom: $line-height/-3.5;
+        right: 1rem;
+        margin-left: 4rem;
+        z-index: 0;
+        width: $line-height * 1.5;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+  }
+}
+td{
+  padding: 0.5rem 2rem;
+}
+table{
+  width: 100%;
+}
+
+tr.placeholder{
+  background: #eee;
+  border: 1px #bbb solid;
+  padding-top: 0.8889rem;
+  text-align: center;
+  color: #bbb;
+  font-size: .75rem;
+  td:nth-of-type(1){
+    position: relative;
+    height: $line-height *2;
+  &:before{
+    display: block;
+    position: absolute;
+    content: '⬚';
+    font-size: $line-height * 1;
+    top: $line-height ;
+    left: 45%;
+    }
+  }
+}
+tr:nth-child(odd){
+  background: #ddd;
+}

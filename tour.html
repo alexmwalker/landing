@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Styles - Styles </title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" type="test/css" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css">
+  <!-- The Grid system-->
+  <link rel="stylesheet" type="test/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,600,700">
+  <!-- Font-->
+  <link rel="stylesheet" type="text/css" href="styles/css/base.css">
+  <link rel="stylesheet" type="text/css" href="styles/css/hopscotch.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/css/demo.css">
+</head>
+<body class="-borders -labelling -vertical-rhythm">
+  <!-- header.pug-->
+  <header class="sitepoint">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-3">
+          <div class="branding"> <i class="fas fa-bars hamburger"></i><img class="branding-logo" src="https://gistcdn.githack.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"></div>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-3">
+          <div class="dash-controls right-text"><i class="fas fa-tachometer-alt"></i> Dashboard</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="topoffset">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-7">
+          <h1>Welcome to your library</h1>
+          <p>Manage all your books and course here. 
+            <button id="startTourBtn">Take a tour </button>
+          </p>
+          <div class="library grid-12">
+            <h3 id="slide1">Your Personal Library</h3>
+            <table class="library-list">
+              <tr>
+                <td>
+                  <div class="book size-thumbnail oclock-12 aspect8-10"><a href="#openModal">
+                      <div class="cover"><img src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png" alt="Book cover: HTML5 Games"></div></a></div>
+                </td>
+                <td>
+                  <h3 class="product-title"></h3>HTML5 Games: Novice to Ninja 
+                  <div class="text-center"><a class="button download" href="#downloadPDF">PDF</a><a class="button epub" href="#downloadepub">    ePub</a><a class="button download" href="#openModal">Read Now</a></div>
+                </td>
+              </tr>
+              <tr class="placeholder">
+                <td> </td>
+                <td>Add books and courses here</td>
+              </tr>
+              <tr class="placeholder">
+                <td></td>
+                <td>Add books and courses here</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="profile grid-12">
+            <div class="col-3"> <img class="avatar" src="https://api.adorable.io/avatars/285/daniel.graziano@sitepoint.com.png"></div>
+            <div class="col-9">
+              <div class="profile-name">daniel.graziano@sitepoint.com</div>
+              <div class="small">
+                 Member since December 2017</div>
+              <div class="interests">
+                <div class="small">
+                   Interested in:</div>
+                <ul class="small" id="slide5"> 
+                  <li><a class="topic-html" href="HTML">HTML</a></li>
+                  <li><a class="topic-design" href="HTML">DESIGN</a></li>
+                  <li><a class="topic-php" href="HTML">PHP     </a></li>
+                  <li><a class="change" href="HTML">Change &#9660;                   </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="freebie-now grid-12">
+            <div class="col-12">
+              <h3>This Week's Freebie</h3>
+              <p class="small">Add this to your personal library. </p>
+            </div>
+            <div class="col-3 placeholder" id="slide2"> 
+              <div class="book size-thumbnail oclock-12"><a href="#openModal">
+                  <div class="cover"><img src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/master/cssmaster1/cssmaster1.png" alt="Book cover: CSS Master"></div></a></div>
+            </div>
+            <div class="col-9">
+              <h4 class="product-title">
+                 CSS Master</h4>
+              <div class="text-center"><a class="button download" href="#downloadPDF">Add to Library</a></div>
+            </div>
+          </div>
+          <div class="freebie-now grid-12">
+            <div class="col-12">
+              <h3>Next Week’s Freebie</h3>
+              <p class="small">Come back next <b>Monday, 25th June </b>to grab this course for free. </p>
+            </div>
+            <div class="col-3 placeholder" id="slide3"> 
+              <div class="book size-thumbnail oclock-12"><a href="#openModal">
+                  <div class="cover"><img src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/master/react1/react-tools.png" alt="Book cover: CSS Master"></div></a></div>
+            </div>
+            <div class="col-9">
+              <h4 class="product-title">
+                 React: Tools &amp; Resources</h4>
+              <div class="text-center"><a class="button download" href="#downloadPDF">	&#9200; Alert me when this is FREE</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-12-equalHeight">
+        <h2 class="col-12">Premium Resources (Access the lot for $9)</h2>
+        <div class="col-3">
+          <div class="card" id="slide4"> 
+            <div class="card-banner" style="background-image:url(https://learnable-images.s3.amazonaws.com/courses/fc200e21-78f4-4a8b-a7e4-3557ac658711.png)">
+              <p class="avatar">Manjunath M<img src="https://secure.gravatar.com/avatar/c5f37e5df341ee87b4379a1393d7d66e?s=96&amp;d=mm&amp;r=g"></p>
+            </div>
+            <h3>React Router v4: The Complete Guide</h3>
+            <p>When you need to navigate through a React application with multiple views, you’ll need a router to manage the URLs. React Router takes care of that.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-banner" style="background-image:url(https://learnable-images.s3.amazonaws.com/courses/bbbc343d-0677-4ee0-989b-3f3aebb91f24.png)">
+              <p class="avatar">Adelle Charles<img src="https://secure.gravatar.com/avatar/e24947ec7363c053987c1a29d2f24b15?s=96&amp;d=mm&amp;r=g"></p>
+            </div>
+            <h3>Quick Tip: How to Build Your Custom Theme for Telescope Nova  </h3>
+            <p>In this quick tip, Jelena Jovanovic shows how to customize the Telescope Nova theme, both markup and stylesheet with these easy-to-follow steps.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-banner" style="background-image:url(https://d2sis3lil8ndrq.cloudfront.net/courses/d02936b1-6ecd-45e8-8a86-f9534f72e7e7_medium.png)">
+              <p class="avatar">Maria Antonietta Perna<img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/01/1422003380perna-96x96.jpg"></p>
+            </div>
+            <h3>How to Tell if React is the Best Fit for Your Next Project </h3>
+            <p>If you’re new to React, you could benefit from learning from React developers who’ve learned valuable lessons about the framework.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-banner" style="background-image:url(https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/04/1492644427RvsA_B-01.png)">
+              <p class="avatar">Pavels Jelisejevs<img src="https://s3.amazonaws.com/uifaces/faces/twitter/kareemhmostafa/128.jpg"></p>
+            </div>
+            <h3>React vs Angular: An In-depth Comparison</h3>
+            <p>Today’s bipolar landscape of JavaScript frameworks has left many developers struggling to pick a side in this debate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer-->
+  <footer class="mainfooter">
+    <div class="container">
+      <div class="grid">
+        <div class="col-3">Stuff We Do
+          <ul class="footer-points">
+            <li><a class="Footer-link f-small" href="/">SitePoint Home</a></li>
+            <li><a class="Footer-link f-small" href="/versioning/">Versioning</a></li>
+            <li><a class="Footer-link f-small" href="/themes/">Themes</a></li>
+            <li><a class="Footer-link f-small" href="/community/">Forums</a></li>
+            <li><a class="Footer-link f-small" href="/html-css/css/">References</a></li>
+          </ul>
+        </div>
+        <div class="col-3">About
+          <ul>
+            <li><a class="Footer-link f-small" href="/about-us/">Our Story</a></li>
+            <li><a class="Footer-link f-small" href="/press/">Press Room</a></li>
+          </ul>
+        </div>
+        <div class="col-3">Contact
+          <ul>
+            <li><a class="Footer-link f-small" href="/contact-us/">Contact Us</a></li>
+            <li><a class="Footer-link f-small" href="https://sitepoint.zendesk.com/hc/en-us">FAQ</a></li>
+            <li><a class="Footer-link f-small" href="/write-for-us/">Write for Us</a></li>
+            <li><a class="Footer-link f-small" href="/advertise/">Advertise</a></li>
+          </ul>
+        </div>
+        <div class="col-3">Legals
+          <ul>
+            <li><a class="Footer-link f-small" href="/premium/legals">Terms of Use</a></li>
+            <li><a class="Footer-link f-small" href="/premium/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="feedback">test</div>
+  <!--script(src="https://cdn.jsdelivr.net/npm/umbrellajs")-->
+  <script>
+      var animateHTML = function() {
+      var elems;
+      var windowHeight;
+      function init() {
+        elems = document.querySelectorAll('.waiting');
+        windowHeight = window.innerHeight;
+        addEventHandlers();
+        checkPosition();
+      }
+      function addEventHandlers() {
+        window.addEventListener('scroll', checkPosition);
+        window.addEventListener('resize', init);
+      }
+      function checkPosition() {
+        for (var i = 0; i < elems.length; i++) {
+          var positionFromTop = elems[i].getBoundingClientRect().top;
+          var unitHeight = elems[i].getBoundingClientRect().height;
+          var bottomedge = positionFromTop +  unitHeight;
+          if (positionFromTop < 0 && bottomedge > 0){
+            elems[i].className = elems[i].className.replace(
+              'waiting',
+              'animate'
+            );/*
+            console.log('-------------------: ') ;
+            console.log('positionFromTop: ' + positionFromTop);
+            console.log('windowHeight: ' + windowHeight);
+            console.log('elems[i].className: ' + elems[i].className);
+            console.log('bottomedge: ' + bottomedge);
+            console.log('pFt - win: ' + (positionFromTop - windowHeight));*/
+          } else if (bottomedge < 0 || positionFromTop < 0){
+            elems[i].className = elems[i].className.replace(
+              'animate',
+              'waiting'
+            );/*
+            console.log('-------------------: ') ;
+            console.log('positionFromTop: ' + positionFromTop);
+            console.log('windowHeight: ' + windowHeight);
+            console.log('elems[i].className: ' + elems[i].className);
+            console.log('bottomedge: ' + bottomedge);
+            console.log('pFt - win: ' + (positionFromTop - windowHeight));*/
+          }
+        }
+      }
+      return {
+        init: init
+      };
+    };
+    animateHTML().init();
+          
+        //$( ".feedback" ).text( "viewportheight: " + viewportheight + ", ParadeOn: " + paradeOn + ", ParadeOff: " + paradeOff + ", things: " + howmanythingstoanimate);
+  </script>
+  <!-- modal-->
+  <div class="modalbg" id="openModal">
+    <div class="dialog"><a class="close" href="#close" title="Close">X</a>
+      <div class="grid-12">
+        <div class="col-3">
+          <div class="grid-12">
+            <div class="col-12 toctitle">
+              <h3>HTML5 Games: Novice to Ninja</h3>
+            </div>
+            <div class="col-12 toclist">
+              <table class="toc">
+                <tr>
+                  <td> 1:</td>
+                  <td>Press Space to Start</td>
+                  <td>1</td>
+                </tr>
+                <tr class="disabled">
+                  <td> 2: </td>
+                  <td>Drawing Things<i class="fas fa-lock"></i></td>
+                  <td>25</td>
+                </tr>
+                <tr class="disabled">
+                  <td> 3:</td>
+                  <td>Game Loops &amp; User Input<i class="fas fa-lock"></i></td>
+                  <td>53</td>
+                </tr>
+                <tr class="disabled">
+                  <td> 4: </td>
+                  <td>Animation, Levels, Maps, Cameras…<i class="fas fa-lock"></i></td>
+                  <td>104</td>
+                </tr>
+                <tr class="disabled">
+                  <td> 5: </td>
+                  <td>Collision Detection &amp; AI.<i class="fas fa-lock"></i></td>
+                  <td>162</td>
+                </tr>
+                <tr class="disabled">
+                  <td> 6: </td>
+                  <td>Mathematics &amp; Physics<i class="fas fa-lock"></i></td>
+                  <td>212</td>
+                </tr>
+                <tr class="disabled">
+                  <td> 7: </td>
+                  <td>Audio<i class="fas fa-lock"></i></td>
+                  <td>269</td>
+                </tr>
+                <tr class="disabled">
+                  <td> 8: </td>
+                  <td>Bringing a Game to Life with “Juice”<i class="fas fa-lock"></i></td>
+                  <td>322</td>
+                </tr>
+                <tr class="disabled">
+                  <td> 9: </td>
+                  <td>Optimizing &amp; Packaging<i class="fas fa-lock"></i></td>
+                  <td>389</td>
+                </tr>
+                <tr class="disabled">
+                  <td> 10: </td>
+                  <td>Bonus Round: The Epilogue<i class="fas fa-lock"></i></td>
+                  <td>442</td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-12 tocCTA col-bottom"><a class="buy" href="https://www.sitepoint.com/premium/products/Z2lkOi8vbGVhcm5hYmxlL1Byb2R1Y3QvMTE5">Get this Book</a></div>
+          </div>
+        </div>
+        <div class="col-9">
+          <object data="files/html5games1.pdf" type="application/pdf" width="80%" height="80vh">
+            <p>This browser does not support viewing PDFs. Please download the PDF to view it:<a href="files/book-sample.pdf">Download PDF</a>.</p>
+          </object>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/jquery-1.10.2.js"></script>
+  <script src="scripts/hopscotch.min.js"></script>
+  <script src="scripts/tour.js"></script>
+  <!--include scripts.pug-->
+</body>

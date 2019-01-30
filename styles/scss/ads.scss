@@ -1,0 +1,54 @@
+.adlayer{
+background: #383232;
+}
+.ad{
+text-align: center;
+border-bottom: 1px #777 solid;
+background: rgba(130,200,0,.1);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.ad-728{
+padding: calc(var(--baseline) /2) 0;
+overflow: hidden;
+background: none;
+img{ max-width:90% ;}
+}
+.ad-300{
+  margin: calc(var(--baseline) /2) 0;
+  width: 300px;
+  float: right; 
+}
+.twodoor{
+  margin: calc(var(--baseline) /2) 0;
+  width: 600px;
+  float: right; 
+  border-top: 1px dotted purple;
+}
+/*  rollerdoor ad code */
+.rollerdoor{
+  height: 0;
+  border-top: 1px dotted #ddd;
+  overflow: hidden;
+  position: relative;
+  margin: 0 0 calc(var(--baseline) /2) 1em;
+  clear: both;
+  img{
+    width: 100%;
+    outline: 1px green dashed!important;
+    bottom: 0;
+    margin-bottom: 0 ;
+    position: absolute;
+  }
+
+}
+
+.fade-in{
+  outline: 1px red dashed!important;
+  //height: 200px
+}
+.fade-in .rollerinner{
+  position: relative;
+  //height: 200px
+}

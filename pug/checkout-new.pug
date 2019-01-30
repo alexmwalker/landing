@@ -1,0 +1,79 @@
+form
+  .grid-12.checkout-container 
+    .col-1
+      h2 
+    .col-10.grid-12
+      .col-10
+        h2 Secure Checkout
+      .col-2.text-right
+        h2 
+          i.fas.fa-lock
+      .col-12
+        fieldset
+          // Form Name
+          // Text input
+          .form-group
+            label.control-label(for="emailaddress") Email
+            .col-5
+              input#emailaddress.form-control.input-lg(name="emailaddress" type="text" placeholder="your@email.com" required="")
+          // Text input
+          .form-group
+            label.control-label(for="textinput") Card Number
+            .col-5
+              input#textinput.form-control.input-lg(name="textinput" type="text" placeholder="4111 1111 1111 ")
+          // Select month
+          .grid-12
+            .col-3.form-group
+              label.control-label(for="selectbasic")  Expiry
+              .col-md-2
+                select#selectbasic.form-control(name="selectbasic")
+                  option(value="--") --
+                  option(value="01") 01
+                  option(value="02") 02
+                  option(value="03") 03
+                  option(value="04") 04
+                  option(value="05") 05
+                  option(value="06") 06
+                  option(value="07") 07
+                  option(value="08") 08
+                  option(value="09") 09
+                  option(value="10") 10
+                  option(value="11") 11
+                  option(value="12") 12
+            .col-1.text-center
+              .is-size-1 /
+            .col-3.form-group  
+              label.control-label(for="selectbasic")  &nbsp;         
+              .col-md-2
+                select#yearbasic.form-control(name="yearbasic")
+                  option(value="--") --
+                  option(value="18") 18
+                  option(value="19") 19
+                  option(value="20") 20
+                  option(value="21") 21
+                  option(value="22") 22
+                  option(value="23") 23
+                  option(value="24") 24
+                  option(value="25") 25
+                  option(value="26") 26
+            // Text input
+            .col-2 
+              //gap
+            .col-3.form-group
+              label.col-md-4.control-label(for="ccv") CCV
+              .col-md-2
+                input#ccv.form-control.input-md(name="ccv" type="text" placeholder="123")
+                span.help-block  (?)
+          // Button
+          .col-12.text-center
+            .col-md-4
+              button#singlebutton.buy(name="singlebutton") COMPLETE PURCHASE
+            p.small
+              span ️🚀
+              | Woohoo! You are about 30 seconds away from open access to all 139 SitePoint books &amp; courses. 
+              br 
+              | Use your newly acquired powers wisely!
+
+    .col-1
+
+

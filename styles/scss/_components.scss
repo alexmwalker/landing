@@ -1,0 +1,368 @@
+
+
+/* ===  BOOKTITLE === */
+
+section.titling {
+  padding-top: $line-height * 2.5;
+  letter-spacing: .05rem;
+  .rating-box{
+    padding: 0;
+  }
+}
+
+h1.book-title {
+  color: #003
+}
+
+p.book-breadcrumbs {
+  margin: $line-height 0 0; 
+  font-size: .75rem;
+  color: $textgray;
+}
+
+p.book-author {
+  margin: -$line-height*1.5 0 0.0rem;
+  font-size: .75rem;
+  color: $textgray;
+}
+
+
+
+/* ===  HERO === */
+
+section.hero {
+  height: $line-height * 7;
+  background-color: rgb(38, 38, 38);
+  background-image: url("https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/11/14788516501466142151pattern-final-copy.png"), linear-gradient(165deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.3) 65.1%, rgba(38, 38, 38, 0.3));
+}
+
+.heroPitch {
+  color: #fff;
+  line-height: $line-height * 1.5;
+}
+
+/* ===  PRODUCT & SPECS === */
+
+.course {
+  top: -2rem; // positioning the course preview up higher in the page.
+  margin-bottom: -3rem;
+  left: 5rem;
+  .cover {
+    border: 10px solid #333;
+    position: relative;
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 30%;
+      height: 50%;
+      left: 50%;
+      top: 50%;
+      z-index: 9999;
+      margin: -15% -15%;
+      background-image: url(/~awalker/images/loop2.svg);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+/* What You'll Learn */ 
+
+.whatyoulllearn .col-7 img {
+  width: 90%;
+  //outline: 1px red dashed;
+}
+
+ul.specs {
+  padding: 0;
+  list-style-type: none;
+  margin: $line-height*4 10% 0;
+  margin: $line-height/2 10% 0;
+  box-shadow: .1rem .1rem 1rem rgba(38, 38, 38, 0.2);
+  li.icon {
+    border: 1px solid #CFCFCF;
+    background: #fff;
+    position: relative;
+    line-height: $line-height*1.5;
+    margin-bottom: -1px;
+    padding-left: 2rem;
+    z-index: 1;
+    i,
+    svg {
+      margin-right: $line-height/2;
+    }
+  }
+}
+
+
+/* === ABOUT === */
+
+section.about {
+  ul.specs { 
+    margin: 4*1.7778rem 10% 0; // this rule is only used on the scroll-ainmated version.
+  }
+}
+
+
+
+
+/* ===  WHO? === */
+
+section.whoisthisfor {
+  background: #eceff2; //padding: 1.7777778rem 0;
+  padding-bottom: $line-height;
+  h2 {
+    text-align: left;
+  }
+  div {
+    text-align: center;
+    img {
+      width: 46.5%;
+      margin: 0 0 -$line-height;
+    }
+    p{
+      font-size: .85rem;
+      line-height: $line-height - ($line-height/4); // this is half line grids - I don't love it but...
+    }
+  }
+}
+
+
+
+
+
+/* ===  WHAT READERS SAY === */
+.readers-say{
+  background: #f5f7f9;
+  color: #333;
+  padding-bottom: $line-height*2;
+  dl{
+  background: #fff;
+    padding: $line-height 0;
+    margin: 0;
+    position: relative;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05)
+  }
+  dd, dt{
+    margin: 0 $line-height $line-height/2;
+    font-weight: 300;
+    color: #666;
+  }
+  dd{
+    font-style: italic
+  }
+  dt{
+    bottom: 0;
+    width: 50%;
+    position: absolute;
+    right: 0rem;
+    margin: 0 1rem -1rem 0;
+    color: #444;
+    text-align: right;
+    font-size: .75rem;
+    img {
+      width: 3.0rem;
+      border-radius: 50%;
+      float: right;
+      margin: 0 0 0 1rem;
+      border: 2px #bbb solid;
+    }
+  }
+}
+
+/* ===  AUTHOR/TEACHER === */
+
+section.authors {
+  background: #f1f3f5;
+  box-shadow: 0px 0px 2px rgba(0,5, 10, 0.1);
+}
+
+.blurb h4 {
+  font-weight: 600;
+}
+
+.blurb h5 {
+  margin: 0 0 0 0;
+  color: #999
+}
+
+.blurb p {
+  font-size: 0.85rem;
+}
+
+
+.author-avatar {
+  text-align: center;
+  margin-top: $line-height*2;
+  img {
+    border-radius: 50%;
+    width: 50%;
+  }
+}
+
+.authors {
+  .fa-2x {
+    color: #ddd;
+    &:hover {
+      color: #bbb;
+    }
+  }
+}
+
+.author-specs {
+  list-style: none;
+  padding: 0;
+  li {
+    margin-left: 30%;
+    font-size: .75rem;
+  }
+  i,
+  svg {
+    font-size: .75rem;
+    line-height: 2rem;
+    color: #999;
+  }
+}
+
+/* ===  FEEDBACK/ REVIEWs === */
+
+.feedback-avatar {
+  border-radius: 50%;
+  width: 5vw;
+  height: 5vw;
+  border: 1px #ccc solid
+}
+.rating-box{
+  text-align: center;
+  padding: $line-height/2 0;
+  i,
+  svg {
+    //font-size: .75rem;
+    color: #ffaa00;
+  }
+}
+
+
+
+.review {
+  padding: $line-height/2 0;
+  background: #f4f6f8;
+  border-radius: 3px;
+  text-align: left;
+  line-height: $line-height;
+  color: #664;
+  box-shadow: 3px 3px 4px rgba(38, 38, 38, 0.1);
+  position: relative;
+  margin-bottom: $line-height;
+  p {
+    font-size: .85rem;
+    margin: 0 1rem;
+    //outline: 1px green dashed;
+    &.avatar {
+      text-align: right;
+      font-size: .6rem;
+      padding-right: 4rem;
+      margin: $line-height/2 0 $line-height/-2;
+      //outline: 1px red dashed;
+      img {
+        position: absolute;
+        bottom: $line-height/-2;
+        right: 1rem;
+        z-index: 0;
+        width: $line-height * 1.2;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+  }
+}
+.avrating{
+  text-align: center;
+  margin: $line-height 0 ;
+  position: relative;
+  font-size: $line-height * 2;
+  text-shadow: 0px 1px 1px #fff;
+}
+
+.large{
+  font-size: 1.5rem;
+  text-align: right;
+  .col-5, .col-7{
+    padding-bottom: 0
+  }
+  .rating-box{
+    text-align: left;
+    padding: $line-height 0 $line-height/2
+  }
+}
+
+
+.Breakdown {
+  display: block;
+  height: $line-height;
+  margin: 0 2rem;
+}
+
+.Breakdown_bg {
+  border-radius: 100px;
+  background: #eceff2;
+  min-width: 80%;
+  margin: 8px 13px;
+  overflow: hidden;
+}
+
+.Breakdown_bg,
+.Breakdown_count,
+.Breakdown_label {
+  float: left;
+  font-size: 14px;
+}
+
+.Breakdown_count {
+  text-align: right;
+}
+
+.Breakdown_fill {
+  background: #3ec9cb;
+  height: 16px;
+  border-radius: 100px;
+}
+
+.Breakdown_label {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.specs-unit{
+  padding-top: 3rem;
+}
+
+
+/* ===  OUTLINE === */
+.outline {
+  background: #f1f3f5;
+}
+.outline table {
+  font-size: .85rem;
+  width: 100%;
+  tr.disabled{
+    color:#999;
+  }
+  td{
+    line-height: 1.6rem;
+
+  }
+  td:nth-of-type(1){
+    padding: 0 1rem 0;
+    text-align: right;
+    //width: 3rem;
+  }
+}
+

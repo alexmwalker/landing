@@ -1,0 +1,26 @@
+var scrollpos = window.scrollY;
+var grabProduct = document.querySelector('div#pinit');
+var bookMatch = document.querySelector('div.book');
+function add_class_on_scroll() {
+grabProduct.classList.add("pin-it");
+bookMatch.classList.add("oclock-spin");
+bookMatch.classList.remove("oclock-1");
+bookMatch.classList.remove("size-mid");
+bookMatch.classList.add("size-small");
+}
+function remove_class_on_scroll() {
+grabProduct.classList.remove("pin-it");
+bookMatch.classList.add("oclock-1");
+bookMatch.classList.remove("oclock-spin");
+bookMatch.classList.remove("size-small");
+bookMatch.classList.add("size-mid");
+}
+window.addEventListener('scroll', function () {
+scrollpos = window.scrollY;
+if (scrollpos > 220) {
+add_class_on_scroll();
+} else {
+remove_class_on_scroll();
+}
+//console.log(scrollpos);
+});

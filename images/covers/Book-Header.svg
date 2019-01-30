@@ -1,0 +1,31 @@
+<svg width="572" height="45" viewBox="0 0 572 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="572" height="45" fill="black"/>
+<rect y="23" width="572" height="22" fill="#222222"/>
+<text fill="#F5EFEA" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="9" letter-spacing="0em"><tspan x="492" y="37.3496">Download</tspan></text>
+<text fill="#F5EFEA" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="9" letter-spacing="0em"><tspan x="49" y="37.3496">Chapters</tspan></text>
+<text fill="#F5EFEA" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="9" letter-spacing="0em"><tspan x="130" y="37.3496">My Bookmarks</tspan></text>
+<text fill="#F5EFEA" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="9" letter-spacing="0em"><tspan x="241" y="37.3496">Add Bookmarks</tspan></text>
+<path d="M102.5 37L101.5 36L105.5 32L109.5 36L108.5 37L105.5 34L102.5 37Z" fill="white"/>
+<path d="M205 37L204 36L208 32L212 36L211 37L208 34L205 37Z" fill="white"/>
+<text fill="#F5EFEA" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="9" letter-spacing="0em"><tspan x="489" y="15.3496">Dashboard</tspan></text>
+<text fill="#F5EFEA" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="9" letter-spacing="0em"><tspan x="429" y="15.3496">Library</tspan></text>
+<text fill="#F5EFEA" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="11" letter-spacing="0em"><tspan x="40" y="17.2051">Your First Week with Bootstrap</tspan></text>
+<path d="M229 31C229 30.4477 229.448 30 230 30H235C235.552 30 236 30.4477 236 31V39L232.5 36.75L229 39V31Z" fill="white"/>
+<line x1="220.25" y1="27" x2="220.25" y2="43" stroke="#5F5F5F" stroke-width="0.5"/>
+<line x1="117.25" y1="27" x2="117.25" y2="43" stroke="#5F5F5F" stroke-width="0.5"/>
+<rect x="411" y="8" width="2" height="5" fill="#F5EFEA"/>
+<rect x="414" y="8" width="2" height="5" fill="#F5EFEA"/>
+<rect x="416.105" y="7.16956" width="3" height="8.12253" transform="rotate(-15.075 416.105 7.16956)" fill="#F5EFEA"/>
+<rect x="411" y="14" width="2" height="1" fill="#F5EFEA"/>
+<rect x="414" y="14" width="2" height="1" fill="#F5EFEA"/>
+<rect x="411" y="6" width="2" height="1" fill="#F5EFEA"/>
+<rect x="414" y="6" width="2" height="1" fill="#F5EFEA"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M381.59 13.1456H384.841L385.466 15H387.438L384.069 6H382.35L379 15H380.972L381.59 13.1456ZM384.341 11.6435H382.091L383.209 8.27473L384.341 11.6435Z" fill="#F5EFEA"/>
+<path d="M390.465 6.94406H389.314V8.0949H388.164V9.24575H389.314V10.3966H390.465V9.24575H391.616V8.0949H390.465V6.94406Z" fill="#F5EFEA"/>
+<path d="M388.164 11.5475H391.616V12.6983H388.164V11.5475Z" fill="#F5EFEA"/>
+<path d="M479.14 29C479.339 29 479.5 29.1679 479.5 29.375V32.125H481.131C481.452 32.125 481.612 32.5289 481.385 32.7652L478.755 35.5057C478.614 35.6521 478.386 35.6521 478.245 35.5057L475.615 32.7652C475.388 32.5289 475.548 32.125 475.869 32.125H477.5V29.375C477.5 29.1679 477.661 29 477.86 29H479.14Z" fill="#F5EFEA"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M478.211 36.1933L477 35H474.36C474.161 35 474 35.1679 474 35.375V37.625C474 37.8321 474.161 38 474.36 38H482.64C482.839 38 483 37.8321 483 37.625V35.375C483 35.1679 482.839 35 482.64 35H480L478.755 36.1933C478.611 36.3655 478.354 36.3655 478.211 36.1933ZM480.57 37.625C480.819 37.625 481.02 37.4151 481.02 37.1562C481.02 36.8974 480.819 36.6875 480.57 36.6875C480.321 36.6875 480.12 36.8974 480.12 37.1562C480.12 37.4151 480.321 37.625 480.57 37.625ZM482.28 37.1562C482.28 37.4151 482.079 37.625 481.83 37.625C481.581 37.625 481.38 37.4151 481.38 37.1562C481.38 36.8974 481.581 36.6875 481.83 36.6875C482.079 36.6875 482.28 36.8974 482.28 37.1562Z" fill="#F5EFEA"/>
+<path d="M479 7H478V8H474V9H478V10H479V9H483V8H479V7Z" fill="#F5EFEA"/>
+<path d="M483 11H481V10H480V11H474V12H480V13H481V12H483V11Z" fill="#F5EFEA"/>
+<path d="M483 14V15H477V16H476V15H474V14H476V13H477V14H483Z" fill="#F5EFEA"/>
+</svg>

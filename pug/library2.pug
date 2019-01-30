@@ -1,0 +1,82 @@
+doctype html
+head
+  meta(charset="utf-8")
+  title Styles - Styles 
+  meta(name="description" content="")
+  meta(name="author" content="")
+  link(rel="stylesheet" type="test/css" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css")
+  // The Grid system
+  link(rel="stylesheet" type="test/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,600,700")
+  // Font
+  link(rel="stylesheet" type="text/css" href="styles/css/nubase.css")
+  
+body.borders.labelling.vertical-rhythm
+
+  include header.pug
+  
+  include library-title.pug
+
+  .container.gallery
+    .grid-12
+      .col-3  
+
+        .book.view3d.size-small.chunky.oclock-12.hover
+          a(href="#openModal")
+            .cover
+              img(src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/New-UX-books/games1/9780994182616-Perfect-html5-games-small.png" alt="Book cover: HTML5 Games")
+
+      .col-3  
+        input#text(name='save', type='hidden', value='https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/adobexd1/adobexd1.png')
+
+        .book.view3d.size-small.oclock-12.hover
+          a(href="#openModal")
+            .cover
+              img(src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/adobexd1/adobexd1.png" alt="Book cover: HTML5 Games")
+
+      .col-3  
+
+        .book.view3d.size-small.oclock-12.hover
+          a(href="#openModal")
+            .cover
+              img(src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/cssmaster1/cssmaster1.jpg" alt="Book cover: HTML5 Games")
+
+      .col-3  
+
+        .book.view3d.size-small.oclock-12.hover
+          a(href="#openModal")
+            .cover
+              img(src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/foundation1/foundation1.png" alt="Book cover: HTML5 Games")
+
+      .col-3  
+
+        .book.view3d.size-small.oclock-12.hover
+          a(href="#openModal")
+            .cover
+              img(src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/sass1/sass1-mock-hires.png" alt="Book cover: HTML5 Games")
+
+      .col-3  
+
+        .book.view3d.size-small.oclock-12.hover
+          a(href="#openModal")
+            .cover
+              img(src="https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/jsnovice2/jsnovice2.png" alt="Book cover: HTML5 Games")
+
+      .col-3   
+
+        .book.view3d.size-small.oclock-12.hover
+          a(href="#openModal")
+            .cover
+              img(src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/master/sketch1/sketch1.jpg" alt="Book cover: HTML5 Games")
+
+      .col-3  
+
+        .book.view3d.size-small.oclock-12.hover
+          a(href="#openModal")
+            .cover
+              img(src="https://raw.githubusercontent.com/sitepoint/Complete-Cover-Archive/master/php6/php6.jpg" alt="Book cover: HTML5 Games")
+
+  include footer.pug
+
+  include scripts.pug
+
+

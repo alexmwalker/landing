@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Styles - Styles </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alexmwalker/c570797cb5ed14f701a53f8c7b38bce7/raw/0d4e88f482380460b28e86bc37fb8a3d8ab753b1/basic-grid-typography.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,600,700">
+    <link rel="stylesheet" type="text/css" href="styles/css/article.css">
+  </head>
+  <body class="borders vertical-rhythm">
+    <header class="sitepoint">
+      <div class="wrapper">
+        <div class="grid-12">
+          <div class="col-3">
+            <div class="branding"><i class="fas fa-bars hamburger"></i><img class="branding-logo" src="https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"></div>
+          </div>
+        </div>
+      </div>
+      <nav class="main">
+        <div class="wrapper">
+          <div>
+            <div class="col">
+              <ul class="navbar">
+                <li><a href="#">Books<span class="note">1</span></a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Learning Paths</a></li>
+                <li><a href="#">Deals<span class="note">3</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="device"></div>
+    <div class="title-illustration" style="background-image: url(images/illo.svg">
+      <div class="wrapper title-unit">
+        <div class="minor crumbtrail"><a href="#">Learn Bootstrap</a> > <a href="#">Bootstrap Tools</a></div>
+        <h1>The CSS Grid Layout Vs CSS Frameworks Debate</h1>
+        <div class="minor credit">By Maria Antonietta Perna, May 17, 2018 </div>
+      </div>
+    </div>
+    <div class="adlayer">
+      <div class="ad ad-728 wrapper"></div>
+    </div>
+    <div class="wrapper labelling">
+      <div class="gridbox">
+        <div class="col-12">
+          <p class="is-size-h4">With cutting-edge CSS standards like <a style="font-weight:bold" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>, coding a web page layout is no longer such a pain. If you add to this that browser support for both <a style="font-weight:bold" href="https://caniuse.com/#search=css%20grid">Grid</a> and <a style="font-weight:bold" href="https://caniuse.com/#search=flexbox">Flexbox</a> is pretty good too, then the question is bound to come up: Why should consider learning and using CSS frameworks in my development work?</p>
+          <div class="rollerdoor ad-300"><img src="http://sweetpotatochronicles.com/wp-content/uploads/2015/07/ads-300x250.gif"></div>
+          <p>In this article, I’ll focus on <a href="https://getbootstrap.com">Bootstrap</a>, since it’s arguably one of the most popular among all the CSS UI libraries available out there.</p>
+          <p>In my view, there are still a number of reasons why it does still make sense to learn and use Bootstrap today.</p>
+          <p>Here’s a few of them for you.</p>
+          <h2 id="whatiscssgrid?">What Is CSS Grid?</h2>
+          <p>Rachel Andrew, a well-known speaker and writer on all things CSS Grid-related, <a href="https://rachelandrew.co.uk/archives/2017/07/01/you-do-not-need-a-css-grid-based-grid-system/">defines it as follows</a>:</p>
+          <blockquote>
+            <p>Grid is a grid system. It allows you to define columns and rows in your CSS, without needing to define them in markup. You don’t need a tool that helps you make it look like you have a grid, you actually have a grid!</p>
+          </blockquote>
+          <p>The implementation of this CSS standard gives developers the much needed ability to build page layouts with native CSS code, with no dependency from the HTML markup except for the presence of a wrapper element that works as containing grid. Just imagine the flexibility and the potential for creativity in web design!</p>
+          <p>For instance, you don’t need custom classes or extra rows in your markup to build this simple layout:</p>
+          <p><img class="alignnone size-full wp-image-163233" src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2018/02/1517484511simple-grid-layout.png" alt="Simple web page layout built with CSS Grid" width="700" height="221"></p>
+          <p>Here’s the HTML:</p>
+          <pre class="language-markup"></pre>
+          <p>As for the CSS, this is where you’re going to build your visual layout. All it takes in this simple case is a few lines of code:</p>
+          <pre class="language-css"></pre>
+          <p>That’s it, you’re done! Not bad.</p>
+          <h2 id="whatisbootstrap?">What Is Bootstrap?</h2>
+          <p>At the time of this writing, <a href="https://trends.builtwith.com/docinfo/Twitter-Bootstrap">3.6% of the entire Internet</a> uses Bootstrap:</p>
+          <p><img class="alignnone size-full wp-image-163234" src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2018/02/1517484629built-with-data.png" alt="Bootstrap usage" width="275" height="275"></p>
+          <p>On the Bootstrap website, you’ll find this definition:</p>
+          <blockquote>
+            <p>Bootstrap is an open-source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+          </blockquote>
+          <p>In other words, Bootstrap gives you ready-made components that allow you to whip up a beautiful web page in no time.</p>
+          <p>Just write the appropriate markup, and your app looks great out of the box.</p>
+          <div class="rollerdoor twodoor"><img src="https://www.mobivisits.com/wp-content/uploads/2017/01/IAB-ads-300X250.png"></div>
+          <p>Bootstrap makes it also super easy to customize its look and feel to your liking and lets you pick and choose the bits you need for your project.</p>
+          <h2 id="whybootstrap?">Why Bootstrap When We Have Grid?</h2>
+          <p>The biggest complaint about Bootstrap has always been code bloat. The reasoning was that it included lots of extra CSS code that remained unused in your projects.  The second biggest complaint was that Bootstrap components were styled in every detail and this could present some problems when it came to overriding some CSS rules.</p>
+          <p>Starting with the latest version of this popular front-end component library, both criticisms fall to pieces: Bootstrap is totally modular, so you just include what you need. Also, the <a href="http://getbootstrap.com/docs/4.0/getting-started/theming/">Sass files</a> are structured in such a way as to make it very convenient to customize the original styles to your needs.</p>
+          <p>Today, the main reason against using Bootstrap is the fact that with CSS Grid, CSS has a grid system of its own, which doesn’t have any external dependencies, and which, once learned, enables developers to build all sorts of layouts with relative ease.</p>
+          <p>Although I’m a <a href="https://www.sitepoint.com/introducing-the-css-grid-layout/">CSS Grid</a> fan, I think Bootstrap has still its place in front-end development and will have for some time to come.</p>
+          <p>Here are at least three reasons why.</p>
+          <h3 id="bootstrapismorethanitsgridsystem">Bootstrap Is More Than Its Grid System</h3>
+          <p>It’s true, the #1 reason to use Bootstrap is the handy grid system, which makes it a breeze to build responsive web pages. However, Bootstrap has some great components like the versatile new <a href="http://getbootstrap.com/docs/4.0/components/card/">card component</a>, which you can use to display all types of content, such as text, images and videos, and the <a href="http://getbootstrap.com/docs/4.0/components/navbar/">responsive navbar</a>, which works out of the box. You can also pick a ready-made color scheme of your liking for most components.</p>
+          <p>And what about the functionality of a good many of these components? With Bootstrap, adding dynamic <a href="http://getbootstrap.com/docs/4.0/components/tooltips/">tooltips</a>, <a href="http://getbootstrap.com/docs/4.0/components/carousel/">carousels</a>, or <a href="http://getbootstrap.com/docs/4.0/components/dropdowns/">dropdown buttons</a> is just a matter of writing the appropriate markup. If JavaScript is not your forte, you can still take advantage of these components without writing a line of JavaScript.</p>
+          <p>Also, if you’re not a CSS wizard, you can still leverage the power of Bootstrap in your web design while you’re learning the tricks of the trade.</p>
+          <h3 id="bootstrapisagreatprototypingtool">Bootstrap Is a Great Prototyping Tool</h3>
+          <p>Sometimes you just need to a working prototype for a client. Bootstrap lets you do this in no time and with very little to no custom code. This doesn’t only hold for the grid system, but also for all the ready-made components it has to offer.</p>
+          <p>Just add a little markup and your prototype will boast a sleek responsive navigation bar or a fancy alert box.</p>
+          <h3 id="workingonolderwebsitesbuiltwithbootstrap">Working on Older Websites Built With Bootstrap</h3>
+          <p>One common task for developers is to work on existing websites coded by other developers. There’s no denying the fact that a huge number of websites rely on Bootstrap for their front end. Knowing how to work with the framework will come very handy if it’s up to you to refactor and maintain the codebase. It’s not by chance that still lots of job postings have Bootstrap in their list of desired skills.</p>
+          <h2>Conclusion</h2>
+          <div class="rollerdoor ad-300"><img src="https://www.mobivisits.com/wp-content/uploads/2017/01/IAB-ads-300X250.png"></div>
+          <p>To conclude, Bootstrap is not going away any time soon. The latest release comes with huge improvements over the previous versions, from the clever use of Sass mixins and maps for easy customization to the introduction of new components, utility classes, and an ever more modular architecture.</p>
+          <p>Add to this great documentation and ease of use, and Bootstrap is still a mighty contender in the front-end ecosystem.</p>
+          <p>What do you think? Is your next project going to be built with Bootstrap or CSS Grid?</p>
+          <p><strong>If you’ve heard about Bootstrap but have been putting off learning it because it seems too complicated, then play through our <a href="https://www.sitepoint.com/premium/courses/introduction-to-bootstrap-4-2984">Introduction to Bootstrap 4</a> course for a quick and fun introduction to the power of Bootstrap.</strong></p>
+          <div class="Article_authorBio l-mv4 t-bg-white m-border l-pa3">
+            <div class="l-d-f l-pt3"><a class="l-s5 l-pa0 l-mr3 l-round l-o-h" href="https://www.sitepoint.com/author/mperna/"><img class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo" src="https://d1nlfd9mjn1pae.cloudfront.net/wp-content/uploads/2015/01/1422003380perna-96x96.jpg" width="96" height="96" alt="Maria Antonietta Perna"></a>
+              <div class="f-lh-title">
+                <div class="f-c-grey-300">Meet the author</div>
+                <div class="f-large"><a class="f-bold f-c-grey-500" href="https://www.sitepoint.com/author/mperna/">Maria Antonietta Perna</a><a class="f-c-grey-500 l-mh1" target="_blank" href="https://twitter.com/AntoniettaPerna"><i class="fab fa-twitter"></i></a><a class="f-c-grey-500 l-mh1" target="_blank" href="https://plus.google.com/+MariaAntoniettaPerna"><i class="fab fa-google-plus-g"></i></a><a class="f-c-grey-500 l-mh1" target="_blank" href="https://www.facebook.com/maria.a.perna.3"><i class="fab fa-facebook-f"></i></a><a class="f-c-grey-500 l-mh1" target="_blank" href="https://www.linkedin.com/in/mariaantoniettaperna"><i class="fab fa-linkedin-in"></i></a><a class="f-c-grey-500 l-mh1" target="_blank" href="https://codepen.io/antonietta/"><i class="fab fa-codepen"></i></a></div>
+              </div>
+            </div>
+            <div class="f-light f-lh-copy l-mt3">Maria Antonietta Perna is co-Editor of the HTML/CSS Channel at SitePoint and a front-end web developer.  She enjoys tinkering with cool CSS standards and is curious about teaching approaches to front-end code. When not coding for the web or not writing for the web, she enjoys philosophy books, long walks and good food.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- footer-->
+  <footer class="mainfooter">
+    <div class="wrapper">
+      <div class="gridbox">
+        <div class="col-3">Stuff We Do
+          <ul>
+            <li class="l-ml3 f-c-grey-300 l-mb2 Footer-points"><a class="Footer-link f-small" href="/">SitePoint Home</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/versioning/">Versioning</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/themes/">Themes</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/community/">Forums</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/html-css/css/">References</a></li>
+          </ul>
+        </div>
+        <div class="col-3">About
+          <ul>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/about-us/">Our Story</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/press/">Press Room</a></li>
+          </ul>
+        </div>
+        <div class="col-3">Contact
+          <ul>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/contact-us/">Contact Us</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="https://sitepoint.zendesk.com/hc/en-us">FAQ</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/write-for-us/">Write for Us</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/advertise/">Advertise</a></li>
+          </ul>
+        </div>
+        <div class="col">Legals
+          <ul>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/premium/legals">Terms of Use</a></li>
+            <li class="l-ml3 f-c-grey-300 l-mb2"><a class="Footer-link f-small" href="/premium/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="scripts/roller.js" type="text/javascript"></script>
+</html>

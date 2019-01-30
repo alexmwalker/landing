@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Styles - Styles </title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" type="test/css" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css">
+  <!-- The Grid system-->
+  <link rel="stylesheet" type="test/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i">
+  <!-- Font-->
+  <link rel="stylesheet" type="text/css" href="styles/css/base.css">
+</head>
+<body class="-borders -labelling -vertical-rhythm">
+  <!-- header.pug-->
+  <header class="sitepoint">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-3">
+          <div class="branding"> <i class="fas fa-bars hamburger"></i><img class="branding-logo" src="https://gistcdn.githack.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"></div>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-3">
+          <div class="dash-controls right-text"><i class="fas fa-tachometer-alt"></i> Dashboard</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="titling">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-9">
+          <p class="book-breadcrumbs">SitePoint: Games : Courses</p>
+          <h1>Introduction to React</h1>
+          <p class="book-author">By Mark Davis</p>
+        </div>
+        <div class="col-3 center-text">
+          <h5>3.9 Average User Rating</h5>
+          <div class="small">13,000+ students have read this</div>
+          <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+          <div class="small"><a href="#">(from 2,287 users)</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-7">
+          <div class="heroPitch is-size-2">Get to know the world’s most popular JavaScript front-end framework by building a swag shop project!</div>
+        </div>
+        <div class="col-5" id="pinit">
+          <div class="modal-control modal-course"><a class="do" href="#openModal">Preview</a><a class="buy" href="https://www.sitepoint.com/premium/products/Z2lkOi8vbGVhcm5hYmxlL1Byb2R1Y3QvMTE5">Buy</a></div>
+          <div class="course"><a href="#openModal">
+              <div class="cover"><img src="images/course-vid@2x.jpg"></div></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-7">
+          <h2>About the course</h2>
+          <p>React is the most popular JavaScript library for building user interfaces, and it has been for some time.</p>
+          <p>
+            Aside from making modern web UI development a breeze, React is one of the most in-demand skillsets on the job market
+            right now.
+          </p>
+          <p>It’s declarative and considered more flexible than other frameworks like Vue.</p>
+          <p>In this course, you’ll get a thorough introduction to real-world React.</p>
+          <p>
+            We’ll introduce you to the tools that’ll help you get ahead and create a React skeleton project. Then we’ll
+            start building our project, an online swag shop, diving into promises, components, props, state, data services
+            and notifications.
+          </p>
+          <p>
+            By the end, you’ll have learned everything you need to know to start building web apps with React, and worked
+            with some other high-demand technologies along the way, such as Node and MongoDB.
+          </p>
+        </div>
+        <div class="col-5">
+          <ul class="specs">
+            <li><a class="buy" href="https://www.sitepoint.com/premium/products/Z2lkOi8vbGVhcm5hYmxlL1Byb2R1Y3QvMTE5">Buy this Course</a></li>
+            <li class="icon"><i class="far fa-calendar-alt"></i> Last Updated: Jan 2018</li>
+            <li class="icon specs-video"><i class="fas fa-video"></i> 14 Video Lessons</li>
+            <li class="icon specs-length"><i class="far fa-clock"></i> Total time: 2 Hrs 45 min</li>
+            <li class="icon specs-students"><i class="fas fa-graduation-cap"></i> 13,547 Happy Students</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="whoisthisfor">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-12">
+          <h2>Who should take this course?</h2>
+        </div>
+        <div class="col-3_sm-6"><img src="images/SVG/head1.svg">
+          <h4>Frontend Devs</h4>
+          <p>…who want to write high quality, fast-running code.</p>
+        </div>
+        <div class="col-3_sm-6"><img src="images/SVG/head6.svg">
+          <h4>Project Managers</h4>
+          <p>…who need to lead their teams to building better products.</p>
+        </div>
+        <div class="col-3_sm-6"><img src="images/SVG/head12.svg">
+          <h4>Marketers</h4>
+          <p>…who want to decrease drop-offs and increase conversions.</p>
+        </div>
+        <div class="col-3_sm-6"><img src="images/SVG/head8.svg">
+          <h4>Designers</h4>
+          <p>…who want to know how to avoid problems at the design stage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="whatyoulllearn">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-7">
+          <h2>What You'll Learn</h2>
+          <div class="grid-12">
+            <div class="col-6 image"><img src="images/image24.jpg"></div>
+            <div class="col-6 blurb">
+              <h5>Chapter 6</h5>
+              <h4>Optimizing Web Fonts for Performance: the State of the Art</h4>
+              <p>
+                67% of webpages now use custom fonts. In this article, Maria covers how web fonts are commonly used, what’s
+                not working, and some well-tested.
+              </p>
+            </div>
+            <div class="col-6 image"><img src="images/image27.jpg"></div>
+            <div class="col-6 blurb">
+              <h5>Chapter 7</h5>
+              <h4>What Is a CDN (and How Does It Work)?</h4>
+              <p>
+                CDN - you keep seeing the acronym. Maybe in URLs, maybe on landing pages, but it never quite clicked - what
+                are Content Delivery Networks, what do they do exactly?
+              </p>
+            </div>
+            <div class="col-6 image"><img src="images/image28.jpg"></div>
+            <div class="col-6 blurb">
+              <h5>Chapter 10</h5>
+              <h4>Build a Notification Systems</h4>
+              <p>
+                Bad CSS animations make your users’ CPU scream like a taxiing 747. That’s generally bad UX, m’kay? Relax. Maria
+                will show you how to use Chrome DevTools.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <h2>What You'll Learn</h2>
+          <p>
+            67% of webpages now use custom fonts. In this article, Maria covers how web fonts are commonly used, what’s not working,
+            and some well-tested.
+          </p>
+          <p>
+            67% of webpages now use custom fonts. In this article, Maria covers how web fonts are commonly used, what’s not working,
+            and some well-tested.
+          </p>
+          <p>
+            67% of webpages now use custom fonts. In this article, Maria covers how web fonts are commonly used, what’s not working,
+            and some well-tested.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="authors">
+    <div class="container">
+      <div class="grid-center grid-middle">
+        <div class="col-1 text-center"><a href="#"><i class="fas fa-2x fa-chevron-circle-left"></i></a></div>
+        <div class="col-5">
+          <h2>Your Instructor</h2>
+          <h4>Mark Price</h4>
+          <p>
+            I am a veteran mobile developer having built over 57 mobile apps for iOS and Android, and I've also build multiple
+            Unity 3D games, including Call of Duty Ghosts mobile.
+          </p>
+          <p>
+            I also spend most of my days now as a professional engineering instructor - changing the lives of students throughout the
+            world - helping them make amazing salaries as engineers.
+          </p>
+        </div>
+        <div class="col-3">
+          <div class="author-avatar"><img src="https://cdn.rawgit.com/sitepoint/Complete-Cover-Archive/New-UX-books/misc/author%402x%20(1).jpg"></div>
+          <ul class="author-specs">
+            <li><i class="fas fa-film"></i>5 Courses</li>
+            <li><i class="far fa-star"></i>Rating: 4.7/5</li>
+            <li><i class="far fa-user"></i>Students: 90,017</li>
+            <li><i class="fab fa-twitter"></i>@iSpentak</li>
+            <li><i class="fab fa-facebook-f"></i>devslopes</li>
+          </ul>
+        </div>
+        <div class="col-1 text-center"><a href="#"><i class="fas fa-2x fa-chevron-circle-right"></i></a></div>
+      </div>
+    </div>
+  </section>
+  <section class="feedback">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-12">
+          <h2>What Readers Say</h2>
+        </div>
+        <div class="col-6">
+          <div class="grid-12">
+            <div class="col-12">
+              <div class="review">
+                <div class="grid-12 large">
+                  <div class="col-5">
+                    <div class="avrating">4.8</div>
+                  </div>
+                  <div class="col-7">
+                    <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  </div>
+                </div>
+                <div class="ReviewsMeta_breakdown">
+                  <div class="Breakdown">
+                    <div class="Breakdown_label">5 Star</div>
+                    <div class="Breakdown_bg">
+                      <div class="Breakdown_fill" style="width: 80%;"></div>
+                    </div>
+                    <div class="Breakdown_count">32</div>
+                  </div>
+                  <div class="Breakdown">
+                    <div class="Breakdown_label">4 Star</div>
+                    <div class="Breakdown_bg">
+                      <div class="Breakdown_fill" style="width: 12%;"></div>
+                    </div>
+                    <div class="Breakdown_count">5</div>
+                  </div>
+                  <div class="Breakdown">
+                    <div class="Breakdown_label">3 Star</div>
+                    <div class="Breakdown_bg">
+                      <div class="Breakdown_fill" style="width: 5%;"></div>
+                    </div>
+                    <div class="Breakdown_count">2</div>
+                  </div>
+                  <div class="Breakdown">
+                    <div class="Breakdown_label">2 Star</div>
+                    <div class="Breakdown_bg">
+                      <div class="Breakdown_fill" style="width: 2%;"></div>
+                    </div>
+                    <div class="Breakdown_count">1</div>
+                  </div>
+                  <div class="Breakdown">
+                    <div class="Breakdown_label">1 Star</div>
+                    <div class="Breakdown_bg">
+                      <div class="Breakdown_fill" style="width: 0%;"></div>
+                    </div>
+                    <div class="Breakdown_count">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6"> 
+              <div class="review">
+                <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>Practical advise and good standards for design. I definitely recommend reading if you are using forms</p>
+                <p class="avatar">Annalusia.<img src="https://s3.amazonaws.com/uifaces/faces/twitter/tonypeterson/128.jpg"></p>
+              </div>
+            </div>
+            <div class="col-6"> 
+              <div class="review">
+                <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                <p>Definitely a good read, form design is as important as the information that you intend to collect.</p>
+                <p class="avatar">Jina.<img src="https://s3.amazonaws.com/uifaces/faces/twitter/jina/128.jpg"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="review">
+            <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>I am really digging this book and appreciate the effort Jessica has put into it!</p>
+            <p class="avatar">Adelle Charles.<img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"></p>
+          </div>
+          <div class="review">
+            <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+            <p>Useful to design elegant and useful landing page, I use to make this goal and I made it simple and quickly my project.</p>
+            <p class="avatar">Vista.<img src="https://s3.amazonaws.com/uifaces/faces/twitter/vista/128.jpg"></p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="review">
+            <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+            <p>Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+            <p class="avatar">Sally K.<img src="https://d3iw72m71ie81c.cloudfront.net/female-52.jpg"></p>
+          </div>
+          <div class="review">
+            <div class="rating-box"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+            <p>Very useful, a good blend of theory and practical information.</p>
+            <p class="avatar">Brad. F.<img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Outline-->
+  <section class="outline">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-7">
+          <h2>Intro to React 
+            <table class="toc">
+              <thead>
+                <tr>
+                  <th title="Field #1">Lesson</th>
+                  <th title="Field #2">time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Setting up React Tooling </td>
+                  <td> <i class="fas fa-unlock-alt"></i></td>
+                  <td> 18:36</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Installing Bootstrap </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 11:06</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Setting up the API </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 6:06</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Creating a HTTP Service </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 18:41</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Promises with ES6 and React </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 12:00</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Components in React </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 13:27</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Props in React </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 10:42</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Working with State in React </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 13:22</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Creating a WishList Component </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 24:29</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Building a Singleton Data Service </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 11:02</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Creating a Notification Service </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 12:49</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Posting Notifications to React Components </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 7:09</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Observing Notifications in React </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 13:27</td>
+                </tr>
+                <tr class="disabled">
+                  <td>Finishing our Full Stack React App </td>
+                  <td><i class="fas fa-lock"></i></td>
+                  <td> 15:52</td>
+                </tr>
+              </tbody>
+            </table>
+          </h2>
+        </div>
+        <div class="col-5">
+          <ul class="specs">
+            <li><a class="buy" href="https://www.sitepoint.com/premium/products/Z2lkOi8vbGVhcm5hYmxlL1Byb2R1Y3QvMTE5">Buy this Course</a></li>
+            <li class="icon"><i class="far fa-calendar-alt"></i> Last Updated: Jan 2018</li>
+            <li class="icon specs-video"><i class="fas fa-video"></i> 14 Video Lessons</li>
+            <li class="icon specs-length"><i class="far fa-clock"></i> Total time: 2 Hrs 45 min</li>
+            <li class="icon specs-students"><i class="fas fa-graduation-cap"></i> 13,547 Happy Students</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer-->
+  <footer class="mainfooter">
+    <div class="container">
+      <div class="grid">
+        <div class="col-3">Stuff We Do
+          <ul class="footer-points">
+            <li><a class="Footer-link f-small" href="/">SitePoint Home</a></li>
+            <li><a class="Footer-link f-small" href="/versioning/">Versioning</a></li>
+            <li><a class="Footer-link f-small" href="/themes/">Themes</a></li>
+            <li><a class="Footer-link f-small" href="/community/">Forums</a></li>
+            <li><a class="Footer-link f-small" href="/html-css/css/">References</a></li>
+          </ul>
+        </div>
+        <div class="col-3">About
+          <ul>
+            <li><a class="Footer-link f-small" href="/about-us/">Our Story</a></li>
+            <li><a class="Footer-link f-small" href="/press/">Press Room</a></li>
+          </ul>
+        </div>
+        <div class="col-3">Contact
+          <ul>
+            <li><a class="Footer-link f-small" href="/contact-us/">Contact Us</a></li>
+            <li><a class="Footer-link f-small" href="https://sitepoint.zendesk.com/hc/en-us">FAQ</a></li>
+            <li><a class="Footer-link f-small" href="/write-for-us/">Write for Us</a></li>
+            <li><a class="Footer-link f-small" href="/advertise/">Advertise</a></li>
+          </ul>
+        </div>
+        <div class="col-3">Legals
+          <ul>
+            <li><a class="Footer-link f-small" href="/premium/legals">Terms of Use</a></li>
+            <li><a class="Footer-link f-small" href="/premium/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="feedback">test</div>
+  <!--script(src="https://cdn.jsdelivr.net/npm/umbrellajs")-->
+  <script>
+      var animateHTML = function() {
+      var elems;
+      var windowHeight;
+      function init() {
+        elems = document.querySelectorAll('.waiting');
+        windowHeight = window.innerHeight;
+        addEventHandlers();
+        checkPosition();
+      }
+      function addEventHandlers() {
+        window.addEventListener('scroll', checkPosition);
+        window.addEventListener('resize', init);
+      }
+      function checkPosition() {
+        for (var i = 0; i < elems.length; i++) {
+          var positionFromTop = elems[i].getBoundingClientRect().top;
+          var unitHeight = elems[i].getBoundingClientRect().height;
+          var bottomedge = positionFromTop +  unitHeight;
+          if (positionFromTop < 0 && bottomedge > 0){
+            elems[i].className = elems[i].className.replace(
+              'waiting',
+              'animate'
+            );/*
+            console.log('-------------------: ') ;
+            console.log('positionFromTop: ' + positionFromTop);
+            console.log('windowHeight: ' + windowHeight);
+            console.log('elems[i].className: ' + elems[i].className);
+            console.log('bottomedge: ' + bottomedge);
+            console.log('pFt - win: ' + (positionFromTop - windowHeight));*/
+          } else if (bottomedge < 0 || positionFromTop < 0){
+            elems[i].className = elems[i].className.replace(
+              'animate',
+              'waiting'
+            );/*
+            console.log('-------------------: ') ;
+            console.log('positionFromTop: ' + positionFromTop);
+            console.log('windowHeight: ' + windowHeight);
+            console.log('elems[i].className: ' + elems[i].className);
+            console.log('bottomedge: ' + bottomedge);
+            console.log('pFt - win: ' + (positionFromTop - windowHeight));*/
+          }
+        }
+      }
+      return {
+        init: init
+      };
+    };
+    animateHTML().init();
+          
+        //$( ".feedback" ).text( "viewportheight: " + viewportheight + ", ParadeOn: " + paradeOn + ", ParadeOff: " + paradeOff + ", things: " + howmanythingstoanimate);
+  </script>
+  <div class="modalbg" id="openModal">
+    <div class="dialog"><a class="close" href="#close" title="Close">X</a>
+      <div class="grid-12">
+        <div class="col-3">
+          <div class="grid-12">
+            <div class="col-12 toctitle">
+              <h3>Intro to React</h3>
+            </div>
+            <div class="col-12 toclist">
+              <table class="toc toc-course">
+                <thead>
+                  <tr>
+                    <th title="Field #1">Lesson</th>
+                    <th title="Field #2">Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Setting up React Tooling </td>
+                    <td> 18:36</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Installing Bootstrap <i class="fas fa-lock"></i></td>
+                    <td> 11:06</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Setting up the API <i class="fas fa-lock"></i></td>
+                    <td> 6:06</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Creating a HTTP Service <i class="fas fa-lock"></i></td>
+                    <td> 18:41</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Promises with ES6 and React <i class="fas fa-lock"></i></td>
+                    <td> 12:00</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Components in React <i class="fas fa-lock"></i></td>
+                    <td> 13:27</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Props in React <i class="fas fa-lock"></i></td>
+                    <td> 10:42</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Working with State in React <i class="fas fa-lock"></i></td>
+                    <td> 13:22</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Creating a WishList Component <i class="fas fa-lock"></i></td>
+                    <td> 24:29</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Building a Singleton Data Service <i class="fas fa-lock"></i></td>
+                    <td> 11:02</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Creating a Notification Service <i class="fas fa-lock"></i></td>
+                    <td> 12:49</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Posting Notifications to React Components <i class="fas fa-lock"></i></td>
+                    <td> 7:09</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Observing Notifications in React <i class="fas fa-lock"></i></td>
+                    <td> 13:27</td>
+                  </tr>
+                  <tr class="disabled">
+                    <td>Finishing our Full Stack React App <i class="fas fa-lock"></i></td>
+                    <td> 15:52</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align:right"><strong>Total: 2hrs 25min</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="grid-12">
+            <div class="col-12">
+              <div class="course-preview">
+                <iframe width="100%" style="margin-top:2rem" height="500px" src="https://www.youtube.com/embed/6EN1cXiTdcw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+              </div>
+            </div>
+            <div class="col-12"><a class="buy" href="https://www.sitepoint.com/premium/products/Z2lkOi8vbGVhcm5hYmxlL1Byb2R1Y3QvMTE5">Get this Course     </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js" type="text/javascript"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" type="text/javascript"></script>
+  <!--script(src="scripts/typography.js" , type="text/javascript")-->
+  <!--script(src="scripts/hopscotch.js" , type="text/javascript")-->
+  <script>
+    $('.toggler').click( function() {
+    $(this).toggleClass('active');
+    });
+  </script>
+</body>

@@ -1,0 +1,143 @@
+
+
+@import "gridlex-vars";
+@import "gridlex-preprocessing";
+@import "gridlex-mixins";
+@import "gridlex-classes";
+
+@import "ads";
+
+@import "title-unit";
+@import "under-construction";
+
+.device{
+  z-index: 999;
+}
+
+
+/* =========== Cross site typography tweaks ============ */ 
+[class~="col"],
+[class*="col-"],
+[class*="col_"] {
+  outline: 1px red dashed;
+}
+h4, .is-size-h4 {
+  margin-top: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) * 1);
+}
+
+/* --- topbar  --- */ 
+a.hamburger {
+color: #eee;
+}
+.wrapper{
+outline: 1px dashed rgba(130,130,130,.2);
+}
+.topbar{ 
+background: #333;
+color: #eee;
+height: calc(var(--baseline) * 2);
+}
+.branding{
+height: calc(var(--baseline) * 1);
+margin: calc(var(--baseline) / 2) 0;
+}
+
+
+/* ----------------------- Temporary scaffolding ----------------------  */ 
+
+.device{
+right: 0;
+left: auto;
+position: absolute!important;
+opacity: 0.3;
+}
+
+.topoffset{ // this offsets the first item AFTER the fixed header
+  padding-top: calc(var(--baseline) * 3.5);
+
+}
+
+
+
+
+/* ===  HEADER === */
+
+header.sitepoint {
+  background: #333;
+  color: #ddd;
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 1000;
+  .branding {
+    height: calc(var(--baseline) * 2);
+    margin: 0;
+    .branding-logo {
+      height: calc(var(--baseline));
+      margin-top: 0rem;
+    }
+    .hamburger{
+      vertical-align: .45rem;
+      margin: 1.2rem 2rem 0 0;
+    }
+  }
+
+  .col-3 {
+    padding: 0 0rem;
+  }
+  .dash-controls {
+    padding-top: calc(var(--baseline)/2);
+  }
+}
+
+/* ===  NAVBAR === */
+
+nav.main {
+  background: #fff;
+  box-shadow: 0 .3rem .35rem rgba(0, 0, 0, .075);
+  .col {
+    padding: 0 .5rem 0;
+  }
+}
+ 
+.navbar {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  line-height: calc(var(--baseline));
+  li {
+    display: inline-block;
+    font-size: .85rem;
+    padding: 0 1rem;
+    a{
+      color: #777;
+    }
+    .note {
+      background: #b00;
+      display: inline-block;
+      color:#eee;
+      font-size: .5rem;  
+      padding: 0 0.27rem;
+      border-radius: 50%; 
+      line-height: .85rem;
+      margin-left: .5rem;
+      top: -0.15rem;
+      position: relative;
+    }
+  }
+}
+
+footer.mainfooter {
+  background: #3D383E;
+  //height: 12rem;
+  font-weight: #333;
+  padding: calc(var(--baseline)/2) 0 calc(var(--baseline));
+  font-size: .75rem;
+  color: #ccc;
+  ul li a{
+    color: #ddd;
+    font-size: .75rem;
+
+  }
+}

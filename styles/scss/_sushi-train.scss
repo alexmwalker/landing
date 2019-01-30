@@ -1,0 +1,69 @@
+
+
+//$heightrow: calc(var(--baseline)*10);
+$timer: 255s;
+
+#book-sushi-train{
+  padding-top: calc(var(--baseline)*2);
+  padding-bottom: 0;
+}
+
+.container{
+	width: 100%;
+	//height: calc(var(--baseline)*12);
+}
+.row1, .row2{
+	background-image: url(../../images/covers/booktile@2x.png);
+	background-size: auto 200%;
+  height: calc(var(--baseline)*6);
+  margin-top: calc(var(--baseline)*1);
+	background-position: 0 0 ;
+  background-repeat: repeat;
+  position: relative;
+  
+  box-shadow: 0 0 6px rgba(0,0,0,.3);
+  &:before, &:after{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 3%;
+    height: calc(var(--baseline)*6);
+    background: linear-gradient(270deg, rgba(0,0,0,0) 10%, rgba(0,0,0,.3) 90%);
+    top: 0;
+    left: 0;
+  }
+  &:after{
+    background: linear-gradient(270deg, rgba(0,0,0,.3) 10%, rgba(0,0,0,0) 90%);
+    top: 0;
+    left: auto;
+    right: 0;
+  }
+}
+.row2{
+	background-position: 0 -100%;
+  margin-top: 0;
+}
+
+// animations only triggered when scroll adds .animate to parent
+.animate{
+  .row1{
+    animation: parade $timer infinite linear;
+  }  
+  .row2{
+    animation: parade2 $timer infinite linear;
+    margin-top: 0;
+  } 
+} 
+
+@keyframes parade{
+	0%{ background-position: 0% 0 ; }
+	100%{ background-position: 300% 0 ;}
+}
+@keyframes parade2{
+	0%{ background-position: 0% -100% ; }
+	100%{ background-position: -300% -100% ;}
+}
+
+.newClass{
+  background: red;
+}

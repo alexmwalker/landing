@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="108">
+	<g transform="translate(-4068 2321)">
+
+		<g fill="#FFF" clip-path="url(#a)">
+			<use id="sector8" transform="translate(4083.62 -2321)" xlink:href="#path0_fill"/>
+			<use id="sector7" transform="translate(4068 -2305.28)" xlink:href="#path1_fill"/>
+			<use id="sector6" transform="matrix(1 0 0 -1 4068 -2228.72)" xlink:href="#path1_fill"/>
+			<use id="sector5" transform="matrix(1 0 0 -1 4083.62 -2213)" xlink:href="#path0_fill"/>
+			<use id="sector4" transform="rotate(180 2080.19 -1106.5)" xlink:href="#path0_fill"/>
+			<use id="sector3" transform="rotate(180 2088 -1114.36)" xlink:href="#path1_fill"/>
+			<use id="sector2" transform="matrix(-1 0 0 1 4176 -2305.28)" xlink:href="#path1_fill"/>
+			<use id="sector1" transform="matrix(-1 0 0 1 4160.38 -2321)" xlink:href="#path0_fill"/>
+			<use id="play" transform="rotate(90 3223.5 927.5)" xlink:href="#path2_fill"/>
+		</g>
+	</g>
+	<defs>
+		<style>
+			use{
+				opacity: .5
+			}
+			@-webkit-keyframes opacityLoop{
+				0%{opacity: .6}
+				100%{
+					opacity:.2;
+				}
+			}
+			@keyframes opacityLoop{
+				0%{opacity: .6}
+				100%{
+					opacity:.2;
+				}
+			}
+			#sector8, #sector7,#sector6, #sector5,#sector4, #sector3,#sector2, #sector1{
+				-webkit-animation: opacityLoop 2s infinite ;
+				animation: opacityLoop 2s infinite ;
+			}
+			#sector7{
+				-webkit-animation-delay: .5s;
+				animation-delay: .5s
+			}
+			#sector6{
+				-webkit-animation-delay: 1s;
+				animation-delay: 1s
+			}
+			#sector5{
+				-webkit-animation-delay: 1.5s;
+				animation-delay: 1.5s
+			}
+			#sector4{
+				-webkit-animation-delay: 2s;
+				animation-delay: 2s
+			}
+			#sector3{
+				-webkit-animation-delay: 2.5s;
+				animation-delay: 2.5s
+			}
+			#sector2{
+				-webkit-animation-delay: 3s;
+				animation-delay: 3s
+			}
+			#sector1{
+				-webkit-animation-delay: 3.5s;
+				animation-delay: 3.5s
+			}</style>
+		<path id="path0_fill" d="M7.071 22.79L0 15.719C9.686 6.009 23.08 0 37.88 0c.166 0 .333 0 .5.002v10a43.822 43.822 0 0 0-.5-.002c-12.039 0-22.934 4.89-30.81 12.79z"/>
+		<path id="path1_fill" d="M15.62 0C5.969 9.678 0 23.032 0 37.781c0 .167 0 .334.002.5h10a43.795 43.795 0 0 1-.002-.5c0-11.987 4.849-22.842 12.692-30.71L15.62 0z"/>
+		<path id="path2_fill" d="M29 0l25.115 43.5H3.885L29 0z"/>
+	</defs>
+</svg>

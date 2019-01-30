@@ -1,0 +1,82 @@
+/* typography size */
+
+
+h1,
+.is-size-1
+{
+    font-size: 2.2222222rem;
+    font-weight: 500;
+    line-height: $line-height * 2;
+
+    margin-top: $line-height;
+    margin-bottom: $line-height;
+}
+h2,
+.is-size-2
+{
+    font-size: 1.6666667rem;
+    font-weight: 500;
+    line-height: $line-height;
+
+    margin-top: $line-height;
+    margin-bottom: $line-height;
+}
+h2
+{
+    margin-top: 3.5555556rem;
+}
+h3,
+.is-size-3
+{
+    font-size: 1.2777778rem;
+    line-height: $line-height;
+    font-weight: 400;
+    margin-top: $line-height;
+    margin-bottom: $line-height;
+}
+h4,
+.is-size-4
+{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: $line-height;
+
+    margin-top: $line-height;
+    margin-bottom: $line-height;
+}
+h5,
+.is-size-5
+{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: $line-height;
+    margin-top: $line-height;
+    margin-bottom: 0rem;
+}
+p,
+ul,
+ol,
+pre,
+table,
+blockquote
+{
+    font-weight: 300;
+
+    margin-top: 0rem;
+    margin-bottom: $line-height;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul
+{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+.small
+{
+    font-size: .6rem;
+    font-weight: 300;
+    line-height: $line-height/2;
+    margin-bottom: 0;
+}

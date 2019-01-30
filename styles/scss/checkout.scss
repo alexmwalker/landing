@@ -1,0 +1,197 @@
+
+
+@import 'config';
+
+
+@import 'typography';
+@import 'atoms';
+@import 'header';
+// @import 'checkout-components';
+@import 'footer';
+@import '3d';
+@import 'under-construction';
+
+
+ 
+/* my additions */
+/* === major backgrounds  === */ 
+.checkout {
+  background: #fff;
+  padding-top: 1.7777778rem * 2.0;
+}
+
+.dark{
+  background: #435069;
+  box-shadow: -3px 0 8px rgba(0,0,0,.2);
+}
+
+
+
+.overline {
+  border-top: 1px solid #ccc;
+}
+.t-bg-grey-200 {
+  background-color: rgb(229, 229, 229);
+}
+
+.l-pa3 {
+  padding: 16px;
+}
+.t-bg-white {
+  background-color: rgb(255, 255, 255);
+}
+.l-w-100 {
+  width: 100%;
+}
+
+.Form_p {
+  font-size: .6rem;
+  line-height: 1rem;
+}
+
+
+
+.book.size-mid {
+  height: 18rem;
+  width: 14.3rem;
+  -webkit-perspective: 62.5rem;
+  perspective: 62.5rem;
+}
+
+.priceline{
+  font-size: 1.5rem;
+  text-align: right;
+  border: 1px #ccc solid;
+  border-width: 1px 0;
+  div[class^="col-"] {
+    padding-top: 0.888889rem
+  }
+  strike{
+    color: #A0A6B2
+  }
+  .price {
+    font-weight: 600;
+    color: #46C9CA;
+    font-size: 1,5rem
+  }
+}
+
+.book {
+  margin: 2em 0 0 1rem;
+  transform: scale(1.2) translateY(1rem);
+}
+
+
+.productframe{
+  background: url(http://storage.internal.melbourne.sitepoint.com/~awalker/images/book-background.png) center 90% no-repeat;
+  background-size: 80% auto;
+  height: 15rem;
+}
+.tabletframe{
+  perspective: 60rem;
+  perspective-origin: 0 0;
+}
+.tablet{
+  background: url(http://storage.internal.melbourne.sitepoint.com/~awalker/images/flatpad.png) center 18% no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 22rem;
+  position: relative;
+  transform-origin: 0 0;
+  transform: translateY(0.5rem) rotateY(8deg) rotatex(5deg) scale(.65) ;
+}
+.courseCustomizer{
+  transform-origin: 0 0;
+  background: #fff;
+  position: absolute;
+  transform: scale(.69) translateY(85px) translateX(30px) ;/*  rotateY(18deg) rotatex(5deg)*/
+  //outline: 1px red dashed!important;
+  :before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    z-index: 9999;
+    margin: -15% -15%;
+    background-image: url(/~awalker/images/loop2.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+}
+.courseCustomizerImg{
+  width: 100%;
+}
+.courseCustomizerTitle{
+  text-indent:.5rem;
+  line-height: 2rem;
+  font-size: .8rem;
+  font-weight: 600
+}
+
+
+
+header.sitepoint .branding .branding-logo {
+  margin-top: -1.1rem; // can't figure out why this is needed in the checkout only? whatevs. for now... 
+}
+
+.dark{
+  h1, h2, h3, h4, h5, h6{
+    color: #fff 
+  }
+  .control-label{
+    color:#A0A6B2;
+    padding: 0;
+    margin: 0 0 0 0.5rem;
+  }
+  .form-control{
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 10px 0;
+    color: #333;
+    background: #ddd;
+    border-style: inset;
+    border-width: 3px;
+    border-radius: 4px;
+    text-indent: 1rem;
+    transition: all .3s;
+    &:focus{
+      background: #fff;
+      transition: all .3s;
+    }
+  }
+  select.form-control{
+    height: 3.2rem;
+    color: #333;
+    font-size: 1.25rem;
+
+  }
+  fieldset{
+    border: 0;
+    color: #A0A6B2;
+  }
+}
+
+p.small span {
+  font-size: 1.5em;
+}
+
+.outline{
+  outline: 1px red dashed;
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #bbb;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #bbb;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #bbb;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #bbb;
+}

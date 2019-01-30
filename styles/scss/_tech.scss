@@ -1,0 +1,23 @@
+.tech{
+  color: #aaa;
+  background: #2a2a2a;
+  padding: calc(var(--baseline)/1) 0;
+  h2{
+    color: #ccc;
+    margin-bottom: calc(var(--baseline)/1) ;
+  }
+  .col {
+    min-height: calc(var(--baseline) * 1.0);
+    color: #aaa;
+    &:hover{
+      color: #fff;
+      }
+    p{
+    font-size: calc(1rem / var(--typescale) / var(--typescale));     
+    position: relative;
+    bottom: 0;
+    }
+
+  }
+}
+

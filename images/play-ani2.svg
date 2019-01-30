@@ -1,0 +1,21 @@
+<svg width="91" height="91" viewBox="0 0 91 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>play-ani</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-4471 2366)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 4471 -2366L 4562 -2366L 4562 -2275L 4471 -2275L 4471 -2366Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="play-ani" clip-path="url(#clip-0)">
+<g id="Subtract">
+<use xlink:href="#path0_fill" transform="translate(4471 -2366)" fill="url(#paint0_angular)"/>
+</g>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_angular" cx="0.5" cy="0.5" r="0.5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1.26808e-13 -91 -91 5.57214e-15 91 91)">
+<stop offset="0" stop-color="#FFFFFF" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+</radialGradient>
+<path id="path0_fill" fill-rule="evenodd" d="M 45.5 91C 70.6289 91 91 70.629 91 45.5C 91 20.371 70.6289 0 45.5 0C 20.3711 0 0 20.371 0 45.5C 0 70.629 20.3711 91 45.5 91ZM 45.5 83.2222C 66.3333 83.2222 83.2222 66.3334 83.2222 45.5C 83.2222 24.6666 66.3333 7.77778 45.5 7.77778C 24.6667 7.77778 7.77778 24.6666 7.77778 45.5C 7.77778 66.3334 24.6667 83.2222 45.5 83.2222Z"/>
+</defs>
+</svg>

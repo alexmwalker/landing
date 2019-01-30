@@ -1,0 +1,42 @@
+/************************
+    TITLE UNIT
+*************************/
+.title-illustration{
+margin-top: calc(var(--baseline)*3);
+background: url('https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/misc/svg-mock.png');
+background-position: center center;
+//background: #900;
+background-size: 100% auto;
+}
+.title-unit{
+background: rgba(0,0,0,.35);
+color: #fff;
+padding: calc(var(--baseline)/2) 1rem;
+
+a{
+  color:#fff;
+}
+h1{
+  background: rgba(0,0,0,.55);
+  width: 66%;
+  margin: 0;
+}
+.credit, .crumbtrail {
+  margin-bottom: calc(var(--baseline) /2);
+}
+.credit {
+  background: #000;
+  padding-left: 1rem;
+  width: 64.5%;
+} 
+
+}
+.wrapper{ 
+  max-width: 52rem;
+}
+.loggedout .wrapper{ 
+  max-width: 60rem;
+}
+.center{
+  text-align: center
+}

@@ -1,0 +1,44 @@
+$grid-max-width: 1200px;
+$grid-columns: 12;
+$grid-gutter-width: calc(var(--baseline) /2);
+$breakpoint: "only screen and (max-width:850px)";
+@mixin border-box {
+	box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+	@include border-box;
+}
+.row {
+	display: flex;
+}
+.container {
+	max-width: $grid-max-width;
+	margin: auto;
+}
+[class*=col-] {
+	flex: 1;
+	padding: $grid-gutter-width 1rem 0;
+}
+.module {
+	padding: calc(var(--baseline) /2);
+	background-color: #ddd;
+}
+@for $i from 1 through $grid-columns {
+	.col-#{$i} { 
+		flex: 0 0 100% / $grid-columns * $i;
+
+	}
+	.offset-#{$i} { 
+		margin-left: 100% / $grid-columns * $i;
+	}
+}
+@media #{$breakpoint} {
+	.row {
+		flex-direction: column;
+	}
+	[class*=offset-] {
+		margin-left: 0;
+	}
+}

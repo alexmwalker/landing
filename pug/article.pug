@@ -1,0 +1,54 @@
+
+
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Styles - Styles 
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='stylesheet', type='text/css', href='https://cdn.rawgit.com/alexmwalker/c570797cb5ed14f701a53f8c7b38bce7/raw/0d4e88f482380460b28e86bc37fb8a3d8ab753b1/basic-grid-typography.css')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,600,700')
+    link(rel='stylesheet', type='text/css', href='styles/css/article.css')
+  body.borders.vertical-rhythm
+    header.sitepoint
+      .wrapper
+        .grid-12
+          .col-3
+            .branding
+              i.fas.fa-bars.hamburger
+              img.branding-logo(src='https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg')
+      nav.main
+        .wrapper
+          div
+            .col
+              ul.navbar
+                li
+                  a(href='#')
+                    | Books
+                    span.note 1
+                li
+                  a(href='#') Courses
+                li
+                  a(href='#') Learning Paths
+                li
+                  a(href='#')
+                    | Deals
+                    span.note 3
+    .device
+
+    include title-unit.pug
+    .adlayer
+      .ad.ad-728.wrapper
+      
+    .wrapper.labelling
+      .gridbox
+        .col-12
+          include article-body.pug 
+
+  include article-footer.pug           
+
+
+
+

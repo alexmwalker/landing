@@ -1,0 +1,74 @@
+/* ===  HEADER === */
+
+header.sitepoint-branding {
+  background: #232023;
+  color: #ddd;
+  //position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow:  0 0 05px rgba(255,0,0,0.5),
+                0 0 10px rgba(0,0,0,0.5);
+  height: calc(var(--baseline)*2);
+
+  .branding {
+    height: calc(var(--baseline) * 2);
+    margin: 0;
+    .branding-logo {
+      height: calc(var(--baseline));
+      margin-top: calc(var(--baseline)/2);
+    }
+    .hamburger{
+      vertical-align: .45rem;
+      margin: 1.2rem 2rem 0 0;
+    }
+  }
+
+  .col-3 {
+    padding: 0 0rem;
+  }
+
+}
+.sitepoint-branding ul.nav{
+  padding: 0; margin: 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  li{
+    //outline: 1px red dashed;
+    padding: 0 1rem;
+    list-style-type: none;
+    line-height: calc(var(--baseline)*2);
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    a{
+      color:#E5E5E5;
+    }
+  }
+}
+.sitepoint-branding .pink{
+  margin-top: calc(var(--baseline)/2);
+}
+
+

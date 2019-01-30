@@ -1,0 +1,67 @@
+$br: 3px;
+
+@import 'basic-grid-typography';
+//@import '_kindling'; // grid layout
+
+@import "gridlex-vars";
+@import "gridlex-preprocessing";
+@import "gridlex-mixins";
+@import "gridlex-classes";
+
+@import 'header';
+@import 'hero-landing';
+@import 'tech';
+@import 'sushi-train';
+@import 'reader-demo';
+@import 'authors';
+@import 'reviews';
+@import 'community';
+
+@import 'footer';
+
+//@import '3d';
+
+
+.pink{
+  height: calc(var(--baseline));
+  background: #FA3292;
+  color: #eee;
+  border-radius: 4px;
+  font-size: calc(1rem / var(--typescale));
+  border: 0 none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  &:hover{
+    background: #FA0B7E;  
+    color: #fff;
+  }
+  &.large{
+    font-size: calc(1rem * var(--typescale));
+    height: calc(var(--baseline) * 1.5);
+  }
+}
+
+
+
+button.pink{
+  margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);
+  
+}
+.team-membership{
+  a{
+    color: #fff;
+  }
+}
+
+/* temp column borders */
+[class*="col"]{
+  outline: 0px dashed rgba(125,200,200,.3);
+}
+/*
+.animate{
+  background: #FA0B7E;
+}
+.waiting{
+  background: rgb(39, 250, 11);
+}*/

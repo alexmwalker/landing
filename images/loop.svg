@@ -1,0 +1,43 @@
+<svg width="108" height="108" viewBox="0 0 108 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>loop</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-4068 2321)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 4068 -2321L 4176 -2321L 4176 -2213L 4068 -2213L 4068 -2321Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="loop" clip-path="url(#clip-0)">
+<g id="Intersect">
+<use xlink:href="#path0_fill" transform="translate(4083.62 -2321)" fill="#FFFFFF" fill-opacity="0.4"/>
+</g>
+<g id="Subtract">
+<use xlink:href="#path1_fill" transform="translate(4068 -2305.28)" fill="#FFFFFF" fill-opacity="0.4"/>
+</g>
+<g id="Subtract">
+<use xlink:href="#path1_fill" transform="matrix(1 0 0 -1 4068 -2228.72)" fill="#FFFFFF" fill-opacity="0.4"/>
+</g>
+<g id="Intersect">
+<use xlink:href="#path0_fill" transform="matrix(1 0 0 -1 4083.62 -2213)" fill="#FFFFFF" fill-opacity="0.4"/>
+</g>
+<g id="Intersect">
+<use xlink:href="#path0_fill" transform="matrix(-1 0 0 -1 4160.38 -2213)" fill="#FFFFFF" fill-opacity="0.4"/>
+</g>
+<g id="Subtract">
+<use xlink:href="#path1_fill" transform="matrix(-1 0 0 -1 4176 -2228.72)" fill="#FFFFFF" fill-opacity="0.4"/>
+</g>
+<g id="Subtract">
+<use xlink:href="#path1_fill" transform="matrix(-1 0 0 1 4176 -2305.28)" fill="#FFFFFF" fill-opacity="0.4"/>
+</g>
+<g id="Intersect">
+<use xlink:href="#path0_fill" transform="matrix(-1 0 0 1 4160.38 -2321)" fill="#FFFFFF" fill-opacity="0.4"/>
+</g>
+<g id="Polygon">
+<use xlink:href="#path2_fill" transform="matrix(6.12323e-17 1 -1 6.12323e-17 4151 -2296)" fill="#FFFFFF" fill-opacity="0.4"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 7.07104 22.7898L 0 15.7188C 9.68555 6.0083 23.0808 0 37.8792 0C 38.0461 0 38.2126 0.000732422 38.3792 0.00219727L 38.3792 10.0029C 38.2126 10.001 38.0461 10 37.8792 10C 25.842 10 14.947 14.8892 7.07104 22.7898Z"/>
+<path id="path1_fill" d="M 15.6208 0C 5.96802 9.67773 0 23.0325 0 37.7812C 0 37.948 0.000732422 38.1147 0.00219727 38.2812L 10.0029 38.2812C 10.001 38.1147 10 37.9482 10 37.7812C 10 25.7939 14.8486 14.9392 22.6919 7.07104L 15.6208 0Z"/>
+<path id="path2_fill" d="M 29 0L 54.1147 43.5L 3.88526 43.5L 29 0Z"/>
+</defs>
+</svg>

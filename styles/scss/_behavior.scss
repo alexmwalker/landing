@@ -1,0 +1,80 @@
+
+#pinit {
+  //transition: all 1s ease;
+  //z-index: 9999;
+  margin-top: -$line-height;
+}
+
+
+.modal-control{ // hide by default
+  opacity: 0;
+  font-size: 0.6rem;
+  width: 100%;
+  margin: 1rem 1rem 0 0;
+  right: 0 ;
+  position: absolute;
+  ul{
+    margin: $line-height/2 0 0 0;
+    color: #999;
+  }
+  a.do, a.buy{
+    font-size: 0.75rem;
+    line-height: 1.7778rem;
+    border: 0 none;
+    width: 100%;
+    margin: $line-height/2 0 0 0
+  }
+}
+/*
+
+#pinit.pin-it {
+  opacity: 1;
+  position: fixed;
+  right: 15vw;
+  width: 20rem;
+  top: 0rem;
+  height: 12.5rem; 
+  transition: all .5s ease;
+  background: rgba(0,0,0,0.7);
+  //border: 1px #000 solid;
+  .book {
+    top: 0;
+    left: auto;
+    right: 0;
+    position: relative;
+    margin: 1rem;
+    transition: all .5s ease;
+    .bookgroup{
+      transition: all .5s ease;
+    }
+  }
+  .course .cover{
+    width: 70%;
+    margin: 0.5rem auto $line-height/2;
+    transition: all 0.5s ease;
+  }
+  .modal-control{
+    opacity: 1;
+    margin: 1rem 1rem 0 0;
+    right: 0;
+    &.modal-course{
+      width: 100%;
+      bottom: 0.5rem;
+      margin: 1rem 0 0 0;
+      text-align: center;
+      a.do, a.buy{
+        width: 40%;
+        margin:0 4% 0 4%
+      }
+    }
+    &.modal-book{
+      width: 40%; 
+      //outline: 1px red dashed;
+    }
+  }
+  .specs{
+    display: none;
+  }
+
+}
+*/

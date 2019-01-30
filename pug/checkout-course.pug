@@ -1,0 +1,53 @@
+doctype html
+head
+  meta(charset="utf-8")
+  title Styles - Styles 
+  meta(name="description" content="")
+  meta(name="author" content="")
+  link(rel="stylesheet" type="test/css" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css")
+  // The Grid system
+  link(rel="stylesheet" type="test/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,600,700")
+  // Font
+  link(rel="stylesheet" type="text/css" href="styles/css/checkout.css")
+  
+  
+body.-borders.-labelling.-vertical-rhythm
+
+  include header-simple.pug
+  
+  section.checkout
+    .container
+      .grid-12
+        .col-4
+          h2  Unlock Instant Access
+          //#val.alert.alert-info
+          .grid-12.overline
+            .col-12.productframe
+              .tabletframe
+                .tablet
+                  .courseCustomizer
+                    .courseCustomizerTitle Intro to React
+                    img.courseCustomizerImg(src="http://storage.internal.melbourne.sitepoint.com/~awalker/images/course-vid@2x.jpg")
+            .col-12
+              h5 Premium Membership includes:
+              ul
+                li 70+ SitePoint Books (PDF &amp; ePUB)
+                li 80+ Premium Video Courses              
+              .grid-12.priceline
+                .col-4 
+                  | Total:
+                .col-4
+                  span
+                    strike $15 
+                .col-4.text-center
+                  span.price
+                    | $9
+              .col.text-center
+                small Discount applied. Expires in 24 hours
+        .col-8.dark
+          //include checkout-form.pug -- the original checkout code
+          include checkout-new.pug
+
+
+  include footer.pug
+  include scripts.pug
