@@ -1870,6 +1870,7 @@ header.sitepoint-branding {
 
 .feedback {
   position: fixed;
+  display: none;
   width: 150px;
   background: yellow;
   font-size: 12px;
