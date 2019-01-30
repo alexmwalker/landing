@@ -1861,9 +1861,9 @@ header.sitepoint-branding {
   padding: calc(var(--baseline)*3) 0 calc(var(--baseline)*1); }
   .authors h2 {
     margin-bottom: calc(var(--baseline)*2); }
-  .authors .col {
+  .authors .col-2_sm-4 {
     text-align: center; }
-    .authors .col img {
+    .authors .col-2_sm-4 img {
       border-radius: 50%;
       width: 50%;
       margin-bottom: calc(var(--baseline)*1); }
@@ -1887,10 +1887,12 @@ header.sitepoint-branding {
     width: 50%;
     margin-bottom: calc(var(--baseline)*1); }
 
-.reviews .col-4 .review {
+.reviews div .review {
   margin: 0 1rem;
   padding: calc(var(--baseline)*1) 1rem 0;
   border: 1px #ddd solid;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   border-radius: 5px; }
 
 .rating {
@@ -1901,11 +1903,17 @@ header.sitepoint-branding {
   margin: 0 auto calc(var(--baseline)*1); }
 
 .twitter-avatar {
-  margin: calc(var(--baseline)/2) 0 calc(var(--baseline)/1); }
+  margin: calc(var(--baseline)/2) 0 calc(var(--baseline)/1);
+  font-size: calc(1rem / var(--typescale) / var(--typescale));
+  font-weight: 500;
+  text-align: right; }
+  .twitter-avatar a:visited {
+    color: #555; }
   .twitter-avatar img {
-    width: calc(var(--baseline)*1.5);
-    height: calc(var(--baseline)*1.5);
+    width: calc(var(--baseline)*1.0);
+    height: calc(var(--baseline)*1.0);
     border-radius: 50%;
+    margin-left: .5rem;
     display: block;
     float: right; }
 
