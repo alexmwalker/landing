@@ -1235,6 +1235,9 @@ header.sitepoint-branding {
 .sitepoint-branding .pink {
   margin-top: calc(var(--baseline)/2); }
 
+.sitepoint-branding .hamburger {
+  color: #fff; }
+
 /* ===  FOOTER === */
 footer.mainfooter {
   background: #3D383E;

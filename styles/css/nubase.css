@@ -1247,6 +1247,9 @@ header.sitepoint-branding {
 .sitepoint-branding .pink {
   margin-top: calc(var(--baseline)/2); }
 
+.sitepoint-branding .hamburger {
+  color: #fff; }
+
 [class*=grid-], [class*=grid_], [class~=grid] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

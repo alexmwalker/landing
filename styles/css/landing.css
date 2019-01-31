@@ -1736,6 +1736,9 @@ header.sitepoint-branding {
 .sitepoint-branding .pink {
   margin-top: calc(var(--baseline)/2); }
 
+.sitepoint-branding .hamburger {
+  color: #fff; }
+
 .landing-parent {
   background: #333;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 35, 0.55)), to(rgba(0, 0, 35, 0.75))), url(../../images/header-bg@2x.png);
@@ -1761,16 +1764,16 @@ header.sitepoint-branding {
 .tech {
   color: #aaa;
   background: #2a2a2a;
-  padding: calc(var(--baseline)/1) 0; }
+  padding: calc(var(--baseline)*1.5) 0; }
   .tech h2 {
     color: #ccc;
     margin-bottom: calc(var(--baseline)/1); }
-  .tech .col {
+  .tech .col_sm-4 a {
     min-height: calc(var(--baseline) * 1.0);
     color: #aaa; }
-    .tech .col:hover {
+    .tech .col_sm-4 a:hover {
       color: #fff; }
-    .tech .col p {
+    .tech .col_sm-4 a p {
       font-size: calc(1rem / var(--typescale) / var(--typescale));
       position: relative;
       bottom: 0; }

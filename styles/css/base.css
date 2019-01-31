@@ -1235,6 +1235,9 @@ header.sitepoint-branding {
 .sitepoint-branding .pink {
   margin-top: calc(var(--baseline)/2); }
 
+.sitepoint-branding .hamburger {
+  color: #fff; }
+
 /* ===  BOOKTITLE === */
 section.titling {
   padding-top: 4.4445rem;
