@@ -7,3 +7,9 @@
       margin-bottom: calc(var(--baseline)*1);
     }
 }
+.features {
+  margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);
+  img{
+    width: 85%;
+  }
+}

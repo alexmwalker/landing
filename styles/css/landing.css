@@ -1864,6 +1864,11 @@ header.sitepoint-branding {
     width: 50%;
     margin-bottom: calc(var(--baseline)*1); }
 
+.features {
+  margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1); }
+  .features img {
+    width: 85%; }
+
 .authors {
   padding: calc(var(--baseline)*3) 0 calc(var(--baseline)*3); }
   .authors h2 {
