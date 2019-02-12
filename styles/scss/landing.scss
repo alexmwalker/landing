@@ -42,7 +42,9 @@ $br: 3px;
   }
 }
 
-
+.imageshadow{
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
 
 button.pink{
   margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);

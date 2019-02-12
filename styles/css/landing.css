@@ -1859,18 +1859,28 @@ header.sitepoint-branding {
 #reader-demo {
   padding: calc(var(--baseline)*2) 0 calc(var(--baseline)*1.5);
   background: #F7F5F5; }
-  #reader-demo .col img {
-    border-radius: 50%;
-    width: 50%;
-    margin-bottom: calc(var(--baseline)*1); }
 
 .features {
   margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1); }
-  .features img {
+  .features h4 {
+    margin-bottom: calc(var(--baseline)/2); }
+  .features img.leadin {
+    height: calc(var(--baseline)*2); }
+
+.part1, .part2, .part3 {
+  /* Live Code */
+  padding: calc(var(--baseline)*1) 0 calc(var(--baseline)*1.5);
+  background: #fff; }
+  .part1 img.illustration, .part2 img.illustration, .part3 img.illustration {
     width: 85%; }
 
+.part2 {
+  /* Bookmarks */
+  background: #F7F5F5; }
+
 .authors {
-  padding: calc(var(--baseline)*3) 0 calc(var(--baseline)*3); }
+  padding: calc(var(--baseline)*2) 0 calc(var(--baseline)*2);
+  background: #F7F5F5; }
   .authors h2 {
     margin-bottom: calc(var(--baseline)*2); }
   .authors .col-2_sm-4 {
@@ -2045,6 +2055,10 @@ that need device level targeting. This is where we do it. */
   .pink.large {
     font-size: calc(1rem * var(--typescale));
     height: calc(var(--baseline) * 1.5); }
+
+.imageshadow {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 button.pink {
   margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1); }

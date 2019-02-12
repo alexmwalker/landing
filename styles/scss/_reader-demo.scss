@@ -1,15 +1,25 @@
 #reader-demo{
   padding: calc(var(--baseline)*2) 0 calc(var(--baseline)*1.5);
   background: #F7F5F5;
-  .col img{
-      border-radius: 50%;
-      width: 50%;
-      margin-bottom: calc(var(--baseline)*1);
-    }
 }
 .features {
   margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);
-  img{
+  h4{
+    margin-bottom: calc(var(--baseline)/2);
+
+  }
+  img.leadin{
+    height: calc(var(--baseline)*2);
+  }
+}
+
+.part1, .part2, .part3{ /* Live Code */
+  padding: calc(var(--baseline)*1) 0 calc(var(--baseline)*1.5);
+  background: #fff;
+  img.illustration{
     width: 85%;
   }
+}
+.part2{ /* Bookmarks */
+  background: #F7F5F5;
 }
