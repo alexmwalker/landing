@@ -1,5 +1,5 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 861 538">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 861 538"  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="paint0_linear" x1="326.871" x2="430.443" y1="-63.617" y2="519.466" gradientUnits="userSpaceOnUse">
       <stop stop-color="#E5E5E5"/>
@@ -15,6 +15,38 @@
       <path fill="#C4C4C4" d="M49.567 25.701h758.194V504.85H49.567z"/>
     </mask>
 
+    <mask id="typepath" width="759" height="480" x="49" y="25" mask-type="alpha" maskUnits="userSpaceOnUse">
+          <path stroke="rgba(255,0,0,1)" stroke-width="15" class="typepath" d="
+      M98 88 H750 H98 
+      V104 H750 H98 
+      V120 H750 H98 
+      V136 H750 H98
+      V152.5 H750 H98
+      V169 H750 H98
+      V185.5 H750 H98
+      V202 H750 H98
+      V218.5 H750 H98
+      V235 H750 H98
+      V251.5 H750 H98
+      V268 H750 H98
+      V284.5 H750 H98
+      " />
+      <!--  longer code samples
+      V301 H750 H98
+      V317.5 H750 H98
+      V334 H750 H98
+      V350.5 H750 H98
+      
+      V367 H750 H98
+      V383.5 H750 H98
+      V400 H750 H98
+      V416.5 H750 H98
+      V433 H750 H98
+      V449.5 H750 H98
+      V466 H750 H98
+      V482.5 H750 H98 -->
+    </mask>
+
     <pattern id="myPattern" x="0" y="-4" width="20" height="33" patternUnits="userSpaceOnUse" >
       <rect x="0" y="0" width="20" height="16.5" fill="#111" />
     </pattern>
@@ -27,9 +59,6 @@
     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
   </filter> 
-
-
-
 
 
   <symbol id="code-angular">
@@ -65,37 +94,25 @@
     </text>
   </symbol>
 
-  <symbol id="code-vue">
-  <text class="code" x="124" y="92">
-    <tspan dy="00" x="125" class="gray">&lt;!-- views/contact.ejs --&gt;</tspan>
-    <tspan dy="16.5" x="125">&lt;<tspan class="blue">div</tspan> <tspan class="ltblue">class</tspan>=<tspan class="fawn">"form-header"</tspan>&gt;</tspan>
-    <tspan dy="16.5" x="135"><tspan class="red">&lt;</tspan>% if (Object.keys(errors).length === 0) { %<tspan class="red">&gt;</tspan></tspan>
-    <tspan dy="16.5" x="145">&lt;<tspan class="blue">h2</tspan>&gt;Send us a message&lt;<tspan class="blue">/h2</tspan>&gt;</tspan>
-    <tspan dy="16.5" x="135"><tspan class="red">&lt;</tspan>% } else { %<tspan class="red">&gt;</tspan></tspan>
-    <tspan dy="16.5" x="145">&lt;<tspan class="blue">h2</tspan> <tspan class="ltblue">class</tspan>="<tspan class="green">errors-heading</tspan>"&gt;Oops, please correct the following:&lt;/<tspan class="blue">h2</tspan>&gt;</tspan>
-    <tspan dy="16.5" x="145">&lt;<tspan class="blue">ul</tspan> <tspan class="ltblue">class</tspan>="<tspan class="green">errors-list</tspan>"&gt;</tspan>
-      <tspan dy="16.5" x="155"><tspan class="red">&lt;</tspan>% Object.values(errors).forEach(error =&gt; { %<tspan class="red">&gt;</tspan></tspan>
-        <tspan dy="16.5" x="165">&lt;<tspan class="blue">li</tspan>&gt;<tspan class="red">&lt;</tspan>%= error.msg %<tspan class="red">&gt;</tspan>&lt;/<tspan class="blue">li</tspan>&gt;</tspan>
-      <tspan dy="16.5" x="155"><tspan class="red">&lt;</tspan>% }) %<tspan class="red">&gt;</tspan></tspan>
-    <tspan dy="16.5" x="145">&lt;/<tspan class="blue">ul</tspan>&gt;</tspan>
-    <tspan dy="16.5" x="135"><tspan class="red">&lt;</tspan>% } %<tspan class="red">&gt;</tspan></tspan>
-    <tspan dy="16.5" x="125">&lt;/<tspan class="blue">div</tspan>&gt;</tspan>
-  </text>
-  </symbol>
+  
 
 <symbol id="icon-vue">
   <path fill="#4DBA87" d="M3.571 0H0l4.571 8 .017-.029.016.029 4.539-8H5.597l-1.01 1.479L3.572 0z"/>
   <path fill="#435466" d="M7.429 0H5.568l-.986 1.489L3.589 0H1.714l2.852 5.143.016-.03.016.03L7.428 0z"/>
 </symbol>
-  </defs>
 
+
+</defs>
 
   <style>
     @import url(&quot;https://fonts.googleapis.com/css?family=Roboto+Mono&quot;);
-    .code-sample use{font-family:&apos;Roboto Mono&apos;,monospace; font-size:14px;font-weight:500;letter-spacing:0;white-space:pre}
+    .code-sample {font-family:&apos;Roboto Mono&apos;,monospace; font-size:14px;font-weight:500;letter-spacing:0;white-space:pre}
     .tabs{fill: #606060; white-space: pre; font-family:Roboto, sans-serif; font-size:11px; letter-spacing;0em}
     .linenumbers text{font-family:&apos;Roboto Mono&apos;,monospace}
-    .activetab{font-weight: 500; fill: #888;}
+    .activetab text{font-weight: 500; fill: #888;}
+    #code-vue{
+      display: -none
+    }
 
     text.code{fill: #aaa}
     text .red{fill: #F04747}
@@ -104,8 +121,17 @@
     text .blue{fill: #5598D1}
     text .ltblue{fill: #9AD9FB}
     text .fawn{fill: #CE9178}
+    .typepath{
+      stroke-dasharray: 32000, 32000;
+      animation: typing 60s infinite linear;
+      }
 
+    @keyframes typing {
+      000%{stroke-dashoffset: 32000;}
+      100%{stroke-dashoffset: 0;}
+    }
   </style>
+
   <rect width="802.843" height="515.537" x="28.62" y="2" fill="#000" stroke="url(#paint0_linear)" stroke-width="4" rx="9"/>
   <path fill="url(#paint1_linear)" d="M0 518.619h861v10.097H0z"/>
   <path fill="#C4C4C4" d="M0 527.799h861c0 5.576-4.521 10.097-10.097 10.097H10.097C4.521 537.896 0 533.375 0 527.799z"/>
@@ -123,10 +149,9 @@
 <g class="tabbase">
   <rect x="54" y="25" width="750" height="25" fill="#2D2D2D"/>
   <rect x="54" y="35" width="750" height="22" fill="#222"/>
-  <rect x="54" y="35" width="110" height="22" fill="#191919"/>
-  <use href="#icon-vue"  x="65" y="42" width="16" height="16" />
+  
 </g>
-<text class="tabs"><tspan class="activetab" x="80" y="49">vue-contact.ejs</tspan></text>
+<text class="tabs"><tspan x="80" y="49">vue-contact.ejs</tspan></text>
 <text class="tabs"><tspan x="200" y="49">laptop.svg</tspan></text>
 <text class="tabs"><tspan x="310" y="49">laptop.svg</tspan></text>
 <text class="tabs"><tspan x="415" y="49">reeeder.pug</tspan></text>
@@ -135,8 +160,29 @@
 <line x1="495" y1="35" x2="495" y2="56" stroke="#111"/>
 </g>
 
-  <g class="code-sample">
-    <use href="#code-vue"  x="0" y="0" width="730" height="500" />
+  <g id="code-vue" class="code-sample" >
+    <g class="activetab">
+      <rect x="54" y="35" width="110" height="22" fill="#191919"/>
+      <use href="#icon-vue"  x="65" y="42" width="16" height="16" />
+      <text class="tabs"><tspan x="80" y="49">vue-contact.ejs</tspan></text>
+    </g>
+  <text class="code" x="124" y="92" mask="url(#typepath)" >
+    <tspan y="92" x="125" class="gray">&lt;!-- views/contact.ejs --&gt;</tspan>
+    <tspan y="108.5" x="125">&lt;<tspan class="blue">div</tspan> <tspan class="ltblue">class</tspan>=<tspan class="fawn">"form-header"</tspan>&gt;</tspan>
+    <tspan y="124" x="135"><tspan class="red">&lt;</tspan>% if (Object.keys(errors).length === 0) { %<tspan class="red">&gt;</tspan></tspan>
+    <tspan y="140.5" x="145">&lt;<tspan class="blue">h2</tspan>&gt;Send us a message&lt;<tspan class="blue">/h2</tspan>&gt;</tspan>
+    <tspan y="157" x="135"><tspan class="red">&lt;</tspan>% } else { %<tspan class="red">&gt;</tspan></tspan>
+    <tspan y="173.5" x="145">&lt;<tspan class="blue">h2</tspan> <tspan class="ltblue">class</tspan>="<tspan class="green">errors-heading</tspan>"&gt;Oops, please correct the following:&lt;/<tspan class="blue">h2</tspan>&gt;</tspan>
+    <tspan y="190" x="145">&lt;<tspan class="blue">ul</tspan> <tspan class="ltblue">class</tspan>="<tspan class="green">errors-list</tspan>"&gt;</tspan>
+    <tspan y="206.5" x="155"><tspan class="red">&lt;</tspan>% Object.values(errors).forEach(error =&gt; { %<tspan class="red">&gt;</tspan></tspan>
+    <tspan y="223" x="165">&lt;<tspan class="blue">li</tspan>&gt;<tspan class="red">&lt;</tspan>%= error.msg %<tspan class="red">&gt;</tspan>&lt;/<tspan class="blue">li</tspan>&gt;</tspan>
+    <tspan y="239.5" x="155"><tspan class="red">&lt;</tspan>% }) %<tspan class="red">&gt;</tspan></tspan>
+    <tspan y="256" x="145">&lt;/<tspan class="blue">ul</tspan>&gt;</tspan>
+    <tspan y="272.5" x="135"><tspan class="red">&lt;</tspan>% } %<tspan class="red">&gt;</tspan></tspan>
+    <tspan y="289" x="125">&lt;/<tspan class="blue">div</tspan>&gt;</tspan>
+  </text>
+
+
   </g>
 
 
