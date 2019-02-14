@@ -1,9 +1,30 @@
-<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 
-<symbol id="icon-vue">
-  <path fill="#4DBA87" d="M3.571 0H0l4.571 8 .017-.029.016.029 4.539-8H5.597l-1.01 1.479L3.572 0z"/>
-  <path fill="#435466" d="M7.429 0H5.568l-.986 1.489L3.589 0H1.714l2.852 5.143.016-.03.016.03L7.428 0z"/>
-</symbol>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    polygon { fill: black }
+ 
+    div {
+      color: white;
+      font:18px serif;
+      height: 100%;
+      overflow: auto;
+    }
+  </style>
+ 
+  <polygon points="5,5 195,10 185,185 10,195" />
 
+  <!-- Common use case: embed HTML text into SVG -->
+  <foreignObject x="20" y="20" width="160" height="160">
+    <!--
+      In the context of SVG embeded into HTML, the XHTML namespace could
+      be avoided, but it is mandatory in the context of an SVG document
+    -->
+    <div xmlns="http://www.w3.org/1999/xhtml" >
+      <p style="color:red">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Sed mollis mollis mi ut ultricies. Nullam magna ipsum,
+      porta vel dui convallis, rutrum imperdiet eros. Aliquam
+        erat volutpat.</p>
+    </div>
+  </foreignObject>
 </svg>
