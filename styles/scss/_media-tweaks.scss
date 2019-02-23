@@ -8,6 +8,15 @@ that need device level targeting. This is where we do it. */
   .landing-parent {
     background-size: auto 100% ;
   }
+}
 
 
+.showmobile, .mobilenav{
+  display: none;
+}
+
+@media (max-width: 48em) {
+  .showmobile, .mobilenav{
+    display: block;
+  }
 }

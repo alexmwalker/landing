@@ -72,3 +72,15 @@ button.pink{
 [class~="grid"], [class*="grid-"], [class*="grid_"] {
   margin: 0 0.5rem;  }*/
 
+  .mobilemenu{
+    display: none;
+    outline: 1px yellow dashed;
+  }
+
+  @media (max-width: 48em) {
+    .mobilemenu{
+      display: block;
+      outline: 1px red dashed;
+      
+    }
+  }

@@ -69,6 +69,11 @@
       000%{stroke-dashoffset: 32000;}
       100%{stroke-dashoffset: 0;}
     }
+    foreignObject{
+    fill: green;
+    stroke: red;
+    stroke-width: 4px;
+    }
   </style>
 
   <rect width="802.843" height="515.537" x="28.62" y="2" fill="#000" stroke="url(#paint0_linear)" stroke-width="4" rx="9"/>
@@ -105,18 +110,8 @@
       <use href="#icon-vue"  x="65" y="42" width="16" height="16" />
       <text class="tabs"><tspan x="80" y="49">vue-contact.ejs</tspan></text>
     </g>
-  <foreignObject x="20" y="20" width="600" height="400" stroke="red" stroke-width="3px">
-    <!--
-      In the context of SVG embeded into HTML, the XHTML namespace could
-      be avoided, but it is mandatory in the context of an SVG document
-    -->
-    <div xmlns="http://www.w3.org/1999/xhtml" >
-      <p style="color:red">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed mollis mollis mi ut ultricies. Nullam magna ipsum,
-      porta vel dui convallis, rutrum imperdiet eros. Aliquam
-        erat volutpat.</p>
-    </div>
-  </foreignObject>
+
+
 
   </g>
 

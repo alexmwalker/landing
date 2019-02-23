@@ -435,7 +435,27 @@
     </div>
   </footer>
   <div class="feedback">test</div>
-  <!--script(src="https://cdn.jsdelivr.net/npm/umbrellajs")-->
+  <script>
+    $(document).ready(function(){
+      $('.showmobile').click(function(){
+        $(this).toggleClass('open');
+      });
+      $('.logged-out').click(function(){
+        $('.login-panel').toggleClass('open');
+      });
+      $('button.go').click(function(){
+        $('.sitepoint-branding').addClass('member');
+      });
+      $('.logout').click(function(){
+        $('.sitepoint-branding').removeClass('member');
+      });
+    });
+      $(window).resize(function(){ /* close the menu on screen resize */
+        $('.showmobile').removeClass('open');
+        $('.login-panel').removeClass('open');
+      });
+    
+  </script>
   <script>
       var animateHTML = function() {
       var elems;
@@ -587,8 +607,17 @@
   <!--script(src="scripts/typography.js" , type="text/javascript")-->
   <!--script(src="scripts/hopscotch.js" , type="text/javascript")-->
   <script>
-    $('.toggler').click( function() {
-    $(this).toggleClass('active');
+    $(document).ready(function(){
+      $('.showmobile').click(function(){
+        $(this).toggleClass('open');
+      });
+      $('.loggedout a').click(function(){
+        $('.login-panel').toggleClass('open');
+      });
     });
+      $(window).resize(function(){ /* close the menu on screen resize */
+        $('.showmobile').removeClass('open');
+        $('.login-panel').removeClass('open');
+      });
   </script>
 </body>

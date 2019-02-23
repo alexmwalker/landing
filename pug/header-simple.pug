@@ -2,26 +2,63 @@
 // header-simple.pug
 // Used in Checkout to reduce leakage opportunities
 
-header.sitepoint-branding
+form.login
+ header.sitepoint-branding
   .container
-    .grid-12
-      .col-3_sm-5
-        .branding 
-          i.fas.fa-bars.hamburger
-          img.branding-logo(src="https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg")
-      .col-6_sm-hidden
-        ul.nav
-          li
-            a(href='#') Library
-          li
-            a(href='#') Blog
-          li
-            a(href='#') Community
-          li
-            a(href='#') Login
-      .col-3_sm-5.align-r
-        button.pink Free 7-Day Trial
-      //.col-2_md-hidden.hamburger 
-        p &#9776;
+   .grid-12
+    .col-3_sm-5
+     .branding
+      img.branding-logo(src='https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg')
+    .col-9_sm-hidden
+     ul.nav
+      li
+       a(href='#') Blog
+      li
+       a(href='#') Community
+      li
+       a(href='#') Library
+      li.logged-in 
+        a(href='#') Dashboard
+      li.logged-in 
+        a(href='#') Account
+          img(src="images/Account.png")
+      li.logged-out 
+       a(href='#') Login
+       .login-panel
+        p
+          label.control-label(for='username-login') Username: 
+          input#username-login.form-control(style="width: 13.5rem;",name='username-login', type='text', placeholder='email@example.com')
+        p
+          label.control-label(for='passwordinput') Password: 
+          input#passwordinput.form-control(style="width: 11.3rem;",name='passwordinput', type='password', placeholder='...')
+          button.go GO
 
-      
+
+      li.logged-out 
+        button.pink Free 7-Day Trial
+
+    .col_sm-7.showmobile
+     .hamburger
+      .hamburger-box
+       .hamburger-inner
+    nav.mobilenav
+     ul
+      li
+       a(href='#') Blog
+      li
+       a(href='#') Community
+      li
+       a(href='#') Library
+      li.logged-in 
+        a(href='#') Account
+          img(src="images/Account.png")
+      li.logged-out 
+       label.control-label(for='username-login-mob') Username: 
+       input#username-login-mob.form-control(style="width: 12.5rem;", name='username-login-mob', type='text', placeholder='email@example.com')
+      li.logged-out
+       label.control-label(for='passwordinput-mob') Password: 
+       input#passwordinput-mob.form-control(style="width: 9.5rem;", name='passwordinput-mob', type='password', placeholder='...') 
+       button.go GO
+      li.logged-in 
+       a(href='#', class="logout") Log out
+
