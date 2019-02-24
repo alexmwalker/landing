@@ -1,0 +1,303 @@
+svg(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 861 538', xmlns:xlink='http://www.w3.org/1999/xlink')
+ defs
+  mask#mask10(mask-type='alpha', maskUnits='userSpaceOnUse', x='90', y='40', width='750', height='440')
+   rect(width='750', height='500', x='50', y='0', fill='#FD2222')
+  lineargradient#paint0_linear(x1='326.871', x2='430.443', y1='-63.617', y2='519.466', gradientUnits='userSpaceOnUse')
+   stop(stop-color='#E5E5E5')
+   stop(offset='.2', stop-color='#D5D5D5')
+   stop(offset='.73', stop-color='#C4C4C4')
+   stop(offset='.93', stop-color='#4F4F4F')
+  lineargradient#paint1_linear(x1='430.5', x2='430.5', y1='518.619', y2='528.716', gradientUnits='userSpaceOnUse')
+   stop(stop-color='#fff')
+   stop(offset='1', stop-color='#E5E5E5')
+  mask#mask0(width='760', height='480', x='49', y='25', mask-type='alpha', maskUnits='userSpaceOnUse')
+   path(fill='#C4C4C4', d='M49.567 25.701h758.194V504.85H49.567z')
+   rect(width='760', height='480', x='49', y='25')
+  filter#filter0_d(x='0', y='15', width='873', height='43', filterUnits='userSpaceOnUse', color-interpolation-filters='sRGB')
+   feflood(flood-opacity='0', result='BackgroundImageFix')
+   fecolormatrix(in='SourceAlpha', type='matrix', values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0')
+   feoffset(dy='4')
+   fegaussianblur(stdDeviation='2')
+   fecolormatrix(type='matrix', values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0')
+   feblend(mode='normal', in2='BackgroundImageFix', result='effect1_dropShadow')
+   feblend(mode='normal', in='SourceGraphic', in2='effect1_dropShadow', result='shape')
+  symbol#icon-vue
+   path(fill='#4DBA87', d='M3.571 0H0l4.571 8 .017-.029.016.029 4.539-8H5.597l-1.01 1.479L3.572 0z')
+   path(fill='#435466', d='M7.429 0H5.568l-.986 1.489L3.589 0H1.714l2.852 5.143.016-.03.016.03L7.428 0z')
+  symbol#icon-css(width='30', height='34', viewBox='0 0 30 34')
+   path(fill-rule='evenodd', clip-rule='evenodd', d='M26.8994 30.4082L29.5526 0.685959H0.429688L3.08005 30.4129L14.9733 33.7145L26.8994 30.4082ZM23.4535 14.1419L24.1117 6.7625H5.84898L6.18041 10.4084L20.1161 10.4084L19.7844 14.1419L6.5058 14.1419L6.83257 17.7877L19.4682 17.7877L19.045 22.5161L14.9787 23.614L14.9754 23.6149L10.9149 22.5185L10.6554 19.6107H6.99548L7.50626 25.3353L14.9746 27.4085L14.9914 27.4033L22.453 25.3353L23.3646 15.1209L23.4535 14.1419Z', fill='#264DE4')
+  symbol#icon-html(width='30', height='34', viewBox='0 0 30 34')
+   path(fill='#EC613B', fill-rule='evenodd', d='M29.547.686H.43l2.652 29.743 11.874 3.363 11.942-3.362L29.547.686zm-19.45 13.195l-.321-3.75 13.947.005.319-3.617-18.27-.004.968 11.049h12.654l-.452 4.725-4.035 1.11-4.097-1.118-.26-2.91H6.931l.457 5.753 7.518 2 7.458-1.99 1.032-11.252h-13.3v-.001z', clip-rule='evenodd')
+ style.
+  @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+  .code-sample {font-family:'Roboto Mono',monospace; font-size:14px;font-weight:500;letter-spacing:0;white-space:pre}
+  .linenumbers text{font-family:'Roboto Mono',monospace}
+  /* total number of lines*/
+  /* code samples */
+  /* one sample completion time */
+  /*character/steps*/
+  body {
+  font-size: 18px;
+  line-height: 24px;
+  }
+  .screen {
+  background: #222;
+  color: #ddd;
+  padding: 1rem;
+  position: relative;
+  line-height: 18px;
+  height: 26rem;
+  background-color: #1c1c1c;
+  }
+  .code {
+  opacity: 0;
+  animation: codeswitch 114s infinite linear;
+  /*simple switch between samples */
+  }
+  .code text {
+  display: block;
+  font-family: "Roboto mono", monospace;
+  fill: #aaa;
+  white-space: pre;
+  font-size: 11px;
+  }
+  .code:nth-of-type(1) {
+  animation-delay: 0s;
+  }
+  .code:nth-of-type(2) {
+  animation-delay: 38s;
+  }
+  .code:nth-of-type(3) {
+  animation-delay: 76s;
+  }
+  .steps {
+  transform: scale(1.4, 1.75) translate(-10560px, 55px);
+  animation: letterfeed 38s infinite linear;
+  }
+  .steps path {
+  fill: rgba(24, 200, 70, 0.4);
+  fill: #111;
+  }
+  .activetab text {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  fill: #ccc;
+  font-weight: 500;
+  fill: #888;
+  }
+  .activetab rect {
+  fill: #111;
+  }
+  .tabs {
+  fill: #606060;
+  white-space: pre;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0em;
+  }
+  text.code {
+  fill: #aaa;
+  }
+  text .red {
+  fill: #F04747;
+  }
+  text .gray {
+  fill: #333;
+  }
+  text .green {
+  fill: #689553;
+  }
+  text .blue {
+  fill: #5598D1;
+  }
+  text .ltblue {
+  fill: #9AD9FB;
+  }
+  text .fawn {
+  fill: #CE9178;
+  }
+  #code-vue {
+  transform: scale(0.8) translate(-50px, -89px);
+  }
+  #code-css {
+  transform: scale(0.8) translate(40px, -89px);
+  }
+  #code-html {
+  transform: scale(0.8) translate(132px, -89px);
+  }
+  @keyframes letterfeed {
+  000% {
+  transform: scale(1.4, 1.75) translate(-10560px, 55px);
+  }
+  100% {
+  transform: scale(1.4, 1.75) translate(0, 53px);
+  }
+  }
+  @keyframes codeswitch {
+  000% {
+  opacity: 1;
+  }
+  33.33% {
+  opacity: 1;
+  }
+  33.34% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 0;
+  }
+  }
+  .syntax-gray {
+  color: gray;
+  }
+ g.wrapper.waiting
+  rect(width='802.843', height='515.537', x='28.62', y='2', fill='#000', stroke='url(#paint0_linear)', stroke-width='4', rx='9')
+  path(fill='url(#paint1_linear)', d='M0 518.619h861v10.097H0z')
+  path(fill='#C4C4C4', d='M0 527.799h861c0 5.576-4.521 10.097-10.097 10.097H10.097C4.521 537.896 0 533.375 0 527.799z')
+  rect(width='766', height='480', x='48.62', y='24', fill='#111')
+  g.linenumbers(mask='url(#mask0)')
+   text(fill='#484747', font-size='14px', letter-spacing='0', white-space='pre')
+    tspan(x='70', y='60.72') 01 
+    tspan(x='70', y='77.126') 02 
+    tspan(x='70', y='93.532') 03 
+    tspan(x='70', y='109.938') 04 
+    tspan(x='70', y='126.345') 05 
+    tspan(x='70', y='142.751') 06 
+    tspan(x='70', y='159.157') 07 
+    tspan(x='70', y='175.563') 08 
+    tspan(x='70', y='191.97') 09 
+    tspan(x='70', y='208.376') 10 
+    tspan(x='70', y='224.782') 11 
+    tspan(x='70', y='241.188') 12 
+    tspan(x='70', y='257.595') 13 
+    tspan(x='70', y='274.001') 14 
+    tspan(x='70', y='290.407') 15 
+    tspan(x='70', y='306.813') 16 
+    tspan(x='70', y='323.22') 17 
+    tspan(x='70', y='339.626') 18 
+    tspan(x='70', y='356.032') 19 
+    tspan(x='70', y='372.438') 20 
+    tspan(x='70', y='388.845') 21 
+    tspan(x='70', y='405.251') 22 
+    tspan(x='70', y='421.657') 23 
+    tspan(x='70', y='438.063') 24 
+    tspan(x='70', y='454.47') 25 
+    tspan(x='70', y='470.876') 26 
+    tspan(x='70', y='487.282') 27 
+    tspan(x='70', y='503.688') 28 
+    tspan(x='70', y='520.095') 29
+  g(filter='url(#filter0_d)')
+   g.tabbase
+    rect(x='54', y='25', width='750', height='25', fill='#2D2D2D')
+    rect(x='54', y='35', width='750', height='22', fill='#222')
+   use(href='#icon-vue', x='115', y='42', width='16', height='16')
+   text.tabs
+    tspan(x='135', y='49') vue.ejs
+   use(href='#icon-css', x='215', y='40', width='12', height='12')
+   text.tabs
+    tspan(x='235', y='49') style.css
+   use(href='#icon-html', x='310', y='40', width='12', height='12')
+   text.tabs
+    tspan(x='330', y='49') laptop.html
+   use(href='#icon-vue', x='415', y='42', width='16', height='16')
+   text.tabs
+    tspan(x='430', y='49') reeeder.pug
+   line(x1='105', y1='35', x2='105', y2='56', stroke='#111')
+   line(x1='205', y1='35', x2='205', y2='56', stroke='#111')
+   line(x1='305', y1='35', x2='305', y2='56', stroke='#111')
+   line(x1='405', y1='35', x2='405', y2='56', stroke='#111')
+   line(x1='505', y1='35', x2='505', y2='56', stroke='#111')
+  svg(width='80%', x='100', viewBox='0 0 525 272', fill='none')
+   rect(width='525', height='272', fill='#111')
+   g.code.node
+    g#code-vue.code-sample
+     g.activetab
+      rect(x='52', y='35', width='98', height='22')
+      use(href='#icon-vue', x='65', y='42', width='16', height='16')
+      text.tabs(x='80', y='49') vue.ejs
+    text(fill='#E5E5E5', xml:space='preserve')
+     tspan(x='31', y='16.2051')
+      | var exec = require('child_process').exec;
+     tspan(x='31', y='32.1895')
+      | exec('ls -l', function(error, stdout, stderr) {
+     tspan(x='31', y='48.1738')
+      | console.log('stdout: ' + stdout);
+     tspan(x='31', y='64.1582')
+      | console.log('stderr: ' + stderr);
+     tspan(x='31', y='80.1426')
+      | if (error !== null) {
+     tspan(x='31', y='96.127')
+      | console.log('exec error: ' + error);
+     tspan(x='31', y='112.111')
+      | }
+     tspan(x='31', y='128.096') });
+   g.code.css
+    g#code-css.code-sample
+     g.activetab
+      rect(x='52', y='35', width='98', height='22', fill='#1e1e1e')
+      use(href='#icon-css', x='66', y='40', width='11', height='11')
+      text.tabs(x='84', y='49') style.css
+    text(fill='#D4D4D4', xml:space='preserve')
+     tspan(x='31', y='16.2051')
+      | .mask {
+     tspan(x='31', y='32.1895')
+      | position: relative;
+     tspan(x='31', y='48.1738')
+      | outline: 1px green dashed;
+     tspan(x='31', y='64.1582')
+      | top: 10px;
+     tspan(x='31', y='80.1426')
+      | width: 41rem;
+     tspan(x='31', y='96.127')
+      | overflow: hidden;
+     tspan(x='31', y='112.111')
+      | height: 26rem;
+     tspan(x='31', y='128.096')
+      | }
+     tspan(x='31', y='144.08')
+     tspan(x='31', y='160.064')
+      | .code:nth-of-type(1) {
+     tspan(x='31', y='176.049')
+      | animation-delay: 0s;
+     tspan(x='31', y='192.033')
+      | }
+     tspan(x='31', y='208.018')
+     tspan(x='31', y='224.002')
+      | .code:nth-of-type(2) {
+     tspan(x='31', y='239.986')
+      | animation-delay: 18s;
+     tspan(x='31', y='255.971') }
+   g.code.html
+    g#code-html.code-sample
+     g.activetab
+      rect(x='52', y='35', width='98', height='22', fill='#1e1e1e')
+      use(href='#icon-html', x='66', y='40', width='11', height='11')
+      text.tabs(x='84', y='49') laptop.html
+    text(fill='#D4D4D4', xml:space='preserve')
+     tspan(x='24', y='16.2051')
+      | <div class="form-header">
+     tspan(x='24', y='32.1895')
+      | <% if (Object.keys(errors).length === 0) { %>
+     tspan(x='24', y='48.1738')
+      | <h2>Send us a message</h2>
+     tspan(x='24', y='64.1582')
+      | <% } else { %>
+     tspan(x='24', y='80.1426')
+      | <h2 class="errors-heading">Oops, please correct the following:</h2>
+     tspan(x='24', y='96.127')
+      | <ul class="errors-list">
+     tspan(x='24', y='112.111')
+      | <% Object.values(errors).forEach(error => { %>
+     tspan(x='24', y='128.096')
+      | <li><%= error.msg %></li>
+     tspan(x='24', y='144.08')
+      | <% }) %>
+     tspan(x='24', y='160.064')
+      | </ul>
+     tspan(x='24', y='176.049')
+      | <% } %>
+     tspan(x='24', y='192.033') </div>
+ rect(width='700', height='420', x='100', y='60', stroke='#000', stroke-width='2')
+ g(mask='url(#mask10)')
+  g.steps
+   path(d='M10647.8 0h505.154v12H10647.8zM10142.7 12h1010.31v12H10142.7zM9637.54 24H11153v12H9637.54zM9132.39 36H11153v12H9132.39zM8617.33 48H11153v12H8617.33zM8112.17 60H11153v12H8112.17zM7607.02 72H11153v12H7607.02zM7101.87 84H11153v12H7101.87zM6596.71 96H11153v12H6596.71zM6091.56 108H11153v12H6091.56zM5586.4 120H11153v12H5586.4zM5081.25 132H11153v12H5081.25zM4566.19 144H11153v12H4566.19zM4061.04 156H11153v12H4061.04zM3555.89 168H11153v12H3555.89zM3050.73 180H11153v12H3050.73zM2535.67 192H11153v12H2535.67zM2020.61 204H11153v12H2020.61zM1515.46 216H11153v12H1515.46zM1010.31 228h10142.7v12H1010.31zM505.153 240h10647.8v12H505.153zM0 252h11153v12H0z')
