@@ -39,7 +39,7 @@
         background: rgba(255,255,255,0);
         transition: all .1s ease-out;
         border-radius: 2px;
-        bottom: -.4rem;
+        bottom: -0.4rem;
         right: 0;
       }
       &.youarehere:after{
@@ -114,7 +114,6 @@
     color: inherit;
     border: 0;
     background-color: transparent;
-
 }
 .hamburger-box {
     position: relative;
@@ -124,6 +123,7 @@
 }
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
     position: absolute;
+    display: block;
     width: 2.5rem;
     height: .3rem;
     transition-timing-function: ease;
@@ -134,19 +134,19 @@
 }
 .hamburger-inner {
     top: 50%;
-    display: block;
     margin-top: -2px;
+    transform: translateX(-0.5rem);
 }
 .hamburger-inner:after, .hamburger-inner:before {
-    display: block;
     content: "";
-    transition: bottom .1s ease-in .35s,transform .22s cubic-bezier(.55,.055,.675,.19);
+    transition: bottom .1s cubic-bezier(.55,.055,.675,.19) .35s,
+      transform .45s cubic-bezier(.49,-0.32,.42,1.35);
 }
 .hamburger-inner:after {
-    bottom: -10px;
+  transform: translateY(10px);
 }
 .hamburger-inner:before {
-    top: -10px;
+  transform: translateY(-10px);
 }
 
 
@@ -159,13 +159,15 @@
 }
 .open{
 	.hamburger-inner:before{
-		transform: rotate(-225deg) translate(7px, -7px);
+		transform: rotate(-225deg) translate(7px, 7px);
 	}
 	.hamburger-inner:after{
-		transform: rotate(225deg) translate(7px, 7px);
+		transform: rotate(225deg) translate(7px, -7px);
 	} 
 	.hamburger-inner{
-		background-color: #232023;
+    background-color: #232023;
+    transition: all .45s cubic-bezier(.49,-0.32,.60,1.7);
+    transform: translateX(0.5rem);
 	} 
 }
 .open + .mobilenav{
