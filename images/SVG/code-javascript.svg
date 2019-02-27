@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 861 538">
+<style>
+.codepos{
+  fill: #333;
+  font-family: 'Roboto Mono', monospace;
+  }
+</style>
+<text x="12" y="12" class="codepos">
+<tspan dy="15" x="12">class ShoppingList extends React.Component {</tspan>
+<tspan dy="15" x="24">  render() { </tspan>
+<tspan dy="15" x="36">    return ( </tspan>
+<tspan dy="15" x="48">      &lt;div className=&quot;shopping-list&quot;&gt; </tspan>
+<tspan dy="15" x="60">        &lt;h1&gt;Shopping List for {this.props.name}&lt;/h1&gt; </tspan>
+<tspan dy="15" x="60">        &lt;ul&gt; </tspan>
+<tspan dy="15" x="72">          &lt;li&gt;Instagram&lt;/li&gt; </tspan>
+<tspan dy="15" x="72">          &lt;li&gt;WhatsApp&lt;/li&gt; </tspan>
+<tspan dy="15" x="72">          &lt;li&gt;Oculus&lt;/li&gt; </tspan>
+<tspan dy="15" x="60">        &lt;/ul&gt; </tspan>
+<tspan dy="15" x="48">      &lt;/div&gt; </tspan>
+<tspan dy="15" x="36">    ); </tspan>
+<tspan dy="15" x="24">  } </tspan>
+<tspan dy="15" x="12">} </tspan>
+</text>
+</svg>

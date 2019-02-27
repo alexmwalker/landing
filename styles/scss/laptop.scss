@@ -1,0 +1,190 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+.code-sample {font-family:'Roboto Mono',monospace; font-size:14px;font-weight:500;letter-spacing:0;white-space:pre}
+.linenumbers text{font-family:'Roboto Mono',monospace}
+
+/* ANIMATION SPEED IS SET HERE - line completion time */
+$linecompletiontime: 2s; 
+
+/* Maximum number of mask lines determined by the mask dimensions */
+$maximumnumberofmasklines: 22;
+
+/* total number of lines to show*/
+$linesofcode: 15;
+
+/* number of different code samples - tabs */
+$numberofcodesamples: 3;
+
+/* Mask offset - the width of the mask 'steps' */
+$maskoffset : 506px;
+
+/* mask horizontal starting position */
+$startingpos: -10560px;
+
+/* mask horizontal finishing position */
+$finnishpos: $startingpos + ($maskoffset * $linesofcode);
+
+/* time it takes to reveal one screen of code */
+$codetime: $linecompletiontime * $linesofcode;
+
+/* time it takes to cycle through all the code samples once */
+$fullcycle: $codetime * $numberofcodesamples;
+
+body {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.screen {
+  background: #222;
+  color: #ddd;
+  padding: 1rem;
+  position: relative;
+  line-height: 18px;
+  height: 26rem;
+  background-color: #1c1c1c;
+}
+
+.code {
+  opacity: 0;
+  animation: codeswitch $fullcycle infinite linear;
+  /*simple switch between samples */
+}
+.code text {
+  display: block;
+  font-family: "Roboto mono", monospace;
+  fill: #aaa;
+  font-size: 11px;
+}
+.codepos{
+  height: 300px;
+}
+.code:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.code:nth-of-type(2) {
+  animation-delay: ($fullcycle/$numberofcodesamples);
+}
+
+.code:nth-of-type(3) {
+  animation-delay: ($fullcycle/$numberofcodesamples)*2;
+}
+
+
+
+.activetab text {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  fill: #888;
+}
+
+.activetab path {
+  fill: #111;
+}
+
+.tabs {
+  fill: #606060;
+  white-space: pre;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0em;
+}
+
+text.code {
+  fill: #f8f8f2;
+}
+
+text .red {
+  fill: #f92672;
+}
+
+text .yellow {
+  fill: #859900;
+}
+
+text .gray {
+  fill: slategray;
+}
+
+text .white {
+  fill: #eee;
+}
+
+text .green {
+  fill: #2aa198;
+}
+
+text .blue {
+  fill: #268bd2;
+}
+
+text .ltblue {
+  fill: #9AD9FB;
+}
+
+text .fawn {
+  fill: #b58900;
+}
+
+text .purple {
+  fill: #c67ce2;
+}
+.syntax-gray {
+  color: gray;
+}
+ // steps 
+
+ .steps {
+  transform: scale(1.4, 1.8) translate($startingpos, 54px);
+  transform: scale(1.4, 1.8) translate($finnishpos, 54px);
+  animation: letterfeed $codetime linear infinite;
+}
+.steps path {
+  fill: #111;
+  /*fill: rgba(255, 200, 70, 0.4);*/
+}
+
+// code sample positioning
+#code-vue {
+  transform: scale(0.8) translate(-50px, -89px);
+}
+
+#code-css {
+  transform: scale(0.8) translate(48px, -89px);
+}
+
+#code-html {
+  transform: scale(0.8) translate(144px, -89px);
+}
+
+#screenpos{ 
+  transform: scale(1.3) translate(76px,70px);
+}
+
+// animations 
+@keyframes letterfeed { // move steps right to reveal code
+  000% {
+    transform: scale(1.4, 1.8) translate($startingpos, 54px);
+  }
+  100% {
+    transform: scale(1.4, 1.8) translate($finnishpos, 54px);
+  }
+}
+@keyframes codeswitch { // move steps right to reveal code
+  00.00% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  33.34% {
+    opacity: 0;
+  }
+  100.00% {
+    opacity: 0;
+  }
+}
+
+

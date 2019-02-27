@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 861 538">
+<style>
+.codepos{
+  fill: #333;
+  font-family: 'Roboto Mono', monospace;
+  }
+</style>
+
+
+<text x="12" y="12" class="codepos">
+<tspan dy="16.5" x="12">.steps {</tspan>
+<tspan dy="16.5" x="18">  transform: scale(1.4, 1.8) translate($startingpos, 54px);</tspan>
+<tspan dy="16.5" x="18">  animation: letterfeed $codetime linear infinite;</tspan>
+<tspan dy="16.5" x="12">}</tspan>
+<tspan dy="16.5" x="12">.steps path {</tspan>
+<tspan dy="16.5" x="18">  fill: #111;</tspan>
+<tspan dy="16.5" x="18">  fill: rgba(255, 200, 70, 0.4);</tspan>
+<tspan dy="16.5" x="12">}</tspan>
+
+<tspan dy="16.5" x="12">/* animations */</tspan>
+<tspan dy="16.5" x="12">@keyframes letterfeed { /* move steps right to reveal code */</tspan>
+<tspan dy="16.5" x="18">  000% {</tspan>
+<tspan dy="16.5" x="24">    transform: scale(1.4, 1.8) translate($startingpos, 54px);</tspan>
+<tspan dy="16.5" x="18">  }</tspan>
+<tspan dy="16.5" x="18">  100% {</tspan>
+<tspan dy="16.5" x="24">    transform: scale(1.4, 1.8) translate($finnishpos, 54px);</tspan>
+<tspan dy="16.5" x="18">  }</tspan>
+<tspan dy="16.5" x="12">}</tspan>
+<tspan dy="16.5" x="12">@keyframes codeswitch { /* move steps right to reveal code */</tspan>
+<tspan dy="16.5" x="18">  00.00% {</tspan>
+<tspan dy="16.5" x="24">    opacity: 1;</tspan>
+<tspan dy="16.5" x="12">  }</tspan>
+<tspan dy="16.5" x="18">  33.33% {</tspan>
+<tspan dy="16.5" x="24">    opacity: 1;</tspan>
+<tspan dy="16.5" x="12">  }</tspan>
+<tspan dy="16.5" x="18">  33.34% {</tspan>
+<tspan dy="16.5" x="24">    opacity: 0;</tspan>
+<tspan dy="16.5" x="18">  }</tspan>
+<tspan dy="16.5" x="18">  100.00% {</tspan>
+<tspan dy="16.5" x="24">    opacity: 0;</tspan>
+<tspan dy="16.5" x="18">  }</tspan>
+<tspan dy="16.5" x="12">}</tspan>
+</text>
+</svg>
