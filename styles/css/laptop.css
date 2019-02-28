@@ -2,9 +2,7 @@
 .code-sample {
   font-family: 'Roboto Mono',monospace;
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0;
-  white-space: pre; }
+  font-weight: 500; }
 
 .linenumbers text {
   font-family: 'Roboto Mono',monospace; }
@@ -33,8 +31,8 @@ body {
 
 .code {
   opacity: 0;
-  -webkit-animation: codeswitch 90s infinite linear;
-  animation: codeswitch 90s infinite linear;
+  -webkit-animation: codeswitch 135s infinite linear;
+  animation: codeswitch 135s infinite linear;
   /*simple switch between samples */ }
 
 .code text {
@@ -51,24 +49,24 @@ body {
   animation-delay: 0s; }
 
 .code:nth-of-type(2) {
-  -webkit-animation-delay: 30s;
-  animation-delay: 30s; }
+  -webkit-animation-delay: 45s;
+  animation-delay: 45s; }
 
 .code:nth-of-type(3) {
-  -webkit-animation-delay: 60s;
-  animation-delay: 60s; }
+  -webkit-animation-delay: 90s;
+  animation-delay: 90s; }
 
 .activetab text {
   font-family: Roboto, sans-serif;
   font-size: 11px;
   font-weight: 500;
-  fill: #888; }
+  fill: #eee; }
 
 .activetab path {
   fill: #111; }
 
 .tabs {
-  fill: #606060;
+  fill: #aaa;
   white-space: pre;
   font-family: Roboto, sans-serif;
   font-size: 11px;
@@ -81,7 +79,7 @@ text .red {
   fill: #f92672; }
 
 text .yellow {
-  fill: #859900; }
+  fill: #e6db74; }
 
 text .gray {
   fill: slategray; }
@@ -99,7 +97,7 @@ text .ltblue {
   fill: #9AD9FB; }
 
 text .fawn {
-  fill: #b58900; }
+  fill: #fd971f; }
 
 text .purple {
   fill: #c67ce2; }
@@ -111,15 +109,21 @@ text .purple {
   -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
   -ms-transform: scale(1.4, 1.8) translate(-10560px, 54px);
   transform: scale(1.4, 1.8) translate(-10560px, 54px);
-  -webkit-transform: scale(1.4, 1.8) translate(-2970px, 54px);
-  -ms-transform: scale(1.4, 1.8) translate(-2970px, 54px);
-  transform: scale(1.4, 1.8) translate(-2970px, 54px);
-  -webkit-animation: letterfeed 30s linear infinite;
-  animation: letterfeed 30s linear infinite; }
+  -webkit-animation: letterfeed 45s linear infinite;
+  animation: letterfeed 45s linear infinite; }
 
 .steps path {
   fill: #111;
   /*fill: rgba(255, 200, 70, 0.4);*/ }
+
+.message {
+  -webkit-transform: translate(200px, 430px);
+  -ms-transform: translate(200px, 430px);
+  transform: translate(200px, 430px); }
+  .message text {
+    fill: #fff;
+    font-size: 18px;
+    font-family: Roboto, sans-serif; }
 
 #code-vue {
   -webkit-transform: scale(0.8) translate(-50px, -89px);

@@ -1,4 +1,4 @@
-<?xml-stylesheet type="text/css" href="../../styles/css/laptop.css" ?> 
+
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 861 538">
 
   <defs>
@@ -50,7 +50,182 @@
 
   </defs>
   <style>
-  
+  @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+.code-sample {
+  font-family: 'Roboto Mono',monospace;
+  font-size: 14px;
+  font-weight: 500; }
+
+.linenumbers text {
+  font-family: 'Roboto Mono',monospace; }
+
+
+body {
+  font-size: 18px;
+  line-height: 0; }
+
+.screen {
+  background: #222;
+  color: #ddd;
+  padding: 1rem;
+  position: relative;
+  line-height: 18px;
+  height: 26rem;
+  background-color: #1c1c1c; }
+
+.code {
+  opacity: 0;
+  -webkit-animation: codeswitch 135s infinite linear;
+  animation: codeswitch 135s infinite linear;
+ }
+
+.code text {
+  display: block;
+  font-family: "Roboto mono", monospace;
+  fill: #aaa;
+  font-size: 11px; }
+
+.codepos {
+  height: 300px; }
+
+.code:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+
+.code:nth-of-type(2) {
+  -webkit-animation-delay: 45s;
+  animation-delay: 45s; }
+
+.code:nth-of-type(3) {
+  -webkit-animation-delay: 90s;
+  animation-delay: 90s; }
+
+.activetab text {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  fill: #eee; }
+
+.activetab path {
+  fill: #111; }
+
+.tabs {
+  fill: #aaa;
+  white-space: pre;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0em; }
+
+text.code {
+  fill: #f8f8f2; }
+
+text .red {
+  fill: #f92672; }
+
+text .yellow {
+  fill: #e6db74; }
+
+text .gray {
+  fill: slategray; }
+
+text .white {
+  fill: #eee; }
+
+text .green {
+  fill: #2aa198; }
+
+text .blue {
+  fill: #268bd2; }
+
+text .ltblue {
+  fill: #9AD9FB; }
+
+text .fawn {
+  fill: #fd971f; }
+
+text .purple {
+  fill: #c67ce2; }
+
+.syntax-gray {
+  color: gray; }
+
+.steps {
+  -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
+  -ms-transform: scale(1.4, 1.8) translate(-10560px, 54px);
+  transform: scale(1.4, 1.8) translate(-10560px, 54px);
+  -webkit-animation: letterfeed 45s linear infinite;
+  animation: letterfeed 45s linear infinite; }
+
+.steps path {
+  fill: #111;
+  /*fill: rgba(255, 200, 70, 0.4);*/ }
+
+.message {
+  -webkit-transform: translate(200px, 430px);
+  -ms-transform: translate(200px, 430px);
+  transform: translate(200px, 430px); }
+  .message text {
+    fill: #fff;
+    font-size: 18px;
+    font-family: Roboto, sans-serif; }
+
+#code-vue {
+  -webkit-transform: scale(0.8) translate(-50px, -89px);
+  -ms-transform: scale(0.8) translate(-50px, -89px);
+  transform: scale(0.8) translate(-50px, -89px); }
+
+#code-css {
+  -webkit-transform: scale(0.8) translate(48px, -89px);
+  -ms-transform: scale(0.8) translate(48px, -89px);
+  transform: scale(0.8) translate(48px, -89px); }
+
+#code-html {
+  -webkit-transform: scale(0.8) translate(144px, -89px);
+  -ms-transform: scale(0.8) translate(144px, -89px);
+  transform: scale(0.8) translate(144px, -89px); }
+
+#screenpos {
+  -webkit-transform: scale(1.3) translate(76px, 70px);
+  -ms-transform: scale(1.3) translate(76px, 70px);
+  transform: scale(1.3) translate(76px, 70px); }
+
+@-webkit-keyframes letterfeed {
+  000% {
+    -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
+    transform: scale(1.4, 1.8) translate(-10560px, 54px); }
+  100% {
+    -webkit-transform: scale(1.4, 1.8) translate(-2970px, 54px);
+    transform: scale(1.4, 1.8) translate(-2970px, 54px); } }
+
+@keyframes letterfeed {
+  000% {
+    -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
+    transform: scale(1.4, 1.8) translate(-10560px, 54px); }
+  100% {
+    -webkit-transform: scale(1.4, 1.8) translate(-2970px, 54px);
+    transform: scale(1.4, 1.8) translate(-2970px, 54px); } }
+
+@-webkit-keyframes codeswitch {
+  00.00% {
+    opacity: 1; }
+  33.33% {
+    opacity: 1; }
+  33.34% {
+    opacity: 0; }
+  100.00% {
+    opacity: 0; } }
+
+@keyframes codeswitch {
+  00.00% {
+    opacity: 1; }
+  33.33% {
+    opacity: 1; }
+  33.34% {
+    opacity: 0; }
+  100.00% {
+    opacity: 0; } }
+
+
   </style>
 
   <g class="wrapper waiting">
