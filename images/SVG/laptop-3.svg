@@ -368,17 +368,17 @@ text .purple {
     </g>  
   </g>
 
-  <g class="message code">
+  <g transform="translate(200px, 430px)" class="message code">
     <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
     <use width="30" height="30" x="15" y="10" href="#icon-sass"/>
     <text x="60" y="31">Why not polish your image with some Sass sparkle?</text>
   </g>
-  <g class="message code">
+  <g transform="translate(200px, 430px)" class="message code">
     <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
     <use width="70" height="70" x="15" y="12" href="#icon-vue"/>
     <text x="80" y="31">Want to expand your horizons with Vue.JS?</text>
   </g>
-  <g class="message code">
+  <g transform="translate(200px, 430px)" class="message code">
     <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
     <use width="30" height="30" x="15" y="12" href="#icon-react"/>
     <text x="65" y="31">Interested in new career opportunities with React?</text>
