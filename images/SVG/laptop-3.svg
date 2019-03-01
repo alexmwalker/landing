@@ -3,7 +3,7 @@
 
   <defs>
     <mask id="mask10" width="750" height="440" x="90" y="40" class="stepmask" mask-type="alpha" maskUnits="userSpaceOnUse">
-      <path fill="#FD2222" d="M50 0h700v500H50z"/>
+      <path fill="#fff" d="M50 0h700v500H50z"/>
     </mask>
     <linearGradient id="paint0_linear" x1="326.871" x2="430.443" y1="-63.617" y2="519.466" gradientUnits="userSpaceOnUse">
       <stop stop-color="#E5E5E5"/>
@@ -167,7 +167,7 @@ text .purple {
     font-size: 18px;
     font-family: Roboto, sans-serif; }
 
-#code-vue {
+#code-react {
   -webkit-transform: scale(0.8) translate(-50px, -89px);
   -ms-transform: scale(0.8) translate(-50px, -89px);
   transform: scale(0.8) translate(-50px, -89px); }
@@ -177,7 +177,7 @@ text .purple {
   -ms-transform: scale(0.8) translate(48px, -89px);
   transform: scale(0.8) translate(48px, -89px); }
 
-#code-html {
+#code-vue {
   -webkit-transform: scale(0.8) translate(144px, -89px);
   -ms-transform: scale(0.8) translate(144px, -89px);
   transform: scale(0.8) translate(144px, -89px); }
@@ -264,11 +264,11 @@ text .purple {
       <path stroke="#111" d="M105 35v21M205 35v21M305 35v21M405 35v21M505 35v21"/>
     </g>
 
-    <g id="screenpos" x="100" fill="none" viewbox="0 0 525 272">
+    <g id="screenpos" transform="translate(86 70)" x="100" fill="none" viewbox="0 0 525 272">
       <path fill="#111" d="M0 0h525v272H0z"/>
 
       <g class="code react">
-        <g id="code-vue" class="code-sample">
+        <g id="code-react" class="code-sample">
           <g class="activetab">
             <path fill="#1e1e1e" d="M52 35h100v22H52z"/>
             <use width="13" height="13" x="60" y="40" href="#icon-react"/>
@@ -328,7 +328,7 @@ text .purple {
         </text>
       </g>
       <g class="code html">
-        <g id="code-html" class="code-sample">
+        <g id="code-vue" class="code-sample">
           <g class="activetab">
             <path fill="#1e1e1e" d="M52 35h98v22H52z"/>
             <use width="38" height="38" x="60" y="40" href="#icon-vue"/>
@@ -363,22 +363,23 @@ text .purple {
 
     <g mask="url(#mask10)">
       <g class="steps">
-        <path  d="M10647.8 0h505.154v12H10647.8zM10142.7 12h1010.31v12H10142.7zM9637.54 24H11153v12H9637.54zM9132.39 36H11153v12H9132.39zM8617.33 48H11153v12H8617.33zM8112.17 60H11153v12H8112.17zM7607.02 72H11153v12H7607.02zM7101.87 84H11153v12H7101.87zM6596.71 96H11153v12H6596.71zM6091.56 108H11153v12H6091.56zM5586.4 120H11153v12H5586.4zM5081.25 132H11153v12H5081.25zM4566.19 144H11153v12H4566.19zM4061.04 156H11153v12H4061.04zM3555.89 168H11153v12H3555.89zM3050.73 180H11153v12H3050.73zM2535.67 192H11153v12H2535.67zM2020.61 204H11153v12H2020.61zM1515.46 216H11153v12H1515.46zM1010.31 228h10142.7v12H1010.31zM505.153 240h10647.8v12H505.153zM0 252h11153v12H0z"/> 
+        <path fill="#111" fill-opacity="1" style="opacity:1" d="M10647.8 0h505.154v12H10647.8zM10142.7 12h1010.31v12H10142.7zM9637.54 24H11153v12H9637.54zM9132.39 36H11153v12H9132.39zM8617.33 48H11153v12H8617.33zM8112.17 60H11153v12H8112.17zM7607.02 72H11153v12H7607.02zM7101.87 84H11153v12H7101.87zM6596.71 96H11153v12H6596.71zM6091.56 108H11153v12H6091.56zM5586.4 120H11153v12H5586.4zM5081.25 132H11153v12H5081.25zM4566.19 144H11153v12H4566.19zM4061.04 156H11153v12H4061.04zM3555.89 168H11153v12H3555.89zM3050.73 180H11153v12H3050.73zM2535.67 192H11153v12H2535.67zM2020.61 204H11153v12H2020.61zM1515.46 216H11153v12H1515.46zM1010.31 228h10142.7v12H1010.31zM505.153 240h10647.8v12H505.153zM0 252h11153v12H0z"/> 
       </g> 
     </g>  
   </g>
 
-  <g transform="translate(200px 430px)" class="message code">
+
+  <g transform="translate(200 430)" class="message code">
     <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
     <use width="30" height="30" x="15" y="10" href="#icon-sass"/>
     <text x="60" y="31">Why not polish your image with some Sass sparkle?</text>
   </g>
-  <g transform="translate(200px 430px)" class="message code">
+  <g transform="translate(200 430)" class="message code">
     <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
     <use width="70" height="70" x="15" y="12" href="#icon-vue"/>
     <text x="80" y="31">Want to expand your horizons with Vue.JS?</text>
   </g>
-  <g transform="translate(200px 430px)" class="message code">
+  <g transform="translate(200 430)" class="message code">
     <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
     <use width="30" height="30" x="15" y="12" href="#icon-react"/>
     <text x="65" y="31">Interested in new career opportunities with React??</text>
