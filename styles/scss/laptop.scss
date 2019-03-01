@@ -4,7 +4,7 @@
 .linenumbers text{font-family:'Roboto Mono',monospace}
 
 /* ANIMATION SPEED IS SET HERE - line completion time */
-$linecompletiontime: 3s; 
+$linecompletiontime: .3s; 
 
 /* Maximum number of mask lines determined by the mask dimensions */
 $maximumnumberofmasklines: 22;
@@ -137,7 +137,7 @@ text .purple {
  // steps 
 
  .steps {
-  transform: scale(1.4, 1.8) translate($startingpos, 54px);
+  transform: scale3d(1.4, 1.8, 1) translate3d($startingpos, 56px, 0);
   animation: letterfeed $codetime linear infinite;
 }
 .steps path {
@@ -174,10 +174,10 @@ text .purple {
 // animations 
 @keyframes letterfeed { // move steps right to reveal code
   000% {
-    transform: scale(1.4, 1.8) translate($startingpos, 54px);
+    transform: scale3d(1.4, 1.8, 1) translate3d($startingpos, 55px, 0);
   }
   100% {
-    transform: scale(1.4, 1.8) translate($finnishpos, 54px);
+    transform: scale3d(1.4, 1.8, 1) translate3d($finnishpos, 55px, 0);
   }
 }
 @keyframes codeswitch { // move steps right to reveal code

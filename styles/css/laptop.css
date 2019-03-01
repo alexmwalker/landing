@@ -31,8 +31,8 @@ body {
 
 .code {
   opacity: 0;
-  -webkit-animation: codeswitch 135s infinite linear;
-  animation: codeswitch 135s infinite linear;
+  -webkit-animation: codeswitch 13.5s infinite linear;
+  animation: codeswitch 13.5s infinite linear;
   /*simple switch between samples */ }
 
 .code text {
@@ -49,12 +49,12 @@ body {
   animation-delay: 0s; }
 
 .code:nth-of-type(2) {
-  -webkit-animation-delay: 45s;
-  animation-delay: 45s; }
+  -webkit-animation-delay: 4.5s;
+  animation-delay: 4.5s; }
 
 .code:nth-of-type(3) {
-  -webkit-animation-delay: 90s;
-  animation-delay: 90s; }
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s; }
 
 .activetab text {
   font-family: Roboto, sans-serif;
@@ -106,11 +106,10 @@ text .purple {
   color: gray; }
 
 .steps {
-  -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
-  -ms-transform: scale(1.4, 1.8) translate(-10560px, 54px);
-  transform: scale(1.4, 1.8) translate(-10560px, 54px);
-  -webkit-animation: letterfeed 45s linear infinite;
-  animation: letterfeed 45s linear infinite; }
+  -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 56px, 0);
+  transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 56px, 0);
+  -webkit-animation: letterfeed 4.5s linear infinite;
+  animation: letterfeed 4.5s linear infinite; }
 
 .steps path {
   fill: #111;
@@ -147,19 +146,19 @@ text .purple {
 
 @-webkit-keyframes letterfeed {
   000% {
-    -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
-    transform: scale(1.4, 1.8) translate(-10560px, 54px); }
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0); }
   100% {
-    -webkit-transform: scale(1.4, 1.8) translate(-2970px, 54px);
-    transform: scale(1.4, 1.8) translate(-2970px, 54px); } }
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0); } }
 
 @keyframes letterfeed {
   000% {
-    -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
-    transform: scale(1.4, 1.8) translate(-10560px, 54px); }
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0); }
   100% {
-    -webkit-transform: scale(1.4, 1.8) translate(-2970px, 54px);
-    transform: scale(1.4, 1.8) translate(-2970px, 54px); } }
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0); } }
 
 @-webkit-keyframes codeswitch {
   00.00% {

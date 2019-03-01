@@ -50,9 +50,9 @@
 
   </defs>
   <style>
-  @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+ @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 .code-sample {
-  font-family: 'Roboto Mono',monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   font-weight: 500; }
 
@@ -111,10 +111,9 @@ body {
 
 .tabs {
   fill: #aaa;
-  white-space: pre;
   font-family: Roboto, sans-serif;
   font-size: 11px;
-  letter-spacing: 0em; }
+}
 
 text.code {
   fill: #f8f8f2; }
@@ -150,15 +149,14 @@ text .purple {
   color: gray; }
 
 .steps {
-  -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
-  -ms-transform: scale(1.4, 1.8) translate(-10560px, 54px);
-  transform: scale(1.4, 1.8) translate(-10560px, 54px);
+  -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 56px, 0);
+  transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 56px, 0);
   -webkit-animation: letterfeed 45s linear infinite;
   animation: letterfeed 45s linear infinite; }
 
 .steps path {
   fill: #111;
-  /*fill: rgba(255, 200, 70, 0.4);*/ }
+ }
 
 .message {
   -webkit-transform: translate(200px, 430px);
@@ -191,19 +189,19 @@ text .purple {
 
 @-webkit-keyframes letterfeed {
   000% {
-    -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
-    transform: scale(1.4, 1.8) translate(-10560px, 54px); }
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0); }
   100% {
-    -webkit-transform: scale(1.4, 1.8) translate(-2970px, 54px);
-    transform: scale(1.4, 1.8) translate(-2970px, 54px); } }
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0); } }
 
 @keyframes letterfeed {
   000% {
-    -webkit-transform: scale(1.4, 1.8) translate(-10560px, 54px);
-    transform: scale(1.4, 1.8) translate(-10560px, 54px); }
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0); }
   100% {
-    -webkit-transform: scale(1.4, 1.8) translate(-2970px, 54px);
-    transform: scale(1.4, 1.8) translate(-2970px, 54px); } }
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0); } }
 
 @-webkit-keyframes codeswitch {
   00.00% {
@@ -226,6 +224,8 @@ text .purple {
     opacity: 0; } }
 
 
+
+
   </style>
 
   <g class="wrapper waiting">
@@ -246,19 +246,20 @@ text .purple {
       </g>
       <use width="13" height="13" x="115" y="40" href="#icon-react"/>
       <text class="tabs">
-        <tspan x="135" y="49">react.js</tspan>
+        <tspan x="135" y="49">index-react.js</tspan>
       </text>
       <use width="12" height="12" x="217" y="40" href="#icon-sass"/>
       <text class="tabs">
         <tspan x="235" y="48">style.scss</tspan>
       </text>
-      <use width="12" height="12" x="316" y="40" href="#icon-html"/>
+      <use width="38" height="38" x="316" y="41" href="#icon-vue"/>
       <text class="tabs">
-        <tspan x="335" y="49">laptop.html</tspan>
+        <tspan x="335" y="49">index-vue.js</tspan>
       </text>
-      <use width="30" height="30" x="415" y="42" href="#icon-vue"/>
+      <use width="12" height="12" x="415" y="40" href="#icon-html"/>
+      
       <text class="tabs">
-        <tspan x="430" y="49">reeeder.pug</tspan>
+        <tspan x="430" y="49">reeeder.html</tspan>
       </text>
       <path stroke="#111" d="M105 35v21M205 35v21M305 35v21M405 35v21M505 35v21"/>
     </g>
@@ -270,9 +271,9 @@ text .purple {
         <g id="code-vue" class="code-sample">
           <g class="activetab">
             <path fill="#1e1e1e" d="M52 35h100v22H52z"/>
-            <use width="13" height="13" x="65" y="40" href="#icon-react"/>
-            <text x="44" y="48" class="tabs">
-              react.js
+            <use width="13" height="13" x="60" y="40" href="#icon-react"/>
+            <text x="75" y="48" class="tabs">
+              index-react.js
             </text>
           </g>
         </g>
@@ -284,13 +285,13 @@ text .purple {
           <tspan x="18" dy="16.5"><tspan class="green">constructor</tspan>() {</tspan>
           <tspan x="24" dy="16.5">  <tspan class="red">super</tspan>()</tspan>
           <tspan x="24" dy="16.5">  <tspan class="red">this</tspan>.<tspan class="green">state</tspan> = {</tspan>
+          <tspan x="30" dy="16.5">    <tspan class="green">set</tspan>: <tspan class="yellow">"goals"</tspan>,</tspan>
           <tspan x="30" dy="16.5">    <tspan class="green">action</tspan>: <tspan class="yellow">"learn"</tspan>,</tspan>
           <tspan x="30" dy="16.5">    <tspan class="green">opportunities</tspan>: <tspan class="yellow">"new"</tspan>,</tspan>
-          <tspan x="30" dy="16.5">    <tspan class="green">set</tspan>: <tspan class="yellow">"goals"</tspan>,</tspan>
           <tspan x="24" dy="16.5">  };</tspan>
           <tspan x="18" dy="16.5">}</tspan>
           <tspan x="12" dy="16.5"><tspan class="green">render</tspan>() {</tspan>
-          <tspan x="18" dy="16.5">  <tspan class="red">return &lt;h1&gt;</tspan><tspan class="white">Create new</tspan> {<tspan class="red">this</tspan>.<tspan class="green">opportunities</tspan>}<tspan class="red">&lt;/h1&gt;</tspan>;</tspan>
+          <tspan x="18" dy="16.5">  <tspan class="red">return &lt;h1&gt;</tspan><tspan class="white">Create </tspan> {<tspan class="red">this</tspan>.<tspan class="green">opportunities</tspan>}<tspan class="red">&lt;/h1&gt;</tspan>;</tspan>
           <tspan x="18" dy="16.5">}</tspan>
           <tspan x="12" dy="16.5">}</tspan>
           <tspan x="12" dy="16.5"><tspan class="white">ReactDOM</tspan>.<tspan class="green">render</tspan>(<tspan class="red">&lt;App /&gt;</tspan>, <tspan class="white">document.getElementById</tspan>(<tspan class="yellow">"react-root"</tspan>));</tspan>
@@ -301,7 +302,7 @@ text .purple {
           <g class="activetab">
             <path fill="#1e1e1e" d="M52 35h100v22H52z"/>
             <use width="11" height="11" x="66" y="40" href="#icon-sass"/>
-            <text x="40" y="48" class="tabs">
+            <text x="84" y="48" class="tabs">
               style.scss
             </text>
           </g>
@@ -309,17 +310,17 @@ text .purple {
         <text x="12" y="12" class="codepos">
           <tspan y="16.2" x="12"><tspan class="red">.career</tspan> {</tspan>
           <tspan dy="16.5" x="18">  <tspan class="yellow">transform</tspan>: <tspan class="fawn">scale</tspan>(<tspan class="white">1.4, 1.8</tspan>) <tspan class="fawn">translate</tspan>(<tspan class="blue">$startingpos</tspan>, <tspan class="white">54px</tspan>);</tspan>
-          <tspan dy="16.5" x="18">  <tspan class="yellow">animation</tspan>: <tspan class="purple">project</tspan> <tspan class="blue">$codetime</tspan> <tspan class="white">linear infinite;</tspan></tspan>
+          <tspan dy="16.5" x="18">  <tspan class="yellow">animation</tspan>: <tspan class="purple">skills</tspan> <tspan class="blue">$codetime</tspan> <tspan class="white">ease infinite;</tspan></tspan>
           <tspan dy="16.5" x="12">}</tspan>
           <tspan dy="16.5" x="12"><tspan class="red">.career</tspan> <tspan class="green">path</tspan> {</tspan>
           <tspan dy="16.5" x="18">  <tspan class="yellow">fill</tspan>:<tspan class="white"> green;</tspan></tspan>
           <tspan dy="16.5" x="12">}</tspan>
           <tspan dy="16.5" x="12"> </tspan>
           <tspan dy="16.5" x="12"><tspan class="gray">/* animations */</tspan></tspan>
-          <tspan dy="16.5" x="12"><tspan class="green">@keyframes</tspan> <tspan class="purple">project</tspan> { <tspan class="gray">/* move steps right to reveal code */</tspan></tspan>
+          <tspan dy="16.5" x="12"><tspan class="green">@keyframes</tspan> <tspan class="purple">skills</tspan> { <tspan class="gray">/* move right */</tspan></tspan>
           <tspan dy="16.5" x="18">  <tspan class="white">000%</tspan> {</tspan>
           <tspan dy="16.5" x="24">    <tspan class="yellow">transform</tspan>: <tspan class="fawn">scale</tspan>(<tspan class="white">1.4, 1.8</tspan>) <tspan class="fawn">translate</tspan>(<tspan class="blue">$startingpos</tspan>, <tspan class="white">54px</tspan>);</tspan>
-          <tspan dy="16.5" x="18">  }</tspan>
+          <tspan dy="16.5" x="18">  }</tspan>      
           <tspan dy="16.5" x="18">  <tspan class="white">100%</tspan> {</tspan>
           <tspan dy="16.5" x="24">    <tspan class="yellow">transform</tspan>: <tspan class="fawn">scale</tspan>(<tspan class="white">1.4, 1.8</tspan>) <tspan class="fawn">translate</tspan>(<tspan class="blue">$finnishpos</tspan>, <tspan class="white">54px</tspan>);</tspan>
           <tspan dy="16.5" x="18">  }</tspan>
@@ -330,14 +331,29 @@ text .purple {
         <g id="code-html" class="code-sample">
           <g class="activetab">
             <path fill="#1e1e1e" d="M52 35h98v22H52z"/>
-            <use width="11" height="11" x="66" y="40" href="#icon-html"/>
-            <text x="40" y="48" class="tabs">
-              laptop.html
+            <use width="38" height="38" x="60" y="40" href="#icon-vue"/>
+            <text x="80" y="48" class="tabs">
+              index-vue.js
             </text>
           </g>
         </g>
-        <text fill="#D4D4D4" >
-          <tspan x="24" y="16.2">&lt;div class=&quot;form-header&quot;&gt; </tspan><tspan x="24" y="32.2"> &lt;% if (Object.keys(errors).length === 0) { %&gt; </tspan><tspan x="24" y="48.174"> &lt;h2&gt;Send us a message&lt;/h2&gt; </tspan><tspan x="24" y="64.158"> &lt;% } else { %&gt; </tspan><tspan x="24" y="80.143"> &lt;h2 class=&quot;errors-heading&quot;&gt;Oops, please correct the following:&lt;/h2&gt; </tspan><tspan x="24" y="96.127"> &lt;ul class=&quot;errors-list&quot;&gt; </tspan><tspan x="24" y="112.111"> &lt;% Object.values(errors).forEach(error =&gt; { %&gt; </tspan><tspan x="24" y="128.096"> &lt;li&gt;&lt;%= error.msg %&gt;&lt;/li&gt; </tspan><tspan x="24" y="144.08"> &lt;% }) %&gt; </tspan><tspan x="24" y="160.064"> &lt;/ul&gt; </tspan><tspan x="24" y="176.049"> &lt;% } %&gt; </tspan><tspan x="24" y="192.033">&lt;/div&gt;</tspan>
+        <text x="12" y="12" class="codepos">
+          <tspan y="16.2" x="12"><tspan class="white">Vue</tspan>.<tspan class="green">component</tspan>(<tspan class="yellow">'how-to-win'</tspan>, {</tspan>
+          <tspan dy="16.5" x="24">  <tspan class="green">props</tspan>: [<tspan class="yellow">'win'</tspan>],</tspan>
+          <tspan dy="16.5" x="24">  <tspan class="green">template</tspan>: <tspan class="yellow">'&lt;li&gt;{{ win.text }}&lt;/li&gt;'</tspan></tspan>
+          <tspan dy="16.5" x="12">})</tspan>
+          <tspan dy="16.5" x="12">    </tspan>
+          <tspan dy="16.5" x="12"><tspan class="red">var</tspan> app = <tspan class="red">new</tspan> <tspan class="white">Vue</tspan>({</tspan>
+          <tspan dy="16.5" x="24"><tspan class="green">el</tspan>: <tspan class="yellow">'#app'</tspan>,</tspan>
+          <tspan dy="16.5" x="24"><tspan class="green">data</tspan>: {</tspan>
+          <tspan dy="16.5" x="36"><tspan class="green">actions</tspan>: [</tspan>
+          <tspan dy="16.5" x="48">{ <tspan class="green">id</tspan>: <tspan class="purple">0</tspan>, <tspan class="green">text</tspan>: <tspan class="yellow">'butterfly = float'</tspan> },</tspan>
+          <tspan dy="16.5" x="48">{ <tspan class="green">id</tspan>: <tspan class="purple">1</tspan>, <tspan class="green">text</tspan>: <tspan class="yellow">'bee = sting'</tspan> },</tspan>
+          <tspan dy="16.5" x="48">{ <tspan class="green">id</tspan>: <tspan class="purple">2</tspan>, <tspan class="green">text</tspan>: <tspan class="yellow">'can ≠ hit'</tspan> },</tspan>
+          <tspan dy="16.5" x="48">{ <tspan class="green">id</tspan>: <tspan class="purple">3</tspan>, <tspan class="green">text</tspan>: <tspan class="yellow">'can ≠ see'</tspan> }</tspan>
+          <tspan dy="16.5" x="36">]</tspan>      
+          <tspan dy="16.5" x="24">}</tspan>
+          <tspan dy="16.5" x="12">})</tspan>
         </text>
       </g>
     </g>
@@ -353,19 +369,19 @@ text .purple {
   </g>
 
   <g class="message code">
-    <rect fill="#456" x="0" y="0" width="500" height="50" rx="25" ry="25" />
+    <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
     <use width="30" height="30" x="15" y="10" href="#icon-sass"/>
-    <text x="80" y="31">Learn how to add a little Sass to your work.</text>
+    <text x="60" y="31">Why not polish your image with some Sass sparkle?</text>
   </g>
   <g class="message code">
-    <rect fill="#456" x="0" y="0" width="500" height="50" rx="25" ry="25" />
+    <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
     <use width="70" height="70" x="15" y="12" href="#icon-vue"/>
-    <text x="80" y="31">Expand your horizons with Vue.JS</text>
+    <text x="80" y="31">Want to expand your horizons with Vue.JS?</text>
   </g>
   <g class="message code">
-    <rect fill="#456" x="0" y="0" width="500" height="50" rx="25" ry="25" />
+    <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
     <use width="30" height="30" x="15" y="12" href="#icon-react"/>
-    <text x="80" y="31">Find new opportunities by learning React.</text>
+    <text x="65" y="31">Interested in new career opportunities with React?</text>
   </g>
 </svg>
 
