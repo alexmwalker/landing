@@ -91,7 +91,7 @@ h4, .is-size-h4 {
   font-size: calc(var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
   margin-top: calc(var(--baseline) * 1);
-  margin-bottom: 0rem;
+  margin-bottom: calc(var(--baseline) * 1);
   font-weight: 400;
 }
 
@@ -101,7 +101,7 @@ h5, .is-size-5 {
   margin-top: calc(var(--baseline) / 2);
   margin-bottom: calc(var(--baseline) / 2);
   font-weight: 400;
-  text-transform: capitalize;
+  //text-transform: capitalize;
 }
 
 p, ul, ol, pre, table, blockquote, .is-size-base, figcaption {
@@ -139,12 +139,14 @@ ul ul, ol ol, ul ol, ol ul {
 
 /* Let's make sure all's aligned */
 hr, .hr {
-  border: 1px solid;
-  margin: -1px 0;
+  border-top: 1px solid #8c8b8b;
+  margin: 0;
+  height: 0;
+  background: none;
 }
 
 b, i, strong, em, small, code {
-  line-height: 0;
+  //line-height: 0;
 }
 
 sub, sup {
@@ -164,6 +166,15 @@ sub {
 a:link{
 	text-decoration: none;
 	color: #333;
+}
+
+.hznav{ /* add to parent to turn list into horizontal text nav*/
+	display: flex;
+	margin: 0; padding: 0;
+	list-style: none;
+  justify-content: space-between;
+  align-items: stretch;
+
 }
 
 /* CSS RESETS */
@@ -198,3 +209,4 @@ body, figure{
 .device{
   opacity: .5;
 }
+

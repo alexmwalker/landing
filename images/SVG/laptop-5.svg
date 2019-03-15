@@ -1,0 +1,387 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="50 25 760 480">
+
+  <defs>
+    <mask id="mask10" width="750" height="440" x="90" y="40" class="stepmask" mask-type="alpha" maskUnits="userSpaceOnUse">
+      <path fill="#fff" d="M50 0h700v500H50z"/>
+    </mask>
+    <linearGradient id="paint0_linear" x1="326.871" x2="430.443" y1="-63.617" y2="519.466" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E5E5E5"/>
+      <stop offset=".20" stop-color="#D5D5D5"/>
+      <stop offset=".73" stop-color="#C4C4C4"/>
+      <stop offset=".93" stop-color="#4F4F4F"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="430.5" x2="430.5" y1="518.619" y2="528.716" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#E5E5E5"/>
+    </linearGradient>
+    <mask id="mask0" width="760" height="480" x="49" y="25" mask-type="alpha" maskUnits="userSpaceOnUse">
+      <path fill="#C4C4C4" d="M49.567 25.701h758.194V504.85H49.567z"/>
+      <path d="M49 25h760v480H49z"/>
+    </mask>
+    <filter id="filter0_d" width="873" height="43" x="0" y="15" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" mode="normal" result="shape"/>
+    </filter>
+    <symbol id="icon-vue" width="30" height="34" viewBox="0 0 30 34">
+      <path fill="#4DBA87" d="M3.571 0H0l4.571 8 .017-.029.016.029 4.539-8H5.597l-1.01 1.479L3.572 0z"/>
+      <path fill="#435466" d="M7.429 0H5.568l-.986 1.489L3.589 0H1.714l2.852 5.143.016-.03.016.03L7.428 0z"/>
+    </symbol>
+    <symbol id="icon-css" width="30" height="34" viewBox="0 0 30 34">
+      <path fill="#264DE4" fill-rule="evenodd" d="M26.9 30.408L29.552.686H.43l2.65 29.727 11.893 3.302L26.9 30.408zm-3.447-16.266l.659-7.38H5.849l.331 3.646h13.936l-.332 3.734H6.506l.327 3.646h12.635l-.423 4.728-4.066 1.098h-.004l-4.06-1.096-.26-2.907h-3.66l.511 5.724 7.469 2.073.016-.005 7.462-2.068.912-10.214.088-.98z" clip-rule="evenodd"/>
+    </symbol>
+    <symbol id="icon-html" width="30" height="34" viewBox="0 0 30 34">
+      <path fill="#EC613B" fill-rule="evenodd" d="M29.547.686H.43l2.652 29.743 11.874 3.363 11.942-3.362L29.547.686zm-19.45 13.195l-.321-3.75 13.947.005.319-3.617-18.27-.004.968 11.049h12.654l-.452 4.725-4.035 1.11-4.097-1.118-.26-2.91H6.931l.457 5.753 7.518 2 7.458-1.99 1.032-11.252h-13.3v-.001z" clip-rule="evenodd"/>
+    </symbol>
+    <symbol id="icon-sass" width="30" height="34" viewBox="0 0 30 34">
+      <path fill="#CF649A" d="M27.816 4.384C27.253 2.184 25.178.835 22.67.29c-2.531-.55-5.666-.33-8.691.741C10.438 2.29 6.574 4.306 3.773 6.92.458 10.006-.219 12.815.054 14.205c.312 1.605 1.31 2.948 2.48 4.074 1.195 1.15 2.57 2.088 3.932 3.026.482.332.933.661 1.33.968-.667.351-1.64.898-2.613 1.567-1.293.89-2.71 2.077-3.302 3.382-.646 1.426-.612 2.704-.25 3.683.347.936 1.028 1.663 1.736 1.86 3.086.856 6.18-.72 7.832-3.168v-.001c.84-1.25 1.2-2.672 1.262-3.952.049-1.015-.09-1.98-.36-2.735l.37-.237c2.68-1.705 4.64-2.899 5.928-3.666a105.178 105.178 0 0 1 1.892-1.099l-.465-1.173c-.644.145-1.272.376-1.889.607-2.44.915-4.891 1.996-7.148 3.299l-.183.105c-.768-.767-1.619-1.444-2.477-2.104-1.029-.792-1.976-1.524-2.66-2.33-.67-.788-1.04-1.594-.99-2.532.029-.527.127-1.508 1.135-2.834 1.027-1.348 3.023-3.084 6.931-5.024.423-.21.839-.402 1.248-.577 2.658-1.135 5.017-1.551 6.839-1.506 1.052.027 1.905.206 2.528.473.631.27.97.602 1.107.9.235.514.249 1.192-.02 1.986-.27.791-.81 1.655-1.608 2.48-1.594 1.647-4.157 3.077-7.383 3.437-1.356.153-2.312-.086-2.919-.359-.454-.204-.712-.427-.798-.52v-.002c-.15-.161-.3-.337-.489-.454a.792.792 0 0 0-.476-.122.846.846 0 0 0-.352.111c-.468.256-.46.747-.435.94.028.217.11.425.15.524.15.389.487.827.942 1.218.275.237.607.468.994.67.271.143.57.271.894.378 1.39.456 4.558.695 8.324-.755 2.167-.838 4.087-2.41 5.348-4.26 1.257-1.845 1.904-4.04 1.377-6.1zM9.518 24.19l.002-.001h.001c.178 1.462-.304 2.757-1.274 3.812h-.001c-.54.59-1.186.995-1.761 1.203a2.487 2.487 0 0 1-.744.159c-.22.007-.398-.005-.449-.24-.034-.16-.034-.399.034-.702.137-.603.522-1.343 1.184-1.966.91-.859 1.982-1.553 3.008-2.265z" clip-rule="evenodd"/>
+    </symbol>
+    <symbol id="icon-react" width="30" height="34" viewBox="0 0 30 34">
+      <circle cx="15" cy="15" r="3" fill="#61DAFB"/>
+      <ellipse cx="15" cy="15" rx="15" ry="7" stroke="#61DAFB" stroke-width="2" />
+      <ellipse cx="15" cy="15" rx="15" ry="7" transform="rotate(-60 15 15)" stroke="#61DAFB" stroke-width="2"/>
+      <ellipse cx="15" cy="15" rx="15" ry="7" transform="rotate(60 15 15)" stroke="#61DAFB" stroke-width="2" />
+    </symbol>    
+
+  </defs>
+  <style>
+ @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+.code-sample {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  font-weight: 500; }
+
+.linenumbers text {
+  font-family: 'Roboto Mono',monospace; }
+
+
+body {
+  font-size: 18px;
+  line-height: 0; }
+
+.screen {
+  background: #222;
+  color: #ddd;
+  padding: 1rem;
+  position: relative;
+  line-height: 18px;
+  height: 26rem;
+  background-color: #1c1c1c; }
+
+.code {
+  opacity: 0;
+  -webkit-animation: codeswitch 135s infinite linear;
+  animation: codeswitch 135s infinite linear;
+ }
+
+.code text {
+  display: block;
+  font-family: "Roboto mono", monospace;
+  fill: #aaa;
+  font-size: 11px; }
+
+.codepos {
+  height: 300px; }
+
+.code:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+
+.code:nth-of-type(2) {
+  -webkit-animation-delay: 45s;
+  animation-delay: 45s; }
+
+.code:nth-of-type(3) {
+  -webkit-animation-delay: 90s;
+  animation-delay: 90s; }
+
+.activetab text {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  fill: #eee; }
+
+.activetab path {
+  fill: #111; }
+
+.tabs {
+  fill: #aaa;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+}
+
+text.code {
+  fill: #f8f8f2; }
+
+text .red {
+  fill: #f92672; }
+
+text .yellow {
+  fill: #e6db74; }
+
+text .gray {
+  fill: slategray; }
+
+text .white {
+  fill: #eee; }
+
+text .green {
+  fill: #2aa198; }
+
+text .blue {
+  fill: #268bd2; }
+
+text .ltblue {
+  fill: #9AD9FB; }
+
+text .fawn {
+  fill: #fd971f; }
+
+text .purple {
+  fill: #c67ce2; }
+
+.syntax-gray {
+  color: gray; }
+
+.steps {
+  -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 56px, 0);
+  transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 56px, 0);
+  -webkit-animation: letterfeed 45s linear infinite;
+  animation: letterfeed 45s linear infinite; }
+
+.steps path {
+  fill: #111;
+ }
+
+.message {
+  -webkit-transform: translate(200px, 430px);
+  -ms-transform: translate(200px, 430px);
+  transform: translate(200px, 430px); }
+  .message text {
+    fill: #fff;
+    font-size: 18px;
+    font-family: Roboto, sans-serif; }
+
+#code-react {
+  -webkit-transform: scale(0.8) translate(-50px, -89px);
+  -ms-transform: scale(0.8) translate(-50px, -89px);
+  transform: scale(0.8) translate(-50px, -89px); }
+
+#code-css {
+  -webkit-transform: scale(0.8) translate(48px, -89px);
+  -ms-transform: scale(0.8) translate(48px, -89px);
+  transform: scale(0.8) translate(48px, -89px); }
+
+#code-vue {
+  -webkit-transform: scale(0.8) translate(144px, -89px);
+  -ms-transform: scale(0.8) translate(144px, -89px);
+  transform: scale(0.8) translate(144px, -89px); }
+
+#screenpos {
+  -webkit-transform: scale(1.3) translate(76px, 70px);
+  -ms-transform: scale(1.3) translate(76px, 70px);
+  transform: scale(1.3) translate(76px, 70px); }
+
+@-webkit-keyframes letterfeed {
+  000% {
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0); }
+  100% {
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0); } }
+
+@keyframes letterfeed {
+  000% {
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-10560px, 55px, 0); }
+  100% {
+    -webkit-transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0);
+    transform: scale3d(1.4, 1.8, 1) translate3d(-2970px, 55px, 0); } }
+
+@-webkit-keyframes codeswitch {
+  00.00% {
+    opacity: 1; }
+  33.33% {
+    opacity: 1; }
+  33.34% {
+    opacity: 0; }
+  100.00% {
+    opacity: 0; } }
+
+@keyframes codeswitch {
+  00.00% {
+    opacity: 1; }
+  33.33% {
+    opacity: 1; }
+  33.34% {
+    opacity: 0; }
+  100.00% {
+    opacity: 0; } 
+    }
+
+  </style>
+
+  <g class="wrapper waiting">
+
+
+
+    <path fill="#111" d="M48.62 24h766v480h-766z"/>
+    <g class="linenumbers" mask="url(#mask0)">
+      <text fill="#484747" font-size="14" letter-spacing="0" white-space="pre">
+        <tspan x="70" y="60.72">01 </tspan><tspan x="70" y="77.126">02 </tspan><tspan x="70" y="93.532">03 </tspan><tspan x="70" y="109.938">04 </tspan><tspan x="70" y="126.345">05 </tspan><tspan x="70" y="142.751">06 </tspan><tspan x="70" y="159.157">07 </tspan><tspan x="70" y="175.563">08 </tspan><tspan x="70" y="191.97">09 </tspan><tspan x="70" y="208.376">10 </tspan><tspan x="70" y="224.782">11 </tspan><tspan x="70" y="241.188">12 </tspan><tspan x="70" y="257.595">13 </tspan><tspan x="70" y="274.001">14 </tspan><tspan x="70" y="290.407">15 </tspan><tspan x="70" y="306.813">16 </tspan><tspan x="70" y="323.22">17 </tspan><tspan x="70" y="339.626">18 </tspan><tspan x="70" y="356.032">19 </tspan><tspan x="70" y="372.438">20 </tspan><tspan x="70" y="388.845">21 </tspan><tspan x="70" y="405.251">22 </tspan><tspan x="70" y="421.657">23 </tspan><tspan x="70" y="438.063">24 </tspan><tspan x="70" y="454.47">25 </tspan><tspan x="70" y="470.876">26 </tspan><tspan x="70" y="487.282">27 </tspan><tspan x="70" y="503.688">28 </tspan><tspan x="70" y="520.095">29</tspan>
+      </text>
+    </g>
+ 
+    <g id="tabs" filter="url(#filter0_d)">
+      <g class="tabbase">
+        <path fill="#2D2D2D" d="M54 25h750v25H54z"/>
+        <path fill="#222" d="M54 35h750v22H54z"/>
+      </g>
+      <use width="13" height="13" x="115" y="40" href="#icon-react"/>
+      <text class="tabs">
+        <tspan x="135" y="49">index-react.js</tspan>
+      </text>
+      <use width="12" height="12" x="217" y="40" href="#icon-sass"/>
+      <text class="tabs">
+        <tspan x="235" y="48">style.scss</tspan>
+      </text>
+      <use width="38" height="38" x="316" y="41" href="#icon-vue"/>
+      <text class="tabs">
+        <tspan x="335" y="49">index-vue.js</tspan>
+      </text>
+      <use width="12" height="12" x="415" y="40" href="#icon-html"/>
+      
+      <text class="tabs">
+        <tspan x="430" y="49">reeeder.html</tspan>
+      </text>
+      <path stroke="#111" d="M105 35v21M205 35v21M305 35v21M405 35v21M505 35v21"/>
+    </g>
+
+    <g id="screenpos" transform="translate(86 70)" x="100" fill="none" viewbox="0 0 525 272">
+      <path fill="#111" d="M0 0h525v272H0z"/>
+
+      <g class="code react">
+        <g id="code-react" class="code-sample">
+          <g class="activetab">
+            <path fill="#1e1e1e" d="M52 35h100v22H52z"/>
+            <use width="13" height="13" x="60" y="40" href="#icon-react"/>
+            <text x="75" y="48" class="tabs">
+              index-react.js
+            </text>
+          </g>
+        </g>
+
+        <text x="12" y="12" class="codepos"  fill="#E5E5E5">
+          <tspan x="12" y="20"><tspan class="red">import</tspan> <tspan class="fawn">React</tspan>, { <tspan class="fawn">Component</tspan> } <tspan class="red">from</tspan> <tspan class="yellow">'react'</tspan></tspan>
+          <tspan x="12" dy="16.5"><tspan class="red">import</tspan> <tspan class="fawn">ReactDOM</tspan> <tspan class="red">from</tspan> <tspan class="yellow">'react-dom'</tspan></tspan>
+          <tspan x="12" dy="16.5"><tspan class="red">class</tspan> <tspan class="fawn">App</tspan> <tspan class="red">extends</tspan> <tspan class="white">React</tspan>.<tspan class="green">Component</tspan> {</tspan>
+          <tspan x="18" dy="16.5"><tspan class="green">constructor</tspan>() {</tspan>
+          <tspan x="24" dy="16.5">  <tspan class="red">super</tspan>()</tspan>
+          <tspan x="24" dy="16.5">  <tspan class="red">this</tspan>.<tspan class="green">state</tspan> = {</tspan>
+          <tspan x="30" dy="16.5">    <tspan class="green">set</tspan>: <tspan class="yellow">"goals"</tspan>,</tspan>
+          <tspan x="30" dy="16.5">    <tspan class="green">action</tspan>: <tspan class="yellow">"learn"</tspan>,</tspan>
+          <tspan x="30" dy="16.5">    <tspan class="green">opportunities</tspan>: <tspan class="yellow">"new"</tspan>,</tspan>
+          <tspan x="24" dy="16.5">  };</tspan>
+          <tspan x="18" dy="16.5">}</tspan>
+          <tspan x="12" dy="16.5"><tspan class="green">render</tspan>() {</tspan>
+          <tspan x="18" dy="16.5">  <tspan class="red">return &lt;h1&gt;</tspan><tspan class="white">Create </tspan> {<tspan class="red">this</tspan>.<tspan class="green">opportunities</tspan>}<tspan class="red">&lt;/h1&gt;</tspan>;</tspan>
+          <tspan x="18" dy="16.5">}</tspan>
+          <tspan x="12" dy="16.5">}</tspan>
+          <tspan x="12" dy="16.5"><tspan class="white">ReactDOM</tspan>.<tspan class="green">render</tspan>(<tspan class="red">&lt;App /&gt;</tspan>, <tspan class="white">document.getElementById</tspan>(<tspan class="yellow">"react-root"</tspan>));</tspan>
+        </text>
+      </g>
+      <g class="code css">
+        <g id="code-css" class="code-sample">
+          <g class="activetab">
+            <path fill="#1e1e1e" d="M52 35h100v22H52z"/>
+            <use width="11" height="11" x="66" y="40" href="#icon-sass"/>
+            <text x="84" y="48" class="tabs">
+              style.scss
+            </text>
+          </g>
+        </g>
+        <text x="12" y="12" class="codepos">
+          <tspan y="16.2" x="12"><tspan class="red">.career</tspan> {</tspan>
+          <tspan dy="16.5" x="18">  <tspan class="yellow">transform</tspan>: <tspan class="fawn">scale</tspan>(<tspan class="white">1.4, 1.8</tspan>) <tspan class="fawn">translate</tspan>(<tspan class="blue">$startingpos</tspan>, <tspan class="white">54px</tspan>);</tspan>
+          <tspan dy="16.5" x="18">  <tspan class="yellow">animation</tspan>: <tspan class="purple">skills</tspan> <tspan class="blue">$codetime</tspan> <tspan class="white">ease infinite;</tspan></tspan>
+          <tspan dy="16.5" x="12">}</tspan>
+          <tspan dy="16.5" x="12"><tspan class="red">.career</tspan> <tspan class="green">path</tspan> {</tspan>
+          <tspan dy="16.5" x="18">  <tspan class="yellow">fill</tspan>:<tspan class="white"> green;</tspan></tspan>
+          <tspan dy="16.5" x="12">}</tspan>
+          <tspan dy="16.5" x="12"> </tspan>
+          <tspan dy="16.5" x="12"><tspan class="gray">/* animations */</tspan></tspan>
+          <tspan dy="16.5" x="12"><tspan class="green">@keyframes</tspan> <tspan class="purple">skills</tspan> { <tspan class="gray">/* move right */</tspan></tspan>
+          <tspan dy="16.5" x="18">  <tspan class="white">000%</tspan> {</tspan>
+          <tspan dy="16.5" x="24">    <tspan class="yellow">transform</tspan>: <tspan class="fawn">scale</tspan>(<tspan class="white">1.4, 1.8</tspan>) <tspan class="fawn">translate</tspan>(<tspan class="blue">$startingpos</tspan>, <tspan class="white">54px</tspan>);</tspan>
+          <tspan dy="16.5" x="18">  }</tspan>      
+          <tspan dy="16.5" x="18">  <tspan class="white">100%</tspan> {</tspan>
+          <tspan dy="16.5" x="24">    <tspan class="yellow">transform</tspan>: <tspan class="fawn">scale</tspan>(<tspan class="white">1.4, 1.8</tspan>) <tspan class="fawn">translate</tspan>(<tspan class="blue">$finnishpos</tspan>, <tspan class="white">54px</tspan>);</tspan>
+          <tspan dy="16.5" x="18">  }</tspan>
+          <tspan dy="16.5" x="12">}</tspan>
+        </text>
+      </g>
+      <g class="code html">
+        <g id="code-vue" class="code-sample">
+          <g class="activetab">
+            <path fill="#1e1e1e" d="M52 35h98v22H52z"/>
+            <use width="38" height="38" x="60" y="40" href="#icon-vue"/>
+            <text x="80" y="48" class="tabs">
+              index-vue.js
+            </text>
+          </g>
+        </g>
+        <text x="12" y="12" class="codepos">
+          <tspan y="16.2" x="12"><tspan class="white">Vue</tspan>.<tspan class="green">component</tspan>(<tspan class="yellow">'how-to-win'</tspan>, {</tspan>
+          <tspan dy="16.5" x="24">  <tspan class="green">props</tspan>: [<tspan class="yellow">'win'</tspan>],</tspan>
+          <tspan dy="16.5" x="24">  <tspan class="green">template</tspan>: <tspan class="yellow">'&lt;li&gt;{{ win.text }}&lt;/li&gt;'</tspan></tspan>
+          <tspan dy="16.5" x="12">})</tspan>
+          <tspan dy="16.5" x="12">    </tspan>
+          <tspan dy="16.5" x="12"><tspan class="red">var</tspan> app = <tspan class="red">new</tspan> <tspan class="white">Vue</tspan>({</tspan>
+          <tspan dy="16.5" x="24"><tspan class="green">el</tspan>: <tspan class="yellow">'#app'</tspan>,</tspan>
+          <tspan dy="16.5" x="24"><tspan class="green">data</tspan>: {</tspan>
+          <tspan dy="16.5" x="36"><tspan class="green">actions</tspan>: [</tspan>
+          <tspan dy="16.5" x="48">{ <tspan class="green">id</tspan>: <tspan class="purple">0</tspan>, <tspan class="green">text</tspan>: <tspan class="yellow">'butterfly = float'</tspan> },</tspan>
+          <tspan dy="16.5" x="48">{ <tspan class="green">id</tspan>: <tspan class="purple">1</tspan>, <tspan class="green">text</tspan>: <tspan class="yellow">'bee = sting'</tspan> },</tspan>
+          <tspan dy="16.5" x="48">{ <tspan class="green">id</tspan>: <tspan class="purple">2</tspan>, <tspan class="green">text</tspan>: <tspan class="yellow">'can ≠ hit'</tspan> },</tspan>
+          <tspan dy="16.5" x="48">{ <tspan class="green">id</tspan>: <tspan class="purple">3</tspan>, <tspan class="green">text</tspan>: <tspan class="yellow">'can ≠ see'</tspan> }</tspan>
+          <tspan dy="16.5" x="36">]</tspan>      
+          <tspan dy="16.5" x="24">}</tspan>
+          <tspan dy="16.5" x="12">})</tspan>
+        </text>
+      </g>
+    </g>
+
+
+    <path stroke="#000" stroke-width="0" d="M100 60h620v420H100z"/>
+
+    <g mask="url(#mask10)">
+      <g class="steps">
+        <path fill="#111" fill-opacity="1" style="opacity:1" d="M10647.8 0h505.154v12H10647.8zM10142.7 12h1010.31v12H10142.7zM9637.54 24H11153v12H9637.54zM9132.39 36H11153v12H9132.39zM8617.33 48H11153v12H8617.33zM8112.17 60H11153v12H8112.17zM7607.02 72H11153v12H7607.02zM7101.87 84H11153v12H7101.87zM6596.71 96H11153v12H6596.71zM6091.56 108H11153v12H6091.56zM5586.4 120H11153v12H5586.4zM5081.25 132H11153v12H5081.25zM4566.19 144H11153v12H4566.19zM4061.04 156H11153v12H4061.04zM3555.89 168H11153v12H3555.89zM3050.73 180H11153v12H3050.73zM2535.67 192H11153v12H2535.67zM2020.61 204H11153v12H2020.61zM1515.46 216H11153v12H1515.46zM1010.31 228h10142.7v12H1010.31zM505.153 240h10647.8v12H505.153zM0 252h11153v12H0z"/> 
+      </g> 
+    </g>  
+  </g>
+
+
+  <g transform="translate(200 430)" class="message code">
+    <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
+    <use width="30" height="30" x="15" y="10" href="#icon-sass"/>
+    <text x="60" y="31">Why not polish your image with some Sass sparkle?</text>
+  </g>
+  <g transform="translate(200 430)" class="message code">
+    <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
+    <use width="70" height="70" x="15" y="12" href="#icon-vue"/>
+    <text x="80" y="31">Want to expand your horizons with Vue.JS?</text>
+  </g>
+  <g transform="translate(200 430)" class="message code">
+    <rect fill="#234" x="0" y="0" width="500" height="50" rx="25" ry="25" />
+    <use width="30" height="30" x="15" y="12" href="#icon-react"/>
+    <text x="65" y="31">Interested in new career opportunities with React?</text>
+  </g>
+</svg>
+
+

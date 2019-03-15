@@ -1,0 +1,42 @@
+
+// footer
+footer.mainfooter
+  .container
+    .grid
+      .col-3
+        | Copyright 2018 SitePoint
+
+
+
+
+
+script.
+  $(document).ready(function(){
+    $('.showmobile').click(function(){
+      $(this).toggleClass('open');
+    });
+    $('.logged-out').click(function(){
+      $('.login-panel').toggleClass('open');
+    });
+    $('.account-items').click(function(){
+      $('.account-items').toggleClass('open');
+    });
+    $('button.go').click(function(){
+      $('.sitepoint-branding').addClass('member');
+    });
+    $('.logout').click(function(){
+      $('.sitepoint-branding').removeClass('member');
+    });
+  });
+    $(window).resize(function(){ /* close the menu on screen resize */
+      $('.showmobile').removeClass('open');
+      $('.login-panel').removeClass('open');
+      $('ul.account-items').removeClass('open');
+    });
+
+
+
+
+
+
+  

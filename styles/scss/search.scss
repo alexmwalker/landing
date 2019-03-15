@@ -1,0 +1,83 @@
+$b-rad: 6px;
+
+@import 'basic-grid-typography';
+
+@import "gridlex-vars";
+@import "gridlex-preprocessing";
+@import "gridlex-mixins";
+@import "gridlex-classes";
+
+@import 'header';
+@import 'search-nav';
+
+@import 'bookcards';
+@import 'footer';
+
+@import 'media-tweaks';
+//@import '3d';
+
+
+.pink{
+  height: calc(var(--baseline));
+  background: #FA3292;
+  color: #eee;
+  border-radius: $b-rad;
+  font-size: calc(1rem / var(--typescale));
+  border: 0 none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  &:hover{
+    background: #FA0B7E;  
+    color: #fff;
+  }
+  &.large{
+    font-size: calc(1rem * var(--typescale));
+    height: calc(var(--baseline) * 1.5);
+  }
+}
+
+.imageshadow{
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+button.pink{
+  margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);
+  
+}
+.team-membership{
+  a{
+    color: #fff;
+  }
+}
+
+/* temp column borders */
+[class*="col"]{
+  outline: 0px dashed rgba(125,200,200,.3);
+}
+
+
+.mobilemenu{
+  display: none;
+  outline: 1px yellow dashed;
+}
+
+@media (max-width: 48em) {
+  .mobilemenu{
+    display: block;
+    outline: 1px red dashed;
+    
+  }
+}
+
+.catnav li{
+  list-style: none;
+  //outline: 1px green dashed;
+  line-height: calc(var(--baseline) * 1.5);
+  font-size: calc(1rem / var(--typescale));
+  text-align: center;
+  a{
+    color: #333;
+  }
+}
+

@@ -1,0 +1,103 @@
+/* chapter */ 
+
+#reeedr-body {
+  color: #333;
+  margin-bottom: 0;
+  background-color: #fff;
+  margin-top: 0;
+  width: 100%;
+}
+
+#reeedr .chapter .chapter-start {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+#reeedr .ch-head {
+  font-size: 1.5625rem;
+  position: absolute;
+  width: 20%;
+  outline: 1px cyan dashed;
+  font-family: Raleway;
+  color: #9ab;
+  font-weight: 600;
+  margin-top: 5.33333rem;
+  right: 10%;
+  text-align: center;
+  page-break-after: avoid;
+}
+#reeedr .ch-head .chapter-number {
+  font-size: 9rem;
+  color: #445266;
+  line-height: 5.33333rem;
+  vertical-align: middle;
+  position: absolute;
+  top: 0rem;
+  height: 7.11111rem;
+  padding-top: 2.66667rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  border-left: 1px solid #999;
+}
+#reeedr .ch-head+h1 {
+  margin: calc(var(--baseline) * 3) 30% 0 20%;
+  font-size: 1.95313rem;
+  float: right;
+  line-height: 2.66667rem;
+  color: #345;
+  text-align: right;
+  position: relative;
+}
+#reeedr .ch-head+h1+h3 {
+  margin: 0 30% 5.33333rem 0%;
+  line-height: 1.77778rem;
+  width: 70%;
+  padding-right: 2rem;
+  color: #9ab;
+  letter-spacing: .5px;
+  text-align: right;
+  position: relative;
+}
+
+#reeedr .chapter-start h3 {
+  font-size: 1.5625rem;
+}
+#reeedr .chapter-start h3 {
+  font-size: 1.5625rem;
+}
+.author {
+  color: #949494;
+  width: 100%;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.intro{
+  font-size: calc(var(--typescale) * 1rem);
+  line-height: calc(var(--baseline) * 1);  
+}
+
+#reeedr .image-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+#reeedr img {
+  max-width: 100%;
+}

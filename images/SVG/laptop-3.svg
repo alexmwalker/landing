@@ -221,10 +221,8 @@ text .purple {
   33.34% {
     opacity: 0; }
   100.00% {
-    opacity: 0; } }
-
-
-
+    opacity: 0; } 
+    }
 
   </style>
 

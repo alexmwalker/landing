@@ -1,0 +1,236 @@
+
+<div id="reeedr-body">
+  <div class="frontmatters hide">
+    <div class="page-frontmatter front set-front-matter">
+      <div class="title-name">
+        <h2 id="maintitle">Your First Week With Bootstrap </h2>
+      </div>
+      <p>Copyright © 2018 SitePoint Pty. Ltd.</p>
+      <ul>
+        <li><strong>Product Manager:</strong> Simon Mackie</li>
+        <li><strong>English Editor:</strong> Ralph Mason</li>
+        <li><strong>Technical Editor:</strong> Darin Dimitrov</li>
+        <li><strong>Cover Designer:</strong> Alex Walker</li>
+      </ul>
+      <h2 id="notice-of-rights">Notice of Rights</h2>
+      <p>
+        All rights reserved. No part of this book may be reproduced, stored in a retrieval system or transmitted in
+        any form or by any means, without the prior written permission of the publisher, except in the case of brief
+        quotations embodied in critical articles or reviews.
+      </p>
+      <h2 id="notice-of-liability">Notice of Liability</h2>
+      <p>
+        The author and publisher have made every effort to ensure the accuracy of the information herein. However, the
+        information contained in this book is sold without warranty, either express or implied. Neither the authors and
+        SitePoint Pty. Ltd., nor its dealers or distributors will be held liable for any damages to be caused either
+        directly or indirectly by the instructions contained in this book, or by the software or hardware products
+        described herein.
+      </p>
+      <h2 id="trademark-notice">Trademark Notice</h2>
+      <p>
+        Rather than indicating every occurrence of a trademarked name as such, this book uses the names only in an
+        editorial fashion and to the benefit of the trademark owner with no intention of infringement of the trademark.
+      </p>
+    </div>
+    <div class="page-about front set-front-matter">
+      <div class="small-centered">
+        <p><a class="uri" href="http://www.sitepoint.com/"><img class="frontmatterlogo" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/sitepoint-gray.svg" alt="SitePoint logo"/></a><br/> Published by SitePoint Pty. Ltd.</p>
+        <p>48 Cambridge Street Collingwood<br/> VIC Australia 3066<br/> Web: www.sitepoint.com<br/> Email:
+                      books@sitepoint.com
+        </p>
+        <p> Printed and bound in the United States of America</p>
+      </div>
+      <h2 id="about-sitepoint">About SitePoint</h2>
+      <p>
+        SitePoint specializes in publishing fun, practical, and easy-to-understand content for web professionals.
+        Visit <a class="uri" href="http://www.sitepoint.com/">http://www.sitepoint.com/</a> to access our blogs, books,
+                  newsletters, articles, and community forums. You’ll find a stack of information on JavaScript, PHP, Ruby,
+                  mobile development, design, and more.
+      </p>
+    </div>
+    <div class="preface set-front-matter">
+      <h1 id="preface">Preface</h1>
+      <p>
+        React is a remarkable JavaScript library that's taken the development community by storm. In a nutshell,
+        it's made it easier for developers to build interactive user interfaces for web, mobile and desktop
+        platforms. One of its best features is its freedom from the problematic bugs inherent in MVC frameworks, where
+        inconsistent views is a recurring problem for big projects. Today, thousands of companies worldwide are using
+        React, including big names such as Netflix and AirBnB. React has become immensely popular, such that a number
+        of apps have been ported to React --- including WhatsApp, Instagram and Dropbox.
+      </p>
+      <p>This book is a collection of articles, selected from SitePoint's <a href="https://www.sitepoint.com/javascript/react/">
+          React
+          Hub</a>, that will guide you through your first week with the amazingly flexible library.</p>
+      <h2 id="who-should-read-this-book-">Who Should Read This Book?</h2>
+      <p>
+        This book is for all Frontend developers that want to build sites and apps that run faster. You’ll need to be
+        familiar with HTML and CSS and have a reasonable level of understanding of JavaScript in order to follow the
+        discussion.
+      </p>
+      <h2 id="conventions-used">Conventions Used</h2>
+      <p>
+        You’ll notice that we’ve used certain typographic and layout styles throughout this book to signify different
+        types of information. Look out for the following items.
+      </p>
+      <h3 id="code-samples">Code Samples</h3>
+      <p>Code in this book is displayed using a fixed-width font, like so:</p>
+      <pre class="language-markup">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t          
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t                    </pre>
+      <p>Where existing code is required for context, rather than repeat all of it, ⋮ will be displayed:</p>
+      <pre class="language-js">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t          
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t                    </pre>
+      <p>
+        Some lines of code should be entered on one line, but we’ve had to wrap them because of page constraints. An ➥
+        indicates a line break that exists for formatting purposes only, and should be ignored:
+      </p>
+      <pre class="language-js">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t          
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t                    </pre>
+      <h3 class="breakbefore" id="preface-tips">Tips, Notes, and Warnings</h3>
+      <div class="box tip">
+        <h4>Hey, You!</h4>
+        <div class="body">
+          <p>Tips provide helpful little pointers.</p>
+        </div>
+      </div>
+      <div class="box note">
+        <h4>Ahem, Excuse Me ...</h4>
+        <div class="body">
+          <p>
+            Notes are useful asides that are related—but not critical—to the topic at hand. Think of them as extra
+            tidbits of information.
+          </p>
+        </div>
+      </div>
+      <div class="box attention">
+        <h4>Make Sure You Always ...</h4>
+        <div class="body">
+          <p>... pay attention to these important points.</p>
+        </div>
+      </div>
+      <div class="box warning">
+        <h4>Watch Out!</h4>
+        <div class="body">
+          <p>Warnings highlight any gotchas that are likely to trip you up along the way.</p>
+        </div>
+      </div>
+      <div class="box codepen">
+        <h4>Live Code</h4>
+        <div class="body">
+          <p>This example has a Live <a class="uri" href="http://www.codepen.io">Codepen.io demo you can play with.</a></p>
+        </div>
+      </div>
+      <div class="box github">
+        <h4>Github </h4>
+        <div class="body">
+          <p>This example has a code repository available at <a class="uri" href="http://www.github.com">Github.com.</a></p>
+        </div>
+      </div>
+      <div class="next-chapter-wrapper"><a class="next-chapter-button" data-next-chapter="1" data-href="#)"><span>NEXT :</span>Why I
+                      Love Bootstrap, and Why You Should Too<i class="fas fa-chevron-right"></i></a></div>
+    </div>
+    <!-- :markdown-it# Markdown-->
+  </div>
+  <div class="chapter hide" data-chapter-number="1">
+    <div class="chapter-start">
+      <div class="ch-head">Chapter<span class="chapter-number">1</span></div>
+      <h1 class="chaptertitle"> Why I Love Bootstrap, and Why You Should Too</h1>
+      <h3 class="author">Syed Fazle Rahman</h3>
+    </div>
+    <p><strong><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> stands as one of the most
+                  popular, open-source, front-end frameworks on the Web. Since its
+                  official release in 2011, it has undergone several changes, and it's now
+                  one of the most stable and responsive frameworks available. It's loved
+                  by web developers of all levels, as it gives them the capability to
+                  build a functional, attractive website design within minutes. A novice
+                  developer with just some basic knowledge of HTML and little CSS can
+                  easily get started with Bootstrap.</strong></p>
+    <p>
+      Bootstrap provides a solid foundation for any website, irrespective of
+      project size. It contains<a href="http://getbootstrap.com/docs/4.0/content/reboot/" target="_blank">Reboot</a>, which is
+              based on <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a> and
+              helps level out browser differences for various page elements. Bootstrap
+              also provides great typography. Even basic HTML form elements like
+              checkboxes, radio buttons, select options, etc., have been restyled to
+              give them a modern look. I use Bootstrap because it saves me a
+              considerable amount of effort.
+    </p>
+    <p>
+      Today's websites should be modern, sleek, responsive, and "mobile
+      first". Bootstrap helps us to achieve these goals with minimum fuss.
+      Here are the top five reasons why I love Bootstrap:
+    </p>
+    <h2 id="reason-1-the-powerful-grid-system">Reason 1: The Powerful Grid System</h2>
+    <p>
+      Bootstrap has one of the best responsive, mobile-first grid systems
+      available. It's built with Flexbox and it's easy to use. It helps in
+      scaling a single website design from the smallest mobile device to
+      high-definition displays, logically dividing the screen into 12 columns,
+      so that you can decide just how much screen real estate each element of
+      your design should take up.
+    </p>
+    <p>
+      Although developers have CSS Grid Layout for layout building, the
+      Bootstrap Grid component can still be handy for quick prototyping --- at
+      least while we get more familiar with the new native CSS tool at our
+      disposal today.
+    </p>
+    <h2 id="reason-2-rapid-development">Reason 2: Rapid Development</h2>
+    <p>
+      Bootstrap comes complete with many reusable CSS and JavaScript
+      components that can help achieve the functionality needed in almost any
+      kind of website. You just have to use some HTML to plug them into your
+      template, with no need to spend huge amounts of time writing complex CSS
+      and JavaScript. Plus, all these components are responsive, too!
+    </p>
+    <h2 id="reason-3-browser-compatibility">Reason 3: Browser Compatibility</h2>
+    <p>
+      Bootstrap is compatible with the latest, stable releases of all major
+      browsers and platforms. With regard to the Windows platform, Bootstrap
+      works in Internet Explorer versions 10--11 and Microsoft Edge. If
+      Bootstrap's instructions are followed properly, you can create a website
+      design that works in all these browsers.
+    </p>
+    <p>
+      Of course, if your employer wants to make a website that looks exactly
+      the same in IE7--8 as it does in modern, standards-compliant browsers,
+      then it might be time to think about switching jobs!
+    </p>
+    <h2 id="reason-4-customization-">Reason 4: Customization!</h2>
+    <p>
+      Bootstrap offers many ways to customize its default design. You can
+      override all of its CSS and default JavaScript behavior. Bootstrap is
+      even more interesting if you're a <a href="http://sass-lang.com/" target="_blank">Sass</a> developer, as it includes Sass customization options. These options let
+              you smoothly create a new template using Bootstrap.
+    </p>
+    <h2 id="reason-5-open-source">Reason 5: Open Source</h2>
+    <p>Bootstrap is an open-source project that's <a href="https://github.com/twbs/bootstrap" target="_blank">
+        hosted on
+        GitHub</a> and released under <a href="http://opensource.org/licenses/MIT" target="_blank">
+        the MIT
+        license</a>. This is one of the biggest
+              reasons I use Bootstrap. My clients won't have to deal with purchasing
+              and licensing issues, and Bootstrap's license gives me the freedom to
+              completely change and experiment with it.
+    </p>
+    <h2 id="want-to-learn-bootstrap-">Want to Learn Bootstrap?</h2>
+    <p>SitePoint has published my book on Bootstrap called " <a href="https://www.sitepoint.com/premium/books/jump-start-bootstrap" target="_blank">
+        Jump
+        Start
+        Bootstrap</a>".
+              It teaches you how to get started with Bootstrap. Apart from teaching
+              you how to use Bootstrap's components and plugins, it also covers how to
+              customize them through options like Less and Sass. A major section has
+              been dedicated to Bootstrap's grid system, which is the most important
+              aspect of creating a responsive website design. You'll also learn to
+              create many demo website designs throughout the book.
+    </p>
+    <p>
+      Hopefully you found this article interesting, and it has convinced you
+      to try Bootstrap in your future projects.
+    </p>
+    <div class="next-chapter-wrapper"><a class="next-chapter-button" data-next-chapter="2" target="_blank" data-href="#)"><span>NEXT :</span>Understanding
+                  Bootstrap: How it Works, and What's New<i class="fas fa-chevron-right"></i></a></div>
+    <!-- We need to add a 'marker' to idenify the end of a chapter-->
+    <div class="chapter-end"></div>
+  </div>
+</div>

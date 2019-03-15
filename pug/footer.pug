@@ -42,7 +42,6 @@ footer.mainfooter
           li
             a.Footer-link.f-small(href="/premium/privacy-policy") Privacy Policy
 
-.feedback test
 
 
 script.
@@ -52,6 +51,9 @@ script.
     });
     $('.logged-out').click(function(){
       $('.login-panel').toggleClass('open');
+    });
+    $('.account-items').click(function(){
+      $('.account-items').toggleClass('open');
     });
     $('button.go').click(function(){
       $('.sitepoint-branding').addClass('member');
@@ -63,6 +65,7 @@ script.
     $(window).resize(function(){ /* close the menu on screen resize */
       $('.showmobile').removeClass('open');
       $('.login-panel').removeClass('open');
+      $('ul.account-items').removeClass('open');
     });
 
 script.

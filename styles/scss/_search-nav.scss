@@ -1,13 +1,16 @@
-.search-nav{
+$b-rad: 6px;
+
+.library-nav{
   background: #F7F7F7;
   padding-top: calc(var(--baseline) /1);
   input[type='search']{
     border: 1px solid #E0E0E0; 
     font-size: calc(1rem / var(--typescale));
     padding: 15px;
-    background: #fff ;
+    background: #fff;
     margin: 0 0 0 0;
     width: 100%;
+    border-radius: 8px;
   }
 }
 
@@ -28,6 +31,9 @@
     white-space: nowrap;
     flex: 0 0 0;
     margin: 5px;
+    a{ 
+      color: #333;
+    }
     &.on a{
       font-weight: 700;
     }
@@ -37,3 +43,93 @@
   }
 }
 
+/* Book results */
+
+.contentbody{
+  background-color: #f7f7f7;
+  padding: 0 0 calc(var(--baseline)*2);
+  h3{
+    color: #333;
+  }
+}
+.results-total{
+  font-size: calc(1rem / var(--typescale));
+  line-height: calc(var(--baseline) / 2);
+  margin-top: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / 2);
+}
+
+.search-big{
+  margin: 0 0 calc(var(--baseline) / 2);
+  .grid-noGutter-center{
+    padding: calc(var(--baseline) * 1.5) 0;
+    margin: 0;
+  }
+  input[type*="text"], select{
+    font-size: calc(1rem * var(--typescale));
+    height: calc(var(--baseline) * 1.5);
+    width: 100%;
+    padding: 0 1rem;
+    border-radius: calc(var(--baseline) * 2);
+    &::placeholder{
+      color: #999;
+    }
+  }
+  select{
+    padding: 0;
+    position: relative;
+    &:after{
+      display: block;
+      position: absolute;
+      content: '';
+      width: 100px;
+      height: 100px;
+      outline: 1px red dashed;
+      top: 0;
+      left: 0;
+    }
+    option{
+      background: #fff;
+    }
+  }
+  button{
+    line-height: calc(var(--baseline) * 1.25);
+    width: calc(var(--baseline) * 1.75);
+    font-size: calc(1rem * var(--typescale));
+    border: 3px #bbb solid;
+    font-weight: 400600;
+    border-radius: $b-rad;
+    margin: 0 1rem;
+  }
+  
+}
+
+.inset{  
+  margin: 0 0.5rem;
+}  
+.showall{
+  font-size: calc(1rem / var(--typescale));
+  line-height: calc(var(--baseline) / 2);
+  margin-top: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / 2);
+  text-align: right;
+}
+.search-body h4{
+  margin: 0 0.5rem;
+} 
+
+.underline{
+  border-bottom: 1px #999 solid;
+  margin: 0;
+  padding-bottom: calc(var(--baseline) / 1);
+  
+}
+.rel{
+  position: relative;
+}
+.label{
+  position: absolute;
+  top: calc(var(--baseline) / -1.25);
+  color: #888;
+  font-size: calc(1rem / var(--typescale));
+}

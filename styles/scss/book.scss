@@ -1,0 +1,38 @@
+$br: 3px;
+
+@import 'basic-grid-typography';
+
+@import "gridlex-vars";
+@import "gridlex-preprocessing";
+@import "gridlex-mixins";
+@import "gridlex-classes";
+
+@import 'header-book';
+@import 'hero-book1';
+@import 'chapter-book';
+@import 'footer-book';
+
+//@import 'media-tweaks';
+//@import '3d';
+
+
+
+.imageshadow{
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+.team-membership{
+  a{
+    color: #fff;
+  }
+}
+
+/* temp column borders */
+[class*="col"]{
+  outline: 0px dashed rgba(125,200,200,.3);
+}
+
+.container [class*="grid"]{
+  margin: 0 1rem;
+}

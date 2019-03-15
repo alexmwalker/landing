@@ -1,0 +1,137 @@
+.bookcard{
+  background: #fff;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0,0,0,.1);
+  padding: calc(var(--baseline) / 2) 0 0 0;
+  margin: 0 0.75rem calc(var(--baseline) * 1);
+  border: 1px #eee solid;
+
+  .cardtitle{
+    text-align: center;
+    font-weight: 500;
+    font-size: calc(1rem / var(--typescale));
+    line-height: calc(var(--baseline) / 2);
+    height: calc(var(--baseline) * 2);
+    margin: 0 1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .bookframe{
+    width: 86%;
+    margin: 0 7% -0.4rem;
+    height: calc(var(--baseline) * 8.7);
+    overflow: hidden;
+    box-shadow: 4px 4px 4px rgba(0,0,0, 0.1);
+  }
+  img{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+.results-list{
+  background: #fff;
+  box-shadow: 4px 4px 4px rgba(0,0,0, 0.1);
+  border-radius: $b-rad;
+  .grid-center{
+    margin: calc(var(--baseline) / 2) 1.5rem;
+  }
+  h5{
+    color: #999;
+    padding-left: 1.5rem;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 19 19'%3E%3Cpath fill='%23999' d='M8.829 6.328a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/%3E%3Cpath fill='%23999'  d='M11.95 2.05a7.002 7.002 0 0 1 .657 9.143l5.707 5.707-1.415 1.414-5.707-5.707A7.002 7.002 0 0 1 2.05 2.05a7 7 0 0 1 9.9 0zm-1.414 8.486a5 5 0 1 0-7.072-7.072 5 5 0 0 0 7.072 7.072z' /%3E%3C/svg%3E") no-repeat left center;
+    a{
+      color: #333
+    }
+  }
+}
+.result-text{
+  h5{
+    color: #666;
+  }
+  blockquote{
+    background: #F8F8F8;
+    margin: 0 1rem 0 0;
+    border-radius: 4px;
+    padding: calc(var(--baseline)/4) 1rem;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    box-shadow: inset 0 4px 4px rgba(0,0,0,0.12);
+    position: relative;
+    &:before, &:after{
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-left: 12px solid #e0e0e0;
+      border-right: 12px solid transparent;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      right: -24px;
+      top: 31px;
+    }
+    &:after{
+      border-left: 12px solid #f8f8f8;
+      border-bottom: 10px solid transparent;
+      right: -22px;
+      top: 33px;
+      }
+    p {font-size: calc(1rem / var(--typescale));
+      margin: calc(var(--baseline) / 2) 0;
+    }
+    .search-term{
+      background: #fcfcaa
+    }
+  }
+
+}
+.result-book{
+  background: #fff;
+  text-align: center;
+  .thumbframe{
+    height: calc(var(--baseline)*3.5);
+    overflow: hidden;
+  }
+  img{
+    width: 100%;
+    margin-top: 0;
+    box-shadow: 1px 2px 3px rgba(0,0,0, 0.1);
+  }
+  .go{
+    line-height: calc(var(--baseline) / 1);
+    display: block;
+    margin: calc(var(--baseline) / 2) 0;
+    background: linear-gradient(180deg, #F9FAFC 18.36%, #EFF3F6 72.54%);
+    border: 1px solid #CACCCF;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 100%;
+    height: calc(var(--baseline) * 1); 
+    padding-left: 0.75rem;
+    font-size: calc(1rem / var(--typescale));
+    font-weight: 500;
+    color: #333;
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.1);
+    position: relative;
+    &:before{
+      display: block;
+      position: absolute;
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:cc='http://creativecommons.org/ns%23' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' id='svg3025' version='1.1' viewBox='0 -256 1850 1850'%3E%3Cg id='g3027' transform='matrix(1 0 0 -1 30.373 1426.95)'%3E%3Cpath id='path3029' fill='currentColor' d='M1408 608V288q0-119-84.5-203.5T1120 0H288Q169 0 84.5 84.5T0 288v832q0 119 84.5 203.5T288 1408h704q14 0 23-9t9-23v-64q0-14-9-23t-23-9H288q-66 0-113-47t-47-113V288q0-66 47-113t113-47h832q66 0 113 47t47 113v320q0 14 9 23t23 9h64q14 0 23-9t9-23zm384 864V960q0-26-19-45t-45-19q-26 0-45 19l-176 176-652-652q-10-10-23-10t-23 10L695 553q-10 10-10 23t10 23l652 652-176 176q-19 19-19 45t19 45q19 19 45 19h512q26 0 45-19t19-45z'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 100% auto;
+      width: calc(var(--baseline) / 2);
+      height: calc(var(--baseline) / 2);
+      top: calc(var(--baseline) /5);
+      left: 1rem;
+    }
+  }
+}

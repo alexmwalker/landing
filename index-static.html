@@ -431,7 +431,6 @@
       </div>
     </div>
   </footer>
-  <div class="feedback">test</div>
   <script>
     $(document).ready(function(){
       $('.showmobile').click(function(){
@@ -439,6 +438,9 @@
       });
       $('.logged-out').click(function(){
         $('.login-panel').toggleClass('open');
+      });
+      $('.account-items').click(function(){
+        $('.account-items').toggleClass('open');
       });
       $('button.go').click(function(){
         $('.sitepoint-branding').addClass('member');
@@ -450,6 +452,7 @@
       $(window).resize(function(){ /* close the menu on screen resize */
         $('.showmobile').removeClass('open');
         $('.login-panel').removeClass('open');
+        $('ul.account-items').removeClass('open');
       });
     
   </script>

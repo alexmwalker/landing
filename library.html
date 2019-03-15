@@ -13,31 +13,45 @@
   <body class="-vr labelling1 borders1">
     <!-- header-simple.pug-->
     <!-- Used in Checkout to reduce leakage opportunities-->
-    <form class="login">
+    <div class="login">
       <header class="sitepoint-branding">
         <div class="container">
           <div class="grid-12">
             <div class="col-3_sm-5">
-              <div class="branding"><img class="branding-logo" src="https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"/></div>
+              <div class="branding"><a href="/landing/landing.html" alt="Home"><img class="branding-logo" src="https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"/></a></div>
             </div>
             <div class="col-9_sm-hidden">
               <ul class="nav">
+                <li class="search-nav">
+                  <form action="search.html">
+                    <input placeholder="Search" type="text"/>
+                  </form>
+                </li>
                 <li><a href="#">Blog</a></li>
                 <li><a class="youarehere" href="#">Community</a></li>
-                <li><a href="#">Library</a></li>
+                <li><a href="http://www.sitepoint.com/library">Library</a></li>
                 <li class="logged-in"> <a href="#">Dashboard</a></li>
-                <li class="logged-in"> <a href="#">Account<img src="images/Account.png"/></a></li>
+                <li class="logged-in account-items"> <a href="#">Account<img src="images/Account.png"/></a>
+                  <ul>
+                    <li> <a href="#">Profile</a></li>
+                    <li> <a href="#">Membership</a></li>
+                    <li><a href="#">Payment History</a></li>
+                    <li> <a href="#">Log out             </a></li>
+                  </ul>
+                </li>
                 <li class="logged-out"> <a href="#">Login</a>
                   <div class="login-panel">
-                    <p>
-                      <label class="control-label" for="username-login">Username: </label>
-                      <input class="form-control" id="username-login" style="width: 13.5rem;" name="username-login" type="text" placeholder="email@example.com"/>
-                    </p>
-                    <p>
-                      <label class="control-label" for="passwordinput">Password: </label>
-                      <input class="form-control" id="passwordinput" style="width: 11.3rem;" name="passwordinput" type="password" placeholder="..."/>
-                      <button class="go">GO</button>
-                    </p>
+                    <form action="login.html">
+                      <p>
+                        <label class="control-label" for="username-login">Username: </label>
+                        <input class="form-control" id="username-login" style="width: 13.5rem;" name="username-login" type="text" placeholder="email@example.com"/>
+                      </p>
+                      <p>
+                        <label class="control-label" for="passwordinput">Password: </label>
+                        <input class="form-control" id="passwordinput" style="width: 11.3rem;" name="passwordinput" type="password" placeholder="..."/>
+                        <button class="go">Go</button>
+                      </p>
+                    </form>
                   </div>
                 </li>
                 <li class="logged-out"> 
@@ -74,364 +88,373 @@
           </div>
         </div>
       </header>
-    </form>
-    <section class="hero">
-      <div class="container">
-        <div class="grid">
-          <div class="col-12">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 1446 448">
-              <style>
-                text{
-                fill:#fff;
-                font-weight: normal;
-                font-family: Roboto;
-                letter-spacing: 0em;
-                }
-                #herobase{
-                fill: #333;
-                }
-                .pre-title{
-                fill:#FFB800;
-                }
-                
-                .herotitle{
-                fill:#F2F2F2;
-                font-weight: bold;
-                }
-                .heroblurb{
-                fill:#F2F2F2;
-                }
-              </style>
-              <defs></defs>
-              <g id="hero">
-                <path id="herobase" d="M0 0h1446v448H0z"></path>
-                <text class="pre-title" font-size="22">
-                  <tspan x="62" y="65.41">Featured Book</tspan>
-                </text>
-                <text class="herotitle" font-size="43">
-                  <tspan x="62" y="120">HTML 5 Games: Novice </tspan>
-                  <tspan x="62" y="160">to Ninja</tspan>
-                </text>
-                <text id="author" font-size="22">
-                  <tspan x="250" y="394">Earle Castledine: Author</tspan>
-                </text>
-                <text class="heroblurb" fill="#F2F2F2" font-size="26">
-                  <tspan x="62" y="230">“You'll learn to analyze and dissect </tspan>
-                  <tspan x="62" y="270">games to understand what it is that </tspan>
-                  <tspan x="62" y="310">makes great games great.”</tspan>
-                </text>
-                <svg width="61.8%" x="38.2%">
-                  <image xlink:href="https://i.imgur.com/qc65GXb.png" height="100%" width="100%"></image>
-                </svg>
-              </g>
-            </svg>
+    </div>
+    <section class="contentbody">
+      <section class="hero-library">
+        <div class="container">
+          <div class="grid">
+            <div class="col-12">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 1446 448">
+                <style>
+                  text{
+                  fill:#fff;
+                  font-weight: normal;
+                  font-family: Roboto;
+                  letter-spacing: 0em;
+                  }
+                  #herobase{
+                  fill: #333;
+                  }
+                  .pre-title{
+                  fill:#FFB800;
+                  }
+                  
+                  .herotitle{
+                  fill:#F2F2F2;
+                  font-weight: bold;
+                  }
+                  .heroblurb{
+                  fill:#F2F2F2;
+                  }
+                </style>
+                <defs></defs>
+                <g id="hero">
+                  <path id="herobase" d="M0 0h1446v448H0z"></path>
+                  <text class="pre-title" font-size="22">
+                    <tspan x="62" y="65.41">Featured Book</tspan>
+                  </text>
+                  <text class="herotitle" font-size="43">
+                    <tspan x="62" y="120">HTML 5 Games: Novice </tspan>
+                    <tspan x="62" y="160">to Ninja</tspan>
+                  </text>
+                  <text id="author" font-size="22">
+                    <tspan x="250" y="394">Earle Castledine: Author</tspan>
+                  </text>
+                  <text class="heroblurb" fill="#F2F2F2" font-size="26">
+                    <tspan x="62" y="230">“You'll learn to analyze and dissect </tspan>
+                    <tspan x="62" y="270">games to understand what it is that </tspan>
+                    <tspan x="62" y="310">makes great games great.”</tspan>
+                  </text>
+                  <svg width="61.8%" x="38.2%">
+                    <image xlink:href="https://i.imgur.com/qc65GXb.png" height="100%" width="100%"></image>
+                  </svg>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <nav class="search-nav">
-      <div class="container">
-        <div class="grid-noGutter-center">
-          <div class="col-3_md-11">
-            <input type="search" placeholder="Search the library"/>
-            <!--input.click(type="submit", value="Go")-->
-          </div>
-          <div class="col-9_md-11">
-            <ul class="catnav">
-              <li class="on"><a href="#">All</a></li>
-              <li><a href="#">JavaScript</a></li>
-              <li><a href="#">HTML &amp; CSS</a></li>
-              <li><a href="#">PHP</a></li>
-              <li><a href="#">Design &amp; UX</a></li>
-              <li><a href="#">Mobile</a></li>
-              <li><a href="#">WordPress</a></li>
-              <li><a href="#">Workflow</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <section class="bodycontent">
-      <div class="container">
-        <div class="device"></div>
-        <div class="grid">
-          <div class="col-12">
-            <h4>JavaScript</h4>
+      </section>
+      <nav class="search-big">
+        <div class="container">
+          <div class="grid-noGutter-center underline">
+            <div class="col-6_md-11">
+              <div class="form-group">
+                <input class="form-control" id="Search" name="Search" type="text" placeholder="Search for..."/>
+              </div>
+            </div>
+            <div class="col-1_md-11">
+              <!-- Button-->
+              <div class="form-group">
+                <button class="singlebutton" name="singlebutton">Go</button>
+              </div>
+            </div>
+            <div class="col-2_md-11 rel"><span class="label">Filter by:</span>
+              <select name="Filter by: " id="Filter by: ">
+                <option value="All">All</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="HTML &amp; CSS">HTML & CSS</option>
+                <option value="PHP">PHP</option>
+                <option value="Design &amp; UX">Design & UX</option>
+                <option value="Mobile">Mobile</option>
+                <option value="WordPress">WordPress</option>
+                <option value="Workflow">Workflow</option>
+              </select>
+            </div>
           </div>
         </div>
-        <div class="grid-4_md-2">
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/your-first-week-with-node-js/read">
-                        <figure class="opened">
-                          <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/your-first-week-with-node-js/images/cover-front.png"/><span class="opened"> </span></div>
-                          <figcaption>Your First Week With Node.js</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/practical-es6/read">
-                        <figure class="opened">
-                          <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/practical-es6/images/cover-front.png"/><span class="opened"> </span></div>
-                          <figcaption>Practical ES6</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/javascript-best-practice/read">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/javascript-best-practice/images/cover-front.png"/><span> </span></div>
-                          <figcaption>JavaScript: Best Practice</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="http://sitepoint.com">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/74438137-2459-4bc9-b9e3-c163ccbe5e4b.png"/><span> </span></div>
-                          <figcaption>JavaScript: Novice to Ninja, 2nd Edition</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="grid">
-                    <div class="col-12 expanded collapsed">
-                      <div class="grid-noGutter">
-                        <div class="col-8_md-12">
-                          <div class="wrapper">
-                            <h3>Your First Week With Node.js</h3>
-                            <p class="minor">Used by some of the biggest companies today, Node is blazingly fast. Taking JavaScript, a ubiquitous language among developers, we'll get you up and running with guides on when to use Node, NPM, Security, as well as connecting with MySQL, MongoDB and more.</p>
-                            <table class="specs">
-                              <tbody class="minor">
-                                <tr>
-                                  <td>February 2018</td>
-                                  <td> <a href="#">Github Code Archive</a></td>
-                                </tr>
-                                <tr>
-                                  <td>460 Pages</td>
-                                  <td>5585 Happy Readers</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                        <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
-                          <div class="wrapper">
-                            <h4>User Comments:</h4>
-                            <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+      </nav>
+      <section class="bodycontent">
+        <div class="container">
+          <div class="device"></div>
+          <div class="grid">
+            <div class="col-12">
+              <h4>JavaScript</h4>
+            </div>
+          </div>
+          <div class="grid-4_md-2">
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/your-first-week-with-node-js/read">
+                            <figure class="opened">
+                              <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/your-first-week-with-node-js/images/cover-front.png"/><span class="opened"> </span></div>
+                              <figcaption>Your First Week With Node.js</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/practical-es6/read">
+                            <figure class="opened">
+                              <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/practical-es6/images/cover-front.png"/><span class="opened"> </span></div>
+                              <figcaption>Practical ES6</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/javascript-best-practice/read">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/javascript-best-practice/images/cover-front.png"/><span> </span></div>
+                              <figcaption>JavaScript: Best Practice</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="http://sitepoint.com">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/74438137-2459-4bc9-b9e3-c163ccbe5e4b.png"/><span> </span></div>
+                              <figcaption>JavaScript: Novice to Ninja, 2nd Edition</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded collapsed">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>Your First Week With Node.js</h3>
+                                <p class="minor">Used by some of the biggest companies today, Node is blazingly fast. Taking JavaScript, a ubiquitous language among developers, we'll get you up and running with guides on when to use Node, NPM, Security, as well as connecting with MySQL, MongoDB and more.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="grid">
-                    <div class="col-12 expanded collapsed">
-                      <div class="grid-noGutter">
-                        <div class="col-8_md-12">
-                          <div class="wrapper">
-                            <h3>Practical ES6</h3>
-                            <p class="minor">Gain the most valuable updates and skills for working with JavaScript today. We'll cover new keywords, map collections, array, string and number methods, arrow functions and a whole host of other practical lessons to build with ES6.</p>
-                            <table class="specs">
-                              <tbody class="minor">
-                                <tr>
-                                  <td>February 2018</td>
-                                  <td> <a href="#">Github Code Archive</a></td>
-                                </tr>
-                                <tr>
-                                  <td>460 Pages</td>
-                                  <td>5585 Happy Readers</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                        <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
-                          <div class="wrapper">
-                            <h4>User Comments:</h4>
-                            <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="grid">
-                    <div class="col-12 expanded collapsed">
-                      <div class="grid-noGutter">
-                        <div class="col-8_md-12">
-                          <div class="wrapper">
-                            <h3>JavaScript: Best Practice</h3>
-                            <p class="minor">Write powerful, clean and maintainable JavaScript with clear, practical lessons in application architecture, package management, tools, shorthands, callbacks, classes, flow control and much more.</p>
-                            <table class="specs">
-                              <tbody class="minor">
-                                <tr>
-                                  <td>February 2018</td>
-                                  <td> <a href="#">Github Code Archive</a></td>
-                                </tr>
-                                <tr>
-                                  <td>460 Pages</td>
-                                  <td>5585 Happy Readers</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                        <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
-                          <div class="wrapper">
-                            <h4>User Comments:</h4>
-                            <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                      <div class="grid">
+                        <div class="col-12 expanded collapsed">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>Practical ES6</h3>
+                                <p class="minor">Gain the most valuable updates and skills for working with JavaScript today. We'll cover new keywords, map collections, array, string and number methods, arrow functions and a whole host of other practical lessons to build with ES6.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="grid">
-                    <div class="col-12 expanded collapsed">
-                      <div class="grid-noGutter">
-                        <div class="col-8_md-12">
-                          <div class="wrapper">
-                            <h3>JavaScript: Novice to Ninja, 2nd Edition</h3>
-                            <p class="minor">This step-by-step introduction to coding in JavaScript will show you how to to solve real-world problems, design eye-catching animations, build smarter forms, and develop richer applications.</p>
-                            <table class="specs">
-                              <tbody class="minor">
-                                <tr>
-                                  <td>February 2018</td>
-                                  <td> <a href="#">Github Code Archive</a></td>
-                                </tr>
-                                <tr>
-                                  <td>460 Pages</td>
-                                  <td>5585 Happy Readers</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                        <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
-                          <div class="wrapper">
-                            <h4>User Comments:</h4>
-                            <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                      <div class="grid">
+                        <div class="col-12 expanded collapsed">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>JavaScript: Best Practice</h3>
+                                <p class="minor">Write powerful, clean and maintainable JavaScript with clear, practical lessons in application architecture, package management, tools, shorthands, callbacks, classes, flow control and much more.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-        </div>
-        <!--include expanded.pug -->
-        <div class="grid">
-          <div class="col-12">
-            <h4>HTML</h4>
+                      <div class="grid">
+                        <div class="col-12 expanded collapsed">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>JavaScript: Novice to Ninja, 2nd Edition</h3>
+                                <p class="minor">This step-by-step introduction to coding in JavaScript will show you how to to solve real-world problems, design eye-catching animations, build smarter forms, and develop richer applications.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          </div>
+          <!--include expanded.pug -->
+          <div class="grid">
+            <div class="col-12">
+              <h4>HTML</h4>
+            </div>
+          </div>
+          <div class="grid-4_md-2">
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/html5-games-novice-to-ninja/read">
+                            <figure class="opened">
+                              <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/html5-games-novice-to-ninja/images/cover-front.png"/><span class="opened"> </span></div>
+                              <figcaption>HTML5 Games: Novice to Ninja</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/jump-start-responsive-web-design-2nd-edition/read">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/jump-start-responsive-web-design-2nd-edition/images/cover-front.png"/><span> </span></div>
+                              <figcaption>Jump Start Responsive Web Design, 2nd Edition</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/html5-css3-for-the-real-world-2nd-edition">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://rawcdn.githack.com/sitepoint/Complete-Cover-Archive/83120d135fb504920694ded808b4828515ac8959/html5css3/cover-html5-css1-hires-cover.png"/><span> </span></div>
+                              <figcaption>HTML5 &amp; CSS3 for the Real World: 2nd Edition</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/responsive-web-design-the-right-way">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/c3999548-a3d8-4469-a1ec-a008702927c6.png"/><span> </span></div>
+                              <figcaption>Responsive Web Design the Right Way</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+          </div>
+          <div class="grid">
+            <div class="col-12">
+              <h4>CSS</h4>
+            </div>
+          </div>
+          <div class="grid-4_md-2">
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/css-master-2nd-edition/read">
+                            <figure class="opened">
+                              <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/css-master-2nd-edition/images/cover-front.png"/><span class="opened"> </span></div>
+                              <figcaption>CSS Master, 2nd Edition</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/design-trends-and-inspiration/read">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/design-trends-and-inspiration/images/cover-front.png"/><span> </span></div>
+                              <figcaption>Design Trends and Inspiration</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/modern-css/read">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/eacf6980-2f5e-4367-9729-9dfee3c25e3b_medium.png"/><span> </span></div>
+                              <figcaption>Modern CSS</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/css-grid-layout-5-practical-projects/read">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/e8810115-ac88-48d3-a611-773ed3984ce9_medium.png"/><span> </span></div>
+                              <figcaption>CSS Grid Layout: 5 Practical Projects</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+          </div>
+          <div class="grid">
+            <div class="col-12">
+              <h4>Bootstrap</h4>
+            </div>
+          </div>
+          <div class="grid-4_md-2">
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/your-first-week-with-bootstrap/read">
+                            <figure class="opened">
+                              <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/9af70f7c-cdc8-4f75-b8a4-2478ed7480f9.png"/><span class="opened"> </span></div>
+                              <figcaption>Your First Week With Bootstrap</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/practical-es6/read">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/2231e89b-8fd7-4fec-8546-95e17239e312_medium.png"/><span> </span></div>
+                              <figcaption>Build Your Own Website with Bootstrap 4</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/bootstrap-related-tools-skills/read">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/bootstrap-related-tools-skills/images/cover-front.png"/><span> </span></div>
+                              <figcaption>Bootstrap: Related Tools &amp; Skills</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="col">
+                        <div class="card"><a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">
+                            <figure>
+                              <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/8-practical-bootstrap-projects/images/cover-front.png"/><span> </span></div>
+                              <figcaption>8 Practical Bootstrap Projects</figcaption>
+                            </figure><span class="toggler">   
+                              <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
           </div>
         </div>
-        <div class="grid-4_md-2">
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/html5-games-novice-to-ninja/read">
-                        <figure class="opened">
-                          <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/html5-games-novice-to-ninja/images/cover-front.png"/><span class="opened"> </span></div>
-                          <figcaption>HTML5 Games: Novice to Ninja</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/jump-start-responsive-web-design-2nd-edition/read">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/jump-start-responsive-web-design-2nd-edition/images/cover-front.png"/><span> </span></div>
-                          <figcaption>Jump Start Responsive Web Design, 2nd Edition</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/html5-css3-for-the-real-world-2nd-edition">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://rawcdn.githack.com/sitepoint/Complete-Cover-Archive/83120d135fb504920694ded808b4828515ac8959/html5css3/cover-html5-css1-hires-cover.png"/><span> </span></div>
-                          <figcaption>HTML5 &amp; CSS3 for the Real World: 2nd Edition</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/responsive-web-design-the-right-way">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/c3999548-a3d8-4469-a1ec-a008702927c6.png"/><span> </span></div>
-                          <figcaption>Responsive Web Design the Right Way</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-        </div>
-        <div class="grid">
-          <div class="col-12">
-            <h4>CSS</h4>
-          </div>
-        </div>
-        <div class="grid-4_md-2">
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/css-master-2nd-edition/read">
-                        <figure class="opened">
-                          <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/css-master-2nd-edition/images/cover-front.png"/><span class="opened"> </span></div>
-                          <figcaption>CSS Master, 2nd Edition</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/design-trends-and-inspiration/read">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/design-trends-and-inspiration/images/cover-front.png"/><span> </span></div>
-                          <figcaption>Design Trends and Inspiration</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/modern-css/read">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/eacf6980-2f5e-4367-9729-9dfee3c25e3b_medium.png"/><span> </span></div>
-                          <figcaption>Modern CSS</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/css-grid-layout-5-practical-projects/read">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/e8810115-ac88-48d3-a611-773ed3984ce9_medium.png"/><span> </span></div>
-                          <figcaption>CSS Grid Layout: 5 Practical Projects</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-        </div>
-        <div class="grid">
-          <div class="col-12">
-            <h4>Bootstrap</h4>
-          </div>
-        </div>
-        <div class="grid-4_md-2">
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/your-first-week-with-bootstrap/read">
-                        <figure class="opened">
-                          <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/9af70f7c-cdc8-4f75-b8a4-2478ed7480f9.png"/><span class="opened"> </span></div>
-                          <figcaption>Your First Week With Bootstrap</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/practical-es6/read">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/2231e89b-8fd7-4fec-8546-95e17239e312_medium.png"/><span> </span></div>
-                          <figcaption>Build Your Own Website with Bootstrap 4</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/bootstrap-related-tools-skills/read">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/bootstrap-related-tools-skills/images/cover-front.png"/><span> </span></div>
-                          <figcaption>Bootstrap: Related Tools &amp; Skills</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-                  <div class="col">
-                    <div class="card"><a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">
-                        <figure>
-                          <div class="frame"><img class="cover" src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/8-practical-bootstrap-projects/images/cover-front.png"/><span> </span></div>
-                          <figcaption>8 Practical Bootstrap Projects</figcaption>
-                        </figure><span class="toggler">   
-                          <input type="checkbox" unchecked="unchecked"/></span></a></div>
-                  </div>
-        </div>
-      </div>
+      </section>
     </section>
     <!-- footer-->
     <footer class="mainfooter">
@@ -469,7 +492,6 @@
         </div>
       </div>
     </footer>
-    <div class="feedback">test</div>
     <script>
       $(document).ready(function(){
         $('.showmobile').click(function(){
@@ -477,6 +499,9 @@
         });
         $('.logged-out').click(function(){
           $('.login-panel').toggleClass('open');
+        });
+        $('.account-items').click(function(){
+          $('.account-items').toggleClass('open');
         });
         $('button.go').click(function(){
           $('.sitepoint-branding').addClass('member');
@@ -488,6 +513,7 @@
         $(window).resize(function(){ /* close the menu on screen resize */
           $('.showmobile').removeClass('open');
           $('.login-panel').removeClass('open');
+          $('ul.account-items').removeClass('open');
         });
       
     </script>
