@@ -151,6 +151,10 @@ a:link {
   -ms-flex-align: stretch;
   align-items: stretch; }
 
+form {
+  padding: 0;
+  margin: 0; }
+
 /* CSS RESETS */
 body, figure {
   margin: 0;
@@ -179,6 +183,9 @@ body, figure {
 
 .device {
   opacity: .5; }
+
+.borders div {
+  outline: 1px #ddd dashed; }
 
 [class~="grid"],
 [class*="grid-"],
@@ -2178,14 +2185,18 @@ label {
 .search-big {
   margin: 0 0 calc(var(--baseline) / 2); }
   .search-big .grid-noGutter-center {
-    padding: calc(var(--baseline) * 1.5) 0;
+    padding: calc(var(--baseline) * 1.5) 0 0;
     margin: 0; }
   .search-big input[type*="text"], .search-big select {
     font-size: calc(1rem * var(--typescale));
     height: calc(var(--baseline) * 1.5);
+    border: 2px solid #ddd;
     width: 100%;
-    padding: 0 1rem;
-    border-radius: calc(var(--baseline) * 2); }
+    padding: 0 1.5rem;
+    -webkit-box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
+    border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
+    /* this field is round on the left end */ }
     .search-big input[type*="text"]::-webkit-input-placeholder, .search-big select::-webkit-input-placeholder {
       color: #999; }
     .search-big input[type*="text"]:-ms-input-placeholder, .search-big select:-ms-input-placeholder {
@@ -2194,20 +2205,41 @@ label {
       color: #999; }
     .search-big input[type*="text"]::placeholder, .search-big select::placeholder {
       color: #999; }
-  .search-big select {
-    padding: 0;
-    position: relative; }
-    .search-big select:after {
-      display: block;
-      position: absolute;
-      content: '';
-      width: 100px;
-      height: 100px;
-      outline: 1px red dashed;
-      top: 0;
-      left: 0; }
-    .search-big select option {
-      background: #fff; }
+  .search-big .insetbutton {
+    padding: 1rem;
+    position: relative;
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 19 19'%3E%3Cpath fill='%23fff' d='M8.829 6.328a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/%3E%3Cpath fill='%23666'  d='M11.95 2.05a7.002 7.002 0 0 1 .657 9.143l5.707 5.707-1.415 1.414-5.707-5.707A7.002 7.002 0 0 1 2.05 2.05a7 7 0 0 1 9.9 0zm-1.414 8.486a5 5 0 1 0-7.072-7.072 5 5 0 0 0 7.072 7.072z' /%3E%3C/svg%3E") no-repeat left center;
+    background-size: auto 50% , 100% 100%;
+    background-position: center center, 100% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: 1rem;
+    line-height: calc(var(--baseline) / 4);
+    margin: 0px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-border-radius: 0 calc(var(--baseline) * 2) calc(var(--baseline) * 2) 0;
+    -moz-border-radius: 0 calc(var(--baseline) * 2) calc(var(--baseline) * 2) 0;
+    border-radius: 0 calc(var(--baseline) * 2) calc(var(--baseline) * 2) 0;
+    -webkit-transition: background-size .3s ease-out;
+    -o-transition: background-size .3s ease-out;
+    transition: background-size .3s ease-out; }
+    .search-big .insetbutton:hover {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 19 19'%3E%3Cpath fill='%23fff' d='M8.829 6.328a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/%3E%3Cpath fill='%23000'  d='M11.95 2.05a7.002 7.002 0 0 1 .657 9.143l5.707 5.707-1.415 1.414-5.707-5.707A7.002 7.002 0 0 1 2.05 2.05a7 7 0 0 1 9.9 0zm-1.414 8.486a5 5 0 1 0-7.072-7.072 5 5 0 0 0 7.072 7.072z' /%3E%3C/svg%3E") no-repeat left center;
+      background-size: auto 50% , 100% 100%;
+      background-position: center center, 100% center;
+      -webkit-transition: background-size .3s ease-out;
+      -o-transition: background-size .3s ease-out;
+      transition: background-size .3s ease-out; }
   .search-big button {
     line-height: calc(var(--baseline) * 1.25);
     width: calc(var(--baseline) * 1.75);
@@ -2232,8 +2264,8 @@ label {
 
 .underline {
   border-bottom: 1px #999 solid;
-  margin: 0;
-  padding-bottom: calc(var(--baseline) / 1); }
+  margin: calc(var(--baseline) * 2) 0 0;
+  padding: 0 0 0; }
 
 .rel {
   position: relative; }
@@ -2242,7 +2274,7 @@ label {
   position: absolute;
   top: calc(var(--baseline) / -1.25);
   color: #888;
-  font-size: calc(1rem / var(--typescale)); }
+  font-size: calc(1rem / var(--typescale) / var(--typescale)); }
 
 .bookcard {
   background: #fff;
@@ -2385,18 +2417,73 @@ footer.mainfooter {
 
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
-@media (max-width: 48em) {
-  .landing-parent .laptop {
-    margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1); }
-  .landing-parent {
-    background-size: auto 100%; } }
-
 .showmobile, .mobilenav {
   display: none; }
 
 @media (max-width: 48em) {
+  [class~="grid"] > [class*="col-12"], [class*="grid-"] > [class*="col-12"], [class*="grid_"] > [class*="col-12"] {
+    -ms-flex-preferred-size: 98%;
+    flex-basis: 98%; }
+  .landing-parent .laptop {
+    margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1); }
+  .landing-parent {
+    background-size: auto 100%; }
   .showmobile, .mobilenav {
+    display: block; }
+  .search-big {
+    margin: 0 0 calc(var(--baseline) / 2); }
+    .search-big .grid-noGutter-center {
+      padding: calc(var(--baseline) * 1.5) 0 0;
+      margin: 0; }
+    .search-big input[type*="text"], .search-big select {
+      font-size: calc(1rem * var(--typescale) * var(--typescale));
+      height: calc(var(--baseline) * 2.5);
+      border: 2px solid #ddd;
+      width: 100%;
+      border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2); }
+    .search-big .insetbutton {
+      padding: 1rem;
+      height: calc(var(--baseline) * 2.5);
+      width: 100%; }
+  [class*="sm-only"] {
+    display: none; }
+  .result-book {
+    background: #fff;
+    text-align: center; }
+    .result-book .thumbframe {
+      height: calc(var(--baseline)*3.5);
+      overflow: hidden; }
+    .result-book img {
+      height: 60%;
+      width: auto;
+      margin-top: calc(var(--baseline)/2); }
+    .result-book .go {
+      line-height: calc(var(--baseline) * 1.5);
+      height: calc(var(--baseline) * 1.5);
+      font-size: calc(1rem * var(--typescale) * var(--typescale)); }
+  .result-text blockquote {
+    background: #F8F8F8;
+    margin: 0 0 0 0;
+    border-radius: 4px;
+    max-height: calc(var(--baseline) * 3.5);
+    overflow: scroll;
+    padding: calc(var(--baseline)/4) 1rem; }
+    .result-text blockquote p {
+      margin: 0; }
+  .results-list h5 {
+    padding-left: 2.5rem; } }
+
+/*  <--  end of the media query  */
+@media (min-width: 48em) {
+  [class*="sm-only"] {
     display: block; } }
+
+@media (max-width: 60em) {
+  .bookcard .bookframe {
+    height: calc(var(--baseline) * 6.7); }
+  .container {
+    width: 98%;
+    margin: 0 1%; } }
 
 .pink {
   height: calc(var(--baseline));
@@ -2437,7 +2524,9 @@ button.pink {
 @media (max-width: 48em) {
   .mobilemenu {
     display: block;
-    outline: 1px red dashed; } }
+    outline: 1px red dashed; }
+  [class~="grid"], [class*="grid-"], [class*="grid_"] {
+    margin: 0 0.5rem; } }
 
 .catnav li {
   list-style: none;

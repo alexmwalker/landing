@@ -1,6 +1,7 @@
 
 // header-simple.pug
-// Used in Checkout to reduce leakage opportunities
+// Set `- var hidesearch = 1` on top of page to hide the navbar search (see 'search.pug')
+// 
 
 .login
  header.sitepoint-branding
@@ -8,19 +9,24 @@
    .grid-12
     .col-3_sm-5
      .branding
-      a(href="/landing/landing.html", alt="Home")
+      a(href="landing.html", alt="Home")
         img.branding-logo(src='https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg')
     .col-9_sm-hidden
      ul.nav
-      li.search-nav
-        form(action="search.html")
-          input(placeholder="Search", type="text")
+      case hidesearch
+        when 1
+          //i.search-nav
+             search is removed 
+        default
+          li.search-nav
+            form(action="search.html")
+              input(placeholder="Search", type="text")
       li
        a(href='#') Blog
       li
        a(href='#', class="youarehere") Community
       li
-       a(href='http://www.sitepoint.com/library') Library
+       a(href='library.html') Library
       li.logged-in 
         a(href='#') Dashboard
       li.logged-in.account-items 
@@ -56,6 +62,10 @@
        .hamburger-inner
     nav.mobilenav
      ul
+      li.logged-in 
+        form(action="search.html")
+          label.control-label(for='mobilesearch') Search: 
+          input#mobilesearch.form-control(style="width: 12.5rem;", name='mobilesearch', type='text')
       li
         a(href='#') Blog
       li

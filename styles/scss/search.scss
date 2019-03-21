@@ -68,6 +68,9 @@ button.pink{
     outline: 1px red dashed;
     
   }
+  [class~="grid"], [class*="grid-"], [class*="grid_"] {
+    margin: 0 0.5rem;
+  }
 }
 
 .catnav li{

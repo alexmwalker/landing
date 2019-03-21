@@ -151,6 +151,10 @@ a:link {
   -ms-flex-align: stretch;
   align-items: stretch; }
 
+form {
+  padding: 0;
+  margin: 0; }
+
 /* CSS RESETS */
 body, figure {
   margin: 0;
@@ -179,6 +183,9 @@ body, figure {
 
 .device {
   opacity: .5; }
+
+.borders div {
+  outline: 1px #ddd dashed; }
 
 [class~="grid"],
 [class*="grid-"],

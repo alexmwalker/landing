@@ -1,22 +1,99 @@
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
-
+.showmobile, .mobilenav{
+  display: none;
+}
 @media (max-width: 48em) {
+  [class~="grid"] > [class*="col-12"], [class*="grid-"] > [class*="col-12"], [class*="grid_"] > [class*="col-12"] {
+    -ms-flex-preferred-size: 98%;
+    flex-basis: 98%;
+  }
+
+
   .landing-parent .laptop {
     margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1);
   }
   .landing-parent {
     background-size: auto 100% ;
   }
-}
-
-
-.showmobile, .mobilenav{
-  display: none;
-}
-
-@media (max-width: 48em) {
   .showmobile, .mobilenav{
     display: block;
   }
+  .search-big{
+    margin: 0 0 calc(var(--baseline) / 2);
+    .grid-noGutter-center{
+      padding: calc(var(--baseline) * 1.5) 0 0;
+      margin: 0;
+    }
+    input[type*="text"], select{
+      font-size: calc(1rem * var(--typescale) * var(--typescale));
+      height: calc(var(--baseline) * 2.5);
+      border: 2px solid #ddd;
+      width: 100%;
+      border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
+    }
+    
+    .insetbutton{
+      padding: 1rem;
+      height: calc(var(--baseline) * 2.5);
+      width: 100%;
+    }
+  }
+
+  [class*="sm-only"] {
+      display: none;
+  }
+
+  .result-book{
+    background: #fff;
+    text-align: center;
+    .thumbframe{
+      height: calc(var(--baseline)*3.5);
+      overflow: hidden;
+    }
+    img{
+      height: 60%;
+      width: auto;
+      margin-top: calc(var(--baseline)/2);
+    }
+    .go{
+      line-height: calc(var(--baseline) * 1.5);
+      height: calc(var(--baseline) * 1.5);
+      font-size: calc(1rem * var(--typescale) * var(--typescale));
+    }
+  }
+  .result-text blockquote {
+    background: #F8F8F8;
+    margin: 0 0 0 0;
+    border-radius: 4px;
+    max-height: calc(var(--baseline) * 3.5);
+    overflow: scroll;
+    padding: calc(var(--baseline)/4) 1rem;
+    p{
+      margin: 0;
+    }
+  }
+  .results-list h5 {
+    padding-left: 2.5rem;
+  }
+} /*  <--  end of the media query  */ 
+
+
+@media (min-width: 48em) {
+  [class*="sm-only"] {
+      display: block;
+  }
 }
+
+
+
+@media (max-width: 60em) {
+  .bookcard .bookframe {
+    height: calc(var(--baseline) * 6.7);
+  }
+  .container{
+    width: 98%;
+    margin: 0 1%
+  }
+}
+

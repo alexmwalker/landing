@@ -12,13 +12,14 @@
   </head>
   <body class="-vr -labelling -borders">
     <!-- header-simple.pug-->
-    <!-- Used in Checkout to reduce leakage opportunities-->
+    <!-- Set `- var hidesearch = 1` on top of page to hide the navbar search (see 'search.pug')-->
+    <!-- -->
     <div class="login">
       <header class="sitepoint-branding">
         <div class="container">
           <div class="grid-12">
             <div class="col-3_sm-5">
-              <div class="branding"><a href="/landing/landing.html" alt="Home"><img class="branding-logo" src="https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"/></a></div>
+              <div class="branding"><a href="landing.html" alt="Home"><img class="branding-logo" src="https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"/></a></div>
             </div>
             <div class="col-9_sm-hidden">
               <ul class="nav">
@@ -29,7 +30,7 @@
                 </li>
                 <li><a href="#">Blog</a></li>
                 <li><a class="youarehere" href="#">Community</a></li>
-                <li><a href="http://www.sitepoint.com/library">Library</a></li>
+                <li><a href="library.html">Library</a></li>
                 <li class="logged-in"> <a href="#">Dashboard</a></li>
                 <li class="logged-in account-items"> <a href="#">Account<img src="images/Account.png"/></a>
                   <ul>
@@ -68,6 +69,12 @@
             </div>
             <nav class="mobilenav">
               <ul>
+                <li class="logged-in"> 
+                  <form action="search.html">
+                    <label class="control-label" for="mobilesearch">Search: </label>
+                    <input class="form-control" id="mobilesearch" style="width: 12.5rem;" name="mobilesearch" type="text"/>
+                  </form>
+                </li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Community</a></li>
                 <li><a href="#">Library</a></li>

@@ -12,24 +12,22 @@
   </head>
   <body class="-vr labelling1 borders1">
     <!-- header-simple.pug-->
-    <!-- Used in Checkout to reduce leakage opportunities-->
+    <!-- Set `- var hidesearch = 1` on top of page to hide the navbar search (see 'search.pug')-->
+    <!-- -->
     <div class="login">
       <header class="sitepoint-branding">
         <div class="container">
           <div class="grid-12">
             <div class="col-3_sm-5">
-              <div class="branding"><a href="/landing/landing.html" alt="Home"><img class="branding-logo" src="https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"/></a></div>
+              <div class="branding"><a href="landing.html" alt="Home"><img class="branding-logo" src="https://cdn.rawgit.com/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/b3b34065187c08d94c85c5417030e2d881085c8a/sp-logo.svg"/></a></div>
             </div>
             <div class="col-9_sm-hidden">
               <ul class="nav">
-                <li class="search-nav">
-                  <form action="search.html">
-                    <input placeholder="Search" type="text"/>
-                  </form>
-                </li>
+                <!--i.search-navsearch is removed 
+                -->
                 <li><a href="#">Blog</a></li>
                 <li><a class="youarehere" href="#">Community</a></li>
-                <li><a href="http://www.sitepoint.com/library">Library</a></li>
+                <li><a href="library.html">Library</a></li>
                 <li class="logged-in"> <a href="#">Dashboard</a></li>
                 <li class="logged-in account-items"> <a href="#">Account<img src="images/Account.png"/></a>
                   <ul>
@@ -146,31 +144,33 @@
       </section>
       <nav class="search-big">
         <div class="container">
-          <div class="grid-noGutter-center underline">
-            <div class="col-6_md-11">
-              <div class="form-group">
-                <input class="form-control" id="Search" name="Search" type="text" placeholder="Search for..."/>
+          <form action="search.html">
+            <div class="grid-noGutter-center underline">
+              <div class="col-6_md-11">
+                <div class="form-group">
+                  <input class="form-control" id="Search" name="Search" type="text" placeholder="Search for..."/>
+                </div>
+              </div>
+              <!--.col-1_md-11
+              // Button
+              .form-group
+                button.singlebutton(name='singlebutton') Go
+              
+              -->
+              <div class="col-2_md-11 rel"><span class="label">Filter by topic:</span>
+                <select name="Filter " id="filter">
+                  <option value="All">Show All</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="HTML &amp; CSS">HTML & CSS</option>
+                  <option value="PHP">PHP</option>
+                  <option value="Design &amp; UX">Design & UX</option>
+                  <option value="Mobile">Mobile</option>
+                  <option value="WordPress">WordPress</option>
+                  <option value="Workflow">Workflow</option>
+                </select>
               </div>
             </div>
-            <div class="col-1_md-11">
-              <!-- Button-->
-              <div class="form-group">
-                <button class="singlebutton" name="singlebutton">Go</button>
-              </div>
-            </div>
-            <div class="col-2_md-11 rel"><span class="label">Filter by:</span>
-              <select name="Filter by: " id="Filter by: ">
-                <option value="All">All</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="HTML &amp; CSS">HTML & CSS</option>
-                <option value="PHP">PHP</option>
-                <option value="Design &amp; UX">Design & UX</option>
-                <option value="Mobile">Mobile</option>
-                <option value="WordPress">WordPress</option>
-                <option value="Workflow">Workflow</option>
-              </select>
-            </div>
-          </div>
+          </form>
         </div>
       </nav>
       <section class="bodycontent">
