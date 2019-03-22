@@ -185,7 +185,7 @@ body, figure {
   opacity: .5; }
 
 .borders div {
-  outline: 1px #ddd dashed; }
+  outline: 1px #fbb dashed; }
 
 [class~="grid"],
 [class*="grid-"],
@@ -1799,7 +1799,7 @@ body, figure {
 
 .branding {
   height: calc(var(--baseline) * 2);
-  margin: 0 0 0 2rem; }
+  margin: 0 0 0 1rem; }
   .branding .branding-logo {
     height: calc(var(--baseline));
     margin-top: calc(var(--baseline)/2); }
@@ -1879,7 +1879,7 @@ body, figure {
 .showmobile {
   display: none;
   text-align: right;
-  padding-right: 2rem; }
+  padding-right: 0rem; }
 
 .open .hamburger-inner:before {
   -webkit-transform: rotate(-225deg) translate(7px, 7px);
@@ -2417,6 +2417,13 @@ that need device level targeting. This is where we do it. */
 .showmobile, .mobilenav {
   display: none; }
 
+@media (max-width: 60em) {
+  .bookcard .bookframe {
+    height: 24vw; }
+  .container {
+    width: 98%;
+    margin: 0 1%; } }
+
 @media (max-width: 48em) {
   [class~="grid"] > [class*="col-12"], [class*="grid-"] > [class*="col-12"], [class*="grid_"] > [class*="col-12"] {
     -ms-flex-preferred-size: 98%;
@@ -2447,16 +2454,18 @@ that need device level targeting. This is where we do it. */
   .result-book {
     background: #fff;
     text-align: center; }
+    .result-book .col-12_sm-2 {
+      text-align: left; }
     .result-book .thumbframe {
-      height: calc(var(--baseline)*3.5);
+      height: calc(var(--baseline) * 3.5);
       overflow: hidden; }
     .result-book img {
       height: 60%;
       width: auto;
       margin-top: calc(var(--baseline)/2); }
     .result-book .go {
-      line-height: calc(var(--baseline) * 1.5);
-      height: calc(var(--baseline) * 1.5);
+      line-height: calc(var(--baseline) * 2);
+      height: calc(var(--baseline) * 2);
       font-size: calc(1rem * var(--typescale) * var(--typescale)); }
   .result-text blockquote {
     background: #F8F8F8;
@@ -2467,20 +2476,18 @@ that need device level targeting. This is where we do it. */
     padding: calc(var(--baseline)/4) 1rem; }
     .result-text blockquote p {
       margin: 0; }
-  .results-list h5 {
-    padding-left: 2.5rem; } }
+  .result-book .go span:before {
+    width: calc(var(--baseline) / 1);
+    height: calc(var(--baseline) / 1);
+    top: 0;
+    left: -2rem; }
+  .bookcard .bookframe {
+    height: 47vw; } }
 
 /*  <--  end of the media query  */
 @media (min-width: 48em) {
   [class*="sm-only"] {
     display: block; } }
-
-@media (max-width: 60em) {
-  .bookcard .bookframe {
-    height: calc(var(--baseline) * 6.7); }
-  .container {
-    width: 98%;
-    margin: 0 1%; } }
 
 .pink {
   height: calc(var(--baseline));

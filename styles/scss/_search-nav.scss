@@ -91,7 +91,7 @@ $b-rad: 6px;
     background-size: 100% auto;
     background-position: center center;
     background-repeat: no-repeat;
-    border: 1px solid #AAA;
+    border: 1px solid #ccc;
     color: #555;
     font-size: 1rem;
     line-height: calc(var(--baseline) / 4);
@@ -132,8 +132,8 @@ $b-rad: 6px;
   margin-bottom: calc(var(--baseline) / 2);
   text-align: right;
 }
-.search-body h4{
-  margin: 0 0.5rem;
+.search-body{
+  margin: 0;
 } 
 
 .underline{

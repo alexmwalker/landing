@@ -185,7 +185,7 @@ body, figure {
   opacity: .5; }
 
 .borders div {
-  outline: 1px #ddd dashed; }
+  outline: 1px #fbb dashed; }
 
 [class~="grid"],
 [class*="grid-"],

@@ -185,7 +185,7 @@ body, figure {
   opacity: .5; }
 
 .borders div {
-  outline: 1px #ddd dashed; }
+  outline: 1px #fbb dashed; }
 
 [class*=grid-], [class*=grid_], [class~=grid] {
   -webkit-box-sizing: border-box;
@@ -1310,7 +1310,7 @@ body {
 
 .branding {
   height: calc(var(--baseline) * 2);
-  margin: 0 0 0 2rem; }
+  margin: 0 0 0 1rem; }
   .branding .branding-logo {
     height: calc(var(--baseline));
     margin-top: calc(var(--baseline)/2); }
@@ -1390,7 +1390,7 @@ body {
 .showmobile {
   display: none;
   text-align: right;
-  padding-right: 2rem; }
+  padding-right: 0rem; }
 
 .open .hamburger-inner:before {
   -webkit-transform: rotate(-225deg) translate(7px, 7px);

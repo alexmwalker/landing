@@ -3,6 +3,19 @@ that need device level targeting. This is where we do it. */
 .showmobile, .mobilenav{
   display: none;
 }
+
+
+@media (max-width: 60em) {
+  .bookcard .bookframe {
+    height: 24vw;
+  }
+  .container{
+    width: 98%;
+    margin: 0 1%
+  }
+}
+
+
 @media (max-width: 48em) {
   [class~="grid"] > [class*="col-12"], [class*="grid-"] > [class*="col-12"], [class*="grid_"] > [class*="col-12"] {
     -ms-flex-preferred-size: 98%;
@@ -47,8 +60,11 @@ that need device level targeting. This is where we do it. */
   .result-book{
     background: #fff;
     text-align: center;
+    .col-12_sm-2 {
+      text-align: left;
+    }
     .thumbframe{
-      height: calc(var(--baseline)*3.5);
+      height: calc(var(--baseline) * 3.5);
       overflow: hidden;
     }
     img{
@@ -57,8 +73,8 @@ that need device level targeting. This is where we do it. */
       margin-top: calc(var(--baseline)/2);
     }
     .go{
-      line-height: calc(var(--baseline) * 1.5);
-      height: calc(var(--baseline) * 1.5);
+      line-height: calc(var(--baseline) * 2);
+      height: calc(var(--baseline) * 2);
       font-size: calc(1rem * var(--typescale) * var(--typescale));
     }
   }
@@ -73,8 +89,15 @@ that need device level targeting. This is where we do it. */
       margin: 0;
     }
   }
-  .results-list h5 {
-    padding-left: 2.5rem;
+  .result-book .go span:before {
+    width: calc(var(--baseline) / 1);
+    height: calc(var(--baseline) / 1);
+    top: 0;
+    left: -2rem;
+  }
+
+  .bookcard .bookframe {
+    height: 47vw;
   }
 } /*  <--  end of the media query  */ 
 
@@ -87,13 +110,5 @@ that need device level targeting. This is where we do it. */
 
 
 
-@media (max-width: 60em) {
-  .bookcard .bookframe {
-    height: calc(var(--baseline) * 6.7);
-  }
-  .container{
-    width: 98%;
-    margin: 0 1%
-  }
-}
+
 

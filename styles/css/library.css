@@ -185,7 +185,7 @@ body, figure {
   opacity: .5; }
 
 .borders div {
-  outline: 1px #ddd dashed; }
+  outline: 1px #fbb dashed; }
 
 [class~="grid"],
 [class*="grid-"],
@@ -1799,7 +1799,7 @@ body, figure {
 
 .branding {
   height: calc(var(--baseline) * 2);
-  margin: 0 0 0 2rem; }
+  margin: 0 0 0 1rem; }
   .branding .branding-logo {
     height: calc(var(--baseline));
     margin-top: calc(var(--baseline)/2); }
@@ -1879,7 +1879,7 @@ body, figure {
 .showmobile {
   display: none;
   text-align: right;
-  padding-right: 2rem; }
+  padding-right: 0rem; }
 
 .open .hamburger-inner:before {
   -webkit-transform: rotate(-225deg) translate(7px, 7px);
@@ -2223,7 +2223,7 @@ label {
     background-size: 100% auto;
     background-position: center center;
     background-repeat: no-repeat;
-    border: 1px solid #AAA;
+    border: 1px solid #ccc;
     color: #555;
     font-size: 1rem;
     line-height: calc(var(--baseline) / 4);
@@ -2259,8 +2259,8 @@ label {
   margin-bottom: calc(var(--baseline) / 2);
   text-align: right; }
 
-.search-body h4 {
-  margin: 0 0.5rem; }
+.search-body {
+  margin: 0; }
 
 .underline {
   border-bottom: 1px #999 solid;

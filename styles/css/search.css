@@ -185,7 +185,7 @@ body, figure {
   opacity: .5; }
 
 .borders div {
-  outline: 1px #ddd dashed; }
+  outline: 1px #fbb dashed; }
 
 [class~="grid"],
 [class*="grid-"],
@@ -1799,7 +1799,7 @@ body, figure {
 
 .branding {
   height: calc(var(--baseline) * 2);
-  margin: 0 0 0 2rem; }
+  margin: 0 0 0 1rem; }
   .branding .branding-logo {
     height: calc(var(--baseline));
     margin-top: calc(var(--baseline)/2); }
@@ -1879,7 +1879,7 @@ body, figure {
 .showmobile {
   display: none;
   text-align: right;
-  padding-right: 2rem; }
+  padding-right: 0rem; }
 
 .open .hamburger-inner:before {
   -webkit-transform: rotate(-225deg) translate(7px, 7px);
@@ -2219,7 +2219,7 @@ label {
     background-size: 100% auto;
     background-position: center center;
     background-repeat: no-repeat;
-    border: 1px solid #AAA;
+    border: 1px solid #ccc;
     color: #555;
     font-size: 1rem;
     line-height: calc(var(--baseline) / 4);
@@ -2255,8 +2255,8 @@ label {
   margin-bottom: calc(var(--baseline) / 2);
   text-align: right; }
 
-.search-body h4 {
-  margin: 0 0.5rem; }
+.search-body {
+  margin: 0; }
 
 .underline {
   border-bottom: 1px #999 solid;
@@ -2299,6 +2299,9 @@ label {
     -ms-flex-pack: center;
     justify-content: center; }
   .bookcard .bookframe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 86%;
     margin: 0 7% -0.4rem;
     height: calc(var(--baseline) * 8.7);
@@ -2317,8 +2320,18 @@ label {
     margin: calc(var(--baseline) / 2) 1.5rem; }
   .results-list h5 {
     color: #999;
-    padding-left: 1.5rem;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 19 19'%3E%3Cpath fill='%23999' d='M8.829 6.328a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/%3E%3Cpath fill='%23999'  d='M11.95 2.05a7.002 7.002 0 0 1 .657 9.143l5.707 5.707-1.415 1.414-5.707-5.707A7.002 7.002 0 0 1 2.05 2.05a7 7 0 0 1 9.9 0zm-1.414 8.486a5 5 0 1 0-7.072-7.072 5 5 0 0 0 7.072 7.072z' /%3E%3C/svg%3E") no-repeat left center; }
+    padding-left: 2.0rem;
+    position: relative;
+    line-height: calc(var(--baseline) / 1.5); }
+    .results-list h5:before {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 19 19' %3E  %3Cpath fill='%23999'  d='M11.95 2.05a7.002 7.002 0 0 1 .657 9.143l5.707 5.707-1.415 1.414-5.707-5.707A7.002 7.002 0 0 1 2.05 2.05a7 7 0 0 1 9.9 0zm-1.414 8.486a5 5 0 1 0-7.072-7.072 5 5 0 0 0 7.072 7.072z' /%3E%3C/svg%3E") no-repeat left center;
+      display: block;
+      position: absolute;
+      content: '';
+      width: 1.1rem;
+      height: 1.1rem;
+      top: 0;
+      left: 0; }
     .results-list h5 a {
       color: #333; }
 
@@ -2389,18 +2402,19 @@ label {
     font-weight: 500;
     color: #333;
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative; }
-    .result-book .go:before {
-      display: block;
-      position: absolute;
-      content: '';
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:cc='http://creativecommons.org/ns%23' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' id='svg3025' version='1.1' viewBox='0 -256 1850 1850'%3E%3Cg id='g3027' transform='matrix(1 0 0 -1 30.373 1426.95)'%3E%3Cpath id='path3029' fill='currentColor' d='M1408 608V288q0-119-84.5-203.5T1120 0H288Q169 0 84.5 84.5T0 288v832q0 119 84.5 203.5T288 1408h704q14 0 23-9t9-23v-64q0-14-9-23t-23-9H288q-66 0-113-47t-47-113V288q0-66 47-113t113-47h832q66 0 113 47t47 113v320q0 14 9 23t23 9h64q14 0 23-9t9-23zm384 864V960q0-26-19-45t-45-19q-26 0-45 19l-176 176-652-652q-10-10-23-10t-23 10L695 553q-10 10-10 23t10 23l652 652-176 176q-19 19-19 45t19 45q19 19 45 19h512q26 0 45-19t19-45z'/%3E%3C/g%3E%3C/svg%3E");
-      background-size: 100% auto;
-      width: calc(var(--baseline) / 2);
-      height: calc(var(--baseline) / 2);
-      top: calc(var(--baseline) /5);
-      left: 1rem; }
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); }
+    .result-book .go span {
+      position: relative; }
+      .result-book .go span:before {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  id='svg3025' version='1.1' viewBox='0 -256 1850 1850'%3E%3Cg id='g3027' transform='matrix(1 0 0 -1 30.373 1426.95)'%3E%3Cpath id='path3029' fill='currentColor' d='M1408 608V288q0-119-84.5-203.5T1120 0H288Q169 0 84.5 84.5T0 288v832q0 119 84.5 203.5T288 1408h704q14 0 23-9t9-23v-64q0-14-9-23t-23-9H288q-66 0-113-47t-47-113V288q0-66 47-113t113-47h832q66 0 113 47t47 113v320q0 14 9 23t23 9h64q14 0 23-9t9-23zm384 864V960q0-26-19-45t-45-19q-26 0-45 19l-176 176-652-652q-10-10-23-10t-23 10L695 553q-10 10-10 23t10 23l652 652-176 176q-19 19-19 45t19 45q19 19 45 19h512q26 0 45-19t19-45z'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 100% auto;
+        width: calc(var(--baseline) / 2);
+        height: calc(var(--baseline) / 2);
+        top: 0;
+        left: -1rem; }
 
 /* ===  FOOTER === */
 footer.mainfooter {
@@ -2415,6 +2429,13 @@ footer.mainfooter {
 that need device level targeting. This is where we do it. */
 .showmobile, .mobilenav {
   display: none; }
+
+@media (max-width: 60em) {
+  .bookcard .bookframe {
+    height: 24vw; }
+  .container {
+    width: 98%;
+    margin: 0 1%; } }
 
 @media (max-width: 48em) {
   [class~="grid"] > [class*="col-12"], [class*="grid-"] > [class*="col-12"], [class*="grid_"] > [class*="col-12"] {
@@ -2446,16 +2467,18 @@ that need device level targeting. This is where we do it. */
   .result-book {
     background: #fff;
     text-align: center; }
+    .result-book .col-12_sm-2 {
+      text-align: left; }
     .result-book .thumbframe {
-      height: calc(var(--baseline)*3.5);
+      height: calc(var(--baseline) * 3.5);
       overflow: hidden; }
     .result-book img {
       height: 60%;
       width: auto;
       margin-top: calc(var(--baseline)/2); }
     .result-book .go {
-      line-height: calc(var(--baseline) * 1.5);
-      height: calc(var(--baseline) * 1.5);
+      line-height: calc(var(--baseline) * 2);
+      height: calc(var(--baseline) * 2);
       font-size: calc(1rem * var(--typescale) * var(--typescale)); }
   .result-text blockquote {
     background: #F8F8F8;
@@ -2466,20 +2489,18 @@ that need device level targeting. This is where we do it. */
     padding: calc(var(--baseline)/4) 1rem; }
     .result-text blockquote p {
       margin: 0; }
-  .results-list h5 {
-    padding-left: 2.5rem; } }
+  .result-book .go span:before {
+    width: calc(var(--baseline) / 1);
+    height: calc(var(--baseline) / 1);
+    top: 0;
+    left: -2rem; }
+  .bookcard .bookframe {
+    height: 47vw; } }
 
 /*  <--  end of the media query  */
 @media (min-width: 48em) {
   [class*="sm-only"] {
     display: block; } }
-
-@media (max-width: 60em) {
-  .bookcard .bookframe {
-    height: calc(var(--baseline) * 6.7); }
-  .container {
-    width: 98%;
-    margin: 0 1%; } }
 
 .pink {
   height: calc(var(--baseline));
