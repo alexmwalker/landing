@@ -139,7 +139,7 @@ section.bodycontent
         
         mixin expanded-card(card)
           .grid
-            .col-12.expanded.collapsed
+            .col-12.expanded
               .grid-noGutter
                 .col-8_md-12
                   .wrapper
@@ -181,6 +181,9 @@ section.bodycontent
           for card in cardHTMLList
             +book-card(card)
 
+          for card in cardHTMLList
+            +expanded-card(card)
+
         .grid
           .col-12
             h4 CSS
@@ -188,9 +191,15 @@ section.bodycontent
           for card in cardCSSList
             +book-card(card)
 
+          for card in cardCSSList
+            +expanded-card(card)
+
         .grid
           .col-12
             h4 Bootstrap
         .grid-4_md-2
           for card in cardBootstrapList
             +book-card(card)
+
+          for card in cardBootstrapList
+            +expanded-card(card)

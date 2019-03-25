@@ -20,6 +20,7 @@
 
 .container {
   /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
+  width: 62rem;
   max-width: 62rem;
   margin: 0 auto; }
 
@@ -4891,7 +4892,21 @@ footer.mainfooter {
   -webkit-transition: all .33s;
   -o-transition: all .33s;
   transition: all .33s;
+  position: relative;
   z-index: 5; }
+  .card:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 20%;
+    height: 5%;
+    z-index: 70;
+    cursor: hand;
+    left: 0;
+    margin: 0 40%;
+    bottom: calc(var(--baseline) / -10); }
+  .card:hover:before {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 58 19'%3E%3Cpath fill='%23040404' d='M0 4.02L2.506 0 29 13.885 55.852 0 58 4.02 29 19 0 4.02z'/%3E%3C/svg%3E") no-repeat; }
   .card:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
@@ -4899,18 +4914,7 @@ footer.mainfooter {
     -webkit-transition: all .33s;
     -o-transition: all .33s;
     transition: all .33s;
-    z-index: 999;
-    /*&:before{  // this is a modal backdrop  
-      display: block;
-      position: absolute;
-      content: '';
-      width: 200vw;
-      height: 200vh;
-      outline: 1px red dashed;
-      background: rgba(0,0,0,0.5);
-      top: -50%;
-      left: -50%;
-    }*/ }
+    z-index: 999; }
     .card:hover figure .frame span:before {
       opacity: .9;
       -webkit-transition: all .33s;
@@ -4942,7 +4946,7 @@ footer.mainfooter {
           content: 'Read';
           width: 60%;
           margin: 0 20%;
-          background: rgba(0, 0, 0, 0.5);
+          background: rgba(0, 0, 0, 0.75);
           font-size: calc(1rem);
           font-weight: 400;
           z-index: 99;
@@ -4988,39 +4992,83 @@ footer.mainfooter {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    outline: 1px #0e94ee dashed;
     cursor: hand; }
-    .card figcaption:before {
-      display: block;
-      position: absolute;
-      content: '';
-      width: 20%;
-      height: 5%;
-      outline: 1px red dashed;
-      z-index: 20;
-      left: 0;
-      margin: 0 40%; }
-      .card figcaption:before:hover {
-        cursor: hand; }
   .card span {
     /* The fold out trigger */
-    outline: 1px #0eee2c dashed;
     width: 100%;
-    height: calc(var(--baseline) / 1);
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 58 19'%3E%3Cpath fill='%23040404' d='M0 4.02L2.506 0 29 13.885 55.852 0 58 4.02 29 19 0 4.02z'/%3E%3C/svg%3E") center center no-repeat; }
+    height: calc(var(--baseline) / 1); }
     .card span input {
       width: 100%;
       height: calc(var(--baseline) / 1); }
-      .card span input:hover {
-        outline: red 1px solid; }
       .card span input[type=checkbox]:checked {
         outline: purple 1px solid; }
 
-div.grid-4_md-2 .col:nth-of-type(1) ~ div.grid div.col-12:nth-of-type(n+3) {
-  outline: 7px red dashed; }
+div.grid-4_md-2 .col:hover {
+  /* modal BG */ }
+  div.grid-4_md-2 .col:hover:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 400vh;
+    outline: 1px red dashed;
+    background: rgba(0, 0, 0, 0.35);
+    top: 0;
+    left: 0;
+    z-index: 200;
+    pointer-events: none; }
 
-span input[type=checkbox]:checked {
-  outline: purple 1px solid; }
+div.grid-4_md-2 .col ~ .grid .expanded {
+  height: 0;
+  opacity: 0;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+
+div.grid-4_md-2 .col:hover, div.grid-4_md-2 .col ~ .grid .expanded {
+  z-index: 300; }
+
+div.grid-4_md-2 .col:nth-child(1):hover ~ .grid:nth-child(5) .expanded {
+  height: calc(var(--baseline) * 10);
+  opacity: 1;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  margin-bottom: 2rem; }
+
+div.grid-4_md-2 .col:nth-child(2):hover ~ .grid:nth-child(6) .expanded {
+  height: calc(var(--baseline) * 10);
+  opacity: 1;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  margin-bottom: 2rem; }
+
+div.grid-4_md-2 .col:nth-child(3):hover ~ .grid:nth-child(7) .expanded {
+  height: calc(var(--baseline) * 10);
+  opacity: 1;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  margin-bottom: 2rem; }
+
+div.grid-4_md-2 .col:nth-child(4):hover ~ .grid:nth-child(8) .expanded {
+  height: calc(var(--baseline) * 10);
+  opacity: 1;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  margin-bottom: 2rem; }
+
+.bodycontent h4 {
+  margin-top: calc(var(--baseline) * 1.5);
+  margin-bottom: calc(var(--baseline) * 0.5); }
+
+span input[type=checkbox] {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 .card figure.opened .frame span:before {
   content: 'Resume'; }
@@ -5030,9 +5078,6 @@ span input[type=checkbox]:checked {
 
 .borders section {
   outline: 1px rgba(255, 0, 255, 0.1) dashed; }
-
-.name1 {
-  background: red; }
 
 .expanded {
   position: relative;

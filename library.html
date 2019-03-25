@@ -66,6 +66,12 @@
             </div>
             <nav class="mobilenav">
               <ul>
+                <li class="logged-in"> 
+                  <form action="search.html">
+                    <label class="control-label" for="mobilesearch">Search: </label>
+                    <input class="form-control" id="mobilesearch" style="width: 12.5rem;" name="mobilesearch" type="text"/>
+                  </form>
+                </li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Community</a></li>
                 <li><a href="#">Library</a></li>
@@ -145,34 +151,18 @@
       <nav class="search-big">
         <div class="container">
           <form action="search.html">
-            <div class="grid-noGutter-center underline">
-              <div class="col-6_md-11">
-                <div class="form-group">
-                  <input class="form-control" id="Search" name="Search" type="text" placeholder="Search for..."/>
-                </div>
+            <div class="grid-noGutter-center">
+              <div class="col-6_md-8">
+                <input class="form-control" id="Search" name="Search" type="text" placeholder="Search for..."/>
               </div>
-              <!--.col-1_md-11
-              // Button
-              .form-group
-                button.singlebutton(name='singlebutton') Go
-              
-              -->
-              <div class="col-2_md-11 rel"><span class="label">Filter by topic:</span>
-                <select name="Filter " id="filter">
-                  <option value="All">Show All</option>
-                  <option value="JavaScript">JavaScript</option>
-                  <option value="HTML &amp; CSS">HTML & CSS</option>
-                  <option value="PHP">PHP</option>
-                  <option value="Design &amp; UX">Design & UX</option>
-                  <option value="Mobile">Mobile</option>
-                  <option value="WordPress">WordPress</option>
-                  <option value="Workflow">Workflow</option>
-                </select>
+              <div class="col-1_md-2">
+                <button class="insetbutton" name="singlebutton">&nbsp;</button>
               </div>
             </div>
           </form>
         </div>
       </nav>
+      <!--include search-library.pug-->
       <section class="bodycontent">
         <div class="container">
           <div class="device"></div>
@@ -215,7 +205,7 @@
                               <input type="checkbox" unchecked="unchecked"/></span></a></div>
                       </div>
                       <div class="grid">
-                        <div class="col-12 expanded collapsed">
+                        <div class="col-12 expanded">
                           <div class="grid-noGutter">
                             <div class="col-8_md-12">
                               <div class="wrapper">
@@ -245,7 +235,7 @@
                         </div>
                       </div>
                       <div class="grid">
-                        <div class="col-12 expanded collapsed">
+                        <div class="col-12 expanded">
                           <div class="grid-noGutter">
                             <div class="col-8_md-12">
                               <div class="wrapper">
@@ -275,7 +265,7 @@
                         </div>
                       </div>
                       <div class="grid">
-                        <div class="col-12 expanded collapsed">
+                        <div class="col-12 expanded">
                           <div class="grid-noGutter">
                             <div class="col-8_md-12">
                               <div class="wrapper">
@@ -305,7 +295,7 @@
                         </div>
                       </div>
                       <div class="grid">
-                        <div class="col-12 expanded collapsed">
+                        <div class="col-12 expanded">
                           <div class="grid-noGutter">
                             <div class="col-8_md-12">
                               <div class="wrapper">
@@ -374,6 +364,126 @@
                             </figure><span class="toggler">   
                               <input type="checkbox" unchecked="unchecked"/></span></a></div>
                       </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>HTML5 Games: Novice to Ninja</h3>
+                                <p class="minor">Create impressive and engaging, cross-platform games from scratch. You'll learn how to dissect the elements that make successful games and develop practical skills in game design, loops and user input, animation, maps, collision detection and AI, mathematics, game physics, and much, much more.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>Jump Start Responsive Web Design, 2nd Edition</h3>
+                                <p class="minor">Gone are the days of a static-layout web. We'll introduce you to the building blocks of responsive design capable of fantastic visuals across various devices. Go deep into grid systems, queries, responsive text, images and video to build websites and apps that respond to user input.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>HTML5 &amp; CSS3 for the Real World: 2nd Edition</h3>
+                                <p class="minor">This easy-to-follow guide covers everything you need to get started. You’ll master the semantic markup available in HTML5, and discover how to use CSS3 to create amazing-looking websites without resorting to complex workarounds.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>Responsive Web Design the Right Way</h3>
+                                <p class="minor">In this short book, we’ll teach you the basics of responsive web design: a practical, proven way to design sites that’ll look great on all screens and devices, via a practical project: designing a newsletter opt-in screen using the macOS tool InVision Studio.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
           </div>
           <div class="grid">
             <div class="col-12">
@@ -413,6 +523,126 @@
                             </figure><span class="toggler">   
                               <input type="checkbox" unchecked="unchecked"/></span></a></div>
                       </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>CSS Master, 2nd Edition</h3>
+                                <p class="minor">Keep ahead of the game by employing the most effective, cutting-edge CSS techniques. Create efficient, maintainable code, employ advanced layouts, and design innovative visuals with powerful effects, transitions, filters, SVGs, and animations.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>Design Trends and Inspiration</h3>
+                                <p class="minor">Improve your effectiveness through design by avoiding common design mistakes, discovering the latest in mobile app, website and email design, and optimising UX for mobile and desktop.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>Modern CSS</h3>
+                                <p class="minor">Explore some of the amazing things that developers can do with CSS today. Exciting topics like transitions, variable fonts, scroll and snap, SVGs, building native-like PWAs, CSS theming, optimisation and more.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>CSS Grid Layout: 5 Practical Projects</h3>
+                                <p class="minor">Make websites look beautiful on any device and overcome complex grid layouts. In five projects we'll cover flexbox, float, grid, nesting, building forms and more.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
           </div>
           <div class="grid">
             <div class="col-12">
@@ -451,6 +681,126 @@
                               <figcaption>8 Practical Bootstrap Projects</figcaption>
                             </figure><span class="toggler">   
                               <input type="checkbox" unchecked="unchecked"/></span></a></div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>Your First Week With Bootstrap</h3>
+                                <p class="minor">Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>Build Your Own Website with Bootstrap 4</h3>
+                                <p class="minor">Gain the most valuable updates and skills for working with JavaScript today. We'll cover new keywords, map collections, array, string and number methods, arrow functions and a whole host of other practical lessons to build with ES6.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>Bootstrap: Related Tools &amp; Skills</h3>
+                                <p class="minor">Since its launch in 2011, a rich and diverse ecosystem has grown up around the core Bootstrap framework. In this book, we’ll look at Bootstrap tools and playgrounds, Grid systems, Bootstrap UI libraries for React, Angular, and Vue, Sass installation and much more.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid">
+                        <div class="col-12 expanded">
+                          <div class="grid-noGutter">
+                            <div class="col-8_md-12">
+                              <div class="wrapper">
+                                <h3>8 Practical Bootstrap Projects</h3>
+                                <p class="minor">Think Bootstrap is just for garden-variety web layouts? Think again. It's time to spice up your Bootstrap frontends with CSS3 animations, GSAP-powered Carousels, fresh Tumblr Themes and much more.</p>
+                                <table class="specs">
+                                  <tbody class="minor">
+                                    <tr>
+                                      <td>February 2018</td>
+                                      <td> <a href="#">Github Code Archive</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td>460 Pages</td>
+                                      <td>5585 Happy Readers</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-4_md-12_sm-hidden expanded-comment -equalHeight"> 
+                              <div class="wrapper">
+                                <h4>User Comments:</h4>
+                                <p class="minor">Earle is a very entertaining writer and this book sets useful, fun goals and delivers them in attainable ways. Sure, there's some JavaScript to learn, but it should be within the grasp of most practical-minded people.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
           </div>
         </div>

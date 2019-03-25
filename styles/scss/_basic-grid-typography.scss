@@ -20,6 +20,7 @@
 }
  
 .container{ /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */ 
+  width: 62rem;
   max-width: 62rem;
   margin: 0 auto;
 }
