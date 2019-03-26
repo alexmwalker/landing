@@ -48,8 +48,8 @@ that need device level targeting. This is where we do it. */
     
     .insetbutton{
       padding: 1rem;
-      height: calc(var(--baseline) * 2.5);
-      width: 100%;
+      height: calc(var(--baseline) * 2.75);
+      width: calc(var(--baseline) * 2.75);
     }
   }
 

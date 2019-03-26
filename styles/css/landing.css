@@ -2448,8 +2448,8 @@ that need device level targeting. This is where we do it. */
       border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2); }
     .search-big .insetbutton {
       padding: 1rem;
-      height: calc(var(--baseline) * 2.5);
-      width: 100%; }
+      height: calc(var(--baseline) * 2.75);
+      width: calc(var(--baseline) * 2.75); }
   [class*="sm-only"] {
     display: none; }
   .result-book {
