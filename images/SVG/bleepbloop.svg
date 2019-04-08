@@ -1,0 +1,88 @@
+<svg  viewbox="0 0 100 70" x="543" y="68" class="redlights">
+	<defs>
+		<pattern id="dark-red" patternUnits="userSpaceOnUse" width="10" height="10">
+			<circle cx="5" cy="5" r="5" stroke-width="0" fill="#621010"/>
+		</pattern>
+
+
+		<pattern x="0" id="circles-2" 
+						 width="100" height="70" 
+						 patternUnits="userSpaceOnUse" 					 
+						 >
+			<g class="circlegroup">
+				<circle cx="45" cy="5" r="5" fill="#F86158">
+					<animate attributeName="cx" attributeType="XML"  
+									 values="5;45;25;15;75" 
+									 repeatCount="indefinite" dur="6s" begin="0s" calcMode="discrete" />
+				</circle>
+				<circle cx="15" cy="65" r="5" fill="#F86158">
+					<animate attributeName="cx" attributeType="XML"  
+									 values="75;25;35;15;65" 
+									 repeatCount="indefinite" dur="7s" begin="2s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="5;25;35;75;15" 
+									 repeatCount="indefinite" dur="5s" begin="2s" calcMode="discrete" />
+					<animate attributeName="fill" attributeType="XML" 
+									 repeatCount="indefinite"
+									 dur="20s" 
+									 values="#F86158;darkred;#F7EE12;darkred;#F86158"
+									 calcMode="discrete" />
+				</circle>
+				<circle cx="5"  cy="15" r="5" fill="#F86158">
+					<animate attributeName="cx" attributeType="XML"  
+									 values="75;25;35;15;65" 
+									 repeatCount="indefinite" dur="3s" begin="2s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="5;25;35;15;15" 
+									 repeatCount="indefinite" dur="7s" begin="2s" calcMode="discrete" />
+				</circle>
+				<circle cx="65" cy="15" r="5" fill="#F86158">
+					<animate attributeName="cx" attributeType="XML"  
+									 values="35;15;65;75;25" 
+									 repeatCount="indefinite" dur="7s" begin="2s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="45;15;55;25;35;75" 
+									 repeatCount="indefinite" dur="5s" begin="2s" calcMode="discrete" />
+				</circle>
+				<circle cx="15" cy="35" r="5" fill="#F7EE12">
+					<animate attributeName="cx" attributeType="XML"  
+									 values="75;15;65;5;25;35" 
+									 repeatCount="indefinite" dur="7s" begin="5s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="5;25;35;15;75" 
+									 repeatCount="indefinite" dur="5s" begin="0s" calcMode="discrete" />
+					<animate attributeName="fill" attributeType="XML" 
+									 repeatCount="indefinite"
+									 dur="20s" 
+									 values="#F86158;darkred;#F7EE12;darkred;#F86158"
+									 calcMode="discrete" />
+				</circle>
+				<circle cx="75" cy="65" r="5" fill="#F7EE12">
+					<animate attributeName="cx" attributeType="XML"  
+									 values="35;25;15;65;75;5;65;45" 
+									 repeatCount="indefinite" dur="7s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="45;75;55;25;35;5;75" 
+									 repeatCount="indefinite" dur="5s" begin="3s" calcMode="discrete" />
+				</circle>
+				<circle cx="45" cy="45" r="5" fill="#F86158">
+					<animate attributeName="cx" attributeType="XML"  
+									 values="35;15;65;75;25" 
+									 repeatCount="indefinite" dur="7s" begin="2s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="45;15;55;25;35;5;15" 
+									 repeatCount="indefinite" dur="5s" begin="2s" calcMode="discrete" />
+				</circle>
+				<circle cx="5"  cy="75" r="5" fill="#F86158"/>
+				<circle cx="85" cy="5" r="5"  fill="#F7EE12"/>
+				<circle cx="95" cy="35" r="5" fill="#F86158"/>
+			</g>
+		</pattern>
+
+	</defs>
+	<rect style="fill: url(#dark-red)" x="0" y="0" height="80" width="100"></rect>
+	<rect style="fill: url(#circles-2)" x="0" y="0" height="82" width="105"></rect>
+
+
+</svg>
+

@@ -1,3 +1,6 @@
+$lineHeight: 1.2em; 
+$lineCount: 3;
+
 .bookcard{
   background: #fff;
   display: block;
@@ -12,18 +15,20 @@
     font-weight: 500;
     font-size: calc(1rem / var(--typescale));
     line-height: calc(var(--baseline) / 2);
-    height: calc(var(--baseline) * 2);
+    height: calc(var(--baseline) * 1.5);
+    max-height: calc(var(--baseline) * 1.5);
+    overflow: hidden;
     margin: 0 1rem;
     color: #333;
     display: flex;
     align-items: center;
+    //outline: 1px red dashed;
     justify-content: center;
-    
   }
   .bookframe{
     display: flex;
     width: 86%;
-    margin: 0 7% -0.4rem;
+    margin: 0 7% calc(var(--baseline) / 4);
     height: calc(var(--baseline) * 8.7);
     overflow: hidden;
     box-shadow: 4px 4px 4px rgba(0,0,0, 0.1);
@@ -35,8 +40,36 @@
 
 
 
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white){
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount; 
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}
 
 
+.block-with-text {
+  @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 3, $bgColor: white);  
+  outline: 1px red dashed;
+}
 
 .results-list{
   background: #fff;

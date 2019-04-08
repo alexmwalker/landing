@@ -2440,11 +2440,10 @@ that need device level targeting. This is where we do it. */
     .search-big .grid-noGutter-center {
       padding: calc(var(--baseline) * 1.5) 0 0;
       margin: 0; }
-    .search-big input[type*="text"], .search-big select {
+    .search-big input[type*="text"] {
       font-size: calc(1rem * var(--typescale) * var(--typescale));
       height: calc(var(--baseline) * 2.5);
       border: 2px solid #ddd;
-      width: 100%;
       border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2); }
     .search-big .insetbutton {
       padding: 1rem;

@@ -38,11 +38,10 @@ that need device level targeting. This is where we do it. */
       padding: calc(var(--baseline) * 1.5) 0 0;
       margin: 0;
     }
-    input[type*="text"], select{
+    input[type*="text"]{
       font-size: calc(1rem * var(--typescale) * var(--typescale));
       height: calc(var(--baseline) * 2.5);
       border: 2px solid #ddd;
-      width: 100%;
       border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
     }
     

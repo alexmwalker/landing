@@ -1,0 +1,292 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -10 650 487">
+	<defs>
+
+  <pattern id="backlight" viewBox="0, 0, 10, 10">
+    <circle cx="5" cy="5" r="4" fill="darkred" />
+  </pattern>
+
+  <pattern id="base" viewBox="0,0,10,10" width="10%" height="10%">
+    <circle cx="5" cy="5" r="4" fill="#000" />
+  </pattern>
+
+  <mask id="wopr" fill="#fff">
+    <path d="M370 8H212v445h158V144H254c-8.284 0-15-6.716-15-15V72c0-8.284 6.716-15 15-15h116V8z" />
+  </mask>
+
+  <mask id="screenedge">
+    <rect x="40" y="50" width="140" height="100" fill="#fff" />
+  </mask>
+
+  <mask id="holes">
+    <rect x="244" y="62" fill="url(#base)" width="100" height="80" />
+  </mask>
+    
+	<style>
+		.outline{
+			stroke: #000;
+			stroke-width: 3;
+		}
+
+    @keyframes tapper {
+      0%{
+        transform: rotate(0deg);
+      }
+        80%{
+        transform: rotate(-10deg);
+      }
+        100%{
+        transform: rotate(0deg);
+      }
+    }
+    .upper{
+      transform-origin: 25% 50%;
+      transform: rotate(-5deg);
+    }
+    @keyframes spinner {
+      0%{
+        transform: rotate(0deg);
+      }
+      30%{
+        transform: rotate(10deg);
+      }
+      80%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(0deg);
+      }
+    }
+	</style>
+ </defs>
+
+
+ 
+<g id="serverbase" viewBox="0 0 370 453" transform="translate(250, 0)">
+
+  <g class="outline">
+    <path fill="#7DA4EC" d="M370 8H212v445h158V144H254c-8.284 0-15-6.716-15-15V72c0-8.284 6.716-15 15-15h116V8z" />
+    <rect width="214" height="445" x="1.5" y="8" fill="#fff" />
+    <rect width="371" height="6" x="0" y="1.5" fill="#fff" />
+  </g>
+  <g class="bigcircles outline">
+    <circle cx="291" cy="210" r="25.5" fill="#C4C4C4" />
+    <circle cx="291" cy="277" r="25.5" fill="#7DA4EC" />
+    <circle cx="291" cy="346" r="25.5" fill="#ACDCF6" />
+  </g>
+  <g class="patchpanel outline">
+    <rect width="212" height="33" x="1.5" y="183.5" fill="#7DA4EC" />
+    <rect width="12" height="12" x="13" y="194" fill="#cc5555" />
+    <rect width="12" height="12" x="40" y="194" fill="#55cc55" />
+    <rect width="12" height="12" x="68" y="194" fill="#55cc55" />
+    <circle cx="119.5" cy="200.5" r="5" fill="#fff" />
+    <circle cx="97.5" cy="200.5" r="5" fill="#fff" />
+    <circle cx="58.5" cy="230.5" r="5" fill="#C4C4C4" />
+    <circle cx="196.5" cy="200.5" r="5" fill="#fff" />
+    <circle cx="196.5" cy="231.5" r="5" fill="#fff" />
+    <path fill="#000" stroke-width="0" d="M118 200v60c0 22.091 17.909 40 40 40s40-17.909 40-40v-29h-3v29c0 20.435-16.565 37-37 37s-37-16.565-37-37v-60h-3zM57 231v66c0 11.598 9.402 21 21 21s21-9.402 21-21v-97h-3v97c0 9.941-8.059 18-18 18s-18-8.059-18-18v-66h-3z"/>
+  </g>
+  <g class="screen outline">
+    <path fill="#151D38" d="M38.26 145.935c-3.551-37.386-3.793-58.852-.01-96.217 55.731-4.366 87.51-4.216 143.24.001 2.955 38.14 2.883 59.603 0 96.22-54.94 4.859-86.719 4.892-143.23-.004z"/>
+    <path d="M32.5 152.35c-3.872-42.455-4.136-66.766-.008-109.201 60.563-4.95 95.052-4.78 155.615.001 3.2 43.3 3.15 67.62 0 109.204-59.705 5.51-94.194 5.548-155.606-.004z"/>
+  </g>
+	
+	<text x="30" y="20" fill="#fff"  style="font-family: monospace; font-weight: 500; font-size: 22px"  mask="url(#screenedge)">
+    <animate attributeName="y" attributeType="XML"  
+						 values="-40; 20; 20; 103; 103; 180" 
+						 keyTimes="0; 0.2; 0.4; 0.7; 0.8; 1"
+						 repeatCount="indefinite" dur="12s" begin="0s" />
+		<tspan width="100" x="60" dy="0">(ಥ_ಥ)</tspan>
+		<tspan width="100" x="45" dy="70">Technical</tspan>
+    <tspan width="100" x="45" dy="20">Issue</tspan>
+	</text>
+	<g class="lightshow">
+    <path class="redlightsbase" fill="#222" d="M239 72c0-8.284 6.716-15 15-15h92v88h-92c-8.284 0-15-6.716-15-15V72z" />
+    <rect x="244" y="62" fill="url(#base)"  width="100" height="80" />
+
+    <circle cx="279" cy="66" fill="#f00" r="3">
+    					<animate attributeName="cx" attributeType="XML"  
+									 values="249;289;269;309;279" 
+									 repeatCount="indefinite" dur="7s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="90;114;130;74;66;98;106" 
+									 repeatCount="indefinite" dur="5s" begin="0s" calcMode="discrete" />
+    </circle>
+    <circle cx="289" cy="66" fill="#f00" r="3">
+        	<animate attributeName="cx" attributeType="XML"  
+									 values="319;289;269;309;289,249,279,269" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="98;106;114;74;66;98;66;114;130;74;66;98;106" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+    </circle>
+    <circle cx="299" cy="66" fill="#f00" r="3">
+          <animate attributeName="cx" attributeType="XML"  
+									 values="339;269;309;289,299,279;319,259" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="82;74;122;114;66;138;98;106;82;114;130" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+    </circle>
+    <circle cx="309" cy="66" fill="#f00" r="3">
+          <animate attributeName="cx" attributeType="XML"  
+									 values="279;329;269;319;309;289,299,339,299,279;319" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="130;98;106;122;82;114;66;82;74;130;138;114;66" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+    
+    </circle>
+
+    <circle cx="269" cy="74" fill="#f00" r="3">
+              <animate attributeName="cx" attributeType="XML"  
+									 values="279;319;269;309;289;289,299,289" 
+									 repeatCount="indefinite" dur="7s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="122;66;82;114;130;82;138;98;106;74;90;" 
+									 repeatCount="indefinite" dur="11s" begin="0s" calcMode="discrete" />
+    
+    </circle>
+    <circle cx="319" cy="74" fill="#f00" r="3">
+          <animate attributeName="cx" attributeType="XML"  
+									 values="259,289,249,279;319" 
+									 repeatCount="indefinite" dur="3s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="74;122;138;98;106" 
+									 repeatCount="indefinite" dur="7s" begin="0s" calcMode="discrete" />
+    </circle>
+
+    <circle cx="329" cy="82" fill="#f00" r="3">
+          <animate attributeName="cx" attributeType="XML"  
+									 values="299;289,259,289,249,289,259;309;319;279;319" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="74;122;138;90;106;74;82;66;130;138;98;106" 
+									 repeatCount="indefinite" dur="12s" begin="0s" calcMode="discrete" />
+    
+    </circle>
+    <circle cx="329" cy="90" fill="#f00" r="3">
+          <animate attributeName="cx" attributeType="XML"  
+									 values="249;289,259,289,319;279;329,289,259;309;319" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="74;130;138;98;90;74;82;74;130;138;98;106" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+    </circle>
+    <circle cx="319" cy="98" fill="#f00" r="3">
+              <animate attributeName="cx" attributeType="XML"  
+									 values="279;329;269;339,299,279;319;259;309;289,299" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					<animate attributeName="cy" attributeType="XML"  
+									 values="82;114;66;82;74;130;98;106;130;138;114;66" 
+									 repeatCount="indefinite" dur="8s" begin="0s" calcMode="discrete" />
+    
+    </circle>
+    <circle cx="309" cy="106" fill="#f00" r="3">
+
+    </circle>
+    <circle cx="299" cy="106" fill="#f00" r="3">
+                <animate attributeName="cx" attributeType="XML"  
+									 values="279;329;249;319;259;309;289;299;269;339;299" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					  <animate attributeName="cy" attributeType="XML"  
+									 values="90;114;66;130;138;114;66;82;74;130;98;106" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+    </circle>
+    <circle cx="289" cy="106" fill="#f00" r="3">
+                    <animate attributeName="cx" attributeType="XML"  
+									 values="299;269;339;279;329;249" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					  <animate attributeName="cy" attributeType="XML"  
+									 values="66;130;138;90;114;114" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+    </circle>
+    <circle cx="289" cy="114" fill="#f00" r="3">
+            <animate attributeName="cx" attributeType="XML"  
+									 values="339;279;299;269;329;249" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					  <animate attributeName="cy" attributeType="XML"  
+									 values="130;74;90;122;114" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+    </circle>
+    <circle cx="299" cy="114" fill="#f00" r="3"></circle>
+    <circle cx="289" cy="130" fill="#f00" r="3"></circle>
+    <circle cx="299" cy="130" fill="#f00" r="3"></circle>
+    <circle cx="289" cy="138" fill="#f00" r="3"></circle>
+    <circle cx="299" cy="138" fill="#f00" r="3">
+                        <animate attributeName="cx" attributeType="XML"  
+									 values="249;319;259;309;289;299" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+					  <animate attributeName="cy" attributeType="XML"  
+									 values="66;130;138;90;114" 
+									 repeatCount="indefinite" dur="10s" begin="0s" calcMode="discrete" />
+    </circle>
+
+
+  </g>
+  
+
+</g>
+
+	
+	
+
+  <g id="robot"  viewBox="0 0 344 460" >
+    <g class="leg-right" fill="#CCD6DA" stroke="#000" stroke-width="3">
+      <rect width="18" height="109" x="190.5" y="217.13" transform="rotate(-10.7 190.5 217)" />
+      <rect width="18" height="113" x="210.4" y="323" transform="rotate(3.9 210.4 323)"/>
+      <path d="M227.319 332.979l-16.338-10.653 16.891-14.747c3.475 2.516 5.904 6.851 6.105 11.923.23 5.823-2.543 10.899-6.658 13.477z"/>
+      <rect id="foottap" width="50" height="22" x="200" y="436.4" transform="rotate(0, 200, 436)">
+        <animateTransform attributeName="transform" dur="0.75s" from="0 200 436" repeatCount="indefinite" to="-15 200 436" type="rotate"/>
+      </rect>
+    </g>
+    <g class="leg-left" fill="#CCD6DA" stroke="#000" stroke-width="3">
+      <rect width="18" height="109" x="162.7" y="214.4"/>
+      <rect width="18" height="113" x="162.7" y="323.4"/>
+      <rect width="50" height="22" x="130.7" y="436.4"/>
+      <path d="M162.583 334.138l16.995-11.356-18.49-14.016c-3.241 2.644-5.425 7.071-5.425 12.162 0 5.849 2.877 10.804 6.92 13.21z"/>
+      
+    </g>
+    <g class="upper" transform="rotate(-10 190.5 217)">
+      <path fill="#CCD6DA" stroke="#000" stroke-width="3" d="M88.937 178.831l-4.206-20.575s9.526-5.829 20.431-14.894c9.772-8.121 19.04-19.202 19.04-19.202l5.107 24.983s-6.736 6.991-17.781 15.373c-10.554 8.009-22.59 14.315-22.59 14.315z"/>
+      <rect width="77" height="110" x="19.292" y="150.199" fill="#fff" stroke="#000" stroke-width="3" transform="rotate(-11.554 19.292 150.199)"/>
+      <path fill="#151D38" fill-rule="evenodd" d="M65.743 139.173a11.457 11.457 0 0 0 1.223-7.906c-1.272-6.222-7.348-10.235-13.57-8.963-6.223 1.272-10.236 7.347-8.964 13.57a11.456 11.456 0 0 0 4.228 6.791l-31.138 6.365 3.605 17.636 78.379-16.023-3.605-17.635-30.158 6.165zm-4.655-6.704a5.5 5.5 0 1 1-10.777 2.203 5.5 5.5 0 0 1 10.776-2.203z" clip-rule="evenodd"/>
+      <g class="readout" stroke="#000" stroke-width="3">
+        <path fill="#CCD6DA" d="M27.003 187.919l.3 1.47 1.47-.301 18.125-3.705 5.608 27.433-24.983 5.107a8.5 8.5 0 0 1-10.03-6.625l-3.806-18.615a8.5 8.5 0 0 1 6.625-10.03l5.389-1.102 1.302 6.368z"/>
+        <line x1="23.4" x2="27.303" y1="190.19" y2="189.4" stroke-linecap="round"/>
+      </g>
+      <g class="arm-right" fill="#CCD6DA" stroke="#000" stroke-width="3">
+        <path d="M323.108 180.001l.291-21.676s-14.023-4.115-30.687-11.251c-14.931-6.395-29.954-15.888-29.954-15.888l-.354 26.32s10.649 5.821 27.322 12.239c15.932 6.133 33.382 10.256 33.382 10.256z"/>
+        <path d="M326.39 159.043l-.291 21.675s-14.129 3.737-30.978 10.424c-6.263 2.486-12.556 5.504-17.777 8.185l-12.593 6.893.353-26.321s4.639-2.376 12.578-5.694a291.791 291.791 0 0 1 15.063-5.806c16.09-5.703 33.645-9.356 33.645-9.356z"/>
+          <circle cx="327" cy="171" r="14.5"/>
+          <circle cx="327" cy="171" r="5.5"/>
+        <path d="M268.138 178.781l-4.026 1.946-.296 21.998 6.872 9.593-7.221 16.405 6.926 5.593 13.294-21.823-15.549-33.712z"/>
+      </g>
+        <path fill="#000" d="M103.95 20.052c5.053-.505 8.998-4.77 8.995-9.956-.003-5.523-4.483-9.997-10.006-9.994-5.523.003-9.997 4.483-9.994 10.006.003 4.838 3.44 8.871 8.005 9.795l.026 44.2 3-.002-.026-44.049zM270.95 19.956c5.053-.505 8.998-4.77 8.995-9.956-.003-5.523-4.483-9.997-10.006-9.994-5.523.003-9.997 4.483-9.994 10.006.003 4.838 3.44 8.871 8.005 9.795l.026 44.2 3-.002-.026-44.05z"/>
+        <g stroke="#000" stroke-width="3">
+          <rect width="185" height="33" x="93.5" y="60.5" fill="#7DA4EC" rx="7.5"/>
+          <rect width="153" height="114" x="109.5" y="17.5" fill="#CCD6DA" rx="19.5"/>
+        </g>
+        <rect width="153" height="117" x="109.5" y="113.5" fill="#CCD6DA" stroke="#000" stroke-width="3"/>
+        <g stroke="#000" stroke-width="3">
+          <path fill="#7DA4EC" d="M155.949 42.586c4.456 4.451 4.377 11.89-.344 16.617-4.722 4.727-12.161 4.815-16.617.363-4.456-4.45-4.378-11.89.344-16.617s12.161-4.814 16.617-.363z"/>
+          <path fill="#fff" d="M155.605 59.203c-4.596 4.602-11.767 4.807-16.255.709l16.945-16.965c4.103 4.484 3.906 11.655-.69 16.256z"/>
+        </g>
+        <g stroke="#000" stroke-width="3">
+          <path fill="#7DA4EC" d="M229.187 42.544c4.456 4.451 4.378 11.89-.344 16.617s-12.161 4.814-16.617.363c-4.456-4.45-4.377-11.89.344-16.617 4.722-4.727 12.161-4.814 16.617-.363z"/>
+          <path fill="#fff" d="M228.843 59.161c-4.596 4.602-11.767 4.806-16.255.709l16.945-16.965c4.103 4.484 3.906 11.655-.69 16.256z"/>
+        </g>
+        <g stroke="#000" stroke-width="3">
+          <circle cx="184.052" cy="197.055" r="6.5" fill="#7DA4EC" transform="rotate(-.033 184.052 197.055)"/>
+          <circle cx="155.052" cy="197.073" r="6.5" fill="#B5EC7D" transform="rotate(-.033 155.052 197.073)"/>
+        </g>
+        <rect width="13" height="13" x="206.5" y="190.5" fill="#F7976D" stroke="#000" stroke-width="3"/>
+        <g stroke-width="3">
+          <rect width="70" height="34" x="149.5" y="143.5" fill="#F7F7F7" stroke="#000"/>
+          <path stroke="#F86158" stroke-linecap="round" d="M167.031 158.565l17.509 16.49"/>
+        </g>
+      <rect width="96" height="10" x="137.5" y="83.5" fill="#fff" stroke="#000" stroke-width="3"/>
+    </g>
+  </g>
+
+</svg>

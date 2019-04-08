@@ -1,0 +1,35 @@
+html
+  head
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css")
+    link(rel='stylesheet', type='text/css', href='styles/css/library.css')
+
+    script(src="https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js", type="text/javascript")
+
+  body.vr.labelling1.borders1
+    include header-simple.pug
+    section.bodycontent
+      include search-big.pug
+      .container
+        .device
+        .grid
+          .col-6 
+            h1 Sorry, we can't seem to find that page...
+            p We've flagged it as a possible issue. Thanks.
+            p Our suggestions? 
+            ul
+              li Try the Search bar above
+              li Browse 
+                strong
+                  a(href="https://www.sitepoint.com/premium/library/") the library for a book
+                  |.
+              li Check out the 
+                strong
+                  a(href="https://www.sitepoint.com/blog") latest from the blog
+                  |.
+
+
+
+          .col-6(style="padding-top: 1rem;") 
+            img(src='images/SVG/mainframe.svg', style='width:100%;')
+
+    include footer.pug
