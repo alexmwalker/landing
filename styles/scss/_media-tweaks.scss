@@ -5,7 +5,7 @@ that need device level targeting. This is where we do it. */
 }
 
 
-@media (max-width: 60em) {
+@media (max-width: 60em) { /* tablet adjustments */ 
   .bookcard .bookframe {
     height: 24vw;
   }
@@ -16,12 +16,16 @@ that need device level targeting. This is where we do it. */
 }
 
 
-@media (max-width: 48em) {
+@media (max-width: 48em) { /* phone adjustments */ 
   [class~="grid"] > [class*="col-12"], [class*="grid-"] > [class*="col-12"], [class*="grid_"] > [class*="col-12"] {
     -ms-flex-preferred-size: 98%;
     flex-basis: 98%;
   }
 
+  #reeedr .ch-head {
+    //font-size: 13rem;
+    padding: calc(var(--baseline)*1) 0 0 0;
+  }
 
   .landing-parent .laptop {
     margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1);

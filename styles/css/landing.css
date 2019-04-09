@@ -2419,6 +2419,7 @@ that need device level targeting. This is where we do it. */
   display: none; }
 
 @media (max-width: 60em) {
+  /* tablet adjustments */
   .bookcard .bookframe {
     height: 24vw; }
   .container {
@@ -2426,9 +2427,12 @@ that need device level targeting. This is where we do it. */
     margin: 0 1%; } }
 
 @media (max-width: 48em) {
+  /* phone adjustments */
   [class~="grid"] > [class*="col-12"], [class*="grid-"] > [class*="col-12"], [class*="grid_"] > [class*="col-12"] {
     -ms-flex-preferred-size: 98%;
     flex-basis: 98%; }
+  #reeedr .ch-head {
+    padding: calc(var(--baseline)*1) 0 0 0; }
   .landing-parent .laptop {
     margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1); }
   .landing-parent {

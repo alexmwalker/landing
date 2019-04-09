@@ -1,4 +1,4 @@
-$br: 3px;
+$b-rad: 6px;
 
 @import 'basic-grid-typography';
 
@@ -7,13 +7,27 @@ $br: 3px;
 @import "gridlex-mixins";
 @import "gridlex-classes";
 
-@import 'header-book';
+:root {
+  --basegrid: 32px; /* override mobile grid from 24px to 28px */
+}
+
+@import 'header';
+@import 'search-nav';
+
+
+@import 'footer';
+
+
+//@import '3d';
+
+
+@import 'header';
 @import 'hero-book1';
 @import 'chapter-book';
 @import 'footer-book';
 
-//@import 'media-tweaks';
-//@import '3d';
+@import 'media-tweaks';
+
 
 
 

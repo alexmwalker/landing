@@ -1,0 +1,40 @@
+
+<!-- footer-->
+<footer class="mainfooter">
+  <div class="container">
+    <div class="grid">
+      <div class="col-3">Copyright 2018 SitePoint</div>
+    </div>
+  </div>
+</footer>
+<script>
+  $(document).ready(function(){
+    $('.showmobile').click(function(){
+      $(this).toggleClass('open');
+    });
+    $('.logged-out').click(function(){
+      $('.login-panel').toggleClass('open');
+    });
+    $('.account-items').click(function(){
+      $('.account-items').toggleClass('open');
+    });
+    $('button.go').click(function(){
+      $('.sitepoint-branding').addClass('member');
+    });
+    $('.logout').click(function(){
+      $('.sitepoint-branding').removeClass('member');
+    });
+  });
+    $(window).resize(function(){ /* close the menu on screen resize */
+      $('.showmobile').removeClass('open');
+      $('.login-panel').removeClass('open');
+      $('ul.account-items').removeClass('open');
+    });
+  
+  
+  
+  
+  
+  
+  // body > section > section.bodycontent > div > div:nth-child(5) > div:nth-child(2)
+</script>
