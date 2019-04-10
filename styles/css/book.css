@@ -2839,10 +2839,7 @@ that need device level targeting. This is where we do it. */
     line-height: calc(var(--baseline) * 1.5);
     /* 4 grid lines */ }
   h2, .is-size2 {
-    line-height: calc(var(--baseline) * 1.0);
-    margin-top: 0rem;
-    margin-bottom: calc(var(--baseline) / 2);
-    font-weight: 400; }
+    line-height: calc(var(--baseline) * 1.0); }
   /* ========   REFORMATTING the Chapter Header page for Mobile   ============= */
   #reeedr .ch-head {
     padding: 0;
@@ -2854,12 +2851,11 @@ that need device level targeting. This is where we do it. */
     position: relative;
     height: auto; }
     #reeedr .ch-head .chapter-head {
+      display: inline;
       line-height: calc(var(--baseline));
-      margin-top: 0;
       margin-right: 1rem;
       top: 0;
-      position: relative;
-      display: inline; }
+      position: relative; }
   #reeedr h1.chaptertitle {
     color: #345;
     margin: calc(var(--baseline) / 2) 0;
