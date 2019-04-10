@@ -17,7 +17,7 @@
   vertical-align: middle;
   margin-top: 5.33333rem;
   font-weight: 600;
-  font-family: Raleway;
+  font-family: 'Raleway', 'Roboto', sans-serif;
   position: relative;
   //top: 0rem;
   height: calc(var(--baseline) * 7);
@@ -28,6 +28,7 @@
   &:before{
     display: block;
     position: absolute;
+    font-family: 'Raleway', 'Roboto', sans-serif;
     content: '';
     width: 2px;
     height: calc(var(--baseline) * 7);
@@ -41,7 +42,7 @@
   font-size: 1.5625rem;
   position: absolute;
   top: calc(var(--baseline) * -1.0);
-  outline: 1px cyan dashed;
+  //outline: 1px cyan dashed;
   font-family: Raleway;
   color: #9ab;
   font-weight: 600;

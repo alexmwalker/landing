@@ -2,14 +2,15 @@ section#reeedr-body
   .container
     .grid-12
       .col-12
-        .chapter(data-chapter-number='6').grid-center
-          .col-7_sm-8.chapter-start.align-r
+        .chapter(data-chapter-number='6').grid-center-reverse
+          .col-3_sm-12.ch-head
+            .chapter-head Chapter
+            | 5
+          .col-7_sm-12.chapter-start.align-r
             h1.chaptertitle  The Card Component: A Complete Introduction
             h3.author Ahmed Bouchefra
         
-          .col-3_sm-4.ch-head
-            .chapter-head Chapter
-            | 5
+
 
         p.intro.bookmark-highlight
           
@@ -24,9 +25,7 @@ section#reeedr-body
           | Using Bootstrap offers many advantages to developers, including the
           | following:
         ul
-          li
-            | you can easily and quickly build a responsive layout by having only
-            | some knowledge of HTML and CSS
+          li you can easily and quickly build a responsive layout by having only some knowledge of HTML and CSS
           li the library was built to be mobile-first from the core
           li it's compatible with all modern browsers etc.
           li it uses Flexbox for its grid system

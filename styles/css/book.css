@@ -1687,10 +1687,6 @@ body, figure {
 .align-c {
   text-align: center; }
 
-:root {
-  --basegrid: 32px;
-  /* override mobile grid from 24px to 28px */ }
-
 /* ===  HEADER === */
 .sitepoint-branding ul.nav {
   padding: 0;
@@ -2742,7 +2738,7 @@ label {
   vertical-align: middle;
   margin-top: 5.33333rem;
   font-weight: 600;
-  font-family: Raleway;
+  font-family: 'Raleway', 'Roboto', sans-serif;
   position: relative;
   height: calc(var(--baseline) * 7);
   padding-top: calc(var(--baseline) * 2);
@@ -2752,6 +2748,7 @@ label {
   #reeedr .ch-head:before {
     display: block;
     position: absolute;
+    font-family: 'Raleway', 'Roboto', sans-serif;
     content: '';
     width: 2px;
     height: calc(var(--baseline) * 7);
@@ -2763,7 +2760,6 @@ label {
   font-size: 1.5625rem;
   position: absolute;
   top: calc(var(--baseline) * -1.0);
-  outline: 1px cyan dashed;
   font-family: Raleway;
   color: #9ab;
   font-weight: 600;
@@ -2830,76 +2826,57 @@ that need device level targeting. This is where we do it. */
   display: none; }
 
 @media (max-width: 60em) {
-  /* tablet adjustments */
-  .bookcard .bookframe {
-    height: 24vw; }
-  .container {
-    width: 98%;
-    margin: 0 1%; } }
+  /* tablet adjustments */ }
 
+/* ========   Switching up the font sizing for books on the phone   ============= */
 @media (max-width: 48em) {
-  /* phone adjustments */
-  [class~="grid"] > [class*="col-12"], [class*="grid-"] > [class*="col-12"], [class*="grid_"] > [class*="col-12"] {
-    -ms-flex-preferred-size: 98%;
-    flex-basis: 98%; }
+  :root {
+    --basegrid: 32px;
+    /* override the default mobile grid from 24px to 28px */
+    --typescale: 1.15;
+    /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/ }
+  h1, .is-size1 {
+    line-height: calc(var(--baseline) * 1.5);
+    /* 4 grid lines */ }
+  h2, .is-size2 {
+    line-height: calc(var(--baseline) * 1.0);
+    margin-top: 0rem;
+    margin-bottom: calc(var(--baseline) / 2);
+    font-weight: 400; }
+  /* ========   REFORMATTING the Chapter Header page for Mobile   ============= */
   #reeedr .ch-head {
-    padding: calc(var(--baseline)*1) 0 0 0; }
-  .landing-parent .laptop {
-    margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1); }
-  .landing-parent {
-    background-size: auto 100%; }
-  .showmobile, .mobilenav {
-    display: block; }
-  .search-big {
-    margin: 0 0 calc(var(--baseline) / 2); }
-    .search-big .grid-noGutter-center {
-      padding: calc(var(--baseline) * 1.5) 0 0;
-      margin: 0; }
-    .search-big input[type*="text"] {
-      font-size: calc(1rem * var(--typescale) * var(--typescale));
-      height: calc(var(--baseline) * 2.5);
-      border: 2px solid #ddd;
-      border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2); }
-    .search-big .insetbutton {
-      padding: 1rem;
-      height: calc(var(--baseline) * 2.75);
-      width: calc(var(--baseline) * 2.75); }
-  [class*="sm-only"] {
-    display: none; }
-  .result-book {
-    background: #fff;
-    text-align: center; }
-    .result-book .col-12_sm-2 {
-      text-align: left; }
-    .result-book .thumbframe {
-      height: calc(var(--baseline) * 3.5);
-      overflow: hidden; }
-    .result-book img {
-      height: 60%;
-      width: auto;
-      margin-top: calc(var(--baseline)/2); }
-    .result-book .go {
-      line-height: calc(var(--baseline) * 2);
-      height: calc(var(--baseline) * 2);
-      font-size: calc(1rem * var(--typescale) * var(--typescale)); }
-  .result-text blockquote {
-    background: #F8F8F8;
-    margin: 0 0 0 0;
-    border-radius: 4px;
-    max-height: calc(var(--baseline) * 3.5);
-    overflow: scroll;
-    padding: calc(var(--baseline)/4) 1rem; }
-    .result-text blockquote p {
-      margin: 0; }
-  .result-book .go span:before {
-    width: calc(var(--baseline) / 1);
-    height: calc(var(--baseline) / 1);
+    padding: 0;
+    margin-top: calc(var(--baseline)*1);
+    font-size: calc(var(--typescale) * var(--typescale) * 1rem);
+    line-height: calc(var(--baseline));
+    margin-top: calc(var(--baseline));
+    margin-right: 1rem;
+    position: relative;
+    height: auto; }
+    #reeedr .ch-head .chapter-head {
+      line-height: calc(var(--baseline));
+      margin-top: 0;
+      margin-right: 1rem;
+      top: 0;
+      position: relative;
+      display: inline; }
+  #reeedr h1.chaptertitle {
+    color: #345;
+    margin: calc(var(--baseline) / 2) 0;
+    text-align: left; }
+  #reeedr .chapter .chapter-start {
+    margin-top: calc(var(--baseline)*1); }
+  #reeedr .ch-head:before {
+    display: none;
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: calc(var(--baseline) * 7);
+    background: #445266;
     top: 0;
-    left: -2rem; }
-  .bookcard .bookframe {
-    height: 47vw; } }
+    left: 1rem; } }
 
-/*  <--  end of the media query  */
+/*  <--  end of the MOBILE media query  */
 @media (min-width: 48em) {
   [class*="sm-only"] {
     display: block; } }

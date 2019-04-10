@@ -7,9 +7,7 @@ $b-rad: 6px;
 @import "gridlex-mixins";
 @import "gridlex-classes";
 
-:root {
-  --basegrid: 32px; /* override mobile grid from 24px to 28px */
-}
+
 
 @import 'header';
 @import 'search-nav';
@@ -26,7 +24,7 @@ $b-rad: 6px;
 @import 'chapter-book';
 @import 'footer-book';
 
-@import 'media-tweaks';
+@import 'book_media-tweaks';
 
 
 
