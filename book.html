@@ -6,96 +6,56 @@
     <meta name="description" content="SitePoint Book - Your First Week With Bootstrap"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="styles/css/book.css"/>
-    <script src="https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"/>
   </head>
-  <body class="vr -labelling borders" id="reeedr"> 
+  <body class="-vr -labelling borders" id="reeedr"> 
     <!-- header-simple.pug-->
-    <!-- Set `- var hidesearch = 1` on top of page to hide the navbar search (see 'search.pug')-->
-    <!-- -->
-    <div class="login">
-      <header class="sitepoint-branding">
-        <div class="container">
-          <div class="grid-12">
-            <div class="col-3_sm-9">
-              <div class="branding">Your First Week With Bootstrap   </div>
-              <ul class="nav">
-                <li class="search-nav">
-                  <form action="search.html">
-                    <input placeholder="Search" type="text"/>
-                  </form>
-                </li>
-                <li><a href="#">Blog</a></li>
-                <li><a class="youarehere" href="#">Community</a></li>
-                <li><a href="library.html">Library</a></li>
-                <li class="logged-in"> <a href="#">Dashboard</a></li>
-                <li class="logged-in account-items"> <a href="#">Account<img src="images/Account.png"/></a>
-                  <ul>
-                    <li> <a href="#">Profile</a></li>
-                    <li> <a href="#">Log out             </a></li>
-                  </ul>
-                </li>
-                <li class="logged-out"> <a href="#">Login</a>
-                  <div class="login-panel">
-                    <form action="login.html">
-                      <p>
-                        <label class="control-label" for="username-login">Username: </label>
-                        <input class="form-control" id="username-login" style="width: 13.5rem;" name="username-login" type="text" placeholder="email@example.com"/>
-                      </p>
-                      <p>
-                        <label class="control-label" for="passwordinput">Password: </label>
-                        <input class="form-control" id="passwordinput" style="width: 11.3rem;" name="passwordinput" type="password" placeholder="..."/>
-                        <button class="go">Go</button>
-                      </p>
-                    </form>
-                  </div>
-                </li>
-                <li class="logged-out"> 
-                  <button class="pink">Free 7-Day Trial</button>
-                </li>
-              </ul>
+    <!-- Used in Checkout to reduce leakage opportunities-->
+    <header class="sitepoint-branding">
+      <div class="container">
+        <div class="grid-12">
+          <div class="col-6_md-4_sm-10 trim">
+            <div class="titlebar">Your First Week With Bootstrap </div>
+          </div>
+          <div class="col-6_md-4_sm-2 showmobile">
+            <div class="hamburger">
+              <div class="hamburger-box"></div>
+              <div class="hamburger-inner"></div>
             </div>
-            <div class="col-7_sm-3 showmobile">
-              <div class="hamburger">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
-                </div>
-              </div>
-            </div>
-            <nav class="mobilenav">
-              <ul>
-                <li class="logged-in"> 
-                  <form action="search.html">
-                    <label class="control-label" for="mobilesearch">Search: </label>
-                    <input class="form-control" id="mobilesearch" style="width: 12.5rem;" name="mobilesearch" type="text"/>
-                  </form>
-                </li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Library</a></li>
-                <li class="logged-in"> <a href="#">Dashboard</a></li>
-                <li class="logged-in"> <a href="#">Account<img src="images/Account.png"/></a></li>
-                <li class="logged-out"> 
-                  <label class="control-label" for="username-login-mob">Username: </label>
-                  <input class="form-control" id="username-login-mob" style="width: 12.5rem;" name="username-login-mob" type="text" placeholder="email@example.com"/>
-                </li>
-                <li class="logged-out">
-                  <label class="control-label" for="passwordinput-mob">Password: </label>
-                  <input class="form-control" id="passwordinput-mob" style="width: 9.5rem;" name="passwordinput-mob" type="password" placeholder="..."/>
-                  <button class="go">GO</button>
-                </li>
-                <li class="logged-in"> <a class="logout" href="#">Log out</a></li>
-              </ul>
-            </nav>
+          </div>
+          <nav class="mobilenav">
+            <ul>
+              <li><a href="#">Chapters</a></li>
+              <li><a href="#">Bookmarks</a></li>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li class="mobile-controls"><a href="#">
+                  <button class="go">A -</button></a><a href="#">
+                  <button class="go">A +</button></a></li>
+              <li class="logged-in mobile-controls">
+                <form action="search.html">               
+                  <input class="form-control" id="mobilesearch" name="mobilesearch" type="text" placeholder="Search books..."/>
+                </form>
+              </li>
+            </ul>
+          </nav>
+          <div class="col-6_md-8_sm-hidden">
+            <ul class="nav">
+              <li id="font-adjuster-wrapper"><a href="#">A ±
+                  <div id="font-adjuster-container"><span>Text-size:</span><a id="decfontsize" src="#">A-</a><a id="incfontsize" src="#">A+</a></div></a></li>
+              <li><a href="#"> <i class="l-mr2 fas fa-books"> </i>Library</a></li>
+              <li><a href="#"> <i class="l-mr2 fas fa-sliders-h"></i>Dashboard</a></li>
+            </ul>
           </div>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
     <section class="bookpanel">
       <div class="container">
         <div class="grid-center">
           <div class="col-10_md-12">
-            <div class="grid-noGutter">
-              <div class="col-3_sm-hidden">
+            <div class="grid-center">
+              <div class="col-3_sm-12">
                 <div class="thumbnail-book"><img src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/your-first-week-with-bootstrap/images/cover-front.png"/></div>
               </div>
               <div class="col-9_sm-12">
@@ -107,10 +67,107 @@
         </div>
       </div>
     </section>
+    <nav id="toolstrip">
+      <div class="container">
+        <div class="toolbar">
+          <div class="grid-12">
+            <div class="col-2_sm-4"><a class="toolbarLink" id="viewchapters" src="#">Chapters</a></div>
+            <div class="col-2_sm-4"><a class="toolbarLink" id="bookmarks" src="#">My Bookmarks</a></div>
+            <div class="col-2_sm-4"><a class="toolbarLink" id="addbookmarks" src="#">+ Add Bookmark</a></div>
+            <div class="col-4_sm-hidden"></div>
+            <div class="col-2_sm-hidden"><a class="toolButton" id="downloadBook" href="../files/books/analytics-tools.zip">
+                <svg class="icon icon-download">
+                  <use xlink:href="#icon-download"></use>Download
+                </svg></a></div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <section id="reeedr-body">
       <div class="container">
         <div class="grid-12">
           <div class="col-12">
+            <div class="preface set-front-matter">
+              <h1 id="preface">Preface</h1>
+              <p>
+                Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. Since its official
+                release in 2011, it has undergone several changes, and it’s now one of the most stable and responsive frameworks
+                available. It’s loved by web developers of all levels, as it gives them the capability to build a functional,
+                attractive website design within minutes. A novice developer with just some basic knowledge of HTML and little
+                CSS can easily get started with Bootstrap.
+              </p>
+              <p>
+                In this book we'll take you through Bootstrap basics, introduce you to its major features, and get you
+                building your first Bootstrap sites.
+              </p>
+              <h2 id="who-should-read-this-book-">Who Should Read This Book?</h2>
+              <p>
+                This book is for all frontend developers who want to build responsive, mobile-first websites. You’ll need to be
+                familiar with HTML and CSS and have a reasonable level of understanding of JavaScript in order to follow the
+                discussion.
+              </p>
+              <h2 id="conventions-used">Conventions Used</h2>
+              <p>
+                You’ll notice that we’ve used certain typographic and layout styles throughout this book to signify different
+                types of information. Look out for the following items.
+              </p>
+              <h3 id="code-samples">Code Samples</h3>
+              <p>Code in this book is displayed using a fixed-width font, like so: </p>
+              <pre><code class="language-html">&lt;h1> A Perfect Summer&#39;s Day &lt;/h1>
+&lt;p>It was a lovely day for a walk in the park.
+The birds were singing and the kids were all back at school.&lt;/p></code></pre>
+              <p>Where existing code is required for context, rather than repeat all of it, <code>⋮</code> will be displayed:</p>
+              <pre><code class="language-js">function animate() {
+⋮
+new_variable = &quot;Hello&quot;
+}</code></pre>
+              <p>
+                Some lines of code should be entered on one line, but we’ve had to wrap them because of page constraints. An ➥
+                indicates a line break that exists for formatting purposes only, and should be ignored:
+              </p>
+              <pre><code class="language-js">URL.open(&quot;http://www.sitepoint.com/responsive-web-
+➥design-real-user-testing/?responsive1&quot;);</code></pre>
+              <h3 class="breakbefore" id="preface-tips">Tips, Notes, and Warnings</h3>
+              <div class="box tip">
+                <h4>Hey, You!</h4>
+                <div class="body">
+                  <p>Tips provide helpful little pointers.</p>
+                </div>
+              </div>
+              <div class="box note">
+                <h4>Ahem, Excuse Me ...</h4>
+                <div class="body">
+                  <p>
+                    Notes are useful asides that are related—but not critical—to the topic at hand. Think of them as extra
+                    tidbits of information.
+                  </p>
+                </div>
+              </div>
+              <div class="box attention">
+                <h4>Make Sure You Always ...</h4>
+                <div class="body">
+                  <p>... pay attention to these important points.</p>
+                </div>
+              </div>
+              <div class="box warning">
+                <h4>Watch Out!</h4>
+                <div class="body">
+                  <p>Warnings highlight any gotchas that are likely to trip you up along the way.</p>
+                </div>
+              </div>
+              <div class="box codepen">
+                <h4>Live Code</h4>
+                <div class="body">
+                  <p>This example has a Live <a class="uri" href="http://www.codepen.io">Codepen.io demo you can play with.</a></p>
+                </div>
+              </div>
+              <div class="box github">
+                <h4>Github </h4>
+                <div class="body">
+                  <p>This example has a code repository available at <a class="uri" href="http://www.github.com">Github.com.</a></p>
+                </div>
+              </div>
+            </div>
             <div class="chapter grid-center-reverse" data-chapter-number="6">
               <div class="col-3_sm-12 ch-head">
                 <div class="chapter-head">Chapter</div>5
@@ -206,9 +263,7 @@
             <p>As can be seen, the card takes the full width of its container <code>div</code>.</p>
             <p>By simply switching the <code>card-body</code> class with the <code>card-img-overlay</code>    class, we can use the image as an overlay:</p>
             <p class="image-wrapper"><img src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518999808adding-card-deck-1024x187.png" alt="Bootstrap card component: Adding a .card-deck class to a parent div"/></p>
-            <p>We can also use the class <code>.card-img-bottom</code> with the <code><img></code> tag to add
-                  the image at the bottom of the card:
-            </p>
+            <p>We can also use the class <code>.card-img-bottom</code> with the <code><img></code> tag to add the image at the bottom of the card:</p>
             <p class="image-wrapper"><img src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518997006image-bottom.png" alt="Bootstrap card component: Adding the image at the bottom of the card"/></p>
             <p>The card top and bottom images are called <a href="https://getbootstrap.com/docs/4.0/components/card/#image-caps" target="_blank">
                 image
@@ -227,9 +282,13 @@
             <p>
               Normally, the height of the card will be adjusted to vertically fit the
               content of the card, but we can also control it using custom CSS (for
-              example, <code>style=" height: 10rem;"</code>) or Bootstrap's sizing utilities (for
-                  examle, <code><div class="card h-200"></code>).
+              example, 
             </p>
+            <pre><code class="language-js"> var Prism = require('prismjs');
+// The code snippet you want to highlight, as a string
+var code = "var data = 1;";
+// Returns a highlighted HTML string
+var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</code></pre>
             <p>Please, note that the latest release of Bootstrap has switched to <em>rem</em>    units instead of _px_ units because <em>rem</em> is a scalable measurement unit
                   --- so it works better with user settings, which makes text much <a href="https://www.sitepoint.com/making-bootstrap-accessible/" target="_blank">
                 more
@@ -392,8 +451,7 @@
               layouts but lack enough time and budget, or the deep knowledge of CSS,
               necessary to produce custom code.
             </p>
-            <div class="next-chapter-wrapper"><a class="next-chapter-button" data-next-chapter="7" target="_blank" data-href="#)"><span>NEXT :</span>How to
-                      Build a Responsive Type Scale with Bootstrap<i class="fas fa-chevron-right"></i></a></div>
+            <div class="next-chapter-wrapper"><a class="next-chapter-button" data-next-chapter="7" target="_blank" href="#"><span>NEXT : How to Build a Responsive Type Scale with Bootstrap<i class="fas fa-chevron-right"></i></span></a></div>
             <!-- We need to add a 'marker' to idenify the end of a chapter-->
             <div class="chapter-end"></div>
           </div>
@@ -404,25 +462,23 @@
     <footer class="mainfooter">
       <div class="container">
         <div class="grid">
-          <div class="col-3">Copyright 2018 SitePoint</div>
+          <div class="col-6">Copyright 2018 SitePoint</div>
         </div>
       </div>
     </footer>
-    <script src="https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="scripts/prism.js"></script>
     <script>
       $(document).ready(function(){
         $('.showmobile').click(function(){
           $(this).toggleClass('open');
+          $('.mobilenav').toggleClass('open');
         });
         $('.logged-out').click(function(){
           $('.login-panel').toggleClass('open');
         });
         $('.account-items').click(function(){
           $('.account-items').toggleClass('open');
-        });
-        $('button.go').click(function(){
-          $('.sitepoint-branding').addClass('member');
         });
         $('.logout').click(function(){
           $('.sitepoint-branding').removeClass('member');
@@ -431,14 +487,63 @@
         $(window).resize(function(){ /* close the menu on screen resize */
           $('.showmobile').removeClass('open');
           $('.login-panel').removeClass('open');
-          $('ul.account-items').removeClass('open');
+      
         });
       
+      /*
+      $(function(){
+        
+        createSticky($("#toolstrip"));
+      
+      });
+      
+      function createSticky(sticky) {
+        
+        if (typeof sticky !== "undefined") {
+      
+          var	pos = (sticky.offset().top) - 72,
+              win = $(window);
+            
+          win.on("scroll", function() {
+              win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+          });			
+        }
+      }*/
       
       
+      function initToolbar(){
       
+        const brand = document.querySelector('.sitepoint-branding');  // select the brand
+        const toolbaroffset = brand.offsetHeight; // height of the brand
       
-      // body > section > section.bodycontent > div > div:nth-child(5) > div:nth-child(2)
+        const nav = document.querySelector('#toolstrip'); // height of the toolstrip
+        const navTop = nav.offsetTop ; // distance from top edge
+        const navMin = navTop/4; // the delay before the title rolls on to the titlebar
+      
+        function stickyNavigation() {
+          console.log('navTop = ' + navTop);
+          console.log('scrollY = ' + window.scrollY);
+          console.log('toolbaroffset = ' + toolbaroffset);  
+      
+          if (window.scrollY >= navTop) { // If scroll pos is greater than 418
+            // nav offsetHeight = height of nav
+            document.body.style.paddingTop = nav.offsetHeight + 'px'; // Add padding-top to BODY to push down from strip
+            nav.classList.add('fixed-nav');
+          } else {
+            document.body.style.paddingTop = 0;
+            nav.classList.remove('fixed-nav');
+          }
+          if (window.scrollY >= navMin) {
+            brand.classList.add('min');
+          } else {
+            brand.classList.remove('min');
+          }
+        }
+      
+        window.addEventListener('scroll', stickyNavigation);
+      
+      }
+      initToolbar();
     </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
-.showmobile, .mobilenav{
+.showmobile{
   display: none;
 }
 
@@ -30,17 +30,16 @@ that need device level targeting. This is where we do it. */
 
 
 
-  /* ========   REFORMATTING the Chapter Header page for Mobile   ============= */ 
+  /* ========   REFORMATTING the Chapter Face page for Mobile   ============= */ 
   
   #reeedr .ch-head {
     //font-size: 13rem;
     padding:  0;
-    margin-top: calc(var(--baseline)*1);
+    margin-top: calc(var(--baseline) * 1);
     font-size:  calc(var(--typescale) * var(--typescale) * 1rem);
     line-height: calc(var(--baseline));
     margin-top: calc(var(--baseline));
     margin-right: 1rem;
-
     position: relative;
     height: auto;
 
@@ -69,8 +68,23 @@ that need device level targeting. This is where we do it. */
     background: #445266;
     top: 0;
     left: 1rem;
-}
+  }
   
+
+
+  .titlebar {
+    line-height: calc(var(--baseline) * 2);
+    margin: 0 ;
+    color: #fff;
+  }
+
+  .sitepoint-branding {
+    height: calc(var(--baseline)*1);
+  }
+
+  .showmobile{
+    display: block;
+  }
 
 } /*  <--  end of the MOBILE media query  */ 
 
@@ -85,3 +99,37 @@ that need device level targeting. This is where we do it. */
 
 
 
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) { 
+  .titlebar {
+    opacity: 0;
+    transition: all .3s ease-out;  
+    margin-bottom: -3rem;
+    padding-top: calc(var(--baseline) * 1);
+    height: calc(var(--baseline) * 2);
+  }
+  .min .titlebar {
+    opacity: 1;
+    transition: all .3s ease-out;
+    line-height: calc(var(--baseline) * 1);
+    height: calc(var(--baseline) * 1);
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+
+  .sitepoint-branding { // minimize branding strip - not on mobile.
+    &.min {
+      height: calc(var(--baseline)*1);
+      ul.nav li {
+        padding: 0 1rem;
+        list-style-type: none;
+        line-height: calc(var(--baseline)*1);
+        height: calc(var(--baseline)*1);
+      }
+    }
+  }
+
+  #toolstrip {
+    display: block;  /* Note: this is hidden by default (mobile) and only display on tablet and larger */
+  }
+}

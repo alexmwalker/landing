@@ -3,7 +3,7 @@
 footer.mainfooter {
   background: #3D383E;
   width: 100%;
-  padding:  0 ;
+  margin: calc(var(--baseline) * 1) 0 0 0 ;
   font-size: .75rem;
   color: #ccc;
   ul li a{

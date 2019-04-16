@@ -148,6 +148,8 @@ b, i, strong, em, small, code {
   //line-height: 0;
 }
 
+
+
 sub, sup {
   line-height: 0;
   position: relative;
@@ -166,6 +168,9 @@ a:link{
 	text-decoration: none;
 	color: #333;
 }
+::placeholder{
+  color: #bbb;
+}
 
 .hznav{ /* add to parent to turn list into horizontal text nav*/
 	display: flex;
@@ -180,6 +185,14 @@ form{
   padding: 0;
   margin: 0;
 }
+
+.fa, .fas {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+
 
 /* CSS RESETS */
 body, figure{
@@ -215,5 +228,5 @@ body, figure{
 }
 
 .borders div {
-  outline: 1px #fbb dashed;
+  //outline: 1px #fbb dashed;
 }

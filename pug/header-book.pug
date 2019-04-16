@@ -5,13 +5,46 @@
 header.sitepoint-branding
   .container
     .grid-12
-      .col-6
-        .branding Your First Week With Bootstrap
-      .col-6
-        ul.nav
+      .col-6_md-4_sm-10.trim
+        .titlebar Your First Week With Bootstrap 
+      .col-6_md-4_sm-2.showmobile
+        .hamburger
+          .hamburger-box
+          .hamburger-inner
+      nav.mobilenav
+        ul
           li
-            a(href='#') A ±
+            a(href='#') Chapters
+          li
+            a(href='#') Bookmarks
           li
             a(href='#') Library
           li
             a(href='#') Dashboard
+          li.mobile-controls
+            a(href='#')
+              button.go A -
+            a(href='#')
+              button.go A +
+          li.logged-in.mobile-controls
+            form(action="search.html")                
+              input#mobilesearch.form-control(name='mobilesearch', type='text', placeholder='Search books...')
+
+
+      .col-6_md-8_sm-hidden
+        ul.nav
+          li#font-adjuster-wrapper
+            a(href='#')
+              | A ±
+              #font-adjuster-container
+                span Text-size:
+                a#decfontsize(src='#') A-
+                a#incfontsize(src='#') A+
+          li
+            a(href='#') 
+              i.l-mr2.fas.fa-books 
+              | Library
+          li
+            a(href='#') 
+              i.l-mr2.fas.fa-sliders-h
+              | Dashboard

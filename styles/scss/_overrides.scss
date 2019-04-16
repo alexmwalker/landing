@@ -1,0 +1,29 @@
+/* This file is for over-rides for generated CSS we don't want 
+to change directly - chiefly Prism JS at this stage - 
+ Alex Walker
+*/
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {  // Prism adds a 50% white bg to certain characters. It looks weird. This kills it.
+	background: hsla(0, 0%, 100%, 0);
+}
+
+
+@media (max-width: 48em) { 
+  code[class*="language-"], pre[class*="language-"] {
+    line-height: calc(var(--baseline) / 2);
+    padding: calc(var(--baseline) / 2) 1rem;
+    margin: calc(var(--baseline) * 1) 0;
+  }
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    //background: #f5f2f0;
+    background-size: calc(var(--baseline) * 1) calc(var(--baseline) * 1);
+    background-image: repeating-linear-gradient(to bottom,rgba(173, 0, 0, 0.02) 0%,rgba(173, 0, 0, 0.02) 50%,rgba(0, 0, 0, 0) 50.01%,rgba(0, 0, 0, 0) 100%);
+    
+  }
+}
+

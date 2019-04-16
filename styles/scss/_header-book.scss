@@ -14,7 +14,7 @@
   li{
     padding: 0 1rem;
     list-style-type: none;
-    line-height: calc(var(--baseline)*1);
+    line-height: calc(var(--baseline)*2);
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -24,7 +24,7 @@
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
-    height: calc(var(--baseline)*1);
+    height: calc(var(--baseline) * 2);
     a{
       color:#E5E5E5;
       padding: 0 1px;
@@ -67,29 +67,244 @@
   width: 100%;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  height: calc(var(--baseline)*1);
+  height: calc(var(--baseline)*2);
   position: fixed;
   top: 0;
+  
 }
 
 
-.branding {
-    line-height: calc(var(--baseline) * 1);
-    margin: 0 0 0 2rem;
-    .branding-logo {
-      height: calc(var(--baseline));
-      margin-top: calc(var(--baseline)/2);
-    }
+
+.titlebar {
+  line-height: calc(var(--baseline) * 2);
+  height: calc(var(--baseline) * 2);
+  margin: 0 0 0 2rem;
+  font-weight: 400;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.trim{
+  overflow: hidden;
 }
 
 
-.sitepoint-branding .account-items ul{
-  width: 12rem;  
-  right: 0;
-  padding: calc(var(--baseline)/2) 1rem calc(var(--baseline)/2);
-  /*text-align: left;*/
+/* hamburger animation */
+.hamburger {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  text-align: right;
+  margin: calc(var(--baseline)/2) -0.5rem 0 0;
+  padding: 15px 0;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: .25s;
+  transition-property: opacity;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+}
+.hamburger-box {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1rem;
+}
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: .3rem;
+  transition-timing-function: ease;
+  transition-duration: .35s;
+  transition-property: all;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.hamburger-inner {
+  top: 40%;
+  margin-top: 0px;
+  transform: translateX(-0.5rem);
+}
+.hamburger-inner:after, .hamburger-inner:before {
+  content: "";
+  transition: bottom .1s cubic-bezier(.55,.055,.675,.19) .35s,
+    transform .45s cubic-bezier(.49,-0.32,.42,1.35);
+}
+.hamburger-inner:after {
+transform: translateY(12px);
+}
+.hamburger-inner:before {
+transform: translateY(-12px);
+}
+
+
+/* Hide mobile hamburger on size up */
+.showmobile{
+display: none;
+text-align: right;
+padding-right: 0rem;
+
+}
+.open{
+.hamburger-inner:before{
+  transform: rotate(-225deg) translate(7px, 7px);
+}
+.hamburger-inner:after{
+  transform: rotate(225deg) translate(7px, -7px);
+} 
+.hamburger-inner{
+  background-color: #111;
+  transition: all .45s cubic-bezier(.49,-0.32,.60,1.7);
+  transform: translateX(0.5rem);
+} 
+}
+
+.mobilenav{
+  transition: all .15s ease-in;
+  background: #232023;
+  //display: none;
+  opacity: 0;
+  width: 100%;
+  left: 0rem;
+  margin-left: -0.0rem;
+  padding-bottom: calc(var(--baseline) * 0.5);
+  z-index: 2;
+  transform: scaley(.2);
+  transform-origin: top center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  position: fixed; 
+  top: calc(var(--baseline) * 2);
+  ul{
+    padding: 0;
+    margin: 0;
+    background: #232023;
+    border-width: 1px 0 3px;
+  }
   li{
-    height: calc(var(--baseline)* 1.0);
-    line-height: calc(var(--baseline)* 1.0);
+    list-style: none;
+    padding-left: 0.5rem;
+    //text-align: right;
+    font-size: calc(var(--typescale) * 1rem);
+    line-height: calc(var(--baseline) * 1.5);
+    &:nth-child(2n-1){ /* Zebra */
+      background: #1a1a1a;
+    }
+    a{
+      color: #eee;
+      &:hover{ 
+      font-weight: 500;
+      }
+    }
+    input{
+      font-size: calc(var(--typescale) * var(--typescale) * 1rem);
+      border-radius: 6px;
+      margin-top: calc(var(--baseline) /5);
+      width: 90%;
+    }
+    label{
+      //width: 8rem;
+      display: inline-block;
+      //float: none;
+    }
+
+  }
+}
+.mobile-controls{
+  width: 95%;
+  //float: right;
+  line-height: calc(var(--baseline) * 1.5);
+  height: calc(var(--baseline) * 1.5);
+  text-align: center;
+}
+.open.mobilenav{
+  //transform: translateY(5.3rem) scaley(1);
+  opacity: 1;
+  display: block;
+  transition: all .15s ease-out;
+  transform: scaley(1);
+}
+
+button.go{
+  line-height: calc(var(--baseline) * 0.9);
+  height: calc(var(--baseline) * 1.25);
+  font-size: calc(var(--typescale) * var(--typescale) * 1rem);
+  border-radius: 8px;
+  background: #111;
+  font-weight: 600;
+  color: #ddd;
+  border: 3px #888 solid;
+  &:hover{
+    color: #fff;
+  }
+}
+
+.search-nav{
+  position: relative;
+  &:before{
+    display: block;
+    position: absolute;
+    content: ' ';
+    width: calc(var(--baseline) * 1);
+    height: calc(var(--baseline) * 1);
+    margin: calc(var(--baseline) * .25) 0 0 2.75rem;
+    top: 0;
+    left: -1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 19 19'%3E%3Cpath fill='%23C4C4C4' fill-opacity='.6' d='M8.829 6.328a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/%3E%3Cpath fill='%23C4C4C4' fill-opacity='.6' fill-rule='evenodd' d='M11.95 2.05a7.002 7.002 0 0 1 .657 9.143l5.707 5.707-1.415 1.414-5.707-5.707A7.002 7.002 0 0 1 2.05 2.05a7 7 0 0 1 9.9 0zm-1.414 8.486a5 5 0 1 0-7.072-7.072 5 5 0 0 0 7.072 7.072z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  }
+}
+
+
+
+
+#font-adjuster-wrapper {
+  top: 1px;
+  font-weight: 500;
+}
+#font-adjuster-wrapper #font-adjuster-container {
+  background-color: #000;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+  padding: 0 1rem;
+  position: relative;
+  left: 70%;
+  top: -1px;
+  //border-top: 1px solid #333;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all .25s cubic-bezier(.49,-0.32,.42,1.35);
+  opacity: 0;
+}
+
+#font-adjuster-wrapper a:hover+#font-adjuster-container {
+  transition: all .25s cubic-bezier(.49,-0.32,.42,1.35);
+  opacity: 1;
+}
+
+#font-adjuster-container #decfontsize, 
+#font-adjuster-container #incfontsize {
+  background-color: #222;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+  margin: 0 0 0 0.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+@media (max-width: 48em) {
+  .showmobile{
+    display: block;
+  }
+  header.sitepoint-branding {
+    height: calc(var(--baseline) * 2);
+    .branding-logo {
+      height: calc(var(--baseline) * 1.5);
+      margin-top: calc(var(--baseline) / 1.5);
+    }
   }
 }

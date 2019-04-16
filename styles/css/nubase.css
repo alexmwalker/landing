@@ -136,6 +136,18 @@ a:link {
   text-decoration: none;
   color: #333; }
 
+::-webkit-input-placeholder {
+  color: #bbb; }
+
+:-ms-input-placeholder {
+  color: #bbb; }
+
+::-ms-input-placeholder {
+  color: #bbb; }
+
+::placeholder {
+  color: #bbb; }
+
 .hznav {
   /* add to parent to turn list into horizontal text nav*/
   display: -webkit-box;
@@ -154,6 +166,11 @@ a:link {
 form {
   padding: 0;
   margin: 0; }
+
+.fa, .fas {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  margin-right: 8px; }
 
 /* CSS RESETS */
 body, figure {
@@ -183,9 +200,6 @@ body, figure {
 
 .device {
   opacity: .5; }
-
-.borders div {
-  outline: 1px #fbb dashed; }
 
 [class*=grid-], [class*=grid_], [class~=grid] {
   -webkit-box-sizing: border-box;

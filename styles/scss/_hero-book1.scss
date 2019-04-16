@@ -4,15 +4,59 @@
   background-color: #333;
   margin-bottom: 0;
   color: #fff;
-  margin-top: calc(var(--baseline)*1);
+  margin-top: calc(var(--baseline)*2);
   width: 100%;
   .thumbnail-book img{
-    height: calc(var(--baseline)* 7.5);
+    /* height: calc(var(--baseline)* 7.5); */
     margin: calc(var(--baseline)*1) 20% calc(var(--baseline)*1) 0;
+    width: 90%;
   }
   h1{
     color: #fff;
     font-size: 1.95313rem;
     font-weight: 300;
+  }
+}
+
+#toolstrip {
+  background-color: #222;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  width: 100%;
+  z-index: 999;
+  display: none;  /* Note: this is hidden by default (mobile) and only display on tablet and larger */
+}
+.fixed {
+	position: fixed;
+	top: calc(var(--baseline) * 2);
+	width: 100%;
+}
+.fixed-nav {
+	position: fixed;
+	top: calc(var(--baseline) * 1);
+	width: 100%;
+}
+
+.min{
+  //outline: 5px red dashed;
+}
+.toolbar {
+  height: calc(var(--baseline) * 1.5);
+  z-index: 100;
+}
+.toolbar a.toolbarLink:first-of-type {
+  border-left: 1px #383838 solid;
+}
+.toolbar a.toolbarLink {
+  color: #eee;
+  font-weight: 400;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  line-height: calc(var(--baseline) * 1.5);
+  border-right: 1px #383838 solid;
+  font-size: calc(1rem /  var(--typescale));
+  &:hover{
+    font-weight: 500;
+    background-color: #000;
   }
 }
