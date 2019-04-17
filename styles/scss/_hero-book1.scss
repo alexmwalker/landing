@@ -4,7 +4,7 @@
   background-color: #333;
   margin-bottom: 0;
   color: #fff;
-  margin-top: calc(var(--baseline)*2);
+  padding-top: calc(var(--baseline)*2);
   width: 100%;
   .thumbnail-book img{
     /* height: calc(var(--baseline)* 7.5); */
@@ -25,11 +25,7 @@
   z-index: 999;
   display: none;  /* Note: this is hidden by default (mobile) and only display on tablet and larger */
 }
-.fixed {
-	position: fixed;
-	top: calc(var(--baseline) * 2);
-	width: 100%;
-}
+
 .fixed-nav {
 	position: fixed;
 	top: calc(var(--baseline) * 1);

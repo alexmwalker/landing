@@ -40,7 +40,7 @@
   padding: 0 2rem;
 }
 .box.codepen .body{
-  padding: 0 1rem;
+  padding: 0 2px calc(var(--baseline) / 2); /*  kill the padding for the codepen box */
 }
 .box .body p {
     margin: 0;

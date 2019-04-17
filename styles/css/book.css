@@ -1872,7 +1872,8 @@ to change directly - chiefly Prism JS at this stage -
   padding: 0 2rem; }
 
 .box.codepen .body {
-  padding: 0 1rem; }
+  padding: 0 2px calc(var(--baseline) / 2);
+  /*  kill the padding for the codepen box */ }
 
 .box .body p {
   margin: 0;
@@ -2309,7 +2310,7 @@ table {
     border-width: 1px 0 3px; }
   .mobilenav li {
     list-style: none;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     font-size: calc(var(--typescale) * 1rem);
     line-height: calc(var(--baseline) * 1.5); }
     .mobilenav li:nth-child(2n-1) {
@@ -2418,7 +2419,7 @@ button.go {
   background-color: #333;
   margin-bottom: 0;
   color: #fff;
-  margin-top: calc(var(--baseline)*2);
+  padding-top: calc(var(--baseline)*2);
   width: 100%; }
   #reeedr .bookpanel .thumbnail-book img {
     /* height: calc(var(--baseline)* 7.5); */
@@ -2437,11 +2438,6 @@ button.go {
   z-index: 999;
   display: none;
   /* Note: this is hidden by default (mobile) and only display on tablet and larger */ }
-
-.fixed {
-  position: fixed;
-  top: calc(var(--baseline) * 2);
-  width: 100%; }
 
 .fixed-nav {
   position: fixed;

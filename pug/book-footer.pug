@@ -40,26 +40,28 @@ script.
   function initToolbar(){
 
     const brand = document.querySelector('.sitepoint-branding');  // select the brand
-    const tools = document.querySelector('#toolstrip');  // select the brand
-    const toolbaroffset = brand.offsetHeight; // height of the brand
 
-    const nav = document.querySelector('#toolstrip'); // height of the toolstrip
-    const navTop = nav.offsetTop ; // distance from top edge
+    const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
+
+    const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
+
+
+    const navTop = toolstrip.offsetTop ; // distance from top edge
     const navMin = navTop/4; // the delay before the title rolls on to the titlebar
     var lastScrollTop = 0; // set for updating to determine scroll direction
 
     function stickyNavigation() {
-      // console.log('navTop = ' + navTop);
-      console.log('scrollY = ' + window.scrollY);
-      console.log('toolbaroffset = ' + toolbaroffset);  
+      //console.log('navTop = ' + navTop);
+      //console.log('scrollY = ' + window.scrollY);
+      //console.log('toolbaroffset = ' + toolbaroffset);  
       var st = window.pageYOffset || document.documentElement.scrollTop; 
       
       if (window.scrollY >= navTop) { // If scroll pos is greater than 418
-        document.body.style.paddingTop = nav.offsetHeight + 'px'; // Add padding-top to BODY to push down from strip
-        nav.classList.add('fixed-nav'); // add class that fixes toolstrip in place
+        console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
+        toolstrip.classList.add('fixed-nav'); // add class that fixes toolstrip in place
       } else {
-        document.body.style.paddingTop = 0;
-        nav.classList.remove('fixed-nav');
+        console.log('scrollY = ' + window.scrollY + 'is less than ' + navTop);
+        toolstrip.classList.remove('fixed-nav');
       }
       /* minize brand bar on scroll */
       if (window.scrollY >= navMin) {
@@ -69,12 +71,12 @@ script.
       }
 
 
-      if (st > lastScrollTop){ 
+      if (st > lastScrollTop && window.scrollY >= navTop) {  // tuck the brandstrip away when scrolling down - reveal on up scroll
         brand.classList.add('tuckaway');
-        tools.classList.add('tuckaway');
+        toolstrip.classList.add('tuckaway');
       } else {
         brand.classList.remove('tuckaway');
-        tools.classList.remove('tuckaway');
+        toolstrip.classList.remove('tuckaway');
       }
       lastScrollTop = st <= 0 ? 0 : st; /* For Mobile or negative scrolling */
 
