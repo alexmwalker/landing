@@ -22,7 +22,7 @@ to change directly - chiefly Prism JS at this stage -
   pre[class*="language-"] {
     //background: #f5f2f0;
     background-size: calc(var(--baseline) * 1) calc(var(--baseline) * 1);
-    background-image: repeating-linear-gradient(to bottom,rgba(173, 0, 0, 0.02) 0%,rgba(173, 0, 0, 0.02) 50%,rgba(0, 0, 0, 0) 50.01%,rgba(0, 0, 0, 0) 100%);
+    background-image: repeating-linear-gradient(to bottom,rgba(173, 0, 0, 0.04) 0%,rgba(173, 0, 0, 0.04) 50%,rgba(0, 0, 0, 0) 50.01%,rgba(0, 0, 0, 0) 100%);
     
   }
 }
