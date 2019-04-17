@@ -57,16 +57,16 @@ script.
       var st = window.pageYOffset || document.documentElement.scrollTop; 
       
       if (window.scrollY >= navTop) { // If scroll pos is greater than 418
-        //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
+        //console.log('scrollY = ' + window.scrollY + 'i s greater than ' + navTop);
         toolstrip.classList.add('fixed-nav'); // add class that fixes toolstrip in place
       } else {
-        //console.log('scrollY = ' + window.scrollY + 'is less than ' + navTop);
+        //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
         toolstrip.classList.remove('fixed-nav');
       }
       /* minize brand bar on scroll */
       if (window.scrollY >= navMin) {
         brand.classList.add('min');
-      } else {
+        } else {
         brand.classList.remove('min');
       }
 

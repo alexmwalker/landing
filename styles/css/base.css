@@ -1641,13 +1641,6 @@ label {
 .box.warning h4 {
   padding-left: 3rem; }
 
-.box.tip .body,
-.box.note .body,
-.box.github .body,
-.box.attention .body,
-.box.warning .body {
-  padding-left: 3rem; }
-
 .box.tip:before {
   background: url(../../images/SVG/box-tip.svg);
   content: " ";

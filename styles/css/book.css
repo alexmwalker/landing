@@ -1889,13 +1889,6 @@ to change directly - chiefly Prism JS at this stage -
 .box.warning h4 {
   padding-left: 3rem; }
 
-.box.tip .body,
-.box.note .body,
-.box.github .body,
-.box.attention .body,
-.box.warning .body {
-  padding-left: 3rem; }
-
 .box.tip:before {
   background: url(../../images/SVG/box-tip.svg);
   content: " ";
@@ -2446,6 +2439,11 @@ button.go {
   -webkit-transform-origin: 50% calc(var(--baseline)*-1) 0;
   -ms-transform-origin: 50% calc(var(--baseline)*-1) 0;
   transform-origin: 50% calc(var(--baseline)*-1) 0;
+  -webkit-transition: -webkit-transform .1s ease-in;
+  transition: -webkit-transform .1s ease-in;
+  -o-transition: transform .1s ease-in;
+  transition: transform .1s ease-in;
+  transition: transform .1s ease-in, -webkit-transform .1s ease-in;
   width: 100%;
   z-index: 999;
   display: none;

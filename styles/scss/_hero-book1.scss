@@ -22,6 +22,7 @@
   background-color: #222;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
   transform-origin: 50% calc(var(--baseline)*-1) 0;
+  transition: transform .1s ease-in;
   width: 100%;
   z-index: 999;
   display: none;  /* Note: this is hidden by default (mobile) and only display on tablet and larger */
@@ -33,9 +34,7 @@
 	width: 100%;
 }
 
-.min{
-  //outline: 5px red dashed;
-}
+
 .toolbar {
   height: calc(var(--baseline) * 1.5);
   z-index: 100;
