@@ -2158,8 +2158,8 @@ table {
   -webkit-transform-origin: 50% 0 0;
   -ms-transform-origin: 50% 0 0;
   transform-origin: 50% 0 0;
-  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
-  transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+  -webkit-transform: perspective(1000px) translate3d(0, 0, 0);
+  transform: perspective(1000px) translate3d(0, 0, 0);
   -webkit-transition: -webkit-transform .1s ease-in;
   transition: -webkit-transform .1s ease-in;
   -o-transition: transform .1s ease-in;
@@ -2167,8 +2167,8 @@ table {
   transition: transform .1s ease-in, -webkit-transform .1s ease-in; }
 
 .tuckaway {
-  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
-  transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: perspective(1000px) translate3d(0, calc(var(--baseline) * -2.5), 0);
+  transform: perspective(1000px) translate3d(0, calc(var(--baseline) * -2.5), 0);
   -webkit-transition: -webkit-transform .3s ease-out;
   transition: -webkit-transform .3s ease-out;
   -o-transition: transform .3s ease-out;

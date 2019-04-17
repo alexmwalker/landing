@@ -71,13 +71,13 @@
   position: fixed;
   top: 0;
   transform-origin: 50% 0 0;
-  transform:  perspective(1000px) rotate3d(1, 0, 0, 0deg);
+  transform:  perspective(1000px) translate3d(0, 0, 0); 
   transition: transform .1s ease-in;
 }
 
 .tuckaway{
 
-  transform:  perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  transform:  perspective(1000px) translate3d(0, calc(var(--baseline) * -2.5), 0); 
   transition: transform .3s ease-out;
 }
 
