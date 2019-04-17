@@ -67,15 +67,18 @@
   width: 100%;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  height: calc(var(--baseline)*2);
+  height: calc(var(--baseline) * 2);
   position: fixed;
   top: 0;
-  //transition: transform .3s ease-in;
+  transform-origin: 50% 0 0;
+  transform:  perspective(1000px) rotate3d(1, 0, 0, 0deg);
+  transition: transform .1s ease-in;
 }
 
 .tuckaway{
-  transform: translateY( calc(var(--baseline) * -2.5));
-  transition: transform .3s ease-in;
+
+  transform:  perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  transition: transform .3s ease-out;
 }
 
 .titlebar {

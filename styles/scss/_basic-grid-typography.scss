@@ -1,14 +1,13 @@
 :root {
-  --typescale: 1.25; /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
+  --typescale: 1.15; /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
   --baselineratio: calc(16/9); /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
   
-  --basegrid: 24px; /* the body grid size on phone */ 
+  --basegrid: 32px; /* the body grid size on phone */ 
   --basegrid-tablet: 28px; 
   --basegrid-laptop: 32px; 
   --basegrid-wide: 36px; 
   
   --baseline: calc(var(--baselineratio) * 1rem);
-  /*--baseline: 1.7778 * 1rem;*/
   --basefont: calc(var(--basegrid) / var(--baselineratio));
   --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
   --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
@@ -19,6 +18,8 @@
   
 }
  
+
+
 .container{ /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */ 
   //width: 62rem;
   max-width: 62rem;
@@ -42,6 +43,7 @@ xs: 36em
 @media (min-width: 48em) { 
   :root  {
     font-size: var(--basefont-tablet);
+    --typescale: 1.25;
   }
 }
 

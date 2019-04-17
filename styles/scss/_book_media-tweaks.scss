@@ -13,11 +13,6 @@ that need device level targeting. This is where we do it. */
 
 @media (max-width: 48em) { 
 
-
-  :root {
-    --basegrid: 32px; /* override the default mobile grid from 24px to 28px */
-    --typescale: 1.15; /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
-  }
   
   h1, .is-size1 {
     line-height: calc(var(--baseline) * 1.5);

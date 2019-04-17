@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500");
 :root {
-  --typescale: 1.25;
+  --typescale: 1.15;
   /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
   --baselineratio: calc(16/9);
   /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
-  --basegrid: 24px;
+  --basegrid: 32px;
   /* the body grid size on phone */
   --basegrid-tablet: 28px;
   --basegrid-laptop: 32px;
   --basegrid-wide: 36px;
   --baseline: calc(var(--baselineratio) * 1rem);
-  /*--baseline: 1.7778 * 1rem;*/
   --basefont: calc(var(--basegrid) / var(--baselineratio));
   --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
   --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
@@ -37,7 +36,8 @@ xs: 36em
 /* Medium devices (tablets, 48em and up)*/
 @media (min-width: 48em) {
   :root {
-    font-size: var(--basefont-tablet); } }
+    font-size: var(--basefont-tablet);
+    --typescale: 1.25; } }
 
 /* Large devices (desktops, 62em and up) */
 @media (min-width: 64em) {
@@ -2159,19 +2159,28 @@ table {
   z-index: 1000;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  height: calc(var(--baseline)*2);
+  height: calc(var(--baseline) * 2);
   position: fixed;
-  top: 0; }
+  top: 0;
+  -webkit-transform-origin: 50% 0 0;
+  -ms-transform-origin: 50% 0 0;
+  transform-origin: 50% 0 0;
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+  -webkit-transition: -webkit-transform .1s ease-in;
+  transition: -webkit-transform .1s ease-in;
+  -o-transition: transform .1s ease-in;
+  transition: transform .1s ease-in;
+  transition: transform .1s ease-in, -webkit-transform .1s ease-in; }
 
 .tuckaway {
-  -webkit-transform: translateY(calc(var(--baseline) * -2.5));
-  -ms-transform: translateY(calc(var(--baseline) * -2.5));
-  transform: translateY(calc(var(--baseline) * -2.5));
-  -webkit-transition: -webkit-transform .3s ease-in;
-  transition: -webkit-transform .3s ease-in;
-  -o-transition: transform .3s ease-in;
-  transition: transform .3s ease-in;
-  transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  -o-transition: transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out; }
 
 .titlebar {
   line-height: calc(var(--baseline) * 2);
@@ -2572,11 +2581,6 @@ that need device level targeting. This is where we do it. */
 
 /* ========   Switching up the font sizing for books on the phone   ============= */
 @media (max-width: 48em) {
-  :root {
-    --basegrid: 32px;
-    /* override the default mobile grid from 24px to 28px */
-    --typescale: 1.15;
-    /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/ }
   h1, .is-size1 {
     line-height: calc(var(--baseline) * 1.5);
     /* 4 grid lines */ }

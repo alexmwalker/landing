@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500");
 :root {
-  --typescale: 1.25;
+  --typescale: 1.15;
   /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
   --baselineratio: calc(16/9);
   /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
-  --basegrid: 24px;
+  --basegrid: 32px;
   /* the body grid size on phone */
   --basegrid-tablet: 28px;
   --basegrid-laptop: 32px;
   --basegrid-wide: 36px;
   --baseline: calc(var(--baselineratio) * 1rem);
-  /*--baseline: 1.7778 * 1rem;*/
   --basefont: calc(var(--basegrid) / var(--baselineratio));
   --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
   --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
@@ -37,7 +36,8 @@ xs: 36em
 /* Medium devices (tablets, 48em and up)*/
 @media (min-width: 48em) {
   :root {
-    font-size: var(--basefont-tablet); } }
+    font-size: var(--basefont-tablet);
+    --typescale: 1.25; } }
 
 /* Large devices (desktops, 62em and up) */
 @media (min-width: 64em) {
