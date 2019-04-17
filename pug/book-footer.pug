@@ -34,57 +34,53 @@ script.
 
     });
 
-  /*
-  $(function(){
-    
-    createSticky($("#toolstrip"));
 
-  });
-
-  function createSticky(sticky) {
-    
-    if (typeof sticky !== "undefined") {
-
-      var	pos = (sticky.offset().top) - 72,
-          win = $(window);
-        
-      win.on("scroll", function() {
-          win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
-      });			
-    }
-  }*/
 
 
   function initToolbar(){
 
     const brand = document.querySelector('.sitepoint-branding');  // select the brand
+    const tools = document.querySelector('#toolstrip');  // select the brand
     const toolbaroffset = brand.offsetHeight; // height of the brand
 
     const nav = document.querySelector('#toolstrip'); // height of the toolstrip
     const navTop = nav.offsetTop ; // distance from top edge
     const navMin = navTop/4; // the delay before the title rolls on to the titlebar
+    var lastScrollTop = 0; // set for updating to determine scroll direction
 
     function stickyNavigation() {
-      console.log('navTop = ' + navTop);
+      // console.log('navTop = ' + navTop);
       console.log('scrollY = ' + window.scrollY);
       console.log('toolbaroffset = ' + toolbaroffset);  
-
+      var st = window.pageYOffset || document.documentElement.scrollTop; 
+      
       if (window.scrollY >= navTop) { // If scroll pos is greater than 418
-        // nav offsetHeight = height of nav
         document.body.style.paddingTop = nav.offsetHeight + 'px'; // Add padding-top to BODY to push down from strip
-        nav.classList.add('fixed-nav');
+        nav.classList.add('fixed-nav'); // add class that fixes toolstrip in place
       } else {
         document.body.style.paddingTop = 0;
         nav.classList.remove('fixed-nav');
       }
+      /* minize brand bar on scroll */
       if (window.scrollY >= navMin) {
         brand.classList.add('min');
       } else {
         brand.classList.remove('min');
       }
+
+
+      if (st > lastScrollTop){ 
+        brand.classList.add('tuckaway');
+        tools.classList.add('tuckaway');
+      } else {
+        brand.classList.remove('tuckaway');
+        tools.classList.remove('tuckaway');
+      }
+      lastScrollTop = st <= 0 ? 0 : st; /* For Mobile or negative scrolling */
+
     }
-
     window.addEventListener('scroll', stickyNavigation);
-
   }
   initToolbar();
+
+

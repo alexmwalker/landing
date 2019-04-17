@@ -132,4 +132,10 @@ that need device level targeting. This is where we do it. */
   #toolstrip {
     display: block;  /* Note: this is hidden by default (mobile) and only display on tablet and larger */
   }
+
+  #reeedr .bookpanel .thumbnail-book img{
+      width: 90%;
+    }
+
+
 }

@@ -70,10 +70,13 @@
   height: calc(var(--baseline)*2);
   position: fixed;
   top: 0;
-  
+  //transition: transform .3s ease-in;
 }
 
-
+.tuckaway{
+  transform: translateY( calc(var(--baseline) * -2.5));
+  transition: transform .3s ease-in;
+}
 
 .titlebar {
   line-height: calc(var(--baseline) * 2);

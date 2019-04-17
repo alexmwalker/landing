@@ -2162,6 +2162,16 @@ table {
   position: fixed;
   top: 0; }
 
+.tuckaway {
+  -webkit-transform: translateY(calc(var(--baseline) * -2.5));
+  -ms-transform: translateY(calc(var(--baseline) * -2.5));
+  transform: translateY(calc(var(--baseline) * -2.5));
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: -webkit-transform .3s ease-in;
+  -o-transition: transform .3s ease-in;
+  transition: transform .3s ease-in;
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
+
 .titlebar {
   line-height: calc(var(--baseline) * 2);
   height: calc(var(--baseline) * 2);
@@ -2413,7 +2423,7 @@ button.go {
   #reeedr .bookpanel .thumbnail-book img {
     /* height: calc(var(--baseline)* 7.5); */
     margin: calc(var(--baseline)*1) 20% calc(var(--baseline)*1) 0;
-    width: 90%; }
+    width: 100%; }
   #reeedr .bookpanel h1 {
     color: #fff;
     font-size: 1.95313rem;
@@ -2649,7 +2659,9 @@ that need device level targeting. This is where we do it. */
       height: calc(var(--baseline)*1); }
   #toolstrip {
     display: block;
-    /* Note: this is hidden by default (mobile) and only display on tablet and larger */ } }
+    /* Note: this is hidden by default (mobile) and only display on tablet and larger */ }
+  #reeedr .bookpanel .thumbnail-book img {
+    width: 90%; } }
 
 .imageshadow {
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
