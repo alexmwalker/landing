@@ -2443,6 +2443,9 @@ button.go {
   background-color: #222;
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transform-origin: 50% calc(var(--baseline)*-1) 0;
+  -ms-transform-origin: 50% calc(var(--baseline)*-1) 0;
+  transform-origin: 50% calc(var(--baseline)*-1) 0;
   width: 100%;
   z-index: 999;
   display: none;
