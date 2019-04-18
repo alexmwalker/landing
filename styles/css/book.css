@@ -2516,6 +2516,8 @@ button.go {
     background-color: #f5efea;
     list-style-position: inside;
     font-size: calc(1rem / var(--typescale));
+    font-weight: 400;
+    line-height: calc(var(--baseline) * 1.25);
     width: 100%;
     padding-left: 1rem; }
     .toc-container .toc i {
