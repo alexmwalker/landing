@@ -6,14 +6,13 @@ that need device level targeting. This is where we do it. */
 
 
 @media (max-width: 60em) { /* tablet adjustments */ 
-
+ /* none right now */
 }
 
 /* ========   Switching up the font sizing for books on the phone   ============= */ 
 
-@media (max-width: 48em) { 
+@media (max-width: 48em) {
 
-  
   h1, .is-size1 {
     line-height: calc(var(--baseline) * 1.5);
     /* 4 grid lines */
@@ -22,8 +21,6 @@ that need device level targeting. This is where we do it. */
   h2, .is-size2 {
     line-height: calc(var(--baseline) * 1.0);
   }
-
-
 
   /* ========   REFORMATTING the Chapter Face page for Mobile   ============= */ 
   
@@ -114,12 +111,12 @@ that need device level targeting. This is where we do it. */
 
   .sitepoint-branding { // minimize branding strip - not on mobile.
     &.min {
-      height: calc(var(--baseline)*1);
+      height: calc(var(--baseline) * 1);
       ul.nav li {
         padding: 0 1rem;
         list-style-type: none;
-        line-height: calc(var(--baseline)*1);
-        height: calc(var(--baseline)*1);
+        line-height: calc(var(--baseline) * 1);
+        height: calc(var(--baseline) * 1);
       }
     }
   }
@@ -132,5 +129,23 @@ that need device level targeting. This is where we do it. */
       width: 90%;
     }
 
+    /*  TOC menu - mobile   */
+
+    .toc-anchor{
+      position: relative;
+    }
+    
+    .toc-container{
+      position: relative;
+      transform: scaleY(0);
+      &.open{
+        transform: scaleY(1);
+      }
+      .toc{
+        padding-top: calc(var(--baseline) * 1);
+        padding-bottom: calc(var(--baseline) * 1);
+        position: absolute;
+      }
+    }
 
 }

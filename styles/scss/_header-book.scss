@@ -76,7 +76,6 @@
 }
 
 .tuckaway{
-
   transform:  perspective(1000px) translate3d(0, calc(var(--baseline) * -2.5), 0); 
   transition: transform .3s ease-out;
 }
@@ -137,21 +136,21 @@
 .hamburger-inner:after, .hamburger-inner:before {
   content: "";
   transition: bottom .1s cubic-bezier(.55,.055,.675,.19) .35s,
-    transform .45s cubic-bezier(.49,-0.32,.42,1.35);
+  transform .45s cubic-bezier(.49,-0.32,.42,1.35);
 }
 .hamburger-inner:after {
-transform: translateY(12px);
+  transform: translateY(12px);
 }
 .hamburger-inner:before {
-transform: translateY(-12px);
+  transform: translateY(-12px);
 }
 
 
 /* Hide mobile hamburger on size up */
 .showmobile{
-display: none;
-text-align: right;
-padding-right: 0rem;
+  display: none;
+  text-align: right;
+  padding-right: 0rem;
 
 }
 .open{

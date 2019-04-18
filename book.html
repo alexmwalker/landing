@@ -25,7 +25,7 @@
           </div>
           <nav class="mobilenav">
             <ul>
-              <li><a href="#">Chapters</a></li>
+              <li><a class="viewchapters" href="#">Chapters</a></li>
               <li><a href="#">Bookmarks</a></li>
               <li><a href="#">Add Bookmark</a></li>
               <li><a href="#">Library</a></li>
@@ -72,7 +72,7 @@
       <div class="container">
         <div class="toolbar">
           <div class="grid-12">
-            <div class="col-2_sm-4"><a class="toolbarLink" id="viewchapters" src="#">Chapters</a></div>
+            <div class="col-2_sm-4"><a class="viewchapters toolbarLink" src="#">Chapters</a></div>
             <div class="col-2_sm-4"><a class="toolbarLink" id="bookmarks" src="#">My Bookmarks</a></div>
             <div class="col-2_sm-4"><a class="toolbarLink" id="addbookmarks" src="#">+ Add Bookmark</a></div>
             <div class="col-4_sm-hidden"></div>
@@ -84,6 +84,27 @@
         </div>
       </div>
     </nav>
+    <div id="toc-anchor">
+      <div class="container">
+        <div class="toc-container"><i class="fas fa-times-circle close-button" id="closetoc"></i>
+          <ol class="toc" start="0">
+            <li class="toc-chapter accordion-item preface"><a id="preface" title="Preface"><span class="l-w-100">Preface</span></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-1" title="Why I Love Bootstrap, and Why You Should Too"><span class="l-w-100">Why I Love Bootstrap, and Why You Should Too</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter current-chapter"><a id="chapter-2" title="Understanding Bootstrap: How it Works, and What's New"><span class="l-w-100">Understanding Bootstrap: How it Works, and What's New</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-3" title="Super Smart New Features to Win You Over"><span class="l-w-100">Super Smart New Features to Win You Over</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-4" title="Understanding Bootstrap Modals"><span class="l-w-100">Understanding Bootstrap Modals</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-5" title="UA Deep Dive into the Bootstrap Form Component"><span class="l-w-100">UA Deep Dive into the Bootstrap Form Component</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon toc-bookmarked fas far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-6" title="The Card Component: A Complete Introduction"><span class="l-w-100">The Card Component: A Complete Introduction</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-7" title="How to Build a Responsive Type Scale with Bootstrap"><span class="l-w-100">How to Build a Responsive Type Scale with Bootstrap</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-8" title="A Beginner's Guide to the Latest Bootstrap Utility Classes"><span class="l-w-100">A Beginner's Guide to the Latest Bootstrap Utility Classes</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-9" title="3 Tips for Speeding Up Your Bootstrap Website"><span class="l-w-100">3 Tips for Speeding Up Your Bootstrap Website</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-10" title="Customizing Bootstrap jQuery Plugins"><span class="l-w-100">Customizing Bootstrap jQuery Plugins</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-11" title="8 Tips for Improving Bootstrap Accessibility"><span class="l-w-100">8 Tips for Improving Bootstrap Accessibility</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-12" title="Front-end Frameworks: Custom vs Ready-to-use Solutions"><span class="l-w-100">Front-end Frameworks: Custom vs Ready-to-use Solutions</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
     <section id="reeedr-body">
       <div class="container">
         <div class="grid-12">
@@ -475,20 +496,19 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
           $(this).toggleClass('open');
           $('.mobilenav').toggleClass('open');
         });
-        $('.logged-out').click(function(){
-          $('.login-panel').toggleClass('open');
+        $('.viewchapters').click(function(){
+          $('.toc-container').addClass('open');
         });
-        $('.account-items').click(function(){
-          $('.account-items').toggleClass('open');
+        $('#closetoc').click(function(){
+          $('.toc-container').removeClass('open');
         });
-        $('.logout').click(function(){
-          $('.sitepoint-branding').removeClass('member');
-        });
+      
+      
       });
         $(window).resize(function(){ /* close the menu on screen resize */
-          $('.showmobile').removeClass('open');
+          $('.showmobile' ).removeClass('open');
           $('.login-panel').removeClass('open');
-      
+          $('.mobilenav'  ).removeClass('open');
         });
       
       
@@ -514,7 +534,7 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
           var st = window.pageYOffset || document.documentElement.scrollTop; 
           
           if (window.scrollY >= navTop) { // If scroll pos is greater than 418
-            //console.log('scrollY = ' + window.scrollY + 'i s greater than ' + navTop);
+            //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
             toolstrip.classList.add('fixed-nav'); // add class that fixes toolstrip in place
           } else {
             //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);

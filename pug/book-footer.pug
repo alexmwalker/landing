@@ -18,20 +18,19 @@ script.
       $(this).toggleClass('open');
       $('.mobilenav').toggleClass('open');
     });
-    $('.logged-out').click(function(){
-      $('.login-panel').toggleClass('open');
+    $('.viewchapters').click(function(){
+      $('.toc-container').addClass('open');
     });
-    $('.account-items').click(function(){
-      $('.account-items').toggleClass('open');
+    $('#closetoc').click(function(){
+      $('.toc-container').removeClass('open');
     });
-    $('.logout').click(function(){
-      $('.sitepoint-branding').removeClass('member');
-    });
+
+
   });
     $(window).resize(function(){ /* close the menu on screen resize */
-      $('.showmobile').removeClass('open');
+      $('.showmobile' ).removeClass('open');
       $('.login-panel').removeClass('open');
-
+      $('.mobilenav'  ).removeClass('open');
     });
 
 
@@ -57,7 +56,7 @@ script.
       var st = window.pageYOffset || document.documentElement.scrollTop; 
       
       if (window.scrollY >= navTop) { // If scroll pos is greater than 418
-        //console.log('scrollY = ' + window.scrollY + 'i s greater than ' + navTop);
+        //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
         toolstrip.classList.add('fixed-nav'); // add class that fixes toolstrip in place
       } else {
         //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);

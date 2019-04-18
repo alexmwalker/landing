@@ -2474,6 +2474,71 @@ button.go {
     font-weight: 500;
     background-color: #000; }
 
+/* ==== Chapter menu  === */
+#toc-anchor {
+  z-index: 2000;
+  width: 100%;
+  position: absolute;
+  top: calc(var(--baseline) * 2); }
+
+.toc-container {
+  position: absolute;
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform: translateX(-110%);
+  -ms-transform: translateX(-110%);
+  transform: translateX(-110%);
+  width: 100%;
+  -webkit-transition: -webkit-transform .2s ease-out;
+  transition: -webkit-transform .2s ease-out;
+  -o-transition: transform .2s ease-out;
+  transition: transform .2s ease-out;
+  transition: transform .2s ease-out, -webkit-transform .2s ease-out; }
+  .toc-container.open {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: -webkit-transform .2s ease-out;
+    transition: -webkit-transform .2s ease-out;
+    -o-transition: transform .2s ease-out;
+    transition: transform .2s ease-out;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out; }
+  .toc-container .toc {
+    margin: 0;
+    color: #111;
+    padding-top: calc(var(--baseline) * 1);
+    padding-bottom: calc(var(--baseline) * 1);
+    position: absolute;
+    background-color: #f5efea;
+    list-style-position: inside;
+    font-size: calc(1rem / var(--typescale));
+    width: 100%;
+    padding-left: 1rem; }
+    .toc-container .toc i {
+      margin-left: 2rem; }
+
+#closetoc {
+  width: calc(var(--baseline) * 1);
+  height: calc(var(--baseline) * 1);
+  display: block;
+  position: absolute;
+  font-size: calc(var(--baseline) * 1);
+  cursor: pointer;
+  right: 1rem;
+  top: 1rem;
+  z-index: 999; }
+
+li.toc-chapter {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 85%;
+  overflow: hidden; }
+
 /* chapter */
 #reeedr-body {
   color: #333;
@@ -2578,7 +2643,8 @@ that need device level targeting. This is where we do it. */
   display: none; }
 
 @media (max-width: 60em) {
-  /* tablet adjustments */ }
+  /* tablet adjustments */
+  /* none right now */ }
 
 /* ========   Switching up the font sizing for books on the phone   ============= */
 @media (max-width: 48em) {
@@ -2652,17 +2718,33 @@ that need device level targeting. This is where we do it. */
     margin-bottom: 0;
     padding-top: 0; }
   .sitepoint-branding.min {
-    height: calc(var(--baseline)*1); }
+    height: calc(var(--baseline) * 1); }
     .sitepoint-branding.min ul.nav li {
       padding: 0 1rem;
       list-style-type: none;
-      line-height: calc(var(--baseline)*1);
-      height: calc(var(--baseline)*1); }
+      line-height: calc(var(--baseline) * 1);
+      height: calc(var(--baseline) * 1); }
   #toolstrip {
     display: block;
     /* Note: this is hidden by default (mobile) and only display on tablet and larger */ }
   #reeedr .bookpanel .thumbnail-book img {
-    width: 90%; } }
+    width: 90%; }
+  /*  TOC menu - mobile   */
+  .toc-anchor {
+    position: relative; }
+  .toc-container {
+    position: relative;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0); }
+    .toc-container.open {
+      -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      transform: scaleY(1); }
+    .toc-container .toc {
+      padding-top: calc(var(--baseline) * 1);
+      padding-bottom: calc(var(--baseline) * 1);
+      position: absolute; } }
 
 .imageshadow {
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
