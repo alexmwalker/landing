@@ -68,40 +68,42 @@
         </div>
       </div>
     </section>
-    <nav id="toolstrip">
-      <div class="container">
-        <div class="toolbar">
-          <div class="grid-12">
-            <div class="col-2_sm-4"><a class="viewchapters toolbarLink" src="#">Chapters</a></div>
-            <div class="col-2_sm-4"><a class="toolbarLink" id="bookmarks" src="#">My Bookmarks</a></div>
-            <div class="col-2_sm-4"><a class="toolbarLink" id="addbookmarks" src="#">+ Add Bookmark</a></div>
-            <div class="col-4_sm-hidden"></div>
-            <div class="col-2_sm-hidden"><a class="toolButton" id="downloadBook" href="../files/books/analytics-tools.zip">
-                <svg class="icon icon-download">
-                  <use xlink:href="#icon-download"></use>Download
-                </svg></a></div>
+    <div id="tool-container">
+      <nav id="toolstrip">
+        <div class="container">
+          <div class="toolbar">
+            <div class="grid-12">
+              <div class="col-2_sm-4"><a class="viewchapters toolbarLink" src="#">Chapters</a></div>
+              <div class="col-2_sm-4"><a class="toolbarLink" id="bookmarks" src="#">My Bookmarks</a></div>
+              <div class="col-2_sm-4"><a class="toolbarLink" id="addbookmarks" src="#">+ Add Bookmark</a></div>
+              <div class="col-4_sm-hidden"></div>
+              <div class="col-2_sm-hidden"><a class="toolButton" id="downloadBook" href="../files/books/analytics-tools.zip">
+                  <svg class="icon icon-download">
+                    <use xlink:href="#icon-download"></use>Download
+                  </svg></a></div>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-    <div id="toc-anchor">
-      <div class="container">
-        <div class="toc-container"><i class="fas fa-times-circle close-button" id="closetoc"></i>
-          <ol class="toc" start="0">
-            <li class="toc-chapter accordion-item preface"><a id="preface" title="Preface"><span class="l-w-100">Preface</span></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-1" title="Why I Love Bootstrap, and Why You Should Too"><span class="l-w-100">Why I Love Bootstrap, and Why You Should Too</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter current-chapter"><a id="chapter-2" title="Understanding Bootstrap: How it Works, and What's New"><span class="l-w-100">Understanding Bootstrap: How it Works, and What's New</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-3" title="Super Smart New Features to Win You Over"><span class="l-w-100">Super Smart New Features to Win You Over</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-4" title="Understanding Bootstrap Modals"><span class="l-w-100">Understanding Bootstrap Modals</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-5" title="UA Deep Dive into the Bootstrap Form Component"><span class="l-w-100">UA Deep Dive into the Bootstrap Form Component</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon toc-bookmarked fas far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-6" title="The Card Component: A Complete Introduction"><span class="l-w-100">The Card Component: A Complete Introduction</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-7" title="How to Build a Responsive Type Scale with Bootstrap"><span class="l-w-100">How to Build a Responsive Type Scale with Bootstrap</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-8" title="A Beginner's Guide to the Latest Bootstrap Utility Classes"><span class="l-w-100">A Beginner's Guide to the Latest Bootstrap Utility Classes</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-9" title="3 Tips for Speeding Up Your Bootstrap Website"><span class="l-w-100">3 Tips for Speeding Up Your Bootstrap Website</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-10" title="Customizing Bootstrap jQuery Plugins"><span class="l-w-100">Customizing Bootstrap jQuery Plugins</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-11" title="8 Tips for Improving Bootstrap Accessibility"><span class="l-w-100">8 Tips for Improving Bootstrap Accessibility</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-            <li class="toc-chapter accordion-item chapter"><a id="chapter-12" title="Front-end Frameworks: Custom vs Ready-to-use Solutions"><span class="l-w-100">Front-end Frameworks: Custom vs Ready-to-use Solutions</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
-          </ol>
+      </nav>
+      <div id="toc-anchor">
+        <div class="container">
+          <div class="toc-container"><i class="fas fa-times-circle close-button" id="closetoc"></i>
+            <ol class="toc" start="0">
+              <li class="toc-chapter accordion-item preface"><a id="preface" title="Preface"><span class="l-w-100">Preface</span></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-1" title="Why I Love Bootstrap, and Why You Should Too"><span class="l-w-100">Why I Love Bootstrap, and Why You Should Too</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter current-chapter"><a id="chapter-2" title="Understanding Bootstrap: How it Works, and What's New"><span class="l-w-100">Understanding Bootstrap: How it Works, and What's New</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-3" title="Super Smart New Features to Win You Over"><span class="l-w-100">Super Smart New Features to Win You Over</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-4" title="Understanding Bootstrap Modals"><span class="l-w-100">Understanding Bootstrap Modals</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-5" title="UA Deep Dive into the Bootstrap Form Component"><span class="l-w-100">UA Deep Dive into the Bootstrap Form Component</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon toc-bookmarked fas far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-6" title="The Card Component: A Complete Introduction"><span class="l-w-100">The Card Component: A Complete Introduction</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-7" title="How to Build a Responsive Type Scale with Bootstrap"><span class="l-w-100">How to Build a Responsive Type Scale with Bootstrap</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-8" title="A Beginner's Guide to the Latest Bootstrap Utility Classes"><span class="l-w-100">A Beginner's Guide to the Latest Bootstrap Utility Classes</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-9" title="3 Tips for Speeding Up Your Bootstrap Website"><span class="l-w-100">3 Tips for Speeding Up Your Bootstrap Website</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-10" title="Customizing Bootstrap jQuery Plugins"><span class="l-w-100">Customizing Bootstrap jQuery Plugins</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-11" title="8 Tips for Improving Bootstrap Accessibility"><span class="l-w-100">8 Tips for Improving Bootstrap Accessibility</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+              <li class="toc-chapter accordion-item chapter"><a id="chapter-12" title="Front-end Frameworks: Custom vs Ready-to-use Solutions"><span class="l-w-100">Front-end Frameworks: Custom vs Ready-to-use Solutions</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
@@ -497,7 +499,7 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
           $('.mobilenav').toggleClass('open');
         });
         $('.viewchapters').click(function(){
-          $('.toc-container').addClass('open');
+          $('.toc-container').toggleClass('open');
         });
         $('#closetoc').click(function(){
           $('.toc-container').removeClass('open');
@@ -517,13 +519,13 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
       function initToolbar(){
       
         const brand = document.querySelector('.sitepoint-branding');  // select the brand
+        const toolcontainer = document.querySelector('#tool-container'); // height of the toolstrip
       
         const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
-      
         const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
       
       
-        const navTop = toolstrip.offsetTop ; // distance from top edge
+        const navTop = toolcontainer.offsetTop ; // distance from top edge
         const navMin = navTop/4; // the delay before the title rolls on to the titlebar
         var lastScrollTop = 0; // set for updating to determine scroll direction
       
@@ -535,10 +537,10 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
           
           if (window.scrollY >= navTop) { // If scroll pos is greater than 418
             //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
-            toolstrip.classList.add('fixed-nav'); // add class that fixes toolstrip in place
+            toolcontainer.classList.add('fixed-nav'); // add class that fixes toolstrip in place
           } else {
             //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
-            toolstrip.classList.remove('fixed-nav');
+            toolcontainer.classList.remove('fixed-nav');
           }
           /* minize brand bar on scroll */
           if (window.scrollY >= navMin) {

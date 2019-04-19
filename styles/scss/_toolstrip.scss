@@ -1,4 +1,5 @@
 
+
 #toolstrip {
   background-color: #222;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -47,11 +48,8 @@
   //outline: 1px red dashed;
   z-index: 2000;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: calc(var(--baseline) * 2);
-  .container{
-    //outline: 5px greenyellow dotted;
-  }
 }
 
 .toc-container{
@@ -81,15 +79,16 @@
     i{
       margin-left: 2rem;
     }
+
   }
 }
+
 #closetoc{
   width:  calc(var(--baseline) * 1);
   height: calc(var(--baseline) * 1);
   display: block;
   position: absolute;
   font-size: calc(var(--baseline) * 1);
-  
   cursor: pointer;
   right: 1rem;
   top:   1rem;

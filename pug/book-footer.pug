@@ -19,7 +19,7 @@ script.
       $('.mobilenav').toggleClass('open');
     });
     $('.viewchapters').click(function(){
-      $('.toc-container').addClass('open');
+      $('.toc-container').toggleClass('open');
     });
     $('#closetoc').click(function(){
       $('.toc-container').removeClass('open');
@@ -39,13 +39,13 @@ script.
   function initToolbar(){
 
     const brand = document.querySelector('.sitepoint-branding');  // select the brand
+    const toolcontainer = document.querySelector('#tool-container'); // height of the toolstrip
 
     const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
-
     const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
 
 
-    const navTop = toolstrip.offsetTop ; // distance from top edge
+    const navTop = toolcontainer.offsetTop ; // distance from top edge
     const navMin = navTop/4; // the delay before the title rolls on to the titlebar
     var lastScrollTop = 0; // set for updating to determine scroll direction
 
@@ -57,10 +57,10 @@ script.
       
       if (window.scrollY >= navTop) { // If scroll pos is greater than 418
         //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
-        toolstrip.classList.add('fixed-nav'); // add class that fixes toolstrip in place
+        toolcontainer.classList.add('fixed-nav'); // add class that fixes toolstrip in place
       } else {
         //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
-        toolstrip.classList.remove('fixed-nav');
+        toolcontainer.classList.remove('fixed-nav');
       }
       /* minize brand bar on scroll */
       if (window.scrollY >= navMin) {

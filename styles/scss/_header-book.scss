@@ -72,12 +72,12 @@
   top: 0;
   transform-origin: 50% 0 0;
   transform:  perspective(1000px) translate3d(0, 0, 0); 
-  transition: transform .1s ease-in;
+  transition: all .1s ease-in;
 }
 
 .tuckaway{
   transform:  perspective(1000px) translate3d(0, calc(var(--baseline) * -2.5), 0); 
-  transition: transform .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .titlebar {

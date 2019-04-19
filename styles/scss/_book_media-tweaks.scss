@@ -131,8 +131,9 @@ that need device level targeting. This is where we do it. */
 
     /*  TOC menu - mobile   */
 
-    .toc-anchor{
+    #toc-anchor{
       position: relative;
+      top: 0;
     }
     
     .toc-container{

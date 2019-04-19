@@ -9,23 +9,24 @@ section.bookpanel
           .col-9_sm-12
             h1 Your First Week With Bootstrap
             p Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.
-nav#toolstrip
-  .container
-    .toolbar
-      .grid-12
-        .col-2_sm-4
-          a.viewchapters.toolbarLink(src='#') Chapters
-        .col-2_sm-4
-          a#bookmarks.toolbarLink(src='#') My Bookmarks
-        .col-2_sm-4
-          a#addbookmarks.toolbarLink(src='#') + Add Bookmark
-        .col-4_sm-hidden
+#tool-container
+  nav#toolstrip
+    .container
+      .toolbar
+        .grid-12
+          .col-2_sm-4
+            a.viewchapters.toolbarLink(src='#') Chapters
+          .col-2_sm-4
+            a#bookmarks.toolbarLink(src='#') My Bookmarks
+          .col-2_sm-4
+            a#addbookmarks.toolbarLink(src='#') + Add Bookmark
+          .col-4_sm-hidden
 
-        .col-2_sm-hidden
-          a#downloadBook.toolButton(href='../files/books/analytics-tools.zip')
-            svg.icon.icon-download
-              use(xlink:href='#icon-download')
-              | Download
-#toc-anchor
-  .container
-    include toc.pug
+          .col-2_sm-hidden
+            a#downloadBook.toolButton(href='../files/books/analytics-tools.zip')
+              svg.icon.icon-download
+                use(xlink:href='#icon-download')
+                | Download
+  #toc-anchor
+    .container
+      include toc.pug
