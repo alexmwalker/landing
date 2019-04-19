@@ -194,12 +194,12 @@
     //text-align: right;
     font-size: calc(var(--typescale) * 1rem);
     line-height: calc(var(--baseline) * 1.5);
-    display: block;
     &:nth-child(2n-1){ /* Zebra */
       background: #1a1a1a;
     }
     a{
       color: #eee;
+      display: block;
       &:hover{ 
       font-weight: 500;
       }

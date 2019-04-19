@@ -2314,13 +2314,13 @@ table {
     list-style: none;
     padding-left: 1rem;
     font-size: calc(var(--typescale) * 1rem);
-    line-height: calc(var(--baseline) * 1.5);
-    display: block; }
+    line-height: calc(var(--baseline) * 1.5); }
     .mobilenav li:nth-child(2n-1) {
       /* Zebra */
       background: #1a1a1a; }
     .mobilenav li a {
-      color: #eee; }
+      color: #eee;
+      display: block; }
       .mobilenav li a:hover {
         font-weight: 500; }
     .mobilenav li input {
