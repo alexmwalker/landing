@@ -2332,6 +2332,11 @@ table {
   line-height: calc(var(--baseline) * 1.5);
   height: calc(var(--baseline) * 1.5);
   text-align: center; }
+  .mobile-controls a {
+    width: 48%;
+    float: left; }
+    .mobile-controls a button {
+      width: 60%; }
 
 .open.mobilenav {
   opacity: 1;

@@ -224,6 +224,13 @@
   line-height: calc(var(--baseline) * 1.5);
   height: calc(var(--baseline) * 1.5);
   text-align: center;
+  a {
+    width: 48%;
+    float: left;
+    button{
+      width: 60%;
+    }
+  }
 }
 .open.mobilenav{
   //transform: translateY(5.3rem) scaley(1);
