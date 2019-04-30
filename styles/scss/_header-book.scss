@@ -29,6 +29,7 @@
       color:#E5E5E5;
       padding: 0 1px;
       position: relative;
+      white-space: nowrap;
       &:after{ /* The underscore nav marker */
         display: block;
         position: absolute;
@@ -276,7 +277,7 @@ button.go{
   top: 1px;
   font-weight: 500;
 }
-#font-adjuster-wrapper #font-adjuster-container {
+#font-adjuster-container {
   background-color: #000;
   box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
   padding: 0 1rem;
@@ -290,7 +291,7 @@ button.go{
   opacity: 0;
 }
 
-#font-adjuster-wrapper a:hover+#font-adjuster-container {
+#font-adjuster-container.open {
   transition: all .25s cubic-bezier(.49,-0.32,.42,1.35);
   opacity: 1;
 }

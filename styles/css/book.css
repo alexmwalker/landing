@@ -2113,7 +2113,8 @@ table {
     .sitepoint-branding ul.nav li a {
       color: #E5E5E5;
       padding: 0 1px;
-      position: relative; }
+      position: relative;
+      white-space: nowrap; }
       .sitepoint-branding ul.nav li a:after {
         /* The underscore nav marker */
         display: block;
@@ -2377,7 +2378,7 @@ button.go {
   top: 1px;
   font-weight: 500; }
 
-#font-adjuster-wrapper #font-adjuster-container {
+#font-adjuster-container {
   background-color: #000;
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -2392,7 +2393,7 @@ button.go {
   transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   opacity: 0; }
 
-#font-adjuster-wrapper a:hover + #font-adjuster-container {
+#font-adjuster-container.open {
   -webkit-transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   -o-transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
@@ -2454,7 +2455,8 @@ button.go {
 .fixed-nav {
   position: fixed;
   top: calc(var(--baseline) * 1);
-  width: 100%; }
+  width: 100%;
+  z-index: 2; }
 
 .toolbar {
   height: calc(var(--baseline) * 1.5);

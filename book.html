@@ -42,7 +42,7 @@
           </nav>
           <div class="col-6_md-8_sm-hidden">
             <ul class="nav">
-              <li id="font-adjuster-wrapper"><a href="#">A ±
+              <li id="font-adjuster-wrapper"><a id="showfontchanger" href="#">A ±
                   <div id="font-adjuster-container"><span>Text-size:</span><a id="decfontsize" src="#">A-</a><a id="incfontsize" src="#">A+</a></div></a></li>
               <li><a href="#"> <i class="l-mr2 fas fa-books"> </i>Library</a></li>
               <li><a href="#"> <i class="l-mr2 fas fa-sliders-h"></i>Dashboard</a></li>
@@ -487,10 +487,12 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
       <div class="container">
         <div class="grid">
           <div class="col-6">Copyright 2018 SitePoint</div>
+          <div class="col-6" id="log">The root of this document is: </div>
         </div>
       </div>
     </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")-->
+    <script src="scripts/jquery-3.4.0.min.js"></script>
     <script src="scripts/prism.js"></script>
     <script>
       $(document).ready(function(){
@@ -504,19 +506,27 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
         $('#closetoc').click(function(){
           $('.toc-container').removeClass('open');
         });
-      
+        $('#showfontchanger').click(function(){
+          $('#font-adjuster-container').toggleClass('open');
+        });
+        $('#decfontsize').click(function(){
+          $( "<b></b>" ).html( $( ":root" )[ 0 ].nodeName ).appendTo( "#log" );
+        });    
       
       });
         $(window).resize(function(){ /* close the menu on screen resize */
           $('.showmobile' ).removeClass('open');
-          $('.login-panel').removeClass('open');
+          $('.mobilenav'  ).removeClass('open');
+        });
+      
+        $(window).scroll(function(){ /* close the menu on scroll */
+          $('.showmobile' ).removeClass('open');
           $('.mobilenav'  ).removeClass('open');
         });
       
       
       
-      
-      function initToolbar(){
+      function scrollActions(){
       
         const brand = document.querySelector('.sitepoint-branding');  // select the brand
         const toolcontainer = document.querySelector('#tool-container'); // height of the toolstrip
@@ -531,7 +541,7 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
       
         function stickyNavigation() {
           //console.log('navTop = ' + navTop);
-          //console.log('scrollY = ' + window.scrollY);
+          console.log('scrollY = ' + window.scrollY);
           //console.log('toolbaroffset = ' + toolbaroffset);  
           var st = window.pageYOffset || document.documentElement.scrollTop; 
           
@@ -562,7 +572,7 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
         }
         window.addEventListener('scroll', stickyNavigation);
       }
-      initToolbar();
+      scrollActions();
     </script>
   </body>
 </html>

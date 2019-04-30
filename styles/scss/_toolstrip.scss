@@ -13,7 +13,8 @@
 .fixed-nav {
 	position: fixed;
 	top: calc(var(--baseline) * 1);
-	width: 100%;
+  width: 100%;
+  z-index: 2;
 }
 
 
