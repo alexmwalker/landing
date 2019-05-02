@@ -15,6 +15,14 @@ script(src="scripts/jquery-3.4.0.min.js")
 script(src="scripts/prism.js")
 
 script.
+  var currentgrid =       $(":root").css("--basegrid");
+  var currentgridtablet = $(":root").css("--basegrid-tablet");
+  var currentgridlaptop = $(":root").css("--basegrid-laptop");
+  var currentgridwide =   $(":root").css("--basegrid-wide");
+  var newcurrentgrid;
+  var newcurrentgridtablet;
+  var newcurrentgridlaptop;
+  var newcurrentgridwide;
   $(document).ready(function(){
     $('.showmobile').click(function(){
       $(this).toggleClass('open');
@@ -29,11 +37,48 @@ script.
     $('#showfontchanger').click(function(){
       $('#font-adjuster-container').toggleClass('open');
     });
-    $('#decfontsize').click(function(){
-      $( "<b></b>" ).html( $( ":root" )[ 0 ].nodeName ).appendTo( "#log" );
-    });    
 
+    $('.fontsizedown').click(function(){
+      newcurrentgrid = parseInt(currentgrid,10) - 4 +'px';   
+      $(":root").css("--basegrid", newcurrentgrid);
+      console.log("currentgrid: "+currentgrid); 
+      console.log("newcurrentgrid: "+newcurrentgrid); 
+      currentgrid = newcurrentgrid;
+
+      newcurrentgridtablet = parseInt(currentgridtablet,10) - 4 +'px';  
+      $(":root").css("--basegrid-tablet", newcurrentgridtablet);
+      console.log("currentgridtablet: "+currentgridtablet); 
+      console.log("newcurrentgridtablet: "+newcurrentgridtablet);
+      currentgridtablet = newcurrentgridtablet;
+
+      newcurrentgridlaptop = parseInt(currentgridlaptop,10) - 4 +'px';   
+      $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
+      currentgridlaptop = newcurrentgridlaptop;
+
+      newcurrentgridwide = parseInt(currentgridwide,10) - 4 +'px';   
+      $(":root").css("--basegrid-wide", newcurrentgridwide);
+      currentgridwide = newcurrentgridwide;
+    });    
+    $('.fontsizeup').click(function(){
+      newcurrentgrid = parseInt(currentgrid,10) + 4 +'px';   
+      $(":root").css("--basegrid", newcurrentgrid);
+      currentgrid = newcurrentgrid;
+
+      newcurrentgridtablet = parseInt(currentgridtablet,10) + 4 +'px';   
+      $(":root").css("--basegrid-tablet", newcurrentgridtablet);
+      currentgridtablet = newcurrentgridtablet;
+
+      newcurrentgridlaptop = parseInt(currentgridlaptop,10) + 4 +'px';   
+      $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
+      currentgridlaptop = newcurrentgridlaptop;
+
+      newcurrentgridwide = parseInt(currentgridwide,10) + 4 +'px';   
+      $(":root").css("--basegrid-wide", newcurrentgridwide);
+      currentgridwide = newcurrentgridwide;
+
+    });
   });
+
     $(window).resize(function(){ /* close the menu on screen resize */
       $('.showmobile' ).removeClass('open');
       $('.mobilenav'  ).removeClass('open');
@@ -61,7 +106,7 @@ script.
 
     function stickyNavigation() {
       //console.log('navTop = ' + navTop);
-      console.log('scrollY = ' + window.scrollY);
+      //console.log('scrollY = ' + window.scrollY);
       //console.log('toolbaroffset = ' + toolbaroffset);  
       var st = window.pageYOffset || document.documentElement.scrollTop; 
       

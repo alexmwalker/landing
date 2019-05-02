@@ -25,9 +25,9 @@ header.sitepoint-branding
             a(href='#') Dashboard
           li.mobile-controls 
             a(href='#')
-              button.go A -
+              button.fontsizedown.go A -
             a(href='#')
-              button.go A +
+              button.fontsizeup.go A +
           li.logged-in.mobile-controls
             form(action="search.html")                
               input#mobilesearch.form-control(name='mobilesearch', type='text', placeholder='Search books...')
@@ -36,12 +36,11 @@ header.sitepoint-branding
       .col-6_md-8_sm-hidden
         ul.nav
           li#font-adjuster-wrapper
-            a#showfontchanger(href='#')
-              | A ±
-              #font-adjuster-container
-                span Text-size:
-                a#decfontsize(src='#') A-
-                a#incfontsize(src='#') A+
+            a#showfontchanger(href='#') A ±
+            #font-adjuster-container
+              span Text-size:
+              button.fontsizedown.go A-
+              button.fontsizeup.go A+
           li
             a(href='#') 
               i.l-mr2.fas.fa-books 
