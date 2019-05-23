@@ -1,0 +1,142 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title SitePoint - Learn with Books, Video and Code
+    meta(name='description', content='SitePoint Styleguide')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', type='text/css', href='styles/css/styleguide.css')
+    script(src='scripts/typography.js')
+
+  body.vr.borders
+
+    .container
+      header.grid-center
+        .col-3
+          .device
+          br
+          ul.minor.clearleft
+            li
+              | Grid : 
+              strong
+                span.mobile-only  12px 
+                span.tablet-only  14px 
+                span.laptop-only  16px 
+                span.wide-only    18px 
+        .col-9
+          h1.major SitePoint StyleGuide
+          h2.no-margin-top-1.light
+            | Grid &amp; Type:   
+            span.mobile-only  mobile
+            span.tablet-only  tablet
+            span.laptop-only  laptop
+            span.wide-only    wide-screens
+          ul.minor
+            li
+              | The base HTML 
+              code font-size
+              |  on 
+              strong
+                span.mobile-only  mobile
+                span.tablet-only  tablet
+                span.laptop-only  laptop
+                span.wide-only    wide-screens
+              |           is 
+              strong
+                span.mobile-only  13.5px
+                span.tablet-only  15.75px
+                span.laptop-only  18px
+                span.wide-only    20.25px
+            li
+              | The base HTML 
+              code line-height
+              |  (i.e. 
+              code --baseline
+              |  in my SCSS) in the 'basic-grid-typography' setup
+              strong  32/18
+              |   or 
+              strong 1.777778rem
+              |  ( 
+              strong
+                span.mobile-only  32px 
+                span.tablet-only  28px 
+                span.laptop-only  32px
+                span.wide-only  36px
+              |  in 
+              i this
+              |  grid).
+            li
+              | A single grid row is 
+              strong half of 1.777778rem
+              |    ––   or 
+              strong 0.8888889rem
+              | .
+            li
+              code Margin
+              | s and 
+              code padding
+              | s should ALWAYS be multiples of these numbers to maintain vertical rhythm.
+      p Here's a section - breadcrumb
+      h1.report SitePoint Typography Major Heading two-line title Typography Major Heading
+      p.report
+        | A small wax and sawdust log burned on the grate. A carton of five more sat ready on the hearth. He got up from the sofa and put them all in the fireplace. He watched until they flamed. Then he finished his soda and made for the patio door. On the way, he saw the pies lined up on the sideboard. He stacked them in his arms, all six, one for every ten times she had ever betrayed him.
+      p
+        | He left through the patio door. He was not certain, but he thought he had proved something. He hoped he had made something clear. The thing was, they had to have a serious talk soon. There were things that needed talking about, important things that had to be discussed. They’d talk again. Maybe after the holidays were over and things got back to normal. He’d tell her the goddamn ashtray was a goddamn dish, for example.
+      p
+        | We opened our eyes and turned in bed to take a good look at each other. We both knew it then. We'd reached the end of something, and the thing was to find out where new to start.
+      p.minor.report
+        | This is an especially small paragraph style not designed for large, wide body text areas. It is best suited to be used in visually dense or complex UI elements like cards, bio panels, and testimonial layouts. It tends to work well with H5 headings.
+      h2.report One Morning, When Gregor Samsa Woke Samsa Woke
+      p
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+      p
+        | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+      h3.report
+        | One Morning, When Gregor Samsa Woke
+        br
+        |    Samsa Woke
+      p
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+      p
+        | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+      h4.report One Morning, When Gregor Samsa Woke
+      p
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+      p
+        | They had laughed. They had leaned on each other and laughed until the tears had come, while everything else--the cold, and where he'd go in it–was outside, for a while anyway.
+      ul.report
+        li One point
+        li Two points
+        li Three points
+        li Four points
+        li Five points
+      h5.report A small wax and sawdust log burned on the grate
+      p.minor
+        | Drinking’s funny. When I look back on it, all of our important decisions have been figured out when we were drinking. Even when we talked about having to cut back on drinking, we’d be sitting at the kitchen table or out at the picnic table with a six-pack or whiskey.
+      h5 One Morning, When Gregor Samsa Woke
+      .grid-center
+        .col-3
+          p.small
+            | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+          p.small
+            | It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+        .col-3
+          p.small
+            | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+          p.small
+            | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought.
+        .col-3
+          h5 One Morning, When Gregor Samsa Woke
+          p.small
+            | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+        .col-3
+          p.small
+            | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+          p.small
+            | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+      p.minor
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+      p.minor
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+

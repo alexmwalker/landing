@@ -250,7 +250,14 @@ button.go{
   font-weight: 600;
   color: #ddd;
   border: 3px #888 solid;
+  white-space: pre;
+
   &:hover{
+    color: #fff;
+    background: #000;
+  }
+  &:active{
+    background: #b00b55;
     color: #fff;
   }
 }
@@ -299,17 +306,13 @@ button.go{
 }
 
 #font-adjuster-container .go{
-  background-color: #222;
-  border-radius: 5px;
-  width: 3rem;
   font-size: 1rem;
   padding: 0 0.5rem;
   margin: 0 0 0 0.5rem;
   z-index: 999;
-  //cursor: hand;
-  &:hover{
-    background-color: red;
-  }
+  width: 3rem;
+  //cursor: hand;*/
+
 }
 
 

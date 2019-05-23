@@ -1,0 +1,32 @@
+.holder {
+  background: #09042A;
+  width: 400px;
+  height: 600px;
+  background-size: 400px 300px; }
+
+* {
+  position: fixed;
+  margin: 0; }
+
+p, i {
+  height: 150;
+  width: 250;
+  margin: 75;
+  background: -webkit-radial-gradient(#E78481 70%, #0000 70%) no-repeat;
+  background: -o-radial-gradient(#E78481 70%, #0000 70%) no-repeat;
+  background: radial-gradient(#E78481 70%, #0000 70%) no-repeat;
+  background-size: 150px 150px;
+  outline: 1px red dashed;
+  background-position-x: 100%; }
+
+i {
+  display: block;
+  background: #7B3F61 -webkit-radial-gradient(#09042A 70%, #7B3F61 70%) no-repeat;
+  background: #7B3F61 -o-radial-gradient(#09042A 70%, #7B3F61 70%) no-repeat;
+  background: #7B3F61 radial-gradient(#09042A 70%, #7B3F61 70%) no-repeat;
+  background-position-x: 100px;
+  margin: 0;
+  width: 150;
+  border-radius: 50%; }
+
+/*# sourceMappingURL=cssbattles.css.map */

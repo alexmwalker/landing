@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500");
+:root {
+  --typescale: 1.25;
+  /*the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
+  --baselineratio: calc(16/9);
+  /* The 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
+  --basegrid: 24px;
+  /* phone */
+  --basegrid-tablet: 28px;
+  --basegrid-laptop: 32px;
+  --basegrid-wide: 36px;
+  --baseline: calc(var(--baselineratio) * 1rem);
+  /*--baseline: 1.7778 * 1rem;*/
+  --basefont: calc(var(--basegrid) / var(--baselineratio));
+  --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
+  --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
+  --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
+  font-family: Roboto, sans-serif;
+  font-weight: 300; }
+
+.wrapper {
+  /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
+  max-width: 58rem;
+  margin: 0 auto; }
+
+:root {
+  /* DEFAULT - mobile */
+  font-size: var(--basefont);
+  line-height: var(--baseline); }
+
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  :root {
+    font-size: var(--basefont-tablet); } }
+
+/* Large devices (desktops, 62em and up) */
+@media (min-width: 62em) {
+  :root {
+    font-size: var(--basefont-laptop); } }
+
+/* Extra large devices (large desktops, 75em and up)*/
+@media (min-width: 75em) {
+  :root {
+    font-size: var(--basefont-wide); } }
+
+/* The New Typography */
+h1, .is-size1 {
+  font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
+  line-height: calc(var(--baseline) * 2);
+  /* 4 grid lines */
+  margin-top: var(--baseline);
+  margin-bottom: var(--baseline);
+  font-weight: 400; }
+
+h2, .is-size2 {
+  font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
+  line-height: calc(var(--baseline) * 1.5);
+  margin-top: 0rem;
+  margin-bottom: calc(var(--baseline) / 2);
+  font-weight: 400; }
+
+h3, .is-size-3, .h3 {
+  font-size: calc(var(--typescale) * var(--typescale) * 1rem);
+  line-height: calc(var(--baseline) * 1);
+  margin-top: 0;
+  margin-bottom: calc(var(--baseline) / 2);
+  font-weight: 400; }
+
+h4, .is-size-h4 {
+  font-size: calc(var(--typescale) * 1rem);
+  line-height: calc(var(--baseline) * 1);
+  margin-top: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) * 1);
+  font-weight: 400; }
+
+h5, .is-size-5 {
+  font-size: 1rem;
+  line-height: calc(var(--baseline) / 2);
+  margin-top: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / 2);
+  font-weight: 400;
+  text-transform: capitalize; }
+
+p, ul, ol, pre, table, blockquote, .is-size-base {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0rem;
+  line-height: calc(var(--baseline) / 1);
+  margin-bottom: calc(var(--baseline) / 1); }
+
+.major {
+  font-weight: 500;
+  font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
+  line-height: calc(var(--baseline) * 3); }
+
+.minor {
+  font-size: calc(1rem / var(--typescale));
+  line-height: calc(var(--baseline) / 1);
+  margin-top: 0;
+  margin-bottom: calc(var(--baseline) / 1); }
+
+.small {
+  font-size: calc(1rem / var(--typescale) / var(--typescale));
+  line-height: calc(var(--baseline) / 2);
+  margin-top: 0;
+  margin-bottom: calc(var(--baseline) / 2); }
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem; }
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0; }
+
+b, i, strong, em, small, code {
+  line-height: 0; }
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+a:link {
+  text-decoration: none;
+  color: #333; }
+
+/* CSS RESETS */
+body {
+  margin: 0;
+  padding: 0; }
+
+/*  vertical grid lines */
+.vr {
+  position: relative; }
+
+.vr:after {
+  position: absolute;
+  width: auto;
+  height: 600vh;
+  z-index: 9999;
+  content: '';
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: var(--baseline) var(--baseline);
+  background-image: -webkit-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
+  background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%); }
+
+/*# sourceMappingURL=_basetype.css.map */

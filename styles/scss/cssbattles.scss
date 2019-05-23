@@ -1,0 +1,25 @@
+.holder{
+  background: #09042A;
+  //background-image: url(../../images/15@2x.png);
+  width:400px;
+  height:600px;
+  background-size: 400px 300px;
+}
+*{position:fixed;margin:0;}
+p,i{
+  height:150;
+  width:250;
+  margin:75;
+  background:radial-gradient(#E78481 70%,#0000 70%) no-repeat;
+  background-size:150px 150px;
+  outline: 1px red dashed;
+  background-position-x:100%;
+}
+i{display: block;
+  background:#7B3F61 radial-gradient(#09042A 70%,#7B3F61 70%) no-repeat;
+  background-position-x:100px;
+  margin:0;
+  width:150;
+  border-radius:50%;
+}
+// #E78481 #09042A #7B3F61
