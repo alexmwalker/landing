@@ -20,6 +20,7 @@
     order: 0;
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
+    position: relative;
     flex: 0 1 auto;
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
@@ -255,6 +256,7 @@ button.go{
   &:hover{
     color: #fff;
     background: #000;
+    transition: all .15s ease-out;
   }
   &:active{
     background: #b00b55;
@@ -283,6 +285,7 @@ button.go{
 #font-adjuster-wrapper {
   top: 1px;
   font-weight: 500;
+  width:2rem;
 }
 #font-adjuster-container {
   background-color: #000;
@@ -290,14 +293,14 @@ button.go{
   padding: 0 1rem;
   position: relative;
   color: #fff;
-  left: 70%;
+  left: -3rem;
   top: -1px;
   //border-top: 1px solid #333;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   transition: all .25s cubic-bezier(.49,-0.32,.42,1.35);
   opacity: 0;
-  width: 100%;
+  width: 14rem;
 }
 
 #font-adjuster-container.open {
@@ -312,10 +315,36 @@ button.go{
   z-index: 999;
   width: 3rem;
   //cursor: hand;*/
-
+  &:hover{
+    border-color:#fff;
+  }
 }
 
+input#darkmode{
+  width: 2rem;
+  height: 3rem;
+  position: relative;
+  opacity: 0;
+  &:checked{
+    &+ svg{
+      outline: 1px red dashed;
+    }
+  }
+  &+ svg{
+      //outline: 1px yellow dashed;
+      position: absolute;
+      pointer-events: none;
+      top: 1.2rem;
+      left: 0.35rem;
+  }
+  
+}
 
+.svg-icon{
+  height: 1.25rem;
+  width: 1.25rem;
+  margin:0 0.5rem -0.25rem;
+}
 
 @media (max-width: 48em) {
   .showmobile{

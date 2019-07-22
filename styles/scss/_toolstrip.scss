@@ -17,6 +17,9 @@
   z-index: 2;
 }
 
+#downloadBook svg{
+margin:0 0 -0.6rem 1rem;
+}
 
 .toolbar {
   height: calc(var(--baseline) * 1.5);
@@ -26,7 +29,7 @@
 .toolbar a.toolbarLink:first-of-type {
   border-left: 1px #383838 solid;
 }
-.toolbar a.toolbarLink {
+.toolbar .toolbarLink {
   color: #eee;
   font-weight: 400;
   width: 100%;
@@ -37,10 +40,18 @@
   font-size: calc(1rem /  var(--typescale));
   &:hover{
     font-weight: 500;
-    background-color: #000;
+    background-color: #111;
+    transition: all .2s ease-out;
   }
 }
 
+/* Center  */
+#offlinemode{
+  height: calc(var(--baseline) * 1.5);
+  .state{
+    margin:.8889rem;
+  }
+}
 
 /* ==== Chapter menu  === */ 
 
@@ -103,3 +114,5 @@ li.toc-chapter{
   width: 85%;
   overflow: hidden;
 }
+
+
