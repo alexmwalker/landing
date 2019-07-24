@@ -1,14 +1,22 @@
-/* chapter */ 
+/* chapter 
+:root {
+--basebackground: #fff; // flipped in dark mode
+--basefontcolor: #222;
+}*/ 
 
 #reeedr-body {
-  color: #333;
+  background-color:  var(--basebackground);
+  color: var(--basefontcolor);
   margin-bottom: 0;
-  background-color: #fff;
   margin-top: 0;
   width: 100%;
+  transition: all .6s;
 }
 
-
+#reeedr-body.dark {
+  background-color:  #111518;
+  color: #ddd;
+}
 
 #reeedr .ch-head  {
   font-size: 9rem;

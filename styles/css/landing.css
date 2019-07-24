@@ -14,6 +14,8 @@
   --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
   --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
   --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
+  --basebackground: #fff;
+  --basefontcolor: #222;
   font-family: Roboto, sans-serif;
   font-weight: 300; }
 
@@ -133,6 +135,10 @@ sub {
   bottom: -0.25em; }
 
 a:link {
+  text-decoration: none;
+  color: #333; }
+
+a:visited {
   text-decoration: none;
   color: #333; }
 

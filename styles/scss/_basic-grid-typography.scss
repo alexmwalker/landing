@@ -13,6 +13,9 @@
   --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
   --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
 
+  --basebackground: #fff; // flipped in dark mode
+  --basefontcolor: #222;
+
   font-family: Roboto, sans-serif;
   font-weight: 300;
   
@@ -43,7 +46,7 @@ xs: 36em
 @media (min-width: 48em) { 
   :root  {
     font-size: var(--basefont-tablet);
-    --typescale: 1.25;
+    --typescale: 1.25; // we ramp up the typescale on non-phone screens. This means h1s are larger than Ps in RELATIVE terms on non-phones
   }
 }
 
@@ -152,7 +155,7 @@ b, i, strong, em, small, code {
 
 
 
-sub, sup {
+sub, sup { 
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -167,6 +170,10 @@ sub {
 }
 
 a:link{
+	text-decoration: none;
+	color: #333;
+}
+a:visited{
 	text-decoration: none;
 	color: #333;
 }

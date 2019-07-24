@@ -14,6 +14,8 @@
   --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
   --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
   --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
+  --basebackground: #fff;
+  --basefontcolor: #222;
   font-family: Roboto, sans-serif;
   font-weight: 300; }
 
@@ -133,6 +135,10 @@ sub {
   bottom: -0.25em; }
 
 a:link {
+  text-decoration: none;
+  color: #333; }
+
+a:visited {
   text-decoration: none;
   color: #333; }
 
@@ -2403,13 +2409,15 @@ button.go {
   -o-transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   opacity: 0;
-  width: 14rem; }
+  width: 14rem;
+  pointer-events: none; }
 
 #font-adjuster-container.open {
   -webkit-transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   -o-transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
-  opacity: 1; }
+  opacity: 1;
+  pointer-events: auto; }
 
 #font-adjuster-container .go {
   font-size: 1rem;
@@ -2422,16 +2430,31 @@ button.go {
 
 input#darkmode {
   width: 2rem;
-  height: 3rem;
+  height: 1.5rem;
   position: relative;
-  opacity: 0; }
+  opacity: 0;
+  cursor: pointer; }
   input#darkmode:checked + svg {
-    outline: 1px red dashed; }
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s; }
   input#darkmode + svg {
-    position: absolute;
     pointer-events: none;
-    top: 1.2rem;
-    left: 0.35rem; }
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin: 0 0 0 -2.5rem;
+    cursor: pointer; }
 
 .svg-icon {
   height: 1.25rem;
@@ -2587,13 +2610,24 @@ li.toc-chapter {
   width: 85%;
   overflow: hidden; }
 
-/* chapter */
+/* chapter 
+:root {
+--basebackground: #fff; // flipped in dark mode
+--basefontcolor: #222;
+}*/
 #reeedr-body {
-  color: #333;
+  background-color: var(--basebackground);
+  color: var(--basefontcolor);
   margin-bottom: 0;
-  background-color: #fff;
   margin-top: 0;
-  width: 100%; }
+  width: 100%;
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s; }
+
+#reeedr-body.dark {
+  background-color: #111518;
+  color: #ddd; }
 
 #reeedr .ch-head {
   font-size: 9rem;
@@ -2685,6 +2719,10 @@ footer.mainfooter {
   footer.mainfooter ul li a {
     color: #ddd; }
 
+#reeedr-body.dark {
+  background-color: #111518;
+  color: #ddd; }
+
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
 .showmobile {
@@ -2694,7 +2732,7 @@ that need device level targeting. This is where we do it. */
   /* tablet adjustments */
   /* none right now */ }
 
-/* ========   Switching up the font sizing for books on the phone   ============= */
+/* ========   Switching up the heading line-height sizing for books on the phone   ============= */
 @media (max-width: 48em) {
   h1, .is-size1 {
     line-height: calc(var(--baseline) * 1.5);

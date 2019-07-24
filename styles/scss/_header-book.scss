@@ -301,11 +301,13 @@ button.go{
   transition: all .25s cubic-bezier(.49,-0.32,.42,1.35);
   opacity: 0;
   width: 14rem;
+  pointer-events: none;
 }
 
 #font-adjuster-container.open {
   transition: all .25s cubic-bezier(.49,-0.32,.42,1.35);
   opacity: 1;
+  pointer-events: auto;
 }
 
 #font-adjuster-container .go{
@@ -322,20 +324,25 @@ button.go{
 
 input#darkmode{
   width: 2rem;
-  height: 3rem;
+  height: 1.5rem;
   position: relative;
   opacity: 0;
+  cursor: pointer;
   &:checked{
     &+ svg{
-      outline: 1px red dashed;
+      //outline: 1px red dashed; // only added outline temporarily to show if checkbox is working
+      transform: rotate(180deg);
+      transition: transform .3s;
     }
   }
   &+ svg{
       //outline: 1px yellow dashed;
-      position: absolute;
+      //position: absolute;
       pointer-events: none;
-      top: 1.2rem;
-      left: 0.35rem;
+      transition: transform .3s;
+      transform: rotate(0deg);
+      margin: 0 0 0 -2.5rem;
+      cursor: pointer;
   }
   
 }
