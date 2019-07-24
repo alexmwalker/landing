@@ -16,6 +16,8 @@
   --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
   --basebackground: #fff;
   --basefontcolor: #222;
+  --basebackground-dark:  #111518;
+  --basefontcolor-dark: #ddd;
   font-family: Roboto, sans-serif;
   font-weight: 300; }
 
@@ -1854,6 +1856,9 @@ to change directly - chiefly Prism JS at this stage -
     background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
     background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%); } }
 
+#reeedr-body pre[class*="language-"] {
+  margin: 0.5em 0 calc(var(--baseline) / 1); }
+
 /*  feature boxes  */
 .box {
   background-color: #f5faff;
@@ -2721,7 +2726,8 @@ footer.mainfooter {
 
 #reeedr-body.dark {
   /* Code blocks */
-  /* Inline code */ }
+  /* Inline code */
+  /* Block quotes  */ }
   #reeedr-body.dark code[class*="language-"],
   #reeedr-body.dark pre[class*="language-"] {
     color: #ccc;
@@ -2802,7 +2808,33 @@ footer.mainfooter {
     cursor: help; }
   #reeedr-body.dark .token.inserted {
     color: green; }
+  #reeedr-body.dark a:visited {
+    text-decoration: none;
+    color: #ace; }
+  #reeedr-body.dark a:link {
+    text-decoration: none;
+    color: #ace; }
+  #reeedr-body.dark p code, #reeedr-body.dark li code {
+    background: #2d2d2d; }
+  #reeedr-body.dark blockquote {
+    background: #505275;
+    border-left: 5px solid var(--basebackground); }
+    #reeedr-body.dark blockquote p {
+      color: #c6c8dd; }
+  #reeedr-body.dark .box {
+    background-color: #123;
+    border: 0px var(--basefontcolor-dark) solid; }
+  #reeedr-body.dark .box h4 {
+    background-color: #345;
+    color: #abc; }
+  #reeedr-body.dark h1.chaptertitle {
+    color: #abc; }
 
+/*
+background-color:  #111518;
+color: #ddd;
+
+*/
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
 .showmobile {

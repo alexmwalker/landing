@@ -16,6 +16,8 @@
   --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
   --basebackground: #fff;
   --basefontcolor: #222;
+  --basebackground-dark:  #111518;
+  --basefontcolor-dark: #ddd;
   font-family: Roboto, sans-serif;
   font-weight: 300; }
 

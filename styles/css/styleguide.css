@@ -16,6 +16,8 @@
   --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
   --basebackground: #fff;
   --basefontcolor: #222;
+  --basebackground-dark:  #111518;
+  --basefontcolor-dark: #ddd;
   font-family: Roboto, sans-serif;
   font-weight: 300; }
 
@@ -1729,6 +1731,9 @@ to change directly - chiefly Prism JS at this stage -
     background-image: -webkit-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
     background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
     background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%); } }
+
+#reeedr-body pre[class*="language-"] {
+  margin: 0.5em 0 calc(var(--baseline) / 1); }
 
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */

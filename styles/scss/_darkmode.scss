@@ -1,6 +1,7 @@
 #reeedr-body.dark {
   background-color:  #111518;
   color: #ddd;
+
 }
 
 
@@ -121,4 +122,51 @@
  .token.inserted {
    color: green;
  }
+
+/* Block quotes  */
+
+a:visited {
+  text-decoration: none;
+  color: #ace;
 }
+a:link {
+  text-decoration: none;
+  color: #ace;
+}
+p, li {
+  code{
+    background: #2d2d2d;
+  }
+}
+
+
+blockquote {
+  background: #505275; 
+  border-left: 5px solid var(--basebackground);
+  p {
+      color: #c6c8dd;
+  }
+}
+
+.box {
+  background-color: #123;
+  border: 0px var(--basefontcolor-dark) solid;
+}
+
+.box h4 {
+  background-color: #345;
+  color: #abc;
+}
+
+
+h1.chaptertitle {
+  color: #abc;
+}
+
+
+}
+/*
+background-color:  #111518;
+color: #ddd;
+
+*/

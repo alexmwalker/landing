@@ -27,3 +27,7 @@ to change directly - chiefly Prism JS at this stage -
   }
 }
 
+#reeedr-body pre[class*="language-"] {
+  margin: .5em 0 calc(var(--baseline) / 1);
+}
+
