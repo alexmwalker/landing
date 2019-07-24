@@ -2625,10 +2625,6 @@ li.toc-chapter {
   -o-transition: all .6s;
   transition: all .6s; }
 
-#reeedr-body.dark {
-  background-color: #111518;
-  color: #ddd; }
-
 #reeedr .ch-head {
   font-size: 9rem;
   color: #445266;
@@ -2722,6 +2718,90 @@ footer.mainfooter {
 #reeedr-body.dark {
   background-color: #111518;
   color: #ddd; }
+
+#reeedr-body.dark {
+  /* Code blocks */
+  /* Inline code */ }
+  #reeedr-body.dark code[class*="language-"],
+  #reeedr-body.dark pre[class*="language-"] {
+    color: #ccc;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    text-shadow: 0 1px #000;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none; }
+  #reeedr-body.dark pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto; }
+  #reeedr-body.dark :not(pre) > code[class*="language-"],
+  #reeedr-body.dark pre[class*="language-"] {
+    background: #2d2d2d; }
+  #reeedr-body.dark :not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal; }
+  #reeedr-body.dark .token.comment,
+  #reeedr-body.dark .token.block-comment,
+  #reeedr-body.dark .token.prolog,
+  #reeedr-body.dark .token.doctype,
+  #reeedr-body.dark .token.cdata {
+    color: #999; }
+  #reeedr-body.dark .token.punctuation {
+    color: #ccc; }
+  #reeedr-body.dark .token.tag,
+  #reeedr-body.dark .token.attr-name,
+  #reeedr-body.dark .token.namespace,
+  #reeedr-body.dark .token.deleted {
+    color: #e2777a; }
+  #reeedr-body.dark .token.function-name {
+    color: #6196cc; }
+  #reeedr-body.dark .token.boolean,
+  #reeedr-body.dark .token.number,
+  #reeedr-body.dark .token.function {
+    color: #f08d49; }
+  #reeedr-body.dark .token.property,
+  #reeedr-body.dark .token.class-name,
+  #reeedr-body.dark .token.constant,
+  #reeedr-body.dark .token.symbol {
+    color: #f8c555; }
+  #reeedr-body.dark .token.selector,
+  #reeedr-body.dark .token.important,
+  #reeedr-body.dark .token.atrule,
+  #reeedr-body.dark .token.keyword,
+  #reeedr-body.dark .token.builtin {
+    color: #cc99cd; }
+  #reeedr-body.dark .token.string,
+  #reeedr-body.dark .token.char,
+  #reeedr-body.dark .token.attr-value,
+  #reeedr-body.dark .token.regex,
+  #reeedr-body.dark .token.variable {
+    color: #7ec699; }
+  #reeedr-body.dark .token.operator,
+  #reeedr-body.dark .token.entity,
+  #reeedr-body.dark .token.url {
+    color: #67cdcc; }
+  #reeedr-body.dark .token.important,
+  #reeedr-body.dark .token.bold {
+    font-weight: bold; }
+  #reeedr-body.dark .token.italic {
+    font-style: italic; }
+  #reeedr-body.dark .token.entity {
+    cursor: help; }
+  #reeedr-body.dark .token.inserted {
+    color: green; }
 
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
