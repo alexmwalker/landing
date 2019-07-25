@@ -2625,6 +2625,7 @@ li.toc-chapter {
   color: var(--basefontcolor);
   margin-bottom: 0;
   margin-top: 0;
+  padding: 0 0 calc(var(--baseline) * 2);
   width: 100%;
   -webkit-transition: all .6s;
   -o-transition: all .6s;
@@ -2720,7 +2721,8 @@ li.toc-chapter {
 footer.mainfooter {
   background: #3D383E;
   width: 100%;
-  margin: calc(var(--baseline) * 1) 0 0 0;
+  margin: 0;
+  padding: 0 0;
   font-size: .75rem;
   color: #ccc; }
   footer.mainfooter ul li a {
