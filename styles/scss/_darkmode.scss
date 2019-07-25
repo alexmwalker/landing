@@ -1,11 +1,11 @@
-#reeedr-body.dark {
-  background-color:  #111518;
+#reeedr.dark #reeedr-body{
+  background-color:  #10171f;
   color: #ddd;
 
 }
 
 
-#reeedr-body.dark {
+#reeedr.dark #reeedr-body{
  code[class*="language-"],
  pre[class*="language-"] {
    color: #ccc;
@@ -22,24 +22,21 @@
    -moz-tab-size: 4;
    -o-tab-size: 4;
    tab-size: 4;
- 
    -webkit-hyphens: none;
    -moz-hyphens: none;
    -ms-hyphens: none;
    hyphens: none;
- 
  }
  
  /* Code blocks */
  pre[class*="language-"] {
    padding: 1em;
-   margin: .5em 0;
    overflow: auto;
  }
  
  :not(pre) > code[class*="language-"],
  pre[class*="language-"] {
-   background: #2d2d2d;
+   background: #20272f;
  }
  
  /* Inline code */
@@ -141,7 +138,7 @@ p, li {
 
 
 blockquote {
-  background: #505275; 
+  background: #50575f; 
   border-left: 5px solid var(--basebackground);
   p {
       color: #c6c8dd;
@@ -149,24 +146,32 @@ blockquote {
 }
 
 .box {
-  background-color: #123;
+  background-color: #20272f;
   border: 0px var(--basefontcolor-dark) solid;
 }
 
 .box h4 {
-  background-color: #345;
-  color: #abc;
+  background-color: #30373f;
+  color: #b0b7bf;
+}
+
+  h1.chaptertitle {
+    color: #b0b7bf;
+  }
+
+  .author {
+    color: #d0d7df;
+  }
+
+ 
+
+  a:link {
+    border-bottom: 1px dotted #50575f;
+}
 }
 
 
-h1.chaptertitle {
-  color: #abc;
+ /* hero panel */ 
+#reeedr.dark .bookpanel {
+  background-color: #20272f;
 }
-
-
-}
-/*
-background-color:  #111518;
-color: #ddd;
-
-*/

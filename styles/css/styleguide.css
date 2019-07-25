@@ -138,11 +138,11 @@ sub {
 
 a:link {
   text-decoration: none;
-  color: #333; }
+  color: #20272f; }
 
 a:visited {
   text-decoration: none;
-  color: #333; }
+  color: #20272f; }
 
 ::-webkit-input-placeholder {
   color: #bbb; }
@@ -1733,7 +1733,7 @@ to change directly - chiefly Prism JS at this stage -
     background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%); } }
 
 #reeedr-body pre[class*="language-"] {
-  margin: 0.5em 0 calc(var(--baseline) / 1); }
+  margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) * 2); }
 
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */

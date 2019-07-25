@@ -174,11 +174,11 @@ sub {
 
 a:link{
 	text-decoration: none;
-	color: #333;
+  color: #20272f;
 }
 a:visited{
 	text-decoration: none;
-	color: #333;
+	color: #20272f;
 }
 ::placeholder{
   color: #bbb;
@@ -219,17 +219,17 @@ body, figure{
 }
 
 .vr:after {
-    position: absolute;
-    width: auto;
-    height: 1000vh;
-    z-index: 9999;
-    content: '';
-    display: block;
-    pointer-events: none;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  width: auto;
+  height: 1000vh;
+  z-index: 9999;
+  content: '';
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-size: var(--baseline) var(--baseline);
   background-image: repeating-linear-gradient(to bottom,rgba(173, 0, 0, 0.04) 0%,rgba(173, 0, 0, 0.04) 50%,rgba(0, 0, 0, 0) 50.01%,rgba(0, 0, 0, 0) 100%);
   

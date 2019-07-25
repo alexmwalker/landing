@@ -138,11 +138,11 @@ sub {
 
 a:link {
   text-decoration: none;
-  color: #333; }
+  color: #20272f; }
 
 a:visited {
   text-decoration: none;
-  color: #333; }
+  color: #20272f; }
 
 ::-webkit-input-placeholder {
   color: #bbb; }
