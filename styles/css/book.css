@@ -2845,6 +2845,9 @@ footer.mainfooter {
 #reeedr.dark .bookpanel {
   background-color: #20272f; }
 
+#reeedr.dark #toolstrip {
+  background-color: #00070f; }
+
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
 .showmobile {

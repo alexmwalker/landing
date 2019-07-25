@@ -172,6 +172,11 @@ blockquote {
 
 
  /* hero panel */ 
-#reeedr.dark .bookpanel {
-  background-color: #20272f;
+#reeedr.dark {
+  .bookpanel {
+    background-color: #20272f;
+  }
+  #toolstrip {
+    background-color: #00070f;
+  }
 }
