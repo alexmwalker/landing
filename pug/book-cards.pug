@@ -133,11 +133,17 @@ section.bodycontent
                   .frame
                     img.cover(src= card.imgcover)
                     span(class=typeof card.opened === "undefined" ? "" : "opened") 
+                  .pretty.p-switch.p-fill
+                    input(type='checkbox')
+                    .state.p-success
+                      label Offline Access 
                   figcaption= card.title
-                span.toggler    
+
+                //span.toggler    
                   input(type="checkbox" unchecked)
+
         
-        mixin expanded-card(card)
+        //mixin expanded-card(card)
           .grid
             .col-12.expanded
               .grid-noGutter
@@ -167,7 +173,7 @@ section.bodycontent
           for card in cardJSList
             +book-card(card)
 
-          for card in cardJSList
+          //for card in cardJSList
             +expanded-card(card)
 
         //include expanded.pug 
@@ -181,7 +187,7 @@ section.bodycontent
           for card in cardHTMLList
             +book-card(card)
 
-          for card in cardHTMLList
+          //for card in cardHTMLList
             +expanded-card(card)
 
         .grid
@@ -191,7 +197,7 @@ section.bodycontent
           for card in cardCSSList
             +book-card(card)
 
-          for card in cardCSSList
+          //for card in cardCSSList
             +expanded-card(card)
 
         .grid
@@ -201,5 +207,5 @@ section.bodycontent
           for card in cardBootstrapList
             +book-card(card)
 
-          for card in cardCSSList
+          //for card in cardCSSList
             +expanded-card(card)

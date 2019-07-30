@@ -1565,7 +1565,6 @@ button.pink {
     line-height: calc(var(--baseline)* 1.0); }
 
 label {
-  width: 5rem;
   display: block;
   float: left; }
 

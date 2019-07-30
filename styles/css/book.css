@@ -2535,7 +2535,6 @@ input#darkmode {
   font-size: calc(1rem /  var(--typescale)); }
   .toolbar .toolbarLink:hover {
     font-weight: 500;
-    background-color: #111;
     -webkit-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out; }
