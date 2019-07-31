@@ -63,6 +63,8 @@ $dialog-speed: 9s;
   opacity: 0;
   position: absolute;
   width: 283px;
+  height: calc(var(--baseline) * 2.5);
+  overflow: hidden;
   background: #333333;
   padding: calc(var(--baseline) / 2) 0;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
@@ -86,23 +88,27 @@ $dialog-speed: 9s;
 .button-library {
   width:  calc(var(--baseline) * 1);
   height:  calc(var(--baseline) * 1);
-  margin: calc(var(--baseline) / 2);
+  margin: 0 calc(var(--baseline) / 2);
   float: left;
-  outline: 1px red dashed;
-
+  border-radius: 4px;
+  background: #000;
+  .svg-icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin: 0 0.5rem -0.25rem;
+  }
 }
 
 #offlinemode input[type='checkbox']:checked ~ .tooltip-dialog{
-  animation: onoff $dialog-speed forwards;
+  animation: onoff $dialog-speed forwards; // switches general dialog on an off
+  .screen{position: relative;}
   .screen-1{
-    display:block;
-    animation: screens $dialog-speed backwards;
-    animation-delay: ($dialog-speed/-2);
+    animation: screens $dialog-speed forwards; 
   }
   .screen-2{
-    display:none;
-    animation: screens $dialog-speed forwards;
-    animation-delay: ($dialog-speed/2);
+    text-align: left;
+    animation: screens $dialog-speed forwards; 
+    margin: calc(var(--baseline) / 1) 0;
   }
   .tooltip-loader .tooltip-progress{ // progress indicator
     animation: progress ($dialog-speed/2) forwards;
@@ -111,34 +117,23 @@ $dialog-speed: 9s;
 
 @keyframes screens {
   0%{
-    opacity: 0;
-    display: none;
-  }
-  49%{
-    display: none;
+    top: 0;
   }
   50%{
-    opacity:0;
-    display: block;
+    top: 0;
   }
-  53%{
-    opacity:1;
-  }
-  96%{
-    opacity:1;
-  }
-  99%{
-    opacity:0;
+  55%{
+    top: calc(var(--baseline) * -2);
   }
   100%{
-    display: none;
+    top: calc(var(--baseline) * -2);
   }
 }
-
 
 @keyframes onoff {
   0%{
     opacity: 0;
+
   }
   5%{
     opacity: 1;
