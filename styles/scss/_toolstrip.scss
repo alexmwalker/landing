@@ -26,7 +26,7 @@ margin:0 0 -0.6rem 1rem;
   z-index: 100;
 
 }
-.toolbar a.toolbarLink:first-of-type {
+.toolbar .grid-12>div:first-of-type a.toolbarLink {
   border-left: 1px #383838 solid;
 }
 .toolbar .toolbarLink {
@@ -36,22 +36,131 @@ margin:0 0 -0.6rem 1rem;
   display: inline-block;
   text-align: center;
   line-height: calc(var(--baseline) * 1.5);
-  border-right: 1px #383838 solid;
+  border-right: 1px solid #383838;
   font-size: calc(1rem /  var(--typescale));
   &:hover{
     font-weight: 500;
     //background-color: #111;
     transition: all .2s ease-out;
   }
+  .svg-icon {
+    margin-left: 0;
+  }
 }
 
 /* Center  */
 #offlinemode{
   height: calc(var(--baseline) * 1.5);
+  position: relative;
   .state{
-    margin:.8889rem;
+    margin:0.889rem;
   }
 }
+
+$dialog-speed: 9s;
+
+.tooltip-dialog{
+  opacity: 0;
+  position: absolute;
+  width: 283px;
+  background: #333333;
+  padding: calc(var(--baseline) / 2) 0;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  .tooltip-loader{
+    position: relative;
+    margin: calc(var(--baseline) / 2) 1rem 0;
+    height: calc(var(--baseline) / 2);
+    background: #222;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .tooltip-progress{
+      background: #1094F6;
+      width: 0%;
+      height: calc(var(--baseline) / 2);
+      box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+
+.button-library {
+  width:  calc(var(--baseline) * 1);
+  height:  calc(var(--baseline) * 1);
+  margin: calc(var(--baseline) / 2);
+  float: left;
+  outline: 1px red dashed;
+
+}
+
+#offlinemode input[type='checkbox']:checked ~ .tooltip-dialog{
+  animation: onoff $dialog-speed forwards;
+  .screen-1{
+    display:block;
+    animation: screens $dialog-speed backwards;
+    animation-delay: ($dialog-speed/-2);
+  }
+  .screen-2{
+    display:none;
+    animation: screens $dialog-speed forwards;
+    animation-delay: ($dialog-speed/2);
+  }
+  .tooltip-loader .tooltip-progress{ // progress indicator
+    animation: progress ($dialog-speed/2) forwards;
+  }
+}
+
+@keyframes screens {
+  0%{
+    opacity: 0;
+    display: none;
+  }
+  49%{
+    display: none;
+  }
+  50%{
+    opacity:0;
+    display: block;
+  }
+  53%{
+    opacity:1;
+  }
+  96%{
+    opacity:1;
+  }
+  99%{
+    opacity:0;
+  }
+  100%{
+    display: none;
+  }
+}
+
+
+@keyframes onoff {
+  0%{
+    opacity: 0;
+  }
+  5%{
+    opacity: 1;
+  }
+  95%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes progress {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+
+
 
 /* ==== Chapter menu  === */ 
 

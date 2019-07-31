@@ -6,14 +6,16 @@
       link: "https://www.sitepoint.com/premium/books/your-first-week-with-node-js/read",
       opened: true,
       blurb: "Used by some of the biggest companies today, Node is blazingly fast. Taking JavaScript, a ubiquitous language among developers, we'll get you up and running with guides on when to use Node, NPM, Security, as well as connecting with MySQL, MongoDB and more.",
-      rating: 9.2
+      rating: 9.2,
+      offline: true
     }, {
       title: "Practical ES6",
       imgcover: "https://s3.amazonaws.com/learnable-static/premium/reeedr/books/practical-es6/images/cover-front.png",
       link: "https://www.sitepoint.com/premium/books/practical-es6/read",
       opened: true,
       blurb: "Gain the most valuable updates and skills for working with JavaScript today. We'll cover new keywords, map collections, array, string and number methods, arrow functions and a whole host of other practical lessons to build with ES6.",
-      rating: 9.7
+      rating: 9.7,
+      offline: true
     }, {
       title: "JavaScript: Best Practice",
       imgcover: "https://s3.amazonaws.com/learnable-static/premium/reeedr/books/javascript-best-practice/images/cover-front.png",
@@ -93,7 +95,7 @@
     {
       title: "Your First Week With Bootstrap",
       imgcover: "https://d2sis3lil8ndrq.cloudfront.net/books/9af70f7c-cdc8-4f75-b8a4-2478ed7480f9.png",
-      link: "https://www.sitepoint.com/premium/books/your-first-week-with-bootstrap/read",
+      link: "book.html",
       opened: true,
       blurb: "Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.",
       rating: 9.2
@@ -134,7 +136,8 @@ section.bodycontent
                     img.cover(src= card.imgcover)
                     span(class=typeof card.opened === "undefined" ? "" : "opened") 
                   .pretty.p-switch.p-fill
-                    input(type='checkbox')
+                    input(type='checkbox' checked='')
+
                     .state.p-success
                       label Offline Access 
                   figcaption= card.title
