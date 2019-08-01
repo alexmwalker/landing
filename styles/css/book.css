@@ -2123,7 +2123,7 @@ table {
     align-self: auto;
     height: calc(var(--baseline) * 2); }
     .sitepoint-branding ul.nav li > a {
-      color: #E5E5E5;
+      color: #fff;
       padding: 0 1px;
       position: relative;
       white-space: nowrap; }

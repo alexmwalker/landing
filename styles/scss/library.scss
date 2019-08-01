@@ -60,8 +60,6 @@ figure{
   width: 90%;
   margin: 0  5%;
   position: relative;
-  //outline: 1px red dashed;
-  
   .frame{ /* crop taller coversasdasd */
     overflow: hidden;
     width: 100%;
@@ -141,7 +139,16 @@ span{ /* The fold out trigger */
     } 
   }
 }
+/*  === Offline Mode ===  */ 
+.offline .card{
+  filter: saturate(0) opacity(.6);
+  pointer-events: none;
+  a{
+    pointer-events: none;
+  }
+}
 
+/* switch */ 
 .pretty.p-switch.p-fill{
   position: absolute; 
   font-size: calc(1rem / var(--typescale)/ var(--typescale));
