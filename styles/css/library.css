@@ -5047,12 +5047,22 @@ footer.mainfooter {
         outline: purple 1px solid; }
 
 /*  === Offline Mode ===  */
+/*  ++++   ++++  */
 .offline .card {
   -webkit-filter: saturate(0) opacity(0.6);
   filter: saturate(0) opacity(0.6);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
   pointer-events: none; }
-  .offline .card a {
-    pointer-events: none; }
+
+.offline .card.local {
+  -webkit-filter: none;
+  filter: none;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  pointer-events: auto; }
 
 /* switch */
 .pretty.p-switch.p-fill {

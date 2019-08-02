@@ -140,13 +140,20 @@ span{ /* The fold out trigger */
   }
 }
 /*  === Offline Mode ===  */ 
+/*  ++++   ++++  */
 .offline .card{
   filter: saturate(0) opacity(.6);
+  transition: all 1s;
   pointer-events: none;
-  a{
-    pointer-events: none;
-  }
+
 }
+.offline .card.local{
+  filter: none;
+  transition: all 1s;
+  pointer-events: auto;
+}
+
+
 
 /* switch */ 
 .pretty.p-switch.p-fill{
