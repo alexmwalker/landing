@@ -1548,7 +1548,7 @@ label {
     font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
     width: 1rem;
     height: 1rem;
-    background: crimson;
+    background: #f35;
     border-radius: 50%;
     top: 0;
     right: -1.2rem; }
