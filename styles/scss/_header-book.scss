@@ -365,3 +365,29 @@ input#darkmode{
     }
   }
 }
+
+
+/* Library book counter */ 
+.library a{
+  position: relative;
+  &:before{
+    display: block;
+    position: absolute;
+    font-weight: 500;
+    content: '11';
+    height: calc(var(--baseline)/2);
+    line-height: calc(var(--baseline)/1.8);
+    text-align: center;
+    font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
+    width: 1rem;
+    height: 1rem;
+    background: #f35;
+    border-radius: 50%;
+    top: -0.3rem;
+    left: 1.4rem;
+  }
+}
+.mobilenav .library a:before{
+  right: auto;
+  top: .2rem;
+}
