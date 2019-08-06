@@ -1657,15 +1657,14 @@ label {
   background: #111;
   color: #eee;
   position: fixed;
-  display: none;
-  opacity: 0;
+  display: block;
   bottom: calc(var(--baseline)* -2);
   z-index: 999;
   padding: calc(var(--baseline)* .5) 0;
   width: 100%;
-  -webkit-transition: all .6s;
-  -o-transition: all .6s;
-  transition: all .6s;
+  -webkit-transition: all .6s ease-out 1s;
+  -o-transition: all .6s ease-out 1s;
+  transition: all .6s ease-out 1s;
   text-align: center;
   font-size: calc(1rem / var(--typescale)); }
   #offline-notification svg {
@@ -1678,12 +1677,10 @@ label {
     border-bottom: 1px dotted #666; }
 
 html.offline #offline-notification {
-  display: block;
   bottom: 0;
-  opacity: 1;
-  -webkit-transition: all .6s;
-  -o-transition: all .6s;
-  transition: all .6s; }
+  -webkit-transition: all .6s ease-out 1s;
+  -o-transition: all .6s ease-out 1s;
+  transition: all .6s ease-out 1s; }
 
 [class*=grid-], [class*=grid_], [class~=grid] {
   -webkit-box-sizing: border-box;

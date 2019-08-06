@@ -42,19 +42,7 @@
     left: 0;
     margin: 0 40%;
     bottom: calc(var(--baseline) / -10);
-  }/*
-  &:hover:before{
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 58 19'%3E%3Cpath fill='%23040404' d='M0 4.02L2.506 0 29 13.885 55.852 0 58 4.02 29 19 0 4.02z'/%3E%3C/svg%3E") no-repeat;
   }
-  &:hover{
-    transform: scale(1.05);
-    transition: all .33s;
-    z-index: 999;
-    figure .frame span:before{ 
-      opacity: .9;
-      transition: all .33s;  
-      }
-    }*/
   
 figure{
   width: 90%;
@@ -139,13 +127,26 @@ span{ /* The fold out trigger */
     } 
   }
 }
+
+.card  svg{
+  height: calc(var(--baseline) / 1.25);
+  width: calc(var(--baseline) / 1.25);
+  //outline: 1px red dashed;
+  left:0;
+  position: absolute;
+}
+.card  p{
+  height: calc(var(--baseline) * 1);
+  line-height: calc(var(--baseline) / 1);
+  text-indent: 1.5rem;
+}
+
 /*  === Offline Mode ===  */ 
 /*  ++++   ++++  */
 .offline .card{
-  filter: saturate(0) opacity(.6);
+  filter: saturate(0) opacity(.3);
   transition: all 1s;
   pointer-events: none;
-
 }
 .offline .card.local{
   filter: none;
@@ -153,97 +154,19 @@ span{ /* The fold out trigger */
   pointer-events: auto;
 }
 
-
-
-/* switch */ 
-.pretty.p-switch.p-fill{
-  position: absolute; 
-  font-size: calc(1rem / var(--typescale)/ var(--typescale));
-  line-height: 2;
-  bottom: calc(var(--baseline) * -0.75);
-  .state.p-success {
-    label{
-      font-size: calc(1rem / var(--typescale)/ var(--typescale));
-      text-indent: 2rem;
-      color: #999;
-      &:after, &:before {
-        content: '';
-        width: calc(1rem / var(--typescale));
-        height: calc(1rem / var(--typescale));
-        top: calc(0.25rem / var(--typescale));
-      }
-    }
-    &:before {
-      top: calc((0% - (100% - .25em)) - 16%);
-      //outline: 1px red dashed;
-      width: calc(1.75rem / var(--typescale));
-    }
-  }
+.status{
+  display: none;
 }
-.pretty.p-switch.p-fill input[type=checkbox] + .state.p-success label{
-  color: #aaa;
-  transition: 1s linear
+.card.local .status{
+  display: block;
 }
-.pretty.p-switch.p-fill input[type=checkbox]:checked + .state.p-success label{
-  color: #333;
-  transition: 1s linear
+.offline .card .status{
+  display: block;
 }
 
 
-/*
-    // fold down expanded modal 
-div.grid-4_md-2 .col:hover{ 
-  &:before{
-    display: block;
-    position: absolute;
-    content: '';
-    width: 100vw;
-    height: 400vh;
-    //outline: 1px red dashed;
-    background: rgba(0, 0, 0, 0.35);
-    top: 0;
-    left: 0;
-    z-index: 200;
-    pointer-events: none;
-  }
-}
-
-div.grid-4_md-2 .col ~ .grid .expanded{
-  height: 0; 
-  opacity: 0;
-  transition: all .3s ease-out;
-}
 
 
-div.grid-4_md-2 .col:hover, div.grid-4_md-2 .col ~ .grid .expanded{
-  z-index: 300;
-}
-
-div.grid-4_md-2 .col:nth-child(1):hover ~ .grid:nth-child(5) .expanded{
-  height: calc(var(--baseline) * 10); 
-  opacity: 1;
-  transition: all .3s ease-out;
-  margin-bottom: 2rem;
-}
-div.grid-4_md-2 .col:nth-child(2):hover ~ .grid:nth-child(6) .expanded{
-  height: calc(var(--baseline) * 10); 
-  opacity: 1;
-  transition: all .3s ease-out;
-  margin-bottom: 2rem;
-}
-div.grid-4_md-2 .col:nth-child(3):hover ~ .grid:nth-child(7) .expanded{
-  height: calc(var(--baseline) * 10); 
-  opacity: 1;
-  transition: all .3s ease-out;
-  margin-bottom: 2rem;
-}
-div.grid-4_md-2 .col:nth-child(4):hover ~ .grid:nth-child(8) .expanded{
-  height: calc(var(--baseline) * 10); 
-  opacity: 1;
-  transition: all .3s ease-out;
-  margin-bottom: 2rem;
-}
-*/
 
 .bodycontent h4{
   margin-top: calc(var(--baseline) * 1.5);
@@ -269,24 +192,8 @@ outline: 1px rgba(255, 0, 0, .1) dashed;
 
 .borders section {
   outline: 1px rgba(255, 0, 255, .1) dashed;
-};
-/*
-
-.expanded{
-  position: relative;
-  //display: none;
-  top: calc(var(--baseline) * 1);
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.08);
-
 }
-.expanded-comment{
-  background: #333 url(../../images/tile.png) top left;
-  color: #ccc;
-  border-radius: 0 4px 4px 0;
-}
-*/
+
 .wrapper{
   margin: calc(var(--baseline) * 1);
 }

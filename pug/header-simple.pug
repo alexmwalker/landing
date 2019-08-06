@@ -71,7 +71,7 @@
       li
        a(href='#') Community
       li
-        a(href='#') Library
+        a(href='library.html') Library
       li.logged-in 
         a(href='#') Dashboard
       li.logged-in 
@@ -87,9 +87,10 @@
       li.logged-in 
        a(href='#', class="logout") Log out
 
-#offline-notification
+// Positioned off the bottom edge of screen waiting for connection status to change 
+#offline-notification 
   svg.svg-icon
     use(fill='#fff' href='#my-connect-off')
   | You are currently working offline.   
-  a(href='library.html') Offline Library :  6 Books 
+  a(href='library.html') Offline Library :  6 Books available
 
