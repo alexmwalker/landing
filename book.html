@@ -68,6 +68,9 @@
     </div>
   </div>
 </div>
+
+
+
 </header>
 <section class="bookpanel">
 <div class="container">
@@ -621,13 +624,18 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');</cod
 </section>
 <!-- footer-->
 <footer class="mainfooter">
-<div class="container">
-  <div class="grid">
-    <div class="col-6">Copyright 2018 SitePoint</div>
-    <div class="col-6" id="log">The root of this document is: </div>
+  <div class="container">
+    <div class="grid">
+      <div class="col-6">Copyright 2018 SitePoint</div>
+      <div class="col-6" id="log">The root of this document is: </div>
+    </div>
   </div>
-</div>
 </footer>
+<div id="offline-notification"> 
+    <svg class="svg-icon">
+      <use fill="#fff" href="#my-connect-off"></use>
+    </svg>You are working offline.   <a href="library.html?offline=1"> 6 Books available</a>
+</div>
 <!--script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")-->
 <script src="scripts/jquery-3.4.0.min.js"></script>
 <script src="scripts/prism.js">/*  syntax highlighting  */</script> 
@@ -646,6 +654,10 @@ var newcurrentgridwide;
 $('a.darkmode').click(function(e) {
 e.preventDefault();
 });
+
+
+
+
 
 /* == simple nav controls/animations  == */
 $(document).ready(function () {
@@ -736,6 +748,7 @@ function scrollActions() {
   const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
   const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
 
+  const offlinebar = document.querySelector('#offline-notification'); // offline bar for tuckaway
 
   const navTop = toolcontainer.offsetTop; // distance from top edge
   const navMin = navTop / 4; // the delay before the title rolls on to the titlebar
@@ -766,9 +779,12 @@ function scrollActions() {
       navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
       brand.classList.add('tuckaway');
       toolstrip.classList.add('tuckaway');
+      offlinebar.classList.add('tuckaway');
+
     } else {
       brand.classList.remove('tuckaway');
       toolstrip.classList.remove('tuckaway');
+      offlinebar.classList.remove('tuckaway');
     }
     lastScrollTop = st <= 0 ? 0 : st; /* For Mobile or negative scrolling */
 
@@ -790,11 +806,15 @@ function getUrlVars() {
 var offline = getUrlVars()["offline"];
 
 function checkConnection(){
-  if (offline == 1){
-    alert('You  are currently offline. Reconnect to the internet to access this item.');
+    if (offline == 1){
+      //alert('You  are currently offline. Reconnect to the internet to access this item.');
+      $('html').addClass('offline');
+    } else {
+      $('html').removeClass('offline');
+      //alert('You  are currently online.');
+    }
   }
-}
-checkConnection();
+  checkConnection();
 
 </script>
 </body>
@@ -919,7 +939,7 @@ checkConnection();
       <g class="connect-off">
           <path class="connect" d="M79.72 44.911c-8.28-8.205-19.26-12.725-30.924-12.725-11.739 0-22.773 4.574-31.065 12.866L7 34.322A58.76 58.76 0 0 1 25.784 21.65C33.08 18.56 40.818 17 48.796 17c7.924 0 15.63 1.55 22.882 4.596a59.092 59.092 0 0 1 18.72 12.53L79.72 44.911z" fill="#fff" fill-opacity=".33"/>
           <path class="connect" d="M67.884 46.7a34.318 34.318 0 0 0-5.442-2.883 34.83 34.83 0 0 0-13.657-2.764c-4.834 0-9.528.964-13.94 2.883a34.787 34.787 0 0 0-11.283 7.826l10.915 10.546c3.783-3.913 8.867-6.07 14.308-6.07a19.77 19.77 0 0 1 14.07 5.832l2.752-2.753-5.17-5.17 7.447-7.447zM48.797 83a8.65 8.65 0 1 0 0-17.3 8.65 8.65 0 0 0 0 17.3z" fill="#fff" fill-opacity=".33"/>
-          <path class="red" d="M73.856 46.862l-7.273 7.273 9.7 9.701-9.7 9.701 7.273 7.273 9.7-9.7 9.702 9.7 7.273-7.273-9.701-9.701 9.701-9.701-7.273-7.273-9.701 9.701-9.701-9.701z"/>
+          <path fill="red" d="M73.856 46.862l-7.273 7.273 9.7 9.701-9.7 9.701 7.273 7.273 9.7-9.7 9.702 9.7 7.273-7.273-9.701-9.701 9.701-9.701-7.273-7.273-9.701 9.701-9.701-9.701z"/>
         </g>
   </symbol>  
   <symbol id="my-chevron" viewBox="0 0 101 101">

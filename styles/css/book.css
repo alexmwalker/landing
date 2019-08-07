@@ -2498,6 +2498,42 @@ input#darkmode {
   right: auto;
   top: .2rem; }
 
+/* ====  Bottom Offline notification ==== */
+#offline-notification {
+  background: #111;
+  color: #eee;
+  position: fixed;
+  display: block;
+  bottom: calc(var(--baseline)* 0);
+  z-index: 999;
+  padding: calc(var(--baseline)* .5) 0;
+  width: 100%;
+  -webkit-transition: all .6s ease-out 1s;
+  -o-transition: all .6s ease-out 1s;
+  transition: all .6s ease-out 1s;
+  text-align: center;
+  font-size: calc(1rem / var(--typescale)); }
+  #offline-notification svg {
+    height: calc(var(--baseline)* .75);
+    width: calc(var(--baseline)* .75);
+    margin: 0 1rem calc(var(--baseline)* -.25) 0; }
+  #offline-notification a {
+    font-weight: 500;
+    color: #ddd;
+    border-bottom: 1px dotted #666; }
+
+html.offline #offline-notification {
+  bottom: 0;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+  html.offline #offline-notification.tuckaway {
+    -webkit-transform: perspective(1000px) translate3d(0, calc(var(--baseline) * 2.5), 0);
+    transform: perspective(1000px) translate3d(0, calc(var(--baseline) * 2.5), 0);
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out; }
+
 /* bookpanel */
 #reeedr .bookpanel {
   background-color: #333;
@@ -2850,7 +2886,7 @@ li.toc-chapter {
 
 /* ===  FOOTER === */
 footer.mainfooter {
-  background: #3D383E;
+  background: #30373f;
   width: 100%;
   margin: 0;
   padding: 0 0;
