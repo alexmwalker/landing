@@ -399,7 +399,7 @@ input#darkmode{
   color:#eee;
   position: fixed;
   display: block;
-  bottom: calc(var(--baseline)* 0);
+  bottom: calc(var(--baseline)* -2);
   z-index: 999;
   padding: calc(var(--baseline)* .5) 0;
   width: 100%;
@@ -423,5 +423,5 @@ html.offline #offline-notification{
   &.tuckaway {
     transform: perspective(1000px) translate3d(0, calc(var(--baseline) * 2.5), 0);
     transition: all .3s ease-out;
-}
+  }
 }
