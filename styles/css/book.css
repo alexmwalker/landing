@@ -2482,7 +2482,7 @@ input#darkmode {
     display: block;
     position: absolute;
     font-weight: 500;
-    content: '11';
+    content: '1';
     height: calc(var(--baseline)/2);
     line-height: calc(var(--baseline)/1.8);
     text-align: center;
