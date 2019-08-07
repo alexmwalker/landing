@@ -120,7 +120,7 @@
     color: green;
   }
 
-  /* Block quotes  */
+  /* Blockquotes  */
 
   a:visited {
     text-decoration: none;
@@ -168,6 +168,9 @@
     a:link {
       border-bottom: 1px dotted #50575f;
   }
+
+
+
 }
 
 
@@ -178,5 +181,12 @@
   }
   #toolstrip {
     background-color: #00070f;
+  }
+  .toc-container .toc{
+    color: #d0d7df;
+    background-color: #20272f;
+    a:hover{
+      color: #fff;
+    }
   }
 }

@@ -2866,7 +2866,7 @@ footer.mainfooter {
 #reeedr.dark #reeedr-body {
   /* Code blocks */
   /* Inline code */
-  /* Block quotes  */ }
+  /* Blockquotes  */ }
   #reeedr.dark #reeedr-body code[class*="language-"],
   #reeedr.dark #reeedr-body pre[class*="language-"] {
     color: #ccc;
@@ -2978,6 +2978,12 @@ footer.mainfooter {
 
 #reeedr.dark #toolstrip {
   background-color: #00070f; }
+
+#reeedr.dark .toc-container .toc {
+  color: #d0d7df;
+  background-color: #20272f; }
+  #reeedr.dark .toc-container .toc a:hover {
+    color: #fff; }
 
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
