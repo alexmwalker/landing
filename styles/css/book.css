@@ -2956,7 +2956,7 @@ footer.mainfooter {
     background: #2d2d2d; }
   #reeedr.dark #reeedr-body blockquote {
     background: #50575f;
-    border-left: 5px solid var(--basebackground); }
+    border-left: 5px solid #a0a7bb; }
     #reeedr.dark #reeedr-body blockquote p {
       color: #c6c8dd; }
   #reeedr.dark #reeedr-body .box {

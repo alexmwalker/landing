@@ -28,146 +28,146 @@
    hyphens: none;
  }
  
- /* Code blocks */
- pre[class*="language-"] {
-   padding: 1em;
-   overflow: auto;
- }
- 
- :not(pre) > code[class*="language-"],
- pre[class*="language-"] {
-   background: #20272f;
- }
- 
- /* Inline code */
- :not(pre) > code[class*="language-"] {
-   padding: .1em;
-   border-radius: .3em;
-   white-space: normal;
- }
- 
- .token.comment,
- .token.block-comment,
- .token.prolog,
- .token.doctype,
- .token.cdata {
-   color: #999;
- }
- 
- .token.punctuation {
-   color: #ccc;
- }
- 
- .token.tag,
- .token.attr-name,
- .token.namespace,
- .token.deleted {
-   color: #e2777a;
- }
- 
- .token.function-name {
-   color: #6196cc;
- }
- 
- .token.boolean,
- .token.number,
- .token.function {
-   color: #f08d49;
- }
- 
- .token.property,
- .token.class-name,
- .token.constant,
- .token.symbol {
-   color: #f8c555;
- }
- 
- .token.selector,
- .token.important,
- .token.atrule,
- .token.keyword,
- .token.builtin {
-   color: #cc99cd;
- }
- 
- .token.string,
- .token.char,
- .token.attr-value,
- .token.regex,
- .token.variable {
-   color: #7ec699;
- }
- 
- .token.operator,
- .token.entity,
- .token.url {
-   color: #67cdcc;
- }
- 
- .token.important,
- .token.bold {
-   font-weight: bold;
- }
- .token.italic {
-   font-style: italic;
- }
- 
- .token.entity {
-   cursor: help;
- }
- 
- .token.inserted {
-   color: green;
- }
-
-/* Block quotes  */
-
-a:visited {
-  text-decoration: none;
-  color: #ace;
-}
-a:link {
-  text-decoration: none;
-  color: #ace;
-}
-p, li {
-  code{
-    background: #2d2d2d;
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    overflow: auto;
   }
-}
-
-
-blockquote {
-  background: #50575f; 
-  border-left: 5px solid var(--basebackground);
-  p {
-      color: #c6c8dd;
+  
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #20272f;
   }
-}
+  
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+  }
+  
+  .token.comment,
+  .token.block-comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #999;
+  }
+  
+  .token.punctuation {
+    color: #ccc;
+  }
+  
+  .token.tag,
+  .token.attr-name,
+  .token.namespace,
+  .token.deleted {
+    color: #e2777a;
+  }
+  
+  .token.function-name {
+    color: #6196cc;
+  }
+  
+  .token.boolean,
+  .token.number,
+  .token.function {
+    color: #f08d49;
+  }
+  
+  .token.property,
+  .token.class-name,
+  .token.constant,
+  .token.symbol {
+    color: #f8c555;
+  }
+  
+  .token.selector,
+  .token.important,
+  .token.atrule,
+  .token.keyword,
+  .token.builtin {
+    color: #cc99cd;
+  }
+  
+  .token.string,
+  .token.char,
+  .token.attr-value,
+  .token.regex,
+  .token.variable {
+    color: #7ec699;
+  }
+  
+  .token.operator,
+  .token.entity,
+  .token.url {
+    color: #67cdcc;
+  }
+  
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+  
+  .token.entity {
+    cursor: help;
+  }
+  
+  .token.inserted {
+    color: green;
+  }
 
-.box {
-  background-color: #20272f;
-  border: 0px var(--basefontcolor-dark) solid;
-}
+  /* Block quotes  */
 
-.box h4 {
-  background-color: #30373f;
-  color: #b0b7bf;
-}
+  a:visited {
+    text-decoration: none;
+    color: #ace;
+  }
+  a:link {
+    text-decoration: none;
+    color: #ace;
+  }
+  p, li {
+    code{
+      background: #2d2d2d;
+    }
+  }
 
-  h1.chaptertitle {
+
+  blockquote {
+    background: #50575f; 
+    border-left: 5px solid #a0a7bb;
+    p {
+        color: #c6c8dd;
+    }
+  }
+
+  .box {
+    background-color: #20272f;
+    border: 0px var(--basefontcolor-dark) solid;
+  }
+
+  .box h4 {
+    background-color: #30373f;
     color: #b0b7bf;
   }
 
-  .author {
-    color: #d0d7df;
+    h1.chaptertitle {
+      color: #b0b7bf;
+    }
+
+    .author {
+      color: #d0d7df;
+    }
+
+  
+
+    a:link {
+      border-bottom: 1px dotted #50575f;
   }
-
- 
-
-  a:link {
-    border-bottom: 1px dotted #50575f;
-}
 }
 
 
