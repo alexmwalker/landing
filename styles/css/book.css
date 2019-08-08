@@ -2487,8 +2487,8 @@ input#darkmode {
     line-height: calc(var(--baseline)/1.8);
     text-align: center;
     font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
-    width: 1rem;
-    height: 1rem;
+    width: calc(var(--baseline)/2);
+    height: calc(var(--baseline)/2);
     background: #f35;
     border-radius: 50%;
     top: -0.3rem;
@@ -2528,8 +2528,8 @@ html.offline #offline-notification {
   -o-transition: all .3s ease-out;
   transition: all .3s ease-out; }
   html.offline #offline-notification.tuckaway {
-    -webkit-transform: perspective(1000px) translate3d(0, calc(var(--baseline) * 2.5), 0);
-    transform: perspective(1000px) translate3d(0, calc(var(--baseline) * 2.5), 0);
+    -webkit-transform: perspective(1000px) translate3d(0, calc(var(--baseline) * -2.5), 0);
+    transform: perspective(1000px) translate3d(0, calc(var(--baseline) * -2.5), 0);
     -webkit-transition: all .3s ease-out;
     -o-transition: all .3s ease-out;
     transition: all .3s ease-out; }

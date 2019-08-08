@@ -1,12 +1,9 @@
-
-// header-simple.pug
-// Used in Checkout to reduce leakage opportunities
-
 header.sitepoint-branding
   .container
     .grid-12
       .col-6_md-4_sm-10.trim
-        .titlebar Your First Week With Bootstrap 
+        .titlebar
+          | Your First Week With Bootstrap
       .col-6_md-4_sm-2.showmobile
         .hamburger
           .hamburger-box
@@ -14,36 +11,64 @@ header.sitepoint-branding
       nav.mobilenav
         ul
           li
-            a(href='#' class='viewchapters') Chapters
+            a.viewchapters(href='#')
+              svg.svg-icon
+                use(fill='#fff', href='#my-toc')
+              | Table of Contents
           li
-            a(href='#') Bookmarks
+            a(href='#')
+              svg.svg-icon
+                use(fill='#fff', href='#my-bookmarks')
+              | Your Bookmarks
           li
-            a(href='#') Add Bookmark
+            a(href='#')
+              svg.svg-icon
+                use(fill='#fff', href='#my-add')
+              |  Add Bookmark
+          li.library
+            a(href='library.html', title='1 new book added to offline library')
+              svg.svg-icon
+                use(fill='#fff', href='#my-library')
+              |  Library
           li
-            a(href='#') Library
+            a.darkmode(href='#')
+              svg.svg-icon
+                use(fill='#fff', href='#my-dark')
+              |  Dark/Light Mode
           li
-            a(href='#') Dashboard
-          li.mobile-controls 
+            a(href='#')
+              svg.svg-icon
+                use(fill='#fff', href='#my-activity')
+              |  Your Activity
+          li.mobile-controls
             button.fontsizedown.go A -
             button.fontsizeup.go A +
-          li.logged-in.mobile-controls
-            form(action="search.html")                
-              input#mobilesearch.form-control(name='mobilesearch', type='text', placeholder='Search books...')
-
-
+          //
+            <li class="logged-in mobile-controls">
+            <form action="search.html">
+            <input class="form-control" id="mobilesearch" name="mobilesearch" type="text"
+            placeholder="Search books..." />
+            </form>
+            </li>
       .col-6_md-8_sm-hidden
         ul.nav
+          li
+            a.darkmode(href='#')
+              svg.svg-icon
+                use(fill='#fff', href='#my-dark')
           li#font-adjuster-wrapper
-            a#showfontchanger(href='#') A ±
+            a#showfontchanger(href='#') A &pm;
             #font-adjuster-container
               span Text-size:
               button.fontsizedown.go A-
               button.fontsizeup.go A+
+          li.library
+            a(href='library.html')
+              svg.svg-icon
+                use(fill='#fff', href='#my-library')
+              |  Library
           li
-            a(href='#') 
-              i.l-mr2.fas.fa-books 
-              | Library
-          li
-            a(href='#') 
-              i.l-mr2.fas.fa-sliders-h
-              | Dashboard
+            a(href='#')
+              svg.svg-icon
+                use(fill='#fff', href='#my-activity')
+              |  Your Activity

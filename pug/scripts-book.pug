@@ -1,0 +1,143 @@
+// script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+script(src='scripts/jquery-3.4.0.min.js')
+script(src='scripts/prism.js')
+script.
+  /* ==  Alex's font-size changer   ==  */
+  /* ==  Scaling the root scales all font's proportionally   ==  */
+  var currentgrid = $(":root").css("--basegrid");
+  var currentgridtablet = $(":root").css("--basegrid-tablet");
+  var currentgridlaptop = $(":root").css("--basegrid-laptop");
+  var currentgridwide = $(":root").css("--basegrid-wide");
+  var newcurrentgrid;
+  var newcurrentgridtablet;
+  var newcurrentgridlaptop;
+  var newcurrentgridwide;
+  $('a.darkmode').click(function(e) {
+  e.preventDefault();
+  });
+  /* == simple nav controls/animations  == */
+  $(document).ready(function () {
+  $('.showmobile').click(function () {
+  $(this).toggleClass('open');
+  $('.mobilenav').toggleClass('open');
+  });
+  $('.viewchapters').click(function () {
+  $('.toc-container').toggleClass('open');
+  });
+  $('#closetoc').click(function () {
+  $('.toc-container').removeClass('open');
+  });
+  $('#showfontchanger').click(function () {
+  $('#font-adjuster-container').toggleClass('open');
+  });
+  $('.darkmode').click(function () {
+  $('#reeedr').toggleClass('dark');
+  });
+  /* ===  Font rescaling  ===  */
+  /*   scaling the --basegrid :root font-size translates through to everything.   */
+  $('.fontsizedown').click(function () {
+  newcurrentgrid = parseInt(currentgrid, 10) - 4 + 'px';
+  $(":root").css("--basegrid", newcurrentgrid);
+  //console.log("currentgrid: " + currentgrid);
+  //console.log("newcurrentgrid: " + newcurrentgrid);
+  currentgrid = newcurrentgrid;
+  newcurrentgridtablet = parseInt(currentgridtablet, 10) - 4 + 'px';
+  $(":root").css("--basegrid-tablet", newcurrentgridtablet);
+  //console.log("currentgridtablet: " + currentgridtablet);
+  //console.log("newcurrentgridtablet: " + newcurrentgridtablet);
+  currentgridtablet = newcurrentgridtablet;
+  newcurrentgridlaptop = parseInt(currentgridlaptop, 10) - 4 + 'px';
+  $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
+  currentgridlaptop = newcurrentgridlaptop;
+  newcurrentgridwide = parseInt(currentgridwide, 10) - 4 + 'px';
+  $(":root").css("--basegrid-wide", newcurrentgridwide);
+  currentgridwide = newcurrentgridwide;
+  });
+  $('.fontsizeup').click(function () {
+  newcurrentgrid = parseInt(currentgrid, 10) + 4 + 'px';
+  $(":root").css("--basegrid", newcurrentgrid);
+  currentgrid = newcurrentgrid;
+  newcurrentgridtablet = parseInt(currentgridtablet, 10) + 4 + 'px';
+  $(":root").css("--basegrid-tablet", newcurrentgridtablet);
+  currentgridtablet = newcurrentgridtablet;
+  newcurrentgridlaptop = parseInt(currentgridlaptop, 10) + 4 + 'px';
+  $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
+  currentgridlaptop = newcurrentgridlaptop;
+  newcurrentgridwide = parseInt(currentgridwide, 10) + 4 + 'px';
+  $(":root").css("--basegrid-wide", newcurrentgridwide);
+  currentgridwide = newcurrentgridwide;
+  });
+  });
+  /* ==  Fixed nav   == */
+  $(window).resize(function () {
+  /* close the menu on screen resize */
+  $('.showmobile').removeClass('open');
+  $('.mobilenav').removeClass('open');
+  });
+  $(window).scroll(function () {
+  /* close the menu on scroll */
+  $('.showmobile').removeClass('open');
+  $('.mobilenav').removeClass('open');
+  });
+  function scrollActions() {
+  const brand = document.querySelector('.sitepoint-branding'); // select the brand
+  const toolcontainer = document.querySelector('#tool-container'); // height of the toolstrip
+  const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
+  const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
+  const offlinebar = document.querySelector('#offline-notification'); // offline bar for tuckaway
+  const navTop = toolcontainer.offsetTop; // distance from top edge
+  const navMin = navTop / 4; // the delay before the title rolls on to the titlebar
+  var lastScrollTop = 0; // set for updating to determine scroll direction
+  function stickyNavigation() {
+  //console.log('navTop = ' + navTop);
+  //console.log('scrollY = ' + window.scrollY);
+  //console.log('toolbaroffset = ' + toolbaroffset);
+  var st = window.pageYOffset || document.documentElement.scrollTop;
+  if (window.scrollY >= navTop) { // If scroll pos is greater than 418
+  //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
+  toolcontainer.classList.add('fixed-nav'); // add class that fixes toolstrip in place
+  } else {
+  //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
+  toolcontainer.classList.remove('fixed-nav');
+  }
+  /* minize brand bar on scroll */
+  if (window.scrollY >= navMin) {
+  brand.classList.add('min');
+  } else {
+  brand.classList.remove('min');
+  }
+  if (st > lastScrollTop && window.scrollY >=
+  navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
+  brand.classList.add('tuckaway');
+  toolstrip.classList.add('tuckaway');
+  offlinebar.classList.add('tuckaway');
+  } else {
+  brand.classList.remove('tuckaway');
+  toolstrip.classList.remove('tuckaway');
+  offlinebar.classList.remove('tuckaway');
+  }
+  lastScrollTop = st <= 0 ? 0 : st; /* For Mobile or negative scrolling */
+  }
+  window.addEventListener('scroll', stickyNavigation);
+  }
+  scrollActions();
+  /* ===  Mimic offline mode ===  */
+  /*   http://10.48.101.187:7883/book.html?offline=1   */
+  function getUrlVars() {
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+  vars[key] = value;
+  });
+  return vars;
+  }
+  var offline = getUrlVars()["offline"];
+  function checkConnection(){
+  if (offline == 1){
+  //alert('You  are currently offline. Reconnect to the internet to access this item.');
+  $('html').addClass('offline');
+  } else {
+  $('html').removeClass('offline');
+  //alert('You  are currently online.');
+  }
+  }
+  checkConnection();

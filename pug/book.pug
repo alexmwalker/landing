@@ -1,20 +1,24 @@
-html
-  head
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title Your First Week With Bootstrap - SitePoint
-    meta(name='description', content='SitePoint Book - Your First Week With Bootstrap')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', type='text/css', href='styles/css/book.css?cache=123')
-    link(rel='stylesheet', type='text/css', href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css')
-    
+doctype html
+head
+  meta(content='ie=edge', http-equiv='x-ua-compatible')
+  title
+    | Your First Week With Bootstrap - SitePoint
+  meta(content='SitePoint Book - Your First Week With Bootstrap', name='description')
+  meta(content='width=device-width, initial-scale=1', name='viewport')
+  link(href='styles/css/book.css?cache=4321', rel='stylesheet', type='text/css')
+  link(href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css', rel='stylesheet', type='text/css')
 
-    
-  body.-vr.-labelling.borders#reeedr 
+body.-vr.-labelling.borders#reeedr 
 
-    include header-book.pug
+  include header-book.pug
 
-    include hero-panel.pug
+  include hero-panel.pug
+  include tool-container.pug
 
-    include chapter.pug
+  include chapter.pug
 
-    include book-footer.pug
+  include book-footer.pug
+  include scripts-book.pug
+
+  include svg-icons.pug
+  
