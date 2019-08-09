@@ -401,9 +401,9 @@ input#darkmode{
   display: block;
   bottom: calc(var(--baseline)* -2);
   z-index: 999;
-  padding: calc(var(--baseline)* .5) 0;
+  padding: calc(var(--baseline)* .25) 0;
   width: 100%;
-  transition: all .6s ease-out 1s;
+  //transition: all .6s ease-out 1s;
   text-align: center;
   font-size: calc(1rem / var(--typescale));
   svg{
@@ -417,11 +417,16 @@ input#darkmode{
     border-bottom: 1px dotted #666;
   }
 }
+#offline-notification.tuckaway {
+    transform: none;
+    bottom: calc(var(--baseline)* -2);
+    transition: all .3s ease-out;
+  }
 html.offline #offline-notification{
   bottom: 0;
   transition: all .3s ease-out;
   &.tuckaway {
-    transform: perspective(1000px) translate3d(0, calc(var(--baseline) * -2.5), 0);
+    transform: perspective(1000px) translate3d(0, calc(var(--baseline) * 2.5), 0);
     transition: all .3s ease-out;
   }
 }
