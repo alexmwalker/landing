@@ -393,6 +393,15 @@
     $('.darkmode').click(function () {
     $('#reeedr').toggleClass('dark');
     });
+    
+    $("#offlinemode input").change(function () {
+      $("body").toggleClass("local", this.checked);
+      });
+    
+    
+    
+    
+    
     /* ===  Font rescaling  ===  */
     /*   scaling the --basegrid :root font-size translates through to everything.   */
     $('.fontsizedown').click(function () {
@@ -427,6 +436,10 @@
     $(":root").css("--basegrid-wide", newcurrentgridwide);
     currentgridwide = newcurrentgridwide;
     });
+    
+    
+    
+    
     });
     /* ==  Fixed nav   == */
     $(window).resize(function () {

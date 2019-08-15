@@ -367,26 +367,37 @@ input#darkmode{
 }
 
 
-/* Library book counter */ 
-.library a{
-  position: relative;
-  &:before{
-    display: block;
-    position: absolute;
-    font-weight: 500;
-    content: '1';
-    height: calc(var(--baseline)/2);
-    line-height: calc(var(--baseline)/1.8);
-    text-align: center;
-    font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
-    width: calc(var(--baseline)/2);
-    height: calc(var(--baseline)/2);
-    background: #f35;
-    border-radius: 50%;
-    top: -0.3rem;
-    left: 1.4rem;
-  }
+/* Library 'new book' red bubble counter */ 
+/* .local is added to book HTML element when download has occurred */ 
+
+$pop: all .4s cubic-bezier(0,.59,.2,1.66) ;
+.library{ position: relative;}
+.library a:before {
+	opacity: 0; //- don't show by default
+	display: block;
+	position: absolute;
+	font-weight: 500;
+	color:#FFF;
+	content: '1';
+	line-height: calc(var(--baseline)/1.8);
+	text-align: center;
+	font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
+	width: 0;
+	height: 0;
+	background: #f35;
+	border-radius: 50%;
+	top: -0.3rem;
+  left: 1.4rem;
+  transition: $pop;
 }
+
+.local .library a:before {
+	opacity: 1; //- show now
+	width: calc(var(--baseline)/2);
+  height: calc(var(--baseline)/2);
+  transition: $pop;
+}
+
 .mobilenav .library a:before{
   right: auto;
   top: .2rem;

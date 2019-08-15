@@ -2475,24 +2475,38 @@ input#darkmode {
       height: calc(var(--baseline) * 1.5);
       margin-top: calc(var(--baseline) / 1.5); } }
 
-/* Library book counter */
-.library a {
+/* Library 'new book' red bubble counter */
+/* .local is added to book HTML element when download has occurred */
+.library {
   position: relative; }
-  .library a:before {
-    display: block;
-    position: absolute;
-    font-weight: 500;
-    content: '1';
-    height: calc(var(--baseline)/2);
-    line-height: calc(var(--baseline)/1.8);
-    text-align: center;
-    font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
-    width: calc(var(--baseline)/2);
-    height: calc(var(--baseline)/2);
-    background: #f35;
-    border-radius: 50%;
-    top: -0.3rem;
-    left: 1.4rem; }
+
+.library a:before {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  font-weight: 500;
+  color: #FFF;
+  content: '1';
+  line-height: calc(var(--baseline)/1.8);
+  text-align: center;
+  font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
+  width: 0;
+  height: 0;
+  background: #f35;
+  border-radius: 50%;
+  top: -0.3rem;
+  left: 1.4rem;
+  -webkit-transition: all 0.4s cubic-bezier(0, 0.59, 0.2, 1.66);
+  -o-transition: all 0.4s cubic-bezier(0, 0.59, 0.2, 1.66);
+  transition: all 0.4s cubic-bezier(0, 0.59, 0.2, 1.66); }
+
+.local .library a:before {
+  opacity: 1;
+  width: calc(var(--baseline)/2);
+  height: calc(var(--baseline)/2);
+  -webkit-transition: all 0.4s cubic-bezier(0, 0.59, 0.2, 1.66);
+  -o-transition: all 0.4s cubic-bezier(0, 0.59, 0.2, 1.66);
+  transition: all 0.4s cubic-bezier(0, 0.59, 0.2, 1.66); }
 
 .mobilenav .library a:before {
   right: auto;

@@ -7,13 +7,14 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
     link(rel='stylesheet', type='text/css', href='styles/css/styleguide.css')
+    //script(src='https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js')
     script(src='scripts/typography.js')
 
   body.vr.borders
 
     .container
       header.grid-center
-        .col-3
+        .col-3_md-12_sm-12
           .device
           br
           ul.minor.clearleft
@@ -24,7 +25,7 @@ html
                 span.tablet-only  14px 
                 span.laptop-only  16px 
                 span.wide-only    18px 
-        .col-9
+        .col-9_sm-12
           h1.major SitePoint StyleGuide
           h2.no-margin-top-1.light
             | Grid &amp; Type:   
@@ -77,6 +78,8 @@ html
               | s and 
               code padding
               | s should ALWAYS be multiples of these numbers to maintain vertical rhythm.
+  .container
+    section.grid-center    
       p Here's a section - breadcrumb
       h1.report SitePoint Typography Major Heading two-line title Typography Major Heading
       p.report
@@ -116,21 +119,21 @@ html
         | Drinking’s funny. When I look back on it, all of our important decisions have been figured out when we were drinking. Even when we talked about having to cut back on drinking, we’d be sitting at the kitchen table or out at the picnic table with a six-pack or whiskey.
       h5 One Morning, When Gregor Samsa Woke
       .grid-center
-        .col-3
+        .col-3_md-6_sm-12
           p.small
             | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
           p.small
             | It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
-        .col-3
+        .col-3_md-6_sm-12
           p.small
             | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
           p.small
             | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought.
-        .col-3
+        .col-3_md-6_sm-12
           h5 One Morning, When Gregor Samsa Woke
           p.small
             | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
-        .col-3
+        .col-3_md-6_sm-12
           p.small
             | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
           p.small
