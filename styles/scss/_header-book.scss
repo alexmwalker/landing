@@ -370,8 +370,9 @@ input#darkmode{
 /* Library 'new book' red bubble counter */ 
 /* .local is added to book HTML element when download has occurred */ 
 
-$pop: all .4s cubic-bezier(0,.59,.2,1.66) ;
-.library{ position: relative;}
+$pop: all .4s cubic-bezier(0,.59,.2,1.66);
+
+.library {position: relative}
 .library a:before {
 	opacity: 0; //- don't show by default
 	display: block;
@@ -400,9 +401,13 @@ $pop: all .4s cubic-bezier(0,.59,.2,1.66) ;
 
 .mobilenav .library a:before{
   right: auto;
-  top: .2rem;
+  top: 0.2rem;
+  left: 2.3rem;
 }
 
+.toolbarLink.open{
+  
+}
 /* ====  Bottom Offline notification ==== */ 
 
 #offline-notification{

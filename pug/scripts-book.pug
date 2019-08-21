@@ -23,6 +23,7 @@ script.
   });
   $('.viewchapters').click(function () {
   $('.toc-container').toggleClass('open');
+  $('.viewchapters').toggleClass('open');
   });
   $('#closetoc').click(function () {
   $('.toc-container').removeClass('open');
@@ -37,9 +38,6 @@ script.
   $("#offlinemode input").change(function () {
     $("body").toggleClass("local", this.checked);
     });
-
-  
-
 
 
   /* ===  Font rescaling  ===  */
@@ -76,11 +74,10 @@ script.
   $(":root").css("--basegrid-wide", newcurrentgridwide);
   currentgridwide = newcurrentgridwide;
   });
-  
-
-
 
   });
+
+
   /* ==  Fixed nav   == */
   $(window).resize(function () {
   /* close the menu on screen resize */

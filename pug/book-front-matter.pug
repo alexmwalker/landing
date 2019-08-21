@@ -1,0 +1,117 @@
+
+- var title = "Your First Week With Bootstrap";
+- var bookauthor = "Maria Antonietta Perna";
+- var chapternumber = "0";
+- var productmanager = "Simon Mackie";
+- var englisheditor = "Ralph Mason";
+- var technicaleditor = "Franco Ponticelli & Andrzej Mazur";
+- var projecteditor = "Maria Antonietta Perna";
+- var coverdesigner = "Alex Walker";
+- var isbnprint = '978-0-9941826-1-6 (print)';
+- var isbnweb ='978-0-9953826-9-5 (ebook)';
+- var year = new Date().getFullYear();
+- var dedication =  `For Kim Castledine (1948 - 2016). Thanks for everything, Dad.`; 
+
+doctype html
+head
+  meta(content='ie=edge', http-equiv='x-ua-compatible')
+  title
+    | Your First Week With Bootstrap - SitePoint
+  meta(content='SitePoint Book - Your First Week With Bootstrap', name='description')
+  meta(content='width=device-width, initial-scale=1', name='viewport')
+  link(href='styles/css/book.css?cache=4321', rel='stylesheet', type='text/css')
+  link(href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css', rel='stylesheet', type='text/css')
+
+body.-vr.-labelling.borders#reeedr 
+
+  include header-book.pug
+
+  include hero-panel.pug
+  include tool-container.pug
+  section#reeedr-body
+    .container
+      .grid-12
+        .col-12
+          .frontmatters
+            .page-frontmatter.front.set-front-matter
+              .title-name
+                h2#maintitle #{title}
+              p Copyright &copy; #{year} SitePoint Pty. Ltd.
+              ul
+                li
+                  strong Product Manager:
+                  |  #{productmanager}
+                li
+                  strong English Editor:
+                  |   #{englisheditor}
+                li
+                  strong Technical Editors:
+                  |  #{technicaleditor}
+                li
+                  strong Cover Designer:
+                  |  #{coverdesigner}
+
+              h2#notice-of-rights Notice of Rights
+              p
+                | All rights reserved. No part of this book may be reproduced, stored in a retrieval system or transmitted in any form or
+                | by any means, without the prior written permission of the publisher, except in the case of brief quotations embodied
+                | in critical articles or reviews.
+              h2#notice-of-liability Notice of Liability
+              p
+                | The author and publisher have made every effort to ensure the accuracy of the information herein. However, the information
+                | contained in this book is sold without warranty, either express or implied. Neither the authors and SitePoint Pty. Ltd.,
+                | nor its dealers or distributors will be held liable for any damages to be caused either directly or indirectly by the
+                | instructions contained in this book, or by the software or hardware products described herein.
+              h2#trademark-notice Trademark Notice
+              p
+                | Rather than indicating every occurrence of a trademarked name as such, this book uses the names only in an editorial fashion
+                | and to the benefit of the trademark owner with no intention of infringement of the trademark.
+              .small-centered
+                p
+                  img(src='https://learnable-static.s3.amazonaws.com/premium/reeedr/books/html5-games-novice-to-ninja/images/sitepoint-gray.svg' alt='SitePoint logo' width='160')
+                  ul
+                    li Published by SitePoint Pty. Ltd.
+                    li 48 Cambridge Street Collingwood
+                    li VIC Australia 3066
+                    li Web: 
+                      a(href="http://www.sitepoint.com") 
+                        | www.sitepoint.com
+                    li Email: 
+                      a(href="mailto:books@sitepoint.com")  
+                        | books@sitepoint.com
+                    li ISBN: #{isbnprint}
+                    li ISBN  #{isbnweb}
+                    li Printed and bound in the United States of America
+            .page-about.front.set-front-matter
+              h2 About Earle Castledine
+              p
+                | Earle Castledine&mdash;JavaScript fl&acirc;neur and internet flibbertigibbet&mdash;is back! By day it&rsquo;s serious business while Earle steers the ship as lead engineer at hot startups. By night his attention turns to the world of weird art and wonderful game design.
+              p
+                | Author of 
+                em Jump Start CoffeeScript
+                | , and the cult classic 
+                em jQuery: Novice to Ninja
+                | &mdash;as well as speaker at countless JavaScript conferences and meetups all around the globe&mdash;he&rsquo;s no novice to brewing up engaging, interesting, and informative creative works.
+              p
+                | Now, having been making games with JavaScript long before it was cool, he&rsquo;s here to guide you on your journey to gamedev superstardom.
+              h2#about-sitepoint About SitePoint
+              p
+                | SitePoint specializes in publishing fun, practical, and easy-to-understand content for web professionals. Visit
+                a.uri(href='http://www.sitepoint.com/') http://www.sitepoint.com/
+                |  to access our blogs, books, newsletters, articles, and community forums. You&rsquo;ll find a
+                |  stack of information on JavaScript, PHP, Ruby, mobile development, design, and more.
+            .page-dedication.front.set-front-matter
+              div.dedication 
+                q #{dedication} 
+  
+    .container
+      .grid-12
+        .col-12
+          .preface.set-front-matter
+            include:markdown-it(linkify) ../md/1front-matter.md
+
+  include book-footer.pug
+  include scripts-book.pug
+
+  include svg-icons.pug
+  

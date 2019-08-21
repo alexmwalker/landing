@@ -230,7 +230,10 @@
           </div>
           <div class="chapter grid-center-reverse" data-chapter-number="6">
             <div class="col-3_sm-12 ch-head">
-              <div class="chapter-head">Chapter</div>                5
+              <div class="chapter-head">
+                Chapter
+                                5
+              </div>
             </div>
             <div class="col-7_sm-12 chapter-start align-r">
               <h1 class="chaptertitle">The Card Component: A Complete Introduction</h1>
@@ -383,6 +386,7 @@
     });
     $('.viewchapters').click(function () {
     $('.toc-container').toggleClass('open');
+    $('.viewchapters').toggleClass('open');
     });
     $('#closetoc').click(function () {
     $('.toc-container').removeClass('open');
@@ -397,9 +401,6 @@
     $("#offlinemode input").change(function () {
       $("body").toggleClass("local", this.checked);
       });
-    
-    
-    
     
     
     /* ===  Font rescaling  ===  */
@@ -437,10 +438,9 @@
     currentgridwide = newcurrentgridwide;
     });
     
-    
-    
-    
     });
+    
+    
     /* ==  Fixed nav   == */
     $(window).resize(function () {
     /* close the menu on screen resize */

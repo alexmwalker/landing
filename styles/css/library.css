@@ -4970,7 +4970,7 @@ footer.mainfooter {
     margin: 0  5%;
     position: relative; }
     .card figure .frame {
-      /* crop taller coversasdasd */
+      /* crop taller covers */
       overflow: hidden;
       width: 100%;
       height: calc(var(--baseline) * 9);
@@ -4978,6 +4978,20 @@ footer.mainfooter {
       z-index: 1;
       -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
       box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
+      .card figure .frame:after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 330px;
+        outline: 1px red dashed;
+        top: 0;
+        left: 0;
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), color-stop(4%, rgba(0, 0, 0, 0.05)), color-stop(5%, rgba(255, 255, 255, 0.1)), color-stop(30%, rgba(255, 255, 255, 0)));
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 4%, rgba(255, 255, 255, 0.1) 5%, rgba(255, 255, 255, 0) 30%);
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 4%, rgba(255, 255, 255, 0.1) 5%, rgba(255, 255, 255, 0) 30%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 4%, rgba(255, 255, 255, 0.1) 5%, rgba(255, 255, 255, 0) 30%);
+        border-radius: 3px; }
       .card figure .frame img {
         width: 100%; }
       .card figure .frame span {

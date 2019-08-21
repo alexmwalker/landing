@@ -1,0 +1,35 @@
+- var title = "Your First Week With Bootstrap";
+- var chaptertitle = "Understanding Bootstrap: How it Works, and What's New";
+- var chapterauthor = "Syed Fazle Rahman";
+- var chapternumber = "2";
+
+doctype html
+head
+  meta(content='ie=edge', http-equiv='x-ua-compatible')
+  title
+    | Your First Week With Bootstrap - SitePoint
+  meta(content='SitePoint Book - Your First Week With Bootstrap', name='description')
+  meta(content='width=device-width, initial-scale=1', name='viewport')
+  link(href='styles/css/book.css?cache=4321', rel='stylesheet', type='text/css')
+  link(href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css', rel='stylesheet', type='text/css')
+
+body.-vr.-labelling.borders#reeedr 
+
+  include header-book.pug
+
+  include hero-panel.pug
+  include tool-container.pug
+
+  //include chapter.pug
+  section#reeedr-body
+    .container
+      .grid-12
+        .col-12
+          include chap-head.pug 
+          include:markdown-it(linkify langPrefix='highlight-') ../md/chap-2.md
+
+  include book-footer.pug
+  include scripts-book.pug
+
+  include svg-icons.pug
+  
