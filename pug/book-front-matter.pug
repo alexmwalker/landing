@@ -94,21 +94,22 @@ body.-vr.-labelling.borders#reeedr
                 | &mdash;as well as speaker at countless JavaScript conferences and meetups all around the globe&mdash;he&rsquo;s no novice to brewing up engaging, interesting, and informative creative works.
               p
                 | Now, having been making games with JavaScript long before it was cool, he&rsquo;s here to guide you on your journey to gamedev superstardom.
+
+            .page-dedication.front.set-front-matter
+              div.dedication 
+                q #{dedication} 
               h2#about-sitepoint About SitePoint
               p
                 | SitePoint specializes in publishing fun, practical, and easy-to-understand content for web professionals. Visit
                 a.uri(href='http://www.sitepoint.com/') http://www.sitepoint.com/
                 |  to access our blogs, books, newsletters, articles, and community forums. You&rsquo;ll find a
                 |  stack of information on JavaScript, PHP, Ruby, mobile development, design, and more.
-            .page-dedication.front.set-front-matter
-              div.dedication 
-                q #{dedication} 
-  
     .container
       .grid-12
         .col-12
           .preface.set-front-matter
             include:markdown-it(linkify) ../md/1front-matter.md
+            include boxes.pug
 
   include book-footer.pug
   include scripts-book.pug

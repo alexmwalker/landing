@@ -6,10 +6,12 @@
     <title>SitePoint Library</title>
     <meta name="description" content="SitePoint Library"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="styles/css/library.css"/>
-    <script src="https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles/css/checkout1.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
+    <!-- type inspector-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
-  <body class="vr labelling1 borders1">
+  <body class="-vr labelling1 borders">
     <!-- header-simple.pug-->
     <!-- Set `- var hidesearch = 1` on top of page to hide the navbar search (see 'search.pug')-->
     <!-- -->
@@ -22,41 +24,7 @@
             </div>
             <div class="col-9_sm-hidden">
               <ul class="nav">
-                <li class="search-nav">
-                  <form action="search.html">
-                    <input placeholder="Search" type="text"/>
-                  </form>
-                </li>
-                <li><a href="#">Blog</a></li>
-                <li><a class="youarehere" href="#">Community</a></li>
-                <li class="library"><a href="library.html">Library</a></li>
-                <li class="logged-in"> <a href="#">Dashboard</a></li>
-                <li class="logged-in account-items"> <a href="#">Account<img src="images/Account.png"/></a>
-                  <ul>
-                    <li> <a href="#">Profile</a></li>
-                    <li> <a href="#">Membership</a></li>
-                    <li><a href="#">Payment History</a></li>
-                    <li> <a href="#">Log out             </a></li>
-                  </ul>
-                </li>
-                <li class="logged-out"> <a href="#">Login</a>
-                  <div class="login-panel">
-                    <form action="login.html">
-                      <p>
-                        <label class="control-label" for="username-login">Username: </label>
-                        <input class="form-control" id="username-login" style="width: 13.5rem;" name="username-login" type="text" placeholder="email@example.com"/>
-                      </p>
-                      <p>
-                        <label class="control-label" for="passwordinput">Password: </label>
-                        <input class="form-control" id="passwordinput" style="width: 11.3rem;" name="passwordinput" type="password" placeholder="..."/>
-                        <button class="go">Go</button>
-                      </p>
-                    </form>
-                  </div>
-                </li>
-                <li class="logged-out"> 
-                  <button class="pink">Free 7-Day Trial</button>
-                </li>
+                <li class="logged-out"><img src="images/Account.png"/><a href="library.html">Welcome <b>Alex Walker</b></a></li>
               </ul>
             </div>
             <div class="col_sm-7 showmobile">
@@ -68,16 +36,6 @@
             </div>
             <nav class="mobilenav">
               <ul>
-                <li class="logged-in"> 
-                  <form action="search.html">
-                    <label class="control-label" for="mobilesearch">Search: </label>
-                    <input class="form-control" id="mobilesearch" style="width: 12.5rem;" name="mobilesearch" type="text"/>
-                  </form>
-                </li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Community</a></li>
-                <li class="library"><a href="library.html">Library</a></li>
-                <li class="logged-in"> <a href="#">Dashboard</a></li>
                 <li class="logged-in"> <a href="#">Account<img src="images/Account.png"/></a></li>
                 <li class="logged-out"> 
                   <label class="control-label" for="username-login-mob">Username: </label>
@@ -101,15 +59,25 @@
         <use fill="#fff" href="#my-connect-off"></use>
       </svg>You are working offline.   <a href="library.html"> 6 Books available</a>
     </div>
-    <section class="bodycontent">
-      <div class="container">
-        <div class="device"></div>
-        <div class="row">
-          <div class="col-3"> 
-            <h1>Boilerplate</h1><img src="images/SVG/laptop-4.svg?cache=4321" style="outline: 1px dashed red"/>
+    <section class="contentbody">
+      <!--include hero-template.pug -->
+      <section>
+        <div class="container">
+          <div class="grid">
+            <div class="col-4">
+              <ul>
+                <li><img src="images/icon-books.svg" alt="350 books"/>350+ Web & computer science books</li>
+                <li><img src="images/icon-Crown.svg" alt="5 top publishers"/>5 of the World’s great tech publishers</li>
+                <li><img src="images/icon-van.svg" alt="New books arriving"/>New books arriving every single week</li>
+                <li><img src="images/icon-adfree.svg" alt="Ad free"/>100% Ad-Free SitePoint.com</li>
+              </ul>
+            </div>
+            <div class="col-8">
+              <h2>sdf</h2>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
     <!-- footer-->
     <footer class="mainfooter">

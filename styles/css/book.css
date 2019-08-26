@@ -2821,6 +2821,12 @@ li.toc-chapter {
   #reeedr-body a:link {
     border-bottom: 1px dotted; }
 
+.frontmatters {
+  padding-top: calc(var(--baseline) * 2); }
+
+.dedication {
+  margin: calc(var(--baseline) * 2) 0; }
+
 #reeedr .ch-head {
   font-size: 9rem;
   color: #445266;

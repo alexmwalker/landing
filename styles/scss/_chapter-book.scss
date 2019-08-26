@@ -17,7 +17,12 @@
   }
 }
 
-
+.frontmatters{
+  padding-top: calc(var(--baseline) * 2);
+}
+.dedication{
+  margin: calc(var(--baseline) * 2) 0;
+}
 
 #reeedr .ch-head  {
   font-size: 9rem;

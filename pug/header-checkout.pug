@@ -1,0 +1,48 @@
+
+// header-simple.pug
+// Set `- var hidesearch = 1` on top of page to hide the navbar search (see 'search.pug')
+// 
+
+.login
+ header.sitepoint-branding
+  .container
+   .grid-12
+    .col-3_sm-5
+     .branding
+      a(href="landing.html", alt="Home")
+        img.branding-logo(src='https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
+    .col-9_sm-hidden
+     ul.nav
+
+      li.logged-out
+        img(src="images/Account.png")
+        a(href='library.html') Welcome 
+          b Alex Walker
+
+
+    .col_sm-7.showmobile
+     .hamburger
+      .hamburger-box
+       .hamburger-inner
+    nav.mobilenav
+     ul
+      li.logged-in 
+        a(href='#') Account
+          img(src="images/Account.png")
+      li.logged-out 
+       label.control-label(for='username-login-mob') Username: 
+       input#username-login-mob.form-control(style="width: 12.5rem;", name='username-login-mob', type='text', placeholder='email@example.com')
+      li.logged-out
+       label.control-label(for='passwordinput-mob') Password: 
+       input#passwordinput-mob.form-control(style="width: 9.5rem;", name='passwordinput-mob', type='password', placeholder='...') 
+       button.go GO
+      li.logged-in 
+       a(href='#', class="logout") Log out
+
+// Positioned off the bottom edge of screen waiting for connection status to change 
+#offline-notification 
+  svg.svg-icon
+    use(fill='#fff' href='#my-connect-off')
+  | You are working offline.   
+  a(href='library.html')  6 Books available
+
