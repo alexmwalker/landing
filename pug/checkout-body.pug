@@ -1,20 +1,116 @@
 section
   .container
-    .grid
-      .col-4
-        ul
+    .grid-reverse-center
+      .col-7_sm-11#form_container
+        form#form_79300.appnitro(method='post' action='')
+          .grid
+            .col-12.form_description
+              h2 Unlock the SitePoint Library
+              p No commitment. Cancel with one-click.
+            .col-4
+              label.description.hidden(for='element_4') Payment 
+
+              .pretty.p-default.p-round.p-pulse
+                input#element_4_1.element.radio(name='payment_type' type='radio' value='1')
+                .state.p-success-o
+                  label.choice(for='element_4_1') Credit Card
+
+
+                  
+            .col-4
+              .pretty.p-default.p-round.p-pulse
+                input#element_4_2.element.radio(name='payment_type' type='radio' value='2')
+                .state.p-success-o
+                  label.choice.paypal(for='element_4_1') Paypal
+
+            .col-4
+              | 
+            .col-12
+              label.description(for='element_1') Card number
+                input#element_1.element.text.large(name='element_1' type='text' maxlength='255' value='')
+            .col-2
+              label.description(for='element_5') Month 
+                div
+                  select#element_5.element.select.small(name='element_5')
+                    option(value='1' selected='selected') 1
+                    option(value='2') 2
+                    option(value='3') 3
+                    option(value='4') 4
+                    option(value='5') 5
+                    option(value='6') 6
+                    option(value='7') 7
+                    option(value='8') 8
+                    option(value='9') 9
+                    option(value='10') 10
+                    option(value='11') 11
+                    option(value='12') 12
+                p#guide_5.guidelines
+                  small Choose the month of expiry your card. 
+            .col-2
+              label.description(for='element_6') Year 
+                div
+                  select#element_6.element.select.small(name='element_6')
+                    option(value='1' selected='selected') 19
+                    option(value='2') 20
+                    option(value='3') 21
+                    option(value='4') 22
+                    option(value='5') 23
+                p#guide_6.guidelines
+                  small Choose the year of expiry your card. 
+            .col-2
+              label.description(for='element_2') CCV 
+              div
+                input#element_2.element.text.small(name='element_2' type='text' maxlength='255' value='')
+              p#guide_2.guidelines
+                small
+                  | Enter the three extra numbers on the reserve side of your card
+            .col-6
+              |
+            .col-12
+              label.description(for='element_7') Select your billing cycle 
+            .col-4
+              input#element_7_1.element.radio(name='element_7' type='radio' value='1' checked='checked')
+              label.choice(for='element_7_1') $9 / mo
+            .col-4
+              input#element_7_2.element.radio(name='element_7' type='radio' value='2')
+              label.choice(for='element_7_2') $8.25 / mo
+            .col-4
+             | 
+            .col-12.receipt
+              h3 Today&apos;s payment
+              p
+
+              input(type='hidden' name='form_id' value='79300')
+              input#saveForm.button_text(type='submit' name='submit' value='Submit')
+
+
+
+
+      .col-1_sm-hidden
+        |
+      .col-4_sm-11.supporting
+        ul.salespoints
           li
             img(src="images/icon-books.svg", alt="350 books") 
-            | 350+ Web & computer science books
+            span 350+ Web &amp; computer science books
           li
             img(src="images/icon-Crown.svg", alt="5 top publishers")
-            | 5 of the World’s great tech publishers
+            span 5 of the World’s great tech publishers
           li
             img(src="images/icon-van.svg", alt="New books arriving")
-            | New books arriving every single week
+            span New books arriving every single week
           li
-            img(src="images/icon-adfree.svg", alt="Ad free")
-            |100% Ad-Free SitePoint.com
-      .col-8
-        h2 sdf
-        
+            img(src="images/icon-adfree.svg", alt="Ad-free")
+            span 100% Ad-Free SitePoint.com
+
+        ul.publishers
+          li
+            img(src="images/publishers/sitepoint.svg")
+          li
+            img(src="images/publishers/ABA.svg")
+          li
+            img(src="images/publishers/packt.svg")
+          li
+            img(src="images/publishers/smashing.svg")
+          li
+            img(src="images/publishers/wiley.svg")  

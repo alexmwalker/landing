@@ -1,0 +1,100 @@
+
+/*     */
+.grid-reverse-center>div{
+  //outline: 1px green dashed!important;
+  padding-top: calc(var(--baseline) * 1);
+}
+
+
+
+.logged-out{
+  img{
+    height: calc(var(--baseline) * 1.5);
+    margin: calc(var(--baseline) * .25) 1rem calc(var(--baseline) * -0.5) 0;
+    //outline: 1px red dashed;
+  }
+}
+
+#form_container {
+  [class*="col-"]{
+  //outline: 1px red dashed; 
+  margin: calc(var(--baseline) * .5) 0;
+  }
+  input[type="text"]{
+    height: calc(var(--baseline) * 1);
+    &.large{
+      width: 100%;
+    }
+  } 
+  .receipt{
+    background: rgba(175,238,241,.39);
+    padding: calc(var(--baseline) * .5) 0;
+  }
+}
+label.paypal{
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.918 7.143a1.09 1.09 0 0 1 1.076-.92h6.822c.808 0 1.562.053 2.25.163.377.06.749.144 1.115.25.416.116.819.277 1.202.478.342-2.179-.002-3.66-1.18-5.003C18.906.634 16.563 0 13.565 0H4.862a1.246 1.246 0 0 0-1.23 1.051L.01 24.029a.747.747 0 0 0 .738.864h5.372l1.35-8.559 1.45-9.191z' fill='%23002F86'/%3E%3Cpath d='M21.384 7.113c-.027.17-.057.34-.09.51-1.146 5.891-5.073 7.93-10.088 7.93H8.652a1.241 1.241 0 0 0-1.225 1.05L6.12 24.892l-.372 2.351a.654.654 0 0 0 .646.756h4.528c.536 0 .992-.39 1.076-.92l.044-.23.854-5.409.054-.299a1.09 1.09 0 0 1 1.077-.92h.677c4.387 0 7.822-1.78 8.826-6.936.418-2.153.201-3.952-.906-5.215a4.325 4.325 0 0 0-1.24-.957z' fill='%23009CDE'/%3E%3Cpath d='M20.182 6.635a7.897 7.897 0 0 0-.541-.14 9.584 9.584 0 0 0-.575-.108 14.066 14.066 0 0 0-2.25-.165H9.993a1.087 1.087 0 0 0-1.076.92l-1.45 9.194-.041.267a1.241 1.241 0 0 1 1.225-1.05h2.554c5.015 0 8.941-2.038 10.088-7.93.034-.175.063-.343.09-.51a6.198 6.198 0 0 0-1.202-.479' fill='%23012069'/%3E%3C/svg%3E");
+  padding-left: 2rem;
+  background-size: auto 100%;
+  background-position-x: 2rem;
+  background-repeat: no-repeat;
+}
+.salespoints, .publishers{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.publishers li{
+    //outline: 1px red dashed;
+    display: flex;
+    margin: calc(var(--baseline) * .5) 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+.salespoints li {
+    outline: 1px green dashed;
+    margin: calc(var(--baseline) * .5) 0;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+    //display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    img{ 
+      float: left;
+      margin-right: 1rem
+    }
+    span{
+      outline: 1px red dashed;
+      font-weight: 400;
+      color: #7D7D7D;
+      order: 0;
+      flex: 0 1 auto;
+      display: block;
+      align-items: center;
+      align-content: center;
+      align-self: stretch;
+    }
+}
+  
+
+
+
+
+
+
+.hidden, .guidelines{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
