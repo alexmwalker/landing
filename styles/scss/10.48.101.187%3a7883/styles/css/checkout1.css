@@ -5111,7 +5111,8 @@ footer.mainfooter {
 
 #form_container [class*="col-"] {
   outline: 1px red dashed;
-  margin: calc(var(--baseline) * .25) 0; }
+  margin: calc(var(--baseline) * .25) 0;
+  }
 
 .hidden {
   position: absolute;

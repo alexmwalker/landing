@@ -44,6 +44,7 @@ section
                     option(value='10') 10
                     option(value='11') 11
                     option(value='12') 12
+                  | /
                 p#guide_5.guidelines
                   small Choose the month of expiry your card. 
             .col-2
@@ -69,19 +70,30 @@ section
             .col-12
               label.description(for='element_7') Select your billing cycle 
             .col-4
-              input#element_7_1.element.radio(name='element_7' type='radio' value='1' checked='checked')
-              label.choice(for='element_7_1') $9 / mo
+              .pretty.p-default.p-round.p-pulse
+                input#element_7_1.element.radio(name='element_7' type='radio' value='1' checked='checked')
+                .state.p-success-o
+                  label.choice(for='element_7_1') $9 / mo
             .col-4
-              input#element_7_2.element.radio(name='element_7' type='radio' value='2')
-              label.choice(for='element_7_2') $8.25 / mo
+              .pretty.p-default.p-round.p-pulse
+                input#element_7_2.element.radio(name='element_7' type='radio' value='2')
+                .state.p-success-o
+                  label.choice(for='element_7_2') $8.25 / mo
+
             .col-4
              | 
             .col-12.receipt
-              h3 Today&apos;s payment
-              p
-
-              input(type='hidden' name='form_id' value='79300')
-              input#saveForm.button_text(type='submit' name='submit' value='Submit')
+              .grid-center
+                .col-11
+                  h4 Today&apos;s payment
+                  .price
+                    | $9.00
+                  p.our-commitment
+                    strong Our Commitment:  
+                    | If we haven’t already written the best book on a tech topic, we promise to find the best book and bring it to your SitePoint library.
+                .col-11.text-center
+                  input(type='hidden' name='form_id' value='79300')
+                  input#saveForm.paynow(type='submit' name='submit' value='Unlock the library')
 
 
 
