@@ -27,7 +27,7 @@ section
               | 
             .col-12
               label.description(for='element_1') Card number
-                input#element_1.element.text.large(name='element_1' type='text' maxlength='255' value='')
+                input#element_1.element.text.large(name='element_1' type='text' maxlength='25' value='' placeholder="xxxx xxx xxx xxx")
             .col-2
               label.description(for='element_5') Month 
                 div
@@ -89,28 +89,6 @@ section
       .col-1_sm-hidden
         |
       .col-4_sm-11.supporting
-        ul.salespoints
-          li
-            img(src="images/icon-books.svg", alt="350 books") 
-            span 350+ Web &amp; computer science books
-          li
-            img(src="images/icon-Crown.svg", alt="5 top publishers")
-            span 5 of the World’s great tech publishers
-          li
-            img(src="images/icon-van.svg", alt="New books arriving")
-            span New books arriving every single week
-          li
-            img(src="images/icon-adfree.svg", alt="Ad-free")
-            span 100% Ad-Free SitePoint.com
+        //include checkout-salespoints.pug
 
-        ul.publishers
-          li
-            img(src="images/publishers/sitepoint.svg")
-          li
-            img(src="images/publishers/ABA.svg")
-          li
-            img(src="images/publishers/packt.svg")
-          li
-            img(src="images/publishers/smashing.svg")
-          li
-            img(src="images/publishers/wiley.svg")  
+        include checkout-publishers.pug

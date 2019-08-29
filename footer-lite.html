@@ -3,39 +3,10 @@
 <footer class="mainfooter">
   <div class="container">
     <div class="grid">
-      <div class="col-3">Stuff We Do
-        <ul class="footer-points">
-          <li><a class="Footer-link f-small" href="/">SitePoint Home</a></li>
-          <li><a class="Footer-link f-small" href="/versioning/">Versioning</a></li>
-          <li><a class="Footer-link f-small" href="/themes/">Themes</a></li>
-          <li><a class="Footer-link f-small" href="/community/">Forums</a></li>
-          <li><a class="Footer-link f-small" href="/html-css/css/">References</a></li>
-        </ul>
-      </div>
-      <div class="col-3">About
-        <ul>
-          <li><a class="Footer-link f-small" href="/about-us/">Our Story</a></li>
-          <li><a class="Footer-link f-small" href="/press/">Press Room</a></li>
-        </ul>
-      </div>
-      <div class="col-3">Contact
-        <ul>
-          <li><a class="Footer-link f-small" href="/contact-us/">Contact Us</a></li>
-          <li><a class="Footer-link f-small" href="https://sitepoint.zendesk.com/hc/en-us">FAQ</a></li>
-          <li><a class="Footer-link f-small" href="/write-for-us/">Write for Us</a></li>
-          <li><a class="Footer-link f-small" href="/advertise/">Advertise</a></li>
-        </ul>
-      </div>
-      <div class="col-3">Legals
-        <ul>
-          <li><a class="Footer-link f-small" href="/premium/legals">Terms of Use</a></li>
-          <li><a class="Footer-link f-small" href="/premium/privacy-policy">Privacy Policy</a></li>
-        </ul>
-      </div>
+      <div class="col-3">Copyright &copy;  SitePoint Pty. Ltd.</div>
     </div>
   </div>
 </footer>
-<div class="feedback">test</div>
 <script>
   $(document).ready(function(){
     $('.showmobile').click(function(){
@@ -60,56 +31,10 @@
       $('ul.account-items').removeClass('open');
     });
   
-</script>
-<script>
-    var animateHTML = function() {
-    var elems;
-    var windowHeight;
-    function init() {
-      elems = document.querySelectorAll('.waiting');
-      windowHeight = window.innerHeight;
-      addEventHandlers();
-      checkPosition();
-    }
-    function addEventHandlers() {
-      window.addEventListener('scroll', checkPosition);
-      window.addEventListener('resize', init);
-    }
-    function checkPosition() {
-      for (var i = 0; i < elems.length; i++) {
-        var positionFromTop = elems[i].getBoundingClientRect().top;
-        var unitHeight = elems[i].getBoundingClientRect().height;
-        var bottomedge = positionFromTop +  unitHeight;
-        if (positionFromTop < 0 && bottomedge > 0){
-          elems[i].className = elems[i].className.replace(
-            'waiting',
-            'animate'
-          );/*
-          console.log('-------------------: ') ;
-          console.log('positionFromTop: ' + positionFromTop);
-          console.log('windowHeight: ' + windowHeight);
-          console.log('elems[i].className: ' + elems[i].className);
-          console.log('bottomedge: ' + bottomedge);
-          console.log('pFt - win: ' + (positionFromTop - windowHeight));*/
-        } else if (bottomedge < 0 || positionFromTop < 0){
-          elems[i].className = elems[i].className.replace(
-            'animate',
-            'waiting'
-          );/*
-          console.log('-------------------: ') ;
-          console.log('positionFromTop: ' + positionFromTop);
-          console.log('windowHeight: ' + windowHeight);
-          console.log('elems[i].className: ' + elems[i].className);
-          console.log('bottomedge: ' + bottomedge);
-          console.log('pFt - win: ' + (positionFromTop - windowHeight));*/
-        }
-      }
-    }
-    return {
-      init: init
-    };
-  };
-  animateHTML().init();
-        
-      //$( ".feedback" ).text( "viewportheight: " + viewportheight + ", ParadeOn: " + paradeOn + ", ParadeOff: " + paradeOff + ", things: " + howmanythingstoanimate);
+  
+  
+  
+  
+  
+  // body > section > section.bodycontent > div > div:nth-child(5) > div:nth-child(2)
 </script>

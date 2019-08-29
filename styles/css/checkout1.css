@@ -2195,15 +2195,25 @@ html.offline #offline-notification {
 
 .logged-out img {
   height: calc(var(--baseline) * 1.5);
-  margin: calc(var(--baseline) * .25) 1rem calc(var(--baseline) * -0.5) 0; }
+  margin: calc(var(--baseline) * .25) 1rem calc(var(--baseline) * -0.5) 0;
+  border-radius: 50%;
+  border: 1px solid #00924e; }
 
 #form_container [class*="col-"] {
   margin: calc(var(--baseline) * .5) 0; }
 
 #form_container input[type="text"] {
-  height: calc(var(--baseline) * 1); }
+  height: calc(var(--baseline) * 1);
+  font-size: calc(var(--typescale) * 1rem);
+  padding: 0 1rem; }
+  #form_container input[type="text"]::-webkit-input-placeholder {
+    color: #ddd; }
   #form_container input[type="text"].large {
-    width: 100%; }
+    width: 150%; }
+
+#form_container select {
+  outline: 1px red dashed;
+  font-size: calc(var(--typescale) * 1rem); }
 
 #form_container .receipt {
   background: rgba(175, 238, 241, 0.39);
@@ -2244,7 +2254,6 @@ label.paypal {
   text-align: center; }
 
 .salespoints li {
-  outline: 1px green dashed;
   margin: calc(var(--baseline) * .5) 0;
   -webkit-box-ordinal-group: 1;
   -ms-flex-order: 0;
@@ -2273,7 +2282,6 @@ label.paypal {
     float: left;
     margin-right: 1rem; }
   .salespoints li span {
-    outline: 1px red dashed;
     font-weight: 400;
     color: #7D7D7D;
     -webkit-box-ordinal-group: 1;
