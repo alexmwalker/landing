@@ -1,4 +1,4 @@
-section
+section.checkout
   .container
     .grid-reverse-center
       .col-7_sm-11#form_container
@@ -26,10 +26,10 @@ section
             .col-4
               | 
             .col-12
-              label.description(for='element_1') Card number
-                input#element_1.element.text.large(name='element_1' type='text' maxlength='25' value='' placeholder="xxxx xxx xxx xxx")
+              label.description.small(for='cardnumber') Card number
+              input#element_1.element.text.large(name='cardnumber' type='text' maxlength='25' value='' placeholder="xxxx xxx xxx xxx")
             .col-2
-              label.description(for='element_5') Month 
+              label.description.small(for='element_5') Month 
                 div
                   select#element_5.element.select.small(name='element_5')
                     option(value='1' selected='selected') 1
@@ -44,11 +44,11 @@ section
                     option(value='10') 10
                     option(value='11') 11
                     option(value='12') 12
-                  | /
+                  | &nbsp; &nbsp;/
                 p#guide_5.guidelines
                   small Choose the month of expiry your card. 
             .col-2
-              label.description(for='element_6') Year 
+              label.description.small(for='element_6') Year 
                 div
                   select#element_6.element.select.small(name='element_6')
                     option(value='1' selected='selected') 19
@@ -59,9 +59,9 @@ section
                 p#guide_6.guidelines
                   small Choose the year of expiry your card. 
             .col-2
-              label.description(for='element_2') CCV 
+              label.description.small(for='element_2') CCV 
               div
-                input#element_2.element.text.small(name='element_2' type='text' maxlength='255' value='')
+                input#element_2.element.text.small(name='element_2' type='text' maxlength='4' value='')
               p#guide_2.guidelines
                 small
                   | Enter the three extra numbers on the reserve side of your card
@@ -75,7 +75,7 @@ section
                 .state.p-success-o
                   label.choice(for='element_7_1') $9 / mo
             .col-4
-              .pretty.p-default.p-round.p-pulse
+              .pretty.p-default.p-round.p-pulse.bestvalue
                 input#element_7_2.element.radio(name='element_7' type='radio' value='2')
                 .state.p-success-o
                   label.choice(for='element_7_2') $8.25 / mo
@@ -85,15 +85,16 @@ section
             .col-12.receipt
               .grid-center
                 .col-11
-                  h4 Today&apos;s payment
+                  h5 Today&apos;s payment
                   .price
                     | $9.00
                   p.our-commitment
                     strong Our Commitment:  
-                    | If we haven’t already written the best book on a tech topic, we promise to find the best book and bring it to your SitePoint library.
+                    | If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.
                 .col-11.text-center
                   input(type='hidden' name='form_id' value='79300')
                   input#saveForm.paynow(type='submit' name='submit' value='Unlock the library')
+
 
 
 
