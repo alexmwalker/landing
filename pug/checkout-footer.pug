@@ -36,13 +36,14 @@ script.
       $('ul.account-items').removeClass('open');
     });
 
-  $("input#element_4_1").change(function () {
-      $("body").addClass("paypal", this.checked);
-      $("body").addClass("creditcard", this.checked);
-      });
+  /* paypal - creditcard UI switch */
   $("input#element_4_2").change(function () {
-      $("body").removeClass("paypal", this.checked);
+      $("body").addClass("paypal", this.checked);
       $("body").removeClass("creditcard", this.checked);
+      });
+  $("input#element_4_1").change(function () {
+      $("body").removeClass("paypal", this.checked);
+      $("body").addClass("creditcard", this.checked);
       });
 
   /*$( "input.element" ).on( "click", function() {

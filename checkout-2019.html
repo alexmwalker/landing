@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
     <link rel="stylesheet" type="text/css" href="styles/css/checkout.css"/>
   </head>
-  <body class="vr labelling borders">
+  <body class="vr labelling borders creditcard">
     <!-- header-simple.pug-->
     <!-- Set `- var hidesearch = 1` on top of page to hide the navbar search (see 'search.pug')-->
     <!-- -->
@@ -62,118 +62,208 @@
       <section class="checkout">
         <div class="container">
           <div class="grid-reverse-center">
-            <div class="col-7_sm-11" id="form_container">
-              <form class="appnitro" id="form_79300" method="post" action="">
-                <div class="grid">
-                  <div class="col-12 form_description">
-                    <h2>Unlock the SitePoint Library</h2>
-                    <p>No commitment. Cancel with one-click.</p>
-                  </div>
-                  <div class="col-4">
-                    <label class="description hidden" for="element_4">Payment </label>
-                    <div class="pretty p-default p-round p-pulse">
-                      <input class="element radio" id="element_4_1" name="payment_type" type="radio" value="1"/>
-                      <div class="state p-success-o">
-                        <label class="choice" for="element_4_1">Credit Card</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="pretty p-default p-round p-pulse">
-                      <input class="element radio" id="element_4_2" name="payment_type" type="radio" value="2"/>
-                      <div class="state p-success-o">
-                        <label class="choice paypal" for="element_4_1">Paypal</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4"> </div>
-                  <div class="col-8">
-                    <label class="description small" for="cardnumber">Card number</label>
-                    <input class="element text large" id="element_1" name="cardnumber" type="text" maxlength="25" value="" placeholder="xxxx xxx xxx xxx"/>
-                  </div>
-                  <div class="col-4">
-                    <div class="card-images"></div>
-                  </div>
-                  <div class="col-2">
-                    <label class="description small" for="element_5">Month 
-                      <div>
-                        <select class="element select small" id="element_5" name="element_5">
-                          <option value="1" selected="selected">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
-                        </select>&nbsp; &nbsp;/
-                      </div>
-                      <p class="guidelines" id="guide_5"><small>Choose the month of expiry your card. </small></p>
-                    </label>
-                  </div>
-                  <div class="col-2">
-                    <label class="description small" for="element_6">Year 
-                      <div>
-                        <select class="element select small" id="element_6" name="element_6">
-                          <option value="1" selected="selected">19</option>
-                          <option value="2">20</option>
-                          <option value="3">21</option>
-                          <option value="4">22</option>
-                          <option value="5">23</option>
-                        </select>
-                      </div>
-                      <p class="guidelines" id="guide_6"><small>Choose the year of expiry your card. </small></p>
-                    </label>
-                  </div>
-                  <div class="col-2">
-                    <label class="description small" for="element_2">CCV </label>
-                    <div>
-                      <input class="element text small" id="element_2" name="element_2" type="text" maxlength="4" value=""/>
-                    </div>
-                    <p class="guidelines" id="guide_2"><small>Enter the three extra numbers on the reserve side of your card</small></p>
-                  </div>
-                  <div class="col-6"></div>
-                  <div class="col-12">
-                    <label class="choice" for="element_7">Select your billing cycle </label>
-                  </div>
-                  <div class="col-4">
-                    <div class="pretty p-default p-round p-pulse">
-                      <input class="element radio" id="element_7_1" name="element_7" type="radio" value="1" checked="checked"/>
-                      <div class="state p-success-o">
-                        <label class="choice" for="element_7_1">$9 / mo</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="pretty p-default p-round p-pulse bestvalue">
-                      <input class="element radio" id="element_7_2" name="element_7" type="radio" value="2"/>
-                      <div class="state p-success-o">
-                        <label class="choice" for="element_7_2">$8.25 / mo</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4"> </div>
-                  <div class="col-12 receipt">
-                    <div class="grid-center">
-                      <div class="col-11">
-                        <h5>Today&apos;s payment</h5>
-                        <div class="price">$9.00</div>
-                        <p class="our-commitment"><strong>Our Commitment:  </strong>If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.</p>
-                      </div>
-                      <div class="col-11 text-center">
-                        <input type="hidden" name="form_id" value="79300"/>
-                        <input class="paynow" id="saveForm" type="submit" name="submit" value="Unlock the library"/>
-                      </div>
+            <div class="col-6_sm-11" id="form_container">
+              <!-- shared top-->
+              <div class="grid">
+                <div class="col-12 form_description">
+                  <h2>Unlock the SitePoint Library</h2>
+                  <p>No commitment. Cancel with one-click.</p>
+                </div>
+                <div class="col-4">
+                  <label class="description hidden" for="element_4">Payment </label>
+                  <div class="pretty p-default p-round p-pulse">
+                    <input class="element radio" id="element_4_1" name="payment_type" type="radio" value="1" checked="checked"/>
+                    <div class="state p-success-o">
+                      <label class="choice" for="element_4_1">Credit Card</label>
                     </div>
                   </div>
                 </div>
-              </form>
+                <div class="col-4">
+                  <div class="pretty p-default p-round p-pulse">
+                    <input class="element radio" id="element_4_2" name="payment_type" type="radio" value="2"/>
+                    <div class="state p-success-o">
+                      <label class="choice paypal" for="element_4_1">Paypal</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4"> </div>
+                <!-- begin credit card section-->
+                <!--form#form_79300.cctransaction(method='post' action='')-->
+              </div>
+              <div class="grid creditcards">
+                <div class="col-8">
+                  <label class="description small" for="cardnumber">Card number</label>
+                  <input class="element text large" id="element_1" name="cardnumber" type="text" maxlength="25" value="" placeholder="xxxx xxx xxx xxx"/>
+                </div>
+                <div class="col-4">
+                  <div class="card-images"></div>
+                </div>
+                <div class="col-2">
+                  <label class="description small" for="element_5">Month 
+                    <div>
+                      <select class="element select small" id="element_5" name="element_5">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>&nbsp; &nbsp;/
+                    </div>
+                    <p class="guidelines" id="guide_5"><small>Choose the month of expiry your card. </small></p>
+                  </label>
+                </div>
+                <div class="col-2">
+                  <label class="description small" for="element_6">Year 
+                    <div>
+                      <select class="element select small" id="element_6" name="element_6">
+                        <option value="1" selected="selected">19</option>
+                        <option value="2">20</option>
+                        <option value="3">21</option>
+                        <option value="4">22</option>
+                        <option value="5">23</option>
+                      </select>
+                    </div>
+                    <p class="guidelines" id="guide_6"><small>Choose the year of expiry your card. </small></p>
+                  </label>
+                </div>
+                <div class="col-2">
+                  <label class="description small" for="element_2">CCV </label>
+                  <div>
+                    <input class="element text small" id="element_2" name="element_2" type="text" maxlength="4" value=""/>
+                  </div>
+                  <p class="guidelines" id="guide_2"><small>Enter the three extra numbers on the reserve side of your card</small></p>
+                </div>
+                <div class="col-6"></div>
+                <div class="col-12">
+                  <label class="choice" for="element_7">Select your billing cycle </label>
+                </div>
+                <div class="col-4">
+                  <div class="pretty p-default p-round p-pulse">
+                    <input class="element radio" id="element_7_1" name="element_7" type="radio" value="1" checked="checked"/>
+                    <div class="state p-success-o">
+                      <label class="choice" for="element_7_1">$9 / mo</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="pretty p-default p-round p-pulse bestvalue">
+                    <input class="element radio" id="element_7_2" name="element_7" type="radio" value="2"/>
+                    <div class="state p-success-o">
+                      <label class="choice" for="element_7_2">$8.25 / mo</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4"></div> 
+                <div class="col-12 receipt">
+                  <div class="grid-center">
+                    <div class="col-11">
+                      <h5>Today&apos;s payment</h5>
+                      <div class="price monthly">$9.00</div>
+                      <div class="price annual">$99.00 </div>
+                      <p class="our-commitment"><strong>Our Commitment:  </strong>If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.</p>
+                    </div>
+                    <div class="col-11 text-center">
+                      <input type="hidden" name="form_id" value="79300"/>
+                      <input class="paynow" id="saveForm" type="submit" name="submit" value="Unlock the library"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid paypalUI">
+                <div class="col-8">
+                  <label class="description small" for="cardnumber">Card number</label>
+                  <input class="element text large" id="element_1" name="cardnumber" type="text" maxlength="25" value="" placeholder="xxxx xxx xxx xxx"/>
+                </div>
+                <div class="col-4">
+                  <div class="card-images"></div>
+                </div>
+                <div class="col-2">
+                  <label class="description small" for="element_5">Month 
+                    <div>
+                      <select class="element select small" id="element_5" name="element_5">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>&nbsp; &nbsp;/
+                    </div>
+                    <p class="guidelines" id="guide_5"><small>Choose the month of expiry your card. </small></p>
+                  </label>
+                </div>
+                <div class="col-2">
+                  <label class="description small" for="element_6">Year 
+                    <div>
+                      <select class="element select small" id="element_6" name="element_6">
+                        <option value="1" selected="selected">19</option>
+                        <option value="2">20</option>
+                        <option value="3">21</option>
+                        <option value="4">22</option>
+                        <option value="5">23</option>
+                      </select>
+                    </div>
+                    <p class="guidelines" id="guide_6"><small>Choose the year of expiry your card. </small></p>
+                  </label>
+                </div>
+                <div class="col-2">
+                  <label class="description small" for="element_2">CCV </label>
+                  <div>
+                    <input class="element text small" id="element_2" name="element_2" type="text" maxlength="4" value=""/>
+                  </div>
+                  <p class="guidelines" id="guide_2"><small>Enter the three extra numbers on the reserve side of your card</small></p>
+                </div>
+                <div class="col-6"></div>
+                <div class="col-12">
+                  <label class="choice" for="element_7">Select your billing cycle </label>
+                </div>
+                <div class="col-4">
+                  <div class="pretty p-default p-round p-pulse">
+                    <input class="element radio" id="element_7_1" name="element_7" type="radio" value="1" checked="checked"/>
+                    <div class="state p-success-o">
+                      <label class="choice" for="element_7_1">$9 / mo</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="pretty p-default p-round p-pulse bestvalue">
+                    <input class="element radio" id="element_7_2" name="element_7" type="radio" value="2"/>
+                    <div class="state p-success-o">
+                      <label class="choice" for="element_7_2">$8.25 / mo</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4"> </div>
+                <div class="col-12 receipt">
+                  <div class="grid-center">
+                    <div class="col-11">
+                      <h5>Today&apos;s payment</h5>
+                      <div class="price monthly">$9.00</div>
+                      <div class="price annual">$99.00 </div>
+                      <p class="our-commitment"><strong>Our Commitment:  </strong>If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.</p>
+                    </div>
+                    <div class="col-11 text-center">
+                      <button class="paypal_button">Checkout</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-1_sm-hidden"></div>
+            <!--.col-1_sm-hidden|
+            -->
             <div class="col-4_sm-11 supporting">
               <!--include checkout-salespoints.pug-->
               <p class="text-center whisper"> <small>350+ titles from publishers including..</small></p>
@@ -324,13 +414,14 @@
           $('ul.account-items').removeClass('open');
         });
       
-      $("input#element_4_1").change(function () {
-          $("body").addClass("paypal", this.checked);
-          $("body").addClass("creditcard", this.checked);
-          });
+      /* paypal - creditcard UI switch */
       $("input#element_4_2").change(function () {
-          $("body").removeClass("paypal", this.checked);
+          $("body").addClass("paypal", this.checked);
           $("body").removeClass("creditcard", this.checked);
+          });
+      $("input#element_4_1").change(function () {
+          $("body").removeClass("paypal", this.checked);
+          $("body").addClass("creditcard", this.checked);
           });
       
       /*$( "input.element" ).on( "click", function() {
