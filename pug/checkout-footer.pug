@@ -36,35 +36,17 @@ script.
       $('ul.account-items').removeClass('open');
     });
 
-script.
-  /* ===  Mimic offline mode ===  */ 
-  /*   http://10.48.101.187:7883/book.html?offline=1   */ 
-
-  function getUrlVars() {
-      var vars = {};
-      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-          vars[key] = value;
+  $("input#element_4_1").change(function () {
+      $("body").addClass("paypal", this.checked);
+      $("body").addClass("creditcard", this.checked);
       });
-      return vars;
-  }
-  var offline = getUrlVars()["offline"];
+  $("input#element_4_2").change(function () {
+      $("body").removeClass("paypal", this.checked);
+      $("body").removeClass("creditcard", this.checked);
+      });
 
-  function checkConnection(){
-    if (offline == 1){
-      //alert('You  are currently offline. Reconnect to the internet to access this item.');
-      $('html').addClass('offline');
-    } else {
-      $('html').removeClass('offline');
-      //alert('You  are currently online.');
-    }
-  }
-  checkConnection();
+  /*$( "input.element" ).on( "click", function() {
+    //$( "#log" ).html( $( "input:checked" ).val() + " is checked!" );
+    $("body").toggleClass("paypal", this.checked);
+  });*/
 
-        
-      //$( ".feedback" ).text( "viewportheight: " + viewportheight + ", ParadeOn: " + paradeOn + ", ParadeOff: " + paradeOff + ", things: " + howmanythingstoanimate);
-
-
-
-
-
-  

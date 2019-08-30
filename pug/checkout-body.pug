@@ -15,8 +15,6 @@ section.checkout
                 .state.p-success-o
                   label.choice(for='element_4_1') Credit Card
 
-
-                  
             .col-4
               .pretty.p-default.p-round.p-pulse
                 input#element_4_2.element.radio(name='payment_type' type='radio' value='2')
@@ -25,9 +23,12 @@ section.checkout
 
             .col-4
               | 
-            .col-12
+            .col-8
               label.description.small(for='cardnumber') Card number
               input#element_1.element.text.large(name='cardnumber' type='text' maxlength='25' value='' placeholder="xxxx xxx xxx xxx")
+            .col-4
+              .card-images
+
             .col-2
               label.description.small(for='element_5') Month 
                 div
@@ -68,7 +69,7 @@ section.checkout
             .col-6
               |
             .col-12
-              label.description(for='element_7') Select your billing cycle 
+              label.choice(for='element_7') Select your billing cycle 
             .col-4
               .pretty.p-default.p-round.p-pulse
                 input#element_7_1.element.radio(name='element_7' type='radio' value='1' checked='checked')
