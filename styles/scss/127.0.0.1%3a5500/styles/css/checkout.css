@@ -2224,15 +2224,13 @@ html.offline #offline-notification {
   font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
   display: block;
   position: absolute;
+  outline: 1px red dashed;
   left: 1.5rem;
-  top: calc(var(--baseline) * 1);
-  color: #666; }
+  top: calc(var(--baseline) * 1.0);
+  }
 
 .hideit {
   display: none; }
-
-.billing_cycle {
-  margin-bottom: calc(var(--baseline) * 1.5) !important; }
 
 .paypal_button,
 .button {

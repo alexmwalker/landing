@@ -2231,9 +2231,6 @@ html.offline #offline-notification {
 .hideit {
   display: none; }
 
-.billing_cycle {
-  margin-bottom: calc(var(--baseline) * 1.5) !important; }
-
 .paypal_button,
 .button {
   background: #009CDE;
@@ -2304,9 +2301,11 @@ html.offline #offline-notification {
   width: 4rem; }
 
 .receipt {
+  /* margin-top: calc(var(--baseline) * 2); */
   background: rgba(175, 238, 241, 0.39);
   padding: 0 0 calc(var(--baseline) * .5);
-  margin: 0 0 calc(var(--baseline) * 2); }
+  margin: 0 0 calc(var(--baseline) * 2);
+  }
   .receipt h4 {
     margin: calc(var(--baseline) * 0.5) 0; }
   .receipt input.paynow {

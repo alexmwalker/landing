@@ -33,7 +33,7 @@ section.checkout
                 input#element_1.element.text.large(name='cardnumber' type='text' maxlength='25' value='' placeholder="xxxx xxx xxx xxx")
               .col-4
                 .card-images
-                
+
               .col-2
                 label.description.small(for='element_5') Month 
                   div
@@ -75,16 +75,18 @@ section.checkout
                 |
               .col-12
                 h5 Select your billing cycle 
-              .col-4
+              .col-4.billing_cycle
                 .pretty.p-default.p-round.p-pulse
-                  input#element_7_3.element.radio(name='billing_cycle_paypal' type='radio' value='1' checked='checked')
+                  input#element_7_3.element.radio.priceswitch-1(name='billing_cycle_paypal' type='radio' value='1' checked='checked')
                   .state.p-success-o
-                    label.choice(for='element_7_3') $9 / mo
-              .col-4
+                    label.choice(for='element_7_3') $9 / mo 
+                    span.small Billed monthly
+              .col-4.billing_cycle
                 .pretty.p-default.p-round.p-pulse.bestvalue
-                  input#element_7_4.element.radio(name='billing_cycle_paypal' type='radio' value='2')
+                  input#element_7_4.element.radio.priceswitch-2(name='billing_cycle_paypal' type='radio' value='2')
                   .state.p-success-o
                     label.choice(for='element_7_4') $8.25 / mo
+                    span.small $99 billed yearly
 
               .col-4
               | 
@@ -94,7 +96,7 @@ section.checkout
                     h5 Today&apos;s payment
                     .price.monthly
                       | $9.00
-                    .price.annual
+                    .price.annual.hideit
                       | $99.00 
                     p.our-commitment
                       strong Our Commitment:  
@@ -110,12 +112,12 @@ section.checkout
                 label.choice(for='element_7') Select your billing cycle 
               .col-4
                 .pretty.p-default.p-round.p-pulse
-                  input#element_7_1.element.radio(name='element_7' type='radio' value='1' checked='checked')
+                  input#element_7_1.element.radio.priceswitch-1(name='element_7' type='radio' value='1' checked='checked')
                   .state.p-success-o
                     label.choice(for='element_7_1') $9 / mo
               .col-4
                 .pretty.p-default.p-round.p-pulse.bestvalue
-                  input#element_7_2.element.radio(name='element_7' type='radio' value='2')
+                  input#element_7_2.element.radio.priceswitch-2(name='element_7' type='radio' value='2')
                   .state.p-success-o
                     label.choice(for='element_7_2') $8.25 / mo
 
@@ -127,7 +129,7 @@ section.checkout
                     h5 Today&apos;s payment
                     .price.monthly
                       | $9.00
-                    .price.annual
+                    .price.annual.hideit
                       | $99.00 
                     p.our-commitment
                       strong Our Commitment:  

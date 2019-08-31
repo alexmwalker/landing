@@ -48,12 +48,27 @@
   }
 }
 
+.pretty span.small {
+  font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
+  display: block;
+  position: absolute;
+  left: 1.5rem;
+  top: calc(var(--baseline) * 1);
+  color: #666;
+}
+
+.hideit {
+  display: none;
+}
+
+.billing_cycle {
+  margin-bottom: calc(var(--baseline) * 1.5)!important;
+}
+
 .paypal_button,
 .button {
   background: #009CDE;
   background-image: linear-gradient(to bottom, #009CDE, #0091CF);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   height: 0px;
   line-height: 0px;
@@ -81,9 +96,7 @@
   }
 }
 
-.annual {
-  display: none;
-}
+
 
 .text-center {
   text-align: center;

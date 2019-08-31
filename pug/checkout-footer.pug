@@ -36,7 +36,7 @@ script.
       $('ul.account-items').removeClass('open');
     });
 
-  /* paypal - creditcard UI switch */
+  /* paypal / creditcard UI switch */
   $("input#element_4_2").change(function () {
       $("body").addClass("paypal", this.checked);
       $("body").removeClass("creditcard", this.checked);
@@ -46,6 +46,15 @@ script.
       $("body").addClass("creditcard", this.checked);
       });
 
+    /* Monthly / Annual switch*/
+  $("input.priceswitch-1").change(function () {
+      $(".monthly").removeClass("hideit", this.checked);
+      $(".annual").addClass("hideit", this.checked);
+      });    
+  $("input.priceswitch-2").change(function () {
+      $(".monthly").addClass("hideit", this.checked);
+      $(".annual").removeClass("hideit", this.checked);
+      }); 
   /*$( "input.element" ).on( "click", function() {
     //$( "#log" ).html( $( "input:checked" ).val() + " is checked!" );
     $("body").toggleClass("paypal", this.checked);
