@@ -61,8 +61,8 @@
   display: none;
 }
 
-.billing_cycle {
-  margin-bottom: calc(var(--baseline) * 1.5)!important;
+#form_container .col-4.billing_cycle {
+  margin-bottom: calc(var(--baseline) * 1.5) !important;
 }
 
 .paypal_button,
