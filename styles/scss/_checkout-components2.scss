@@ -30,7 +30,6 @@
 
 .paypal {
   .paypalUI {
-    outline: 3px red dashed;
     display: block;
   }
 
@@ -41,7 +40,6 @@
 
 .creditcard {
   .creditcards {
-    outline: 3px green dashed;
     display: block
   }
 
@@ -50,7 +48,8 @@
   }
 }
 
-.paypal_button {
+.paypal_button,
+.button {
   background: #009CDE;
   background-image: linear-gradient(to bottom, #009CDE, #0091CF);
   -webkit-border-radius: 4px;
@@ -58,19 +57,28 @@
   border-radius: 4px;
   height: 0px;
   line-height: 0px;
-  color: #FFFFFF;
+  color: #fff;
+  font-size: calc(1rem);
   width: 70%;
-  padding: 15px;
-  box-shadow: 1px 1px 4px 0px #CCCCCC;
+  line-height: 1rem;
+  height: calc(var(--baseline) * 1.5);
+  box-shadow: 1px 1px 4px 0px rgba(41, 41, 41, 0.4);
   border: solid #008CC7 1px;
   text-decoration: none;
-  display: inline-block;
+  //display: inline-block;
   cursor: pointer;
-}
 
-.paypal_button:hover {
-  background: #0091CF;
-  text-decoration: none;
+  &:hover {
+    background: #0091CF;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px 0px rgba(41, 41, 41, 0.4);
+  }
+
+  img {
+    height: calc(var(--baseline) / 1.25);
+    margin-right: 0.5rem;
+    margin: 0 0.5rem calc(var(--baseline) / -7) 0;
+  }
 }
 
 .annual {
@@ -266,4 +274,8 @@ label.paypal {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+div {
+  //outline: 1px #ccc dashed;
 }

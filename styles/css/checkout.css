@@ -2209,20 +2209,19 @@ html.offline #offline-notification {
   margin-bottom: 0; }
 
 .paypal .paypalUI {
-  outline: 3px red dashed;
   display: block; }
 
 .paypal .creditcards {
   display: none; }
 
 .creditcard .creditcards {
-  outline: 3px green dashed;
   display: block; }
 
 .creditcard .paypalUI {
   display: none; }
 
-.paypal_button {
+.paypal_button,
+.button {
   background: #009CDE;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#009CDE), to(#0091CF));
   background-image: -webkit-linear-gradient(top, #009CDE, #0091CF);
@@ -2233,19 +2232,27 @@ html.offline #offline-notification {
   border-radius: 4px;
   height: 0px;
   line-height: 0px;
-  color: #FFFFFF;
+  color: #fff;
+  font-size: calc(1rem);
   width: 70%;
-  padding: 15px;
-  -webkit-box-shadow: 1px 1px 4px 0px #CCCCCC;
-  box-shadow: 1px 1px 4px 0px #CCCCCC;
+  line-height: 1rem;
+  height: calc(var(--baseline) * 1.5);
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(41, 41, 41, 0.4);
+  box-shadow: 1px 1px 4px 0px rgba(41, 41, 41, 0.4);
   border: solid #008CC7 1px;
   text-decoration: none;
-  display: inline-block;
   cursor: pointer; }
-
-.paypal_button:hover {
-  background: #0091CF;
-  text-decoration: none; }
+  .paypal_button:hover,
+  .button:hover {
+    background: #0091CF;
+    text-decoration: none;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(41, 41, 41, 0.4);
+    box-shadow: 1px 1px 2px 0px rgba(41, 41, 41, 0.4); }
+  .paypal_button img,
+  .button img {
+    height: calc(var(--baseline) / 1.25);
+    margin-right: 0.5rem;
+    margin: 0 0.5rem calc(var(--baseline) / -7) 0; }
 
 .annual {
   display: none; }
