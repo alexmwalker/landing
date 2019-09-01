@@ -1,13 +1,13 @@
 section.checkout
   .container
     .grid-reverse-center
-      .col-6_sm-11#form_container
+      .col-6_sm-10#form_container
           // shared top
           .grid
             .col-12.form_description
               h2 Unlock the SitePoint Library
               p No commitment. Cancel with one-click.
-            .col-4
+            .col-4_sm-6
               label.description.hidden(for='element_4') Payment 
 
               .pretty.p-default.p-round.p-pulse
@@ -15,12 +15,12 @@ section.checkout
                 .state.p-success-o
                   label.choice(for='element_4_1') Credit Card
 
-            .col-4
+            .col-4_sm-6
               .pretty.p-default.p-round.p-pulse
                 input#element_4_2.element.radio(name='payment_type' type='radio' value='2')
                 .state.p-success-o
                   label.choice.paypal(for='element_4_2') Paypal
-            .col-4
+            .col-4_sm-hidden
               | 
               //- kept empty for now
 
@@ -28,13 +28,13 @@ section.checkout
             //form#form_79300.cctransaction(method='post' action='')
           .creditcards
             .grid
-              .col-8
+              .col-8_sm-11
                 label.description.small(for='cardnumber') Card number
                 input#element_1.element.text.large(name='cardnumber' type='text' maxlength='25' value='' placeholder="xxxx xxx xxx xxx")
-              .col-4
+              .col-4_sm-12
                 .card-images
 
-              .col-2
+              .col-2_sm-4
                 label.description.small(for='element_5') Month 
                   div
                     select#element_5.element.select.small(name='element_5')
@@ -53,7 +53,7 @@ section.checkout
                     | &nbsp; &nbsp;/
                   p#guide_5.guidelines
                     small Choose the month of expiry your card. 
-              .col-2
+              .col-2_sm-4
                 label.description.small(for='element_6') Year 
                   div
                     select#element_6.element.select.small(name='element_6')
@@ -64,17 +64,33 @@ section.checkout
                       option(value='5') 23
                   p#guide_6.guidelines
                     small Choose the year of expiry your card. 
-              .col-2
+              .col-2_sm-4
                 label.description.small(for='element_2') CCV 
                 div
                   input#element_2.element.text.small(name='element_2' type='text' maxlength='4' value='')
                 p#guide_2.guidelines
                   small
                     | Enter the three extra numbers on the reserve side of your card
-              .col-6
+              .col-6_sm-hidden
                 |
+              //select billing cycle
+              .col-12
+                h5 Select your billing cycle 
+              .col-4.billing_cycle
+                .pretty.p-default.p-round.p-pulse
+                  input#element_7_3.element.radio.priceswitch-1(name='billing_cycle_creditcard' type='radio' value='1' checked='checked')
+                  .state.p-success-o
+                    label.choice(for='element_7_3') $9 / mo 
+                span.small Billed monthly
 
-              include billing-cycle.pug
+              .col-4.billing_cycle
+                .pretty.p-default.p-round.p-pulse.bestvalue
+                  input#element_7_4.element.radio.priceswitch-2(name='billing_cycle_creditcard' type='radio' value='2')
+                  .state.p-success-o
+                    label.choice(for='element_7_4') $8.25 / mo
+                span.small $99 billed yearly
+              .col-4
+                | 
               
               .col-12.receipt
                 .grid-center
@@ -98,6 +114,7 @@ section.checkout
 
           .paypalUI 
             .grid
+              //select billing cycle
               .col-12
                 h5 Select your billing cycle 
               .col-4.billing_cycle
@@ -106,6 +123,7 @@ section.checkout
                   .state.p-success-o
                     label.choice(for='element_7_5') $9 / mo 
                 span.small Billed monthly
+ 
               .col-4.billing_cycle
                 .pretty.p-default.p-round.p-pulse.bestvalue
                   input#element_7_6.element.radio.priceswitch-2(name='billing_cycle_paypal' type='radio' value='2')

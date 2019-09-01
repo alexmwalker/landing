@@ -62,14 +62,14 @@
       <section class="checkout">
         <div class="container">
           <div class="grid-reverse-center">
-            <div class="col-6_sm-11" id="form_container">
+            <div class="col-6_sm-10" id="form_container">
               <!-- shared top-->
               <div class="grid">
                 <div class="col-12 form_description">
                   <h2>Unlock the SitePoint Library</h2>
                   <p>No commitment. Cancel with one-click.</p>
                 </div>
-                <div class="col-4">
+                <div class="col-4_sm-6">
                   <label class="description hidden" for="element_4">Payment </label>
                   <div class="pretty p-default p-round p-pulse">
                     <input class="element radio" id="element_4_1" name="payment_type" type="radio" value="1" checked="checked"/>
@@ -78,7 +78,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4_sm-6">
                   <div class="pretty p-default p-round p-pulse">
                     <input class="element radio" id="element_4_2" name="payment_type" type="radio" value="2"/>
                     <div class="state p-success-o">
@@ -86,20 +86,20 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4"> </div>
+                <div class="col-4_sm-hidden"> </div>
                 <!-- begin credit card section-->
                 <!--form#form_79300.cctransaction(method='post' action='')-->
               </div>
               <div class="creditcards">
                 <div class="grid">
-                  <div class="col-8">
+                  <div class="col-8_sm-11">
                     <label class="description small" for="cardnumber">Card number</label>
                     <input class="element text large" id="element_1" name="cardnumber" type="text" maxlength="25" value="" placeholder="xxxx xxx xxx xxx"/>
                   </div>
-                  <div class="col-4">
+                  <div class="col-4_sm-12">
                     <div class="card-images"></div>
                   </div>
-                  <div class="col-2">
+                  <div class="col-2_sm-4">
                     <label class="description small" for="element_5">Month 
                       <div>
                         <select class="element select small" id="element_5" name="element_5">
@@ -120,7 +120,7 @@
                       <p class="guidelines" id="guide_5"><small>Choose the month of expiry your card. </small></p>
                     </label>
                   </div>
-                  <div class="col-2">
+                  <div class="col-2_sm-4">
                     <label class="description small" for="element_6">Year 
                       <div>
                         <select class="element select small" id="element_6" name="element_6">
@@ -134,20 +134,21 @@
                       <p class="guidelines" id="guide_6"><small>Choose the year of expiry your card. </small></p>
                     </label>
                   </div>
-                  <div class="col-2">
+                  <div class="col-2_sm-4">
                     <label class="description small" for="element_2">CCV </label>
                     <div>
                       <input class="element text small" id="element_2" name="element_2" type="text" maxlength="4" value=""/>
                     </div>
                     <p class="guidelines" id="guide_2"><small>Enter the three extra numbers on the reserve side of your card</small></p>
                   </div>
-                  <div class="col-6"></div>
+                  <div class="col-6_sm-hidden"></div>
+                  <!--select billing cycle-->
                   <div class="col-12">
                     <h5>Select your billing cycle </h5>
                   </div>
                   <div class="col-4 billing_cycle">
                     <div class="pretty p-default p-round p-pulse">
-                      <input class="element radio priceswitch-1" id="element_7_3" name="billing_cycle_paypal" type="radio" value="1" checked="checked"/>
+                      <input class="element radio priceswitch-1" id="element_7_3" name="billing_cycle_creditcard" type="radio" value="1" checked="checked"/>
                       <div class="state p-success-o">
                         <label class="choice" for="element_7_3">$9 / mo </label>
                       </div>
@@ -155,7 +156,7 @@
                   </div>
                   <div class="col-4 billing_cycle">
                     <div class="pretty p-default p-round p-pulse bestvalue">
-                      <input class="element radio priceswitch-2" id="element_7_4" name="billing_cycle_paypal" type="radio" value="2"/>
+                      <input class="element radio priceswitch-2" id="element_7_4" name="billing_cycle_creditcard" type="radio" value="2"/>
                       <div class="state p-success-o">
                         <label class="choice" for="element_7_4">$8.25 / mo</label>
                       </div>
@@ -181,6 +182,7 @@
               </div>
               <div class="paypalUI"> 
                 <div class="grid">
+                  <!--select billing cycle-->
                   <div class="col-12">
                     <h5>Select your billing cycle </h5>
                   </div>
