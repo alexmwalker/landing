@@ -7,7 +7,7 @@
     <meta name="description" content="SitePoint Library"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/css/checkout.css?r=123"/>
+    <link rel="stylesheet" type="text/css" href="styles/css/checkout.css?r=1234"/>
   </head>
   <body class="vr labelling borders creditcard">
     <!-- header-simple.pug-->
@@ -149,63 +149,64 @@
                     <div class="pretty p-default p-round p-pulse">
                       <input class="element radio priceswitch-1" id="element_7_3" name="billing_cycle_paypal" type="radio" value="1" checked="checked"/>
                       <div class="state p-success-o">
-                        <label class="choice" for="element_7_3">$9 / mo </label><span class="small">Billed monthly</span>
+                        <label class="choice" for="element_7_3">$9 / mo </label>
                       </div>
-                    </div>
+                    </div><span class="small">Billed monthly</span>
                   </div>
                   <div class="col-4 billing_cycle">
                     <div class="pretty p-default p-round p-pulse bestvalue">
                       <input class="element radio priceswitch-2" id="element_7_4" name="billing_cycle_paypal" type="radio" value="2"/>
                       <div class="state p-success-o">
-                        <label class="choice" for="element_7_4">$8.25 / mo</label><span class="small">$99 billed yearly</span>
+                        <label class="choice" for="element_7_4">$8.25 / mo</label>
                       </div>
-                    </div>
+                    </div><span class="small">$99 billed yearly</span>
                   </div>
-                  <div class="col-4"></div> 
+                  <div class="col-4"> </div>
                   <div class="col-12 receipt">
                     <div class="grid-center">
                       <div class="col-11">
                         <h5>Today&apos;s payment</h5>
-                        <div class="price monthly">$9.00</div>
-                        <div class="price annual hideit">$99.00 </div>
+                        <div class="price monthly">$9.00<span>Cancel Anytime</span></div>
+                        <div class="price annual hideit">$99.00 <span>Cancel Anytime </span></div>
                         <p class="our-commitment"><strong>Our Commitment:  </strong>If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.</p>
                       </div>
                       <div class="col-11 text-center">
                         <input type="hidden" name="form_id" value="79300"/>
-                        <input class="paynow" id="saveForm" type="submit" name="submit" value="Unlock the library"/>
+                        <button class="unlock_button">
+                           Unlock the Library</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="paypalUI">
+              <div class="paypalUI"> 
                 <div class="grid">
                   <div class="col-12">
-                    <label class="choice" for="element_7">Select your billing cycle </label>
+                    <h5>Select your billing cycle </h5>
                   </div>
-                  <div class="col-4">
+                  <div class="col-4 billing_cycle">
                     <div class="pretty p-default p-round p-pulse">
-                      <input class="element radio priceswitch-1" id="element_7_1" name="element_7" type="radio" value="1" checked="checked"/>
+                      <input class="element radio priceswitch-1" id="element_7_5" name="billing_cycle_paypal" type="radio" value="1" checked="checked"/>
                       <div class="state p-success-o">
-                        <label class="choice" for="element_7_1">$9 / mo</label>
+                        <label class="choice" for="element_7_5">$9 / mo </label>
                       </div>
-                    </div>
+                    </div><span class="small">Billed monthly</span>
                   </div>
-                  <div class="col-4">
+                  <div class="col-4 billing_cycle">
                     <div class="pretty p-default p-round p-pulse bestvalue">
-                      <input class="element radio priceswitch-2" id="element_7_2" name="element_7" type="radio" value="2"/>
+                      <input class="element radio priceswitch-2" id="element_7_6" name="billing_cycle_paypal" type="radio" value="2"/>
                       <div class="state p-success-o">
-                        <label class="choice" for="element_7_2">$8.25 / mo</label>
+                        <label class="choice" for="element_7_6">$8.25 / mo</label>
                       </div>
-                    </div>
+                    </div><span class="small">$99 billed yearly</span>
                   </div>
-                  <div class="col-4"></div> 
+                  <div class="col-4"> </div>
                   <div class="col-12 receipt">
                     <div class="grid-center">
                       <div class="col-11">
                         <h5>Today&apos;s payment</h5>
-                        <div class="price monthly">$9.00</div>
-                        <div class="price annual hideit">$99.00 </div>
+                        <div class="price monthly">$9.00<span>Cancel Anytime </span></div>
+                        <div class="price annual hideit">$99.00 <span>Cancel Anytime </span></div>
                         <p class="our-commitment"><strong>Our Commitment:  </strong>If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.</p>
                       </div>
                       <div class="col-11 text-center">

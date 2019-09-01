@@ -73,64 +73,59 @@ section.checkout
                     | Enter the three extra numbers on the reserve side of your card
               .col-6
                 |
-              .col-12
-                h5 Select your billing cycle 
-              .col-4.billing_cycle
-                .pretty.p-default.p-round.p-pulse
-                  input#element_7_3.element.radio.priceswitch-1(name='billing_cycle_paypal' type='radio' value='1' checked='checked')
-                  .state.p-success-o
-                    label.choice(for='element_7_3') $9 / mo 
-                    span.small Billed monthly
-              .col-4.billing_cycle
-                .pretty.p-default.p-round.p-pulse.bestvalue
-                  input#element_7_4.element.radio.priceswitch-2(name='billing_cycle_paypal' type='radio' value='2')
-                  .state.p-success-o
-                    label.choice(for='element_7_4') $8.25 / mo
-                    span.small $99 billed yearly
 
-              .col-4
-              | 
+              include billing-cycle.pug
+              
               .col-12.receipt
                 .grid-center
                   .col-11
                     h5 Today&apos;s payment
                     .price.monthly
                       | $9.00
+                      span Cancel Anytime
                     .price.annual.hideit
                       | $99.00 
+                      span Cancel Anytime 
                     p.our-commitment
                       strong Our Commitment:  
                       | If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.
                   .col-11.text-center
                     input(type='hidden' name='form_id' value='79300')
-                    input#saveForm.paynow(type='submit' name='submit' value='Unlock the library')
+                    button.unlock_button 
+
+                      | Unlock the Library
 
 
-          .paypalUI
+          .paypalUI 
             .grid
               .col-12
-                label.choice(for='element_7') Select your billing cycle 
-              .col-4
+                h5 Select your billing cycle 
+              .col-4.billing_cycle
                 .pretty.p-default.p-round.p-pulse
-                  input#element_7_1.element.radio.priceswitch-1(name='element_7' type='radio' value='1' checked='checked')
+                  input#element_7_5.element.radio.priceswitch-1(name='billing_cycle_paypal' type='radio' value='1' checked='checked')
                   .state.p-success-o
-                    label.choice(for='element_7_1') $9 / mo
-              .col-4
+                    label.choice(for='element_7_5') $9 / mo 
+                span.small Billed monthly
+              .col-4.billing_cycle
                 .pretty.p-default.p-round.p-pulse.bestvalue
-                  input#element_7_2.element.radio.priceswitch-2(name='element_7' type='radio' value='2')
+                  input#element_7_6.element.radio.priceswitch-2(name='billing_cycle_paypal' type='radio' value='2')
                   .state.p-success-o
-                    label.choice(for='element_7_2') $8.25 / mo
-
+                    label.choice(for='element_7_6') $8.25 / mo
+                span.small $99 billed yearly
               .col-4
-              | 
+                | 
+
+
               .col-12.receipt
                 .grid-center
                   .col-11
                     h5 Today&apos;s payment
                     .price.monthly
                       | $9.00
+                      span Cancel Anytime 
                     .price.annual.hideit
                       | $99.00 
+                      span Cancel Anytime 
                     p.our-commitment
                       strong Our Commitment:  
                       | If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.
