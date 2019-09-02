@@ -7,7 +7,7 @@
     <meta name="description" content="SitePoint Library"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/css/checkout.css?r=94"/>
+    <link rel="stylesheet" type="text/css" href="styles/css/checkout.css?r=81"/>
   </head>
   <body class="-vr -labelling -borders creditcard">
     <!-- header-simple.pug-->
@@ -94,7 +94,7 @@
                 <div class="grid">
                   <div class="col-8_sm-11">
                     <label class="description small" for="cardnumber">Card number</label>
-                    <input class="element text large" id="element_1" name="cardnumber" type="text" maxlength="25" value="" placeholder="xxxx xxx xxx xxx"/>
+                    <input class="element text large" id="element_1" name="cardnumber" pattern="[0-9]*" type="text" maxlength="25" value="" placeholder="xxxx xxx xxx xxx"/>
                   </div>
                   <div class="col-4_sm-12">
                     <div class="card-images"></div>
@@ -136,8 +136,15 @@
                   </div>
                   <div class="col-2_sm-4">
                     <label class="description small" for="element_2">CCV </label>
-                    <div>
-                      <input class="element text small" id="element_2" name="element_2" type="text" maxlength="4" value=""/>
+                    <div class="rel">
+                      <input class="element text small" id="element_2" name="element_2" type="text" maxlength="4" value="" pattern="[0-9]*"/>
+                      <svg viewbox="0 0 38 27" id="ccv" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="7" width="24" height="19" fill="#F7F7F7"></rect>
+                        <path d="M23.833 6H2.167C.975 6 0 6.984 0 8.188v16.624C0 26.017.975 27 2.167 27h21.666C25.025 27 26 26.016 26 24.812V8.188C26 6.984 25.025 6 23.833 6zM2.167 7.75h21.666c.23 0 .434.205.434.438V11H1.733V8.187c0-.232.203-.437.434-.437zm21.666 17.5H2.167a.448.448 0 0 1-.434-.438V16h22.534v8.813a.448.448 0 0 1-.434.437zM18 20h4v-2h-4v2z" fill="#333"></path>
+                        <circle cx="20" cy="19" r="3.5" stroke="#000"></circle>
+                        <circle cx="29" cy="9" r="8.5" fill="#fff" stroke="#000"></circle>
+                        <path d="M22.176 11l1.456-2.232-1.32-2.016h1.416l.68 1.36.656-1.36h1.344L25.16 8.72 26.624 11h-1.432l-.84-1.592L23.544 11h-1.368zM26.973 11l1.456-2.232-1.32-2.016h1.416l.68 1.36.656-1.36h1.344L29.957 8.72 31.42 11h-1.432l-.84-1.592L28.34 11h-1.368zM31.77 11l1.456-2.232-1.32-2.016h1.416l.68 1.36.656-1.36h1.344L34.754 8.72 36.218 11h-1.432l-.84-1.592L33.138 11H31.77z" fill="#333"></path>
+                      </svg>
                     </div>
                     <p class="guidelines" id="guide_2"><small>Enter the three extra numbers on the reserve side of your card</small></p>
                   </div>

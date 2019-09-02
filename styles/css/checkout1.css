@@ -2239,6 +2239,31 @@ html.offline #offline-notification {
 .hideit {
   display: none; }
 
+.rel {
+  position: relative; }
+
+#ccv {
+  display: block;
+  height: calc(var(--baseline) / 2);
+  position: absolute;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  top: -2px;
+  right: -0.25rem; }
+  #ccv circle {
+    stroke: #999; }
+
+input:focus + #ccv {
+  height: calc(var(--baseline) / 1);
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  top: calc(var(--baseline) / -1.5);
+  right: -0.75rem; }
+  input:focus + #ccv circle {
+    stroke: #f00; }
+
 #form_container .col-4.billing_cycle span.small {
   font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
   display: block;

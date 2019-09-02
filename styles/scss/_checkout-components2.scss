@@ -61,7 +61,34 @@
   display: none;
 }
 
+.rel {
+  position: relative;
+}
 
+#ccv {
+  display: block;
+  //outline: 1px red dashed;
+  height: calc(var(--baseline) / 2);
+  position: absolute;
+  transition: all .3s ease-out;
+  top: -2px;
+  right: -0.25rem;
+
+  circle {
+    stroke: #999
+  }
+}
+
+input:focus+#ccv {
+  height: calc(var(--baseline) / 1);
+  transition: all .3s ease-out;
+  top: calc(var(--baseline) / -1.5);
+  right: -0.75rem;
+
+  circle {
+    stroke: #f00
+  }
+}
 
 #form_container .col-4.billing_cycle {
   span.small {
