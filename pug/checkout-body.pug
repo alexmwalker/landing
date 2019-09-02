@@ -101,17 +101,11 @@ section.checkout
               
               .col-12.receipt
                 .grid-center
-                  .col-11
-                    h5 Today&apos;s payment
-                    .price.monthly
-                      | $9.00
-                      span Cancel Anytime
-                    .price.annual.hideit
-                      | $99.00 
-                      span Cancel Anytime 
-                    p.our-commitment
-                      strong Our Commitment:  
-                      | If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.
+
+                  include todays-payment.pug
+
+                  include our-commitment.pug
+
                   .col-11.text-center
                     input(type='hidden' name='form_id' value='79300')
                     button.unlock_button 
@@ -143,17 +137,11 @@ section.checkout
 
               .col-12.receipt
                 .grid-center
-                  .col-11
-                    h5 Today&apos;s payment
-                    .price.monthly
-                      | $9.00
-                      span Cancel Anytime 
-                    .price.annual.hideit
-                      | $99.00 
-                      span Cancel Anytime 
-                    p.our-commitment
-                      strong Our Commitment:  
-                      | If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.
+
+                  include todays-payment.pug
+
+                  include our-commitment.pug
+
                   .col-11.text-center
                     button.paypal_button 
                       img(src="images/paypal-white.svg")
