@@ -7,7 +7,7 @@
     <meta name="description" content="SitePoint Library"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/css/checkout.css?r=80"/>
+    <link rel="stylesheet" type="text/css" href="styles/css/checkout.css?r=63"/>
   </head>
   <body class="vr -labelling -borders creditcard">
     <!-- header-simple.pug-->
@@ -245,15 +245,29 @@
             <!--.col-1_sm-hidden|
             -->
             <div class="col-4_sm-11 supporting">
-              <!--include checkout-salespoints.pug-->
-              <p class="text-center whisper"> <small>350+ titles from publishers including..</small></p>
-              <ul class="publishers">
-                <li><img src="images/publishers/sitepoint.svg" alt="SitePoint"/></li>
-                <li><img src="images/publishers/ABA.svg" alt="A Book Apart"/></li>
-                <li><img src="images/publishers/packt.svg" alt="Packt Publishing"/></li>
-                <li><img src="images/publishers/smashing.svg" alt="Smashing Magazine"/></li>
-                <li><img src="images/publishers/wiley.svg" alt="Wiley"/></li>
-              </ul>
+              <!--include checkout-filler.pug-->
+              <div class="grid salespoints">
+                <div class="col-3"><img src="images/icon-books.svg" alt="350 books"/></div>
+                <div class="col-9"><span>350+ Web &amp; computer science books</span></div>
+                <div class="col-3"><img src="images/icon-Crown.svg" alt="5 top publishers"/></div>
+                <div class="col-9"><span>5 of the World’s great tech publishers</span></div>
+                <div class="col-3"><img src="images/icon-van.svg" alt="New books arriving"/></div>
+                <div class="col-9"><span>New books arriving every single week</span></div>
+                <div class="col-3"><img src="images/icon-adfree.svg" alt="Ad-free"/></div>
+                <div class="col-9"><span>100% Ad-Free SitePoint.com</span></div>
+              </div>
+              <div class="grid">
+                <div class="col-12">
+                  <p class="text-center whisper"> <small>350+ titles from publishers including..</small></p>
+                  <ul class="publishers">
+                    <li><img src="images/publishers/sitepoint.svg" alt="SitePoint"/></li>
+                    <li><img src="images/publishers/ABA.svg" alt="A Book Apart"/></li>
+                    <li><img src="images/publishers/packt.svg" alt="Packt Publishing"/></li>
+                    <li><img src="images/publishers/smashing.svg" alt="Smashing Magazine"/></li>
+                    <li><img src="images/publishers/wiley.svg" alt="Wiley"/></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

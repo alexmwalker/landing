@@ -8,9 +8,7 @@
   padding-top: calc(var(--baseline) * 1);
 }
 
-.supporting {
-  padding-top: calc(var(--baseline) * 3.5)
-}
+
 
 .logged-out {
   img {
@@ -26,6 +24,10 @@
   p {
     margin-bottom: 0;
   }
+}
+
+.filler {
+  height: calc(var(--baseline) * 3.5)
 }
 
 .paypal {
@@ -215,7 +217,7 @@ input:focus+#ccv {
     margin-bottom: 0;
 
     svg {
-      height: calc(var(--baseline) * 1.5);
+      height: calc(var(--baseline) * 1.0);
       // width: 15%;
       margin: 0 1rem calc(var(--baseline) * 0.5);
       float: left;
@@ -272,7 +274,6 @@ label.paypal {
   background-repeat: no-repeat;
 }
 
-.salespoints,
 .publishers {
   list-style: none;
   display: flex;
@@ -292,36 +293,38 @@ label.paypal {
   }
 }
 
-.salespoints li {
-  //outline: 1px green dashed;
-  margin: calc(var(--baseline) * .5) 0;
+.salespoints {
+  margin: calc(var(--baseline) * 3) 0 calc(var(--baseline) * 1);
   order: 0;
-  flex: 0 1 auto;
+  // flex: 0 1 auto;
   align-self: stretch;
-  //display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
 
   img {
     float: left;
-    margin-right: 1rem
+    margin-right: 1rem;
+    align-items: center;
+    margin: calc(var(--baseline) * .5) 1rem;
+    height: calc(var(--baseline) * 2);
   }
 
   span {
-    //outline: 1px red dashed;
-    font-weight: 400;
+    margin: calc(var(--baseline) * .5) 0.5rem 0;
+    font-weight: 300;
+    width: 70%;
     color: #7D7D7D;
-    order: 0;
-    flex: 0 1 auto;
+    //order: 0;
     display: block;
-    align-items: center;
-    align-content: center;
-    align-self: stretch;
+    //outline: 1px greenyellow dashed;
+    line-height: calc(var(--baseline)*1);
+  }
+
+  div {
+    //outline: 1px red dashed;
   }
 }
+
 
 
 .hidden,
@@ -335,6 +338,6 @@ label.paypal {
   overflow: hidden;
 }
 
-div {
-  //outline: 1px #ccc dashed;
+.borders div {
+  outline: 1px #ccc dashed;
 }

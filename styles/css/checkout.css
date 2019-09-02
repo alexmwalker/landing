@@ -2196,9 +2196,6 @@ html.offline #offline-notification {
 #form_container {
   padding-top: calc(var(--baseline) * 1); }
 
-.supporting {
-  padding-top: calc(var(--baseline) * 3.5); }
-
 .logged-out img {
   height: calc(var(--baseline) * 1);
   margin: calc(var(--baseline) * .5) 0 calc(var(--baseline) * -0.35) 1rem;
@@ -2207,6 +2204,9 @@ html.offline #offline-notification {
 
 .form_description p {
   margin-bottom: 0; }
+
+.filler {
+  height: calc(var(--baseline) * 3.5); }
 
 .paypal .paypalUI {
   display: block;
@@ -2370,7 +2370,7 @@ input:focus + #ccv {
     line-height: calc(var(--baseline) * .5);
     margin-bottom: 0; }
     .receipt p.our-commitment svg {
-      height: calc(var(--baseline) * 1.5);
+      height: calc(var(--baseline) * 1.0);
       margin: 0 1rem calc(var(--baseline) * 0.5);
       float: left; }
   .receipt .price {
@@ -2413,7 +2413,6 @@ label.paypal {
   background-position-x: 2rem;
   background-repeat: no-repeat; }
 
-.salespoints,
 .publishers {
   list-style: none;
   display: -webkit-box;
@@ -2442,52 +2441,35 @@ label.paypal {
   flex-direction: column;
   text-align: center; }
 
-.salespoints li {
-  margin: calc(var(--baseline) * .5) 0;
+.salespoints {
+  margin: calc(var(--baseline) * 3) 0 calc(var(--baseline) * 1);
   -webkit-box-ordinal-group: 1;
   -ms-flex-order: 0;
   order: 0;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
   -ms-flex-item-align: stretch;
-  -ms-grid-row-align: stretch;
   align-self: stretch;
-  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .salespoints li img {
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .salespoints img {
     float: left;
-    margin-right: 1rem; }
-  .salespoints li span {
-    font-weight: 400;
-    color: #7D7D7D;
-    -webkit-box-ordinal-group: 1;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    display: block;
+    margin-right: 1rem;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -ms-flex-item-align: stretch;
-    -ms-grid-row-align: stretch;
-    align-self: stretch; }
+    margin: calc(var(--baseline) * .5) 1rem;
+    height: calc(var(--baseline) * 2); }
+  .salespoints span {
+    margin: calc(var(--baseline) * .5) 0.5rem 0;
+    font-weight: 300;
+    width: 70%;
+    color: #7D7D7D;
+    display: block;
+    line-height: calc(var(--baseline)*1); }
 
 .hidden,
 .guidelines {
@@ -2497,6 +2479,9 @@ label.paypal {
   width: 1px;
   height: 1px;
   overflow: hidden; }
+
+.borders div {
+  outline: 1px #ccc dashed; }
 
 /* ===  FOOTER === */
 footer.mainfooter {
