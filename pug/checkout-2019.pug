@@ -1,6 +1,6 @@
 - var year = new Date().getFullYear();
-- var hidesearch = 1
-
+- var cache = Math.floor(Math.random() * Math.floor(100));
+- var hidesearch = 1;
 
 html
   head
@@ -12,11 +12,10 @@ html
 
     
     link(rel='stylesheet', type='text/css', href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css')
-    link(rel='stylesheet', type='text/css', href='styles/css/checkout.css?r=1234')
+    link(rel='stylesheet', type='text/css', href='styles/css/checkout.css?r=' + cache)
 
-    
 
-  body.vr.labelling.borders.creditcard
+  body.-vr.-labelling.-borders.creditcard
 
     include checkout-header.pug
 
