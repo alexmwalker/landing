@@ -7,7 +7,9 @@
   //outline: 1px green dashed!important;
   padding-top: calc(var(--baseline) * 1);
 }
-
+[class~="col"], [class*="col-"], [class*="col_"] {
+  padding: 0 .5rem;
+}
 
 
 .logged-out {

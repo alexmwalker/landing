@@ -2196,6 +2196,9 @@ html.offline #offline-notification {
 #form_container {
   padding-top: calc(var(--baseline) * 1); }
 
+[class~="col"], [class*="col-"], [class*="col_"] {
+  padding: 0 .5rem; }
+
 .logged-out img {
   height: calc(var(--baseline) * 1);
   margin: calc(var(--baseline) * .5) 0 calc(var(--baseline) * -0.35) 1rem;

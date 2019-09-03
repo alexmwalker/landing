@@ -228,7 +228,9 @@ body, figure {
 [class*="col_"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 100%; }
+  max-width: 100%;
+  padding: 0 .5rem 1rem;
+  }
 
 [class~="col"],
 [class*="col_"] {
@@ -2195,9 +2197,6 @@ html.offline #offline-notification {
 
 #form_container {
   padding-top: calc(var(--baseline) * 1); }
-
-[class~="col"], [class*="col-"], [class*="col_"] {
-  padding: 0 .5rem; }
 
 .logged-out img {
   height: calc(var(--baseline) * 1);
