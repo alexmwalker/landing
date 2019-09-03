@@ -5,7 +5,7 @@ section.checkout
           // shared top
           .grid
             .col-12.form_description
-              h2 Unlock the SitePoint Library
+              h2 #{pagetitle}
               p No commitment. Cancel with one-click.
             .col-4_sm-6
               label.description.hidden(for='element_4') Payment 
@@ -28,7 +28,7 @@ section.checkout
             //form#form_79300.cctransaction(method='post' action='')
           .creditcards
             .grid
-              .col-8_sm-11
+              .col-8_sm-12
                 label.description.small(for='cardnumber') Card number
                 input#element_1.element.text.large(name='cardnumber' pattern='[0-9]*' type='text' maxlength='25' value='' placeholder="xxxx xxx xxx xxx")
               .col-4_sm-12

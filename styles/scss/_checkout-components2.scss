@@ -11,7 +11,7 @@
 [class~="col"],
 [class*="col-"],
 [class*="col_"] {
-  padding: 0 .5rem;
+  //padding: 0 0 0 0.5rem;
 }
 
 
@@ -147,6 +147,7 @@ input:focus+#ccv {
   &:hover {
     background: rgb(218, 5, 108);
     background-image: linear-gradient(to bottom, rgb(218, 5, 108), #FA0B7E);
+
   }
 }
 
@@ -307,7 +308,7 @@ label.paypal {
   flex-direction: row;
 
   img {
-    float: left;
+    float: right;
     margin-right: 1rem;
     align-items: center;
     margin: calc(var(--baseline) * .5) 1rem;
@@ -346,4 +347,10 @@ label.paypal {
 
 .borders div {
   outline: 1px #ccc dashed;
+}
+
+// override external - this just fixes the Vertical rhythm 
+
+.pretty {
+  margin-bottom: -2px;
 }
