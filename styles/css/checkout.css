@@ -2196,7 +2196,9 @@ html.offline #offline-notification {
 #form_container {
   padding-top: calc(var(--baseline) * 1); }
 
-[class~="col"], [class*="col-"], [class*="col_"] {
+[class~="col"],
+[class*="col-"],
+[class*="col_"] {
   padding: 0 .5rem; }
 
 .logged-out img {
@@ -2265,7 +2267,7 @@ input:focus + #ccv {
   top: calc(var(--baseline) / -1.5);
   right: -0.75rem; }
   input:focus + #ccv circle {
-    stroke: #f00; }
+    stroke: #2aaf01; }
 
 #form_container .col-4.billing_cycle span.small {
   font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
@@ -2465,14 +2467,15 @@ label.paypal {
     -ms-flex-align: center;
     align-items: center;
     margin: calc(var(--baseline) * .5) 1rem;
-    height: calc(var(--baseline) * 2); }
+    height: calc(var(--baseline) * 1); }
   .salespoints span {
-    margin: calc(var(--baseline) * .5) 0.5rem 0;
+    margin: calc(var(--baseline) /2) 0.5rem 0;
     font-weight: 300;
     width: 70%;
     color: #7D7D7D;
     display: block;
-    line-height: calc(var(--baseline)*1); }
+    line-height: calc(var(--baseline)/2);
+    font-size: calc(1rem / var(--typescale)); }
 
 .hidden,
 .guidelines {

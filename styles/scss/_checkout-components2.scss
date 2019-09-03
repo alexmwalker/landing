@@ -7,7 +7,10 @@
   //outline: 1px green dashed!important;
   padding-top: calc(var(--baseline) * 1);
 }
-[class~="col"], [class*="col-"], [class*="col_"] {
+
+[class~="col"],
+[class*="col-"],
+[class*="col_"] {
   padding: 0 .5rem;
 }
 
@@ -90,7 +93,7 @@ input:focus+#ccv {
   right: -0.75rem;
 
   circle {
-    stroke: #f00
+    stroke: rgb(42, 175, 1)
   }
 }
 
@@ -308,18 +311,19 @@ label.paypal {
     margin-right: 1rem;
     align-items: center;
     margin: calc(var(--baseline) * .5) 1rem;
-    height: calc(var(--baseline) * 2);
+    height: calc(var(--baseline) * 1);
   }
 
   span {
-    margin: calc(var(--baseline) * .5) 0.5rem 0;
+    margin: calc(var(--baseline) /2) 0.5rem 0;
     font-weight: 300;
     width: 70%;
     color: #7D7D7D;
     //order: 0;
     display: block;
     //outline: 1px greenyellow dashed;
-    line-height: calc(var(--baseline)*1);
+    line-height: calc(var(--baseline)/2);
+    font-size: calc(1rem / var(--typescale));
   }
 
   div {
