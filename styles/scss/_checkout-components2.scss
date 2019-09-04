@@ -6,6 +6,7 @@
 #form_container {
   //outline: 1px green dashed!important;
   padding-top: calc(var(--baseline) * 1);
+  //border-left: 1px #ddd solid
 }
 
 [class~="col"],
@@ -38,13 +39,15 @@
 /* --  switch payment mode  -- */
 .paypal {
   .paypalUI {
-    display: block;
     opacity: 1;
+    height: auto;
+    transition: all 300ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
   }
 
   .creditcards {
-    display: none;
     opacity: 0;
+    height: 1px;
+    transition: all 300ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
   }
 
   .paypal_button,
@@ -63,13 +66,15 @@
 
 .creditcard {
   .creditcards {
-    display: block;
+    height: auto;
     opacity: 1;
+    transition: all 300ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
   }
 
   .paypalUI {
-    display: none;
+    height: 1px;
     opacity: 0;
+    transition: all 300ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
   }
 
   .paypal_button,
@@ -250,6 +255,11 @@ input:focus+#ccv {
       margin: 0 1rem calc(var(--baseline) * 0.5);
       float: left;
     }
+
+    &::first-letter,
+    &::first-line {
+      outline: 1px red dashed;
+    }
   }
 
 
@@ -318,11 +328,12 @@ label.paypal {
     margin: calc(var(--baseline) * .5) 0;
     flex-direction: column;
     text-align: center;
+
   }
 }
 
 .salespoints {
-  margin: calc(var(--baseline) * 3) 0 calc(var(--baseline) * 1);
+  margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) * 1);
   order: 0;
   // flex: 0 1 auto;
   align-self: stretch;

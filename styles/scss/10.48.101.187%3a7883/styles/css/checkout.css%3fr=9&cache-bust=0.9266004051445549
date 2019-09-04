@@ -2215,18 +2215,12 @@ html.offline #offline-notification {
 
 /* --  switch payment mode  -- */
 .paypal .paypalUI {
-  opacity: 1;
-  height: auto;
-  -webkit-transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
-  -o-transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
-  transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1); }
+  display: block;
+  opacity: 1; }
 
 .paypal .creditcards {
-  opacity: 0;
-  height: 1px;
-  -webkit-transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
-  -o-transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
-  transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1); }
+  display: none;
+  opacity: 0; }
 
 .paypal .paypal_button,
 .paypal .pp {
@@ -2239,18 +2233,12 @@ html.offline #offline-notification {
   opacity: 0; }
 
 .creditcard .creditcards {
-  height: auto;
-  opacity: 1;
-  -webkit-transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
-  -o-transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
-  transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1); }
+  display: block;
+  opacity: 1; }
 
 .creditcard .paypalUI {
-  height: 1px;
-  opacity: 0;
-  -webkit-transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
-  -o-transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
-  transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1); }
+  display: none;
+  opacity: 0; }
 
 .creditcard .paypal_button,
 .creditcard .pp {
@@ -2399,8 +2387,6 @@ input:focus + #ccv {
       height: calc(var(--baseline) * 1.0);
       margin: 0 1rem calc(var(--baseline) * 0.5);
       float: left; }
-    .receipt p.our-commitment::first-letter, .receipt p.our-commitment::first-line {
-      outline: 1px red dashed; }
   .receipt .price {
     font-size: calc(1rem * var(--typescale)* var(--typescale));
     margin: calc(var(--baseline) * 1) 0 0;
@@ -2468,9 +2454,12 @@ label.paypal {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center; }
+  .publishers li img {
+    /* height: calc(var(--baseline) * 1); */
+    }
 
 .salespoints {
-  margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) * 1);
+  margin: calc(var(--baseline) * 3) 0 calc(var(--baseline) * 1);
   -webkit-box-ordinal-group: 1;
   -ms-flex-order: 0;
   order: 0;
@@ -2524,4 +2513,4 @@ footer.mainfooter {
   footer.mainfooter ul li a {
     color: #ddd; }
 
-/*# sourceMappingURL=checkout1.css.map */
+/*# sourceMappingURL=checkout.css.map */

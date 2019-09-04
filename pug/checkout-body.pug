@@ -31,7 +31,7 @@ section.checkout
               .col-8_sm-12
                 label.description.small(for='cardnumber') Card number
                 input#element_1.element.text.large(name='cardnumber' pattern='[0-9]*' type='text' maxlength='25' value='' placeholder="xxxx xxx xxx xxx")
-              .col-4_sm-12
+              .col-4_sm-hidden
                 .card-images
 
               .col-3_sm-4
@@ -152,7 +152,7 @@ section.checkout
         |
       .col-4_sm-11.supporting
 
-        //include checkout-filler.pug
+        include checkout-filler.pug
 
         include checkout-salespoints.pug
 

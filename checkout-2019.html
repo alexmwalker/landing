@@ -7,7 +7,7 @@
     <meta name="description" content="SitePoint Library"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/css/checkout.css?r=4"/>
+    <link rel="stylesheet" type="text/css" href="styles/css/checkout.css?r=46"/>
   </head>
   <body class="vr -labelling -borders creditcard">
     <!-- header-simple.pug-->
@@ -96,7 +96,7 @@
                     <label class="description small" for="cardnumber">Card number</label>
                     <input class="element text large" id="element_1" name="cardnumber" pattern="[0-9]*" type="text" maxlength="25" value="" placeholder="xxxx xxx xxx xxx"/>
                   </div>
-                  <div class="col-4_sm-12">
+                  <div class="col-4_sm-hidden">
                     <div class="card-images"></div>
                   </div>
                   <div class="col-3_sm-4">
@@ -225,7 +225,13 @@
             <!--.col-1_sm-hidden|
             -->
             <div class="col-4_sm-11 supporting">
-              <!--include checkout-filler.pug-->
+              <div class="grid"> 
+                <div class="col-12_sm-hidden filler">
+                  <p> 
+                    <!-- filler empty-->
+                  </p>
+                </div>
+              </div>
               <div class="grid salespoints">
                 <div class="col-3"><img src="images/icon-books.svg" alt="350 books"/></div>
                 <div class="col-9"><span>350+ Web &amp; computer science books</span></div>
