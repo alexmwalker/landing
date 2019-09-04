@@ -1847,7 +1847,8 @@ body, figure {
   text-transform: none;
   color: inherit;
   border: 0;
-  background-color: transparent; }
+  background-color: transparent;
+  }
 
 .hamburger-box {
   position: relative;
@@ -1961,7 +1962,9 @@ body, figure {
     list-style: none;
     padding-left: 2.5rem;
     font-size: calc(var(--typescale) * var(--typescale) * 1rem);
-    line-height: calc(var(--baseline) * 1.5); }
+    line-height: calc(var(--baseline) * 1.5);
+    width: 90%;
+    }
     .mobilenav li:nth-child(2n-1) {
       background: #1a1a1a; }
     .mobilenav li a {
@@ -2196,11 +2199,6 @@ html.offline #offline-notification {
 #form_container {
   padding-top: calc(var(--baseline) * 1); }
 
-[class~="col"],
-[class*="col-"],
-[class*="col_"] {
-  padding: 0 0 0 0.5rem; }
-
 .logged-out img {
   height: calc(var(--baseline) * 1);
   margin: calc(var(--baseline) * .5) 0 calc(var(--baseline) * -0.35) 1rem;
@@ -2213,42 +2211,33 @@ html.offline #offline-notification {
 .filler {
   height: calc(var(--baseline) * 3.5); }
 
-/* --  switch payment mode  -- */
 .paypal .paypalUI {
   display: block;
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-out .2s;
+  -o-transition: opacity .3s ease-out .2s;
+  transition: opacity .3s ease-out .2s; }
 
 .paypal .creditcards {
   display: none;
-  opacity: 0; }
-
-.paypal .paypal_button,
-.paypal .pp {
-  display: inline;
-  opacity: 1; }
-
-.paypal .unlock_button,
-.paypal .cc {
-  display: none;
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-out .2s;
+  -o-transition: opacity .3s ease-out .2s;
+  transition: opacity .3s ease-out .2s; }
 
 .creditcard .creditcards {
   display: block;
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-out .2s;
+  -o-transition: opacity .3s ease-out .2s;
+  transition: opacity .3s ease-out .2s; }
 
 .creditcard .paypalUI {
   display: none;
-  opacity: 0; }
-
-.creditcard .paypal_button,
-.creditcard .pp {
-  display: none;
-  opacity: 0; }
-
-.creditcard .unlock_button,
-.creditcard .cc {
-  display: inline;
-  opacity: 1; }
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-out .2s;
+  -o-transition: opacity .3s ease-out .2s;
+  transition: opacity .3s ease-out .2s; }
 
 .hideit {
   display: none; }
@@ -2510,4 +2499,4 @@ footer.mainfooter {
   footer.mainfooter ul li a {
     color: #ddd; }
 
-/*# sourceMappingURL=checkout1.css.map */
+/*# sourceMappingURL=checkout.css.map */

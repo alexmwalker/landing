@@ -11,7 +11,7 @@
 [class~="col"],
 [class*="col-"],
 [class*="col_"] {
-  //padding: 0 0 0 0.5rem;
+  padding: 0 0 0 0.5rem;
 }
 
 
@@ -35,17 +35,29 @@
   height: calc(var(--baseline) * 3.5)
 }
 
+/* --  switch payment mode  -- */
 .paypal {
   .paypalUI {
     display: block;
     opacity: 1;
-    transition: opacity .3s ease-out .2s;
   }
 
   .creditcards {
     display: none;
     opacity: 0;
-    transition: opacity .3s ease-out .2s;
+  }
+
+  .paypal_button,
+  .pp {
+    display: inline;
+    opacity: 1;
+
+  }
+
+  .unlock_button,
+  .cc {
+    display: none;
+    opacity: 0;
   }
 }
 
@@ -53,13 +65,23 @@
   .creditcards {
     display: block;
     opacity: 1;
-    transition: opacity .3s ease-out .2s;
   }
 
   .paypalUI {
     display: none;
     opacity: 0;
-    transition: opacity .3s ease-out .2s;
+  }
+
+  .paypal_button,
+  .pp {
+    display: none;
+    opacity: 0;
+  }
+
+  .unlock_button,
+  .cc {
+    display: inline;
+    opacity: 1;
   }
 }
 
@@ -350,7 +372,6 @@ label.paypal {
 }
 
 // override external - this just fixes the Vertical rhythm 
-
 .pretty {
   margin-bottom: -2px;
 }

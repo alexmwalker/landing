@@ -1,9 +1,29 @@
 .col-11
-  p.our-commitment
-    svg(viewbox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg')
-      path(d='M17.5.806L19.157 2.9l.298.377.388-.282 2.161-1.57 1.03 2.464.186.443.45-.167 2.504-.929.328 2.65.059.477.478-.04 2.662-.218-.4 2.641-.072.475.471.09 2.622.509-1.097 2.435-.197.437.43.215 2.387 1.197-1.714 2.048-.308.368.356.323 1.976 1.796-2.203 1.51-.395.272.255.407 1.418 2.262-2.528.86-.455.155.136.46.756 2.562-2.667.146-.48.026.007.48.037 2.67-2.608-.578-.468-.104-.123.464-.686 2.581-2.354-1.26-.424-.227-.243.413-1.357 2.3-1.927-1.849-.346-.332-.346.332-1.927 1.85-1.357-2.301-.243-.413-.424.226-2.354 1.261-.685-2.581-.124-.464-.468.104-2.607.579L7 27.78l.006-.48-.479-.027-2.667-.146.756-2.562.136-.46-.455-.154-2.528-.86 1.418-2.263.255-.407-.395-.271-2.203-1.51 1.976-1.797.355-.323-.307-.368-1.714-2.049 2.388-1.196.429-.215-.197-.437L2.678 9.82 5.3 9.312l.47-.091-.071-.475-.4-2.64 2.662.218.478.04.06-.477.327-2.65 2.504.928.45.167.185-.443 1.031-2.464 2.16 1.57.39.282.297-.377L17.5.806z' stroke='#555')
-      circle(cx='17.5' cy='17.5' r='12' stroke='#555')
-      path(d='M10.172 20.605l1.95-2.136 3.44 3.117 9.13-10.718-8.387 15.115-6.133-5.378z' stroke='#555')
+  if trial
+    p.our-commitment.monthly
+      | A recurring monthly charge of 
+      strong $9.00 
+      | will automatically apply and start on 
+      strong September 17, 2019
+      |. You can cancel at any time in your payment settings. By clicking ‘
+      strong.cc Start Your Free week
+      strong.pp.hideit PayPal Checkout
+      | ’ you agree to our Terms of Service and authorize this recurring charge.
+    p.our-commitment.annual.hideit
+      | A recurring yearly charge of 
+      strong $99.00 
+      | will automatically apply and start on 
+      strong September 17, 2019
+      |. You can cancel at any time in your payment settings. By clicking ‘
+      strong.cc Start Your Free week
+      strong.pp.hideit PayPal Checkout
+      | ’ you agree to our Terms of Service and authorize this recurring charge. 
+  else
+    p.our-commitment
+      svg(viewbox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg')
+        path(d='M17.5.806L19.157 2.9l.298.377.388-.282 2.161-1.57 1.03 2.464.186.443.45-.167 2.504-.929.328 2.65.059.477.478-.04 2.662-.218-.4 2.641-.072.475.471.09 2.622.509-1.097 2.435-.197.437.43.215 2.387 1.197-1.714 2.048-.308.368.356.323 1.976 1.796-2.203 1.51-.395.272.255.407 1.418 2.262-2.528.86-.455.155.136.46.756 2.562-2.667.146-.48.026.007.48.037 2.67-2.608-.578-.468-.104-.123.464-.686 2.581-2.354-1.26-.424-.227-.243.413-1.357 2.3-1.927-1.849-.346-.332-.346.332-1.927 1.85-1.357-2.301-.243-.413-.424.226-2.354 1.261-.685-2.581-.124-.464-.468.104-2.607.579L7 27.78l.006-.48-.479-.027-2.667-.146.756-2.562.136-.46-.455-.154-2.528-.86 1.418-2.263.255-.407-.395-.271-2.203-1.51 1.976-1.797.355-.323-.307-.368-1.714-2.049 2.388-1.196.429-.215-.197-.437L2.678 9.82 5.3 9.312l.47-.091-.071-.475-.4-2.64 2.662.218.478.04.06-.477.327-2.65 2.504.928.45.167.185-.443 1.031-2.464 2.16 1.57.39.282.297-.377L17.5.806z' stroke='#555')
+        circle(cx='17.5' cy='17.5' r='12' stroke='#555')
+        path(d='M10.172 20.605l1.95-2.136 3.44 3.117 9.13-10.718-8.387 15.115-6.133-5.378z' stroke='#555')
 
-    strong Our Commitment:  
-    | If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.
+      strong Our Commitment:  
+      | If we haven’t already written the best book on a tech topic, we promise to hunt down the best book and bring it to your SitePoint library.

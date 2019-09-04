@@ -1,8 +1,17 @@
 .col-11
-  h5 Today&apos;s payment
-  .price.monthly
-    | $9.00
-    span Cancel Anytime 
-  .price.annual.hideit
-    | $99.00 
-    span Cancel Anytime 
+  if trial
+    h5 Today&apos;s payment
+    .price.monthly
+      | $0.00
+      span * (No charge today) 
+    .price.annual.hideit
+      | $0.00 
+      span * (No charge today)  
+  else 
+    h5 Today&apos;s payment
+    .price.monthly
+      | $9.00
+      span Cancel Anytime 
+    .price.annual.hideit
+      | $99.00 
+      span Cancel Anytime     

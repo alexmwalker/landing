@@ -2006,8 +2006,12 @@ button.pink {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); }
 
 .login {
+  FONT-WEIGHT: 200;
+  /* FONT-WEIGHT: 200; */
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  width: 10;
+  }
 
 .login-panel, .account-items ul {
   opacity: 0;
@@ -2191,15 +2195,12 @@ html.offline #offline-notification {
 
 /*     */
 .contentbody {
-  margin-bottom: calc(var(--baseline) * 1); }
+  margin-bottom: calc(var(--baseline) * 1);
+  /* width: 55%; */
+  }
 
 #form_container {
   padding-top: calc(var(--baseline) * 1); }
-
-[class~="col"],
-[class*="col-"],
-[class*="col_"] {
-  padding: 0 0 0 0.5rem; }
 
 .logged-out img {
   height: calc(var(--baseline) * 1);
@@ -2213,42 +2214,33 @@ html.offline #offline-notification {
 .filler {
   height: calc(var(--baseline) * 3.5); }
 
-/* --  switch payment mode  -- */
 .paypal .paypalUI {
   display: block;
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-out .2s;
+  -o-transition: opacity .3s ease-out .2s;
+  transition: opacity .3s ease-out .2s; }
 
 .paypal .creditcards {
   display: none;
-  opacity: 0; }
-
-.paypal .paypal_button,
-.paypal .pp {
-  display: inline;
-  opacity: 1; }
-
-.paypal .unlock_button,
-.paypal .cc {
-  display: none;
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-out .2s;
+  -o-transition: opacity .3s ease-out .2s;
+  transition: opacity .3s ease-out .2s; }
 
 .creditcard .creditcards {
   display: block;
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-out .2s;
+  -o-transition: opacity .3s ease-out .2s;
+  transition: opacity .3s ease-out .2s; }
 
 .creditcard .paypalUI {
   display: none;
-  opacity: 0; }
-
-.creditcard .paypal_button,
-.creditcard .pp {
-  display: none;
-  opacity: 0; }
-
-.creditcard .unlock_button,
-.creditcard .cc {
-  display: inline;
-  opacity: 1; }
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-out .2s;
+  -o-transition: opacity .3s ease-out .2s;
+  transition: opacity .3s ease-out .2s; }
 
 .hideit {
   display: none; }
@@ -2506,8 +2498,10 @@ footer.mainfooter {
   background: #3D383E;
   padding: calc(var(--baseline)) 0 calc(var(--baseline)) 0;
   font-size: .75rem;
-  color: #ccc; }
+  color: #ccc;
+  /* width: 55%; */
+  }
   footer.mainfooter ul li a {
     color: #ddd; }
 
-/*# sourceMappingURL=checkout1.css.map */
+/*# sourceMappingURL=checkout.css.map */

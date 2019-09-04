@@ -2,7 +2,7 @@ section.checkout
   .container
     .grid-reverse-center
       .col-6_sm-10#form_container
-          // shared top
+          // shared top section
           .grid
             .col-12.form_description
               h2 #{pagetitle}
@@ -101,18 +101,7 @@ section.checkout
               .col-4
                 | 
               
-              .col-12.receipt
-                .grid-center
-
-                  include todays-payment.pug
-
-                  include our-commitment.pug
-
-                  .col-11.text-center
-                    input(type='hidden' name='form_id' value='79300')
-                    button.unlock_button 
-
-                      | Unlock the Library
+              
 
 
           .paypalUI 
@@ -120,6 +109,7 @@ section.checkout
               //select billing cycle
               .col-12
                 h5 Select your billing cycle 
+
               .col-4.billing_cycle
                 .pretty.p-default.p-round
                   input#element_7_5.element.radio.priceswitch-1(name='billing_cycle_paypal' type='radio' value='1' checked='checked')
@@ -137,17 +127,26 @@ section.checkout
                 | 
 
 
-              .col-12.receipt
-                .grid-center
+          .receipt
+            .grid-center
 
-                  include todays-payment.pug
+              include todays-payment.pug
 
-                  include our-commitment.pug
+              include our-commitment.pug
 
-                  .col-11.text-center
-                    button.paypal_button 
-                      img(src="images/paypal-white.svg")
-                      | Checkout
+              .col-11.text-center
+
+                button.paypal_button 
+                  img(src="images/paypal-white.svg")
+                  | Checkout
+
+                button.unlock_button 
+
+                    | #{buttonText}
+                  
+
+
+
 
       //.col-1_sm-hidden
         |
