@@ -1,5 +1,7 @@
 - var title = "Your First Week With Bootstrap";
+- var titleblurb = "Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.";
 - var chaptertitle = "Understanding Bootstrap: How it Works, and What's New";
+- var chapterblurb = "Version 4 of Bootstrap is a major change from all its past versions. It’s a mobile-first framework and can claim to be one of the best CSS frameworks for building responsive website designs."
 - var chapterauthor = "Syed Fazle Rahman";
 - var chapternumber = "2";
 
@@ -26,7 +28,7 @@ body.-vr.-labelling.borders#reeedr
       .grid-12
         .col-12
           include chap-head.pug 
-          include:markdown-it(linkify langPrefix='highlight-') ../md/chap-2.md
+          include:markdown-it(html='true' typographer='true' linkify langPrefix='highlight-') ../md/chap-2.md
 
   include book-footer.pug
   include scripts-book.pug

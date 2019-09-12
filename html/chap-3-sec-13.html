@@ -1,0 +1,130 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>chap-3-sec-13.md</title>
+      </head>
+      <body>
+        <p>The <a href="https://blog.getbootstrap.com/">first stable release of Bootstrap 4</a> is here. And it&#39;s pretty cool. This article looks at some of its best features.</p>
+<p>It was on 19th August, 2015, that <a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/">Bootstrap 4 alpha</a> was finally out. This was after months of anticipation, anxious tweets asking for the disclosure of a release date, and a few scattered <a href="https://twitter.com/mdo/status/591364406816079873">scraps of news</a> by <a href="http://markdotto.com/">Mark Otto</a> and <a href="http://twitter.com/fat">Jacob Thornton</a>, having the effect of intensifying rather than quenching our curiosity. More than two years later, the wait for the first stable release is finally over.</p>
+<p>As a designer, I love crafting my own CSS. However, I confess that I find Bootstrap a well thought out and strongly supported front-end framework that I’ve immensely enjoyed using — both for building my projects and for learning more about writing better, modular CSS.</p>
+<p>As soon as news of the latest release was out, I downloaded the <a href="http://getbootstrap.com/docs/4.0/getting-started/download/">source files for Bootstrap 4</a> and spent some time going back and forth between reading <a href="http://getbootstrap.com/docs/4.0/getting-started/introduction/">the docs</a> and digging into the code to find out more.</p>
+<p>Here are the latest Bootstrap features I like the most. I hope you find them awesome too!</p>
+<h2 id="-1-new-interactive-documentation">#1 New Interactive Documentation</h2>
+<p>The Bootstrap documentation has been exemplary since the framework’s early days. It’s always had the crucial role of being a <em>living document</em> — that is, a tool in sync with the collaborative effort of building the framework and communicating it to others:</p>
+<blockquote>
+<p>Abstracting and documenting components became part of our process for building this one tool and Bootstrap in tandem. — <em><a href="http://alistapart.com/article/building-twitter-bootstrap">Mark Otto in 2012</a></em></p>
+</blockquote>
+<p>Mark himself is quite a fan of great documentation. His <a href="http://codeguide.co/">Code Guide by @mdo</a> is evidence of his attitude that high-quality documentation is part and parcel of writing high-quality code.</p>
+<p>The documentation for version 4 has been rewritten from scratch using <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, and its appearance has been revamped with a new layout, color palette, and the use of system fonts.</p>
+<p>The Bootstrap docs:</p>
+<ul>
+<li>are a pleasure to navigate, both using the traditional sidebar navigation and the brand new <strong>search form</strong></li>
+<li>structure information in a logical manner; content is never overwhelming or confusing</li>
+<li>include instructions and how-tos covering all areas of the framework, from different ways of installing Bootstrap to using each component and dealing with browser quirks.</li>
+</ul>
+<p>Finally, if you’d like to run the Bootstrap docs locally on your computer, follow <a href="https://github.com/twbs/bootstrap/tree/v4-dev#documentation">these instructions</a>.</p>
+<h2 id="-2-top-notch-modular-architecture">#2 Top-notch Modular Architecture</h2>
+<p>Bootstrap has often been the target of complaints about code bloat, too opinionated CSS styling, and a profuse quantity of components. The good news is that Bootstrap 4 has both simplified and further modularized its structure.</p>
+<p>To begin with, some components have been eliminated altogether. The <a href="http://glyphicons.com/">Glyphicons</a> icon library is not bundled with the framework any more. Panels, wells, and thumbnails are replaced by the <a href="http://getbootstrap.com/docs/4.0/components/card/">Cards</a> component. Also, all CSS reset/normalize code and basic styling are now dealt with in a single brand new module called <a href="http://getbootstrap.com/docs/4.0/content/reboot/">Reboot</a>.</p>
+<p>It’s safe to say that, now more than ever before, using Bootstrap feels like assembling and arranging Lego blocks in different ways. Here are some examples to clarify what I mean.</p>
+<h3 id="easy-to-override-variables">Easy-to-Override Variables</h3>
+<p>Bootstrap’s Sass variables use the <code>!default</code> flag, which makes it easy for you to override their values. Grab a copy of the latest release of Bootstrap <a href="http://getbootstrap.com/docs/4.0/getting-started/download/">source files</a> and open <code>_variables.scss</code> in a code editor. Here are just three of the first variables you’ll come across:</p>
+<pre><code class="lang-scss">$white:#fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+</code></pre>
+<p>These are color variables, which you can override by simply copying and pasting the variables to your own Sass file, changing the default value, and removing the <code>!default</code> flag. No need to mess with the original Bootstrap source code.</p>
+<h3 id="ready-made-light-weight-versions">Ready-made, Light-weight Versions</h3>
+<p>Besides <code>bootstrap.scss</code>, which includes the entire framework, you’ll also find <code>bootstrap-grid.scss</code> and <code>bootstrap-reboot.scss</code>.</p>
+<p>Each of these files includes only <em>selected portions</em> of Bootstrap. If you don’t need the full-blown framework in your project, this is a great head-start: just compile one of the light-weight options and you’re good to go.</p>
+<p>Corresponding cut-down compiled packages are available for download from the Bootstrap 4 docs page.</p>
+<h3 id="reusable-components">Reusable Components</h3>
+<p>You can skin and modify components by mixing and matching a few classes. For instance, the brand new <a href="https://getbootstrap.com/docs/4.0/components/card/">cards</a> component is a great example of this versatility in action.</p>
+<p>Here’s all the HTML you need for the simplest instance of this component:</p>
+<pre><code class="lang-html">&lt;div class=&quot;card&quot;&gt;
+ &lt;div class=&quot;card-body&quot;&gt;
+   This is some text within a card body.
+ &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>This flexible component easily adapts to a variety of content types and layouts. For instance, you can also arrange cards in <a href="http://getbootstrap.com/docs/4.0/components/card/#card-groups">touching equal width and height columns</a> by wrapping them in a <code>.card-group</code> container:</p>
+<pre><code class="lang-html">&lt;div class=&quot;card-group&quot;&gt;
+ &lt;div class=&quot;card&quot;&gt;
+   &lt;!-- card code here --&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;card&quot;&gt;
+   &lt;!-- card code here --&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;card&quot;&gt;
+   &lt;!-- card code here --&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><img src="../images/1441091410cards-group.jpg" alt="Cards Group Component"></p>
+<p>Alternatively, you can group cards having equal width and height <a href="http://getbootstrap.com/docs/4.0/components/card/#card-decks">columns with margins</a>, using the <code>.card-deck</code> class as follows:</p>
+<pre><code class="lang-html">&lt;div class=&quot;card-deck&quot;&gt;
+ &lt;div class=&quot;card&quot;&gt;
+   &lt;!-- card code here --&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;card&quot;&gt;
+   &lt;!-- card code here --&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;card&quot;&gt;
+   &lt;!-- card code here --&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><img src="../images/1441091457cards-deck.jpg" alt="Cards Deck Component"></p>
+<p>Another cool thing you can do with cards is build a <a href="http://masonry.desandro.com/">Masonry</a>-like layout. Just wrap the cards in a <a href="http://getbootstrap.com/docs/4.0/components/card/#card-columns">container</a> with the <code>.card-columns</code> class and leave the rest to Bootstrap:</p>
+<pre><code class="lang-html">&lt;div class=&quot;card-columns&quot;&gt;
+ &lt;div class=&quot;card&quot;&gt;
+   &lt;!-- card code here --&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><img src="../images/1441091485cards-masonry.jpg" alt="Cards Masonry Layout"></p>
+<p>Here I’ve offered only a few examples of Bootstrap’s modular architecture. I think these suffice to show how flexibility and extensibility are built into the framework as a whole, which makes it fun and convenient to use.</p>
+<h2 id="-3-easier-scaling-across-screen-sizes">#3 Easier Scaling Across Screen Sizes</h2>
+<p>Since version 3, Bootstrap has introduced a <strong>mobile-first</strong> approach to web design. That is, start developing for smaller screens first and progressively add or adjust features as you target larger screens.</p>
+<p>Version 4 makes further improvements towards adaptive web design by taking the following steps.</p>
+<h3 id="the-introduction-of-a-flexbox-based-grid-system">The Introduction of a Flexbox-based Grid System</h3>
+<p>Bootstrap now uses <a href="https://www.w3.org/TR/css-flexbox-1/">Flexbox</a> to build its <a href="http://getbootstrap.com/docs/4.0/layout/grid/">grid system</a>.</p>
+<p>Since Flexbox is natively <em>flexible</em>, coding a responsive page layout is going to require fewer classes. For instance, to achieve a layout with three columns side by side on larger screens and stacked on top of each other on small screens, just add the <code>col-sm</code> class to each column div:</p>
+<pre><code class="lang-html">&lt;div class=&quot;container&quot;&gt;
+ &lt;div class=&quot;row&quot;&gt;
+   &lt;div class=&quot;col-sm&quot;&gt;
+ One of three columns
+   &lt;/div&gt;
+   &lt;div class=&quot;col-sm&quot;&gt;
+ One of three columns
+   &lt;/div&gt;
+   &lt;div class=&quot;col-sm&quot;&gt;
+ One of three columns
+   &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="the-move-to-rem">The Move to <code>rem</code></h3>
+<p>Where earlier versions of Bootstrap set <code>px</code> as the absolute unit of measurement, version 4 mostly uses the relative units <code>rem</code> and <code>em</code>. The goal is to have all elements on a web page harmoniously scale with the screen size.</p>
+<p>For instance, if you dig into <code>_variables.scss</code>, you’ll see that <code>$font-size-base</code> is set to <code>1rem</code>, which assumes the browser’s default <code>font-size</code> (usually equivalent to <code>16px</code>). Bootstrap uses this variable’s value to set the <code>font-size</code> for the document’s <code>&lt;body&gt;</code> (see _reboot.scss).</p>
+<p>This means that it’s easier to build web pages where all elements proportionally scale up or down with the screen size without messing up your design.</p>
+<h3 id="here-comes-the-extra-large-breakpoint">Here Comes the Extra-large Breakpoint</h3>
+<p>The introduction of the new <em>extra large breakpoint</em> for the grid system further helps building layouts that scale well across different screen sizes.</p>
+<p>This breakpoint is applied using the <code>.col-xl-</code> class and is triggered on screen sizes from <code>1200px</code> upwards.</p>
+<h3 id="global-margins-reset-and-utility-spacer-classes">Global Margins Reset and Utility Spacer Classes</h3>
+<p>Forcing consistent spacing between elements in a design is something most front-end developers, including myself, obsess over. It’s a tricky task and the plethora of screen resolutions available doesn’t make the job easier.</p>
+<p>To help keep both vertical and horizontal spacing between elements under tight control, Bootstrap 4 resets <code>margin-top</code> to <code>0</code> while keeping a consistent <code>margin-bottom</code> value on all elements.</p>
+<p>Further, the framework offers an impressive number of <a href="http://getbootstrap.com/docs/4.0/utilities/spacing/">utility classes</a> to make it easier for you to adjust margins and paddings at a more granular level across varying screen sizes.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I’ve introduced three broad features that in my view make Bootstrap really stand out:</p>
+<ul>
+<li>great documentation</li>
+<li>Mega Lego–type architecture</li>
+<li>easier scaling across devices</li>
+</ul>
+<p>Did you notice I didn’t mention Bootstrap’s move from Less to Sass? Or the rewrite of all JavaScript plugins in <a href="https://github.com/lukehoban/es6features/blob/master/README.md">ES6</a>?</p>
+<p>I consider these to be more like indications of Bootstrap staying current and taking advantage of the latest tools, rather than features integral to the framework itself.</p>
+
+      </body>
+    </html>

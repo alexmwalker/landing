@@ -1,0 +1,48 @@
+- var title = "Your First Week With Bootstrap";
+- var titleblurb = "Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.";
+- var chaptertitle = "Super Smart New Features to Win You Over";
+- var chapterauthor = "Maria Antonietta Perna";
+- var chapternumber = "3";
+- var chapterblurb = "The first stable release of Bootstrap 4 is here. And it’s pretty cool. This article looks at some of its best features."
+
+
+doctype html
+
+head
+  meta(content='ie=edge', http-equiv='x-ua-compatible')
+  title
+    | #{title}
+  meta(content='SitePoint Books: ' + title, name='description')
+  meta(content='width=device-width, initial-scale=1', name='viewport')
+  link(href='styles/css/book.css?cache=54321', rel='stylesheet', type='text/css')
+  link(href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css', rel='stylesheet', type='text/css')
+
+body.-vr.-labelling.borders#reeedr 
+
+  include header-book.pug
+
+  include hero-panel.pug
+  include tool-container.pug
+
+
+
+  //include chapter.pug
+  section#reeedr-body
+    .container
+      .grid-12
+        .col-12
+          include chap-head.pug 
+        .col-12.preview
+          include:markdown-it(html='true' typographer='true' linkify) ../md/chap-3-sec-13.md
+
+    //   .col-12            
+    //     p.read-more
+    //       a(href='#') Click here to unlock this book
+
+
+
+  include book-footer-preview.pug
+  include scripts-book.pug
+
+  include svg-icons.pug
+  

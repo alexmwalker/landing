@@ -2,7 +2,7 @@
 :root {
 --basebackground: #fff; // flipped in dark mode
 --basefontcolor: #222;
-}*/ 
+}*/
 
 #reeedr-body {
   background-color: var(--basebackground);
@@ -12,19 +12,21 @@
   padding: 0 0 calc(var(--baseline) * 2);
   width: 100%;
   transition: all .6s;
-  a:link{
+
+  a:link {
     border-bottom: 1px dotted;
   }
 }
 
-.frontmatters{
+.frontmatters {
   padding-top: calc(var(--baseline) * 2);
 }
-.dedication{
+
+.dedication {
   margin: calc(var(--baseline) * 2) 0;
 }
 
-#reeedr .ch-head  {
+#reeedr .ch-head {
   font-size: 9rem;
   color: #445266;
   line-height: 5.33333rem;
@@ -35,11 +37,12 @@
   position: relative;
   //top: 0rem;
   height: calc(var(--baseline) * 7);
-  padding-top: calc(var(--baseline) * 2); 
+  padding-top: calc(var(--baseline) * 2);
   left: 0;
   text-align: center;
   width: 100%;
-  &:before{
+
+  &:before {
     display: block;
     position: absolute;
     font-family: 'Raleway', 'Roboto', sans-serif;
@@ -51,11 +54,12 @@
     left: 1rem;
   }
 }
+
 #reeedr .ch-head .chapter-head {
   font-size: 1.5625rem;
   position: absolute;
   top: calc(var(--baseline) * -1.0);
-  font-family: Raleway;
+  font-family: Raleway, Roboto, sans-serif;
   color: #9ab;
   font-weight: 600;
   margin-top: 0rem;
@@ -63,17 +67,21 @@
   width: 100%;
   //right: 10%;
   text-align: center;
-  
+
 }
+
 #reeedr .chapter .chapter-start {
   margin-top: 5.33333rem;
 }
+
 #reeedr h1.chaptertitle {
   color: #345;
   margin-bottom: calc(var(--baseline) / 2);
   text-align: right;
 }
-#reeedr p code, #reeedr li code {
+
+#reeedr p code,
+#reeedr li code {
   padding: 0 3px;
   background: #F5F2F0;
 }
@@ -88,9 +96,9 @@
   margin: 0 0 2.66667rem 0;
 }
 
-.intro{
+.intro {
   font-size: calc(var(--typescale) * 1rem);
-  line-height: calc(var(--baseline) * 1);  
+  line-height: calc(var(--baseline) * 1);
   font-weight: 400;
 }
 
@@ -108,7 +116,15 @@
   -ms-flex-align: start;
   align-items: flex-start;
 }
+
 #reeedr img {
   max-width: 100%;
 }
 
+.chapter+p,
+.preview>p:first-of-type {
+  // lead-in paragraph for each chapter
+  font-weight: 400;
+  font-size: calc(1rem * var(--typescale));
+  margin-top: calc(var(--baseline) * 2);
+}

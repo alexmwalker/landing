@@ -94,8 +94,8 @@
               <div class="thumbnail-book"><img src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/your-first-week-with-bootstrap/images/cover-front.png"></div>
             </div>
             <div class="col-9_sm-12">
-              <h1>Your First Week With Bootstrap</h1>
-              <p>Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we&rsquo;ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
+              <h1></h1>
+              <p></p>
             </div>
           </div>
         </div>
@@ -352,7 +352,7 @@
     <div class="container">
       <div class="grid">
         <div class="col-6">Copyright 2018 SitePoint</div>
-        <div class="col-6" id="log">The root of this document is:</div>
+        <div class="col-6" id="log"> </div>
       </div>
     </div>
   </footer>
@@ -423,6 +423,7 @@
     $(":root").css("--basegrid-wide", newcurrentgridwide);
     currentgridwide = newcurrentgridwide;
     });
+    
     $('.fontsizeup').click(function () {
     newcurrentgrid = parseInt(currentgrid, 10) + 4 + 'px';
     $(":root").css("--basegrid", newcurrentgrid);
@@ -457,13 +458,20 @@
     const toolcontainer = document.querySelector('#tool-container'); // height of the toolstrip
     const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
     const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
+    const totalbody = $( "#reeedr-body" ).height(); // height of the bookpanel
+    const previewMax = document.querySelector('.preview-label'); // height of the bookpanel
     const offlinebar = document.querySelector('#offline-notification'); // offline bar for tuckaway
     const navTop = toolcontainer.offsetTop; // distance from top edge
     const navMin = navTop / 4; // the delay before the title rolls on to the titlebar
+    
+    
+    const maxpreview = totalbody-300;
+    console.log('try this: ' + maxpreview);
+    
     var lastScrollTop = 0; // set for updating to determine scroll direction
     function stickyNavigation() {
-    //console.log('navTop = ' + navTop);
-    //console.log('scrollY = ' + window.scrollY);
+    console.log('navTop = ' + navTop);
+    console.log('scrollY = ' + window.scrollY);
     //console.log('toolbaroffset = ' + toolbaroffset);
     var st = window.pageYOffset || document.documentElement.scrollTop;
     if (window.scrollY >= navTop) { // If scroll pos is greater than 418
@@ -473,14 +481,24 @@
     //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
     toolcontainer.classList.remove('fixed-nav');
     }
+    
     /* minize brand bar on scroll */
     if (window.scrollY >= navMin) {
-    brand.classList.add('min');
-    } else {
-    brand.classList.remove('min');
-    }
-    if (st > lastScrollTop && window.scrollY >=
-    navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
+        brand.classList.add('min');
+      } else {
+        brand.classList.remove('min');
+      }
+      //preview maxie
+    if (window.scrollY >= maxpreview) {
+        previewMax.classList.add('min');
+        console.log('scrollY = ' + window.scrollY + ' is more than ' + maxpreview);
+      } else {
+        previewMax.classList.remove('min');
+        console.log('scrollY = ' + window.scrollY + ' is less than ' + maxpreview);
+      }
+    
+    
+    if (st > lastScrollTop && window.scrollY >= navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
     brand.classList.add('tuckaway');
     toolstrip.classList.add('tuckaway');
     offlinebar.classList.add('tuckaway');
@@ -494,24 +512,29 @@
     window.addEventListener('scroll', stickyNavigation);
     }
     scrollActions();
+    
     /* ===  Mimic offline mode ===  */
     /*   http://10.48.101.187:7883/book.html?offline=1   */
+    
     function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-    vars[key] = value;
-    });
-    return vars;
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+      });
+      return vars;
     }
     var offline = getUrlVars()["offline"];
+    var search = getUrlVars()["search"];
+    console.log('Variable is: ' + search );
+    
     function checkConnection(){
-    if (offline == 1){
-    //alert('You  are currently offline. Reconnect to the internet to access this item.');
-    $('html').addClass('offline');
-    } else {
-    $('html').removeClass('offline');
-    //alert('You  are currently online.');
-    }
+      if (offline == 1){
+      //alert('You  are currently offline. Reconnect to the internet to access this item.');
+      $('html').addClass('offline');
+        } else {
+      $('html').removeClass('offline');
+      //alert('You  are currently online.');
+      }
     }
     checkConnection();
   </script>

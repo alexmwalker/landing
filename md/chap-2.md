@@ -43,10 +43,10 @@ Since Bootstrap 4 beta 2, the `js` folder has included two new folders, `bootstr
 
 ### Live Code
 
-In this chapter, we’re going to build a static landing page using Bootstrap 4, which will be called “Rental Vacations”. Have a look at the [demo page](https://codepen.io/SitePoint/pen/RQNyMe) first.
+In this chapter, we’re going to build a static landing page using Bootstrap 4, which will be called “Rental Vacations”. Have a look at the [demo page](https://codepen.io/SitePoint/pen/RQNyMe) first..
 
-  <p data-height="300" data-theme-id="16254" data-slug-hash="RQNyMe" data-default-tab="html,result" data-user="SitePoint" data-pen-title="Bootstrap Landing Page Demo" class="codepen">See the Pen <a href="https://codepen.io/SitePoint/pen/RQNyMe/">Bootstrap Landing Page Demo</a> by SitePoint (<a href="https://codepen.io/SitePoint">@SitePoint</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p data-height="300" data-theme-id="16254" data-slug-hash="RQNyMe" data-default-tab="html,result" data-user="SitePoint" data-pen-title="Bootstrap Landing Page Demo" class="codepen">See the Pen <a href="https://codepen.io/SitePoint/pen/RQNyMe/">Bootstrap Landing Page Demo</a> by SitePoint (<a href="https://codepen.io/SitePoint">@SitePoint</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ![Example project](../images/vaca.png)
 
@@ -75,8 +75,6 @@ Now we’ll add the basic tags that are present in every HTML document:
 
 <body>
 <h1>Hello, world!</h1>
-
-
 
 </body>
 </html>

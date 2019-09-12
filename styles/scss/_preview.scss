@@ -1,0 +1,57 @@
+.preview-label {
+  background: #333;
+  width: 100%;
+  color: #fff;
+  padding: calc(var(--baseline) / 2) 0 0;
+  font-size: calc(1rem);
+  //margin-bottom: calc(var(--baseline) / 2);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  transition: padding .5s;
+
+  img {
+    height: calc(var(--baseline) * 1.5);
+    margin: 0 1rem;
+    transition: all .5s;
+  }
+
+  p.minor {
+    position: relative;
+    top: 0;
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  &.min {
+    //outline: 10px red dashed;
+    padding: calc(var(--baseline) / 2) 0 0;
+    transition: padding .5s;
+
+    img {
+      height: calc(var(--baseline) * 4);
+      transition: all .5s;
+    }
+
+    p.minor {
+      top: calc(var(--baseline) * -0.5);
+      opacity: 1;
+      transition: all .5s;
+    }
+  }
+
+  strong {
+    padding: calc(var(--baseline) / 4);
+  }
+}
+
+.cover-preview {
+  text-align: right;
+}
+
+a.membership {
+  @extend .pink_button;
+  padding: 0 1rem;
+  line-height: calc(var(--baseline) * 1.0);
+}

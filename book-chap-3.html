@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
   <meta content="ie=edge" http-equiv="x-ua-compatible">
-  <title>Your First Week With Bootstrap - SitePoint</title>
-  <meta content="SitePoint Book - Your First Week With Bootstrap" name="description">
+  <title>Your First Week With Bootstrap</title>
+  <meta content="SitePoint Books: Your First Week With Bootstrap" name="description">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="styles/css/book.css?cache=4321" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
@@ -95,7 +95,7 @@
             </div>
             <div class="col-9_sm-12">
               <h1>Your First Week With Bootstrap</h1>
-              <p>Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we&rsquo;ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
+              <p>Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
             </div>
           </div>
         </div>
@@ -176,15 +176,17 @@
     <div class="container">
       <div class="grid-12">
         <div class="col-12">
-          <div class="chapter grid-center-reverse" data-chapter-number="#{chapternumber}">
+          <div class="chapter grid-center-reverse" data-chapter-number="3">
             <div class="col-3_sm-12 ch-head">
-              <div class="chapter-head">Chapter</div>                3
+              <div class="chapter-head">Chapter</div>3
             </div>
             <div class="col-7_sm-12 chapter-start align-r">
-              <h1 class="chaptertitle"></h1>
-              <h3 class="author"></h3>
+              <h1 class="chaptertitle">Super Smart New Features to Win You Over</h1>
+              <h3 class="author">Maria Antonietta Perna</h3>
             </div>
-          </div><p>The <a href="https://blog.getbootstrap.com/">first stable release of Bootstrap 4</a> is here. And it's pretty cool. This article looks at some of its best features.</p>
+          </div>
+        </div>
+        <div class="col-12 preview"><p>The <a href="https://blog.getbootstrap.com/">first stable release of Bootstrap 4</a> is here. And it’s pretty cool. This article looks at some of its best features.</p>
 <p>It was on 19th August, 2015, that <a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/">Bootstrap 4 alpha</a> was finally out. This was after months of anticipation, anxious tweets asking for the disclosure of a release date, and a few scattered <a href="https://twitter.com/mdo/status/591364406816079873">scraps of news</a> by <a href="http://markdotto.com/">Mark Otto</a> and <a href="http://twitter.com/fat">Jacob Thornton</a>, having the effect of intensifying rather than quenching our curiosity. More than two years later, the wait for the first stable release is finally over.</p>
 <p>As a designer, I love crafting my own CSS. However, I confess that I find Bootstrap a well thought out and strongly supported front-end framework that I’ve immensely enjoyed using — both for building my projects and for learning more about writing better, modular CSS.</p>
 <p>As soon as news of the latest release was out, I downloaded the <a href="http://getbootstrap.com/docs/4.0/getting-started/download/">source files for Bootstrap 4</a> and spent some time going back and forth between reading <a href="http://getbootstrap.com/docs/4.0/getting-started/introduction/">the docs</a> and digging into the code to find out more.</p>
@@ -209,7 +211,7 @@
 <p>It’s safe to say that, now more than ever before, using Bootstrap feels like assembling and arranging Lego blocks in different ways. Here are some examples to clarify what I mean.</p>
 <h3>Easy-to-Override Variables</h3>
 <p>Bootstrap’s Sass variables use the <code>!default</code> flag, which makes it easy for you to override their values. Grab a copy of the latest release of Bootstrap <a href="http://getbootstrap.com/docs/4.0/getting-started/download/">source files</a> and open <code>_variables.scss</code> in a code editor. Here are just three of the first variables you’ll come across:</p>
-<pre><code class="highlight-scss">$white:#fff !default;
+<pre><code class="language-scss">$white:#fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -222,14 +224,14 @@ $gray-300: #dee2e6 !default;
 <h3>Reusable Components</h3>
 <p>You can skin and modify components by mixing and matching a few classes. For instance, the brand new <a href="https://getbootstrap.com/docs/4.0/components/card/">cards</a> component is a great example of this versatility in action.</p>
 <p>Here’s all the HTML you need for the simplest instance of this component:</p>
-<pre><code class="highlight-html">&lt;div class=&quot;card&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;card&quot;&gt;
  &lt;div class=&quot;card-body&quot;&gt;
    This is some text within a card body.
  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 <p>This flexible component easily adapts to a variety of content types and layouts. For instance, you can also arrange cards in <a href="http://getbootstrap.com/docs/4.0/components/card/#card-groups">touching equal width and height columns</a> by wrapping them in a <code>.card-group</code> container:</p>
-<pre><code class="highlight-html">&lt;div class=&quot;card-group&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;card-group&quot;&gt;
  &lt;div class=&quot;card&quot;&gt;
    &lt;!-- card code here --&gt;
  &lt;/div&gt;
@@ -243,7 +245,7 @@ $gray-300: #dee2e6 !default;
 </code></pre>
 <p><img src="../images/1441091410cards-group.jpg" alt="Cards Group Component"></p>
 <p>Alternatively, you can group cards having equal width and height <a href="http://getbootstrap.com/docs/4.0/components/card/#card-decks">columns with margins</a>, using the <code>.card-deck</code> class as follows:</p>
-<pre><code class="highlight-html">&lt;div class=&quot;card-deck&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;card-deck&quot;&gt;
  &lt;div class=&quot;card&quot;&gt;
    &lt;!-- card code here --&gt;
  &lt;/div&gt;
@@ -257,7 +259,7 @@ $gray-300: #dee2e6 !default;
 </code></pre>
 <p><img src="../images/1441091457cards-deck.jpg" alt="Cards Deck Component"></p>
 <p>Another cool thing you can do with cards is build a <a href="http://masonry.desandro.com/">Masonry</a>-like layout. Just wrap the cards in a <a href="http://getbootstrap.com/docs/4.0/components/card/#card-columns">container</a> with the <code>.card-columns</code> class and leave the rest to Bootstrap:</p>
-<pre><code class="highlight-html">&lt;div class=&quot;card-columns&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;card-columns&quot;&gt;
  &lt;div class=&quot;card&quot;&gt;
    &lt;!-- card code here --&gt;
  &lt;/div&gt;
@@ -271,7 +273,7 @@ $gray-300: #dee2e6 !default;
 <h3>The Introduction of a Flexbox-based Grid System</h3>
 <p>Bootstrap now uses <a href="https://www.w3.org/TR/css-flexbox-1/">Flexbox</a> to build its <a href="http://getbootstrap.com/docs/4.0/layout/grid/">grid system</a>.</p>
 <p>Since Flexbox is natively <em>flexible</em>, coding a responsive page layout is going to require fewer classes. For instance, to achieve a layout with three columns side by side on larger screens and stacked on top of each other on small screens, just add the <code>col-sm</code> class to each column div:</p>
-<pre><code class="highlight-html">&lt;div class=&quot;container&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
  &lt;div class=&quot;row&quot;&gt;
    &lt;div class=&quot;col-sm&quot;&gt;
  One of three columns
@@ -315,7 +317,7 @@ $gray-300: #dee2e6 !default;
     <div class="container">
       <div class="grid">
         <div class="col-6">Copyright 2018 SitePoint</div>
-        <div class="col-6" id="log">The root of this document is:</div>
+        <div class="col-6" id="log"> </div>
       </div>
     </div>
   </footer>
@@ -386,6 +388,7 @@ $gray-300: #dee2e6 !default;
     $(":root").css("--basegrid-wide", newcurrentgridwide);
     currentgridwide = newcurrentgridwide;
     });
+    
     $('.fontsizeup').click(function () {
     newcurrentgrid = parseInt(currentgrid, 10) + 4 + 'px';
     $(":root").css("--basegrid", newcurrentgrid);
@@ -420,13 +423,20 @@ $gray-300: #dee2e6 !default;
     const toolcontainer = document.querySelector('#tool-container'); // height of the toolstrip
     const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
     const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
+    const totalbody = $( "#reeedr-body" ).height(); // height of the bookpanel
+    const previewMax = document.querySelector('.preview-label'); // height of the bookpanel
     const offlinebar = document.querySelector('#offline-notification'); // offline bar for tuckaway
     const navTop = toolcontainer.offsetTop; // distance from top edge
     const navMin = navTop / 4; // the delay before the title rolls on to the titlebar
+    
+    
+    const maxpreview = totalbody-300;
+    console.log('try this: ' + maxpreview);
+    
     var lastScrollTop = 0; // set for updating to determine scroll direction
     function stickyNavigation() {
-    //console.log('navTop = ' + navTop);
-    //console.log('scrollY = ' + window.scrollY);
+    console.log('navTop = ' + navTop);
+    console.log('scrollY = ' + window.scrollY);
     //console.log('toolbaroffset = ' + toolbaroffset);
     var st = window.pageYOffset || document.documentElement.scrollTop;
     if (window.scrollY >= navTop) { // If scroll pos is greater than 418
@@ -436,14 +446,24 @@ $gray-300: #dee2e6 !default;
     //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
     toolcontainer.classList.remove('fixed-nav');
     }
+    
     /* minize brand bar on scroll */
     if (window.scrollY >= navMin) {
-    brand.classList.add('min');
-    } else {
-    brand.classList.remove('min');
-    }
-    if (st > lastScrollTop && window.scrollY >=
-    navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
+        brand.classList.add('min');
+      } else {
+        brand.classList.remove('min');
+      }
+      //preview maxie
+    if (window.scrollY >= maxpreview) {
+        previewMax.classList.add('min');
+        console.log('scrollY = ' + window.scrollY + ' is more than ' + maxpreview);
+      } else {
+        previewMax.classList.remove('min');
+        console.log('scrollY = ' + window.scrollY + ' is less than ' + maxpreview);
+      }
+    
+    
+    if (st > lastScrollTop && window.scrollY >= navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
     brand.classList.add('tuckaway');
     toolstrip.classList.add('tuckaway');
     offlinebar.classList.add('tuckaway');
@@ -457,24 +477,29 @@ $gray-300: #dee2e6 !default;
     window.addEventListener('scroll', stickyNavigation);
     }
     scrollActions();
+    
     /* ===  Mimic offline mode ===  */
     /*   http://10.48.101.187:7883/book.html?offline=1   */
+    
     function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-    vars[key] = value;
-    });
-    return vars;
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+      });
+      return vars;
     }
     var offline = getUrlVars()["offline"];
+    var search = getUrlVars()["search"];
+    console.log('Variable is: ' + search );
+    
     function checkConnection(){
-    if (offline == 1){
-    //alert('You  are currently offline. Reconnect to the internet to access this item.');
-    $('html').addClass('offline');
-    } else {
-    $('html').removeClass('offline');
-    //alert('You  are currently online.');
-    }
+      if (offline == 1){
+      //alert('You  are currently offline. Reconnect to the internet to access this item.');
+      $('html').addClass('offline');
+        } else {
+      $('html').removeClass('offline');
+      //alert('You  are currently online.');
+      }
     }
     checkConnection();
   </script>

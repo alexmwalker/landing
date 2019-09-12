@@ -10,42 +10,96 @@ $b-rad: 6px;
 @import 'prism';
 @import 'overrides'; // overrides for generated Prism CSS
 
-@import 'components'; 
+@import 'components';
 
 @import 'header-book';
 @import 'hero-book1';
 @import 'toolstrip';
 @import 'chapter-book';
+@import 'preview';
 @import 'footer-book';
 
 
-@import 'darkmode'; 
+@import 'darkmode';
 @import 'book_media-tweaks';
 
 
 
 
-.imageshadow{
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+.imageshadow {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 
-.team-membership{
-  a{
+.team-membership {
+  a {
     color: #fff;
   }
 }
 
 /* temp column borders */
-[class*="col"]{
-  outline: 0px dashed rgba(125,200,200,.3);
+[class*="col"] {
+  outline: 0px dashed rgba(125, 200, 200, .3);
 }
 
-.container [class*="grid"]{
+.container [class*="grid"] {
   margin: 0 1rem;
 }
 
-.dedication{
+.dedication {
   font-style: italic;
   margin-left: 2rem
+}
+
+
+
+
+#reeedr-body {
+  .col-12.preview {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    overflow: hidden;
+    text-overflow: clip;
+    //-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+    //mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+
+  }
+
+  .col-12 p.read-more {
+    margin: 0 auto;
+    text-align: center;
+
+    a:link {
+      @extend .pink_button;
+      width: 50%;
+    }
+
+    a:visited {
+      color: #fff;
+    }
+  }
+}
+
+.pink_button {
+  background: #FA0B7E;
+  background-image: linear-gradient(to bottom, #FA0B7E, rgb(218, 5, 108));
+  border: 0 solid rgb(218, 5, 108);
+  border-radius: 4px;
+  box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, .2);
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  line-height: calc(var(--baseline) * 1.5);
+  text-align: center;
+  text-decoration: none;
+
+  a:hover {
+    background: rgb(218, 5, 108);
+    background-image: linear-gradient(to bottom, rgb(218, 5, 108), #FA0B7E);
+    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .2);
+  }
 }

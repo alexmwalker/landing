@@ -95,7 +95,7 @@
             </div>
             <div class="col-9_sm-12">
               <h1>Your First Week With Bootstrap</h1>
-              <p>Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we&rsquo;ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
+              <p>Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
             </div>
           </div>
         </div>
@@ -176,9 +176,9 @@
     <div class="container">
       <div class="grid-12">
         <div class="col-12">
-          <div class="chapter grid-center-reverse" data-chapter-number="#{chapternumber}">
+          <div class="chapter grid-center-reverse" data-chapter-number="2">
             <div class="col-3_sm-12 ch-head">
-              <div class="chapter-head">Chapter</div>                2
+              <div class="chapter-head">Chapter</div>2
             </div>
             <div class="col-7_sm-12 chapter-start align-r">
               <h1 class="chaptertitle">Understanding Bootstrap: How it Works, and What's New</h1>
@@ -189,7 +189,7 @@
 <h2>Getting Started</h2>
 <p>Bootstrap has a new website design which is itself built using the latest version of the Bootstrap framework (version 4 at the time of writing). You can either include the precompiled version of Bootstrap using a CDN or download the archive file <a href="http://getbootstrap.com/">here</a>.</p>
 <p>Once you unzip the archive file, you’ll see lots of files and folders that aren’t required for our tutorial. Jump directly into the <code>dist</code> directory and copy all the folders to a new destination, which will be your project home.</p>
-<p>In previous versions of the framework, the download included an additional fonts folder. Now, no fonts are included, but we can easily grab some nice ones from <a href="http://fontawesome.io/">Font Awesome</a>, for example, or from your favorite resource for fonts. In our case, we have two directories, so let's look at each of them. The <code>css</code> folder contains six CSS files:</p>
+<p>In previous versions of the framework, the download included an additional fonts folder. Now, no fonts are included, but we can easily grab some nice ones from <a href="http://fontawesome.io/">Font Awesome</a>, for example, or from your favorite resource for fonts. In our case, we have two directories, so let’s look at each of them. The <code>css</code> folder contains six CSS files:</p>
 <ul>
 <li><code>bootstrap.css</code></li>
 <li><code>bootstrap.min.css</code></li>
@@ -211,11 +211,11 @@
 <p>Since Bootstrap 4 beta 2, the <code>js</code> folder has included two new folders, <code>bootstrap-bundle.js</code> (along with its minified version for production), and also <a href="https://popper.js.org/">Popper.js</a>, a smart JavaScript library for managing poppers in web applications.</p>
 <h2>So What Exactly Are We Going to Build?</h2>
 <h3>Live Code</h3>
-<p>In this chapter, we’re going to build a static landing page using Bootstrap 4, which will be called “Rental Vacations”. Have a look at the <a href="https://codepen.io/SitePoint/pen/RQNyMe">demo page</a> first.</p>
-<p>&lt;p data-height=&quot;300&quot; data-theme-id=&quot;16254&quot; data-slug-hash=&quot;RQNyMe&quot; data-default-tab=&quot;html,result&quot; data-user=&quot;SitePoint&quot; data-pen-title=&quot;Bootstrap Landing Page Demo&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;<a href="https://codepen.io/SitePoint/pen/RQNyMe/">https://codepen.io/SitePoint/pen/RQNyMe/</a>&quot;&gt;Bootstrap Landing Page Demo&lt;/a&gt; by SitePoint (&lt;a href=&quot;<a href="https://codepen.io/SitePoint">https://codepen.io/SitePoint</a>&quot;&gt;@SitePoint&lt;/a&gt;) on &lt;a href=&quot;<a href="https://codepen.io">https://codepen.io</a>&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async src=&quot;<a href="https://static.codepen.io/assets/embed/ei.js">https://static.codepen.io/assets/embed/ei.js</a>&quot;&gt;&lt;/script&gt;</p>
+<p>In this chapter, we’re going to build a static landing page using Bootstrap 4, which will be called “Rental Vacations”. Have a look at the <a href="https://codepen.io/SitePoint/pen/RQNyMe">demo page</a> first…</p>
+<p data-height="300" data-theme-id="16254" data-slug-hash="RQNyMe" data-default-tab="html,result" data-user="SitePoint" data-pen-title="Bootstrap Landing Page Demo" class="codepen">See the Pen <a href="https://codepen.io/SitePoint/pen/RQNyMe/">Bootstrap Landing Page Demo</a> by SitePoint (<a href="https://codepen.io/SitePoint">@SitePoint</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 <p><img src="../images/vaca.png" alt="Example project"></p>
-<p>Resize your browser window and you'll see some amazing transformations in the layout of the web page. It adjusts to the size of the window. You’ll also notice that the menu bar is hiding automatically into a nice touch-compatible menu.</p>
+<p>Resize your browser window and you’ll see some amazing transformations in the layout of the web page. It adjusts to the size of the window. You’ll also notice that the menu bar is hiding automatically into a nice touch-compatible menu.</p>
 <p>So we are going to build this! Excited? Yeah … me, too!</p>
 <h3>The Structure</h3>
 <p>Bootstrap understands HTML5 elements, so we need to add an appropriate <code>doctype</code> tag to our web page. Let’s create a new HTML page and add the following <code>doctype</code> tag.</p>
@@ -233,8 +233,6 @@
 &lt;body&gt;
 &lt;h1&gt;Hello, world!&lt;/h1&gt;
 
-
-
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
@@ -248,7 +246,7 @@
 <h3>Menu Section</h3>
 <p>Designing a menu in Bootstrap is the easiest thing that can happen in the world of web designing. It’s <em>that</em> easy. Let’s start building a menu for our web page.</p>
 <p>The menu is responsive by default, and gets a new look in smaller devices. Since we have the entire CSS ready in our <code>bootstrap.css</code> file, we just have to add the correct markup and correct classes to each element.</p>
-<p>Let's start with the <code>&lt;nav&gt;</code> element:</p>
+<p>Let’s start with the <code>&lt;nav&gt;</code> element:</p>
 <pre><code class="highlight-html">&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;
   /* navbar code here */
 &lt;/nav&gt;
@@ -258,7 +256,7 @@
 <li><code>navbar</code> is a wrapping class for navbars.</li>
 <li><code>navbar-expand-lg</code> adds responsive functionality by taking charge of expanding or collapsing the navigation according to screen size. Instead of <code>-lg</code>, which stands for <em>large</em>, you can also opt for <code>-md</code> (medium screens), <code>-sm</code> (small screens), and <code>-xl</code> (extra large).</li>
 <li><code>navbar-light</code> is a color class for navbars with a light background.</li>
-<li><code>bg-light</code> further customizes the navbar's background color. In this case, the navbar have a light color. If we replace <code>bg-light</code> with <code>bg-dark</code>, the navbar's background color will be dark and the text color will be light.</li>
+<li><code>bg-light</code> further customizes the navbar’s background color. In this case, the navbar have a light color. If we replace <code>bg-light</code> with <code>bg-dark</code>, the navbar’s background color will be dark and the text color will be light.</li>
 </ul>
 <p>Moving on, add the following snippet <em>inside the <code>&lt;nav&gt;</code> element</em>:</p>
 <pre><code class="highlight-html">&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Vacation Rentals&lt;/a&gt;
@@ -269,7 +267,7 @@ aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
 &lt;/button&gt;
 </code></pre>
 <p>The <code>navbar-brand</code> class is used for branding purposes. In our case, it displays the name of the website.</p>
-<p>Next, notice the classes on the <code>&lt;button&gt;</code> element. This button is only visible on smaller screens, and it's used to toggle the menu's visibility on and off through <code>data-target=&quot;#navbarSupportedContent&quot;</code>, which is a reference to the ID value of the <code>div</code> element that contains the menu. Let's add this element now, just below the previous code:</p>
+<p>Next, notice the classes on the <code>&lt;button&gt;</code> element. This button is only visible on smaller screens, and it’s used to toggle the menu’s visibility on and off through <code>data-target=&quot;#navbarSupportedContent&quot;</code>, which is a reference to the ID value of the <code>div</code> element that contains the menu. Let’s add this element now, just below the previous code:</p>
 <pre><code class="highlight-html">&lt;!-- div containing the toggable navigation --&gt;
 &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;
 
@@ -322,14 +320,14 @@ Best Vacation Rentals
   &lt;/header&gt;
 &lt;/div&gt;
 </code></pre>
-<p>We've put the <em>jumbotron</em> inside a <code>div</code> with the class of <code>row</code> and given the jumbotron itself an extra class of <code>col</code>. These are classes Bootstrap uses to build its <a href="https://getbootstrap.com/docs/4.0/layout/grid/">12-column grid</a>.</p>
+<p>We’ve put the <em>jumbotron</em> inside a <code>div</code> with the class of <code>row</code> and given the jumbotron itself an extra class of <code>col</code>. These are classes Bootstrap uses to build its <a href="https://getbootstrap.com/docs/4.0/layout/grid/">12-column grid</a>.</p>
 <p>Also, notice the use of the <code>container-fluid</code> and <code>jumbotron-fluid</code> classes. These classes ensure that the container and the jumbotron take 100% width of the parent container element, or of the browser if no parent element is present.</p>
 <p>Inside the jumbotron <code>div</code> element we’ve placed an <code>h1</code> element, a <code>p</code> element and finally a fancy button.</p>
-<p>The <code>display-4</code> class is one of the latest additions to Bootstrap. It's a <a href="https://getbootstrap.com/docs/4.0/content/typography/#display-headings">display heading class</a> that you can use when you need your headings to really stand out.</p>
-<p>The <code>text-light</code> class is also a new addition to Bootstrap. It's one of the <a href="https://getbootstrap.com/docs/4.0/utilities/colors/">color utility classes</a>, letting you quickly control the color and background color of elements.</p>
+<p>The <code>display-4</code> class is one of the latest additions to Bootstrap. It’s a <a href="https://getbootstrap.com/docs/4.0/content/typography/#display-headings">display heading class</a> that you can use when you need your headings to really stand out.</p>
+<p>The <code>text-light</code> class is also a new addition to Bootstrap. It’s one of the <a href="https://getbootstrap.com/docs/4.0/utilities/colors/">color utility classes</a>, letting you quickly control the color and background color of elements.</p>
 <p>Refresh your browser and see the header area. Awesome!</p>
 <h3>The Content Area</h3>
-<p>Now, we need to divide the content area into three equal areas and place them side by side. Thanks to Bootstrap's flexbox-based grid, this is going to be quick and easy to do.</p>
+<p>Now, we need to divide the content area into three equal areas and place them side by side. Thanks to Bootstrap’s flexbox-based grid, this is going to be quick and easy to do.</p>
 <p>Bootstrap provides a 12-column grid system. It divides the screen into 12 equal parts, and we need to specify which HTML element occupies which parts of the grid. So in short, any element will occupy a minimum of one grid in the grid system.</p>
 <p>Let’s see the markup first.</p>
 <pre><code class="highlight-html">&lt;div class=&quot;row&quot;&gt;
@@ -354,9 +352,9 @@ Best Vacation Rentals
 <p>Firstly, there are three <code>div</code> elements that are contained inside a single row. So we start a new row by adding a new <code>div</code> with class <code>row</code>.</p>
 <p>The row now contains three more <code>div</code> tags with the class <code>col-sm</code>. Before the release of Bootstrap 4, achieving this result would have required adding the <code>col-md-4</code> class to each of these <code>div</code> elements. The number 4 in the class meant that the grid spanned four columns. So three sibling <code>div</code>s spanning four columns each would occupy 12 columns, which was perfectly fine.</p>
 <p>The <a href="https://getbootstrap.com/docs/4.0/layout/grid/#grid-options">new Bootstrap grid</a> uses the strength of Flexbox to make things way less complex. The <code>col-sm</code> class on each column <code>div</code> by itself ensures that the content is evenly divided among the three <code>div</code>s until the screen size gets to 576px, at which point columns get stacked on top of each other.</p>
-<p>We can choose to trigger this layout change at a screen size of less than 576px by using <code>col-xs</code>, or at a larger screen size of 768px with <code>col-md</code>. It's up to us, but just one grid class will do the job for us.</p>
+<p>We can choose to trigger this layout change at a screen size of less than 576px by using <code>col-xs</code>, or at a larger screen size of 768px with <code>col-md</code>. It’s up to us, but just one grid class will do the job for us.</p>
 <p>The <code>pb-4</code> class is one of the new <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/">spacing utility classes</a> that come with Bootstrap 4. It creates some padding bottom inside the element on the basis of a consistent scale of values.</p>
-<p>Since we have each sibling <code>div</code> placed appropriately, it’s now time to populate them with some content. In our case, the content is unique for each one of them, with different images, but the structure is the same. Here's the content inside the first column as an example:</p>
+<p>Since we have each sibling <code>div</code> placed appropriately, it’s now time to populate them with some content. In our case, the content is unique for each one of them, with different images, but the structure is the same. Here’s the content inside the first column as an example:</p>
 <pre><code class="highlight-html">&lt;!-- first column --&gt;
 &lt;div class=&quot;col-sm pb-4&quot;&gt;
 
@@ -375,7 +373,7 @@ Lorem Ipsum...
 </code></pre>
 <p>The image added has class <code>img-fluid</code> that makes it fit to the size of the parent <code>div</code> irrespective of its own size. The image is responsive to the size of each sibling <code>div</code>. Then we have a normal <code>h3</code> element and <code>p</code> tags. You can populate the <code>p</code> tag in any manner you wish. In my demo page, I’ve used the auto-generated Lorem Ipsum text. Then finally, I’ve added a button.</p>
 <p><code>btn-success</code> is used to make it green. There are other classes as well, like <code>btn-info</code>, <code>btn-default</code>, <code>btn-warning</code> and <code>btn-danger</code>. You can browse the <a href="https://getbootstrap.com/docs/4.0/components/buttons/">buttons docs page</a> for all the details.</p>
-<p>Finally, we’ve used a few more utility classes for margins, centering, and rounding the image's appearance into a circle.</p>
+<p>Finally, we’ve used a few more utility classes for margins, centering, and rounding the image’s appearance into a circle.</p>
 <h3>Footer Area</h3>
 <p>The footer area follows the same principles as the content area. Here’s the markup:</p>
 <pre><code class="highlight-html">&lt;footer class=&quot;row pt-4&quot;&gt;
@@ -407,7 +405,7 @@ Lorem Ipsum...
 
 &lt;/footer&gt;
 </code></pre>
-<p>We’ve used the HTML5 <code>footer</code> element and created another row at the same time. Then we've divided the whole area into three equal sections, the same way we did with the main content area above. Then we populated each sub division.</p>
+<p>We’ve used the HTML5 <code>footer</code> element and created another row at the same time. Then we’ve divided the whole area into three equal sections, the same way we did with the main content area above. Then we populated each sub division.</p>
 <h3>Some More Bootstrap Classes</h3>
 <p><a href="https://getbootstrap.com/docs/4.0/content/tables/">Table classes</a>: if you’re using the <code>&lt;table&gt;</code> element, you can use the <code>.table</code> class to make it look bit more fancy in the Bootstrap style.</p>
 <p><a href="https://getbootstrap.com/docs/4.0/utilities/float/">Floats</a>: you can use <code>.float-left</code> to float content to the left, <code>.float-right</code> to float content to the right, and <code>float-none</code> to remove floats from the element.</p>
@@ -426,7 +424,7 @@ Lorem Ipsum...
     <div class="container">
       <div class="grid">
         <div class="col-6">Copyright 2018 SitePoint</div>
-        <div class="col-6" id="log">The root of this document is:</div>
+        <div class="col-6" id="log"> </div>
       </div>
     </div>
   </footer>
@@ -497,6 +495,7 @@ Lorem Ipsum...
     $(":root").css("--basegrid-wide", newcurrentgridwide);
     currentgridwide = newcurrentgridwide;
     });
+    
     $('.fontsizeup').click(function () {
     newcurrentgrid = parseInt(currentgrid, 10) + 4 + 'px';
     $(":root").css("--basegrid", newcurrentgrid);
@@ -531,13 +530,20 @@ Lorem Ipsum...
     const toolcontainer = document.querySelector('#tool-container'); // height of the toolstrip
     const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
     const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
+    const totalbody = $( "#reeedr-body" ).height(); // height of the bookpanel
+    const previewMax = document.querySelector('.preview-label'); // height of the bookpanel
     const offlinebar = document.querySelector('#offline-notification'); // offline bar for tuckaway
     const navTop = toolcontainer.offsetTop; // distance from top edge
     const navMin = navTop / 4; // the delay before the title rolls on to the titlebar
+    
+    
+    const maxpreview = totalbody-300;
+    console.log('try this: ' + maxpreview);
+    
     var lastScrollTop = 0; // set for updating to determine scroll direction
     function stickyNavigation() {
-    //console.log('navTop = ' + navTop);
-    //console.log('scrollY = ' + window.scrollY);
+    console.log('navTop = ' + navTop);
+    console.log('scrollY = ' + window.scrollY);
     //console.log('toolbaroffset = ' + toolbaroffset);
     var st = window.pageYOffset || document.documentElement.scrollTop;
     if (window.scrollY >= navTop) { // If scroll pos is greater than 418
@@ -547,14 +553,24 @@ Lorem Ipsum...
     //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
     toolcontainer.classList.remove('fixed-nav');
     }
+    
     /* minize brand bar on scroll */
     if (window.scrollY >= navMin) {
-    brand.classList.add('min');
-    } else {
-    brand.classList.remove('min');
-    }
-    if (st > lastScrollTop && window.scrollY >=
-    navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
+        brand.classList.add('min');
+      } else {
+        brand.classList.remove('min');
+      }
+      //preview maxie
+    if (window.scrollY >= maxpreview) {
+        previewMax.classList.add('min');
+        console.log('scrollY = ' + window.scrollY + ' is more than ' + maxpreview);
+      } else {
+        previewMax.classList.remove('min');
+        console.log('scrollY = ' + window.scrollY + ' is less than ' + maxpreview);
+      }
+    
+    
+    if (st > lastScrollTop && window.scrollY >= navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
     brand.classList.add('tuckaway');
     toolstrip.classList.add('tuckaway');
     offlinebar.classList.add('tuckaway');
@@ -568,24 +584,29 @@ Lorem Ipsum...
     window.addEventListener('scroll', stickyNavigation);
     }
     scrollActions();
+    
     /* ===  Mimic offline mode ===  */
     /*   http://10.48.101.187:7883/book.html?offline=1   */
+    
     function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-    vars[key] = value;
-    });
-    return vars;
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+      });
+      return vars;
     }
     var offline = getUrlVars()["offline"];
+    var search = getUrlVars()["search"];
+    console.log('Variable is: ' + search );
+    
     function checkConnection(){
-    if (offline == 1){
-    //alert('You  are currently offline. Reconnect to the internet to access this item.');
-    $('html').addClass('offline');
-    } else {
-    $('html').removeClass('offline');
-    //alert('You  are currently online.');
-    }
+      if (offline == 1){
+      //alert('You  are currently offline. Reconnect to the internet to access this item.');
+      $('html').addClass('offline');
+        } else {
+      $('html').removeClass('offline');
+      //alert('You  are currently online.');
+      }
     }
     checkConnection();
   </script>

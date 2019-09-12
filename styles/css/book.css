@@ -1845,7 +1845,8 @@ to change directly - chiefly Prism JS at this stage -
   background: rgba(255, 255, 255, 0); }
 
 @media (max-width: 48em) {
-  code[class*="language-"], pre[class*="language-"] {
+  code[class*="language-"],
+  pre[class*="language-"] {
     line-height: calc(var(--baseline) / 2);
     padding: calc(var(--baseline) / 2) 1rem;
     margin: calc(var(--baseline) * 1) 0; }
@@ -2856,7 +2857,7 @@ li.toc-chapter {
   font-size: 1.5625rem;
   position: absolute;
   top: calc(var(--baseline) * -1.0);
-  font-family: Raleway;
+  font-family: Raleway, Roboto, sans-serif;
   color: #9ab;
   font-weight: 600;
   margin-top: 0rem;
@@ -2872,7 +2873,8 @@ li.toc-chapter {
   margin-bottom: calc(var(--baseline) / 2);
   text-align: right; }
 
-#reeedr p code, #reeedr li code {
+#reeedr p code,
+#reeedr li code {
   padding: 0 3px;
   background: #F5F2F0; }
 
@@ -2910,6 +2912,65 @@ li.toc-chapter {
 
 #reeedr img {
   max-width: 100%; }
+
+.chapter + p,
+.preview > p:first-of-type {
+  font-weight: 400;
+  font-size: calc(1rem * var(--typescale));
+  margin-top: calc(var(--baseline) * 2); }
+
+.preview-label {
+  background: #333;
+  width: 100%;
+  color: #fff;
+  padding: calc(var(--baseline) / 2) 0 0;
+  font-size: calc(1rem);
+  -webkit-box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  -webkit-transition: padding .5s;
+  -o-transition: padding .5s;
+  transition: padding .5s; }
+  .preview-label img {
+    height: calc(var(--baseline) * 1.5);
+    margin: 0 1rem;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+  .preview-label p.minor {
+    position: relative;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+  .preview-label.min {
+    padding: calc(var(--baseline) / 2) 0 0;
+    -webkit-transition: padding .5s;
+    -o-transition: padding .5s;
+    transition: padding .5s; }
+    .preview-label.min img {
+      height: calc(var(--baseline) * 4);
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s; }
+    .preview-label.min p.minor {
+      top: calc(var(--baseline) * -0.5);
+      opacity: 1;
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s; }
+  .preview-label strong {
+    padding: calc(var(--baseline) / 4); }
+
+.cover-preview {
+  text-align: right; }
+
+a.membership {
+  padding: 0 1rem;
+  line-height: calc(var(--baseline) * 1.0); }
 
 /* ===  FOOTER === */
 footer.mainfooter {
@@ -3179,5 +3240,51 @@ that need device level targeting. This is where we do it. */
 .dedication {
   font-style: italic;
   margin-left: 2rem; }
+
+#reeedr-body .col-12.preview {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  overflow: hidden;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(transparent));
+  -webkit-mask-image: -webkit-linear-gradient(top, black 90%, transparent 100%);
+  mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, black), to(transparent));
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%); }
+
+#reeedr-body .col-12 p.read-more {
+  margin: 0 auto;
+  text-align: center; }
+  #reeedr-body .col-12 p.read-more a:link {
+    width: 50%; }
+  #reeedr-body .col-12 p.read-more a:visited {
+    color: #fff; }
+
+.pink_button, a.membership, #reeedr-body .col-12 p.read-more a:link {
+  background: #FA0B7E;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FA0B7E), to(#da056c));
+  background-image: -webkit-linear-gradient(top, #FA0B7E, #da056c);
+  background-image: -o-linear-gradient(top, #FA0B7E, #da056c);
+  background-image: linear-gradient(to bottom, #FA0B7E, #da056c);
+  border: 0 solid #da056c;
+  border-radius: 4px;
+  -webkit-box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  line-height: calc(var(--baseline) * 1.5);
+  text-align: center;
+  text-decoration: none; }
+  .pink_button a:hover, a.membership a:hover, #reeedr-body .col-12 p.read-more a:link a:hover {
+    background: #da056c;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#da056c), to(#FA0B7E));
+    background-image: -webkit-linear-gradient(top, #da056c, #FA0B7E);
+    background-image: -o-linear-gradient(top, #da056c, #FA0B7E);
+    background-image: linear-gradient(to bottom, #da056c, #FA0B7E);
+    -webkit-box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=book.css.map */
