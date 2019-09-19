@@ -179,15 +179,3 @@ To help keep both vertical and horizontal spacing between elements under tight c
 
 Further, the framework offers an impressive number of [utility classes](http://getbootstrap.com/docs/4.0/utilities/spacing/) to make it easier for you to adjust margins and paddings at a more granular level across varying screen sizes.
 
-Conclusion
-----------
-
-I’ve introduced three broad features that in my view make Bootstrap really stand out:
-
-*   great documentation
-*   Mega Lego–type architecture
-*   easier scaling across devices
-
-Did you notice I didn’t mention Bootstrap’s move from Less to Sass? Or the rewrite of all JavaScript plugins in [ES6](https://github.com/lukehoban/es6features/blob/master/README.md)?
-
-I consider these to be more like indications of Bootstrap staying current and taking advantage of the latest tools, rather than features integral to the framework itself.

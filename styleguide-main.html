@@ -1,0 +1,690 @@
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>SitePoint - Styleguide</title>
+    <meta name="description" content="SitePoint Styleguide"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stlyesheet" type="text/css" href="https://raw.githubusercontent.com/styledown/styledown/master/data/styledown.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/css/styleguide.css"/>
+    <!--script(src='https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js')-->
+    <script src="https://rawcdn.githack.com/styledown/styledown/5c97e6c6d5d170d8fc70c8824d995891bd2a61cc/data/styledown.js"></script>
+  </head>
+  <body class="vr borders labelling">
+    <div class="container">
+      <header class="grid-center">
+        <div class="col-3_md-12_sm-12">
+          <div class="device"></div><br/>
+          <ul class="minor clearleft">
+            <li>Grid : <strong><span class="mobile-only"> 12px </span><span class="tablet-only"> 14px </span><span class="laptop-only"> 16px </span><span class="wide-only">   18px </span></strong></li>
+          </ul>
+        </div>
+        <div class="col-9_sm-12">
+          <h1 class="major">SitePoint StyleGuide</h1>
+          <h2 class="no-margin-top-1 light">Grid &amp; Type:   <span class="mobile-only"> mobile</span><span class="tablet-only"> tablet</span><span class="laptop-only"> laptop</span><span class="wide-only">   wide-screens</span></h2>
+          <ul class="minor">
+            <li>The base HTML <code>font-size</code> on <strong><span class="mobile-only"> mobile</span><span class="tablet-only"> tablet</span><span class="laptop-only"> laptop</span><span class="wide-only">   wide-screens</span></strong>          is <strong><span class="mobile-only"> 13.5px</span><span class="tablet-only"> 15.75px</span><span class="laptop-only"> 18px</span><span class="wide-only">   20.25px</span></strong></li>
+            <li>The base HTML <code>line-height</code> (i.e. <code>--baseline</code> in my SCSS) in the 'basic-grid-typography' setup<strong> 32/18</strong>  or <strong>1.777778rem</strong> ( <strong><span class="mobile-only"> 32px </span><span class="tablet-only"> 28px </span><span class="laptop-only"> 32px</span><span class="wide-only"> 36px</span></strong> in <i>this</i> grid).</li>
+            <li>A single grid row is <strong>half of 1.777778rem</strong>   ––   or <strong>0.8888889rem</strong>.</li>
+            <li><code>Margin</code>s and <code>padding</code>s should ALWAYS be multiples of these numbers to maintain vertical rhythm.</li>
+          </ul>
+        </div>
+      </header>
+    </div>
+  </body>
+  <div class="container">
+    <section class="grid-center">   
+      <p>Here's a section - breadcrumb</p>
+      <h1 class="report">The Basics of our Vertical Grids</h1>
+      <p class="report">1). We always set the font-size in pixels on the `<HTML>` element and size everything else in REMs ( html{ font-size: 18px; } ) .  Then we use Media queries to adjust the HTML font-size and everything else scales automatically.</p>
+      <p>2). The CSS `line-height` for the basic `<p>` tag is very important as it becomes the default ‘lego brick height’ that everything else fits on. I’m setting a ‘line-height: 1.7778rem’.   (or 28/16 ). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
+      <p class="minor report">This is an especially small paragraph style not designed for large, wide body text areas. It is best suited to be used in visually dense or complex UI elements like cards, bio panels, and testimonial layouts. It tends to work well with H5 headings.</p>
+      <h2 class="report">One Morning, When Gregor Samsa Woke Samsa Woke</h2>
+      <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+      <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+      <h3 class="report">One Morning, When Gregor Samsa Woke<br/>   Samsa Woke</h3>
+      <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+      <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+      <h4 class="report">One Morning, When Gregor Samsa Woke</h4>
+      <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+      <p>They had laughed. They had leaned on each other and laughed until the tears had come, while everything else--the cold, and where he'd go in it–was outside, for a while anyway.</p>
+      <ul class="report">
+        <li>One point</li>
+        <li>Two points</li>
+        <li>Three points</li>
+        <li>Four points</li>
+        <li>Five points</li>
+      </ul>
+      <h5 class="report">A small wax and sawdust log burned on the grate</h5>
+      <p class="minor">Drinking’s funny. When I look back on it, all of our important decisions have been figured out when we were drinking. Even when we talked about having to cut back on drinking, we’d be sitting at the kitchen table or out at the picnic table with a six-pack or whiskey.</p>
+      <h5>One Morning, When Gregor Samsa Woke</h5>
+      <div class="grid-center">
+        <div class="col-3_md-6_sm-12">
+          <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
+          <p class="small">It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+        </div>
+        <div class="col-3_md-6_sm-12">
+          <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
+          <p class="small">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought.</p>
+        </div>
+        <div class="col-3_md-6_sm-12">
+          <h5>One Morning, When Gregor Samsa Woke</h5>
+          <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
+        </div>
+        <div class="col-3_md-6_sm-12">
+          <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
+          <p class="small">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+        </div>
+      </div>
+      <p class="minor">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+      <p class="minor">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+    </section>
+  </div>
+</html>
+<div class="container">
+  <div>
+    <section class="sg-section sg-section-buttons">
+      <h2 class="sg" id="buttons">Buttons</h2>
+      <section class="sg-block sg-section-button">
+        <div class="sg-text">
+          <h3 class="sg" id="button">Button</h3>
+          <p class="sg"><code class="sg">.btn</code>- Buttons are the essence of life and the raison d&apos;etre of UI design. Live it, love it.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas"><a class="btn btn-primary">Primary button</a></div>
+          <pre class="sg-code sg-hidden">\nPrimary button            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-button-group">
+        <div class="sg-text">
+          <h3 class="sg" id="button-group">Button group</h3>
+          <p class="sg"><code class="sg">.btn-group</code>- Wrap a series of buttons in a group.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="btn-group">
+              <button class="btn btn-default">Left</button>
+              <button class="btn btn-default">Middle</button>
+              <button class="btn btn-default">Right</button>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              Left            
+              Middle            
+              Right            
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-button-toolbar">
+        <div class="sg-text">
+          <h3 class="sg" id="button-toolbar">Button toolbar</h3>
+          <p class="sg"><code class="sg">.btn-toolbar</code>- Wrap a series of button groups in a toolbar for more complex components.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-default">Cut</button>
+                <button class="btn btn-default">Copy</button>
+                <button class="btn btn-default">Paste</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-default">Undo</button>
+                <button class="btn btn-default">Redo</button>
+              </div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                Cut            
+                Copy            
+                Paste            
+              
+              
+                Undo            
+                Redo            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+    </section>
+    <section class="sg-section sg-section-forms">
+      <h2 class="sg" id="forms">Forms</h2>
+      <section class="sg-block sg-section-form-group">
+        <div class="sg-text">
+          <h3 class="sg" id="form-group">Form group</h3>
+          <p class="sg"><code class="sg">.form-group</code>- for grouping things. Individual form controls automatically receive some global styling. All textual<code class="sg">&lt;input&gt;</code>,<code class="sg">&lt;textarea&gt;</code>, and<code class="sg">&lt;select&gt;</code>elements with<code class="sg">.form-control</code>are set to<code class="sg">width: 100%;</code>by default. Wrap labels and controls in .form-group for optimum spacing.</p>
+        </div>
+        <div class="sg-example sg-wide">
+          <div class="sg-canvas">
+            <div class="form-group">
+              <label>Email address</label>
+              <input class="form-control" placeholder="hi@gmail.com" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"/>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input class="form-control" type="password" placeholder="Password" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"/>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              Email address            
+              
+            
+            
+              Password            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-form-inline">
+        <div class="sg-text">
+          <h3 class="sg" id="form-inline">Form inline</h3>
+          <p class="sg"><code class="sg">.form-inline</code>- Great for forms that only occupy one line for whatever reason.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <form class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon">@</div>
+                  <input class="form-control" placeholder="Email" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"/>
+                </div>
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Password" type="password" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"/>
+              </div>
+              <button class="btn btn-default">Sign in</button>
+            </form>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                
+                  @            
+                  
+                
+              
+              
+                
+              
+              Sign in            
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-input-groups">
+        <div class="sg-text">
+          <h3 class="sg" id="input-groups">Input groups</h3>
+          <p class="sg"><code class="sg">.input-group</code>- Extend form controls by adding text or buttons before, after, or on both sides of any text-based input. Use<code class="sg">.input-group</code>with an<code class="sg">.input-group-addon</code>to prepend or append elements to a single<code class="sg">.form-control</code>.</p>
+        </div>
+        <div class="sg-example sg-slim">
+          <div class="sg-canvas">
+            <div class="input-group">
+              <div class="input-group-addon">@</div>
+              <input class="form-control" placeholder="Username"/>
+            </div><br/>
+            <div class="input-group">
+              <input class="form-control" type="text"/>
+              <div class="input-group-addon">.00</div>
+            </div><br/>
+            <div class="input-group">
+              <div class="input-group-addon">$</div>
+              <input class="form-control" type="text"/>
+              <div class="input-group-addon">.00</div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              @            
+              
+            
+            
+            
+              
+              .00            
+            
+            
+            
+              $            
+              
+              .00            
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+    </section>
+    <section class="sg-section sg-section-list-group">
+      <h2 class="sg" id="list-group">List group</h2>
+      <section class="sg-block sg-section-basic-list-group">
+        <div class="sg-text">
+          <h3 class="sg" id="basic-list-group">Basic list group</h3>
+          <p class="sg"><code class="sg">.list-group</code>- List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.</p>
+        </div>
+        <div class="sg-example sg-slim">
+          <div class="sg-canvas">
+            <ul class="list-group">
+              <li class="list-group-item">Apple</li>
+              <li class="list-group-item">Orange</li>
+              <li class="list-group-item">Banana</li>
+              <li class="list-group-item">Grape</li>
+            </ul>
+          </div>
+          <pre class="sg-code sg-hidden">\n              Apple            
+              Orange            
+              Banana            
+              Grape            
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-list-group-with-badges">
+        <div class="sg-text">
+          <h3 class="sg" id="list-group-with-badges">List group with badges</h3>
+          <p class="sg"><code class="sg">.list-group</code>with<code class="sg">span.badge</code>- Add the badges component to any list group item and it will automatically be positioned on the right.</p>
+        </div>
+        <div class="sg-example sg-slim">
+          <div class="sg-canvas">
+            <ul class="list-group">
+              <li class="list-group-item"><span class="badge">14</span>Apple</li>
+              <li class="list-group-item"><span class="badge">8</span>Orange</li>
+              <li class="list-group-item">Banana</li>
+              <li class="list-group-item"><span class="badge">1</span>Grape</li>
+            </ul>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                14            Apple            
+              
+                8            Orange            
+              Banana            
+              
+                1            Grape            
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+    </section>
+    <section class="sg-section sg-section-panels">
+      <h2 class="sg" id="panels">Panels</h2>
+      <section class="sg-block sg-section-basic-panel">
+        <div class="sg-text">
+          <h3 class="sg" id="basic-panel">Basic panel</h3>
+          <p class="sg"><code class="sg">.panel</code>- By default, all the .panel does is apply some basic border and padding to contain some content.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="panel panel-default">
+              <div class="panel-body">Basic panel example</div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              Basic panel example            
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-panel-with-heading">
+        <div class="sg-text">
+          <h3 class="sg" id="panel-with-heading">Panel with heading</h3>
+          <p class="sg"><code class="sg">.panel-heading</code>- Easily add a heading container to your panel with<code class="sg">.panel-heading</code>.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="panel panel-default">
+              <div class="panel-heading">Without a title</div>
+              <div class="panel-body">Basic panel example</div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+              </div>
+              <div class="panel-body">Basic panel example</div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              Without a title            
+              Basic panel example            
+            
+            
+              
+                Panel title            
+              
+              Basic panel example            
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-panel-with-footer">
+        <div class="sg-text">
+          <h3 class="sg" id="panel-with-footer">Panel with footer</h3>
+          <p class="sg"><code class="sg">.panel-footer</code>- Wrap buttons or secondary text in<code class="sg">.panel-footer</code>. Note that panel footers do not inherit colors and borders when using contextual variations as they are not meant to be in the foreground.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="panel panel-default">
+              <div class="panel-body">Panel content</div>
+              <div class="panel-footer">Panel footer</div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              Panel content            
+              Panel footer            
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+    </section>
+    <section class="sg-section sg-section-tabs">
+      <h2 class="sg" id="tabs">Tabs</h2>
+      <section class="sg-block sg-section-basic-tabs">
+        <div class="sg-text">
+          <h3 class="sg" id="basic-tabs">Basic tabs</h3>
+          <p class="sg"><code class="sg">.nav-tabs</code>- Note that it requires a<code class="sg">.nav</code>base class.</p>
+        </div>
+        <div class="sg-example sg-padded">
+          <div class="sg-canvas">
+            <ul class="nav nav-tabs">
+              <li class="active"><a>Home</a></li>
+              <li><a>Messages</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                Home            
+              
+              
+                Messages            
+              
+              
+                Search            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-pill-tabs">
+        <div class="sg-text">
+          <h3 class="sg" id="pill-tabs">Pill tabs</h3>
+          <p class="sg"><code class="sg">.nav-pills</code>- Note that it requires a<code class="sg">.nav</code>base class.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <ul class="nav nav-pills">
+              <li class="active"><a>Home</a></li>
+              <li><a>Messages</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                Home            
+              
+              
+                Messages            
+              
+              
+                Search            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-verical-pill-tabs">
+        <div class="sg-text">
+          <h3 class="sg" id="verical-pill-tabs">Verical pill tabs</h3>
+          <p class="sg"><code class="sg">.nav-pills.nav-stacked</code></p>
+        </div>
+        <div class="sg-example sg-slim sg-padded">
+          <div class="sg-canvas">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a>Home</a></li>
+              <li><a>Messages</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                Home            
+              
+              
+                Messages            
+              
+              
+                Search            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+    </section>
+    <section class="sg-section sg-section-progress-bars">
+      <h2 class="sg" id="progress-bars">Progress bars</h2>
+      <section class="sg-block sg-section-basic-progress-bar">
+        <div class="sg-text">
+          <h3 class="sg" id="basic-progress-bar">Basic progress bar</h3>
+          <p class="sg"><code class="sg">.progress</code>- for progress bars. Set the<code class="sg">width</code>CSS attribute.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="progress">
+              <div class="progress-bar" style="width: 20%"><span class="sr-only">30%</span></div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                30%            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-progress-bar-with-label">
+        <div class="sg-text">
+          <h3 class="sg" id="progress-bar-with-label">Progress bar with label</h3>
+          <p class="sg"><code class="sg">.progress</code>- remove the<code class="sg">.sr-only</code>class from the span.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="progress">
+              <div class="progress-bar" style="width: 22%"><span>22%</span></div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                22%            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-low-percentages">
+        <div class="sg-text">
+          <h3 class="sg" id="low-percentages">Low percentages</h3>
+          <p class="sg"><code class="sg">.progress</code>- Progress bars representing low single digit percentages, as well as 0%, include a<code class="sg">min-width: 20px;</code>for legibility.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="progress">
+              <div class="progress-bar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span>0%</span></div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" style="width: 2%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"><span>2%</span></div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                0%            
+              
+            
+            
+              
+                2%            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-contextual-alternatives">
+        <div class="sg-text">
+          <h3 class="sg" id="contextual-alternatives">Contextual alternatives</h3>
+          <p class="sg"><code class="sg">.progress-bar-*</code>- Progress bars use some of the same button and alert classes for consistent styles.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" style="width: 10%"></div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-info" style="width: 30%"></div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning" style="width: 20%"></div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger" style="width: 40%"></div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+            
+            
+              
+            
+            
+              
+            
+            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-striped">
+        <div class="sg-text">
+          <h3 class="sg" id="striped">Striped</h3>
+          <p class="sg"><code class="sg">.progress-bar-stripped</code>- not available in IE8.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" style="width: 25%"><span>25%</span></div>
+            </div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                25%            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+    </section>
+    <section class="sg-section sg-section-components">
+      <h2 class="sg" id="components">Components</h2>
+      <section class="sg-block sg-section-alerts">
+        <div class="sg-text">
+          <h3 class="sg" id="alerts">Alerts</h3>
+          <p class="sg"><code class="sg">.alert</code>- Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. For inline dismissal, use the alerts jQuery plugin.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="alert alert-success"><strong>Well done!</strong>Things are going well.</div>
+            <div class="alert alert-info"><strong>Heads up!</strong>You&apos;re a wonderful person.</div>
+          </div>
+          <pre class="sg-code sg-hidden">\n              Well done!            Things are going well.            
+            
+              Heads up!            You're a wonderful person.            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-pagination">
+        <div class="sg-text">
+          <h3 class="sg" id="pagination">Pagination</h3>
+          <p class="sg"><code class="sg">.pagination</code>- Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                &laquo;            
+              
+              
+                1            
+              
+              
+                2            
+              
+              
+                3            
+              
+              
+                4            
+              
+              
+                &raquo;            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-pager">
+        <div class="sg-text">
+          <h3 class="sg" id="pager">Pager</h3>
+          <p class="sg"><code class="sg">.pager</code>- by default, it centers links.</p>
+        </div>
+        <div class="sg-example sg-padded">
+          <div class="sg-canvas">
+            <ul class="pager">
+              <li><a>Previous</a></li>
+              <li><a>Next</a></li>
+            </ul>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                Previous            
+              
+              
+                Next            
+              
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-labels">
+        <div class="sg-text">
+          <h3 class="sg" id="labels">Labels</h3>
+          <p class="sg"><code class="sg">.label</code>- Used for labelling things that need labels.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas"><span class="label label-default">Default</span><span class="label label-primary">Primary</span><span class="label label-success">Success</span><span class="label label-info">Info</span><span class="label label-warning">Warning</span><span class="label label-danger">Danger</span></div>
+          <pre class="sg-code sg-hidden">\nDefault            
+            Primary            
+            Success            
+            Info            
+            Warning            
+            Danger            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+      <section class="sg-block sg-section-breadcrumbs">
+        <div class="sg-text">
+          <h3 class="sg" id="breadcrumbs">Breadcrumbs</h3>
+          <p class="sg"><code class="sg">.breadcrumb</code>- Indicate the current page&apos;s location within a navigational hierarchy. Separators are automatically added in CSS through<em class="sg">:before</em>and<em class="sg">content</em>.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <ol class="breadcrumb">
+              <li><a>Home</a></li>
+              <li><a>Library</a></li>
+              <li class="active">Data</li>
+            </ol>
+          </div>
+          <pre class="sg-code sg-hidden">\n              
+                Home            
+              
+              
+                Library            
+              
+              Data            
+            </pre>
+          <button class="sg-expando sg-expando-reveal"></button>
+        </div>
+      </section>
+    </section>
+  </div>
+</div>
+<div></div>

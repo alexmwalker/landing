@@ -1,0 +1,766 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title SitePoint - Styleguide
+    meta(name='description', content='SitePoint Styleguide')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stlyesheet', type='text/css', href='https://raw.githubusercontent.com/styledown/styledown/master/data/styledown.css')
+    link(rel='stylesheet', type='text/css', href='styles/css/styleguide.css')
+    //script(src='https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js')
+    script(src='https://rawcdn.githack.com/styledown/styledown/5c97e6c6d5d170d8fc70c8824d995891bd2a61cc/data/styledown.js')
+
+  body.vr.borders.labelling
+
+    .container
+      header.grid-center
+        .col-3_md-12_sm-12
+          .device
+          br
+          ul.minor.clearleft
+            li
+              | Grid : 
+              strong
+                span.mobile-only  12px 
+                span.tablet-only  14px 
+                span.laptop-only  16px 
+                span.wide-only    18px 
+        .col-9_sm-12
+          h1.major SitePoint StyleGuide
+          h2.no-margin-top-1.light
+            | Grid &amp; Type:   
+            span.mobile-only  mobile
+            span.tablet-only  tablet
+            span.laptop-only  laptop
+            span.wide-only    wide-screens
+          ul.minor
+            li
+              | The base HTML 
+              code font-size
+              |  on 
+              strong
+                span.mobile-only  mobile
+                span.tablet-only  tablet
+                span.laptop-only  laptop
+                span.wide-only    wide-screens
+              |           is 
+              strong
+                span.mobile-only  13.5px
+                span.tablet-only  15.75px
+                span.laptop-only  18px
+                span.wide-only    20.25px
+            li
+              | The base HTML 
+              code line-height
+              |  (i.e. 
+              code --baseline
+              |  in my SCSS) in the 'basic-grid-typography' setup
+              strong  32/18
+              |   or 
+              strong 1.777778rem
+              |  ( 
+              strong
+                span.mobile-only  32px 
+                span.tablet-only  28px 
+                span.laptop-only  32px
+                span.wide-only  36px
+              |  in 
+              i this
+              |  grid).
+            li
+              | A single grid row is 
+              strong half of 1.777778rem
+              |    ––   or 
+              strong 0.8888889rem
+              | .
+            li
+              code Margin
+              | s and 
+              code padding
+              | s should ALWAYS be multiples of these numbers to maintain vertical rhythm.
+  .container
+    section.grid-center    
+      p Here's a section - breadcrumb
+      h1.report The Basics of our Vertical Grids
+      p.report
+        | 1). We always set the font-size in pixels on the `<HTML>` element and size everything else in REMs ( html{ font-size: 18px; } ) .  Then we use Media queries to adjust the HTML font-size and everything else scales automatically.
+      p
+        | 2). The CSS `line-height` for the basic `<p>` tag is very important as it becomes the default ‘lego brick height’ that everything else fits on. I’m setting a ‘line-height: 1.7778rem’.   (or 28/16 ). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.
+
+      p.minor.report
+        | This is an especially small paragraph style not designed for large, wide body text areas. It is best suited to be used in visually dense or complex UI elements like cards, bio panels, and testimonial layouts. It tends to work well with H5 headings.
+      h2.report One Morning, When Gregor Samsa Woke Samsa Woke
+      p
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+      p
+        | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+      h3.report
+        | One Morning, When Gregor Samsa Woke
+        br
+        |    Samsa Woke
+      p
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+      p
+        | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+      h4.report One Morning, When Gregor Samsa Woke
+      p
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+      p
+        | They had laughed. They had leaned on each other and laughed until the tears had come, while everything else--the cold, and where he'd go in it–was outside, for a while anyway.
+      ul.report
+        li One point
+        li Two points
+        li Three points
+        li Four points
+        li Five points
+      h5.report A small wax and sawdust log burned on the grate
+      p.minor
+        | Drinking’s funny. When I look back on it, all of our important decisions have been figured out when we were drinking. Even when we talked about having to cut back on drinking, we’d be sitting at the kitchen table or out at the picnic table with a six-pack or whiskey.
+      h5 One Morning, When Gregor Samsa Woke
+      .grid-center
+        .col-3_md-6_sm-12
+          p.small
+            | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+          p.small
+            | It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+        .col-3_md-6_sm-12
+          p.small
+            | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+          p.small
+            | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought.
+        .col-3_md-6_sm-12
+          h5 One Morning, When Gregor Samsa Woke
+          p.small
+            | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+        .col-3_md-6_sm-12
+          p.small
+            | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+          p.small
+            | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+      p.minor
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+      p.minor
+        | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+
+
+.container
+  div
+    section.sg-section.sg-section-buttons
+      h2#buttons.sg Buttons
+      section.sg-block.sg-section-button
+        .sg-text
+          h3#button.sg Button
+          p.sg
+            code.sg .btn
+            | - Buttons are the essence of life and the raison d&apos;etre of UI design. Live it, love it.
+        .sg-example
+          .sg-canvas
+            a.btn.btn-primary Primary button
+          pre.sg-code.sg-hidden.
+            \nPrimary button            
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-button-group
+        .sg-text
+          h3#button-group.sg Button group
+          p.sg
+            code.sg .btn-group
+            | - Wrap a series of buttons in a group.
+        .sg-example
+          .sg-canvas
+            .btn-group
+              button.btn.btn-default Left
+              button.btn.btn-default Middle
+              button.btn.btn-default Right
+          pre.sg-code.sg-hidden.
+            \n              Left            
+                          Middle            
+                          Right            
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-button-toolbar
+        .sg-text
+          h3#button-toolbar.sg Button toolbar
+          p.sg
+            code.sg .btn-toolbar
+            | - Wrap a series of button groups in a toolbar for more complex components.
+        .sg-example
+          .sg-canvas
+            .btn-toolbar
+              .btn-group
+                button.btn.btn-default Cut
+                button.btn.btn-default Copy
+                button.btn.btn-default Paste
+              .btn-group
+                button.btn.btn-default Undo
+                button.btn.btn-default Redo
+          pre.sg-code.sg-hidden.
+            \n              
+                            Cut            
+                            Copy            
+                            Paste            
+                          
+                          
+                            Undo            
+                            Redo            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+    section.sg-section.sg-section-forms
+      h2#forms.sg Forms
+      section.sg-block.sg-section-form-group
+        .sg-text
+          h3#form-group.sg Form group
+          p.sg
+            code.sg .form-group
+            | - for grouping things. Individual form controls automatically receive some global styling. All textual
+            code.sg &lt;input&gt;
+            | ,
+            code.sg &lt;textarea&gt;
+            | , and
+            code.sg &lt;select&gt;
+            | elements with
+            code.sg .form-control
+            | are set to
+            code.sg width: 100%;
+            | by default. Wrap labels and controls in .form-group for optimum spacing.
+        .sg-example.sg-wide
+          .sg-canvas
+            .form-group
+              label Email address
+              input.form-control(placeholder='hi@gmail.com' autocomplete='off' style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg=="); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;')
+            .form-group
+              label Password
+              input.form-control(type='password' placeholder='Password' autocomplete='off' style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg=="); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;')
+          pre.sg-code.sg-hidden.
+            \n              Email address            
+                          
+                        
+                        
+                          Password            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-form-inline
+        .sg-text
+          h3#form-inline.sg Form inline
+          p.sg
+            code.sg .form-inline
+            | - Great for forms that only occupy one line for whatever reason.
+        .sg-example
+          .sg-canvas
+            form.form-inline
+              .form-group
+                .input-group
+                  .input-group-addon @
+                  input.form-control(placeholder='Email' autocomplete='off' style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg=="); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;')
+              .form-group
+                input.form-control(placeholder='Password' type='password' autocomplete='off' style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg=="); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;')
+              button.btn.btn-default Sign in
+          pre.sg-code.sg-hidden.
+            \n              
+                            
+                              @            
+                              
+                            
+                          
+                          
+                            
+                          
+                          Sign in            
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-input-groups
+        .sg-text
+          h3#input-groups.sg Input groups
+          p.sg
+            code.sg .input-group
+            | - Extend form controls by adding text or buttons before, after, or on both sides of any text-based input. Use
+            code.sg .input-group
+            | with an
+            code.sg .input-group-addon
+            | to prepend or append elements to a single
+            code.sg .form-control
+            | .
+        .sg-example.sg-slim
+          .sg-canvas
+            .input-group
+              .input-group-addon @
+              input.form-control(placeholder='Username')
+            br
+            .input-group
+              input.form-control(type='text')
+              .input-group-addon .00
+            br
+            .input-group
+              .input-group-addon $
+              input.form-control(type='text')
+              .input-group-addon .00
+          pre.sg-code.sg-hidden.
+            \n              @            
+                          
+                        
+                        
+                        
+                          
+                          .00            
+                        
+                        
+                        
+                          $            
+                          
+                          .00            
+                        
+          button.sg-expando.sg-expando-reveal
+    section.sg-section.sg-section-list-group
+      h2#list-group.sg List group
+      section.sg-block.sg-section-basic-list-group
+        .sg-text
+          h3#basic-list-group.sg Basic list group
+          p.sg
+            code.sg .list-group
+            | - List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.
+        .sg-example.sg-slim
+          .sg-canvas
+            ul.list-group
+              li.list-group-item Apple
+              li.list-group-item Orange
+              li.list-group-item Banana
+              li.list-group-item Grape
+          pre.sg-code.sg-hidden.
+            \n              Apple            
+                          Orange            
+                          Banana            
+                          Grape            
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-list-group-with-badges
+        .sg-text
+          h3#list-group-with-badges.sg List group with badges
+          p.sg
+            code.sg .list-group
+            | with
+            code.sg span.badge
+            | - Add the badges component to any list group item and it will automatically be positioned on the right.
+        .sg-example.sg-slim
+          .sg-canvas
+            ul.list-group
+              li.list-group-item
+                span.badge 14
+                | Apple
+              li.list-group-item
+                span.badge 8
+                | Orange
+              li.list-group-item Banana
+              li.list-group-item
+                span.badge 1
+                | Grape
+          pre.sg-code.sg-hidden.
+            \n              
+                            14            Apple            
+                          
+                            8            Orange            
+                          Banana            
+                          
+                            1            Grape            
+                        
+          button.sg-expando.sg-expando-reveal
+    section.sg-section.sg-section-panels
+      h2#panels.sg Panels
+      section.sg-block.sg-section-basic-panel
+        .sg-text
+          h3#basic-panel.sg Basic panel
+          p.sg
+            code.sg .panel
+            | - By default, all the .panel does is apply some basic border and padding to contain some content.
+        .sg-example
+          .sg-canvas
+            .panel.panel-default
+              .panel-body Basic panel example
+          pre.sg-code.sg-hidden.
+            \n              Basic panel example            
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-panel-with-heading
+        .sg-text
+          h3#panel-with-heading.sg Panel with heading
+          p.sg
+            code.sg .panel-heading
+            | - Easily add a heading container to your panel with
+            code.sg .panel-heading
+            | .
+        .sg-example
+          .sg-canvas
+            .panel.panel-default
+              .panel-heading Without a title
+              .panel-body Basic panel example
+            .panel.panel-default
+              .panel-heading
+                h3.panel-title Panel title
+              .panel-body Basic panel example
+          pre.sg-code.sg-hidden.
+            \n              Without a title            
+                          Basic panel example            
+                        
+                        
+                          
+                            Panel title            
+                          
+                          Basic panel example            
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-panel-with-footer
+        .sg-text
+          h3#panel-with-footer.sg Panel with footer
+          p.sg
+            code.sg .panel-footer
+            | - Wrap buttons or secondary text in
+            code.sg .panel-footer
+            | . Note that panel footers do not inherit colors and borders when using contextual variations as they are not meant to be in the foreground.
+        .sg-example
+          .sg-canvas
+            .panel.panel-default
+              .panel-body Panel content
+              .panel-footer Panel footer
+          pre.sg-code.sg-hidden.
+            \n              Panel content            
+                          Panel footer            
+                        
+          button.sg-expando.sg-expando-reveal
+    section.sg-section.sg-section-tabs
+      h2#tabs.sg Tabs
+      section.sg-block.sg-section-basic-tabs
+        .sg-text
+          h3#basic-tabs.sg Basic tabs
+          p.sg
+            code.sg .nav-tabs
+            | - Note that it requires a
+            code.sg .nav
+            | base class.
+        .sg-example.sg-padded
+          .sg-canvas
+            ul.nav.nav-tabs
+              li.active
+                a Home
+              li
+                a Messages
+              li
+                a Search
+          pre.sg-code.sg-hidden.
+            \n              
+                            Home            
+                          
+                          
+                            Messages            
+                          
+                          
+                            Search            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-pill-tabs
+        .sg-text
+          h3#pill-tabs.sg Pill tabs
+          p.sg
+            code.sg .nav-pills
+            | - Note that it requires a
+            code.sg .nav
+            | base class.
+        .sg-example
+          .sg-canvas
+            ul.nav.nav-pills
+              li.active
+                a Home
+              li
+                a Messages
+              li
+                a Search
+          pre.sg-code.sg-hidden.
+            \n              
+                            Home            
+                          
+                          
+                            Messages            
+                          
+                          
+                            Search            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-verical-pill-tabs
+        .sg-text
+          h3#verical-pill-tabs.sg Verical pill tabs
+          p.sg
+            code.sg .nav-pills.nav-stacked
+        .sg-example.sg-slim.sg-padded
+          .sg-canvas
+            ul.nav.nav-pills.nav-stacked
+              li.active
+                a Home
+              li
+                a Messages
+              li
+                a Search
+          pre.sg-code.sg-hidden.
+            \n              
+                            Home            
+                          
+                          
+                            Messages            
+                          
+                          
+                            Search            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+    section.sg-section.sg-section-progress-bars
+      h2#progress-bars.sg Progress bars
+      section.sg-block.sg-section-basic-progress-bar
+        .sg-text
+          h3#basic-progress-bar.sg Basic progress bar
+          p.sg
+            code.sg .progress
+            | - for progress bars. Set the
+            code.sg width
+            | CSS attribute.
+        .sg-example
+          .sg-canvas
+            .progress
+              .progress-bar(style='width: 20%')
+                span.sr-only 30%
+          pre.sg-code.sg-hidden.
+            \n              
+                            30%            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-progress-bar-with-label
+        .sg-text
+          h3#progress-bar-with-label.sg Progress bar with label
+          p.sg
+            code.sg .progress
+            | - remove the
+            code.sg .sr-only
+            | class from the span.
+        .sg-example
+          .sg-canvas
+            .progress
+              .progress-bar(style='width: 22%')
+                span 22%
+          pre.sg-code.sg-hidden.
+            \n              
+                            22%            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-low-percentages
+        .sg-text
+          h3#low-percentages.sg Low percentages
+          p.sg
+            code.sg .progress
+            | - Progress bars representing low single digit percentages, as well as 0%, include a
+            code.sg min-width: 20px;
+            | for legibility.
+        .sg-example
+          .sg-canvas
+            .progress
+              .progress-bar(style='width: 0%' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
+                span 0%
+            .progress
+              .progress-bar(style='width: 2%' aria-valuenow='2' aria-valuemin='0' aria-valuemax='100')
+                span 2%
+          pre.sg-code.sg-hidden.
+            \n              
+                            0%            
+                          
+                        
+                        
+                          
+                            2%            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-contextual-alternatives
+        .sg-text
+          h3#contextual-alternatives.sg Contextual alternatives
+          p.sg
+            code.sg .progress-bar-*
+            | - Progress bars use some of the same button and alert classes for consistent styles.
+        .sg-example
+          .sg-canvas
+            .progress
+              .progress-bar.progress-bar-success(style='width: 10%')
+            .progress
+              .progress-bar.progress-bar-info(style='width: 30%')
+            .progress
+              .progress-bar.progress-bar-warning(style='width: 20%')
+            .progress
+              .progress-bar.progress-bar-danger(style='width: 40%')
+          pre.sg-code.sg-hidden.
+            \n              
+                        
+                        
+                          
+                        
+                        
+                          
+                        
+                        
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-striped
+        .sg-text
+          h3#striped.sg Striped
+          p.sg
+            code.sg .progress-bar-stripped
+            | - not available in IE8.
+        .sg-example
+          .sg-canvas
+            .progress
+              .progress-bar.progress-bar-striped(style='width: 25%')
+                span 25%
+          pre.sg-code.sg-hidden.
+            \n              
+                            25%            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+    section.sg-section.sg-section-components
+      h2#components.sg Components
+      section.sg-block.sg-section-alerts
+        .sg-text
+          h3#alerts.sg Alerts
+          p.sg
+            code.sg .alert
+            | - Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. For inline dismissal, use the alerts jQuery plugin.
+        .sg-example
+          .sg-canvas
+            .alert.alert-success
+              strong Well done!
+              | Things are going well.
+            .alert.alert-info
+              strong Heads up!
+              | You&apos;re a wonderful person.
+          pre.sg-code.sg-hidden.
+            \n              Well done!            Things are going well.            
+                        
+                          Heads up!            You're a wonderful person.            
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-pagination
+        .sg-text
+          h3#pagination.sg Pagination
+          p.sg
+            code.sg .pagination
+            | - Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.
+        .sg-example
+          .sg-canvas
+            ul.pagination
+              li
+                a(href='#') &laquo;
+              li
+                a(href='#') 1
+              li
+                a(href='#') 2
+              li
+                a(href='#') 3
+              li
+                a(href='#') 4
+              li
+                a(href='#') &raquo;
+          pre.sg-code.sg-hidden.
+            \n              
+                            &laquo;            
+                          
+                          
+                            1            
+                          
+                          
+                            2            
+                          
+                          
+                            3            
+                          
+                          
+                            4            
+                          
+                          
+                            &raquo;            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-pager
+        .sg-text
+          h3#pager.sg Pager
+          p.sg
+            code.sg .pager
+            | - by default, it centers links.
+        .sg-example.sg-padded
+          .sg-canvas
+            ul.pager
+              li
+                a Previous
+              li
+                a Next
+          pre.sg-code.sg-hidden.
+            \n              
+                            Previous            
+                          
+                          
+                            Next            
+                          
+                        
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-labels
+        .sg-text
+          h3#labels.sg Labels
+          p.sg
+            code.sg .label
+            | - Used for labelling things that need labels.
+        .sg-example
+          .sg-canvas
+            span.label.label-default Default
+            span.label.label-primary Primary
+            span.label.label-success Success
+            span.label.label-info Info
+            span.label.label-warning Warning
+            span.label.label-danger Danger
+          pre.sg-code.sg-hidden.
+            \nDefault            
+                        Primary            
+                        Success            
+                        Info            
+                        Warning            
+                        Danger            
+          button.sg-expando.sg-expando-reveal
+      section.sg-block.sg-section-breadcrumbs
+        .sg-text
+          h3#breadcrumbs.sg Breadcrumbs
+          p.sg
+            code.sg .breadcrumb
+            | - Indicate the current page&apos;s location within a navigational hierarchy. Separators are automatically added in CSS through
+            em.sg :before
+            | and
+            em.sg content
+            | .
+        .sg-example
+          .sg-canvas
+            ol.breadcrumb
+              li
+                a Home
+              li
+                a Library
+              li.active Data
+          pre.sg-code.sg-hidden.
+            \n              
+                            Home            
+                          
+                          
+                            Library            
+                          
+                          Data            
+                        
+          button.sg-expando.sg-expando-reveal
+div
+
+

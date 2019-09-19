@@ -2939,34 +2939,33 @@ li.toc-chapter {
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s; }
-  .preview-label p.minor {
+  .preview-label p.small {
     position: relative;
     top: 0;
+    margin-top: calc(var(--baseline) * -1.5);
     opacity: 0;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s; }
+    pointer-events: none; }
   .preview-label.min {
     padding: calc(var(--baseline) / 2) 0 0;
     -webkit-transition: padding .5s;
     -o-transition: padding .5s;
     transition: padding .5s; }
     .preview-label.min img {
-      height: calc(var(--baseline) * 4);
+      height: calc(var(--baseline) * 3);
       -webkit-transition: all .5s;
       -o-transition: all .5s;
       transition: all .5s; }
-    .preview-label.min p.minor {
-      top: calc(var(--baseline) * -0.5);
+    .preview-label.min p.small {
+      margin-top: calc(var(--baseline) * -0.5);
       opacity: 1;
       -webkit-transition: all .5s;
       -o-transition: all .5s;
-      transition: all .5s; }
-  .preview-label strong {
-    padding: calc(var(--baseline) / 4); }
+      transition: all .5s;
+      pointer-events: auto; }
 
-.cover-preview {
-  text-align: right; }
+.cover-preview,
+.center {
+  text-align: center; }
 
 a.membership {
   padding: 0 1rem;
