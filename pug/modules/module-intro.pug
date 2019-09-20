@@ -1,12 +1,13 @@
 section#introduction.huge-module.anchor.clearfix
   h2.huge-module__title Introduction
   .feedback
-    p.huge-module__paragraph
-      | Hello! Welcome to the Styleguide, A tool to make
-      | creating and maintaining styleguides easy.
-    p.huge-module__paragraph
-      | Please feel free to collaborate with the project 
-      a(href='http://github.com/hugeinc/styleguide') on Github
-      | . You can read the documentation 
-      a(href='http://hugeinc.github.io/styleguide/') here
-              | .
+    :markdown-it(linkify langPrefix='highlight-')
+      # The Basics of our Vertical Grids
+
+      1). We always set the font-size in pixels on the <html> element and size everything else in REMs ( ie. `html{ font-size: 18px; }`) . Then we use Media queries to adjust the HTML font-size and everything else scales automatically.
+
+      2). The CSS `line-height` for the basic `<p>` tag is very important as it becomes the basic building brick height’ that everything else fits on. I’m setting a `line-height: 1.7778rem`. (or 28/16). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.
+
+      ```js
+      var codeBlocks;
+      ```

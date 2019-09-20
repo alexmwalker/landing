@@ -6,62 +6,23 @@
     <title>SitePoint - Styleguide</title>
     <meta name="description" content="SitePoint Styleguide"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="styles/css/styleguide.css"/>
-    <link rel="stlyesheet" type="text/css" href="https://hugeinc.github.io/styleguide/demo/styleguide/assets/styles/structure.css"/>
-    <!--script(src='https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js')-->
+    <link rel="stylesheet" type="text/css" href="../styles/css/styleguide.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/css/styleguideUI.css"/>
     <link rel="icon" type="image/png" href="styleguide/structure/images/favicon.png"/>
-    <link href="assets/styles/structure.css" rel="stylesheet"/>
-    <link href="modules/1_introduction/introduction.css" rel="stylesheet"/>
-    <link href="modules/2_colors/colors.css" rel="stylesheet"/>
-    <link href="modules/3_typography/typography.css" rel="stylesheet"/>
-    <link href="modules/4_buttons/buttons.css" rel="stylesheet"/>
-    <link href="modules/5_lists/lists.css" rel="stylesheet"/>
-    <link href="modules/6_forms/forms.css" rel="stylesheet"/>
-    <link href="modules/7_tables/tables.css" rel="stylesheet"/>
-    <link href="modules/8_templates/templates.css" rel="stylesheet"/>
   </head>
   <body class="vr borders labelling">
     <main class="container">
       <div class="huge-iframe-content">
+        <!-- Add your sections in here -->
         <section class="huge-module anchor clearfix" id="introduction">
           <h2 class="huge-module__title">Introduction</h2>
-          <div class="feedback">
-            <p class="huge-module__paragraph">
-              Hello! Welcome to the Styleguide, A tool to make
-              creating and maintaining styleguides easy.
-            </p>
-            <p class="huge-module__paragraph">Please feel free to collaborate with the project <a href="http://github.com/hugeinc/styleguide">on Github</a>. You can read the documentation <a href="http://hugeinc.github.io/styleguide/">
-                here.</a></p>
+          <div class="feedback"><h1>The Basics of our Vertical Grids</h1>
+<p>1). We always set the font-size in pixels on the &lt;html&gt; element and size everything else in REMs ( ie. <code>html{ font-size: 18px; }</code>) . Then we use Media queries to adjust the HTML font-size and everything else scales automatically.</p>
+<p>2). The CSS <code>line-height</code> for the basic <code>&lt;p&gt;</code> tag is very important as it becomes the basic building brick height’ that everything else fits on. I’m setting a <code>line-height: 1.7778rem</code>. (or 28/16). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
+<pre><code class="highlight-js">var codeBlocks;
+</code></pre>
+
           </div>
-        </section>
-        <section class="huge-module anchor clearfix" id="colors">
-          <h2 class="huge-module__title">Colors</h2>
-          <p class="huge-module__paragraph">
-            Huge have two main colors: Magenta and Black. Additional Blue might be
-            found on slides or t-shirts.
-          </p>
-          <ul class="huge-list--unstyled list-colors">
-            <li class="small-12 medium-2 column">
-              <div class="color bg-magenta">
-                <p>.bg-magenta</p>
-              </div>
-            </li>
-            <li class="small-12 medium-2 column">
-              <div class="color bg-black">
-                <p>.bg-black</p>
-              </div>
-            </li>
-            <li class="small-12 medium-2 column">
-              <div class="color bg-grey">
-                <p>.bg-grey</p>
-              </div>
-            </li>
-            <li class="small-12 medium-2 column end">
-              <div class="color bg-blue">
-                <p>.bg-blue</p>
-              </div>
-            </li>
-          </ul>
         </section>
         <section class="huge-module anchor clearfix" id="typography">
           <h2 class="huge-module__title">Typography</h2>
@@ -99,220 +60,66 @@
             <li><a class="snippet button black" href="#">Load more</a></li>
           </ul>
         </section>
-        <section class="huge-module anchor clearfix" id="lists">
-          <h2 class="huge-module__title">Lists</h2>
-          <h5 class="huge-module__title--small">Unordered</h5>
-          <ul class="snippet list_huge">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ul>
-          <h5 class="huge-module__title--small">Ordered</h5>
-          <ol class="snippet list_huge">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ol>
-        </section>
-        <section class="huge-module anchor clearfix" id="forms">
-          <h2 class="huge-module__title">Forms</h2>
-          <form class="snippet">
-            <fieldset>
-              <div class="row">
-                <div class="medium-6 column">
-                  <input class="g-wide--full" type="text" placeholder="Placeholder"/>
-                </div>
-                <div class="medium-6 column">
-                  <input class="g-wide--full" type="text" value="Disabled" disabled=""/>
-                </div>
-              </div>
-              <div class="row">
-                <div class="medium-6 column">
-                  <label>Email input</label>
-                  <input type="email"/>
-                </div>
-                <div class="medium-6 column">
-                  <label>Password input</label>
-                  <input type="password" value="password"/>
-                </div>
-              </div>
-              <div class="row">
-                <div class="medium-6 column">
-                  <label>Textarea</label>
-                  <textarea cols="30" rows="5">Textarea text</textarea>
-                </div>
-                <div class="medium-6 column">
-                  <label>Select field</label>
-                  <select>
-                    <option>Option 01</option>
-                    <option>Option 02</option>
-                  </select>
-                </div>
-                <div class="medium-6 column">
-                  <label>File input</label>
-                  <input type="file"/>
-                </div>
-              </div>
-              <div class="row">
-                <div class="medium-6 column">
-                  <label>
-                    <input type="radio" name="rad"/>Radio
-                                                input
-                  </label>
-                  <label>
-                    <input type="checkbox"/>Checkbox input
-                  </label>
-                </div>
-                <div class="medium-6 column">
-                  <label>Number input</label>
-                  <input type="number" value="5" min="0" max="10"/>
-                </div>
-              </div>
-              <div class="row">
-                <div class="medium-6 column">
-                  <label>Date input</label>
-                  <input type="date"/>
-                </div>
-                <div class="medium-6 column">
-                  <label>Time input</label>
-                  <input type="time"/>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </section>
-        <section class="huge-module anchor clearfix" id="tables">
-          <h2 class="huge-module__title">Tables</h2>
-          <tfooter></tfooter>
-          <table class="snippet">
-            <thead>
-              <tr>
-                <th>Offices</th>
-                <th>Job Openings in Technology</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Atlanta</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <td>Brooklyn</td>
-                <td>12</td>
-              </tr>
-              <tr> 
-                <td>London</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <td>Rio de Janeiro</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>San Francisco</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>Singapore</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>Washington DC</td>
-                <td>2</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr></tr>
-            </tbody>
-          </table>
-        </section>
-        <section class="huge-module anchor clearfix" id="templates">
-          <h2 class="huge-module__title">Templates</h2>
-          <ul class="huge-list--unstyled templates-group">
-            <li><img src="assets/images/template01.svg" width="200" alt="Home"/>
-              <div class="template-name">Home</div>
-            </li>
-          </ul>
-        </section>
-        <div class="huge-footer"><a class="h" href="http://hugeinc.com" target="_blank"></a>
-          <p>Make something you love.<sup>TM</sup></p>
-        </div>
       </div>
     </main>
     <div class="container">
-      <header class="grid-center">
-        <div class="col-3_md-12_sm-12">
-          <div class="device"></div><br/>
-          <ul class="minor clearleft">
-            <li>Grid : <strong><span class="mobile-only"> 12px </span><span class="tablet-only"> 14px </span><span class="laptop-only"> 16px </span><span class="wide-only">   18px </span></strong></li>
-          </ul>
+      <section class="grid-center">
+        <p>Here's a section - breadcrumb</p>
+        <h1 class="report">The Basics of our Vertical Grids</h1>
+        <p class="report">1). We always set the font-size in pixels on the `` element and size everything else in REMs ( html{ font-size: 18px; } ) .  Then we use Media queries to adjust the HTML font-size and everything else scales automatically.</p>
+        <p>2). The CSS `line-height` for the basic `</p>
+        <p>` tag is very important as it becomes the default ‘lego brick height’ that everything else fits on. I’m setting a ‘line-height: 1.7778rem’.   (or 28/16 ). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
+        <p class="minor report">This is an especially small paragraph style not designed for large, wide body text areas. It is best suited to be used in visually dense or complex UI elements like cards, bio panels, and testimonial layouts. It tends to work well with H5 headings.</p>
+        <h2 class="report">One Morning, When Gregor Samsa Woke Samsa Woke</h2>
+        <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+        <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+        <h3 class="report">
+          One Morning, When Gregor Samsa Woke
+             Samsa Woke
+        </h3>
+        <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+        <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+        <h4 class="report">One Morning, When Gregor Samsa Woke</h4>
+        <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+        <p>They had laughed. They had leaned on each other and laughed until the tears had come, while everything else--the cold, and where he'd go in it–was outside, for a while anyway.</p>
+        <ul class="report">
+          <li>One point</li>
+          <li>Two points</li>
+          <li>Three points</li>
+          <li>Four points</li>
+          <li>Five points</li>
+        </ul>
+        <h5 class="report">A small wax and sawdust log burned on the grate</h5>
+        <p class="minor">Drinking’s funny. When I look back on it, all of our important decisions have been figured out when we were drinking. Even when we talked about having to cut back on drinking, we’d be sitting at the kitchen table or out at the picnic table with a six-pack or whiskey.</p>
+        <h5>One Morning, When Gregor Samsa Woke</h5>
+        <div class="grid-center">
+          <div class="col-3_md-6_sm-12">
+            <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
+            <p class="small">It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+          </div>
+          <div class="col-3_md-6_sm-12">
+            <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
+            <p class="small">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought.</p>
+          </div>
+          <div class="col-3_md-6_sm-12">
+            <h5>One Morning, When Gregor Samsa Woke</h5>
+            <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
+          </div>
+          <div class="col-3_md-6_sm-12">
+            <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
+            <p class="small">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+          </div>
         </div>
-        <div class="col-9_sm-12">
-          <h1 class="major">SitePoint StyleGuide</h1>
-          <h2 class="no-margin-top-1 light">Grid &amp; Type:   <span class="mobile-only"> mobile</span><span class="tablet-only"> tablet</span><span class="laptop-only"> laptop</span><span class="wide-only">   wide-screens</span></h2>
-          <ul class="minor">
-            <li>The base HTML <code>font-size</code> on <strong><span class="mobile-only"> mobile</span><span class="tablet-only"> tablet</span><span class="laptop-only"> laptop</span><span class="wide-only">   wide-screens</span></strong>          is <strong><span class="mobile-only"> 13.5px</span><span class="tablet-only"> 15.75px</span><span class="laptop-only"> 18px</span><span class="wide-only">   20.25px</span></strong></li>
-            <li>The base HTML <code>line-height</code> (i.e. <code>--baseline</code> in my SCSS) in the 'basic-grid-typography' setup<strong> 32/18</strong>  or <strong>1.777778rem</strong> ( <strong><span class="mobile-only"> 32px </span><span class="tablet-only"> 28px </span><span class="laptop-only"> 32px</span><span class="wide-only"> 36px</span></strong> in <i>this</i> grid).</li>
-            <li>A single grid row is <strong>half of 1.777778rem</strong>   ––   or <strong>0.8888889rem</strong>.</li>
-            <li><code>Margin</code>s and <code>padding</code>s should ALWAYS be multiples of these numbers to maintain vertical rhythm.</li>
-          </ul>
-        </div>
-      </header>
+        <p class="minor">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+        <p class="minor">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+      </section>
+    </div>
+    <div>
+      <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/jquery-1.11.1.min.js"></script>
+      <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/prism.js"></script>
+      <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/tidy.js"></script>
+      <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/iframe.js"></script>
+      <script src="https://hugeinc.github.io/styleguide/demo/styleguide/modules/1_introduction/introduction.js"></script>
     </div>
   </body>
-  <div class="container">
-    <section class="grid-center">   
-      <p>Here's a section - breadcrumb</p>
-      <h1 class="report">The Basics of our Vertical Grids</h1>
-      <p class="report">1). We always set the font-size in pixels on the `<HTML>` element and size everything else in REMs ( html{ font-size: 18px; } ) .  Then we use Media queries to adjust the HTML font-size and everything else scales automatically.</p>
-      <p>2). The CSS `line-height` for the basic `<p>` tag is very important as it becomes the default ‘lego brick height’ that everything else fits on. I’m setting a ‘line-height: 1.7778rem’.   (or 28/16 ). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
-      <p class="minor report">This is an especially small paragraph style not designed for large, wide body text areas. It is best suited to be used in visually dense or complex UI elements like cards, bio panels, and testimonial layouts. It tends to work well with H5 headings.</p>
-      <h2 class="report">One Morning, When Gregor Samsa Woke Samsa Woke</h2>
-      <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-      <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-      <h3 class="report">One Morning, When Gregor Samsa Woke<br/>   Samsa Woke</h3>
-      <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-      <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-      <h4 class="report">One Morning, When Gregor Samsa Woke</h4>
-      <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-      <p>They had laughed. They had leaned on each other and laughed until the tears had come, while everything else--the cold, and where he'd go in it–was outside, for a while anyway.</p>
-      <ul class="report">
-        <li>One point</li>
-        <li>Two points</li>
-        <li>Three points</li>
-        <li>Four points</li>
-        <li>Five points</li>
-      </ul>
-      <h5 class="report">A small wax and sawdust log burned on the grate</h5>
-      <p class="minor">Drinking’s funny. When I look back on it, all of our important decisions have been figured out when we were drinking. Even when we talked about having to cut back on drinking, we’d be sitting at the kitchen table or out at the picnic table with a six-pack or whiskey.</p>
-      <h5>One Morning, When Gregor Samsa Woke</h5>
-      <div class="grid-center">
-        <div class="col-3_md-6_sm-12">
-          <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
-          <p class="small">It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-        </div>
-        <div class="col-3_md-6_sm-12">
-          <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
-          <p class="small">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought.</p>
-        </div>
-        <div class="col-3_md-6_sm-12">
-          <h5>One Morning, When Gregor Samsa Woke</h5>
-          <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
-        </div>
-        <div class="col-3_md-6_sm-12">
-          <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
-          <p class="small">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-        </div>
-      </div>
-      <p class="minor">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-      <p class="minor">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-    </section>
-  </div>
 </html>
-<div>
-  <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/jquery-1.11.1.min.js"></script>
-  <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/prism.js"></script>
-  <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/tidy.js"></script>
-  <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/iframe.js"></script>
-  <script src="https://hugeinc.github.io/styleguide/demo/styleguide/modules/1_introduction/introduction.js"></script>
-</div>

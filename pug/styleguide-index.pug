@@ -12,8 +12,9 @@ html(lang='en')
     meta(charset='utf-8')
     title  #{pagetitle}
     link(rel='icon', type='image/png', href='styleguide/structure/images/favicon.png')
-    link(href='../styles/css/huge-structure.css', rel='stylesheet')
-    link(href='../styles/css/huge-styleguide.css', rel='stylesheet')
+    link(href='../styles/css/huge-structure.css', rel='stylesheet', type='text/css')
+    link(href='../styles/css/huge-styleguide.css', rel='stylesheet', type='text/css')
+
   body
     main.container
       header.huge-header
@@ -38,10 +39,9 @@ html(lang='en')
         .huge-sidebar__content
           .huge-sidebar__toggle--in
             a(href='#') Menu
-            
+
           include sitepoint-logo.pug
           
-
           nav.huge-sidebar__nav.row.clearfix
             ul.huge-list--unstyled
               li.huge-sidebar__nav__item

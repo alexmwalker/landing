@@ -1,0 +1,96 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title SitePoint - Styleguide
+    meta(name='description', content='SitePoint Styleguide')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', type='text/css', href='../styles/css/styleguide.css')
+    link(rel='stylesheet', type='text/css', href='../styles/css/styleguideUI.css')
+    link(rel='icon', type='image/png', href='styleguide/structure/images/favicon.png')
+
+  //-
+    link(href='assets/styles/structure.css', rel='stylesheet')
+    link(href='modules/1_introduction/introduction.css', rel='stylesheet')
+    link(href='modules/2_colors/colors.css', rel='stylesheet')
+    link(href='modules/3_typography/typography.css', rel='stylesheet')
+    link(href='modules/4_buttons/buttons.css', rel='stylesheet')
+    link(href='modules/5_lists/lists.css', rel='stylesheet')
+    link(href='modules/6_forms/forms.css', rel='stylesheet')
+    link(href='modules/7_tables/tables.css', rel='stylesheet')
+    link(href='modules/8_templates/templates.css', rel='stylesheet')
+  body.vr.borders.labelling
+    main.container
+      .huge-iframe-content
+        // Add your sections in here 
+        include modules/module-intro.pug
+        include modules/module-typography.pug        
+        include modules/module-buttons.pug 
+    .container
+      section.grid-center
+        p Here's a section - breadcrumb
+        h1.report The Basics of our Vertical Grids
+        p.report
+          | 1). We always set the font-size in pixels on the `` element and size everything else in REMs ( html{ font-size: 18px; } ) .  Then we use Media queries to adjust the HTML font-size and everything else scales automatically.
+        p 2). The CSS `line-height` for the basic `
+        p
+          | ` tag is very important as it becomes the default ‘lego brick height’ that everything else fits on. I’m setting a ‘line-height: 1.7778rem’.   (or 28/16 ). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.
+        p.minor.report
+          | This is an especially small paragraph style not designed for large, wide body text areas. It is best suited to be used in visually dense or complex UI elements like cards, bio panels, and testimonial layouts. It tends to work well with H5 headings.
+        h2.report One Morning, When Gregor Samsa Woke Samsa Woke
+        p
+          | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+        p
+          | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+        h3.report
+          | One Morning, When Gregor Samsa Woke
+          |    Samsa Woke
+        p
+          | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+        p
+          | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+        h4.report One Morning, When Gregor Samsa Woke
+        p
+          | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+        p
+          | They had laughed. They had leaned on each other and laughed until the tears had come, while everything else--the cold, and where he'd go in it–was outside, for a while anyway.
+        ul.report
+          li One point
+          li Two points
+          li Three points
+          li Four points
+          li Five points
+        h5.report A small wax and sawdust log burned on the grate
+        p.minor
+          | Drinking’s funny. When I look back on it, all of our important decisions have been figured out when we were drinking. Even when we talked about having to cut back on drinking, we’d be sitting at the kitchen table or out at the picnic table with a six-pack or whiskey.
+        h5 One Morning, When Gregor Samsa Woke
+        .grid-center
+          .col-3_md-6_sm-12
+            p.small
+              | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+            p.small
+              | It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+          .col-3_md-6_sm-12
+            p.small
+              | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+            p.small
+              | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought.
+          .col-3_md-6_sm-12
+            h5 One Morning, When Gregor Samsa Woke
+            p.small
+              | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+          .col-3_md-6_sm-12
+            p.small
+              | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+            p.small
+              | His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+        p.minor
+          | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+        p.minor
+          | From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+    div
+      script(src='https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/jquery-1.11.1.min.js')
+      script(src='https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/prism.js')
+      script(src='https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/tidy.js')
+      script(src='https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/iframe.js')
+      script(src='https://hugeinc.github.io/styleguide/demo/styleguide/modules/1_introduction/introduction.js')
