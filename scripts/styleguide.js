@@ -1,61 +1,163 @@
-/* ==== Typography label generator === */
+/**
+ * Script used for the Styleguide structure only
+ */
 
+if (typeof window !== 'undefined') global = window;
 
-/*  Load an External CSS file via JS - so we only need to attach this one JS file */
+var FRONT_END_TEST = global.FRONT_END_TEST || false;
 
-addCSS('https://cdn.staticaly.com/gist/alexmwalker/72cbe26c13f6531d2d2da2b2c15df22a/raw/adaaa5c224cf3a78a2f364707318493cd89e6b15/device-size.css');
+var StyleguideIndex = {
+  init: function() {
+    if ($('.huge-iframe-content').length && !FRONT_END_TEST) return false;
 
-// Include CSS file
-function addCSS(filename){
- var head = document.getElementsByTagName('head')[0];
+    this.$body = $('body');
+    this.$breakpointsLinks = $('.huge-header__breakpoints__item__link');
+    this.$sidebarContent = $('.huge-sidebar__content');
+    this.$sidebarLinks = $('.huge-sidebar__nav__item__link');
+    this.$sidebarToggle = $('[class*="huge-sidebar__toggle"]');
+    this.$iframe = $('.huge-iframe-wrapper iframe');
+    this.$iframeContent = this.isChromeAndFileProtocol() ? null : $('.huge-iframe-wrapper iframe').contents();
 
- var style = document.createElement('link');
- style.href = filename;
- style.type = 'text/css';
- style.rel = 'stylesheet';
- head.append(style);
-}
+    this.sidebarOpenedClass = 'opened';
+    this.sidebarActiveLinkClass = 'active';
+    this.sidebarLinkWasClickedClass = 'side-menu-clicked';
 
-// round number
-function precisionRound(number, precision) {
-  var factor = Math.pow(10, precision);
-  return Math.round(number * factor) / factor;
-}
+    if (FRONT_END_TEST) return false;
 
+    this.sidebarSetup();
+    this.checkHashOnLoad();
+    this.events();
+  },
 
+  isChromeAndFileProtocol: function() {
+    if (FRONT_END_TEST) return false;
+    return (window.location.protocol === 'file:' && navigator.userAgent.toLowerCase().indexOf('chrome') > -1);
+  },
 
+  /**
+   * All events of the structure
+   * should be registered here
+   */
+  events: function() {
+    var _this = this;
 
-// BUILD the report UI units for each type sample with the class 'report'. Run once on load.
-function reportBuild() {
+    this.$breakpointsLinks.click(function() {
+      _this.resizeContent($(this));
+    });
 
-  // Get a NodeList of all .report elements
-  const myReports = document.querySelectorAll(".report");
-  
-  myReports.forEach(function(myReport, index) {
-    myReport.innerHTML += '<span><input type="checkbox" checked /><ul><li class="type">Type:</li><li class="weight">Weight:</li><li class="size">Size:</li><li class="lineheight">Line-height:</li></span>';
-    console.log("Reporting: "+myReports[2]);
-  });
+    this.$sidebarLinks.click(function(e) {
+      e.preventDefault();
+      _this.setActiveSidebarLinkOnClick($(this));
+      _this.navigateToAnchor($(this));
+    });
 
+    this.$sidebarToggle.click(function(e) {
+      e.preventDefault();
+      _this.$body.toggleClass(_this.sidebarOpenedClass);
+    });
 
+    $(window).resize(function() {
+      _this.sidebarResizeHandler();
+    });
+  },
 
-// Change the text of multiple elements with a loop
-demoClasses.forEach(element => {
-  element.textContent = 'All demo classes updated.';
-});
+  /**
+   * Resize iframe based on
+   * the breakpoint choice
+   */
+  resizeContent: function($elem) {
+    var sizeLabel = $elem.data('size-label'),
+      size = sizeLabel === 'full' ? $elem.data('size') : parseInt($elem.data('size').replace('px', ''), 10);
 
-// Access the first element in the NodeList
-demoClasses[0];
+    this.$iframe.width(size);
+  },
 
-}
+  /**
+   * Check URL hash and navigate
+   * to the respective module
+   */
+  checkHashOnLoad: function() {
 
+    // Shutdown this feature in Chrome.
+    // Chrome have a know issue with file protocol and iframe comunication.
+    // It is not supported so we should not raise errors.
+    if(this.isChromeAndFileProtocol()) return false;
+    if (window.location.hash === '#' || window.location.hash === '') return false;
 
+    var top = this.$iframeContent.find('section' + window.location.hash.replace('!', '')).offset().top,
+      $iframeHtmlBody = this.$iframeContent.find('html, body');
 
+    if (this.$iframeContent.find('section' + window.location.hash.replace('!', '')).index() === 0) {
+      $(window).load(function() {
+        $iframeHtmlBody.animate({scrollTop: 0}, 500);
+      });
+    } else {
+      $iframeHtmlBody.animate({scrollTop: top + 20}, 0);
+    }
+  },
 
-reportBuild();
-//reportType();
+  /**
+   * Navigate to module on
+   * sidebar links click
+   */
+  navigateToAnchor: function($elem) {
 
-/*
-window.onresize = function() {
-  reportType();
+    // Shutdown this feature in Chrome.
+    // Chrome have a know issue with file protocol and iframe comunication.
+    // It is not supported so we should not raise errors.
+    if(this.isChromeAndFileProtocol()) return false;
+
+    var top = this.$iframeContent.find('section' + $elem.attr('href')).offset().top + 50;
+
+    // Use ! to prevent de default browser behavior of anchor navigation
+    window.location.hash = '!' + $elem.attr('href').replace('#', '');
+
+    this.$iframeContent.find('html, body').animate({scrollTop: top}, 800);
+  },
+  sidebarOpen: function() {
+    this.$body.addClass('opened');
+  },
+  sidebarClose: function() {
+    this.$body.removeClass('opened');
+  },
+
+  /**
+   * Leave or close the sidebar
+   * if the window is small
+   */
+  sidebarResizeHandler: function() {
+    if ($(window).width() <= 1220) {
+      this.sidebarClose();
+    } else {
+      this.sidebarOpen();
+    }
+  },
+  sidebarSetup: function() {
+
+    // Shutdown this feature in Chrome.
+    // Chrome have a know issue with file protocol and iframe comunication.
+    // It is not supported so we should not raise errors.
+    if(this.isChromeAndFileProtocol()) {
+      this.$sidebarContent.remove();
+      this.$sidebarToggle.remove();
+      return false;
+    }
+
+    if ($(window).width() >= 1220) {
+      this.sidebarOpen();
+    }
+  },
+  setActiveSidebarLinkOnClick: function($elem) {
+    this.$body.addClass(this.sidebarLinkWasClickedClass);
+    this.$sidebarLinks.removeClass(this.sidebarActiveLinkClass);
+    $elem.addClass(this.sidebarActiveLinkClass);
+  }
 };
-*/
+
+if(!FRONT_END_TEST) {
+  $(window).load(function() {
+    StyleguideIndex.init();
+  });
+} else {
+  FRONT_END_TEST.StyleguideIndex = StyleguideIndex;
+}

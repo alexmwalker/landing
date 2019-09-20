@@ -1,0 +1,66 @@
+- var year = (new Date().getFullYear()-2000);
+- var month = (new Date().getMonth() +1);
+- var cache = Math.floor(Math.random() * Math.floor(100));
+
+- var pagetitle = "Welcome to the SitePoint StyleGuide";
+
+
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title  #{pagetitle}
+    link(rel='icon', type='image/png', href='styleguide/structure/images/favicon.png')
+    link(href='../styles/css/huge-structure.css', rel='stylesheet')
+    link(href='../styles/css/huge-styleguide.css', rel='stylesheet')
+  body
+    main.container
+      header.huge-header
+        .huge-header__welcome.left  SitePoint Styleguide - v.1  Last update: #{month}/#{year}
+        nav.huge-header__breakpoints.right
+          ul.huge-list--unstyled.huge-list--float
+            li.huge-header__breakpoints__item
+              a#small.huge-header__breakpoints__item__link(data-size='420px', data-size-label='small')
+                span Small
+            li.huge-header__breakpoints__item
+              a#medium.huge-header__breakpoints__item__link(data-size='720px', data-size-label='medium')
+                span Medium
+            li.huge-header__breakpoints__item
+              a#large.huge-header__breakpoints__item__link(data-size='1280px', data-size-label='large')
+                span Large
+            li.huge-header__breakpoints__item
+              a#full.huge-header__breakpoints__item__link(data-size='100%', data-size-label='full')
+                span Full
+      .huge-sidebar
+        .huge-sidebar__toggle--out
+          a(href='#') Menu
+        .huge-sidebar__content
+          .huge-sidebar__toggle--in
+            a(href='#') Menu
+            
+          include sitepoint-logo.pug
+          
+
+          nav.huge-sidebar__nav.row.clearfix
+            ul.huge-list--unstyled
+              li.huge-sidebar__nav__item
+                a.huge-sidebar__nav__item__link.huge-anchor(href='#introduction') Introduction
+              //li.huge-sidebar__nav__item
+                a.huge-sidebar__nav__item__link.huge-anchor(href='#colors') Colors
+              li.huge-sidebar__nav__item
+                a.huge-sidebar__nav__item__link.huge-anchor(href='#typography') Typography
+              li.huge-sidebar__nav__item
+                a.huge-sidebar__nav__item__link.huge-anchor(href='#buttons') Buttons
+              //li.huge-sidebar__nav__item
+                a.huge-sidebar__nav__item__link.huge-anchor(href='#lists') Lists
+              //li.huge-sidebar__nav__item
+                a.huge-sidebar__nav__item__link.huge-anchor(href='#forms') Forms
+              //li.huge-sidebar__nav__item
+                a.huge-sidebar__nav__item__link.huge-anchor(href='#tables') Tables
+              //li.huge-sidebar__nav__item
+                a.huge-sidebar__nav__item__link.huge-anchor(href='#templates') Templates
+      .huge-iframe-wrapper
+        iframe(src='styleguide.html', frameborder='0', height='100%', width='100%')
+    script(src='https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/jquery-1.11.1.min.js')
+    script(src='../scripts/styleguide.js')
