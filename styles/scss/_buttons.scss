@@ -1,0 +1,67 @@
+.paypal_button,
+.unlock_button,
+.cta {
+  background: #009CDE;
+  background-image: linear-gradient(to bottom, #009CDE, #0091CF);
+  border-radius: 4px;
+  color: #fff;
+  padding: 0 1rem;
+  font-size: calc(1rem);
+  font-weight: 500;
+  line-height: calc(var(--baseline) * 1.5);
+  //height: calc(var(--baseline) * 1.5);
+  box-shadow: 1px 1px 4px 0px rgba(41, 41, 41, 0.4);
+  border: solid #008CC7 1px;
+  text-decoration: none;
+  //display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    background: #0091CF;
+    background-image: linear-gradient(to bottom, #0091CF, #009CDE);
+    text-decoration: none;
+    box-shadow: 1px 1px 2px 0px rgba(41, 41, 41, 0.4);
+  }
+
+  img {
+    height: calc(var(--baseline) / 1.25);
+    margin-right: 0.5rem;
+    margin: 0 0.5rem calc(var(--baseline) / -7) 0;
+  }
+
+  &.large {
+    line-height: calc(var(--baseline) * 2.0);
+    font-size: calc(var(--typescale) * 1rem);
+  }
+
+  &.small {
+    line-height: calc(var(--baseline) * 1.0);
+  }
+}
+
+.unlock_button {
+  background: #FA0B7E;
+  background-image: linear-gradient(to bottom, #FA0B7E, rgb(218, 5, 108));
+  border: solid rgb(218, 5, 108) 1px;
+
+  &:hover {
+    background: rgb(218, 5, 108);
+    background-image: linear-gradient(to bottom, rgb(218, 5, 108), #FA0B7E);
+
+  }
+
+}
+
+.cta {
+  border: 1px solid #3ec9cb;
+  background: #3ec9cb;
+  color: #fff;
+
+  &:hover {
+    background-color: #24b3b5;
+    border-color: #24b3b5;
+    color: #fff;
+
+  }
+
+}

@@ -1,12 +1,15 @@
 :root {
-  --typescale: 1.15; /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
-  --baselineratio: calc(16/9); /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
-  
-  --basegrid: 32px; /* the body grid size on phone */ 
-  --basegrid-tablet: 28px; 
-  --basegrid-laptop: 32px; 
-  --basegrid-wide: 36px; 
-  
+  --typescale: 1.15;
+  /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
+  --baselineratio: calc(16/9);
+  /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
+
+  --basegrid: 32px;
+  /* the body grid size on phone */
+  --basegrid-tablet: 28px;
+  --basegrid-laptop: 32px;
+  --basegrid-wide: 36px;
+
   --baseline: calc(var(--baselineratio) * 1rem);
   --basefont: calc(var(--basegrid) / var(--baselineratio));
   --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
@@ -16,17 +19,18 @@
   --basebackground: #fff; // flipped in dark mode
   --basefontcolor: #222;
 
-  --basebackground-dark:  #111518;
+  --basebackground-dark: #111518;
   --basefontcolor-dark: #ddd;
 
   font-family: Roboto, sans-serif;
   font-weight: 300;
-  
+
 }
- 
 
 
-.container{ /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */ 
+
+.container {
+  /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
   //width: 62rem;
   max-width: 62rem;
   margin: 0 auto;
@@ -40,28 +44,29 @@ sm: 48em,
 xs: 36em
 */
 
-:root  { /* DEFAULT - mobile */
+:root {
+  /* DEFAULT - mobile */
   font-size: var(--basefont);
   line-height: var(--baseline);
 }
 
 /* Medium devices (tablets, 48em and up)*/
-@media (min-width: 48em) { 
-  :root  {
+@media (min-width: 48em) {
+  :root {
     font-size: var(--basefont-tablet);
     --typescale: 1.25; // we ramp up the typescale on non-phone screens. This means h1s are larger than Ps in RELATIVE terms on non-phones
   }
 }
 
 /* Large devices (desktops, 62em and up) */
-@media (min-width: 64em) {  
-  :root  {
+@media (min-width: 64em) {
+  :root {
     font-size: var(--basefont-laptop);
   }
 }
 
 /* Extra large devices (large desktops, 75em and up)*/
-@media (min-width: 80em) { 
+@media (min-width: 80em) {
   :root {
     font-size: var(--basefont-wide);
   }
@@ -69,7 +74,8 @@ xs: 36em
 
 /* The New Typography */
 
-h1, .is-size1 {
+h1,
+.is-size1 {
   font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 2);
   /* 4 grid lines */
@@ -78,31 +84,36 @@ h1, .is-size1 {
   font-weight: 400;
 }
 
-h2, .is-size2 {
+h2,
+.is-size2 {
   font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1.5);
   margin-top: 0rem;
-  margin-bottom: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / 1);
   font-weight: 400;
 }
 
-h3, .is-size-3, .h3 {
+h3,
+.is-size-3,
+.h3 {
   font-size: calc(var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
   margin-top: 0;
-  margin-bottom: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / 1);
   font-weight: 400;
 }
 
-h4, .is-size-h4 {
+h4,
+.is-size-h4 {
   font-size: calc(var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
   margin-top: calc(var(--baseline) * 1);
-  margin-bottom: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) /2);
   font-weight: 400;
 }
 
-h5, .is-size-5 {
+h5,
+.is-size-5 {
   font-size: 1rem;
   line-height: calc(var(--baseline) / 2);
   margin-top: calc(var(--baseline) / 2);
@@ -111,7 +122,14 @@ h5, .is-size-5 {
   //text-transform: capitalize;
 }
 
-p, ul, ol, pre, table, blockquote, .is-size-base, figcaption {
+p,
+ul,
+ol,
+pre,
+table,
+blockquote,
+.is-size-base,
+figcaption {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 0rem;
@@ -134,31 +152,41 @@ p, ul, ol, pre, table, blockquote, .is-size-base, figcaption {
 
 .small {
   font-size: calc(1rem / var(--typescale) / var(--typescale));
-  line-height:calc(var(--baseline) / 2);
+  line-height: calc(var(--baseline) / 2);
   margin-top: 0;
   margin-bottom: calc(var(--baseline) / 2);
 }
 
-ul ul, ol ol, ul ol, ol ul {
+ul ul,
+ol ol,
+ul ol,
+ol ul {
   margin-top: 0rem;
   margin-bottom: 0rem;
 }
 
 /* Let's make sure all's aligned */
-hr, .hr {
+hr,
+.hr {
   border-top: 1px solid #8c8b8b;
   margin: 0;
   height: 0;
   background: none;
 }
 
-b, i, strong, em, small, code {
+b,
+i,
+strong,
+em,
+small,
+code {
   //line-height: 0;
 }
 
 
 
-sub, sup { 
+sub,
+sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -172,33 +200,38 @@ sub {
   bottom: -0.25em;
 }
 
-a:link{
-	text-decoration: none;
+a:link {
+  text-decoration: none;
   color: #20272f;
 }
-a:visited{
-	text-decoration: none;
-	color: #20272f;
+
+a:visited {
+  text-decoration: none;
+  color: #20272f;
 }
-::placeholder{
+
+::placeholder {
   color: #bbb;
 }
 
-.hznav{ /* add to parent to turn list into horizontal text nav*/
-	display: flex;
-	margin: 0; padding: 0;
-	list-style: none;
+.hznav {
+  /* add to parent to turn list into horizontal text nav*/
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   justify-content: space-between;
   align-items: stretch;
 
 }
 
-form{
+form {
   padding: 0;
   margin: 0;
 }
 
-.fa, .fas {
+.fa,
+.fas {
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   margin-right: 8px;
@@ -207,15 +240,16 @@ form{
 
 
 /* CSS RESETS */
-body, figure{
- margin: 0;
- padding: 0;
+body,
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 /*  vertical grid lines */
 
 .vr {
-    position: relative;
+  position: relative;
 }
 
 .vr:after {
@@ -231,11 +265,11 @@ body, figure{
   bottom: 0;
   left: 0;
   background-size: var(--baseline) var(--baseline);
-  background-image: repeating-linear-gradient(to bottom,rgba(173, 0, 0, 0.04) 0%,rgba(173, 0, 0, 0.04) 50%,rgba(0, 0, 0, 0) 50.01%,rgba(0, 0, 0, 0) 100%);
-  
+  background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
+
 }
 
-.device{
+.device {
   opacity: .5;
 }
 

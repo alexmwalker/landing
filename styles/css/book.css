@@ -16,7 +16,7 @@
   --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
   --basebackground: #fff;
   --basefontcolor: #222;
-  --basebackground-dark:  #111518;
+  --basebackground-dark: #111518;
   --basefontcolor-dark: #ddd;
   font-family: Roboto, sans-serif;
   font-weight: 300; }
@@ -54,7 +54,8 @@ xs: 36em
     font-size: var(--basefont-wide); } }
 
 /* The New Typography */
-h1, .is-size1 {
+h1,
+.is-size1 {
   font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 2);
   /* 4 grid lines */
@@ -62,35 +63,47 @@ h1, .is-size1 {
   margin-bottom: var(--baseline);
   font-weight: 400; }
 
-h2, .is-size2 {
+h2,
+.is-size2 {
   font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1.5);
   margin-top: 0rem;
-  margin-bottom: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / 1);
   font-weight: 400; }
 
-h3, .is-size-3, .h3 {
+h3,
+.is-size-3,
+.h3 {
   font-size: calc(var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
   margin-top: 0;
-  margin-bottom: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / 1);
   font-weight: 400; }
 
-h4, .is-size-h4 {
+h4,
+.is-size-h4 {
   font-size: calc(var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
   margin-top: calc(var(--baseline) * 1);
-  margin-bottom: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) /2);
   font-weight: 400; }
 
-h5, .is-size-5 {
+h5,
+.is-size-5 {
   font-size: 1rem;
   line-height: calc(var(--baseline) / 2);
   margin-top: calc(var(--baseline) / 2);
   margin-bottom: calc(var(--baseline) / 2);
   font-weight: 400; }
 
-p, ul, ol, pre, table, blockquote, .is-size-base, figcaption {
+p,
+ul,
+ol,
+pre,
+table,
+blockquote,
+.is-size-base,
+figcaption {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 0rem;
@@ -114,18 +127,23 @@ p, ul, ol, pre, table, blockquote, .is-size-base, figcaption {
   margin-top: 0;
   margin-bottom: calc(var(--baseline) / 2); }
 
-ul ul, ol ol, ul ol, ol ul {
+ul ul,
+ol ol,
+ul ol,
+ol ul {
   margin-top: 0rem;
   margin-bottom: 0rem; }
 
 /* Let's make sure all's aligned */
-hr, .hr {
+hr,
+.hr {
   border-top: 1px solid #8c8b8b;
   margin: 0;
   height: 0;
   background: none; }
 
-sub, sup {
+sub,
+sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
@@ -175,13 +193,15 @@ form {
   padding: 0;
   margin: 0; }
 
-.fa, .fas {
+.fa,
+.fas {
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   margin-right: 8px; }
 
 /* CSS RESETS */
-body, figure {
+body,
+figure {
   margin: 0;
   padding: 0; }
 
@@ -3119,10 +3139,12 @@ that need device level targeting. This is where we do it. */
 
 /* ========   Switching up the heading line-height sizing for books on the phone   ============= */
 @media (max-width: 48em) {
-  h1, .is-size1 {
+  h1,
+  .is-size1 {
     line-height: calc(var(--baseline) * 1.5);
     /* 4 grid lines */ }
-  h2, .is-size2 {
+  h2,
+  .is-size2 {
     line-height: calc(var(--baseline) * 1.0); }
   /* ========   REFORMATTING the Chapter Face page for Mobile   ============= */
   #reeedr .ch-head {

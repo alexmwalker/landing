@@ -8,16 +8,11 @@ body {
 main.container {
   padding: calc(var(--baseline) * 1.5) 0; }
 
-* * h2.huge-module__title {
+.huge-module__title {
   background: transparent;
-  color: #999;
-  text-align: right;
+  color: #cc;
   border-bottom: 1px solid #999;
-  padding-top: calc(var(--baseline) * .5);
-  margin-bottom: calc(var(--baseline) - 1px); }
-
-.huge-module {
-  padding-bottom: calc(var(--baseline) * .5); }
+  }
 
 /*# sourceMappingURL=styleguideUI.css.map */
 

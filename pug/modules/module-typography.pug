@@ -1,25 +1,27 @@
 section#typography.huge-module.anchor.clearfix
   h2.huge-module__title Typography
-  .titles
-    h4.huge-module__title--light HUGE Avant Garde Bold - 100px 
-    h1.font-huge Hello.
-    h4.huge-module__title--light Galaxie Copernicus Book Italic - 80px 
-    h2.font-galaxie.italic Thursday
-    h4.huge-module__title--light HUGE Avant Garde Bold - 38px 
-    h3.font-huge.small-3
-      | Born
-      | Hackers: Digital Kids Revisited.
-  br
-  h5.huge-module__title--small Paragraphs
-  p.p1
+  :markdown-it(linkify langPrefix='language-')
+    All Headings (H1, H2, H3, etc) are set as scaled from that base font-size. 
+    ```css
+      --typescale: 1.15;
+       /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
+    ```
+
+  h1.major H1.major titles are like this
+  h1 Standard H1 titles are like this
+  h2 H2 titles
+  h3 H3 titles
+  h4 H4 titles
+  h5 H5 titles
+  p
     | SEO is a marketing tactic that costs five percent of overall budget but brings in more than 20
     | percent of revenue for many Fortune 500 companies, and yet very few of them prioritize it. Instead,
     | while slowly changing, too many CMOS still favor paid search, which costs 20 percent and brings in… 20
     | percent. In search, businesses need to shift priorities. Now.
-  p.p2
+  p.minor
     | Link volume is one of the most powerful signals search engines use to rank websites. There’s a
     | way to use links to generate better search results, but too many marketers rely on traditional (or even
     | black hat) tactics that just don’t work anymore.
-  p.p3.small-3
+  p.small
     | Huge to be recognized at the 2014 “Made in NY” Awards for the company’s contribution
     | to New York’s creative economy.

@@ -17,109 +17,107 @@
         <section class="huge-module anchor clearfix" id="introduction">
           <h2 class="huge-module__title">Introduction</h2>
           <div class="feedback"><h1>The Basics of our Vertical Grids</h1>
-<p>1). We always set the font-size in pixels on the &lt;html&gt; element and size everything else in REMs ( ie. <code>html{ font-size: 18px; }</code>) . Then we use Media queries to adjust the HTML font-size and everything else scales automatically.</p>
-<p>2). The CSS <code>line-height</code> for the basic <code>&lt;p&gt;</code> tag is very important as it becomes the basic building brick height’ that everything else fits on. I’m setting a <code>line-height: 1.7778rem</code>. (or 28/16). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
-<pre><code class="highlight-js">var codeBlocks;
+<p>1). We always set the font-size in pixels on the <code>&lt;html&gt;</code> element and size everything else in REMs ( ie. <code>html{ font-size: 18px; }</code>) . Then we use Media queries to adjust the HTML font-size and everything else scales automatically.</p>
+<p>2). The base font-sizes at 4 different screen widths are currently set at:</p>
+<pre><code class="language-css">  --basegrid: 32px; /* the body grid size on phone */ 
+  --basegrid-tablet: 28px; 
+  --basegrid-laptop: 32px; 
+  --basegrid-wide: 36px; 
+</code></pre>
+<p>3). The CSS <code>line-height</code> for the basic <code>&lt;p&gt;</code> tag is very important as it becomes the basic building brick height’ that everything else fits on. I’m setting a <code>line-height: 1.7778rem</code>. (or 28/16). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
+<pre><code class="language-css">  --baselineratio: calc(16/9); 
+  /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/      
 </code></pre>
 
           </div>
         </section>
         <section class="huge-module anchor clearfix" id="typography">
-          <h2 class="huge-module__title">Typography</h2>
-          <div class="titles">
-            <h4 class="huge-module__title--light">HUGE Avant Garde Bold - 100px </h4>
-            <h1 class="font-huge">Hello.</h1>
-            <h4 class="huge-module__title--light">Galaxie Copernicus Book Italic - 80px </h4>
-            <h2 class="font-galaxie italic">Thursday</h2>
-            <h4 class="huge-module__title--light">HUGE Avant Garde Bold - 38px </h4>
-            <h3 class="font-huge small-3">
-              Born
-              Hackers: Digital Kids Revisited.
-            </h3>
-          </div><br/>
-          <h5 class="huge-module__title--small">Paragraphs</h5>
-          <p class="p1">
+          <h2 class="huge-module__title">Typography</h2><p>All Headings (H1, H2, H3, etc) are set as scaled from that base font-size.</p>
+<pre><code class="language-css">  --typescale: 1.15;
+   /* This is the heading scaling factor relative to the &lt;p&gt;. ( h4 &gt; h3 &gt; h2 &gt; h1). It's a 'type size ramp'.*/
+</code></pre>
+
+          <h1 class="major">H1.major titles are like this</h1>
+          <h1>Standard H1 titles are like this</h1>
+          <h2>H2 titles</h2>
+          <h3>H3 titles</h3>
+          <h4>H4 titles</h4>
+          <h5>H5 titles</h5>
+          <p>
             SEO is a marketing tactic that costs five percent of overall budget but brings in more than 20
             percent of revenue for many Fortune 500 companies, and yet very few of them prioritize it. Instead,
             while slowly changing, too many CMOS still favor paid search, which costs 20 percent and brings in… 20
             percent. In search, businesses need to shift priorities. Now.
           </p>
-          <p class="p2">
+          <p class="minor">
             Link volume is one of the most powerful signals search engines use to rank websites. There’s a
             way to use links to generate better search results, but too many marketers rely on traditional (or even
             black hat) tactics that just don’t work anymore.
           </p>
-          <p class="p3 small-3">
+          <p class="small">
             Huge to be recognized at the 2014 “Made in NY” Awards for the company’s contribution
             to New York’s creative economy.
           </p>
         </section>
         <section class="huge-module anchor clearfix" id="buttons">
           <h2 class="huge-module__title">Buttons</h2>
-          <ul class="huge-list--unstyled">
-            <li><a class="snippet button black" href="#">Load more</a></li>
-          </ul>
+          <div class="grid-center">
+            <div class="col-4">
+              <button class="unlock_button large"> Unlock the library</button>
+            </div>
+            <div class="col-4">
+              <button class="unlock_button"> Unlock the library</button>
+            </div>
+            <div class="col-4">
+              <button class="unlock_button small"> Unlock the library</button>
+            </div>
+          </div>
+          <div class="grid-center">
+            <div class="col-4">
+              <button class="paypal_button large"><img src="../images/paypal-white.svg"/>Checkout</button>
+            </div>
+            <div class="col-4">
+              <button class="paypal_button"><img src="../images/paypal-white.svg"/>Checkout</button>
+            </div>
+            <div class="col-4">
+              <button class="paypal_button small"><img src="../images/paypal-white.svg"/>Checkout</button>
+            </div>
+          </div>
+          <div class="grid-center">
+            <div class="col-4">
+              <button class="cta large">Visit The Library</button>
+            </div>
+            <div class="col-4">
+              <button class="cta">Visit The Library</button>
+            </div>
+            <div class="col-4">
+              <button class="cta small">Visit The Library</button>
+            </div>
+          </div>
+        </section>
+        <section class="huge-module anchor clearfix" id="codesamples">
+          <h2 class="huge-module__title">Code Samples</h2>
+          <div class="feedback"><p>Code samples are rendered using <a href="http://prismjs.com">Prism</a> syntax highlightling.</p>
+<pre><code class="language-js">  if (typeof window !== 'undefined') global = window;
+
+  var FRONT_END_TEST = global.FRONT_END_TEST || false;
+</code></pre>
+<pre><code class="language-html">  &lt;div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;one&lt;/li&gt;
+      &lt;li&gt;two&lt;/li&gt;
+      &lt;li&gt;three&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;</code></pre>
+
+          </div>
         </section>
       </div>
-    </main>
-    <div class="container">
-      <section class="grid-center">
-        <p>Here's a section - breadcrumb</p>
-        <h1 class="report">The Basics of our Vertical Grids</h1>
-        <p class="report">1). We always set the font-size in pixels on the `` element and size everything else in REMs ( html{ font-size: 18px; } ) .  Then we use Media queries to adjust the HTML font-size and everything else scales automatically.</p>
-        <p>2). The CSS `line-height` for the basic `</p>
-        <p>` tag is very important as it becomes the default ‘lego brick height’ that everything else fits on. I’m setting a ‘line-height: 1.7778rem’.   (or 28/16 ). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
-        <p class="minor report">This is an especially small paragraph style not designed for large, wide body text areas. It is best suited to be used in visually dense or complex UI elements like cards, bio panels, and testimonial layouts. It tends to work well with H5 headings.</p>
-        <h2 class="report">One Morning, When Gregor Samsa Woke Samsa Woke</h2>
-        <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-        <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-        <h3 class="report">
-          One Morning, When Gregor Samsa Woke
-             Samsa Woke
-        </h3>
-        <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-        <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-        <h4 class="report">One Morning, When Gregor Samsa Woke</h4>
-        <p>From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-        <p>They had laughed. They had leaned on each other and laughed until the tears had come, while everything else--the cold, and where he'd go in it–was outside, for a while anyway.</p>
-        <ul class="report">
-          <li>One point</li>
-          <li>Two points</li>
-          <li>Three points</li>
-          <li>Four points</li>
-          <li>Five points</li>
-        </ul>
-        <h5 class="report">A small wax and sawdust log burned on the grate</h5>
-        <p class="minor">Drinking’s funny. When I look back on it, all of our important decisions have been figured out when we were drinking. Even when we talked about having to cut back on drinking, we’d be sitting at the kitchen table or out at the picnic table with a six-pack or whiskey.</p>
-        <h5>One Morning, When Gregor Samsa Woke</h5>
-        <div class="grid-center">
-          <div class="col-3_md-6_sm-12">
-            <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
-            <p class="small">It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-          </div>
-          <div class="col-3_md-6_sm-12">
-            <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
-            <p class="small">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought.</p>
-          </div>
-          <div class="col-3_md-6_sm-12">
-            <h5>One Morning, When Gregor Samsa Woke</h5>
-            <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
-          </div>
-          <div class="col-3_md-6_sm-12">
-            <p class="small">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches</p>
-            <p class="small">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. “What’s happened to me?” he thought. It wasn’t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-          </div>
-        </div>
-        <p class="minor">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-        <p class="minor">From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-      </section>
-    </div>
-    <div>
       <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/jquery-1.11.1.min.js"></script>
-      <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/prism.js"></script>
+      <script src="../scripts/prism.js"></script>
       <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/vendor/tidy.js"></script>
       <script src="https://hugeinc.github.io/styleguide/demo/styleguide/structure/scripts/iframe.js"></script>
       <script src="https://hugeinc.github.io/styleguide/demo/styleguide/modules/1_introduction/introduction.js"></script>
-    </div>
+    </main>
   </body>
 </html>

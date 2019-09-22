@@ -1,0 +1,21 @@
+section#codesamples.huge-module.anchor.clearfix
+  h2.huge-module__title Code Samples
+  .feedback
+    :markdown-it(linkify langPrefix='language-')
+
+      Code samples are rendered using [Prism](http://prismjs.com) syntax highlightling.
+      
+      ```js
+        if (typeof window !== 'undefined') global = window;
+
+        var FRONT_END_TEST = global.FRONT_END_TEST || false;
+      ```
+
+      ```html
+        <div>
+          <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+          </ul>
+        </div>

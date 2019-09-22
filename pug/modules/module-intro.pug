@@ -1,13 +1,20 @@
 section#introduction.huge-module.anchor.clearfix
   h2.huge-module__title Introduction
   .feedback
-    :markdown-it(linkify langPrefix='highlight-')
+    :markdown-it(linkify langPrefix='language-')
       # The Basics of our Vertical Grids
 
-      1). We always set the font-size in pixels on the <html> element and size everything else in REMs ( ie. `html{ font-size: 18px; }`) . Then we use Media queries to adjust the HTML font-size and everything else scales automatically.
+      1). We always set the font-size in pixels on the `<html>` element and size everything else in REMs ( ie. `html{ font-size: 18px; }`) . Then we use Media queries to adjust the HTML font-size and everything else scales automatically.
 
-      2). The CSS `line-height` for the basic `<p>` tag is very important as it becomes the basic building brick height’ that everything else fits on. I’m setting a `line-height: 1.7778rem`. (or 28/16). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.
-
-      ```js
-      var codeBlocks;
+      2). The base font-sizes at 4 different screen widths are currently set at:
+      ```css
+        --basegrid: 32px; /* the body grid size on phone */ 
+        --basegrid-tablet: 28px; 
+        --basegrid-laptop: 32px; 
+        --basegrid-wide: 36px; 
+      ```
+      3). The CSS `line-height` for the basic `<p>` tag is very important as it becomes the basic building brick height’ that everything else fits on. I’m setting a `line-height: 1.7778rem`. (or 28/16). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.
+      ```css
+        --baselineratio: calc(16/9); 
+        /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/      
       ```
