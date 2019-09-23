@@ -1,0 +1,19 @@
+.panel {
+  padding: calc(var(--baseline) * 2) 0 calc(var(--baseline) * 1.5);
+  outline: 1px #eee dashed;
+}
+
+section.huge-module.anchor.clearfix {
+  .dark {
+    background: #555;
+    color: #fff
+  }
+
+  .fawn {
+    background: #E8E1DC;
+  }
+}
+
+.iconheader {
+  margin: calc(var(--baseline) * 1) 0
+}

@@ -17,27 +17,78 @@
         <section class="huge-module anchor clearfix" id="introduction">
           <h2 class="huge-module__title">Introduction</h2>
           <div class="feedback"><h1>The Basics of our Vertical Grids</h1>
-<p>1). We always set the font-size in pixels on the <code>&lt;html&gt;</code> element and size everything else in REMs ( ie. <code>html{ font-size: 18px; }</code>) . Then we use Media queries to adjust the HTML font-size and everything else scales automatically.</p>
-<p>2). The base font-sizes at 4 different screen widths are currently set at:</p>
+<p>1). We always set the font-size in pixels on the <code>&lt;html&gt;</code> element and size everything else in REMs ( ie. <code>html{ font-size: 18px; }</code>) . Then we use Media Queries to adjust the HTML font-size and everything else should scale automatically.</p>
+<p>2). The base font-sizes set for the 4 different screen widths are currently set at:</p>
 <pre><code class="language-css">  --basegrid: 32px; /* the body grid size on phone */ 
   --basegrid-tablet: 28px; 
   --basegrid-laptop: 32px; 
   --basegrid-wide: 36px; 
 </code></pre>
-<p>3). The CSS <code>line-height</code> for the basic <code>&lt;p&gt;</code> tag is very important as it becomes the basic building brick height’ that everything else fits on. I’m setting a <code>line-height: 1.7778rem</code>. (or 16/9). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
+<p>We can be adjusted (and have been) if we decide they aren't working for a given device or size.</p>
+<h2>Setting the line-height</h2>
+<p>3). The default CSS <code>line-height</code> for the <code>&lt;html&gt;</code> element (or `:root' in the CSS) is very important as it becomes the basic '<em>Lego block grid height</em>' that everything else fits into.</p>
+<p>The underlying <code>&lt;HTML&gt;</code> line-height is the heart of our grid. It is the most single important unit that all our typography is based on. If you're creating a button, a link, nav-item or any text component, give it vertical dimension with <code>line-height</code> before you even look at margin, height or padding.</p>
+<p>I've set our base 'line-height ratio' at 16/9. That means a basic 1rem <code>&lt;p&gt;</code> tag will sit comfortably inside a 1.7778rem line-height.</p>
 <pre><code class="language-css">  --baselineratio: calc(16/9); 
-  /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/      
+  /* This is the 'line-height:basefont' size ratio ( i.e 16/9 = 1.777778)*/  
+  --baseline: calc(var(--baselineratio) * 1rem);  /* convert this to REMs */  
 </code></pre>
+<p>In theory, we should able to change this to, say, <code>16/10</code> at any time and the design will adjust instantly.</p>
+<p>This <code>--baseline</code> CSS variable is <em>THE</em> standard unit of measure that we refer to constantly in our CSS. All line-heights and margins should be expressed in '--baseline' units. Here's an example:</p>
+<pre><code class="language-css">.is-size-5 {
+  font-size: 1rem;
+  line-height: calc(var(--baseline));  /* One line-height */
+  margin-top: calc(var(--baseline) / 2); /* Half a line-height */
+  margin-bottom: calc(var(--baseline) * 2); /* Two line-heights */
+</code></pre>
+<p><strong>Note:</strong>: The visual grid overlaid in the prototype styleguide shows two lines per grid line (i.e. half grids) - just to help with small typography.</p>
+<h2>Setting the base font-size</h2>
+<p>Since now we now  know the <code>--basegrid</code> (32px) and the <code>--baselineratio</code> (16/9), we can calculate the base font size (i.e. 32px / 1.7778 = 18px).</p>
+<p>Later we'll calculate the headings using that base font size.</p>
+<h2>Margins</h2>
+<p>Margins are the next most important CSS property in our typography. Vertical space between typography should be set with top and bottom margins.</p>
+<pre><code class="language-css">  margin-bottom: calc(var(--baseline));
+  margin-top: calc(var(--baseline) / 2); /* Half a line-height */
+</code></pre>
+<h2>Vertical <code>Padding</code> and <code>Height</code> are no-nos with type</h2>
+<p>As a general rule, we try hard to avoid using <code>padding</code> or setting explicit <code>heights</code> on any typography elements. This includes:</p>
+<ul>
+<li>headings and paragraphs</li>
+<li>buttons</li>
+<li>form elements</li>
+<li>icons</li>
+<li>links</li>
+<li>other type objects.</li>
+</ul>
+<p>Note that <code>padding</code> is fine for setting spacing on larger vertical spacing in SECTIONs, ARTICLEs, NAVs, HEADERs, DIVs and larger structural components - just really try to avoid them on the basic typographic rules.</p>
+<h3>What do you have against padding?</h3>
+<p>Keeping typography free of padding and explicit heights makes it almost impossible not to stay on the grid. Buttons line up, adjacent columns align, and stuff generally looks cohesive without trying.</p>
 
           </div>
         </section>
         <section class="huge-module anchor clearfix" id="typography">
-          <h2 class="huge-module__title">Typography</h2><p>All Headings (H1, H2, H3, etc) are set as scaled from that base font-size.</p>
+          <h2 class="huge-module__title">Typography</h2><p>All Headings (H1, H2, H3, etc) are set by scaling from that base font-size.</p>
 <pre><code class="language-css">  --typescale: 1.15;
    /* This is the heading scaling factor relative to the &lt;p&gt;. 
    Each heading is 1.15 times bigger than one before ( h4 &gt; h3 &gt; h2 &gt; h1). It's a 'type size ramp'.*/
 </code></pre>
-<p>On phone we set a 'gentle ramp' so H1 isn't radically larger than P. On any device larger than a phone we set a steeper type scale ramp of 1.25 making the H1's proportionally larger than</p>
+<ul>
+<li>P = 1rem</li>
+<li>H4 = 1rem * 1.15</li>
+<li>H3 = 1rem * 1.15 * 1.15</li>
+<li>H2 = 1rem * 1.15 * 1.15 * 1.15</li>
+<li>H1 = 1rem * 1.15 * 1.15 * 1.15 * 1.15</li>
+</ul>
+<p>On space-limited phone screens we set a 'gentle typescale ramp' of 1.15 so our H1 isn't radically larger than P.</p>
+<pre><code class="language-css">/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  :root {
+    font-size: var(--basefont-tablet);
+    --typescale: 1.25; // we ramp up the typescale on non-phone screens. 
+  }
+}
+</code></pre>
+<p>On any device larger than a phone we set a steeper <code>--typescale</code> of 1.25. This means the H1's will be proportionally larger than the P's, more like a newspaper layout.</p>
 
           <h1 class="major">H1.major titles are like this</h1>
           <h1>Standard H1 titles are like this -- here are some extra words to force a line-break.</h1>
@@ -46,20 +97,17 @@
           <h4>H4 titles</h4>
           <h5>H5 titles</h5>
           <p>
-            SEO is a marketing tactic that costs five percent of overall budget but brings in more than 20
+            This is a standard Paragraph. EO is a marketing tactic that costs five percent of overall budget but brings in more than 20
             percent of revenue for many Fortune 500 companies, and yet very few of them prioritize it. Instead,
             while slowly changing, too many CMOS still favor paid search, which costs 20 percent and brings in… 20
             percent. In search, businesses need to shift priorities. Now.
           </p>
           <p class="minor">
-            Link volume is one of the most powerful signals search engines use to rank websites. There’s a
+            This is a Paragraph with a minor class (p.minor{}).  Link volume is one of the most powerful signals search engines use to rank websites. There’s a
             way to use links to generate better search results, but too many marketers rely on traditional (or even
             black hat) tactics that just don’t work anymore.
           </p>
-          <p class="small">
-            Huge to be recognized at the 2014 “Made in NY” Awards for the company’s contribution
-            to New York’s creative economy.
-          </p>
+          <p class="small">This is a Paragraph with a small class (p.small{}) used for very small credits and captions.</p>
         </section>
         <section class="huge-module anchor clearfix" id="buttons">
           <h2 class="huge-module__title">Buttons</h2>
@@ -109,6 +157,33 @@
               </div>
             </div>
           </div>
+        </section>
+        <section class="huge-module anchor clearfix" id="panels">
+          <h2 class="huge-module__title">Panels</h2>
+          <p>You'll see I've happily used padding on the top and bottom of the .panels below. </p>
+          <section class="panel grid-center">
+            <div class="col-6 textcenter">
+              <h3>Read books on frameworks, languages, tools and projects.    </h3>
+              <button class="cta large">Visit The Library</button>
+            </div>
+          </section>
+          <section class="panel grid-spaceAround">
+            <div class="col-7 textcenter"><img src="https://alexmwalker.github.io/landing/images/SVG/laptop-static.svg"/></div>
+            <div class="col-4">
+              <h3>It's time to move beyond the humble PDF!</h3>
+              <p>SitePoint's 'Next-gen' Reader redefines how coding ebooks should work - features that will never exist in garden-variety PDFs and eBooks.</p>
+              <div class="textcenter">
+                <button class="unlock_button large"> Unlock the library</button>
+              </div>
+            </div>
+          </section>
+          <section class="panel grid-spaceAround fawn">
+            <div class="col-3 textcenter"><img class="iconheader" src="https://d3qm4387qle9v6.cloudfront.net/svg_icons/linear-live.svg"/>
+              <h3>Live Code in your book</h3>
+              <p>Yep. Write code as you work and learn - CodePen.io, CodeSandbox.io, JSFiddle.net and other dynamic code playgrounds.</p>
+            </div>
+            <div class="col-7"><img src="https://alexmwalker.github.io/landing/images/sandbox.gif" style="width: 100%"/></div>
+          </section>
         </section>
         <section class="huge-module anchor clearfix" id="codesamples">
           <h2 class="huge-module__title">Code Samples</h2>

@@ -10,7 +10,7 @@ $b-rad: 6px;
 
 
 
-
+@import 'panels';
 
 
 //@import 'header';
@@ -91,4 +91,16 @@ $b-rad: 6px;
 
 .clearboth {
   clear: both
+}
+
+.textcenter {
+  text-align: center
+}
+
+.textleft {
+  text-align: left
+}
+
+.textright {
+  text-align: right
 }

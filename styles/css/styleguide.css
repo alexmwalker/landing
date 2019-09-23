@@ -298,8 +298,7 @@ figure {
   background: #3ec9cb;
   color: #fff; }
   .cta:hover {
-    background-color: #24b3b5;
-    border-color: #24b3b5;
+    background: #24b3b5;
     color: #fff; }
 
 [class~="grid"],
@@ -1802,6 +1801,20 @@ figure {
 .align-c {
   text-align: center; }
 
+.panel {
+  padding: calc(var(--baseline) * 2) 0 calc(var(--baseline) * 1.5);
+  outline: 1px #eee dashed; }
+
+section.huge-module.anchor.clearfix .dark {
+  background: #555;
+  color: #fff; }
+
+section.huge-module.anchor.clearfix .fawn {
+  background: #E8E1DC; }
+
+.iconheader {
+  margin: calc(var(--baseline) * 1) 0; }
+
 /* PrismJS 1.16.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
 /**
@@ -2194,5 +2207,14 @@ body.vertical-rhythm:after {
 
 .clearboth {
   clear: both; }
+
+.textcenter {
+  text-align: center; }
+
+.textleft {
+  text-align: left; }
+
+.textright {
+  text-align: right; }
 
 /*# sourceMappingURL=styleguide.css.map */

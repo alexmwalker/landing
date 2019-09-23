@@ -21,10 +21,10 @@ main.container {
   padding-bottom: calc(var(--baseline) * .5); }
 
 p code {
-  font-size: calc(var(--typescale)* .8);
+  font-size: calc(var(--typescale)* 1) !important;
   background: #F5F2F0;
   padding: 0 .5rem;
-  display: none; }
+  margin-bottom: -30px; }
 
 .taglabel {
   font-size: calc(1rem / var(--typescale) / var(--typescale));

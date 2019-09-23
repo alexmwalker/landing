@@ -1,14 +1,34 @@
 section#typography.huge-module.anchor.clearfix
   h2.huge-module__title Typography
   :markdown-it(linkify langPrefix='language-')
-    All Headings (H1, H2, H3, etc) are set as scaled from that base font-size. 
+
+    All Headings (H1, H2, H3, etc) are set by scaling from that base font-size. 
+
     ```css
       --typescale: 1.15;
        /* This is the heading scaling factor relative to the <p>. 
        Each heading is 1.15 times bigger than one before ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
     ```
 
-    On phone we set a 'gentle ramp' so H1 isn't radically larger than P. On any device larger than a phone we set a steeper type scale ramp of 1.25 making the H1's proportionally larger than 
+    - P = 1rem
+    - H4 = 1rem * 1.15
+    - H3 = 1rem * 1.15 * 1.15
+    - H2 = 1rem * 1.15 * 1.15 * 1.15
+    - H1 = 1rem * 1.15 * 1.15 * 1.15 * 1.15
+
+    On space-limited phone screens we set a 'gentle typescale ramp' of 1.15 so our H1 isn't radically larger than P. 
+    
+    ```css
+    /* Medium devices (tablets, 48em and up)*/
+    @media (min-width: 48em) {
+      :root {
+        font-size: var(--basefont-tablet);
+        --typescale: 1.25; // we ramp up the typescale on non-phone screens. 
+      }
+    }
+    ```
+    On any device larger than a phone we set a steeper `--typescale` of 1.25. This means the H1's will be proportionally larger than the P's, more like a newspaper layout.
+
 
   h1.major H1.major titles are like this
   h1 Standard H1 titles are like this -- here are some extra words to force a line-break.
@@ -17,14 +37,13 @@ section#typography.huge-module.anchor.clearfix
   h4 H4 titles
   h5 H5 titles
   p
-    | SEO is a marketing tactic that costs five percent of overall budget but brings in more than 20
+    | This is a standard Paragraph. EO is a marketing tactic that costs five percent of overall budget but brings in more than 20
     | percent of revenue for many Fortune 500 companies, and yet very few of them prioritize it. Instead,
     | while slowly changing, too many CMOS still favor paid search, which costs 20 percent and brings in… 20
     | percent. In search, businesses need to shift priorities. Now.
   p.minor
-    | Link volume is one of the most powerful signals search engines use to rank websites. There’s a
+    | This is a Paragraph with a minor class (p.minor{}).  Link volume is one of the most powerful signals search engines use to rank websites. There’s a
     | way to use links to generate better search results, but too many marketers rely on traditional (or even
     | black hat) tactics that just don’t work anymore.
   p.small
-    | Huge to be recognized at the 2014 “Made in NY” Awards for the company’s contribution
-    | to New York’s creative economy.
+    | This is a Paragraph with a small class (p.small{}) used for very small credits and captions.

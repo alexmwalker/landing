@@ -30,13 +30,13 @@ main.container {
 }
 
 p code {
-  // inline code samples
-
-  //line-height: calc(var(--baseline) * .5);
-  font-size: calc(var(--typescale)* .8);
+  // inline code samples - monospace fonts seem to need shrinking to not bump the grid.
+  font-size: calc(var(--typescale)* 1) !important;
   background: #F5F2F0;
   padding: 0 .5rem;
-  display: none;
+  //display: none;
+  //outline: 1px red dashed;
+  margin-bottom: -30px;
 }
 
 .taglabel {
