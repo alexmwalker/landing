@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/css/styleguideUI.css"/>
     <link rel="icon" type="image/png" href="styleguide/structure/images/favicon.png"/>
   </head>
-  <body class="vr borders labelling">
+  <body class="vr -borders labelling">
     <main class="container">
       <div class="huge-iframe-content">
         <!-- Add your sections in here -->
@@ -24,7 +24,7 @@
   --basegrid-laptop: 32px; 
   --basegrid-wide: 36px; 
 </code></pre>
-<p>3). The CSS <code>line-height</code> for the basic <code>&lt;p&gt;</code> tag is very important as it becomes the basic building brick height’ that everything else fits on. I’m setting a <code>line-height: 1.7778rem</code>. (or 28/16). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
+<p>3). The CSS <code>line-height</code> for the basic <code>&lt;p&gt;</code> tag is very important as it becomes the basic building brick height’ that everything else fits on. I’m setting a <code>line-height: 1.7778rem</code>. (or 16/9). This is set as a Sass variable ($line-height). We should able to change this to 30/20 at any time and the design will adjust instantly.</p>
 <pre><code class="language-css">  --baselineratio: calc(16/9); 
   /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/      
 </code></pre>
@@ -34,11 +34,13 @@
         <section class="huge-module anchor clearfix" id="typography">
           <h2 class="huge-module__title">Typography</h2><p>All Headings (H1, H2, H3, etc) are set as scaled from that base font-size.</p>
 <pre><code class="language-css">  --typescale: 1.15;
-   /* This is the heading scaling factor relative to the &lt;p&gt;. ( h4 &gt; h3 &gt; h2 &gt; h1). It's a 'type size ramp'.*/
+   /* This is the heading scaling factor relative to the &lt;p&gt;. 
+   Each heading is 1.15 times bigger than one before ( h4 &gt; h3 &gt; h2 &gt; h1). It's a 'type size ramp'.*/
 </code></pre>
+<p>On phone we set a 'gentle ramp' so H1 isn't radically larger than P. On any device larger than a phone we set a steeper type scale ramp of 1.25 making the H1's proportionally larger than</p>
 
           <h1 class="major">H1.major titles are like this</h1>
-          <h1>Standard H1 titles are like this</h1>
+          <h1>Standard H1 titles are like this -- here are some extra words to force a line-break.</h1>
           <h2>H2 titles</h2>
           <h3>H3 titles</h3>
           <h4>H4 titles</h4>
@@ -63,35 +65,48 @@
           <h2 class="huge-module__title">Buttons</h2>
           <div class="grid-center">
             <div class="col-4">
-              <button class="unlock_button large"> Unlock the library</button>
+              <div class="taglabel">.large</div>
+              <ul class="uiitem"> 
+                <li>
+                  <button class="unlock_button large"> Unlock the library</button>
+                </li>
+                <li> 
+                  <button class="paypal_button large"><img src="../images/paypal-white.svg"/>Checkout</button>
+                </li>
+                <li>
+                  <button class="cta large">Visit The Library</button>
+                </li>
+              </ul>
             </div>
             <div class="col-4">
-              <button class="unlock_button"> Unlock the library</button>
+              <div class="taglabel">(default)
+                <ul class="uiitem"> 
+                  <li>
+                    <button class="unlock_button"> Unlock the library</button>
+                  </li>
+                  <li> 
+                    <button class="paypal_button"><img src="../images/paypal-white.svg"/>Checkout</button>
+                  </li>
+                  <li>
+                    <button class="cta">Visit The Library</button>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="col-4">
-              <button class="unlock_button small"> Unlock the library</button>
-            </div>
-          </div>
-          <div class="grid-center">
-            <div class="col-4">
-              <button class="paypal_button large"><img src="../images/paypal-white.svg"/>Checkout</button>
-            </div>
-            <div class="col-4">
-              <button class="paypal_button"><img src="../images/paypal-white.svg"/>Checkout</button>
-            </div>
-            <div class="col-4">
-              <button class="paypal_button small"><img src="../images/paypal-white.svg"/>Checkout</button>
-            </div>
-          </div>
-          <div class="grid-center">
-            <div class="col-4">
-              <button class="cta large">Visit The Library</button>
-            </div>
-            <div class="col-4">
-              <button class="cta">Visit The Library</button>
-            </div>
-            <div class="col-4">
-              <button class="cta small">Visit The Library</button>
+              <div class="taglabel">.small
+                <ul class="uiitem"> 
+                  <li>
+                    <button class="unlock_button small"> Unlock the library</button>
+                  </li>
+                  <li> 
+                    <button class="paypal_button small"><img src="../images/paypal-white.svg"/>Checkout</button>
+                  </li>
+                  <li>
+                    <button class="cta small">Visit The Library</button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

@@ -4,11 +4,14 @@ section#typography.huge-module.anchor.clearfix
     All Headings (H1, H2, H3, etc) are set as scaled from that base font-size. 
     ```css
       --typescale: 1.15;
-       /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
+       /* This is the heading scaling factor relative to the <p>. 
+       Each heading is 1.15 times bigger than one before ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
     ```
 
+    On phone we set a 'gentle ramp' so H1 isn't radically larger than P. On any device larger than a phone we set a steeper type scale ramp of 1.25 making the H1's proportionally larger than 
+
   h1.major H1.major titles are like this
-  h1 Standard H1 titles are like this
+  h1 Standard H1 titles are like this -- here are some extra words to force a line-break.
   h2 H2 titles
   h3 H3 titles
   h4 H4 titles
