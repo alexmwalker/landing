@@ -1803,7 +1803,8 @@ figure {
 
 .panel {
   padding: calc(var(--baseline) * 2) 0 calc(var(--baseline) * 1.5);
-  outline: 1px #eee dashed; }
+  outline: 1px #eee dashed;
+  color: #333; }
 
 section.huge-module.anchor.clearfix .dark {
   background: #555;
@@ -1984,26 +1985,29 @@ coding. Currently it:
 .borders section {
   outline: 1px rgba(255, 0, 255, 0.1) dashed; }
 
-body {
+/*  vertical grid lines */
+.vr {
   position: relative; }
 
-body.vertical-rhythm:after {
+.vr:after {
+  position: absolute;
+  width: auto;
+  height: 1500vh;
+  z-index: 9999;
+  content: '';
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-size: var(--baseline) var(--baseline);
   background-image: -webkit-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
   background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
-  background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
-  bottom: 0;
-  margin: 0px;
-  content: '';
-  display: block;
-  height: auto;
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: auto;
-  z-index: 9999; }
+  background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%); }
+
+.device {
+  opacity: .5; }
 
 /* device targeting display */
 .device {
