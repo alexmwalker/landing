@@ -12,13 +12,17 @@ main.container {
   padding: calc(var(--baseline) * 1.5) 0;
 }
 
+.huge-module.anchor {
+  padding-top: calc(var(--baseline) * 1.5);
+}
+
 * * h2.huge-module__title {
   background: transparent;
   color: #999;
   text-align: right;
   //border-bottom: 1px solid #999;
   //outline: 1px solid #eee;
-  padding-top: calc(var(--baseline) * .5);
+  padding-top: 0;
   padding-right: 1rem;
   margin-bottom: calc(var(--baseline)); // to compensate for the bottom-border height
   background: linear-gradient(0deg, rgb(238, 238, 238) 0.1em, rgba(0, 0, 0, 0) 0.1em), rgb(255, 255, 255);

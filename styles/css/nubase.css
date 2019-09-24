@@ -205,30 +205,6 @@ figure {
   margin: 0;
   padding: 0; }
 
-/*  vertical grid lines */
-.vr {
-  position: relative; }
-
-.vr:after {
-  position: absolute;
-  width: auto;
-  height: 1000vh;
-  z-index: 9999;
-  content: '';
-  display: block;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-size: var(--baseline) var(--baseline);
-  background-image: -webkit-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
-  background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
-  background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%); }
-
-.device {
-  opacity: .5; }
-
 [class*=grid-], [class*=grid_], [class~=grid] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

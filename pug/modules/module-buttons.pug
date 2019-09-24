@@ -1,39 +1,42 @@
 section#buttons.huge-module.anchor.clearfix
   h2.huge-module__title Buttons
   .grid-center
+    .col-12
+      p Magenta buttons should be used for important payment and business goal purposes.
     .col-4
-      .taglabel .large
+      .taglabel CTA
       ul.uiitem 
-        li
+        li 
           button.unlock_button.large  Unlock the library
+        li
+          button.unlock_button  Unlock the library
+        li
+          button.unlock_button.small  Unlock the library
+    .col-4
+      .taglabel Paypal only
+      ul.uiitem 
         li 
           button.paypal_button.large
             img(src='../images/paypal-white.svg')
             | Checkout
+        li 
+          button.paypal_button
+            img(src='../images/paypal-white.svg')
+            | Checkout
+        li 
+          button.paypal_button.small
+            img(src='../images/paypal-white.svg')
+            | Checkout
+
+    .col-4
+      .taglabel Non critical actions
+      ul.uiitem 
         li
           button.cta.large
-            | Visit The Library
-    .col-4
-      .taglabel (default)
-        ul.uiitem 
-          li
-            button.unlock_button  Unlock the library
-          li 
-            button.paypal_button
-              img(src='../images/paypal-white.svg')
-              | Checkout
-          li
-            button.cta
-              | Visit The Library
-    .col-4
-      .taglabel .small
-        ul.uiitem 
-          li
-            button.unlock_button.small  Unlock the library
-          li 
-            button.paypal_button.small
-              img(src='../images/paypal-white.svg')
-              | Checkout
-          li
-            button.cta.small
-              | Visit The Library
+            | Visit the Library
+        li
+          button.cta
+            | Visit the Library
+        li
+          button.cta.small
+            | Visit the Library
