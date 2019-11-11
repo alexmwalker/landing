@@ -42,10 +42,39 @@
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-dark"></use>
                 </svg> Dark/Light Mode</a></li>
-            <li><a href="#">
-                <svg class="svg-icon">
-                  <use fill="#fff" href="#my-activity"></use>
-                </svg> Your Activity</a></li>
+            <!--
+            li
+              a(href='#')
+                svg.svg-icon
+                  use(fill='#fff', href='#my-activity')
+                |  Your Activity
+            
+            -->
+            <li>
+              <div id="offlinemode-mob">
+                <div class="pretty p-switch p-fill">
+                  <input type="checkbox">
+                  <div class="state p-success">
+                    <label>Make available offline</label>
+                  </div>
+                  <div class="tooltip-dialog">
+                    <div class="screen screen-1"><b>Downloading to your offline Library...</b>
+                      <div class="tooltip-loader">
+                        <div class="tooltip-progress"></div>
+                      </div>
+                    </div>
+                    <div class="screen screen-2">
+                      <div class="button-library">
+                        <svg class="svg-icon">
+                          <use fill="#fff" href="#my-library"></use>
+                        </svg>
+                      </div><b>Download complete</b><br>
+                      <p class="small">Access this book in your library</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
             <li class="mobile-controls">
               <button class="fontsizedown go">A -</button>
               <button class="fontsizeup go">A +</button>
