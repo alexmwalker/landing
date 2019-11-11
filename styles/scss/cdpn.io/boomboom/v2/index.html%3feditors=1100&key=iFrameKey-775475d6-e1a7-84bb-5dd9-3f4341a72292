@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang='en' class=''>
+<head><script src='https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script><script src='https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" /><link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" /><link rel="canonical" href="https://codepen.io/alexmwalker/pen/xxKNEbM?editors=1100" />
+<style class="cp-pen-styles">header {
+  position: fixed;
+  width: 100%;
+}
+
+body {
+  font-size: 28px;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hamburger {
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+.hamburger ul {
+  padding: 0;
+  margin: 0;
+}
+.hamburger li {
+  list-style-type: none;
+  background: #333;
+  padding-left: 2rem;
+  line-height: 2.77778rem;
+}
+.hamburger li a:link {
+  color: #fff;
+  text-decoration: none;
+}
+.hamburger_input {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.hamburger_input:checked ~ .hamburger_body {
+  display: block;
+  transform: translateX(20%);
+  transition: transform 0.3s ease-out;
+}
+.hamburger_label {
+  display: block;
+  padding-bottom: 10px;
+  /* margin-bottom: 10px; */
+  font-weight: bold;
+  font-size: inherit;
+  cursor: pointer;
+}
+.hamburger_body {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.hamburger_label {
+  font-size: 1.5em;
+  height: 1.0em;
+  width: 100%;
+  background: #333;
+}
+.hamburger_label span {
+  background: #fff;
+  border-radius: 0.05em;
+  display: block;
+  float: right;
+  height: 0.1em;
+  margin: 0 0.5em;
+  width: 1em;
+  transform-origin: 50% 50%;
+  transform: translateY(0.5em);
+  transition: background 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36);
+}
+.hamburger_label span:before, .hamburger_label span:after {
+  background: #fff;
+  border-radius: inherit;
+  display: inherit;
+  position: absolute;
+  content: '';
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  transform-origin: 50% 50%;
+  transform: translateY(0.3em);
+  transition: transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36);
+}
+.hamburger_label span:before {
+  transform: translateY(-0.3em);
+}
+
+.hamburger input:checked + .hamburger_label span {
+  background: transparent;
+  transition: background 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36);
+}
+.hamburger input:checked + .hamburger_label span:after {
+  transform: translateY(0em) rotate(-135deg);
+  transition: transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36);
+}
+.hamburger input:checked + .hamburger_label span:before {
+  transform: translateY(0em) rotate(135deg);
+  transition: transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36);
+}
+
+section {
+  background: #eaea44;
+  height: 32rem;
+  padding: 4rem 2rem;
+}
+</style></head><body>
+<header>
+<div class="hamburger">
+<input type="checkbox" id="toggle-1" class="hamburger_input" name="hamburger" value="0" />
+<label for="toggle-1" class="hamburger_label">
+<span></span>
+</label>
+<div class="hamburger_body">
+<ul>
+<li><a href="#Whats-covered?">What’s Covered?</a></li>
+<li><a href="#the-instructor">The Instructor</a></li>
+<li><a href="#Who-is-this-for">Who is this for?</a></li>
+<li><a href="#location">Location</a></li>
+</ul>
+</div>
+</div>
+</header>
+<section>
+<h1> Title </h1>
+<p>Far out in the uncharted backwaters of the unfashionable end of the western
+spiral arm of the Galaxy lies a small unregarded yellow sun. Orbiting
+this at a distance of roughly ninety-two million miles is an utterly insignifi-
+cant little blue green planet whose ape-descended life forms are so amazingly
+primitive that they still think digital watches are a pretty neat idea.
+</section>
+</body></html>

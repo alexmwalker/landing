@@ -4,7 +4,7 @@
   color: #fff;
   padding: calc(var(--baseline) / 2) 0 0;
   font-size: calc(1rem);
-  //margin-bottom: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / -2);
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
   bottom: 0;
   left: 0;
@@ -13,14 +13,18 @@
 
   img {
     height: calc(var(--baseline) * 1.5);
-    margin: 0 1rem;
+    margin: 0;
     transition: all .5s;
+  }
+
+  p {
+    margin-bottom: 0
   }
 
   p.small {
     position: relative;
     top: 0;
-    margin-top: calc(var(--baseline) * -1.5);
+    margin-top: calc(var(--baseline) * -2);
     opacity: 0;
     pointer-events: none;
   }
@@ -44,7 +48,7 @@
   }
 }
 
-.cover-preview,
+.preview-label div div,
 .center {
   text-align: center;
 }
@@ -52,5 +56,6 @@
 a.membership {
   @extend .pink_button;
   padding: 0 1rem;
-  line-height: calc(var(--baseline) * 1.0);
+  line-height: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) * 1);
 }
