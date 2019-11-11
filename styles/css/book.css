@@ -3112,8 +3112,10 @@ footer.mainfooter {
 
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
-.showmobile {
-  display: none; }
+.showmobile,
+.mobilenav {
+  display: none;
+  outline: 1px red dashed; }
 
 @media (max-width: 60em) {
   /* tablet adjustments */
@@ -3165,7 +3167,8 @@ that need device level targeting. This is where we do it. */
     color: #fff; }
   .sitepoint-branding {
     height: calc(var(--baseline)*1); }
-  .showmobile {
+  .showmobile,
+  .mobilenav {
     display: block; }
   #reeedr .bookpanel h1 {
     display: none; }

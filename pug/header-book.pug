@@ -41,30 +41,31 @@ header.sitepoint-branding
                 svg.svg-icon
                   use(fill='#fff', href='#my-activity')
                 |  Your Activity
-
+          li.mobile-controls
+            button.fontsizedown.go A -
+            button.fontsizeup.go A +
           li
             #offlinemode-mob
                 .pretty.p-switch.p-fill
                   input(type='checkbox')
                   .state.p-success
                     label Make available offline
-                  .tooltip-dialog
-                    .screen.screen-1
-                      b Downloading to your offline Library...
-                      .tooltip-loader
-                        .tooltip-progress
-                    .screen.screen-2
-                      .button-library
-                        svg.svg-icon
-                          use(fill='#fff', href='#my-library')
-                      b Download complete
-                      br
-                      p.small
-                        | Access this book in your library
+                    //
+                      .tooltip-dialog
+                        .screen.screen-1
+                          b Downloading to your offline Library...
+                          .tooltip-loader
+                            .tooltip-progress
+                        .screen.screen-2
+                          .button-library
+                            svg.svg-icon
+                              use(fill='#fff', href='#my-library')
+                          b Download complete
+                          br
+                          p.small
+                            | Access this book in your library
 
-          li.mobile-controls
-            button.fontsizedown.go A -
-            button.fontsizeup.go A +
+
 
           //
             <li class="logged-in mobile-controls">
