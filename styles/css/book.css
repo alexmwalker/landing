@@ -3114,8 +3114,7 @@ footer.mainfooter {
 that need device level targeting. This is where we do it. */
 .showmobile,
 .mobilenav {
-  display: none;
-  outline: 1px red dashed; }
+  display: none; }
 
 @media (max-width: 60em) {
   /* tablet adjustments */
