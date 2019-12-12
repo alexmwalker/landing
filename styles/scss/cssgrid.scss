@@ -1,0 +1,17 @@
+.grid__parent {
+  display: grid;
+  grid-template-columns: 1fr 6fr 340px;
+  grid-template-rows: auto 2fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: stretch;
+  align-items: stretch
+}
+
+.grid__item {
+  background: #fff;
+  color: #333;
+  padding: 0 20px;
+  //font-size: 21px;
+  border-radius: 5px;
+}

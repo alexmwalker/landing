@@ -77,7 +77,7 @@ h3,
   font-size: calc(var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
   margin-top: 0;
-  margin-bottom: calc(var(--baseline) / 1);
+  margin-bottom: calc(var(--baseline) / 2);
   font-weight: 400; }
 
 h4,
@@ -204,6 +204,25 @@ body,
 figure {
   margin: 0;
   padding: 0; }
+
+/* Useful text classes  */
+.clearright {
+  clear: right; }
+
+.clearleft {
+  clear: left; }
+
+.clearboth {
+  clear: both; }
+
+.textcenter {
+  text-align: center; }
+
+.textleft {
+  text-align: left; }
+
+.textright {
+  text-align: right; }
 
 [class~="grid"],
 [class*="grid-"],
