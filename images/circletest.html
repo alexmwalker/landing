@@ -1,0 +1,55 @@
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+ 
+  <style>
+      #circle {
+          display: block;
+          text-indent: -9999px;
+          background: url('circle.svg') right top;
+          width: 100px;
+          height: 100px;
+          background-size: auto 100px;
+          outline: 1px red dashed;
+      }
+      .object{
+        width: 100px;
+        height: 100px;
+        outline: 1px red dashed;
+        display: block;
+      }
+      /* Requires Modernizr - provide a fallback for non-svg enabled browsers */
+      .no-svg #circle {
+          background-image: url('circle.png');
+      }
+      </style>
+
+</head>
+
+<body>
+
+    When using as an inline or background image scripts aren't parsed, so this circle will be red:
+
+    <div id="circle">My circle</div>
+  
+
+    
+  When using as an object, we can override the color of the circle by passing the color as a parameter :
+  
+    <object type="image/svg+xml" data="circle.svg?color=#c0ffee" alt="My circle" class="object">
+           <!--[if lte IE 8]><img src="circle_blue.png" alt="My circle"><![endif]-->
+    </object>
+  
+  Browser support: all modern browsers and IE9 and up.
+
+</body>
+</html>

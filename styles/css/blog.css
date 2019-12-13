@@ -715,7 +715,7 @@ footer.mainfooter {
     color: #ddd; }
 
 .ad-300x600 {
-  margin: var(--baseline) 0;
+  margin: 0 0 var(--baseline);
   width: 300px;
   height: 600px;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 600' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='.5' y='.5' width='299' height='599' fill='%23EFEFEF' stroke='%23DCDCDC'/%3E%3Cline y1='-.5' x2='667.196' y2='-.5' transform='matrix(-.44916 .89345 -.33355 -.94273 299.675 1.805)' stroke='%23DCDCDC'/%3E%3Cpath d='M1.006 2.997L300 597.003' stroke='%23DCDCDC'/%3E%3Crect x='50' y='278' width='187' height='45' fill='%23EFEFEF'/%3E%3Ctext fill='%23C2C2C2' style='white-space:pre' font-family='Roboto' font-size='12' letter-spacing='0em'%3E%3Ctspan x='83.322' y='303.602'%3EHalf-Page – 300 x 600 px%3C/tspan%3E%3C/text%3E%3C/svg%3E%0A"); }
@@ -724,27 +724,69 @@ footer.mainfooter {
   margin-top: calc(var(--baseline) /2);
   width: 300px;
   height: 250px;
+  padding: 2px;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 250' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='.5' y='1.5' width='299' height='249' fill='%23EFEFEF' stroke='%23DCDCDC'/%3E%3Cline y1='-.5' x2='389.707' y2='-.5' transform='matrix(-.76898 .63928 -.64614 -.76322 299.675 .997)' stroke='%23DCDCDC'/%3E%3Cpath d='M1.006 1.496L300 249.747' stroke='%23DCDCDC'/%3E%3Crect x='90' y='99' width='114' height='56' fill='%23EFEFEF'/%3E%3Ctext fill='%23C2C2C2' style='white-space:pre' font-family='Roboto' font-size='12' letter-spacing='0em'%3E%3Ctspan x='97.664' y='124.602'%3EInline Rectangle – %3C/tspan%3E%3Ctspan x='111.545' y='138.602'%3E300 x 250 px%3C/tspan%3E%3C/text%3E%3C/svg%3E%0A"); }
   .ad-300x250 img {
     width: 300px;
     height: 250px; }
+    .ad-300x250 img:hover {
+      opacity: .5; }
 
 .ad-320x100 {
   width: 320px;
   height: 100px;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 320 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='.5' y='.5' width='319' height='99' fill='%23EFEFEF' stroke='%23DCDCDC'/%3E%3Cline y1='-.5' x2='334.738' y2='-.5' transform='matrix(-.95494 .2968 -.91477 -.40398 319.654 .3)' stroke='%23DCDCDC'/%3E%3Cpath d='M1.073.5L320 99.5' stroke='%23DCDCDC'/%3E%3Crect x='88' y='31' width='141' height='36' fill='%23EFEFEF'/%3E%3Ctext fill='%23C2C2C2' style='white-space:pre' font-family='Roboto' font-size='12' letter-spacing='0em'%3E%3Ctspan x='99.113' y='46.102'%3ELarge Mobile Banner – %3C/tspan%3E%3Ctspan x='125.545' y='60.102'%3E320 x 100 px%3C/tspan%3E%3C/text%3E%3C/svg%3E%0A"); }
 
+.ad-728x90 {
+  width: 728px;
+  height: 90px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 728 90'%3E%3Cpath fill='%23EFEFEF' stroke='%23DCDCDC' d='M.5.5h727v89H.5z'/%3E%3Cpath stroke='%23DCDCDC' stroke-width='2' d='M727 1L1 89M1.5 1L727 89'/%3E%3Cpath fill='%23EFEFEF' d='M218 35h277v20H218z'/%3E%3Ctext fill='%23C2C2C2' font-family='Roboto' font-size='12' letter-spacing='0em' style='white-space:pre'%3E%3Ctspan x='300' y='50'%3ELeaderboard – 728 x 90px%3C/tspan%3E%3C/text%3E%3C/svg%3E"); }
+
 .article-title-unit {
   background: #333; }
 
 .article-title-section {
-  background: url(../../images/art.svg?r=1) center center;
+  background: url(../../images/art.svg?r=2) center center;
+  background: url(https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/misc/svg-mock.png?r=2) center center;
   background-size: 100% auto;
   color: #eee;
-  padding: calc(var(--baseline) /4) 0;
+  padding: 0;
   min-height: calc(var(--baseline) * 8); }
   .article-title-section h1 {
-    background: rgba(0, 0, 0, 0.4); }
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4); }
+
+.breaker {
+  background: #222; }
+  .breaker .social li {
+    margin: calc(var(--baseline) * 1) 0 0;
+    width: calc(var(--baseline) * 1); }
+
+.article-body-section {
+  padding-top: calc(var(--baseline) * 2); }
+  .article-body-section p:first-child {
+    font-size: calc(var(--typescale) * 1rem);
+    line-height: calc(var(--baseline) * 1);
+    margin-top: 0;
+    margin-bottom: calc(var(--baseline) /1);
+    font-weight: 300; }
+
+.author-profile {
+  width: 300px;
+  border-left: 1px #999 solid; }
+  .author-profile h4, .author-profile h5 {
+    margin: 0 0 calc(var(--baseline) /2) 1rem; }
+  .author-profile p {
+    font-size: calc(1rem / var(--typescale) / var(--typescale));
+    line-height: calc(var(--baseline) / 2);
+    margin: 0 0 calc(var(--baseline) /1) 1rem; }
+
+.avatar {
+  width: calc(var(--baseline) * 2);
+  border: 1px #999 solid;
+  border-radius: 50%;
+  margin: 0 1rem calc(var(--baseline) /2) 1rem;
+  float: left; }
 
 [class~="grid"],
 [class*="grid-"],
@@ -2326,130 +2368,6 @@ that need device level targeting. This is where we do it. */
   [class*="sm-only"] {
     display: block; } }
 
-/* PrismJS 1.16.0
-https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
-/**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: black;
-  background: none;
-  text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: calc(1rem / var(--typescale));
-  line-height: calc(var(--baseline) / 1);
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none; }
-
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc; }
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-  text-shadow: none;
-  background: #b3d4fc; }
-
-@media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none; } }
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: calc(var(--baseline) / 1) 1em;
-  margin: calc(var(--baseline) / 1) 0;
-  overflow: auto; }
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #f5f2f0;
-  background-size: calc(var(--baseline) * 2) calc(var(--baseline) * 2);
-  background-image: -webkit-repeating-linear-gradient(top, rgba(173, 0, 0, 0.02) 0%, rgba(173, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
-  background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.02) 0%, rgba(173, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
-  background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.02) 0%, rgba(173, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%); }
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal; }
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: slategray; }
-
-.token.punctuation {
-  color: #999; }
-
-.namespace {
-  opacity: .7; }
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: #905; }
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #690; }
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #9a6e3a;
-  background: rgba(255, 255, 255, 0.5); }
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #07a; }
-
-.token.function,
-.token.class-name {
-  color: #DD4A68; }
-
-.token.regex,
-.token.important,
-.token.variable {
-  color: #e90; }
-
-.token.important,
-.token.bold {
-  font-weight: bold; }
-
-.token.italic {
-  font-style: italic; }
-
-.token.entity {
-  cursor: help; }
-
 /* This file is for over-rides for generated CSS we don't want 
 to change directly - chiefly Prism JS at this stage - 
  Alex Walker
@@ -2716,5 +2634,14 @@ body {
     line-height: calc(var(--baseline) * 1.0); }
   .showmobile {
     display: block; } }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+.align-left {
+  text-align: left; }
 
 /*# sourceMappingURL=blog.css.map */

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 728 90">
+  <path fill="#EFEFEF" stroke="#DCDCDC" d="M.5.5h727v89H.5z"/>
+  <path stroke="#DCDCDC" stroke-width="2" d="M727 1L1 89M1.5 1L727 89"/>
+  <path fill="#EFEFEF" d="M218 35h277v20H218z"/>
+  <text fill="#C2C2C2" font-family="Roboto" font-size="12" letter-spacing="0em" style="white-space:pre">
+    <tspan x="300" y="50">Leaderboard – 728 x 90px</tspan>
+  </text>
+</svg>

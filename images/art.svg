@@ -1364,13 +1364,13 @@ g {
     <rect width="1000" height="610" x="0" y="0" fill="hsl(208, 52%, 49%)"/>
     <use href="#icon-travel" opacity="1" height="1100px" x="-10%" y="-30%" fill="hsl(336.5, 52%, 49%)"/>
     <use href="#icon-travel" opacity="1" height="1100px" x="-10%" y="-30%" class="patternA"  />
-    <use href="#icon-time" opacity="0.5" height="1100px" x="20%" y="-30%" fill="hsl(544.52, 52%, 20%)" style="transform-origin:50% 50%;transform:rotate(2turn)"/>
+    <use href="#icon-time" opacity="0.5" height="1100px" x="20%" y="-30%" fill="hsl(544.52, 52%, 20%)" style="transform-origin:0% 50%"/>
     <svg x="340" y="140" width="500" height="500" viewbox="0 0 500 500" style="fill:rbga(255,45,100,.5)">
         <circle cx="200" cy="200" r="200" fill="hsl(544.5281920000001, 52%, 75%)" style="transform:rotate(90deg);transform-origin:50% 50%;fill-opacity:.7;outline:0 green dashed"/>
         <use href="#icon-laptop" fill="rgba(0,0,0,.7)" width="200" x="60%" y="9%" style="transform-origin:50% 70% 0;transform:translate3d(-100px,-70px,0)"/>
     </svg>
-    <text x="150" y="600" style="font-family:'Bungee Shade',Barlow,Helvetica,'Helvetica Neue',sans-serif;font-weight:700;font-size:84em;opacity:.25;fill:#fff;transform:skew(-10deg) translateY(0) translateX(-.1em)">
+    <!--<text x="150" y="600" style="font-family:'Bungee Shade',Barlow,Helvetica,'Helvetica Neue',sans-serif;font-weight:700;font-size:84em;opacity:.25;fill:#fff;transform:skew(-10deg) translateY(0) translateX(-.1em)">
         4
-    </text>
+    </text>-->
     <rect height="610" width="1000" x="0" y="0" style="fill:url(#pattern-paper);mix-blend-mode:multiply;fill-opacity:1"/>
 </svg>

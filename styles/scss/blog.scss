@@ -5,7 +5,11 @@ $b-rad: 6px;
 @import 'header';
 @import 'footer';
 @import 'adsizes';
-@import 'article_title_unit';
+
+
+@import 'article-title-unit';
+@import 'article-body-unit';
+
 //@import 'cssgrid';
 
 
@@ -16,11 +20,7 @@ $b-rad: 6px;
 
 //@import 'panels';
 
-
-//
-
 @import 'media-tweaks';
-@import 'prism';
 @import 'overrides'; // overrides for generated Prism CSS
 
 @import 'under-construction';
@@ -86,4 +86,14 @@ body {
     display: block;
   }
 
+}
+
+.align-center{
+  text-align: center;
+}
+.align-right{
+  text-align: right;
+}
+.align-left{
+  text-align: left;
 }
