@@ -187,7 +187,21 @@ a:visited {
   justify-content: space-between;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
-  align-items: stretch; }
+  align-items: stretch;
+  line-height: calc(var(--baseline) / 2); }
+
+.hzlist {
+  list-style: none;
+  line-height: calc(var(--baseline) / 2);
+  float: left;
+  clear: right;
+  margin: 0;
+  padding: 0; }
+  .hzlist li {
+    float: left;
+    margin-right: 1rem; }
+  .hzlist ~ p {
+    clear: both; }
 
 form {
   padding: 0;

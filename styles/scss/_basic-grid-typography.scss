@@ -223,9 +223,24 @@ a:visited {
   list-style: none;
   justify-content: space-between;
   align-items: stretch;
-
+  line-height: calc(var(--baseline) / 2);
 }
-
+.hzlist {
+  list-style: none;
+  line-height: calc(var(--baseline) / 2);
+  float:left;
+  clear: right;
+  margin: 0;
+  padding: 0;
+  li{
+  float:left;
+  margin-right: 1rem;
+  
+  }
+  & ~ p{
+    clear: both;
+  }
+}
 form {
   padding: 0;
   margin: 0;

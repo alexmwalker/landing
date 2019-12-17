@@ -1,9 +1,20 @@
-
-
 header.sitepoint-branding
-  .container
-     .branding
-      a(href="landing.html", alt="Home")
-        img.branding-logo(src='https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
-
-
+  .container.grid-center   
+    .col-4
+      .branding
+        a(href="landing.html", alt="Home")
+          img.branding-logo(src='https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
+    .col-8.sm-hidden
+      ul.nav
+        li 
+          a(href="/blog") Blog
+        li 
+          a(href="/blog") Community
+        li
+          a(href="/blog") Library
+        li
+          a(href="/blog") Login
+        li
+          a(href="/blog") Join Premium
+    .col-8.showmobile 
+      p ☰

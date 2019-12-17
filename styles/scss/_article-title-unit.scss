@@ -1,27 +1,24 @@
 .article-title-unit {
-  background: #333;
+  background: #333  url(../../images/art.svg?r=2) 20% 50% no-repeat;
+  background-size:  100% auto;
+  padding: 0 0 calc(var(--baseline) /2);
 }
-
+.titlebox{
+  background: rgba(0,0,0,0.2);
+}
 .article-title-section {
   background: url(../../images/art.svg?r=2) center center;
-  background: url(https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/misc/svg-mock.png?r=2) center center;
+  //background: url(https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/misc/svg-mock.png?r=2) center center;
   
   //background: #345;
-  background-size: 100% auto;
+  //background: rgba(0,0,0,0.4);
+  background-size:  100% auto;
   color: #eee;
   padding:  0;
   min-height: calc(var(--baseline) * 8);
   h1 {
     background: rgba(0,0,0,0.4);
-    text-shadow: 1px 2px 4px rgba(0,0,0,0.4);;
-  }
-}
-
-.breaker{
-  background: #222;
-  .social li{
-    margin: calc(var(--baseline) * 1) 0 0;
-    
-    width: calc(var(--baseline) * 1)
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.4);
+    padding-left: 1rem;
   }
 }

@@ -1,13 +1,13 @@
 .container
   .article-body-section.grid-center
-    .col-8_md-7_sm-12
+    .col-8_md-8_sm-12
       include:markdown-it(html='true' typographer='true' linkify) ../md/blog1.md
-    .col-4_md-5_sm-12
+    .col-4_md-3_sm-12
       .author-profile
         //h4 Meet the author
-        img.avatar(src='https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2019/12/15755221583P6A3097_v2-150x150.jpg')
+        img.avatar(src='https://tinyfac.es/data/avatars/F6440FF2-AB6C-4E71-A57C-F2E79808EC82-500w.jpeg')
         h5 Kate Kendall
-        ul.hznav.social
+        ul.hzlist
           li 
             svg(viewBox='0 0 24 24', width='24', y='24' xmlns='http://www.w3.org/2000/svg')
               use(xlink:href='#icon-tw', x='0', y='0', fill='#333')
@@ -20,5 +20,7 @@
         
         p Kate Kendall is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.
       
-      .ad-300x600 
+      .ad-300x600.md-hidden
         img(src='http://channelpunjabtv.com/wp-content/uploads/2018/05/adobe-banner.jpg' width='300' height='600')
+      .ad-120x600.sm-hidden
+        img(src="https://cdn.business2community.com/wp-content/uploads/2015/08/amex-skyscraper-ad-example.gif.gif")
