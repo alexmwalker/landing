@@ -21,15 +21,13 @@ $b-rad: 6px;
 
 //@import 'panels';
 
-@import 'media-tweaks';
-@import 'overrides'; // overrides for generated Prism CSS
+@import 'blog-media-tweaks';
 
+// temporary
 @import 'under-construction';
 
 
-[class*="col"] {
-  outline: 0px dashed rgba(125, 200, 200, 1);
-}
+
 
 body {
   margin: 0;
@@ -41,16 +39,6 @@ body {
   margin: 0 auto;
 }
 
-.col-3 .device {
-  float: left;
-  font-size: 1rem;
-  width: 5rem;
-  height: 5rem;
-  left: 10%;
-  margin: 40% 20%;
-  position: relative;
-  transform: scale(1.5);
-}
 
 
 .imageshadow {
@@ -59,13 +47,16 @@ body {
 
 
 /* temp column borders */
-[class*="col"] {
-  outline: 0px dashed rgba(125, 200, 200, .3);
-}
+
 
 .container [class*="grid"] {
   margin: 0 1rem;
+  outline: 1px red dashed;
+  [class*="col-"]{
+  outline: 1px cyan dashed;
+  }
 }
+
 
 /* ========   Switching up the font sizing for books on the phone   ============= */
 

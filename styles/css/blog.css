@@ -755,23 +755,39 @@ footer.mainfooter {
   height: 90px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 728 90'%3E%3Cpath fill='%23EFEFEF' stroke='%23DCDCDC' d='M.5.5h727v89H.5z'/%3E%3Cpath stroke='%23DCDCDC' stroke-width='2' d='M727 1L1 89M1.5 1L727 89'/%3E%3Cpath fill='%23EFEFEF' d='M218 35h277v20H218z'/%3E%3Ctext fill='%23C2C2C2' font-family='Roboto' font-size='12' letter-spacing='0em' style='white-space:pre'%3E%3Ctspan x='300' y='50'%3ELeaderboard – 728 x 90px%3C/tspan%3E%3C/text%3E%3C/svg%3E"); }
 
-.ad-300x600, .ad-728x90, .ad-320x100, .ad-300x250, .ad-120x600 {
+.ad-120x600 {
+  width: 120px;
+  height: 600px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 120 600'%3E%3Cpath fill='%23EFEFEF' stroke='%23DCDCDC' d='M.5.5h119v599H.5z'/%3E%3Cpath stroke='%23DCDCDC' d='M119.31 1.325L.69 599.116M.69 1.325l118.62 597.349'/%3E%3Cpath fill='%23EFEFEF' d='M2 278h115v45H2z'/%3E%3Ctext fill='%23C2C2C2' font-family='Roboto' font-size='12' letter-spacing='0em' style='white-space:pre'%3E%3Ctspan x='29.268' y='296.602'%3ESkyscraper %3C/tspan%3E%3Ctspan x='27.733' y='310.602'%3E120 x 600px%3C/tspan%3E%3C/text%3E%3C/svg%3E"); }
+
+.ad-300x600,
+.ad-728x90,
+.ad-320x100,
+.ad-300x250,
+.ad-120x600 {
   margin: calc(var(--baseline) /2) auto 0; }
-  .ad-300x600 img, .ad-728x90 img, .ad-320x100 img, .ad-300x250 img, .ad-120x600 img {
+  .ad-300x600 img,
+  .ad-728x90 img,
+  .ad-320x100 img,
+  .ad-300x250 img,
+  .ad-120x600 img {
     margin: 0 auto; }
-  .ad-300x600 img:hover, .ad-728x90 img:hover, .ad-320x100 img:hover, .ad-300x250 img:hover, .ad-120x600 img:hover {
+  .ad-300x600 img:hover,
+  .ad-728x90 img:hover,
+  .ad-320x100 img:hover,
+  .ad-300x250 img:hover,
+  .ad-120x600 img:hover {
     opacity: 0.1; }
 
 .article-title-unit {
   background: #333 url(../../images/art.svg?r=2) 20% 50% no-repeat;
-  background-size: 100% auto;
+  background-size: 120% auto;
   padding: 0 0 calc(var(--baseline) /2); }
 
 .titlebox {
   background: rgba(0, 0, 0, 0.2); }
 
 .article-title-section {
-  background: url(../../images/art.svg?r=2) center center;
   background-size: 100% auto;
   color: #eee;
   padding: 0;
@@ -793,8 +809,8 @@ footer.mainfooter {
 .author-profile {
   width: 100%;
   border-left: 1px #999 solid; }
-  .author-profile h4, .author-profile h5 {
-    margin: 0 0 calc(var(--baseline) /2) 1rem; }
+  .author-profile h4, .author-profile h5, .author-profile ul {
+    margin: 0 1rem calc(var(--baseline) /2); }
   .author-profile p {
     font-size: calc(1rem / var(--typescale) / var(--typescale));
     line-height: calc(var(--baseline) / 2);
@@ -2388,32 +2404,6 @@ that need device level targeting. This is where we do it. */
   [class*="sm-only"] {
     display: block; } }
 
-/* This file is for over-rides for generated CSS we don't want 
-to change directly - chiefly Prism JS at this stage - 
- Alex Walker
-*/
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  background: rgba(255, 255, 255, 0); }
-
-@media (max-width: 48em) {
-  code[class*="language-"], pre[class*="language-"] {
-    line-height: calc(var(--baseline) / 2);
-    padding: calc(var(--baseline) / 2) 1rem;
-    margin: calc(var(--baseline) * 1) 0; }
-  :not(pre) > code[class*="language-"],
-  pre[class*="language-"] {
-    background-size: calc(var(--baseline) * 1) calc(var(--baseline) * 1);
-    background-image: -webkit-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
-    background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
-    background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%); } }
-
-#reeedr-body pre[class*="language-"] {
-  margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) * 2); }
-
 /* ===  CONSTRUCTION  CSS === */
 /* ===  
 
@@ -2609,9 +2599,6 @@ coding. Currently it:
 .labelling li:hover:after {
   content: "li"; }
 
-[class*="col"] {
-  outline: 0px dashed #7dc8c8; }
-
 body {
   margin: 0;
   padding: 0; }
@@ -2620,28 +2607,16 @@ body {
   max-width: 58rem;
   margin: 0 auto; }
 
-.col-3 .device {
-  float: left;
-  font-size: 1rem;
-  width: 5rem;
-  height: 5rem;
-  left: 10%;
-  margin: 40% 20%;
-  position: relative;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5); }
-
 .imageshadow {
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 /* temp column borders */
-[class*="col"] {
-  outline: 0px dashed rgba(125, 200, 200, 0.3); }
-
 .container [class*="grid"] {
-  margin: 0 1rem; }
+  margin: 0 1rem;
+  outline: 1px red dashed; }
+  .container [class*="grid"] [class*="col-"] {
+    outline: 1px cyan dashed; }
 
 /* ========   Switching up the font sizing for books on the phone   ============= */
 @media (max-width: 48em) {

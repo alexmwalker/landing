@@ -11,8 +11,8 @@
 .author-profile{
   width: 100%;
   border-left: 1px #999 solid;
-  h4, h5{
-    margin: 0 0 calc(var(--baseline) /2) 1rem;
+  h4, h5, ul{
+    margin: 0 1rem calc(var(--baseline) /2);
     
   }
   p{
