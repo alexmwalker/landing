@@ -6,23 +6,26 @@
     <title>SitePoint - Learn with Books, Video and Code</title>
     <meta name="description" content="SitePoint Library"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="styles/css/blog.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/css/blog.css?r=1"/>
     <!--script(src="https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js", type="text/javascript")-->
     <!--script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")-->
   </head>
   <body class="vr -labelling -borders">
-    <div class="breaker sm-hidden">
+    <div class="topbanner">
       <div class="container">
         <div class="grid-center">
-          <div class="col-12">
+          <div class="col-12 sm-hidden">
             <div class="ad-728x90"><img src="https://modernschooler.com/site/wp-content/uploads/2018/12/art.jpg"/></div>
+          </div>
+          <div class="col-12 showmobile">
+            <div class="ad-320x100"><img src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg"/></div>
           </div>
         </div>
       </div>
     </div>
     <header class="sitepoint-branding">
       <div class="container grid-center">  
-        <div class="col-4">
+        <div class="col-4_sm-6">
           <div class="branding"><a href="landing.html" alt="Home"><img class="branding-logo" src="https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg"/></a></div>
         </div>
         <div class="col-8 sm-hidden">
@@ -34,8 +37,19 @@
             <li><a href="/blog">Join Premium</a></li>
           </ul>
         </div>
-        <div class="col-8 showmobile"> 
-          <p>☰</p>
+        <div class="col-8_sm-6 showmobile"> 
+          <input class="hamburger_input" id="toggle-1" type="checkbox" name="hamburger" value="0"/>
+          <label class="hamburger_label" for="toggle-1"><span>
+              <!-- --></span></label>
+          <div class="hamburger_body">
+            <ul>
+              <li><a href="#Whats-covered?">Blog</a></li>
+              <li><a href="#the-instructor">Community</a></li>
+              <li><a href="#Who-is-this-for">Library</a></li>
+              <li><a href="#location">Login</a></li>
+              <li><a href="#location">Join Premium</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -45,6 +59,7 @@
           <div class="titlebox col-8_md-7_sm-12">
             <h1>The Real Future of Remote Work is Asynchronous</h1>
             <ul class="hzlist">
+              <li>By Kate Kendall</li>
               <li>Entreprenuer</li>
               <li>December 05, 2019</li>
               <li> <a href="#"><img src="images/icon-fb.svg"/></a></li>
@@ -53,7 +68,7 @@
             </ul>
           </div>
           <div class="col-4_md-5_sm-hidden">
-            <div class="ad-300x250"><img src="http://etouches-appfiles.s3.amazonaws.com/html_file_uploads/58b01465d1aa4367f3ee363b376e7f86_eMobile-Ad_-300-x-250.jpg?response-content-disposition=inline%3Bfilename%3D58b01465d1aa4367f3ee363b376e7f86_eMobile-Ad_-300-x-250.jpg&amp;response-content-type=image%2Fjpeg&amp;AWSAccessKeyId=AKIAJC6CRYNXDRDHQCUQ&amp;Expires=1576221432&amp;Signature=Ah%2B98cCj8D9CMGVZzOc6bL%2BR92U%3D" width="300" height="250"/></div>
+            <div class="ad-300x250"><img src="https://creativetacos.com/wp-content/uploads/2017/12/1-month-free-affiliate-ad-300x250.jpg" width="300" height="250"/></div>
           </div>
         </div>
       </div>
@@ -200,11 +215,11 @@
             <p>Kate Kendall is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.</p>
           </div>
           <div class="ad-300x600 md-hidden"><img src="http://channelpunjabtv.com/wp-content/uploads/2018/05/adobe-banner.jpg" width="300" height="600"/></div>
-          <div class="ad-120x600 sm-hidden"><img src="https://cdn.business2community.com/wp-content/uploads/2015/08/amex-skyscraper-ad-example.gif.gif"/></div>
+          <div class="ad-120x600 sm-hidden md-only"><img src="https://cdn.business2community.com/wp-content/uploads/2015/08/amex-skyscraper-ad-example.gif.gif"/></div>
         </div>
       </div>
     </div>
-    <svg width="0" height="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="icon-library" width="0" height="0" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <symbol id="icon-calendar" viewBox="0 0 23 24">
           <path d="M18.01 12.91a.427.427 0 0 0 0-.602l-.636-.616a.461.461 0 0 0-.622 0l-6.137 5.946-3.04-2.946a.461.461 0 0 0-.622 0l-.636.616a.427.427 0 0 0 0 .603l3.98 3.857c.18.16.457.16.636 0l7.077-6.857zM1.77 22.287V8.57h19.46v13.715H1.77zM7.076 6a.43.43 0 0 1-.442.429H5.75A.43.43 0 0 1 5.308 6V2.143a.43.43 0 0 1 .442-.429h.885a.43.43 0 0 1 .442.429V6zm10.615 0a.43.43 0 0 1-.442.429h-.885A.43.43 0 0 1 15.923 6V2.143a.43.43 0 0 1 .442-.429h.885a.43.43 0 0 1 .442.429V6zM23 5.143c0-.938-.802-1.714-1.77-1.714h-1.768V2.143C19.462.964 18.466 0 17.25 0h-.885c-1.216 0-2.211.964-2.211 2.143v1.286H8.846V2.143C8.846.964 7.851 0 6.635 0H5.75C4.534 0 3.538.964 3.538 2.143v1.286H1.77C.802 3.429 0 4.205 0 5.143v17.143C0 23.223.802 24 1.77 24h19.46c.968 0 1.77-.777 1.77-1.714V5.143z"></path>

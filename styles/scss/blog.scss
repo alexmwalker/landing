@@ -2,11 +2,15 @@ $b-rad: 6px;
 
 @import 'basic-grid-typography';
 
+@import "gridlex-vars";
+@import "gridlex-preprocessing";
+@import "gridlex-mixins";
+@import "gridlex-classes";
+
 @import 'breaker';
-@import 'header';
+@import 'header_blog';
 @import 'footer';
 @import 'adsizes';
-
 
 @import 'article-title-unit';
 @import 'article-body-unit';
@@ -14,10 +18,7 @@ $b-rad: 6px;
 //@import 'cssgrid';
 
 
-@import "gridlex-vars";
-@import "gridlex-preprocessing";
-@import "gridlex-mixins";
-@import "gridlex-classes";
+
 
 //@import 'panels';
 
@@ -39,8 +40,6 @@ body {
   margin: 0 auto;
 }
 
-
-
 .imageshadow {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -48,14 +47,14 @@ body {
 
 /* temp column borders */
 
-
+/*
 .container [class*="grid"] {
   margin: 0 1rem;
   outline: 1px red dashed;
   [class*="col-"]{
   outline: 1px cyan dashed;
   }
-}
+}*/
 
 
 /* ========   Switching up the font sizing for books on the phone   ============= */

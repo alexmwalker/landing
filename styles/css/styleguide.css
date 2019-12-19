@@ -191,6 +191,7 @@ a:visited {
   line-height: calc(var(--baseline) / 2); }
 
 .hzlist {
+  /* floated list */
   list-style: none;
   line-height: calc(var(--baseline) / 2);
   float: left;
@@ -199,7 +200,7 @@ a:visited {
   padding: 0; }
   .hzlist li {
     float: left;
-    margin-right: 1rem; }
+    margin: 0 0 0 1rem; }
   .hzlist ~ p {
     clear: both; }
 
@@ -329,6 +330,7 @@ figure {
 [class*="col_"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 0 0.5rem 0;
   max-width: 100%; }
 
 [class~="col"],
@@ -1800,15 +1802,6 @@ figure {
 @media (max-width: 36em) {
   [class*="xs-hidden"] {
     display: none; } }
-
-.align-r {
-  text-align: right; }
-
-.align-l {
-  text-align: left; }
-
-.align-c {
-  text-align: center; }
 
 .panel {
   padding: calc(var(--baseline) * 2) 0 calc(var(--baseline) * 1.5);

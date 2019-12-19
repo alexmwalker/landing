@@ -12,13 +12,19 @@
   width: 100%;
   border-left: 1px #999 solid;
   h4, h5, ul{
-    margin: 0 1rem calc(var(--baseline) /2);
-    
+    margin: 0 0rem calc(var(--baseline) /2);
+    //outline: 1px red dashed;
   }
   p{
     font-size: calc(1rem / var(--typescale) / var(--typescale));
     line-height: calc(var(--baseline) / 2);
     margin: 0 0 calc(var(--baseline) /1) 1rem;
+  }
+  li {
+    //outline: 1px green dashed;
+    svg{
+    height: calc(var(--baseline) /1)
+    }
   }
 }
 .avatar{

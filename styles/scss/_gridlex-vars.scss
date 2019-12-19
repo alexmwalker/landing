@@ -6,7 +6,8 @@ $gl-gridName:   grid !default;
 $gl-colName:   col !default;
 $gl-attributeName: class !default;
 $gl-gutter:    1rem !default; // Total left + right
-$gl-gutter-vertical:    calc(var(--baseline) /1) !default;
+//$gl-gutter-vertical: calc(var(--baseline) /2) !default; 
+$gl-gutter-vertical: 0 !default; 
 $gl-mq-width: 'max-width' !default;
 $gl-mq-list: (
         lg: 80em,

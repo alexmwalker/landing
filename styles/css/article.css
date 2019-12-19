@@ -17,6 +17,7 @@
 [class*="col_"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 0 0.5rem 0;
   max-width: 100%; }
 
 [class~="col"],
@@ -1488,15 +1489,6 @@
 @media (max-width: 36em) {
   [class*="xs-hidden"] {
     display: none; } }
-
-.align-r {
-  text-align: right; }
-
-.align-l {
-  text-align: left; }
-
-.align-c {
-  text-align: center; }
 
 .adlayer {
   background: #383232; }

@@ -1,38 +1,14 @@
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
-.showmobile, .mobilenav{
+.showmobile, .mobilenav, [class*="md-only"]{
   display: none;
 }
 
 
-@media (max-width: 60em) { /* tablet adjustments */ 
-  .bookcard .bookframe {
-    height: 24vw;
-  }
-  .container{
-    width: 98%;
-    margin: 0 1%
-  }
-}
-
 
 @media (max-width: 48em) { /* phone adjustments */ 
-  [class~="grid"] > [class*="col-12"], [class*="grid-"] > [class*="col-12"], [class*="grid_"] > [class*="col-12"] {
-    -ms-flex-preferred-size: 98%;
-    flex-basis: 98%;
-  }
 
-  #reeedr .ch-head {
-    //font-size: 13rem;
-    padding: calc(var(--baseline)*1) 0 0 0;
-  }
 
-  .landing-parent .laptop {
-    margin: calc(var(--baseline)/2) calc(var(--baseline)*1) calc(var(--baseline)*1) calc(var(--baseline)*1);
-  }
-  .landing-parent {
-    background-size: auto 100% ;
-  }
   .showmobile, .mobilenav{
     display: block;
   }
@@ -60,45 +36,6 @@ that need device level targeting. This is where we do it. */
       display: none;
   }
 
-  .result-book{
-    background: #fff;
-    text-align: center;
-    .col-12_sm-2 {
-      text-align: left;
-    }
-    .thumbframe{
-      height: calc(var(--baseline) * 3.5);
-      overflow: hidden;
-    }
-    img{
-      height: 60%;
-      width: auto;
-      margin-top: calc(var(--baseline)/2);
-    }
-    .go{
-      line-height: calc(var(--baseline) * 2);
-      height: calc(var(--baseline) * 2);
-      font-size: calc(1rem * var(--typescale) * var(--typescale));
-    }
-  }
-  .result-text blockquote {
-    background: #F8F8F8;
-    margin: 0 0 0 0;
-    border-radius: 4px;
-    max-height: calc(var(--baseline) * 3.5);
-    overflow: scroll;
-    padding: calc(var(--baseline)/4) 1rem;
-    p{
-      margin: 0;
-    }
-  }
-  .result-book .go span:before {
-    width: calc(var(--baseline) / 1);
-    height: calc(var(--baseline) / 1);
-    top: 0;
-    left: -2rem;
-  }
-
   .bookcard .bookframe {
     height: 47vw;
   }
@@ -111,6 +48,12 @@ that need device level targeting. This is where we do it. */
   }
 }
 
+@media (max-width: 64em) { /* tablet adjustments */ 
+  [class*="md-only"]{
+    outline: 3px cyan dashed;
+    display: block;
+  }
+}
 
 
 

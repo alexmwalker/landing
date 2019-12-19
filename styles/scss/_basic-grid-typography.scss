@@ -225,7 +225,7 @@ a:visited {
   align-items: stretch;
   line-height: calc(var(--baseline) / 2);
 }
-.hzlist {
+.hzlist { /* floated list */
   list-style: none;
   line-height: calc(var(--baseline) / 2);
   float:left;
@@ -234,7 +234,7 @@ a:visited {
   padding: 0;
   li{
   float:left;
-  margin-right: 1rem;
+  margin: 0 0 0 1rem ;
   
   }
   & ~ p{

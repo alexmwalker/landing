@@ -34,18 +34,29 @@
 
 
 .ad-300x600,
-.ad-728x90,
-.ad-320x100,
 .ad-300x250,
 .ad-120x600 {
   margin: calc(var(--baseline) /2) auto 0;
-
   img {
     //width: 100%;
     margin: 0 auto;
-  }
-
-  img:hover {
     opacity: 0.1;
+  }
+  img:hover {
+    opacity: 0.4;
+  }
+}
+
+
+.ad-728x90,
+.ad-320x100{
+  margin: 0 auto 0;
+  img {
+    //width: 100%;
+    margin: 0 auto;
+    opacity: 0.1;
+  }
+  img:hover {
+    opacity: 0.4;
   }
 }

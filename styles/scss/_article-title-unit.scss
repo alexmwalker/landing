@@ -2,6 +2,10 @@
   background: #333  url(../../images/art.svg?r=2) 20% 50% no-repeat;
   background-size:  120% auto;
   padding: 0 0 calc(var(--baseline) /2);
+  .hzlist li {
+    float: left;
+    margin: 0 0 calc(var(--baseline) /2) 1rem;
+  }
 }
 .titlebox{
   background: rgba(0,0,0,0.2);
