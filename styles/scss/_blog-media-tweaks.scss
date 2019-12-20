@@ -1,13 +1,11 @@
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
+
 .showmobile, .mobilenav, [class*="md-only"]{
   display: none;
 }
 
-
-
 @media (max-width: 48em) { /* phone adjustments */ 
-
 
   .showmobile, .mobilenav{
     display: block;
@@ -24,37 +22,29 @@ that need device level targeting. This is where we do it. */
       border: 2px solid #ddd;
       border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
     }
-    
-    .insetbutton{
-      padding: 1rem;
-      height: calc(var(--baseline) * 2.75);
-      width: calc(var(--baseline) * 2.75);
-    }
   }
 
-  [class*="sm-only"] {
-      display: none;
-  }
-
-  .bookcard .bookframe {
-    height: 47vw;
-  }
 } /*  <--  end of the media query  */ 
 
 
 @media (min-width: 48em) {
   [class*="sm-only"] {
-      display: block;
+    display: none;
   }
 }
 
-@media (max-width: 64em) { /* tablet adjustments */ 
+[class*="md-only"]{
+  display: none;
+}
+
+
+@media only screen 
+and (min-device-width : 48em) 
+and (max-device-width : 64em) {
+/* Styles */
   [class*="md-only"]{
     outline: 3px cyan dashed;
     display: block;
   }
 }
-
-
-
 

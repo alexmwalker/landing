@@ -8,8 +8,8 @@ $b-rad: 6px;
 @import "gridlex-classes";
 
 @import 'breaker';
-@import 'header_blog';
-@import 'footer';
+@import 'header-blog';
+@import 'footer-blog';
 @import 'adsizes';
 
 @import 'article-title-unit';
@@ -34,12 +34,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
+/*
 .container {
   max-width: 58rem;
   margin: 0 auto;
 }
-
+*/
 .imageshadow {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -87,4 +87,16 @@ body {
 }
 .align-left{
   text-align: left;
+}
+
+
+
+
+/* ------------------ Temporary scaffolding --------------------  */ 
+
+.device{
+  right: 0;
+  left: auto;
+  position: absolute!important;
+  opacity: 0.3;
 }

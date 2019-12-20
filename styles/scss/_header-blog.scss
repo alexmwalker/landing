@@ -1,5 +1,6 @@
 /* ===  HEADER === */
-$easing: .4s cubic-bezier(.45,.45,.37,1.36);
+$easing: .4s cubic-bezier(.45,.45,.37,1.36); /* overflip pop ease */
+$easing-menu: .4s cubic-bezier(0,.86,.15,1) ; 
 $text-color: #fff;
 
 .sitepoint-branding ul.nav{
@@ -69,17 +70,7 @@ $text-color: #fff;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   height: calc(var(--baseline)*2);
-  input{
-    border-radius: 5px;
-    border: 3px #333 solid;
-    line-height: calc(var(--baseline) * 1);
-    background: #ddd;
-    padding-left: 0.5rem;
-    margin-left: 1rem;
-    font-size: calc(1rem/var(--typescale));
-    &::placeholder{color:#999; font-size: calc(1rem/var(--typescale));}
-    &:focus{background: #eee;}
-    } 
+
     .hamburger{
       color: #fff
     }
@@ -98,56 +89,6 @@ $text-color: #fff;
     }
 }
 
-/* hamburger animation */
-.hamburger {
-    font: inherit;
-    display: inline-block;
-    overflow: visible;
-    text-align: right;
-    margin: calc(var(--baseline)/2) 0 0 0;
-    padding: 15px 0;
-    cursor: pointer;
-    transition-timing-function: linear;
-    transition-duration: .25s;
-    transition-property: opacity;
-    text-transform: none;
-    color: inherit;
-    border: 0;
-    background-color: transparent;
-}
-.hamburger-box {
-    position: relative;
-    display: inline-block;
-    width: 3rem;
-    height: 1rem;
-}
-.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
-    position: absolute;
-    display: block;
-    width: 2.5rem;
-    height: .3rem;
-    transition-timing-function: ease;
-    transition-duration: .35s;
-    transition-property: all;
-    border-radius: 3px;
-    background-color: #fff;
-}
-.hamburger-inner {
-    top: 50%;
-    margin-top: -2px;
-    transform: translateX(-0.5rem);
-}
-.hamburger-inner:after, .hamburger-inner:before {
-    content: "";
-    transition: bottom .1s cubic-bezier(.55,.055,.675,.19) .35s,
-      transform .45s cubic-bezier(.49,-0.32,.42,1.35);
-}
-.hamburger-inner:after {
-  transform: translateY(10px);
-}
-.hamburger-inner:before {
-  transform: translateY(-10px);
-}
 
 
 /* button */
@@ -177,42 +118,48 @@ button.pink {
   position: absolute; 
   overflow: hidden; 
   clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; 
+  height: 1px; 
+  width: 1px; 
+  margin: -1px; 
+  padding: 0; border: 0; 
 }
 
 .hamburger {
   padding: 0;
   width: 100%;
-  position:relative;
-  pointer-events:none;
+  //position: relative;
+  pointer-events: none;
   margin: 0;
-  ul {padding:0;margin:0}
+  ul {
+    padding: 0;margin: 0;
+    border-bottom: 1rem solid #000;
+    }
   li {
     list-style-type: none;
-    line-height: calc(var(--baseline)*3);
+    line-height: calc(var(--baseline) * 3);
     pointer-events: auto;
     a:link{
       color:$text-color;
       text-decoration:none;
       display: block;
-      padding: 0 2rem;
+      padding: 0rem 2rem;
       &:hover{
-        background: #f33;
+        background: #000;
       }
     }
   }
   &_input {
-    pointer-events:auto;
+    pointer-events: auto;
     @include hiddenInput;
     &:checked {
       ~ .hamburger_body {
-        width: 80%;
+        width: 100%;
+        //outline: 1px red dashed;
         display: block;
         transition: width 0s;
         ul{
           transform: translateX(0%);
-          transition: transform 0.3s ease-out;
+          transition: transform $easing-menu;
         }
       }
     }
@@ -224,11 +171,9 @@ button.pink {
     cursor: pointer;
   }
   &_body {
-    //display: none;
-    //outline: 1px greenyellow dashed;
     width: 0;
     overflow: hidden;
-    right: 2px;
+    left: 0;
     position: absolute;
     transition: width 0s linear 0.3s;
     ul{
@@ -236,17 +181,17 @@ button.pink {
       padding:0;
       background: #161616;
       box-shadow: 0 0 4px rgba(0,0,0,0.5);
-      transform: translateX(100%);
-      transition: all 0.3s ease-out;
+      transform: translateX(-100%);
+      transition: all $easing-menu;
     }
     li{
       list-style: none;
       //background: #111;
-      line-height: calc(var(--baseline)*1.5);
+      line-height: calc(var(--baseline) * 1.5);
       font-size: calc(1rem * var(--typescale));
-      margin: 0 2rem;
+      padding: 0;
       a:link{color: #ccc;}
-      a:hover{color: #fff; font-weight: 500;}
+      a:hover, a:active{color: #fff; font-weight: 500;}
       }
   }
 }
@@ -254,7 +199,7 @@ button.pink {
 .hamburger_label{
   font-size: calc(1rem * var(--typescale));
   height: calc(var(--baseline)*2);
-  width:100%;
+  width: 100%;
   pointer-events: auto;
   span{
     background: $text-color;
@@ -262,7 +207,7 @@ button.pink {
     display: block;
     float: right;
     height: 0.3rem;
-    margin: 0 0.5rem;
+    margin: 0 1.5rem 0 0.5rem;
     width: 2.5rem;
     transform-origin: 50% 50%;
     transform: translateY(1.6rem);
@@ -292,11 +237,11 @@ button.pink {
     background: transparent;
     transition: background-color  $easing;  
     &:after{
-      transform: translateY(0rem) rotate(-135deg);
+      transform: translateY(0) rotate(-135deg);
       transition: transform $easing
     }
     &:before{
-      transform: translateY(0em) rotate(135deg);
+      transform: translateY(0) rotate(135deg);
       transition: transform $easing
     }
   }

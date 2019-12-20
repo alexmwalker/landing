@@ -104,8 +104,6 @@ In small teams with fresh hires, you can pretty much guarantee most workers are 
 
 While there are still limitations with asynchronous communication and remote work in general, I believe we will see a huge shift to true freedom and flexibility with evolving work methods and tools. Asynchronous will be the cornerstone of this change
 
-* By Kate Kendall
-* https://ui-avatars.com/api/?background=0D8ABC&color=fff&rounded=true&name=elon+musk
 
 ![ad](http://localhost:7883/images/ad-sizes/AD-300x250.png)
 
