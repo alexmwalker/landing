@@ -2151,10 +2151,9 @@ that need device level targeting. This is where we do it. */
 [class*="md-only"] {
   display: none; }
 
-@media only screen and (min-device-width: 48em) and (max-device-width: 64em) {
+@media (min-width: 48em) and (max-width: 64em) {
   /* Styles */
   [class*="md-only"] {
-    outline: 3px cyan dashed;
     display: block; } }
 
 /* ===  CONSTRUCTION  CSS === */
