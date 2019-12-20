@@ -1732,17 +1732,6 @@ figure {
   [class*="xs-hidden"] {
     display: none; } }
 
-.topbanner {
-  background: #000; }
-
-.topbanner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.topbanner > *:only-child {
-  margin: auto; }
-
 /* ===  HEADER === */
 /* overflip pop ease */
 .sitepoint-branding ul.nav {
@@ -2008,21 +1997,6 @@ button.pink {
     transition: transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36);
     transition: transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36), -webkit-transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36); }
 
-/* ===  FOOTER === */
-footer.mainfooter {
-  background: #3D383E;
-  padding: calc(var(--baseline)) 0;
-  font-size: calc(1rem * var(--typescale));
-  color: #ccc; }
-  footer.mainfooter .grid-center {
-    width: 90%;
-    margin: 0 auto; }
-  footer.mainfooter ul li a {
-    color: #ddd; }
-
-.f-small {
-  font-size: calc(1rem / var(--typescale)); }
-
 .ad-300x600 {
   margin: 0 0 var(--baseline);
   width: 300px;
@@ -2133,6 +2107,21 @@ footer.mainfooter {
   border-radius: 50%;
   margin: 0 1rem calc(var(--baseline) /2) 1rem;
   float: left; }
+
+/* ===  FOOTER === */
+footer.mainfooter {
+  background: #3D383E;
+  padding: calc(var(--baseline)) 0;
+  font-size: calc(1rem * var(--typescale));
+  color: #ccc; }
+  footer.mainfooter .grid-center {
+    width: 90%;
+    margin: 0 auto; }
+  footer.mainfooter ul li a {
+    color: #ddd; }
+
+.f-small {
+  font-size: calc(1rem / var(--typescale)); }
 
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */

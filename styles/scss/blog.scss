@@ -7,14 +7,14 @@ $b-rad: 6px;
 @import "gridlex-mixins";
 @import "gridlex-classes";
 
-@import 'breaker';
-@import 'header-blog';
-@import 'footer-blog';
-@import 'adsizes';
 
+@import 'header-blog';
+
+@import 'adsizes';
 @import 'article-title-unit';
 @import 'article-body-unit';
 
+@import 'footer-blog';
 //@import 'cssgrid';
 
 
