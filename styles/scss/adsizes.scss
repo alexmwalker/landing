@@ -60,3 +60,13 @@
     opacity: 0.4;
   }
 }
+
+
+
+
+.topbanner, .footer-mobile-wrapper{
+  display: grid;
+  align-items: center;
+  background-color: #000;
+  height: calc(var(--baseline) * 4);
+}
