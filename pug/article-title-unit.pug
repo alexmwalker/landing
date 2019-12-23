@@ -1,4 +1,5 @@
 
+- var member = 0
 
 header.article-title-unit
   .container
@@ -19,11 +20,18 @@ header.article-title-unit
             a(href="#")
               img(src='images/icon-bm.svg' )
 
-      .col-4_md-5_sm-hidden
-        .ad-300x250
-          img(src='https://creativetacos.com/wp-content/uploads/2017/12/1-month-free-affiliate-ad-300x250.jpg', width='300', height='250')
 
-  
-  
+      case member
+        when 0
+          .col-4_md-5_sm-hidden
+            .ad-300x250
+              img(src='https://creativetacos.com/wp-content/uploads/2017/12/1-month-free-affiliate-ad-300x250.jpg', width='300', height='250')
+
+        default
+          .col-4_md-5_sm-hidden
+            .sp-300x250
+              h3 Member
+        
+        
 
 
