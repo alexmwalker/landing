@@ -1,3 +1,48 @@
+case member
+  when 0
+    include breaker-unit.pug
+  default
+    - break
+
+//- header-unit 
+include header-blog.pug
+
+//- Article-title-unit 
+header.article-title-unit
+  .container
+    .article-title-section.grid-center
+      .titlebox.col-8_md-7_sm-11
+        h1 The Real Future of Remote Work is Asynchronous
+        ul.hzlist
+          li By Kate Kendall
+          li Entreprenuer
+          li December 05, 2019
+          li 
+            a(href="#")
+              img(src='images/icon-fb.svg')
+          li
+            a(href="#")
+              img(src='images/icon-tw.svg')
+          li
+            a(href="#")
+              img(src='images/icon-bm.svg' )
+
+
+      case member
+        when 0
+          .col-4_md-5_sm-hidden
+            .ad-300x250
+              img(src='https://creativetacos.com/wp-content/uploads/2017/12/1-month-free-affiliate-ad-300x250.jpg', width='300', height='250')
+
+        default
+          .col-4_md-5_sm-hidden
+            .sp-300x250
+              h4 Return to your book
+              img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png')
+
+
+//- Article-body-unit 
+
 .container
   .article-body-section.grid-center
     .col-8_md-8_sm-11
@@ -19,6 +64,8 @@
               use(xlink:href='#icon-codepen', x='0', y='0', fill='#333')
         
         p Kate Kendall is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.
+
+
       case member
 
         when 0      
@@ -32,4 +79,10 @@
               img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")
         
         default
-          h5 member
+          h5 Books
+          
+          ul
+            li 
+              a(href="#") The Principles of Beautiful Web Design, 3rd Edition
+            li
+              a(href="#") HTML5 Games: Novice to Ninja

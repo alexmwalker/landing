@@ -15,7 +15,22 @@
   background-size: 300px 250px;
 }
 .sp-300x250 {
-  background: #333;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+  margin: calc(var(--baseline) /2) .75rem ;
+  padding: .88889rem 0 0;
+  h4{
+    color: #333;
+    margin: calc(var(--baseline) /2) .75rem;
+  }
+  img.cover{
+    width: 120px;
+    height: 160px;
+    margin: 0 .75rem  calc(var(--baseline) /2);
+  }
 }
 
 
@@ -47,7 +62,7 @@
   img {
     //width: 100%;
     margin: 0 auto;
-    opacity: 0.1;
+    opacity: 0.5;
   }
   img:hover {
     opacity: 1;
@@ -61,14 +76,12 @@
   img {
     //width: 100%;
     margin: 0 auto;
-    opacity: 0.1;
+    opacity: 0.5;
   }
   img:hover {
     opacity: 1;
   }
 }
-
-
 
 
 .topbanner, .footer-mobile-wrapper{

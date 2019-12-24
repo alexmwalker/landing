@@ -2013,7 +2013,20 @@ button.pink {
   background-size: 300px 250px; }
 
 .sp-300x250 {
-  background: #333; }
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  margin: calc(var(--baseline) /2) 0.75rem;
+  padding: .88889rem 0 0; }
+  .sp-300x250 h4 {
+    color: #333;
+    margin: calc(var(--baseline) /2) 0.75rem; }
+  .sp-300x250 img.cover {
+    width: 120px;
+    height: 160px;
+    margin: 0 0.75rem calc(var(--baseline) /2); }
 
 .ad-320x100 {
   width: 320px;
@@ -2038,7 +2051,7 @@ button.pink {
   .ad-300x250 img,
   .ad-120x600 img {
     margin: 0 auto;
-    opacity: 0.1; }
+    opacity: 0.5; }
   .ad-300x600 img:hover,
   .ad-300x250 img:hover,
   .ad-120x600 img:hover {
@@ -2050,7 +2063,7 @@ button.pink {
   .ad-728x90 img,
   .ad-320x100 img {
     margin: 0 auto;
-    opacity: 0.1; }
+    opacity: 0.5; }
   .ad-728x90 img:hover,
   .ad-320x100 img:hover {
     opacity: 1; }
