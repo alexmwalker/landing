@@ -96,9 +96,6 @@ h5,
   margin-bottom: calc(var(--baseline) / 2);
   font-weight: 400; }
 
-h2:first-child, h3:first-child, h4:first-child, h5:first-child {
-  margin-top: 0; }
-
 p,
 ul,
 ol,
@@ -4998,11 +4995,12 @@ footer.mainfooter {
       /* crop taller covers */
       overflow: hidden;
       width: 100%;
-      height: calc(var(--baseline) * 9);
+      height: calc(var(--baseline) * 8);
       position: relative;
       z-index: 1;
       -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
-      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+      }
       .card figure .frame:after {
         display: block;
         position: absolute;

@@ -96,6 +96,9 @@ h5,
   margin-bottom: calc(var(--baseline) / 2);
   font-weight: 400; }
 
+h2:first-child, h3:first-child, h4:first-child, h5:first-child {
+  margin-top: 0; }
+
 p,
 ul,
 ol,

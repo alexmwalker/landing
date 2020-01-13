@@ -123,6 +123,10 @@ h5,
   //text-transform: capitalize;
 }
 
+h2:first-child,h3:first-child,h4:first-child,h5:first-child{
+  margin-top: 0; // kill the top margin when first child (the container should have padding)
+}
+
 p,
 ul,
 ol,

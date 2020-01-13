@@ -138,7 +138,7 @@ button.pink {
     list-style-type: none;
     line-height: calc(var(--baseline) * 3);
     pointer-events: auto;
-    a:link{
+    a:link, a:visited{
       color:$text-color;
       text-decoration:none;
       display: block;
