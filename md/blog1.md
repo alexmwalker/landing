@@ -14,9 +14,20 @@ You can have more freedom in an office. From my beige cubicle at one of my first
 
 At the heart of this friction is the demand for real-time, synchronous communication. If we champion asynchronous as the heart of remote, what does the future of remote look like?
 
+<div class="sp-internal grid-center">
+  <div class="col-3">
+    <img src="https://d2sis3lil8ndrq.cloudfront.net/books/eacf6980-2f5e-4367-9729-9dfee3c25e3b_medium.png" class="sp-cover" />
+  </div>
+  <div class="col-7 copy">
+  <p class="is-size-h4"> Ever felt a little guilty about your CSS?<br/> Learn to write FAST, efficient, '2020-ready' code.</p>
+  <p class="small"> Get 'Modern CSS' for free.</p>
+  <div class="email-link"><input type='text' /><button class="internal"> Email me the link</button> </div>
+  </div>
+</div>
+
 ## What Is Asynchronous Communication?
 
-Typically, synchronous communication happens in real-time, where the parties are in-sync: processing and responding to messages immediately. This could be a phone call, a Slack message, or a traditional meeting. 
+Typically, synchronous communication happens in real-time, where the parties are in-sync: processing and responding to messages immediately. This could be a phone call, a Slack message, or a traditional meeting.
 
 On the other hand, asynchronous communication allows a message to be transferred and received as one’s schedule permits. Asynchronous communication could be an email, writing notes in a task management app, or leaving a voice message for someone to listen to when they have the chance. Each method has its pros and cons.
 
