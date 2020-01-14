@@ -2125,8 +2125,8 @@ a.resume {
     background-size: cover; }
   .sp-internal .sp-cover {
     height: calc(var(--baseline)*6);
-    -webkit-box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
-    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1); }
+    -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2); }
 
 .email-link input {
   width: 50%; }
