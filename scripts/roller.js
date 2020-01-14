@@ -4,31 +4,37 @@
 console.log('Hi there!');
 
 var rollersonpage = document.querySelectorAll("div.rollerdoor"); // get all the rollerdoors on the page
-var imagesinrollers = document.querySelectorAll("div.rollerdoor img");  // and a seperate list of the images inside them
+//var imagesinrollers = document.querySelectorAll("div.rollerdoor img");  // and a seperate list of the images inside them
+
 var countRollers = rollersonpage.length; // count them
-var countRollerimages = rollersonpage.length; // count these
+//var countRollerimages = rollersonpage.length; // count these
 var viewportHeight = window.innerHeight; // measure the viewport
 var halfheight = viewportHeight/2; // trigger point is halfway down viewport height
+
+var rollerHeights = []; // roller haights array
 var imageheight = []; // set up an array for ad image heights
 var rollerTop = []; // an array for the offsetTop values of the Rollers
-var triggerLock = []; // an array for the position of the bottom of each image - so we know when to lock the roller height 
+var triggerLock = []; // an array for the position of the bottom of each Roller unit - so we know when to lock the roller height 
 
 /* FEEDBACK */
-/*
+
 console.log('Rollers on page: '+countRollers);
-console.log('Roller images on page: '+countRollerimages);
+//console.log('Roller images on page: '+countRollerimages);
 console.log('Viewport Height on page: '+viewportHeight+'px');
-*/
+
 
 
 // WRITE SOME SIMPLER ARRAYS TO WORK WITH 
 for (var i = 0, len = countRollers; i < len; i++) {
-  imageheight[i] = imagesinrollers[i].height;    // Ad image heights
+  rollerHeights[i] = rollersonpage[i].height;    // Ad image heights
+  console.log(rollersonpage[1].height);
   rollerTop[i] = rollersonpage[i].offsetTop;     // Pixels from top of page to each Roller
   triggerLock[i] = rollerTop[i] + imageheight[i] + 20;
+  //console.log('Rollerdooor Height #:'+i+' :'+rollerHeights[i]+'px');
+  
 } 
 
-
+/*
 let scrollpos = window.scrollY
 //const header = document.querySelector("nav")
 //const header_height = header.offsetHeight
@@ -68,3 +74,4 @@ window.addEventListener('scroll', function() {
   //console.log('Scrollpos: ' + scrollpos);
 })
 
+*/

@@ -55,11 +55,13 @@ a.resume{
 
 .sp-internal{
   //outline: 1px red dashed;
-  padding: calc(var(--baseline)/2) 0;
-  margin-bottom: calc(var(--baseline)*2);
+  //padding: calc(var(--baseline)*1) 0;
+  margin-bottom: calc(var(--baseline)*1);
   position: relative;
-  .copy{
-    //margin-top: calc(var(--baseline)/2);
+  overflow: hidden;
+  //height: 0;
+  .wrapper{
+    margin: calc(var(--baseline)*1) 0;
   }
   &:before, &:after{
     display: block;
@@ -70,12 +72,12 @@ a.resume{
     //outline: 1px red dashed;
     background-image: url("data:image/svg+xml,%3Csvg width='1155' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath fill='url(%23paint0_radial)' d='M0 13h1155v26H0z'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='matrix(0 13 -577.5 0 577.5 26)'%3E%3Cstop stop-color='%23D8D8D8'/%3E%3Cstop offset='1' stop-color='%23D8D8D8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0h1155v26H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
     background-size: cover;
-    top: calc(var(--baseline)/-1);
+    top: 0;
     left: 0;
   }
   &:after{
     top: auto;
-    bottom: calc(var(--baseline)/-1);
+    bottom: 0;
     background-image: url("data:image/svg+xml,%3Csvg width='1155' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath fill='url(%23paint0_radial)' d='M0-13h1155v26H0z'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='matrix(0 13 -577.5 0 577.5 0)'%3E%3Cstop stop-color='%23D8D8D8'/%3E%3Cstop offset='1' stop-color='%23D8D8D8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0h1155v26H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
     background-size: cover;  
   }
@@ -85,8 +87,9 @@ a.resume{
     //height: calc(var(--baseline)*6);
     box-shadow: .25rem .25rem .5rem rgba(0,0,0,0.2);
   }
-  
 }
+
+
 .email-link{
   input{
     width: 50%;

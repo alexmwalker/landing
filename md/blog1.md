@@ -14,16 +14,18 @@ You can have more freedom in an office. From my beige cubicle at one of my first
 
 At the heart of this friction is the demand for real-time, synchronous communication. If we champion asynchronous as the heart of remote, what does the future of remote look like?
 
-<div class="sp-internal grid-center">
-  <div class="col-3">
-    <img src="https://d2sis3lil8ndrq.cloudfront.net/books/eacf6980-2f5e-4367-9729-9dfee3c25e3b_medium.png" class="sp-cover" />
-  </div>
-  <div class="col-7 copy">
-    <p class="is-size-h4"> Ever felt a little guilty about your CSS? Learn to write FAST, efficient, '2020-ready' code.</p>
-    <p class="small"> Get 'Modern CSS' for free.</p>
-    <div class="email-link">
-      <input type='text' />
-      <button class="internal-button"> Email me the link</button>
+<div class="sp-internal rollerdoor">
+  <div class="wrapper grid-center">
+    <div class="col-3">
+      <img src="https://d2sis3lil8ndrq.cloudfront.net/books/eacf6980-2f5e-4367-9729-9dfee3c25e3b_medium.png" class="sp-cover" />
+    </div>
+    <div class="col-7 copy">
+      <p class="is-size-h4"> Ever felt a little guilty about your CSS? Learn to write FAST, efficient, '2020-ready' code.</p>
+      <p class="small"> Get 'Modern CSS' for free.</p>
+      <div class="email-link">
+        <input type='text' />
+        <button class="internal-button"> Email me the link</button>
+      </div>
     </div>
   </div>
 </div>
@@ -47,6 +49,22 @@ Fast forward a few years when things started to reverse. I dreaded opening Slack
 In [Doist’s post on asynchronous communication](https://doist.com/blog/asynchronous-communication/), they discuss _Harvard Business Review_’s article on “Collaborative Overload”. In the past two decades, the time employees spend on collaboration has increased by 50%. Workers spend a full 80% of their workday communicating with their team, and apparently, the average Slack users sends 200 messages a day. 
 
 Collaboration and productivity don’t go in hand, and arguably, they are each other’s worst enemy. To be productive you need large stretches of time that can be used for deep, focused work. Allowing workers to nurse their own attention and attribute it at their will and leisure is one way to build up this time. 
+
+<div class="sp-internal rollerdoor">
+  <div class="wrapper grid-center">
+    <div class="col-3">
+      <img src="https://d2sis3lil8ndrq.cloudfront.net/books/b2c2ec59-ad9f-472f-8808-3e79355b600d_medium.png" class="sp-cover" />
+    </div>
+    <div class="col-7 copy">
+      <p class="is-size-h4"> Ready to start your Game Programming Career?</p>
+      <p class="small"> Get 'HTML5 Games: Novice to Ninja' for free.</p>
+      <div class="email-link">
+        <input type='text' />
+        <button class="internal-button"> Email me the link</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Meetings of the future
 
