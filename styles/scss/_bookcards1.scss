@@ -55,10 +55,11 @@ a.resume{
 
 .sp-internal{
   //outline: 1px red dashed;
-  margin-bottom: calc(var(--baseline)*1.5);
+  padding: calc(var(--baseline)/2) 0;
+  margin-bottom: calc(var(--baseline)*2);
   position: relative;
   .copy{
-    margin-top: calc(var(--baseline)/2);
+    //margin-top: calc(var(--baseline)/2);
   }
   &:before, &:after{
     display: block;
@@ -80,8 +81,8 @@ a.resume{
   }
   .sp-cover{
     //outline: 1px dotted cyan;
-    //width: 100%;
-    height: calc(var(--baseline)*6);
+    width: 90%;
+    //height: calc(var(--baseline)*6);
     box-shadow: .25rem .25rem .5rem rgba(0,0,0,0.2);
   }
   
@@ -89,13 +90,18 @@ a.resume{
 .email-link{
   input{
     width: 50%;
+    line-height: calc(var(--baseline)/2);
+    height: calc(var(--baseline)*1);
   }
 }
-.internal{
-  line-height: calc(var(--baseline) /2);
+.internal-button{
+  line-height: calc(var(--baseline)/2);
+  height: calc(var(--baseline)*1);
   background: #fff;
   border: 2px solid rgb(72, 157, 236);
+  color:rgb(72, 157, 236);
   border-radius: 4px;
   margin-left: 1rem;
-  padding: 0 2rem;
+  padding: 0 1%;
+  width: 40%;
 }

@@ -2104,10 +2104,9 @@ a.resume {
 ##########     SitePoint internal ads     ########### 
 */
 .sp-internal {
-  margin-bottom: calc(var(--baseline)*1.5);
+  padding: calc(var(--baseline)/2) 0;
+  margin-bottom: calc(var(--baseline)*2);
   position: relative; }
-  .sp-internal .copy {
-    margin-top: calc(var(--baseline)/2); }
   .sp-internal:before, .sp-internal:after {
     display: block;
     position: absolute;
@@ -2124,20 +2123,25 @@ a.resume {
     background-image: url("data:image/svg+xml,%3Csvg width='1155' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath fill='url(%23paint0_radial)' d='M0-13h1155v26H0z'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='matrix(0 13 -577.5 0 577.5 0)'%3E%3Cstop stop-color='%23D8D8D8'/%3E%3Cstop offset='1' stop-color='%23D8D8D8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0h1155v26H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
     background-size: cover; }
   .sp-internal .sp-cover {
-    height: calc(var(--baseline)*6);
+    width: 90%;
     -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2); }
 
 .email-link input {
-  width: 50%; }
+  width: 50%;
+  line-height: calc(var(--baseline)/2);
+  height: calc(var(--baseline)*1); }
 
-.internal {
-  line-height: calc(var(--baseline) /2);
+.internal-button {
+  line-height: calc(var(--baseline)/2);
+  height: calc(var(--baseline)*1);
   background: #fff;
   border: 2px solid #489dec;
+  color: #489dec;
   border-radius: 4px;
   margin-left: 1rem;
-  padding: 0 2rem; }
+  padding: 0 1%;
+  width: 40%; }
 
 .article-title-unit {
   background: #333 url(../../images/art.svg?r=2) 20% 50% no-repeat;
