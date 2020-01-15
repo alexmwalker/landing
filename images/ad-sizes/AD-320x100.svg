@@ -1,0 +1,9 @@
+<svg width="320" height="100" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="319" height="99" fill="#EFEFEF" stroke="#DCDCDC"/>
+    <line y1="-0.5" x2="334.738" y2="-0.5" transform="matrix(-0.954938 0.296804 -0.914769 -0.403978 319.654 0.300781)" stroke="#DCDCDC"/>
+    <path d="M1.07259 0.499522L320 99.5005" stroke="#DCDCDC"/>
+    <rect x="88" y="31" width="141" height="36" fill="#EFEFEF"/>
+    <text fill="#C2C2C2" xml:space="preserve" style="white-space:pre" font-family="Roboto" font-size="12" letter-spacing="0em">
+        <tspan x="99.1133" y="46.1016">Large Mobile Banner – </tspan><tspan x="125.545" y="60.1016">320 x 100 px</tspan>
+    </text>
+</svg>

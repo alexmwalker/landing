@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x=".5" y=".5" width="299" height="599" fill="#EFEFEF" stroke="#DCDCDC"/>
+  <line y1="-.5" x2="667.196" y2="-.5" transform="matrix(-.44916 .89345 -.33355 -.94273 299.675 1.805)" stroke="#DCDCDC"/>
+  <path d="M1.006 2.997L300 597.003" stroke="#DCDCDC"/>
+  <rect x="50" y="278" width="187" height="45" fill="#EFEFEF"/>
+  <text fill="#C2C2C2" style="white-space:pre" font-family="Roboto" font-size="12" letter-spacing="0em">
+    <tspan x="83.322" y="303.602">Half-Page – 300 x 600 px</tspan>
+  </text>
+</svg>

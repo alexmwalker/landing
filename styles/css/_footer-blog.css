@@ -1,0 +1,10 @@
+/* ===  FOOTER === */
+footer.mainfooter {
+  background: #3D383E;
+  padding: calc(var(--baseline)) 0 calc(var(--baseline)) 0;
+  font-size: calc(1rem * var(--typescale));
+  color: #ccc; }
+  footer.mainfooter ul li a {
+    color: #ddd; }
+
+/*# sourceMappingURL=_footer-blog.css.map */

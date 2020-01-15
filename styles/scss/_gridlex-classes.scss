@@ -15,9 +15,8 @@
 [#{$gl-attributeName}*="#{$gl-colName}-"],
 [#{$gl-attributeName}*="#{$gl-colName}_"]{
   box-sizing: border-box;
-  //padding: 0 ($gl-gutter/2) $gl-gutter-vertical;
+  padding: 0 ($gl-gutter/2) $gl-gutter-vertical;
   max-width: 100%;
-  //outline: 2px orange dotted;
 }
 // JUST "COL" & "COL_"
 [#{$gl-attributeName}~="#{$gl-colName}"],
@@ -178,14 +177,4 @@
       display: none;
     }
   }
-}
-
-.align-r{
-  text-align: right;
-}
-.align-l{
-  text-align: left;
-}
-.align-c{
-  text-align: center;
 }

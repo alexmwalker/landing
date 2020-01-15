@@ -1,0 +1,19 @@
+/* ===  FOOTER === */
+
+footer.mainfooter {
+  background: #3D383E;
+  padding: calc(var(--baseline)) 0;
+  font-size: calc(1rem * var(--typescale));
+  color: #ccc;
+  .grid-center{
+    //outline: 1px red dashed;
+    width: 90%;
+    margin: 0 auto;
+  }
+  ul li a{
+    color: #ddd;
+  }
+}
+.f-small{
+  font-size: calc(1rem / var(--typescale));
+}

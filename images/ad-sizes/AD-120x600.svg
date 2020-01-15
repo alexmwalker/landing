@@ -1,0 +1,7 @@
+<svg width="120" height="600" viewBox="0 0 120 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="119" height="599" fill="#EFEFEF" stroke="#DCDCDC"/>
+<path d="M119.31 1.32547L0.689758 599.116" stroke="#DCDCDC"/>
+<path d="M0.689697 1.32544L119.31 598.674" stroke="#DCDCDC"/>
+<rect x="2" y="278" width="115" height="45" fill="#EFEFEF"/>
+<text fill="#C2C2C2" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="12" letter-spacing="0em"><tspan x="29.2684" y="296.602">Skyscraper &#10;</tspan><tspan x="27.7332" y="310.602">120 x 600px</tspan></text>
+</svg>

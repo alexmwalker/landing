@@ -1,0 +1,113 @@
+.sp-300x250 {
+  background: #fff;
+  border-radius: 10px;
+  color: #333;
+  -webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+  margin: calc(var(--baseline)/2) .75rem ;
+  padding: .88889rem 0 0;
+  .inner{
+    margin: 0 1rem  calc(var(--baseline) /2);
+  }
+}
+
+
+
+figure.cover{
+  position: relative;
+  margin: 0 0 calc(var(--baseline)/2);
+  //outline: 1px red dashed;
+  margin-right: calc(var(--baseline) /2);
+  //height: calc(var(--baseline) * 8);
+  float: left;
+  &:before { 
+    display: block;
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg width='29' height='50' viewBox='0 0 29 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 47V1H28V47L14.3043 36.3846L1 47Z' fill='%2382C472' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    //outline: 1px orange dashed;
+    content: '';
+    width: calc(var(--baseline) /1);
+    height: calc(var(--baseline) *2);
+    top: -2%;
+    left: 7%;
+    z-index: 100;
+  }
+  img{
+    //width: 70%;
+    height: 190px;
+    //outline: 1px purple dashed; 
+  }
+
+}
+
+a.resume{
+  color: #fff;
+  background: #0f0;
+}
+
+
+/*
+##########     SitePoint internal ads     ########### 
+*/
+
+.sp-internal{
+  //outline: 1px red dotted;
+  //padding: calc(var(--baseline)*1) 0;
+  margin-bottom: calc(var(--baseline)*1);
+  overflow: hidden;
+  position: relative;
+  //height: 0;
+  .wrapper{
+    position: relative;
+    //outline: 1px cyan dashed;
+    //margin: calc(var(--baseline)*1) 0;
+    padding: calc(var(--baseline)*1.5) 0;
+    &:before, &:after{
+      display: block;
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: calc(var(--baseline)/2);
+      //outline: 1px red dashed;
+      background-image: url("data:image/svg+xml,%3Csvg width='1155' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath fill='url(%23paint0_radial)' d='M0 13h1155v26H0z'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='matrix(0 13 -577.5 0 577.5 26)'%3E%3Cstop stop-color='%23D8D8D8'/%3E%3Cstop offset='1' stop-color='%23D8D8D8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0h1155v26H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      background-size: cover;
+      top: 0;
+      left: 0;
+    }
+    &:after{
+      top: auto;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='1155' height='26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath fill='url(%23paint0_radial)' d='M0-13h1155v26H0z'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='matrix(0 13 -577.5 0 577.5 0)'%3E%3Cstop stop-color='%23D8D8D8'/%3E%3Cstop offset='1' stop-color='%23D8D8D8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0h1155v26H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      background-size: cover;  
+    }
+  }
+  .sp-cover{
+    //outline: 1px dotted cyan;
+    width: 90%;
+    //height: calc(var(--baseline)*6);
+    box-shadow: .25rem .25rem .5rem rgba(0,0,0,0.2);
+  }
+}
+
+
+.email-link{
+  input{
+    width: 50%;
+    line-height: calc(var(--baseline)/2);
+    height: calc(var(--baseline)*1);
+  }
+}
+.internal-button{
+  line-height: calc(var(--baseline)/2);
+  height: calc(var(--baseline)*1);
+  background: #fff;
+  border: 2px solid rgb(72, 157, 236);
+  color:rgb(72, 157, 236);
+  border-radius: 4px;
+  margin-left: 1rem;
+  padding: 0 1%;
+  width: 40%;
+}

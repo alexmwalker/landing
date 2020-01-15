@@ -23,7 +23,7 @@
 
 .container {
   /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
-  max-width: 62rem;
+  max-width: 58rem;
   margin: 0 auto; }
 
 /*
@@ -77,7 +77,7 @@ h3,
   font-size: calc(var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
   margin-top: 0;
-  margin-bottom: calc(var(--baseline) / 1);
+  margin-bottom: calc(var(--baseline) / 2);
   font-weight: 400; }
 
 h4,
@@ -95,6 +95,9 @@ h5,
   margin-top: calc(var(--baseline) / 2);
   margin-bottom: calc(var(--baseline) / 2);
   font-weight: 400; }
+
+h2:first-child, h3:first-child, h4:first-child, h5:first-child {
+  margin-top: 0; }
 
 p,
 ul,
@@ -187,7 +190,22 @@ a:visited {
   justify-content: space-between;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
-  align-items: stretch; }
+  align-items: stretch;
+  line-height: calc(var(--baseline) / 2); }
+
+.hzlist {
+  /* floated list */
+  list-style: none;
+  line-height: calc(var(--baseline) / 2);
+  float: left;
+  clear: right;
+  margin: 0;
+  padding: 0; }
+  .hzlist li {
+    float: left;
+    margin: 0 0 0 1rem; }
+  .hzlist ~ p {
+    clear: both; }
 
 form {
   padding: 0;
@@ -204,6 +222,25 @@ body,
 figure {
   margin: 0;
   padding: 0; }
+
+/* Useful text classes  */
+.clearright {
+  clear: right; }
+
+.clearleft {
+  clear: left; }
+
+.clearboth {
+  clear: both; }
+
+.textcenter {
+  text-align: center; }
+
+.textleft {
+  text-align: left; }
+
+.textright {
+  text-align: right; }
 
 [class~="grid"],
 [class*="grid-"],
@@ -224,6 +261,7 @@ figure {
 [class*="col_"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 0 0.5rem 0;
   max-width: 100%; }
 
 [class~="col"],
@@ -1696,15 +1734,6 @@ figure {
   [class*="xs-hidden"] {
     display: none; } }
 
-.align-r {
-  text-align: right; }
-
-.align-l {
-  text-align: left; }
-
-.align-c {
-  text-align: center; }
-
 /* PrismJS 1.16.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
 /**
@@ -2223,7 +2252,9 @@ table {
   width: 3rem;
   height: 1rem; }
 
-.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
   position: absolute;
   display: block;
   width: 2.5rem;
@@ -2247,7 +2278,8 @@ table {
   -ms-transform: translateX(-0.5rem);
   transform: translateX(-0.5rem); }
 
-.hamburger-inner:after, .hamburger-inner:before {
+.hamburger-inner:after,
+.hamburger-inner:before {
   content: "";
   -webkit-transition: bottom 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.35s, -webkit-transform 0.45s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   transition: bottom 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.35s, -webkit-transform 0.45s cubic-bezier(0.49, -0.32, 0.42, 1.35);
@@ -2295,15 +2327,14 @@ table {
   -o-transition: all .15s ease-in;
   transition: all .15s ease-in;
   background: #232023;
-  opacity: 0;
+  opacity: 1;
   width: 100%;
-  left: 0rem;
-  margin-left: -0.0rem;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  margin-left: -1rem;
   padding-bottom: calc(var(--baseline) * 0.5);
   z-index: 2;
-  -webkit-transform: scaley(0);
-  -ms-transform: scaley(0);
-  transform: scaley(0);
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
@@ -2354,9 +2385,9 @@ table {
   -webkit-transition: all .15s ease-out;
   -o-transition: all .15s ease-out;
   transition: all .15s ease-out;
-  -webkit-transform: scaley(1);
-  -ms-transform: scaley(1);
-  transform: scaley(1); }
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0); }
 
 button.go {
   line-height: calc(var(--baseline) * 0.9);
@@ -2921,6 +2952,7 @@ li.toc-chapter {
   color: #fff;
   padding: calc(var(--baseline) / 2) 0 0;
   font-size: calc(1rem);
+  margin-bottom: calc(var(--baseline) / -2);
   -webkit-box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
   bottom: 0;
@@ -2931,14 +2963,16 @@ li.toc-chapter {
   transition: padding .5s; }
   .preview-label img {
     height: calc(var(--baseline) * 1.5);
-    margin: 0 1rem;
+    margin: 0;
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s; }
+  .preview-label p {
+    margin-bottom: 0; }
   .preview-label p.small {
     position: relative;
     top: 0;
-    margin-top: calc(var(--baseline) * -1.5);
+    margin-top: calc(var(--baseline) * -2);
     opacity: 0;
     pointer-events: none; }
   .preview-label.min {
@@ -2959,13 +2993,14 @@ li.toc-chapter {
       transition: all .5s;
       pointer-events: auto; }
 
-.cover-preview,
+.preview-label div div,
 .center {
   text-align: center; }
 
 a.membership {
   padding: 0 1rem;
-  line-height: calc(var(--baseline) * 1.0); }
+  line-height: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) * 1); }
 
 /* ===  FOOTER === */
 footer.mainfooter {
@@ -3106,7 +3141,8 @@ footer.mainfooter {
 
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
-.showmobile {
+.showmobile,
+.mobilenav {
   display: none; }
 
 @media (max-width: 60em) {
@@ -3159,7 +3195,8 @@ that need device level targeting. This is where we do it. */
     color: #fff; }
   .sitepoint-branding {
     height: calc(var(--baseline)*1); }
-  .showmobile {
+  .showmobile,
+  .mobilenav {
     display: block; }
   #reeedr .bookpanel h1 {
     display: none; }

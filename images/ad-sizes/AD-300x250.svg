@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x=".5" y="1.5" width="299" height="249" fill="#EFEFEF" stroke="#DCDCDC"/>
+    <line y1="-.5" x2="389.707" y2="-.5" transform="matrix(-.76898 .63928 -.64614 -.76322 299.675 .997)" stroke="#DCDCDC"/>
+    <path d="M1.006 1.496L300 249.747" stroke="#DCDCDC"/>
+    <rect x="90" y="99" width="114" height="56" fill="#EFEFEF"/>
+    <text fill="#C2C2C2" style="white-space:pre" font-family="Roboto" font-size="12" letter-spacing="0em">
+        <tspan x="97.664" y="124.602">Inline Rectangle – </tspan><tspan x="111.545" y="138.602">300 x 250 px</tspan>
+    </text>
+</svg>

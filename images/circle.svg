@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2">
+	
+		<circle id="mycircle" cx="50" cy="50" r="49" stroke="black" stroke-width="2" fill="red"/>
+	 
+		<script type="application/ecmascript"> <![CDATA[
+		
+			// when used as an object, we'll allow attributes to be changed by params passed in the query string
+			var paramList = ['color'];
+			var refs = [];
+			var href = document.defaultView.location.href;
+			if ( -1 != href.indexOf("?") ) {
+		    	var paramList = href.split("?")[1].split(/&|;/);
+		    	for ( var p = 0, pLen = paramList.length; pLen > p; p++ ) {
+		       		var eachParam = paramList[ p ];
+		       		var valList = eachParam.split("=");
+		       		var name = unescape(valList[0]);
+		       		var value = unescape(valList[1]);
+		       		refs[name] = value;
+		    	}
+		}
+		// do stuff with the params
+		var logo = document.getElementById("mycircle");
+		logo.setAttribute("fill", refs['color']);
+		
+		]]></script>
+	</svg>

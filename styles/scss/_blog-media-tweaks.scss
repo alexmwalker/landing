@@ -1,0 +1,48 @@
+/* While our default is to  try to scale everything relative to the  HTML{} there are elements 
+that need device level targeting. This is where we do it. */
+
+.showmobile, .mobilenav, [class*="md-only"]{
+  display: none;
+}
+
+@media (max-width: 48em) { /* phone adjustments */ 
+
+  .showmobile, .mobilenav{
+    display: block;
+  }
+  .search-big{
+    margin: 0 0 calc(var(--baseline) / 2);
+    .grid-noGutter-center{
+      padding: calc(var(--baseline) * 1.5) 0 0;
+      margin: 0;
+    }
+    input[type*="text"]{
+      font-size: calc(1rem * var(--typescale) * var(--typescale));
+      height: calc(var(--baseline) * 2.5);
+      border: 2px solid #ddd;
+      border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
+    }
+  }
+
+} /*  <--  end of the media query  */ 
+
+
+@media (min-width: 48em) {
+  [class*="sm-only"] {
+    display: none;
+  }
+}
+
+[class*="md-only"]{
+  display: none;
+}
+
+
+@media  (min-width : 48em) and (max-width : 64em) {
+/* Styles */
+  [class*="md-only"]{
+    //outline: 3px cyan dashed;
+    display: block;
+  }
+}
+

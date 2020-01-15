@@ -1,41 +1,45 @@
 /* While our default is to  try to scale everything relative to the  HTML{} there are elements 
 that need device level targeting. This is where we do it. */
-.showmobile{
+.showmobile,
+.mobilenav {
   display: none;
 }
 
 
-@media (max-width: 60em) { /* tablet adjustments */ 
- /* none right now */
+@media (max-width: 60em) {
+  /* tablet adjustments */
+  /* none right now */
 }
 
-/* ========   Switching up the heading line-height sizing for books on the phone   ============= */ 
+/* ========   Switching up the heading line-height sizing for books on the phone   ============= */
 
 @media (max-width: 48em) {
 
-  h1, .is-size1 {
+  h1,
+  .is-size1 {
     line-height: calc(var(--baseline) * 1.5);
     /* 4 grid lines */
   }
 
-  h2, .is-size2 {
+  h2,
+  .is-size2 {
     line-height: calc(var(--baseline) * 1.0);
   }
 
-  /* ========   REFORMATTING the Chapter Face page for Mobile   ============= */ 
-  
+  /* ========   REFORMATTING the Chapter Face page for Mobile   ============= */
+
   #reeedr .ch-head {
     //font-size: 13rem;
-    padding:  0;
+    padding: 0;
     margin-top: calc(var(--baseline) * 1);
-    font-size:  calc(var(--typescale) * var(--typescale) * 1rem);
+    font-size: calc(var(--typescale) * var(--typescale) * 1rem);
     line-height: calc(var(--baseline));
     margin-top: calc(var(--baseline));
     margin-right: 1rem;
     position: relative;
     height: auto;
 
-    .chapter-head{
+    .chapter-head {
       display: inline;
       line-height: calc(var(--baseline));
       margin-right: 1rem;
@@ -43,14 +47,17 @@ that need device level targeting. This is where we do it. */
       position: relative;
     }
   }
+
   #reeedr h1.chaptertitle {
     color: #345;
     margin: calc(var(--baseline) / 2) 0;
     text-align: left;
   }
+
   #reeedr .chapter .chapter-start {
     margin-top: calc(var(--baseline)*1);
   }
+
   #reeedr .ch-head:before {
     display: none;
     position: absolute;
@@ -61,12 +68,12 @@ that need device level targeting. This is where we do it. */
     top: 0;
     left: 1rem;
   }
-  
+
 
 
   .titlebar {
     line-height: calc(var(--baseline) * 2);
-    margin: 0 ;
+    margin: 0;
     color: #fff;
   }
 
@@ -74,35 +81,41 @@ that need device level targeting. This is where we do it. */
     height: calc(var(--baseline)*1);
   }
 
-  .showmobile{
+  .showmobile,
+  .mobilenav {
     display: block;
   }
 
-  #reeedr .bookpanel h1{
+
+  #reeedr .bookpanel h1 {
     display: none;
   }
-  #reeedr .bookpanel .thumbnail-book img{
-      width: 100%;
-    }
-} /*  <--  end of the MOBILE media query  */ 
+
+  #reeedr .bookpanel .thumbnail-book img {
+    width: 100%;
+  }
+}
+
+/*  <--  end of the MOBILE media query  */
 
 
 @media (min-width: 48em) {
   [class*="sm-only"] {
-      display: block;
+    display: block;
   }
 }
 
 
 /* Medium devices (tablets, 48em and up)*/
-@media (min-width: 48em) { 
+@media (min-width: 48em) {
   .titlebar {
     opacity: 0;
-    transition: all .3s ease-out;  
+    transition: all .3s ease-out;
     margin-bottom: -3rem;
     padding-top: calc(var(--baseline) * 1);
     height: calc(var(--baseline) * 2);
   }
+
   .min .titlebar {
     opacity: 1;
     transition: all .3s ease-out;
@@ -112,9 +125,12 @@ that need device level targeting. This is where we do it. */
     padding-top: 0;
   }
 
-  .sitepoint-branding { // minimize branding strip - not on mobile.
+  .sitepoint-branding {
+
+    // minimize branding strip - not on mobile.
     &.min {
       height: calc(var(--baseline) * 1);
+
       ul.nav li {
         padding: 0 1rem;
         list-style-type: none;
@@ -125,30 +141,33 @@ that need device level targeting. This is where we do it. */
   }
 
   #toolstrip {
-    display: block;  /* Note: this is hidden by default (mobile) and only display on tablet and larger */
+    display: block;
+    /* Note: this is hidden by default (mobile) and only display on tablet and larger */
   }
 
-  .bookpanel .thumbnail-book img{
-      width: 90%;
+  .bookpanel .thumbnail-book img {
+    width: 90%;
+  }
+
+  /*  TOC menu - mobile   */
+
+  #toc-anchor {
+    position: relative;
+    top: 0;
+  }
+
+  .toc-container {
+    position: relative;
+    transform: scaleY(0);
+
+    &.open {
+      transform: scaleY(1);
     }
 
-    /*  TOC menu - mobile   */
-
-    #toc-anchor{
-      position: relative;
-      top: 0;
+    .toc {
+      padding-top: calc(var(--baseline) * 1);
+      padding-bottom: calc(var(--baseline) * 1);
+      position: absolute;
     }
-    
-    .toc-container{
-      position: relative;
-      transform: scaleY(0);
-      &.open{
-        transform: scaleY(1);
-      }
-      .toc{
-        padding-top: calc(var(--baseline) * 1);
-        padding-bottom: calc(var(--baseline) * 1);
-        position: absolute;
-      }
-    }
+  }
 }

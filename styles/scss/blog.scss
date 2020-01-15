@@ -1,0 +1,103 @@
+$b-rad: 6px;
+
+@import 'basic-grid-typography';
+
+@import "gridlex-vars";
+@import "gridlex-preprocessing";
+@import "gridlex-mixins";
+@import "gridlex-classes";
+
+
+@import 'header-blog';
+
+@import 'adsizes';
+@import 'bookcards1';
+@import 'article-title-unit';
+@import 'article-body-unit';
+
+@import 'footer-blog';
+//@import 'cssgrid';
+
+
+
+
+//@import 'panels';
+
+@import 'blog-media-tweaks';
+
+// temporary
+@import 'under-construction';
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/*
+.container {
+  max-width: 58rem;
+  margin: 0 auto;
+}
+*/
+.imageshadow {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* temp column borders */
+
+/*
+.container [class*="grid"] {
+  margin: 0 1rem;
+  outline: 1px red dashed;
+  [class*="col-"]{
+  outline: 1px cyan dashed;
+  }
+}*/
+
+
+/* ========   Switching up the font sizing for books on the phone   ============= */
+
+@media (max-width: 48em) {
+
+  h1,
+  .is-size1 {
+    line-height: calc(var(--baseline) * 1.5);
+    /* 4 grid lines */
+  }
+
+  h2,
+  .is-size2 {
+    line-height: calc(var(--baseline) * 1.0);
+  }
+
+
+  .showmobile {
+    display: block;
+  }
+
+}
+
+.align-center{
+  text-align: center;
+}
+.align-right{
+  text-align: right;
+}
+.align-left{
+  text-align: left;
+}
+
+
+
+
+/* ------------------ Temporary scaffolding --------------------  */ 
+
+.device{
+  right: 0;
+  left: auto;
+  position: absolute!important;
+  opacity: 0.3;
+}
