@@ -8,12 +8,6 @@ Now, in the age of the “green dot” or “[presence prison](https://m.signalv
 
 I see this in job positions for remote roles. Companies frequently champion remote, proudly advertising their flexible cultures to only then list that candidates must be based within 60 minutes of Pacific Time Zone, that the hours are set, and standup is at 8:30am daily. One of the benefits of remote work is that it brings the world closer together and creates a level-playing field for the world’s best talent. Whether you were in Bengaluru or Berlin, you could still work with a VC-backed, cash-rich startup in San Francisco earning a solid hourly rate. If remote slowly turns into a way of working in real-time with frequent face-time, we will see less of this.
 
-And let’s not forget trust: the crux of remote culture. Companies create tools that automatically record your screen at intervals to show management or clients you’re delivering. I founded a freelance marketplace called [CloudPeeps](https://www.cloudpeeps.com/) and not recording your screen, as Upwork does, is one way we attract a different caliber of indie professional.
-
-You can have more freedom in an office. From my beige cubicle at one of my first roles, I witnessed a colleague plan a wedding over the course of many months, including numerous calls to vendors and 20 tabs open for research. Most of the team was none the wiser – this wouldn’t be the case with remote today. 
-
-At the heart of this friction is the demand for real-time, synchronous communication. If we champion asynchronous as the heart of remote, what does the future of remote look like?
-
 <div class="sp-internal rollerdoor">
   <div class="wrapper grid-center">
     <div class="col-3">
@@ -30,6 +24,12 @@ At the heart of this friction is the demand for real-time, synchronous communica
   </div>
 </div>
 
+And let’s not forget trust: the crux of remote culture. Companies create tools that automatically record your screen at intervals to show management or clients you’re delivering. I founded a freelance marketplace called [CloudPeeps](https://www.cloudpeeps.com/) and not recording your screen, as Upwork does, is one way we attract a different caliber of indie professional.
+
+You can have more freedom in an office. From my beige cubicle at one of my first roles, I witnessed a colleague plan a wedding over the course of many months, including numerous calls to vendors and 20 tabs open for research. Most of the team was none the wiser – this wouldn’t be the case with remote today. 
+
+At the heart of this friction is the demand for real-time, synchronous communication. If we champion asynchronous as the heart of remote, what does the future of remote look like?
+
 ## What Is Asynchronous Communication?
 
 Typically, synchronous communication happens in real-time, where the parties are in-sync: processing and responding to messages immediately. This could be a phone call, a Slack message, or a traditional meeting.
@@ -38,17 +38,7 @@ On the other hand, asynchronous communication allows a message to be transferred
 
 ## The Benefits of Asynchronous
 
-When the need to communicate in real-time is lessened, there are a host of benefits. You can collaborate across wider geographies and different time zones, you can cater to various types of working schedules (e.g. the night owl versus the early bird), diverse personalities (e.g. introverts versus extroverts), and have greater flexibility in communication styles. 
-
-### The attention economy
-
-When I started using Slack in 2014 for my company, I loved it. We ran internal team communication on Slack and left email for external queries. My once-crazy inbox started becoming more manageable, and getting to inbox zero was frequently achievable. It seemed like the future was here and remote work was catapulted into the mainstream.
-
-Fast forward a few years when things started to reverse. I dreaded opening Slack in the morning: “It starts,” I’d breathe as I clicked on the red-notification-stamped colorful logo, bracing myself for the bombardment of messages from all over the world. Forget participating in additional Slack channels and groups – managing one team was enough. At least if you’re a manager in a physical office you can close the door. With Slack, my virtual office was open 24/7 and anyone could contact me whenever. As a startup founder, you are still a maker as well as a manager, so focus time for deep thinking and work is key. While you can encourage people to use messaging apps mindfully, there is still an expectation that responses need to happen in real-time. 
-
-In [Doist’s post on asynchronous communication](https://doist.com/blog/asynchronous-communication/), they discuss _Harvard Business Review_’s article on “Collaborative Overload”. In the past two decades, the time employees spend on collaboration has increased by 50%. Workers spend a full 80% of their workday communicating with their team, and apparently, the average Slack users sends 200 messages a day. 
-
-Collaboration and productivity don’t go in hand, and arguably, they are each other’s worst enemy. To be productive you need large stretches of time that can be used for deep, focused work. Allowing workers to nurse their own attention and attribute it at their will and leisure is one way to build up this time. 
+When the need to communicate in real-time is lessened, there are a host of benefits. You can collaborate across wider geographies and different time zones, you can cater to various types of working schedules (e.g. the night owl versus the early bird), diverse personalities (e.g. introverts versus extroverts), and have greater flexibility in communication styles.
 
 <div class="sp-internal rollerdoor">
   <div class="wrapper grid-center">
@@ -65,6 +55,18 @@ Collaboration and productivity don’t go in hand, and arguably, they are each o
     </div>
   </div>
 </div>
+
+### The attention economy
+
+When I started using Slack in 2014 for my company, I loved it. We ran internal team communication on Slack and left email for external queries. My once-crazy inbox started becoming more manageable, and getting to inbox zero was frequently achievable. It seemed like the future was here and remote work was catapulted into the mainstream.
+
+Fast forward a few years when things started to reverse. I dreaded opening Slack in the morning: “It starts,” I’d breathe as I clicked on the red-notification-stamped colorful logo, bracing myself for the bombardment of messages from all over the world. Forget participating in additional Slack channels and groups – managing one team was enough. At least if you’re a manager in a physical office you can close the door. With Slack, my virtual office was open 24/7 and anyone could contact me whenever. As a startup founder, you are still a maker as well as a manager, so focus time for deep thinking and work is key. While you can encourage people to use messaging apps mindfully, there is still an expectation that responses need to happen in real-time. 
+
+In [Doist’s post on asynchronous communication](https://doist.com/blog/asynchronous-communication/), they discuss _Harvard Business Review_’s article on “Collaborative Overload”. In the past two decades, the time employees spend on collaboration has increased by 50%. Workers spend a full 80% of their workday communicating with their team, and apparently, the average Slack users sends 200 messages a day. 
+
+Collaboration and productivity don’t go in hand, and arguably, they are each other’s worst enemy. To be productive you need large stretches of time that can be used for deep, focused work. Allowing workers to nurse their own attention and attribute it at their will and leisure is one way to build up this time. 
+
+
 
 ### Meetings of the future
 
