@@ -12,7 +12,6 @@ var viewportHeight = parseInt(window.innerHeight); // measure the viewport
 var viewportTrigger = viewportHeight*0.75; // trigger point within the viewport height
 
 var wrapperHeights = []; // roller heights array
-var imageheight = []; // set up an array for ad image heights
 var rollerTop = []; // an array for the offsetTop values of the Rollers
 var triggerLock = []; // an array for the position of the bottom edge of each Roller unit - so we know when to lock the roller height 
 let scrollpos = window.scrollY;
@@ -86,3 +85,31 @@ window.addEventListener('resize', measureAndSetup);
 //window.onresize = console.log('Running measureAndSetup on resize');
 
 
+
+
+function properInjector(){ // #####  This function isn't finished yet !!! 
+
+  var newAd = new Image(); // Ad Image constructor
+  newAd.src = 'https://creativetacos.com/wp-content/uploads/2017/12/1-month-free-affiliate-ad-300x250.jpg';
+  newAd.alt = 'alt';
+  newAd.width = 300;
+  newAd.height = 250;
+  console.log("newAd -->" + newAd);
+
+  // Get the first child node of an <ul> element
+  var targetFallback = document.getElementById("ad-300x250");
+
+  document.querySelector('#ad-300x250').appendChild(status.online ? up : down);
+  console.log("Here -->" + targetFallback);
+
+  // Jug it into the parent element
+  //targetFallback.replaceChild(newAd, targetFallback.childNodes[0]);
+
+
+  // Replace the first child node of <ul> with the newly created text node
+  //targetFallback.replaceChild(newAd, targetFallback.childNodes[0]);
+  //targetFallback.appendChild(newAd);
+// Note: This example replaces only the Text node "Coffee" with a Text node "Water"
+}
+
+properInjector();

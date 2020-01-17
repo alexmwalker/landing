@@ -29,23 +29,16 @@ header.article-title-unit
 
 
       case member
-        when 0
+        when 0 /* not member */
           .col-4_md-5_sm-hidden
-            .ad-300x250
-              img(src='https://creativetacos.com/wp-content/uploads/2017/12/1-month-free-affiliate-ad-300x250.jpg', width='300', height='250')
+            #ad-300x250.ad-300x250
+              include fallback-300x250
+                //img(src='https://creativetacos.com/wp-content/uploads/2017/12/1-month-free-affiliate-ad-300x250.jpg', width='300', height='250')
 
-        default
+        default 
           .col-4_md-5_sm-hidden
             .sp-300x250
-              .inner
-                h5 Currently reading...
-                figure.cover.opened
-                  img(src='https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png')
-                ul
-                  li.small 13% complete
-                  li.small Last session: 23 days ago
-                
-                a.resume(href='#') Resume
+              include current-bookmark
 
 //- Article-body-unit 
 
