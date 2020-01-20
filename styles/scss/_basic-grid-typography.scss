@@ -25,7 +25,6 @@
 
   font-family: Roboto, sans-serif;
   font-weight: 300;
-
 }
 
 
@@ -34,7 +33,8 @@
   /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
   //width: 62rem;
   max-width: 58rem;
-  margin: 0 auto;
+  margin: 0 auto!important;
+  //outline: 1px red dashed;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500');

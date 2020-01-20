@@ -6,15 +6,18 @@
   box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
   border: 1px solid #eee;
   margin: calc(var(--baseline)/2) .75rem ;
-  padding: .88889rem 0 0;
+  padding: calc(var(--baseline)/2) 0 0;
   
 }
 
 .inner{
-  padding-top: calc(var(--baseline) /2);
+  //padding-top: calc(var(--baseline) /2);
   margin: calc(var(--baseline) /2) 1rem  ;
   color: #333;
   //outline: 1px red dashed;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 figure.cover{
@@ -24,7 +27,7 @@ figure.cover{
   margin-right: calc(var(--baseline) /2);
   //height: calc(var(--baseline) * 8);
   float: left;
-  width: 50%;
+  width: 40%;
   &.opened:before { // bookmark overlay
     display: block;
     position: absolute;
@@ -50,8 +53,10 @@ figure.cover{
   a.resume {
     backface-visibility: hidden;
     line-height: calc(var(--baseline) /1);
-    position: relative;
+    //position: relative;
     cursor: pointer;
+    width: 80%;
+    text-align: center;
     display: inline-block;
     white-space: nowrap;
     background: #ff8a26;

@@ -26,7 +26,7 @@
 .container {
   /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
   max-width: 58rem;
-  margin: 0 auto !important;
+  margin: 0 auto;
 }
 
 /*
@@ -2356,69 +2356,69 @@ button.pink {
   transition: transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36), -webkit-transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36);
 }
 
-.component-300x600 {
+.ad-300x600 {
   margin: 0 0 var(--baseline);
   width: 300px;
   height: 600px;
-  background: #fff;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 600' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='.5' y='.5' width='299' height='599' fill='%23EFEFEF' stroke='%23DCDCDC'/%3E%3Cline y1='-.5' x2='667.196' y2='-.5' transform='matrix(-.44916 .89345 -.33355 -.94273 299.675 1.805)' stroke='%23DCDCDC'/%3E%3Cpath d='M1.006 2.997L300 597.003' stroke='%23DCDCDC'/%3E%3Crect x='50' y='278' width='187' height='45' fill='%23EFEFEF'/%3E%3Ctext fill='%23C2C2C2' style='white-space:pre' font-family='Roboto' font-size='12' letter-spacing='0em'%3E%3Ctspan x='83.322' y='303.602'%3EHalf-Page – 300 x 600 px%3C/tspan%3E%3C/text%3E%3C/svg%3E%0A");
 }
 
-.component-300x250, .sp-300x250 {
+.ad-300x250, .sp-300x250 {
   margin: calc(var(--baseline) /2) auto 0;
   width: 300px;
   height: 250px;
-  position: relative;
+  /* min-height: calc(var(--baseline) *8); */
   background: #fff;
   background-repeat: no-repeat;
   background-size: 300px 250px;
 }
 
-.component-320x100 {
+.ad-320x100 {
   width: 320px;
   height: 100px;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 320 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='.5' y='.5' width='319' height='99' fill='%23EFEFEF' stroke='%23DCDCDC'/%3E%3Cline y1='-.5' x2='334.738' y2='-.5' transform='matrix(-.95494 .2968 -.91477 -.40398 319.654 .3)' stroke='%23DCDCDC'/%3E%3Cpath d='M1.073.5L320 99.5' stroke='%23DCDCDC'/%3E%3Crect x='88' y='31' width='141' height='36' fill='%23EFEFEF'/%3E%3Ctext fill='%23C2C2C2' style='white-space:pre' font-family='Roboto' font-size='12' letter-spacing='0em'%3E%3Ctspan x='99.113' y='46.102'%3ELarge Mobile Banner – %3C/tspan%3E%3Ctspan x='125.545' y='60.102'%3E320 x 100 px%3C/tspan%3E%3C/text%3E%3C/svg%3E%0A");
 }
 
-.component-728x90 {
+.ad-728x90 {
   width: 728px;
   height: 90px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 728 90'%3E%3Cpath fill='%23EFEFEF' stroke='%23DCDCDC' d='M.5.5h727v89H.5z'/%3E%3Cpath stroke='%23DCDCDC' stroke-width='2' d='M727 1L1 89M1.5 1L727 89'/%3E%3Cpath fill='%23EFEFEF' d='M218 35h277v20H218z'/%3E%3Ctext fill='%23C2C2C2' font-family='Roboto' font-size='12' letter-spacing='0em' style='white-space:pre'%3E%3Ctspan x='300' y='50'%3ELeaderboard – 728 x 90px%3C/tspan%3E%3C/text%3E%3C/svg%3E");
 }
 
-.component-120x600 {
+.ad-120x600 {
   width: 120px;
   height: 600px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 120 600'%3E%3Cpath fill='%23EFEFEF' stroke='%23DCDCDC' d='M.5.5h119v599H.5z'/%3E%3Cpath stroke='%23DCDCDC' d='M119.31 1.325L.69 599.116M.69 1.325l118.62 597.349'/%3E%3Cpath fill='%23EFEFEF' d='M2 278h115v45H2z'/%3E%3Ctext fill='%23C2C2C2' font-family='Roboto' font-size='12' letter-spacing='0em' style='white-space:pre'%3E%3Ctspan x='29.268' y='296.602'%3ESkyscraper %3C/tspan%3E%3Ctspan x='27.733' y='310.602'%3E120 x 600px%3C/tspan%3E%3C/text%3E%3C/svg%3E");
 }
 
-.component-300x600,
-.component-300x250,
-.component-120x600 {
+.ad-300x600,
+.ad-300x250,
+.ad-120x600 {
   margin: calc(var(--baseline) /2) auto 0;
 }
-.component-300x600 img,
-.component-300x250 img,
-.component-120x600 img {
+.ad-300x600 img,
+.ad-300x250 img,
+.ad-120x600 img {
   margin: 0 auto;
+  outline: 1px #faa dashed;
 }
-.component-300x600 img:hover,
-.component-300x250 img:hover,
-.component-120x600 img:hover {
+.ad-300x600 img:hover,
+.ad-300x250 img:hover,
+.ad-120x600 img:hover {
   opacity: 1;
 }
 
-.component-728x90,
-.component-320x100 {
+.ad-728x90,
+.ad-320x100 {
   margin: 0 auto 0;
 }
-.component-728x90 img,
-.component-320x100 img {
+.ad-728x90 img,
+.ad-320x100 img {
   margin: 0 auto;
   opacity: 0.5;
 }
-.component-728x90 img:hover,
-.component-320x100 img:hover {
+.ad-728x90 img:hover,
+.ad-320x100 img:hover {
   opacity: 1;
 }
 
@@ -2432,13 +2432,6 @@ button.pink {
   height: calc(var(--baseline) * 4);
 }
 
-.bullseye {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
 .sp-300x250 {
   background: #fff;
   border-radius: 10px;
@@ -2447,15 +2440,13 @@ button.pink {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid #eee;
   margin: calc(var(--baseline)/2) 0.75rem;
-  padding: calc(var(--baseline)/2) 0 0;
+  padding: 0.88889rem 0 0;
 }
 
 .inner {
+  padding-top: calc(var(--baseline) /2);
   margin: calc(var(--baseline) /2) 1rem;
   color: #333;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 figure.cover {
@@ -2463,7 +2454,7 @@ figure.cover {
   margin: 0 0 calc(var(--baseline)/2);
   margin-right: calc(var(--baseline) /2);
   float: left;
-  width: 40%;
+  width: 50%;
 }
 figure.cover.opened:before {
   display: block;
@@ -2486,9 +2477,8 @@ a.resume {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   line-height: calc(var(--baseline) /1);
+  position: relative;
   cursor: pointer;
-  width: 80%;
-  text-align: center;
   display: inline-block;
   white-space: nowrap;
   background: #ff8a26;
