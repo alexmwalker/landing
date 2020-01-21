@@ -1,3 +1,6 @@
+.component{
+  position: relative;
+}
 .component-300x600 {
   margin: 0 0 var(--baseline);
   width: 300px;
@@ -10,7 +13,6 @@
   margin: calc(var(--baseline) /2) auto 0;
   width: 300px;
   height: 250px;
-  position: relative;
   //min-height: calc(var(--baseline) *8);
   background: #fff;
   //background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 250' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='.5' y='1.5' width='299' height='249' fill='%23EFEFEF' stroke='%23DCDCDC'/%3E%3Cline y1='-.5' x2='389.707' y2='-.5' transform='matrix(-.76898 .63928 -.64614 -.76322 299.675 .997)' stroke='%23DCDCDC'/%3E%3Cpath d='M1.006 1.496L300 249.747' stroke='%23DCDCDC'/%3E%3Crect x='90' y='99' width='114' height='56' fill='%23EFEFEF'/%3E%3Ctext fill='%23C2C2C2' style='white-space:pre' font-family='Roboto' font-size='12' letter-spacing='0em'%3E%3Ctspan x='97.664' y='124.602'%3EInline Rectangle – %3C/tspan%3E%3Ctspan x='111.545' y='138.602'%3E300 x 250 px%3C/tspan%3E%3C/text%3E%3C/svg%3E%0A");
@@ -27,7 +29,13 @@
 .component-728x90 {
   width: 728px;
   height: 90px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 728 90'%3E%3Cpath fill='%23EFEFEF' stroke='%23DCDCDC' d='M.5.5h727v89H.5z'/%3E%3Cpath stroke='%23DCDCDC' stroke-width='2' d='M727 1L1 89M1.5 1L727 89'/%3E%3Cpath fill='%23EFEFEF' d='M218 35h277v20H218z'/%3E%3Ctext fill='%23C2C2C2' font-family='Roboto' font-size='12' letter-spacing='0em' style='white-space:pre'%3E%3Ctspan x='300' y='50'%3ELeaderboard – 728 x 90px%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+  background:#fff;
+  border-radius: 4px;
+  //background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 728 90'%3E%3Cpath fill='%23EFEFEF' stroke='%23DCDCDC' d='M.5.5h727v89H.5z'/%3E%3Cpath stroke='%23DCDCDC' stroke-width='2' d='M727 1L1 89M1.5 1L727 89'/%3E%3Cpath fill='%23EFEFEF' d='M218 35h277v20H218z'/%3E%3Ctext fill='%23C2C2C2' font-family='Roboto' font-size='12' letter-spacing='0em' style='white-space:pre'%3E%3Ctspan x='300' y='50'%3ELeaderboard – 728 x 90px%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+  &.remote{
+    background:#111;
+    color: #fff;
+  }
 }
 
 .component-120x600 {
@@ -42,13 +50,10 @@
 .component-120x600 {
   margin: calc(var(--baseline) /2) auto 0;
   //outline: 2px yellow dotted;
-  img {
+  a img {
     margin: 0 auto;
     //opacity: 0.5;
     //outline: 1px rgb(33, 253, 33) dotted;
-  }
-  img:hover {
-    opacity: 1;
   }
 }
 
@@ -58,12 +63,10 @@
   margin: 0 auto 0;
   img {
     margin: 0 auto;
-    opacity: 0.5;
-  }
-  img:hover {
-    opacity: 1;
   }
 }
+
+
 
 
 .topbanner, .footer-mobile-wrapper{

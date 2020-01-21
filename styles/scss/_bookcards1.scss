@@ -1,3 +1,31 @@
+
+.inner{
+  //padding-top: calc(var(--baseline) /2);
+  //margin: calc(var(--baseline) /2) 1rem  ;
+  color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &:after{ 
+    display: block;
+    position: absolute;
+    content: 'AdBlock is on';
+    background: rgba(255,255,255,0.5);
+    padding: 0 1rem;
+    outline: 2px red dotted;
+    line-height: calc(var(--baseline) /2);
+    font-size: 7px;
+    font-weight: 700;
+    top: calc(var(--baseline) /-2);
+    right: 0;
+  }
+  .spacer{
+    outline: 1px yellow dashed;
+    margin: calc(var(--baseline)/2) .75rem ;
+  }
+}
+
 .sp-300x250 {
   background: #fff;
   border-radius: 10px;
@@ -7,47 +35,39 @@
   border: 1px solid #eee;
   margin: calc(var(--baseline)/2) .75rem ;
   padding: calc(var(--baseline)/2) 0 0;
-  
 }
 
-.inner{
-  //padding-top: calc(var(--baseline) /2);
-  margin: calc(var(--baseline) /2) 1rem  ;
-  color: #333;
-  //outline: 1px red dashed;
-  position: absolute;
-  top: 0;
-  left: 0;
+
+
+figure{
+  &.cover{ 
+    position: relative;
+    margin: 0 0 calc(var(--baseline)/2);
+    //outline: 1px red dashed;
+    margin-right: calc(var(--baseline) /2);
+    //height: calc(var(--baseline) * 8);
+    float: left;
+    width: 40%;
+    &.opened:before { // bookmark overlay
+      display: block;
+      position: absolute;
+      background-image: url("data:image/svg+xml,%3Csvg width='29' height='50' viewBox='0 0 29 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 47V1H28V47L14.3043 36.3846L1 47Z' fill='%2382C472' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      //outline: 1px orange dashed;
+      content: '';
+      width: calc(var(--baseline) /1);
+      height: calc(var(--baseline) *2);
+      top: -2%;
+      left: 60%;
+      z-index: 100;
+    }
+    img{
+      width: 100%;
+    }
+  }
 }
 
-figure.cover{
-  position: relative;
-  margin: 0 0 calc(var(--baseline)/2);
-  //outline: 1px red dashed;
-  margin-right: calc(var(--baseline) /2);
-  //height: calc(var(--baseline) * 8);
-  float: left;
-  width: 40%;
-  &.opened:before { // bookmark overlay
-    display: block;
-    position: absolute;
-    background-image: url("data:image/svg+xml,%3Csvg width='29' height='50' viewBox='0 0 29 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 47V1H28V47L14.3043 36.3846L1 47Z' fill='%2382C472' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    //outline: 1px orange dashed;
-    content: '';
-    width: calc(var(--baseline) /1);
-    height: calc(var(--baseline) *2);
-    top: -2%;
-    left: 60%;
-    z-index: 100;
-  }
-  img{
-    width: 100%;
-    //height: 190px;
-    //outline: 1px purple dashed; 
-  }
-}
 
 
   a.resume {
@@ -132,4 +152,39 @@ figure.cover{
   margin-left: 1rem;
   padding: 0 1%;
   width: 40%;
+}
+
+/* ########     SitePoint Remote - job ad   ####### */ 
+
+.remote{
+  padding: calc(var(--baseline)/2 0 0);
+  border: 1px #F2E7AE  solid;
+  .grid-center{
+    color: #fff;
+    margin-top: calc(var(--baseline)/2);
+  }
+  ul.hzlist li a{
+    color: #fff
+  }
+  img.company-brand{
+    width: 100%
+  }
+  ul.tags{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    display: flex;flex-wrap: wrap;
+    list-style: none;
+    li{
+      font-size: calc(1rem / var(--typescale) / var(--typescale)/ var(--typescale)/ var(--typescale));
+      line-height: calc(var(--baseline)/2);
+      flex-grow: 1;
+      padding: 0;
+      a{
+        color:#999;
+        background: #444;        
+        padding: 0 .25rem; 
+      }
+    }
+  }
 }

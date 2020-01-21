@@ -89,10 +89,8 @@ window.addEventListener('resize', measureAndSetup);
 
 function properInjector(){ // #####  This function isn't finished yet !!! 
 
-  
   var imgHref = document.createElement('a');
   imgHref.href = 'https://frontendmasters.com/?utm_source=css-tricks&utm_medium=website&utm_campaign=sitepoint';
-
 
   var newAd = document.createElement('img'); // Ad Image constructor
   newAd.src = 'images/ad-sizes/medibank-300x250.png';

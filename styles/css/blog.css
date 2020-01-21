@@ -66,7 +66,7 @@ h1,
   font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 2);
   /* 4 grid lines */
-  margin-top: var(--baseline);
+  margin-top: calc(var(--baseline) / 2);
   margin-bottom: var(--baseline);
   font-weight: 400;
 }
@@ -2356,6 +2356,10 @@ button.pink {
   transition: transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36), -webkit-transform 0.4s cubic-bezier(0.45, 0.45, 0.37, 1.36);
 }
 
+.component {
+  position: relative;
+}
+
 .component-300x600 {
   margin: 0 0 var(--baseline);
   width: 300px;
@@ -2368,7 +2372,6 @@ button.pink {
   margin: calc(var(--baseline) /2) auto 0;
   width: 300px;
   height: 250px;
-  position: relative;
   background: #fff;
   background-repeat: no-repeat;
   background-size: 300px 250px;
@@ -2383,7 +2386,12 @@ button.pink {
 .component-728x90 {
   width: 728px;
   height: 90px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 728 90'%3E%3Cpath fill='%23EFEFEF' stroke='%23DCDCDC' d='M.5.5h727v89H.5z'/%3E%3Cpath stroke='%23DCDCDC' stroke-width='2' d='M727 1L1 89M1.5 1L727 89'/%3E%3Cpath fill='%23EFEFEF' d='M218 35h277v20H218z'/%3E%3Ctext fill='%23C2C2C2' font-family='Roboto' font-size='12' letter-spacing='0em' style='white-space:pre'%3E%3Ctspan x='300' y='50'%3ELeaderboard – 728 x 90px%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+  background: #fff;
+  border-radius: 4px;
+}
+.component-728x90.remote {
+  background: #111;
+  color: #fff;
 }
 
 .component-120x600 {
@@ -2397,15 +2405,10 @@ button.pink {
 .component-120x600 {
   margin: calc(var(--baseline) /2) auto 0;
 }
-.component-300x600 img,
-.component-300x250 img,
-.component-120x600 img {
+.component-300x600 a img,
+.component-300x250 a img,
+.component-120x600 a img {
   margin: 0 auto;
-}
-.component-300x600 img:hover,
-.component-300x250 img:hover,
-.component-120x600 img:hover {
-  opacity: 1;
 }
 
 .component-728x90,
@@ -2415,11 +2418,6 @@ button.pink {
 .component-728x90 img,
 .component-320x100 img {
   margin: 0 auto;
-  opacity: 0.5;
-}
-.component-728x90 img:hover,
-.component-320x100 img:hover {
-  opacity: 1;
 }
 
 .topbanner, .footer-mobile-wrapper {
@@ -2439,6 +2437,31 @@ button.pink {
   z-index: 10;
 }
 
+.inner {
+  color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.inner:after {
+  display: block;
+  position: absolute;
+  content: "AdBlock is on";
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0 1rem;
+  outline: 2px red dotted;
+  line-height: calc(var(--baseline) /2);
+  font-size: 7px;
+  font-weight: 700;
+  top: calc(var(--baseline) /-2);
+  right: 0;
+}
+.inner .spacer {
+  outline: 1px yellow dashed;
+  margin: calc(var(--baseline)/2) 0.75rem;
+}
+
 .sp-300x250 {
   background: #fff;
   border-radius: 10px;
@@ -2448,14 +2471,6 @@ button.pink {
   border: 1px solid #eee;
   margin: calc(var(--baseline)/2) 0.75rem;
   padding: calc(var(--baseline)/2) 0 0;
-}
-
-.inner {
-  margin: calc(var(--baseline) /2) 1rem;
-  color: #333;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 figure.cover {
@@ -2553,6 +2568,46 @@ a.resume {
   margin-left: 1rem;
   padding: 0 1%;
   width: 40%;
+}
+
+/* ########     SitePoint Remote - job ad   ####### */
+.remote {
+  padding: calc(var(--baseline)/2 0 0);
+  border: 1px #F2E7AE solid;
+}
+.remote .grid-center {
+  color: #fff;
+  margin-top: calc(var(--baseline)/2);
+}
+.remote ul.hzlist li a {
+  color: #fff;
+}
+.remote img.company-brand {
+  width: 100%;
+}
+.remote ul.tags {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+.remote ul.tags li {
+  font-size: calc(1rem / var(--typescale) / var(--typescale)/ var(--typescale)/ var(--typescale));
+  line-height: calc(var(--baseline)/2);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+.remote ul.tags li a {
+  color: #999;
+  background: #444;
+  padding: 0 0.25rem;
 }
 
 .article-title-unit {
