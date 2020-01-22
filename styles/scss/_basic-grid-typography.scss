@@ -150,9 +150,9 @@ figcaption {
 
 .minor {
   font-size: calc(1rem / var(--typescale));
-  line-height: calc(var(--baseline) / 1);
+  line-height: calc(var(--baseline) / 1.5);
   margin-top: 0;
-  margin-bottom: calc(var(--baseline) / 1);
+  margin-bottom: calc(var(--baseline) / 2);
 }
 
 .small {

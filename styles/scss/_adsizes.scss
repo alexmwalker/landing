@@ -76,10 +76,11 @@
   height: calc(var(--baseline) * 4);
 }
 
-.bullseye{
+.flag{
   //outline: 1px purple dashed;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
 }
+

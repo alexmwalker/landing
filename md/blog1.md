@@ -10,15 +10,19 @@ I see this in job positions for remote roles. Companies frequently champion remo
 
 <div class="sp-internal rollerdoor">
   <div class="wrapper grid-center">
-    <div class="col-3">
+    <div class="col-3_sm-6">
       <img src="https://d2sis3lil8ndrq.cloudfront.net/books/eacf6980-2f5e-4367-9729-9dfee3c25e3b_medium.png" class="sp-cover" />
     </div>
-    <div class="col-7 copy">
+    <div class="col-7_sm-10 copy">
       <p class="is-size-h4"> Ever felt a little guilty about your CSS? Learn to write FAST, efficient, '2020-ready' code.</p>
       <p class="small"> Get 'Modern CSS' for free.</p>
-      <div class="email-link">
-        <input type='text' />
-        <button class="internal-button"> Email me the link</button>
+      <div class="email-link grid">
+        <div class="col-6_sm-12">
+          <input type='text' style="width:90%"/>
+        </div>
+        <div class="col-6_sm-12">
+          <button class="col-6_sm-12 internal-button"> Email me the link</button>
+        </div>
       </div>
     </div>
   </div>
@@ -42,15 +46,19 @@ When the need to communicate in real-time is lessened, there are a host of benef
 
 <div class="sp-internal rollerdoor">
   <div class="wrapper grid-center">
-    <div class="col-3">
+    <div class="col-3_sm-6">
       <img src="https://d2sis3lil8ndrq.cloudfront.net/books/b2c2ec59-ad9f-472f-8808-3e79355b600d_medium.png" class="sp-cover" />
     </div>
-    <div class="col-7 copy">
+    <div class="col-7_sm-10 copy">
       <p class="is-size-h4"> Ready to start your Game Programming Career?</p>
       <p class="small"> Get 'HTML5 Games: Novice to Ninja' for free.</p>
-      <div class="email-link">
-        <input type='text' />
-        <button class="internal-button"> Email me the link</button>
+      <div class="email-link grid">
+        <div class="col-6_sm-12">
+          <input type='text' style="width:90%"/>
+        </div>
+        <div class="col-6_sm-12">
+          <button class="col-6_sm-12 internal-button"> Email me the link</button>
+        </div>
       </div>
     </div>
   </div>

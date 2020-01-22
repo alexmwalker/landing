@@ -1,0 +1,6 @@
+var blogads = [
+  {"ad": "1", "imageSrc": "images/ad-sizes/medibank-300x250.png", "href": "https://frontendmasters.com/?utm_source=css-tricks&utm_medium=website&utm_campaign=sitepoint", "width": "300", "height": "250", "altSrc": "This is switch out"},
+  {"ad": "2", "imageSrc": "https://wholeworld.info/en/wp/wp-content/uploads/2017/03/No.13_728x90_en-1.gif", "href": "http://adobe.com", "width": "728", "height": "90", "altSrc": "Whole world"},
+  {"ad": "3", "imageSrc": "https://www.crimsondesigns.com/blog-images/2018/html-css-php-seo-jump-start-guide-tnail.jpg", "href": "https://www.crimsondesigns.com/blog/html-css-php-and-seo-jump-start-guide/", "width": "300", "height": "250", "altSrc": "tutorial"},
+  {"ad": "4", "imageSrc": "images/ad-sizes/adobe-banner-300x600.jpg", "href": "http://adobe.com", "width": "300", "height": "600", "altSrc": "Adobe"}
+]
