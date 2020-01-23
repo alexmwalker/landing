@@ -237,7 +237,7 @@ a:visited {
 }
 .hzlist li {
   float: left;
-  margin: 0 0 0 1rem;
+  margin: 0 1rem 0 0;
 }
 .hzlist ~ p {
   clear: both;
@@ -2364,8 +2364,8 @@ button.pink {
   margin: 0 0 var(--baseline);
   width: 300px;
   height: 600px;
-  background: #fff;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 600' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='.5' y='.5' width='299' height='599' fill='%23EFEFEF' stroke='%23DCDCDC'/%3E%3Cline y1='-.5' x2='667.196' y2='-.5' transform='matrix(-.44916 .89345 -.33355 -.94273 299.675 1.805)' stroke='%23DCDCDC'/%3E%3Cpath d='M1.006 2.997L300 597.003' stroke='%23DCDCDC'/%3E%3Crect x='50' y='278' width='187' height='45' fill='%23EFEFEF'/%3E%3Ctext fill='%23C2C2C2' style='white-space:pre' font-family='Roboto' font-size='12' letter-spacing='0em'%3E%3Ctspan x='83.322' y='303.602'%3EHalf-Page – 300 x 600 px%3C/tspan%3E%3C/text%3E%3C/svg%3E%0A");
+  background: #f3f3f3;
+  border: 1px solid #ddd;
 }
 
 .component-300x250, .sp-300x250 {
@@ -2403,7 +2403,7 @@ button.pink {
 .component-300x600,
 .component-300x250,
 .component-120x600 {
-  margin: calc(var(--baseline) /2) auto 0;
+  margin: calc(var(--baseline) /2) auto;
 }
 .component-300x600 a img,
 .component-300x250 a img,
@@ -2413,7 +2413,7 @@ button.pink {
 
 .component-728x90,
 .component-320x100 {
-  margin: 0 auto 0;
+  margin: 0 auto;
 }
 .component-728x90 img,
 .component-320x100 img {
@@ -2437,6 +2437,11 @@ button.pink {
   z-index: 10;
 }
 
+.break {
+  margin: calc(var(--baseline) * 1) 0;
+  color: #ddd;
+}
+
 .inner {
   color: #333;
   position: absolute;
@@ -2444,21 +2449,7 @@ button.pink {
   left: 0;
   width: 100%;
 }
-.inner:after {
-  display: block;
-  position: absolute;
-  content: "AdBlock is Probably on";
-  background: rgba(255, 255, 255, 0.5);
-  padding: 0 1rem;
-  outline: 2px red dotted;
-  line-height: calc(var(--baseline) /2);
-  font-size: 9px;
-  font-weight: 700;
-  top: 0;
-  right: 0;
-}
 .inner .spacer {
-  outline: 1px yellow dashed;
   margin: calc(var(--baseline)/2) 0.75rem;
 }
 
@@ -2629,10 +2620,28 @@ a.resume {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 7V3H1v18h20V7H11zM5 19H3v-2h2v2zm0-4H3v-2h2v2zm0-4H3V9h2v2zm0-4H3V5h2v2zm4 12H7v-2h2v2zm0-4H7v-2h2v2zm0-4H7V9h2v2zm0-4H7V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z' fill='%23999'/%3E%3C/svg%3E");
 }
 
+/* ###        Book covers         ###   */
+.cover-spine-overlay {
+  position: relative;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+.cover-spine-overlay::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.3)), color-stop(1%, rgba(255, 255, 255, 0)), color-stop(2.5%, rgba(250, 250, 250, 0.23)), color-stop(3.4%, rgba(0, 0, 0, 0.1)), color-stop(4.2%, rgba(250, 250, 250, 0.1)), color-stop(5.6%, rgba(0, 0, 0, 0.1)), color-stop(6.8%, rgba(250, 250, 250, 0.2)), color-stop(25%, transparent), color-stop(30%, transparent), to(rgba(0, 0, 0, 0.2)));
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0) 1%, rgba(250, 250, 250, 0.23) 2.5%, rgba(0, 0, 0, 0.1) 3.4%, rgba(250, 250, 250, 0.1) 4.2%, rgba(0, 0, 0, 0.1) 5.6%, rgba(250, 250, 250, 0.2) 6.8%, transparent 25%, transparent 30%, rgba(0, 0, 0, 0.2));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0) 1%, rgba(250, 250, 250, 0.23) 2.5%, rgba(0, 0, 0, 0.1) 3.4%, rgba(250, 250, 250, 0.1) 4.2%, rgba(0, 0, 0, 0.1) 5.6%, rgba(250, 250, 250, 0.2) 6.8%, transparent 25%, transparent 30%, rgba(0, 0, 0, 0.2));
+}
+
 .article-title-unit {
   background: #333 url(../../images/art.svg?r=2) 20% 50% no-repeat;
   background-size: 120% auto;
-  padding: 0 0 calc(var(--baseline) /2);
+  padding: 0;
 }
 .article-title-unit .hzlist li {
   float: left;
@@ -3053,5 +3062,30 @@ body {
   left: auto;
   position: absolute !important;
   opacity: 0.3;
+}
+
+#checker, #ad-placement {
+  position: absolute;
+  outline: 2px red dashed;
+  font-weight: 600;
+  padding-right: 1rem;
+  top: 0;
+  right: 1em;
+  white-space: nowrap;
+  content: " Adblock is off ";
+  font-size: calc(1rem / var(--typescale) / var(--typescale));
+  color: #444;
+  background: #fff;
+  text-align: right;
+  width: 9rem;
+  line-height: calc(var(--baseline) * 0.5);
+  height: calc(var(--baseline) * 0.5);
+  outline: 2px red dashed;
+}
+
+#ad-placement {
+  background: #fff;
+  width: 1rem;
+  outline: 0 none;
 }
 /*# sourceMappingURL=blog.css.map */

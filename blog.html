@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="styles/css/blog.css?r=1234"/>
   </head>
   <body class="-vr -labelling -borders">
+    <div id="checker">Ad Blocker <i>seems </i>to be on!</div>
+    <div id="ad-placement">off!</div>
     <div class="topbanner">
       <div class="container">
         <div class="grid-center">
@@ -46,7 +48,10 @@
             </div>
           </div>
           <div class="col-12 showmobile">
-            <div class="component component-320x100" id="component-320x100"><img src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg"/></div>
+            <div class="component component-320x100" id="component-320x100">
+              <div class="flag"></div>
+              <!--img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")--><img src="images/320x100-banner.jpg"/>
+            </div>
           </div>
         </div>
       </div>
@@ -99,8 +104,10 @@
             <div class="component component-300x250" id="component-300x250">
               <div class="inner">
                 <div class="spacer">
-                  <figure class="cover"><img src="images/covers/cssmaster.png"/></figure>
-                  <h5 class="minor"> <b>Ever felt a little guilty about your CSS? Learn to write FAST, efficient, '2020-ready' code.</b></h5>
+                  <figure class="cover">
+                    <div class="cover-spine-overlay"><img src="images/covers/cssmaster.png"/></div>
+                  </figure>
+                  <h5 class="minor">Ever felt guilty about your CSS? Learn to write FAST, efficient, '2020-ready' code today.</h5>
                   <button class="internal-button"> Email me a link</button>
                 </div>
               </div>
@@ -129,7 +136,7 @@
           <input type='text' style="width:90%"/>
         </div>
         <div class="col-6_sm-12">
-          <button class="col-6_sm-12 internal-button"> Email me the link</button>
+          <button class="internal-button"> Email me the link</button>
         </div>
       </div>
     </div>
@@ -156,7 +163,7 @@
           <input type='text' style="width:90%"/>
         </div>
         <div class="col-6_sm-12">
-          <button class="col-6_sm-12 internal-button"> Email me the link</button>
+          <button class="internal-button"> Email me the link</button>
         </div>
       </div>
     </div>
@@ -285,7 +292,25 @@
             </ul>
             <p>Kate Kendall is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.</p>
           </div>
-          <div class="component component-300x600 md-hidden"><img src="images/ad-sizes/adobe-banner-300x600.jpg" width="300" height="600"/></div>
+          <div class="component component-300x600 md-hidden" id="component-300x600">
+            <div class="flag"></div>
+            <div class="inner">
+              <div class="spacer">
+                <h4>New books for January!</h4>
+                <figure class="cover">
+                  <div class="cover-spine-overlay"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png"/></div>
+                </figure>
+                <h5 class="minor">"If you've been bluffing your way through JavaScript till now - time to make JavaScript <i>your </i>thing".</h5>
+                <button class="internal-button"> Email me a link</button>
+                <hr class="break"/>
+                <figure class="cover">
+                  <div class="cover-spine-overlay"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/ca8e7cc0-370b-4af2-b973-97955befbeb7_medium.png"/></div>
+                </figure>
+                <h5 class="minor">Is it possible that Microsoft makes one of the best code editors? You might not like the answer but...</h5>
+                <button class="internal-button"> Email me a link</button>
+              </div>
+            </div>
+          </div>
           <div class="component component-120x600 sm-hidden md-only"><img src="https://cdn.business2community.com/wp-content/uploads/2015/08/amex-skyscraper-ad-example.gif.gif"/></div>
           <div class="footer-mobile-wrapper sm-only">
             <div class="ad-320x100"><img src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg"/></div>

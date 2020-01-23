@@ -101,3 +101,28 @@ body {
   position: absolute!important;
   opacity: 0.3;
 }
+
+#checker, #ad-placement{
+  position: absolute;
+  outline: 2px red dashed;
+  font-weight: 600;
+  padding-right: 1rem;
+  top: 0;
+  right: 1em;
+  white-space: nowrap;
+  content: ' Adblock is off ';
+  font-size: calc(1rem / var(--typescale) / var(--typescale));
+  color: #444;
+  background: #fff;
+  text-align: right;
+  width: 9rem;
+  line-height: calc(var(--baseline) * 0.5);
+  height: calc(var(--baseline) * 0.5);
+  outline: 2px red dashed;
+
+}
+#ad-placement{
+  background: #fff;
+  width: 1rem;
+  outline: 0 none;
+}

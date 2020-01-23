@@ -104,7 +104,7 @@ var newAd = new Array();
 var targetFallback = new Array();
 
 imgHref[0] = document.createElement('a');
-imgHref[0] .href = 'https://frontendmasters.com/?utm_source=css-tricks&utm_medium=website&utm_campaign=sitepoint';
+imgHref[0].href = 'https://frontendmasters.com/?utm_source=css-tricks&utm_medium=website&utm_campaign=sitepoint';
 
 newAd[0] = document.createElement('img'); // Ad Image constructor
 newAd[0].src = 'images/ad-sizes/medibank-300x250.png';
@@ -117,16 +117,26 @@ imgHref[0].appendChild(newAd[0]);
 /* Wholeworld = 300x250 */ 
 
 imgHref[1] = document.createElement('a');
-imgHref[1] .href = 'http://adobe.com';
+imgHref[1].href = 'http://adobe.com';
 
 newAd[1] = document.createElement('img'); // Ad Image constructor
 newAd[1].src = 'https://wholeworld.info/en/wp/wp-content/uploads/2017/03/No.13_728x90_en-1.gif';
-newAd[1].alt = 'whole world';
+newAd[1].alt = 'Whole World';
 newAd[1].width = 728;
 newAd[1].height = 90;
 imgHref[1].appendChild(newAd[1]);
 
+/* Wholeworld = 300x600 */ 
 
+imgHref[2] = document.createElement('a');
+imgHref[2].href = 'http://adobe.com';
+
+newAd[2] = document.createElement('img'); // Ad Image constructor
+newAd[2].src = 'images/ad-sizes/adobe-banner-300x600.jpg';
+newAd[2].alt = 'Adobe TV';
+newAd[2].width = 300;
+newAd[2].height = 600;
+imgHref[2].appendChild(newAd[2]);
 
 
 function properInjector(){ // #####  This function isn't finished yet !!! 
@@ -138,6 +148,10 @@ function properInjector(){ // #####  This function isn't finished yet !!!
   // 728 x 90 ad replacement
   targetFallback[1] = document.querySelector('#component-728x90 .flag');
   targetFallback[1].appendChild(imgHref[1]);
+
+  // 300 x 600 ad replacement
+  targetFallback[2] = document.querySelector('#component-300x600 .flag');
+  targetFallback[2].appendChild(imgHref[2]);
 
 }
 

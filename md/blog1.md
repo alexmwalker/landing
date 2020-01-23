@@ -21,7 +21,7 @@ I see this in job positions for remote roles. Companies frequently champion remo
           <input type='text' style="width:90%"/>
         </div>
         <div class="col-6_sm-12">
-          <button class="col-6_sm-12 internal-button"> Email me the link</button>
+          <button class="internal-button"> Email me the link</button>
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@ When the need to communicate in real-time is lessened, there are a host of benef
           <input type='text' style="width:90%"/>
         </div>
         <div class="col-6_sm-12">
-          <button class="col-6_sm-12 internal-button"> Email me the link</button>
+          <button class="internal-button"> Email me the link</button>
         </div>
       </div>
     </div>
