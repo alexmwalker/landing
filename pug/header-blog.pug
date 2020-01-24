@@ -15,13 +15,13 @@ header.sitepoint-branding
         li
           a(href="/remote.html") Remote Jobs
         li.loggedin
-          a(href="/blog.html?login=1") Login
+          a(href="blog.html?login=1") Login
         li.loggedin
           a(href="/join") Join Premium
         li.loggedout
           a(href="account.html") Account
         li.loggedout
-          a(href="/blog.html?login=0") Log out
+          a(href="blog.html?login=0") Log out
     .col-8_sm-6.showmobile.hamburger 
       input#toggle-1.hamburger_input(type='checkbox', name='hamburger', value='0')
       label.hamburger_label(for='toggle-1')
@@ -36,6 +36,12 @@ header.sitepoint-branding
           li
             a(href='/library.html') Library
           li
-            a(href='#location') Login
-          li
-            a(href='#location') Join Premium
+            a(href="/remote.html") Remote Jobs
+          li.loggedin
+            a(href="blog.html?login=1") Login
+          li.loggedin
+            a(href="/join") Join Premium
+          li.loggedout
+            a(href="account.html") Account
+          li.loggedout
+            a(href="blog.html?login=0") Log out
