@@ -3,7 +3,74 @@
 
 console.log('Hi there!');
 
-/*  ##### Fat  #####     */
+/*  #########   The Ads to be injected ############  */ 
+
+
+/* MEDIBANK = 300x250 */ 
+
+var imgHref = new Array();
+var newAd = new Array();
+var targetFallback = new Array();
+
+imgHref[0] = document.createElement('a');
+imgHref[0].href = 'https://frontendmasters.com/?utm_source=css-tricks&utm_medium=website&utm_campaign=sitepoint';
+
+newAd[0] = document.createElement('img'); // Ad Image constructor
+newAd[0].src = 'images/ad-sizes/medibank-300x250.png';
+newAd[0].alt = 'This is switch out';
+newAd[0].width = 300;
+newAd[0].height = 250;
+imgHref[0].appendChild(newAd[0]);
+
+
+/* Wholeworld = 300x250 */ 
+
+imgHref[1] = document.createElement('a');
+imgHref[1].href = 'http://adobe.com';
+
+newAd[1] = document.createElement('img'); // Ad Image constructor
+newAd[1].src = 'https://wholeworld.info/en/wp/wp-content/uploads/2017/03/No.13_728x90_en-1.gif';
+newAd[1].alt = 'Whole World';
+newAd[1].width = 728;
+newAd[1].height = 90;
+imgHref[1].appendChild(newAd[1]);
+
+/* Adobe Banner = 300x600 */ 
+
+imgHref[2] = document.createElement('a');
+imgHref[2].href = 'http://adobe.com';
+
+newAd[2] = document.createElement('img'); // Ad Image constructor
+newAd[2].src = 'images/ad-sizes/adobe-banner-300x600.jpg';
+newAd[2].alt = 'Adobe TV';
+newAd[2].width = 300;
+newAd[2].height = 600;
+imgHref[2].appendChild(newAd[2]);
+
+
+/* Mimicking the Proper.io ad injector */ 
+
+function properInjector(){ // #####  It looks for a marker flag in the page and injects the ad into that spot.
+
+  // 300 x 250 ad replacement
+  targetFallback[0] = document.querySelector('#component-300x250 .flag');
+  targetFallback[0].appendChild(imgHref[0]);
+
+  // 728 x 90 ad replacement
+  targetFallback[1] = document.querySelector('#component-728x90 .flag');
+  targetFallback[1].appendChild(imgHref[1]);
+
+  // 300 x 600 ad replacement
+  targetFallback[2] = document.querySelector('#component-300x600 .flag');
+  targetFallback[2].appendChild(imgHref[2]);
+
+}
+
+
+
+
+
+/*  ##### Fakin the login by pulling a parameter from the URL  e.g. .../blog.html?login=1  #####     */
 
 var queryString = window.location.search;
 var urlParams = new URLSearchParams(queryString);
@@ -14,6 +81,10 @@ var loggedin = document.querySelector("body");
 function loggedinTest(){
   if (login == 1){
     loggedin.classList.add('newClass');
+    console.log('login:' + login);
+  } else if (login == 0){
+    properInjector();
+    console.log('login:' + login);
   }
 }
 
@@ -101,76 +172,8 @@ window.addEventListener('resize', measureAndSetup);
 //window.onresize = console.log('Running measureAndSetup on resize');
 
 
-/*  #########   The Ads to be injected ############  */ 
-
-var blog_ads = {
-  "pageTarget" : "blog",
-  "inventory" : [
-  {"ad": "1", "imageSrc": "images/ad-sizes/medibank-300x250.png", "href": "https://frontendmasters.com/?utm_source=css-tricks&utm_medium=website&utm_campaign=sitepoint", "width": "300", "height": "250", "altSrc": "This is switch out"},
-  {"ad": "2", "imageSrc": "https://wholeworld.info/en/wp/wp-content/uploads/2017/03/No.13_728x90_en-1.gif", "href": "http://adobe.com", "width": "728", "height": "90", "altSrc": "Whole world"},
-  {"ad": "3", "imageSrc": "https://www.crimsondesigns.com/blog-images/2018/html-css-php-seo-jump-start-guide-tnail.jpg", "href": "https://www.crimsondesigns.com/blog/html-css-php-and-seo-jump-start-guide/", "width": "300", "height": "250", "altSrc": "tutorial"},
-  {"ad": "4", "imageSrc": "images/ad-sizes/adobe-banner-300x600.jpg", "href": "http://adobe.com", "width": "300", "height": "600", "altSrc": "Adobe"}
-  ]
-}
-
-/* MEDIBANK = 300x250 */ 
-
-var imgHref = new Array();
-var newAd = new Array();
-var targetFallback = new Array();
-
-imgHref[0] = document.createElement('a');
-imgHref[0].href = 'https://frontendmasters.com/?utm_source=css-tricks&utm_medium=website&utm_campaign=sitepoint';
-
-newAd[0] = document.createElement('img'); // Ad Image constructor
-newAd[0].src = 'images/ad-sizes/medibank-300x250.png';
-newAd[0].alt = 'This is switch out';
-newAd[0].width = 300;
-newAd[0].height = 250;
-imgHref[0].appendChild(newAd[0]);
 
 
-/* Wholeworld = 300x250 */ 
 
-imgHref[1] = document.createElement('a');
-imgHref[1].href = 'http://adobe.com';
-
-newAd[1] = document.createElement('img'); // Ad Image constructor
-newAd[1].src = 'https://wholeworld.info/en/wp/wp-content/uploads/2017/03/No.13_728x90_en-1.gif';
-newAd[1].alt = 'Whole World';
-newAd[1].width = 728;
-newAd[1].height = 90;
-imgHref[1].appendChild(newAd[1]);
-
-/* Wholeworld = 300x600 */ 
-
-imgHref[2] = document.createElement('a');
-imgHref[2].href = 'http://adobe.com';
-
-newAd[2] = document.createElement('img'); // Ad Image constructor
-newAd[2].src = 'images/ad-sizes/adobe-banner-300x600.jpg';
-newAd[2].alt = 'Adobe TV';
-newAd[2].width = 300;
-newAd[2].height = 600;
-imgHref[2].appendChild(newAd[2]);
-
-
-function properInjector(){ // #####  This function isn't finished yet !!! 
-
-  // 300 x 250 ad replacement
-  targetFallback[0] = document.querySelector('#component-300x250 .flag');
-  targetFallback[0].appendChild(imgHref[0]);
-
-  // 728 x 90 ad replacement
-  targetFallback[1] = document.querySelector('#component-728x90 .flag');
-  targetFallback[1].appendChild(imgHref[1]);
-
-  // 300 x 600 ad replacement
-  targetFallback[2] = document.querySelector('#component-300x600 .flag');
-  targetFallback[2].appendChild(imgHref[2]);
-
-}
-
-properInjector();
 
 
