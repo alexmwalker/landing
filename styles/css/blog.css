@@ -2360,15 +2360,19 @@ button.pink {
   display: none;
 }
 
-.newClass .loggedin {
+.membership .loggedin {
   display: none;
 }
-.newClass .loggedout {
+.membership .loggedout {
   display: block;
 }
 
 .component {
   position: relative;
+}
+.component ul {
+  margin: 0;
+  padding: 0;
 }
 
 .component-300x600 {
@@ -3073,7 +3077,7 @@ body {
   opacity: 0.3;
 }
 
-#checker, #ad-placement {
+#checker, #ad-placement, #memberstatus {
   position: absolute;
   font-weight: 600;
   padding: 0 0.5rem;
@@ -3088,6 +3092,14 @@ body {
   line-height: calc(var(--baseline) * 0.5);
   height: calc(var(--baseline) * 0.5);
   outline: 2px red dashed;
+}
+
+#memberstatus {
+  display: none;
+}
+
+.membership #memberstatus {
+  display: block;
 }
 
 #ad-placement {

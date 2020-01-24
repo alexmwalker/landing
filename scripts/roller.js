@@ -80,7 +80,7 @@ console.log(login);
 var loggedin = document.querySelector("body");
 function loggedinTest(){
   if (login == 1){
-    loggedin.classList.add('newClass');
+    loggedin.classList.add('membership');
     console.log('login:' + login);
   } else if (login == 0){
     properInjector();

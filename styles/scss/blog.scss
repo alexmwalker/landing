@@ -102,7 +102,7 @@ body {
   opacity: 0.3;
 }
 
-#checker, #ad-placement{
+#checker, #ad-placement, #memberstatus{
   position: absolute;
   font-weight: 600;
   padding: 0 .5rem;
@@ -118,6 +118,12 @@ body {
   height: calc(var(--baseline) * 0.5);
   outline: 2px red dashed;
 
+}
+#memberstatus{
+  display: none;
+}
+.membership #memberstatus{
+  display: block;
 }
 #ad-placement{
   background: #fff;
