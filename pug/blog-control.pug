@@ -1,8 +1,6 @@
-case member
-  when 0
-    include breaker-unit.pug
-  default
-    - break
+
+include breaker-unit.pug
+
 
 //- header-unit 
 include header-blog.pug
@@ -28,17 +26,13 @@ header.article-title-unit
               img(src='images/icon-bm.svg' )
 
 
-      case member
-        when 0 /* not member */
-          .col-4_md-5_sm-hidden
-            #component-300x250.component.component-300x250
-              include fallback-300x250
-              .flag
+
+      .col-4_md-5_sm-hidden
+        #component-300x250.component.component-300x250
+          include current-bookmark
+          include fallback-300x250
+          .flag
                 
-        default 
-          .col-4_md-5_sm-hidden
-            .sp-300x250
-              include current-bookmark
 
 //- Article-body-unit 
 
@@ -80,7 +74,7 @@ header.article-title-unit
               img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")
         
         default
-          h5 Books
+          h5 Related Books
           
           ul
             li 

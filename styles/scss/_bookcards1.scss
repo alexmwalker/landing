@@ -26,12 +26,11 @@
 figure{
   &.cover{ 
     position: relative;
-    margin: 0 0 calc(var(--baseline)/2);
+    //margin: 0 0 calc(var(--baseline)/2);
     //outline: 1px red dashed;
-    margin-right: calc(var(--baseline) /2);
     //height: calc(var(--baseline) * 8);
     float: left;
-    width: 40%;
+    width: 100%;
     &.opened:before { // bookmark overlay
       display: block;
       position: absolute;

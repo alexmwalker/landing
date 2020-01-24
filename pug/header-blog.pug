@@ -13,9 +13,13 @@ header.sitepoint-branding
         li
           a(href="/library.html") Library
         li
-          a(href="/login") Login
-        li
+          a(href="/remote.html") Remote Jobs
+        li.loggedin
+          a(href="/blog.html?login=1") Login
+        li.loggedin
           a(href="/join") Join Premium
+        li.loggedout
+          a(href="account.html") AWalker
     .col-8_sm-6.showmobile.hamburger 
       input#toggle-1.hamburger_input(type='checkbox', name='hamburger', value='0')
       label.hamburger_label(for='toggle-1')

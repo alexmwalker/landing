@@ -9,6 +9,51 @@
     <link rel="stylesheet" type="text/css" href="styles/css/blog.css?r=1234"/>
   </head>
   <body class="vr -labelling -borders">
+    <div class="topbanner">
+      <div class="container">
+        <div class="grid-center">
+          <div class="col-12 sm-hidden">
+            <div class="component component-728x90 remote" id="component-728x90">
+              <div class="flag"></div>
+              <div class="inner">
+                <div class="grid-center">
+                  <div class="col-1"><img class="company-brand" src="images/companies/companies-ff.png"/></div>
+                  <div class="col-6">
+                    <h5>Software Developer (React Developer)</h5>
+                    <ul class="hzlist job-properties">
+                      <li class="company"> <a class="small" href="#">Mozilla</a></li>
+                      <li class="location"> <a class="small" href="#">Wordwide</a></li>
+                      <li class="postdate"> <a class="small" href="#">1 day ago</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-2 salary-range">
+                    <div class="small">$120,000 - 130,000</div>
+                  </div>
+                  <div class="col-2">
+                    <ul class="tags">
+                      <li class="html5"><a href="#">HTML5</a></li>
+                      <li class="aws"> <a href="#">AWS</a></li>
+                      <li class="java"><a href="#">Java</a></li>
+                      <li class="css"> <a href="#">CSS      </a></li>
+                      <li class="ror"><a href="#">Ruby on Rails</a></li>
+                      <li class="elm"> <a href="#">Elm     
+                          <!--a(href='https://srv.carbonads.net/ads/click/x/GTND42QUF6BIL27LC67LYKQMCAAI42QUCKBICZ3JCWSILKQUCWBIC2QKC6BI55QMCYBDEK3EHJNCLSIZ')img(src="https://modernschooler.com/site/wp-content/uploads/2018/12/art.jpg")
+                          --></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 showmobile">
+            <div class="component component-320x100" id="component-320x100">
+              <div class="flag"></div>
+              <!--img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")--><img src="images/320x100-banner.jpg"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <header class="sitepoint-branding">
       <div class="grid-center container"> 
         <div class="col-4_sm-6">
@@ -19,8 +64,10 @@
             <li> <a href="/blog.html">Blog</a></li>
             <li> <a href="/community">Community</a></li>
             <li><a href="/library.html">Library</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/join">Join Premium</a></li>
+            <li><a href="/remote.html">Remote Jobs</a></li>
+            <li class="loggedin"><a href="/blog.html?login=1">Login</a></li>
+            <li class="loggedin"><a href="/join">Join Premium</a></li>
+            <li class="loggedout"><a href="account.html">AWalker</a></li>
           </ul>
         </div>
         <div class="col-8_sm-6 showmobile hamburger"> 
@@ -54,19 +101,39 @@
             </ul>
           </div>
           <div class="col-4_md-5_sm-hidden">
-            <div class="sp-300x250">
-              <div class="inner">
-                <div class="spacer">
-                  <h5>Currently reading...</h5>
-                  <figure class="cover">
-                    <div class="cover-spine-overlay"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png"/></div>
-                  </figure>
-                  <ul>
-                    <li class="small">13% complete</li>
-                    <li class="small">Last session: 23 days ago</li>
-                  </ul><a class="resume" href="#">Resume</a>
+            <div class="component component-300x250" id="component-300x250">
+              <div class="inner loggedout">
+                <div class="spacer grid">
+                  <h5 class="minor col-12">Currently reading...</h5>
+                  <div class="col-5">
+                    <figure class="cover">
+                      <div class="cover-spine-overlay"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png"/></div>
+                    </figure>
+                  </div>
+                  <div class="col-7">
+                    <ul>
+                      <li class="small">Last session: 23 days ago</li>
+                      <li class="small">13% complete</li>
+                    </ul><a class="resume" href="#">Resume</a>
+                  </div>
                 </div>
               </div>
+              <div class="inner loggedin">
+                <div class="spacer grid">
+                  <div class="col-5">
+                    <figure class="cover">
+                      <div class="cover-spine-overlay"><img src="images/covers/cssmaster.png"/></div>
+                    </figure>
+                  </div>
+                  <div class="col-7">
+                    <h5 class="minor">Ever felt guilty about your CSS? Learn to write FAST, efficient, '2020-ready' code today.</h5>
+                  </div>
+                  <div class="col-12">
+                    <button class="internal-button"> Email me a link</button>
+                  </div>
+                </div>
+              </div>
+              <div class="flag"></div>
             </div>
           </div>
         </div>
@@ -247,7 +314,7 @@
             </ul>
             <p>Kate Kendall is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.</p>
           </div>
-          <h5>Books</h5>
+          <h5>Related Books</h5>
           <ul>
             <li> <a href="#">The Principles of Beautiful Web Design, 3rd Edition</a></li>
             <li><a href="#">HTML5 Games: Novice to Ninja</a></li>

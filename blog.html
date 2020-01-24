@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="styles/css/blog.css?r=1234"/>
   </head>
   <body class="-vr -labelling -borders">
-    <div id="checker">Ad Blocker <i>seems </i>to be on!</div>
-    <div id="ad-placement">off!</div>
+    <div id="checker">External ads <i>seems </i>to be blocked! &#128683; </div>
+    <div id="ad-placement">allowed! &#9989;</div>
     <div class="topbanner">
       <div class="container">
         <div class="grid-center">
@@ -66,8 +66,10 @@
             <li> <a href="/blog.html">Blog</a></li>
             <li> <a href="/community">Community</a></li>
             <li><a href="/library.html">Library</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/join">Join Premium</a></li>
+            <li><a href="/remote.html">Remote Jobs</a></li>
+            <li class="loggedin"><a href="/blog.html?login=1">Login</a></li>
+            <li class="loggedin"><a href="/join">Join Premium</a></li>
+            <li class="loggedout"><a href="account.html">AWalker</a></li>
           </ul>
         </div>
         <div class="col-8_sm-6 showmobile hamburger"> 
@@ -102,13 +104,35 @@
           </div>
           <div class="col-4_md-5_sm-hidden">
             <div class="component component-300x250" id="component-300x250">
-              <div class="inner">
-                <div class="spacer">
-                  <figure class="cover">
-                    <div class="cover-spine-overlay"><img src="images/covers/cssmaster.png"/></div>
-                  </figure>
-                  <h5 class="minor">Ever felt guilty about your CSS? Learn to write FAST, efficient, '2020-ready' code today.</h5>
-                  <button class="internal-button"> Email me a link</button>
+              <div class="inner loggedout">
+                <div class="spacer grid">
+                  <h5 class="minor col-12">Currently reading...</h5>
+                  <div class="col-5">
+                    <figure class="cover">
+                      <div class="cover-spine-overlay"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png"/></div>
+                    </figure>
+                  </div>
+                  <div class="col-7">
+                    <ul>
+                      <li class="small">Last session: 23 days ago</li>
+                      <li class="small">13% complete</li>
+                    </ul><a class="resume" href="#">Resume</a>
+                  </div>
+                </div>
+              </div>
+              <div class="inner loggedin">
+                <div class="spacer grid">
+                  <div class="col-5">
+                    <figure class="cover">
+                      <div class="cover-spine-overlay"><img src="images/covers/cssmaster.png"/></div>
+                    </figure>
+                  </div>
+                  <div class="col-7">
+                    <h5 class="minor">Ever felt guilty about your CSS? Learn to write FAST, efficient, '2020-ready' code today.</h5>
+                  </div>
+                  <div class="col-12">
+                    <button class="internal-button"> Email me a link</button>
+                  </div>
                 </div>
               </div>
               <div class="flag"></div>
@@ -295,19 +319,31 @@
           <div class="component component-300x600 md-hidden" id="component-300x600">
             <div class="flag"></div>
             <div class="inner">
-              <div class="spacer">
-                <h4>New books for January!</h4>
-                <figure class="cover">
-                  <div class="cover-spine-overlay"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png"/></div>
-                </figure>
-                <h5 class="minor">"If you've been bluffing your way through JavaScript till now - time to make JavaScript <i>your </i>thing".</h5>
-                <button class="internal-button"> Email me a link</button>
-                <hr class="break"/>
-                <figure class="cover">
-                  <div class="cover-spine-overlay"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/ca8e7cc0-370b-4af2-b973-97955befbeb7_medium.png"/></div>
-                </figure>
-                <h5 class="minor">Is it possible that Microsoft makes one of the best code editors? You might not like the answer but...</h5>
-                <button class="internal-button"> Email me a link</button>
+              <div class="spacer grid">
+                <h4 class="col-12">New books for January!</h4>
+                <div class="col-5">
+                  <figure class="cover">
+                    <div class="cover-spine-overlay"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png"/></div>
+                  </figure>
+                </div>
+                <div class="col-7">
+                  <h5 class="minor">"If you've been bluffing your way through JavaScript till now - time to make JavaScript <i>your </i>thing".</h5>
+                </div>
+                <div class="col-12">
+                  <button class="internal-button"> Email me a link</button>
+                  <hr class="break"/>
+                </div>
+                <div class="col-5">
+                  <figure class="cover">
+                    <div class="cover-spine-overlay"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/ca8e7cc0-370b-4af2-b973-97955befbeb7_medium.png"/></div>
+                  </figure>
+                </div>
+                <div class="col-7">
+                  <h5 class="minor">Is it possible that Microsoft makes one of the best code editors? You might not like the answer but...</h5>
+                </div>
+                <div class="col-12">
+                  <button class="internal-button"> Email me a link</button>
+                </div>
               </div>
             </div>
           </div>

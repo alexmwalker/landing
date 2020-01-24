@@ -104,18 +104,16 @@ body {
 
 #checker, #ad-placement{
   position: absolute;
-  outline: 2px red dashed;
   font-weight: 600;
-  padding-right: 1rem;
+  padding: 0 .5rem;
   top: 0;
   right: 1em;
   white-space: nowrap;
-  content: ' Adblock is off ';
   font-size: calc(1rem / var(--typescale) / var(--typescale));
   color: #444;
   background: #fff;
   text-align: right;
-  width: 9rem;
+  width: 11.5rem;
   line-height: calc(var(--baseline) * 0.5);
   height: calc(var(--baseline) * 0.5);
   outline: 2px red dashed;
@@ -123,6 +121,8 @@ body {
 }
 #ad-placement{
   background: #fff;
-  width: 1rem;
+  width: 3.3rem;
+  padding: 0 .5rem 0 .1rem;
   outline: 0 none;
+  //outline: 2px green dashed;
 }

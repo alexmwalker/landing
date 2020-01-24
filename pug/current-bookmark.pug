@@ -1,12 +1,16 @@
 
-.inner
-  .spacer
-    h5 Currently reading...
-    figure.cover
-      .cover-spine-overlay
-        img(src='https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png')
-    ul
-      li.small 13% complete
-      li.small Last session: 23 days ago
+.inner.loggedout
+  .spacer.grid
+    h5.minor.col-12 Currently reading...
+    .col-5
+      figure.cover
+        .cover-spine-overlay
+          img(src='https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png')
+    .col-7
+      ul
+        li.small Last session: 23 days ago
+        li.small 13% complete
 
-    a.resume(href='#') Resume
+
+      a.resume(href='#') Resume
+

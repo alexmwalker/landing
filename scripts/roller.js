@@ -3,13 +3,29 @@
 
 console.log('Hi there!');
 
+/*  ##### Fat  #####     */
+
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var login = urlParams.get('login');
+console.log(login);
+
+var loggedin = document.querySelector("body");
+function loggedinTest(){
+  if (login == 1){
+    loggedin.classList.add('newClass');
+  }
+}
+
+loggedinTest();
+
 var rollersonpage = document.querySelectorAll("div.rollerdoor"); // get all the rollerdoors on the page
 var wrappersinrollers = document.querySelectorAll("div.rollerdoor .wrapper");  // and a separate list of the wrappers inside them
 
 var countRollers = rollersonpage.length; // count them
 var countWrappers = wrappersinrollers.length; // count these
 var viewportHeight = parseInt(window.innerHeight); // measure the viewport
-var viewportTrigger = viewportHeight*0.75; // trigger point within the viewport height
+var viewportTrigger = viewportHeight * 0.75; // trigger point within the viewport height
 
 var wrapperHeights = []; // roller heights array
 var rollerTop = []; // an array for the offsetTop values of the Rollers
@@ -156,3 +172,5 @@ function properInjector(){ // #####  This function isn't finished yet !!!
 }
 
 properInjector();
+
+
