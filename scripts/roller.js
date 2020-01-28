@@ -3,14 +3,21 @@
 
 console.log('Hi there!');
 
-/*  #########   The Ads to be injected ############  */ 
-
-
-/* MEDIBANK = 300x250 */ 
+/*  #########   Set up the Ads to be injected ############  */ 
 
 var imgHref = new Array();
 var newAd = new Array();
 var targetFallback = new Array();
+
+/* ########   Ad Loaders  #######  */ 
+
+ // Ok, I'm holding off on loading the ads into the array to simulate a slow network
+ // An event-listener will keep checking to see if they are available BEFORE trying to load them.
+ // This will let us control how they load into the UI
+
+function loadAds(){   
+
+  /* MEDIBANK = 300x250 */ 
 
 imgHref[0] = document.createElement('a');
 imgHref[0].href = 'https://frontendmasters.com/?utm_source=css-tricks&utm_medium=website&utm_campaign=sitepoint';
@@ -47,10 +54,27 @@ newAd[2].width = 300;
 newAd[2].height = 600;
 imgHref[2].appendChild(newAd[2]);
 
+}
+
+/* #####  Create a time delay to mimic normal Network congestion delaying external ad delivery #####  */ 
+
+var delayInMilliseconds = 3000; // delay time in milliseconds
+
+function properInjectorWithDelay(){
+  setTimeout(function() {
+    properInjector();
+  }, delayInMilliseconds);
+}
+
+
+
 
 /* Mimicking the Proper.io ad injector */ 
 
-function properInjector(){ // #####  It looks for a marker flag in the page and injects the ad into that spot.
+function properInjector(){ // #####  Looks for a marker '.flag' in the page and inject the ad into that spot.
+  
+
+  loadAds();
 
   // 300 x 250 ad replacement
   targetFallback[0] = document.querySelector('#component-300x250 .flag');
@@ -67,10 +91,7 @@ function properInjector(){ // #####  It looks for a marker flag in the page and 
 }
 
 
-
-
-
-/*  ##### Fakin the login by pulling a parameter from the URL  e.g. .../blog.html?login=1  #####     */
+/*  ##### Faking the logged in state by grabbing a parameter from the URL  e.g. .../blog.html?login=1  or /blog.html?login=0   #####     */
 
 var queryString = window.location.search;
 var urlParams = new URLSearchParams(queryString);
@@ -78,13 +99,14 @@ var login = urlParams.get('login');
 console.log(login);
 
 var loggedin = document.querySelector("body");
-function loggedinTest(){
+
+function loggedinTest(){ // add 'membership' class to body if URL has login = 1
   if (login == 1){
-    loggedin.classList.add('membership');
+    loggedin.classList.add('membership'); 
     console.log('login:' + login);
-  } else if (login == 0){
-    properInjector();
-    console.log('login:' + login);
+  } else if (login == 0){ // if not, try to add the Proper.io ads
+    properInjectorWithDelay();  // bring in External Proper.io ads (with a faked network delay)
+    //console.log('login:' + login);
   }
 }
 
