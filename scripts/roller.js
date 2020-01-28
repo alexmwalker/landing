@@ -54,6 +54,21 @@ newAd[2].width = 300;
 newAd[2].height = 600;
 imgHref[2].appendChild(newAd[2]);
 
+
+
+/* Adobe Banner = 320x100 */ 
+
+imgHref[3] = document.createElement('a');
+imgHref[3].href = 'http://adobe.com';
+
+newAd[3] = document.createElement('img'); // Ad Image constructor
+newAd[3].src = 'images/320x100-banner.jpg';
+newAd[3].alt = '320 mobile banner';
+newAd[3].width = 320;
+newAd[3].height = 100;
+imgHref[3].appendChild(newAd[3]);
+
+
 }
 
 /* #####  Create a time delay to mimic normal Network congestion delaying external ad delivery #####  */ 
@@ -87,6 +102,10 @@ function properInjector(){ // #####  Looks for a marker '.flag' in the page and 
   // 300 x 600 ad replacement
   targetFallback[2] = document.querySelector('#component-300x600 .flag');
   targetFallback[2].appendChild(imgHref[2]);
+
+  // 300 x 600 ad replacement
+  targetFallback[3] = document.querySelector('#component-320x100 .flag');
+  targetFallback[3].appendChild(imgHref[3]);
 
 }
 
