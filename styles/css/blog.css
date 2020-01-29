@@ -2511,6 +2511,7 @@ button.pink {
 
 figure.cover {
   position: relative;
+  margin: 0 0 calc(var(--baseline)/2);
   float: left;
   width: 100%;
 }
@@ -2521,8 +2522,8 @@ figure.cover.opened:before {
   background-repeat: no-repeat;
   background-size: 100% auto;
   content: "";
-  width: calc(var(--baseline) /1);
-  height: calc(var(--baseline) *2);
+  width: calc(var(--baseline) /2);
+  height: calc(var(--baseline) *1);
   top: -2%;
   left: 60%;
   z-index: 100;
@@ -2531,14 +2532,24 @@ figure.cover img {
   width: 100%;
 }
 
+.progress {
+  width: 100%;
+  border: 1px solid #999;
+  height: calc(var(--baseline) /4);
+  margin-top: calc(var(--baseline) /4);
+  background: #02d1f5;
+  background: -webkit-gradient(linear, left top, right top, from(#02d1f5), color-stop(5%, #02d1f5), color-stop(5%, rgba(2, 209, 245, 0)), to(rgba(2, 209, 245, 0)));
+  background: -o-linear-gradient(left, #02d1f5 0%, #02d1f5 5%, rgba(2, 209, 245, 0) 5%, rgba(2, 209, 245, 0) 100%);
+  background: linear-gradient(90deg, #02d1f5 0%, #02d1f5 5%, rgba(2, 209, 245, 0) 5%, rgba(2, 209, 245, 0) 100%);
+}
+
 a.resume {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   line-height: calc(var(--baseline) /1);
   cursor: pointer;
-  width: 80%;
   text-align: center;
-  display: inline-block;
+  display: block;
   white-space: nowrap;
   background: #ff8a26;
   border-radius: 4px;
