@@ -26,7 +26,7 @@
 figure{
   &.cover{ 
     position: relative;
-    //margin: 0 0 calc(var(--baseline)/2);
+    margin: 0 0 calc(var(--baseline)/2);
     //outline: 1px red dashed;
     //height: calc(var(--baseline) * 8);
     float: left;
@@ -39,8 +39,8 @@ figure{
       background-size: 100% auto;
       //outline: 1px orange dashed;
       content: '';
-      width: calc(var(--baseline) /1);
-      height: calc(var(--baseline) *2);
+      width: calc(var(--baseline) /2);
+      height: calc(var(--baseline) *1);
       top: -2%;
       left: 60%;
       z-index: 100;
@@ -51,16 +51,26 @@ figure{
   }
 }
 
-
+.progress{
+  width: 100%;
+  border: 1px solid #999;
+  height: calc(var(--baseline) /4);
+  margin-top: calc(var(--baseline) /4);
+  background: rgb(2,209,245);
+  background: linear-gradient(90deg, 
+    rgba(2,209,245,1) 0%, 
+      rgba(2,209,245,1) 5%,
+      rgba(2,209,245,0) 5%, 
+      rgba(2,209,245,0) 100%);
+}
 
   a.resume {
     backface-visibility: hidden;
     line-height: calc(var(--baseline) /1);
     //position: relative;
     cursor: pointer;
-    width: 80%;
     text-align: center;
-    display: inline-block;
+    display: block;
     white-space: nowrap;
     background: #ff8a26;
     border-radius: 4px;

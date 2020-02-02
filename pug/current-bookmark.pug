@@ -1,16 +1,19 @@
 
 .inner.loggedout
-  .spacer.grid
-    h5.minor.col-12 Currently reading...
+  .spacer.grid-center
+    h5.minor.col-12 You are currently reading...
     .col-5
-      figure.cover
+      figure.cover.opened
         .cover-spine-overlay
-          img(src='https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png')
+          img(src='https://d2sis3lil8ndrq.cloudfront.net/books/788aa26e-18e5-409c-977e-d7a6f865e47e_medium.png', alt='Form Design Patterns')
     .col-7
       ul
-        li.small Last session: 23 days ago
-        li.small 13% complete
+        li.small Viewed: 23 days ago
+        li.small Progress: 13% 
+          .progress(style='background:linear-gradient(90deg, rgba(2,209,245,1) 0%, rgba(2,209,245,1) 13%, rgba(2,209,245,0) 13%, rgba(2,209,245,0) 100%);')
 
 
-      a.resume(href='#') Resume
+      a.resume(href='#') Open
+
+
 
