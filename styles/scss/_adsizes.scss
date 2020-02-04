@@ -1,5 +1,6 @@
 .component{
   position: relative;
+  margin: 0 0 calc(var(--baseline) /2);
    ul{margin:0;padding:0}
 }
 .component-300x600 {

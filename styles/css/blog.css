@@ -2368,6 +2368,7 @@ button.pink {
 
 .component {
   position: relative;
+  margin: 0 0 calc(var(--baseline) /2);
 }
 .component ul {
   margin: 0;
@@ -2533,6 +2534,7 @@ figure.cover img {
 }
 
 .progress {
+  /* book progress marker */
   width: 100%;
   border: 1px solid #999;
   height: calc(var(--baseline) /4);
@@ -2701,12 +2703,16 @@ a.resume {
   float: left;
   margin: 0 0 calc(var(--baseline) /2) 1rem;
 }
+.article-title-unit .hzlist li a {
+  color: #fff;
+}
 
 .titlebox {
   background: rgba(0, 0, 0, 0.2);
 }
 
 .article-title-section {
+  background: rgba(0, 0, 0, 0.4);
   background-size: 100% auto;
   color: #eee;
   padding: 0;
@@ -2716,6 +2722,26 @@ a.resume {
   background: rgba(0, 0, 0, 0.4);
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
   padding-left: 1rem;
+}
+
+.related-booklist {
+  margin: 0 1rem calc(var(--baseline) /2) 0rem;
+  padding: calc(var(--baseline) /2) 1rem;
+}
+.related-booklist ul {
+  padding: 0;
+  list-style: none;
+}
+.related-booklist li {
+  width: 100%;
+  clear: both;
+}
+.related-booklist .cover {
+  height: calc(var(--baseline) * 1.5);
+  float: left;
+  margin: 0 0.5rem calc(var(--baseline) /2) 0;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.2);
 }
 
 .article-body-section {
@@ -2776,7 +2802,8 @@ ul.AboutUs_team li img {
 }
 
 .sitepoint-view {
-  width: 100%;
+  width: 80%;
+  margin: calc(var(--baseline)/2) 10%;
 }
 
 .team-member_title {

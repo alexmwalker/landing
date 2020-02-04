@@ -17,14 +17,16 @@ header.article-title-unit
           li December 05, 2019
           li 
             a(href="#")
-              img(src='images/icon-fb.svg')
+              svg(viewBox='0 0 24 24', width='24', y='24' xmlns='http://www.w3.org/2000/svg')
+                use(xlink:href='#icon-fb', x='0', y='0')
           li
             a(href="#")
               svg(viewBox='0 0 24 24', width='24', y='24' xmlns='http://www.w3.org/2000/svg')
-                use(xlink:href='#icon-tw', x='0', y='0', fill='#333')
+                use(xlink:href='#icon-tw', x='0', y='0')
           li
             a(href="#")
-              img(src='images/icon-bm.svg' )
+              svg(viewBox='0 0 24 24', width='24', y='24' xmlns='http://www.w3.org/2000/svg')
+                use(xlink:href='#icon-bookmark', x='0', y='0')
 
 
 
@@ -46,7 +48,7 @@ header.article-title-unit
       
         //h4 Meet the author
         img.avatar(src='images/authors/author-rachel_andrew_thumb.png')
-        h5 Kate Kendall
+        h5 Rachel Andrew
         ul.hzlist
           li 
             svg(viewBox='0 0 24 24', width='24', y='24' xmlns='http://www.w3.org/2000/svg')
@@ -58,27 +60,31 @@ header.article-title-unit
             svg(viewBox='0 0 24 24', width='24', y='24' xmlns='http://www.w3.org/2000/svg')
               use(xlink:href='#icon-codepen', x='0', y='0', fill='#333')
         
-        p Kate Kendall is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.
+        p Rachel Andrew is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.
 
 
-      case member
+        #component-300x600.component.component-300x600.md-hidden
+          .flag
+          include fallback-300x600-A
+        .component.component-120x600.sm-hidden.md-only
+          img(src="https://cdn.business2community.com/wp-content/uploads/2015/08/amex-skyscraper-ad-example.gif.gif")
+        .footer-mobile-wrapper.sm-only
+          .ad-320x100
+            img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")
+      
 
-        when 0      
-
-          #component-300x600.component.component-300x600.md-hidden
-            .flag
-            include fallback-300x600-A
-          .component.component-120x600.sm-hidden.md-only
-            img(src="https://cdn.business2community.com/wp-content/uploads/2015/08/amex-skyscraper-ad-example.gif.gif")
-          .footer-mobile-wrapper.sm-only
-            .ad-320x100
-              img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")
-        
-        default
+        .related-booklist
           h5 Related Books
-          
           ul
             li 
-              a(href="#") The Principles of Beautiful Web Design, 3rd Edition
+              a.minor(href="#")
+                img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/34dcc72f-800f-4332-ab0c-31f0c4c4aad7.png') 
+                | PHP &amp; MySQL: Novice to Ninja, 6th Edition
             li
-              a(href="#") HTML5 Games: Novice to Ninja
+              a.minor(href="#") 
+                img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/b2c2ec59-ad9f-472f-8808-3e79355b600d_medium.png') 
+                | HTML5 Games: Novice to Ninja
+            li 
+              a.minor(href='#')
+                img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/ee3c684b-45e4-468a-9b7a-b2c53313f324_medium.png')
+                | The Python Apprentice

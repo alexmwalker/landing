@@ -5,6 +5,7 @@
   .hzlist li {
     float: left;
     margin: 0 0 calc(var(--baseline) /2) 1rem;
+    a{color:#fff}
   }
 }
 .titlebox{
@@ -15,7 +16,7 @@
   //background: url(https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/misc/svg-mock.png?r=2) center center;
   
   //background: #345;
-  //background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.4);
   background-size:  100% auto;
   color: #eee;
   padding:  0;
@@ -24,5 +25,25 @@
     background: rgba(0,0,0,0.4);
     text-shadow: 1px 2px 4px rgba(0,0,0,0.4);
     padding-left: 1rem;
+  }
+}
+
+.related-booklist{
+  margin: 0 1rem calc(var(--baseline) /2) 0rem;
+  padding: calc(var(--baseline) /2) 1rem;
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+  li{
+    width: 100%;
+    clear: both;
+  }
+  .cover{
+    height: calc(var(--baseline) * 1.5);
+    float: left;
+    margin: 0 .5rem calc(var(--baseline) /2) 0;
+    -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.2);
   }
 }

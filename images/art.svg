@@ -43,8 +43,6 @@
         fill-opacity: 1;
         }
 
-
-
         g {
         isolation: isolate;
         }
