@@ -2810,6 +2810,10 @@ ul.AboutUs_team li img {
   margin: 0;
 }
 
+.about-page {
+  padding: calc(var(--baseline)*2) 0;
+}
+
 /* ===  FOOTER === */
 footer.mainfooter {
   background: #3D383E;
