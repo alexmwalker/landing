@@ -2754,6 +2754,35 @@ a.resume {
   float: left;
 }
 
+ul.AboutUs_team {
+  list-style: none;
+}
+ul.AboutUs_team li {
+  text-align: center;
+}
+ul.AboutUs_team li img {
+  border-radius: 50%;
+  margin: 0 auto calc(var(--baseline)/2);
+  width: 50%;
+}
+
+.AboutUs_teamMemberInfo h3 {
+  margin-bottom: 0;
+}
+.AboutUs_teamMemberInfo a .team-member_twitter {
+  margin: 0;
+  fill: #1DA1F3;
+  color: #1DA1F3;
+}
+
+.sitepoint-view {
+  width: 100%;
+}
+
+.team-member_title {
+  margin: 0;
+}
+
 /* ===  FOOTER === */
 footer.mainfooter {
   background: #3D383E;
