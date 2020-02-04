@@ -2782,6 +2782,7 @@ a.resume {
 
 ul.AboutUs_team {
   list-style: none;
+  padding: 0;
 }
 ul.AboutUs_team li {
   text-align: center;
