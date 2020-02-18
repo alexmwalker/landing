@@ -2445,7 +2445,7 @@ button.pink {
 }
 .component-728x90 img,
 .component-320x100 img {
-  margin: 0 auto calc(var(--baseline) * 1);
+  margin: 0 auto calc(var(--baseline) * 0.5);
 }
 
 .remote object {
@@ -2634,9 +2634,11 @@ a.resume {
 
 /* ########     SitePoint Remote - job ad   ####### */
 .remote {
-  padding: calc(var(--baseline)/2) 0;
+  padding: 0;
   border: 1px #F2E7AE solid;
-  color: green;
+}
+.remote .inner {
+  margin-top: calc(var(--baseline)/2);
 }
 .remote .grid-center {
   color: #fff;
@@ -2646,8 +2648,8 @@ a.resume {
   color: #fff;
 }
 .remote .company-brand {
-  width: 100%;
-  height: calc(var(--baseline)*2);
+  width: 70%;
+  height: calc(var(--baseline)*1.5);
 }
 .remote ul.tags {
   margin: 0;
@@ -2659,6 +2661,7 @@ a.resume {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
+  margin-bottom: calc(var(--baseline)*.5);
 }
 .remote ul.tags li {
   font-size: calc(1rem / var(--typescale) / var(--typescale)/ var(--typescale)/ var(--typescale));
