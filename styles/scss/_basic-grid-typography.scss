@@ -205,15 +205,18 @@ sub {
   bottom: -0.25em;
 }
 
-a:link {
+a:link,a:visited {
   text-decoration: none;
   color: #20272f;
 }
 
-a:visited {
+
+.dark a:link,.dark a:visited  {
   text-decoration: none;
-  color: #20272f;
+  color: #fff;
 }
+
+
 
 ::placeholder {
   color: #bbb;

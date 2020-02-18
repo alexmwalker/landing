@@ -9,7 +9,8 @@
   }
 }
 .titlebox{
-  background: rgba(0,0,0,0.2);
+  //background: rgba(0,0,0,0.2);
+  color: #eee;
 }
 .article-title-section {
   //background: url(../../images/art.svg?r=2) center center;
@@ -18,7 +19,6 @@
   //background: #345;
   background: rgba(0,0,0,0.4);
   background-size:  100% auto;
-  color: #eee;
   padding:  0;
   min-height: calc(var(--baseline) * 8);
   h1 {

@@ -178,14 +178,14 @@ sub {
   bottom: -0.25em;
 }
 
-a:link {
+a:link, a:visited {
   text-decoration: none;
   color: #20272f;
 }
 
-a:visited {
+.dark a:link, .dark a:visited {
   text-decoration: none;
-  color: #20272f;
+  color: #fff;
 }
 
 ::-webkit-input-placeholder {
@@ -384,7 +384,7 @@ figure {
 [class*=col_] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 0.5rem 0;
+  padding: 0 1rem 0;
   max-width: 100%;
 }
 

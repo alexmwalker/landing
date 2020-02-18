@@ -178,14 +178,14 @@ sub {
   bottom: -0.25em;
 }
 
-a:link {
+a:link, a:visited {
   text-decoration: none;
   color: #20272f;
 }
 
-a:visited {
+.dark a:link, .dark a:visited {
   text-decoration: none;
-  color: #20272f;
+  color: #fff;
 }
 
 ::-webkit-input-placeholder {
@@ -306,7 +306,7 @@ figure {
 [class*=col_] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 0.5rem 0;
+  padding: 0 1rem 0;
   max-width: 100%;
 }
 
@@ -2138,6 +2138,11 @@ figure {
   transition: all 0.1s ease-out;
 }
 
+.dark {
+  background: #232023;
+  color: #fff;
+}
+
 .sitepoint-branding {
   background: #232023;
   color: #ddd;
@@ -2197,13 +2202,15 @@ button.pink {
   line-height: calc(var(--baseline) * 3);
   pointer-events: auto;
 }
-.hamburger li a:link, .hamburger li a:visited {
+.hamburger li a:link,
+.hamburger li a:visited {
   color: #fff;
   text-decoration: none;
   display: block;
   padding: 0rem 2rem;
 }
-.hamburger li a:link:hover, .hamburger li a:visited:hover {
+.hamburger li a:link:hover,
+.hamburger li a:visited:hover {
   background: #000;
 }
 .hamburger_input {
@@ -2255,9 +2262,9 @@ button.pink {
   background: #161616;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
   -webkit-transition: all 0.4s cubic-bezier(0, 0.86, 0.15, 1);
   -o-transition: all 0.4s cubic-bezier(0, 0.86, 0.15, 1);
   transition: all 0.4s cubic-bezier(0, 0.86, 0.15, 1);
@@ -2271,7 +2278,8 @@ button.pink {
 .hamburger_body li a:link {
   color: #ccc;
 }
-.hamburger_body li a:hover, .hamburger_body li a:active {
+.hamburger_body li a:hover,
+.hamburger_body li a:active {
   color: #fff;
   font-weight: 500;
 }
@@ -2383,7 +2391,8 @@ button.pink {
   border: 1px solid #ddd;
 }
 
-.component-300x250, .sp-300x250 {
+.component-300x250,
+.sp-300x250 {
   margin: calc(var(--baseline) /2) auto 0;
   width: 300px;
   height: 250px;
@@ -2436,10 +2445,15 @@ button.pink {
 }
 .component-728x90 img,
 .component-320x100 img {
-  margin: 0 auto;
+  margin: 0 auto calc(var(--baseline) * 1);
 }
 
-.topbanner, .footer-mobile-wrapper {
+.remote object {
+  margin: 0 0 calc(var(--baseline) * 0.5);
+}
+
+.topbanner,
+.footer-mobile-wrapper {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -2489,14 +2503,14 @@ button.pink {
   }
 }
 .inner {
-  color: #333;
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  margin: 0 0.5rem;
 }
 .inner .spacer {
-  margin: calc(var(--baseline)/2) 0.75rem;
+  margin: 0 0 calc(var(--baseline)/2);
+  top: calc(var(--baseline)/2);
+  position: relative;
 }
 
 .sp-300x250 {
@@ -2620,8 +2634,9 @@ a.resume {
 
 /* ########     SitePoint Remote - job ad   ####### */
 .remote {
-  padding: calc(var(--baseline)/2 0 0);
+  padding: calc(var(--baseline)/2) 0;
   border: 1px #F2E7AE solid;
+  color: green;
 }
 .remote .grid-center {
   color: #fff;
@@ -2630,8 +2645,9 @@ a.resume {
 .remote ul.hzlist li a {
   color: #fff;
 }
-.remote img.company-brand {
+.remote .company-brand {
   width: 100%;
+  height: calc(var(--baseline)*2);
 }
 .remote ul.tags {
   margin: 0;
@@ -2708,13 +2724,12 @@ a.resume {
 }
 
 .titlebox {
-  background: rgba(0, 0, 0, 0.2);
+  color: #eee;
 }
 
 .article-title-section {
   background: rgba(0, 0, 0, 0.4);
   background-size: 100% auto;
-  color: #eee;
   padding: 0;
   min-height: calc(var(--baseline) * 8);
 }
@@ -2757,15 +2772,16 @@ a.resume {
 
 .author-profile {
   width: 100%;
-  border-left: 1px #999 solid;
 }
-.author-profile h4, .author-profile h5, .author-profile ul {
+.author-profile h4,
+.author-profile h5,
+.author-profile ul {
   margin: 0 0rem calc(var(--baseline) /2);
 }
 .author-profile p {
   font-size: calc(1rem / var(--typescale) / var(--typescale));
   line-height: calc(var(--baseline) / 2);
-  margin: 0 0 calc(var(--baseline) /1) 1rem;
+  margin: 0 0 calc(var(--baseline) /1) 0;
 }
 .author-profile li svg {
   height: calc(var(--baseline) /1);
@@ -2776,7 +2792,7 @@ a.resume {
   height: calc(var(--baseline) * 2);
   border: 1px #999 solid;
   border-radius: 50%;
-  margin: 0 1rem calc(var(--baseline) /2) 1rem;
+  margin: 0 1rem calc(var(--baseline) /2) 0;
   float: left;
 }
 
@@ -3133,15 +3149,18 @@ body {
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* temp column borders */
-/*
-.container [class*="grid"] {
-  margin: 0 1rem;
-  outline: 1px red dashed;
-  [class*="col-"]{
-  outline: 1px cyan dashed;
-  }
-}*/
+.vbreak {
+  border-left: 1px #ccc solid;
+}
+
+.pt2 {
+  padding-top: calc(var(--baseline) * 1.0);
+}
+
+.pb2 {
+  padding-bottom: calc(var(--baseline) * 1.0);
+}
+
 /* ========   Switching up the font sizing for books on the phone   ============= */
 @media (max-width: 48em) {
   h1,
@@ -3179,7 +3198,9 @@ body {
   opacity: 0.3;
 }
 
-#checker, #ad-placement, #memberstatus {
+#checker,
+#ad-placement,
+#memberstatus {
   position: absolute;
   font-weight: 600;
   padding: 0 0.5rem;

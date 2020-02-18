@@ -37,6 +37,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /*
 .container {
   max-width: 58rem;
@@ -47,17 +48,17 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.vbreak {
+  border-left: 1px #ccc solid;
+}
 
-/* temp column borders */
+.pt2 {
+  padding-top: calc(var(--baseline) * 1.0);
+}
 
-/*
-.container [class*="grid"] {
-  margin: 0 1rem;
-  outline: 1px red dashed;
-  [class*="col-"]{
-  outline: 1px cyan dashed;
-  }
-}*/
+.pb2 {
+  padding-bottom: calc(var(--baseline) * 1.0);
+}
 
 
 /* ========   Switching up the font sizing for books on the phone   ============= */
@@ -82,29 +83,33 @@ body {
 
 }
 
-.align-center{
+.align-center {
   text-align: center;
 }
-.align-right{
+
+.align-right {
   text-align: right;
 }
-.align-left{
+
+.align-left {
   text-align: left;
 }
 
 
 
 
-/* ------------------ Temporary scaffolding --------------------  */ 
+/* ------------------ Temporary scaffolding --------------------  */
 
-.device{
+.device {
   right: 0;
   left: auto;
-  position: absolute!important;
+  position: absolute !important;
   opacity: 0.3;
 }
 
-#checker, #ad-placement, #memberstatus{
+#checker,
+#ad-placement,
+#memberstatus {
   position: absolute;
   font-weight: 600;
   padding: 0 .5rem;
@@ -121,13 +126,16 @@ body {
   outline: 2px red dashed;
 
 }
-#memberstatus{
+
+#memberstatus {
   display: none;
 }
-.membership #memberstatus{
+
+.membership #memberstatus {
   display: block;
 }
-#ad-placement{
+
+#ad-placement {
   background: #fff;
   width: 3.3rem;
   padding: 0 .5rem 0 .1rem;

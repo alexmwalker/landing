@@ -43,7 +43,7 @@ header.article-title-unit
   .article-body-section.grid-center
     .col-8_md-8_sm-11
       include:markdown-it(html='true' typographer='true' linkify) ../md/blog1.md
-    .col-4_md-3_sm-12
+    .col-4_md-3_sm-12.vbreak
       .author-profile
       
         //h4 Meet the author
@@ -67,10 +67,8 @@ header.article-title-unit
           .flag
           include fallback-300x600-A
         .component.component-120x600.sm-hidden.md-only
-          img(src="https://cdn.business2community.com/wp-content/uploads/2015/08/amex-skyscraper-ad-example.gif.gif")
-        .footer-mobile-wrapper.sm-only
-          .ad-320x100
-            img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")
+          img(src="images/ad-sizes/amex-skyscraper-ad-example.gif")
+
       
 
         .related-booklist
@@ -88,3 +86,7 @@ header.article-title-unit
               a.minor(href='#')
                 img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/ee3c684b-45e4-468a-9b7a-b2c53313f324_medium.png')
                 | The Python Apprentice
+
+        .footer-mobile-wrapper.sm-only
+          .component-320x100
+            img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")
