@@ -2449,7 +2449,7 @@ button.pink {
 }
 
 .remote object {
-  margin: 0 0 calc(var(--baseline) * 0.5);
+  margin: 0 10% calc(var(--baseline) * 0.5);
 }
 
 .topbanner,
@@ -2648,7 +2648,7 @@ a.resume {
   color: #fff;
 }
 .remote .company-brand {
-  width: 70%;
+  width: 80%;
   height: calc(var(--baseline)*1.5);
 }
 .remote ul.tags {
