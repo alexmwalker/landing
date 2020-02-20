@@ -2773,6 +2773,10 @@ a.resume {
   font-weight: 300;
 }
 
+.nl {
+  clear: both;
+}
+
 .author-profile {
   width: 100%;
 }
@@ -2785,9 +2789,6 @@ a.resume {
   font-size: calc(1rem / var(--typescale) / var(--typescale));
   line-height: calc(var(--baseline) / 2);
   margin: 0 0 calc(var(--baseline) /1) 0;
-}
-.author-profile li svg {
-  height: calc(var(--baseline) /1);
 }
 
 .avatar {
@@ -3191,6 +3192,29 @@ body {
 
 .align-left {
   text-align: left;
+}
+
+/* ------------------ social Utility icons  SVG --------------------  */
+.util-icon {
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  height: calc(var(--baseline)*.65);
+}
+
+.util-icon:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 /* ------------------ Temporary scaffolding --------------------  */

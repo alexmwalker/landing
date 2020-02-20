@@ -10,6 +10,10 @@
   }
 }
 
+.nl {
+  clear: both;
+}
+
 .author-profile {
   width: 100%;
 
@@ -27,13 +31,7 @@
     margin: 0 0 calc(var(--baseline) /1) 0;
   }
 
-  li {
 
-    //outline: 1px green dashed;
-    svg {
-      height: calc(var(--baseline) /1)
-    }
-  }
 }
 
 .avatar {
