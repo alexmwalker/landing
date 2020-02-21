@@ -2,11 +2,12 @@
   background: #333  url(../../images/art.svg?r=2) 20% 50% no-repeat;
   background-size:  120% auto;
   padding: 0;
-  .hzlist li {
-    float: left;
-    margin: 0 0 calc(var(--baseline) /2) 1rem;
-    a{color:#fff}
-  }
+}
+.share {
+  clear: both;
+  line-height: calc(var(--baseline) *1.5);
+  
+  a{color:#fff}  /* color the icon currentColor*/
 }
 .titlebox{
   //background: rgba(0,0,0,0.2);
@@ -28,7 +29,7 @@
   }
 }
 
-.related-booklist{
+.booklist{
   margin: 0 1rem calc(var(--baseline) /2) 0rem;
   padding: calc(var(--baseline) /2) 1rem;
   ul{
@@ -40,7 +41,7 @@
     clear: both;
   }
   .cover{
-    height: calc(var(--baseline) * 1.5);
+    height: calc(var(--baseline) * 2.5);
     float: left;
     margin: 0 .5rem calc(var(--baseline) /2) 0;
     -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);

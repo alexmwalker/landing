@@ -107,7 +107,10 @@ h5,
   font-weight: 400;
 }
 
-h2:first-child, h3:first-child, h4:first-child, h5:first-child {
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
   margin-top: 0;
 }
 
@@ -178,12 +181,14 @@ sub {
   bottom: -0.25em;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none;
   color: #20272f;
 }
 
-.dark a:link, .dark a:visited {
+.dark a:link,
+.dark a:visited {
   text-decoration: none;
   color: #fff;
 }
@@ -233,10 +238,19 @@ a:link, a:visited {
   clear: right;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .hzlist li {
   float: left;
   margin: 0 1rem 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .hzlist ~ p {
   clear: both;
@@ -2718,11 +2732,13 @@ a.resume {
   background-size: 120% auto;
   padding: 0;
 }
-.article-title-unit .hzlist li {
-  float: left;
-  margin: 0 0 calc(var(--baseline) /2) 1rem;
+
+.share {
+  clear: both;
+  line-height: calc(var(--baseline) *1.5);
+  /* color the icon currentColor*/
 }
-.article-title-unit .hzlist li a {
+.share a {
   color: #fff;
 }
 
@@ -2742,20 +2758,20 @@ a.resume {
   padding-left: 1rem;
 }
 
-.related-booklist {
+.booklist {
   margin: 0 1rem calc(var(--baseline) /2) 0rem;
   padding: calc(var(--baseline) /2) 1rem;
 }
-.related-booklist ul {
+.booklist ul {
   padding: 0;
   list-style: none;
 }
-.related-booklist li {
+.booklist li {
   width: 100%;
   clear: both;
 }
-.related-booklist .cover {
-  height: calc(var(--baseline) * 1.5);
+.booklist .cover {
+  height: calc(var(--baseline) * 2.5);
   float: left;
   margin: 0 0.5rem calc(var(--baseline) /2) 0;
   -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -3194,27 +3210,28 @@ body {
   text-align: left;
 }
 
-/* ------------------ social Utility icons  SVG --------------------  */
+/* ------------------ Social Utility icons  SVG --------------------  */
 .util-icon {
   -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
+  transition: -webkit-transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
+  -o-transition: transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
+  transition: transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
+  transition: transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43), -webkit-transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
   height: calc(var(--baseline)*.65);
+  width: calc(var(--baseline)*.65);
 }
 
 .util-icon:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
+  transition: -webkit-transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
+  -o-transition: transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
+  transition: transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
+  transition: transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43), -webkit-transform 0.3s cubic-bezier(0, 0.6, 0.62, 1.43);
 }
 
 /* ------------------ Temporary scaffolding --------------------  */
