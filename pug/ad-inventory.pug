@@ -1,0 +1,53 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Fallback - ad catalog
+    meta(name='description', content='SitePoint Library')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', type='text/css', href='styles/css/blog.css?r=1234')
+
+
+  body.vr.-labelling.borders
+
+  header
+    .container
+      .grid-center
+        .col-12
+          h1 Ad unit inventory
+      .grid-center
+        .col-3
+          h5 fallback-300x250
+          .component.component-300x250
+            include fallback-300x250
+        .col-3
+          h5 fallback-300x250
+          .component.component-300x250
+            include fallback-300x250-b
+        .col-3
+          h5 fallback-300x250
+          .component.component-300x250
+            include fallback-300x250-c
+        .col-3
+          h5 fallback-300x250
+          .component.component-300x250
+            include fallback-300x250-d
+
+  section.dark.pt2
+    .container
+      .grid-center
+        .col-12
+          h3 fallback-728x90
+            .component.component-728x90.remote
+              include fallback-728x90-a
+  section.dark.pt2
+    .container
+      .grid-center
+        .col-9
+          h5 fallback-728x90-responsive
+            .component.remote
+              include fallback-responsive.pug
+        .col-2
+          h5 fallback-728x90-responsive
+

@@ -1,0 +1,52 @@
+
+
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title SitePoint - Learn with Books, Video and Code
+    meta(name='description', content='SitePoint Library')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', type='text/css', href='styles/css/blog.css?r=1234')
+
+
+  body.vr.-labelling.-borders
+    #checker External ads 
+      i SEEM 
+      | to be blocked! &#128683; 
+    #ad-placement allowed! &#9989;
+    #memberstatus External ads are OFF for members 💖
+
+    include breaker-unit.pug
+
+
+    //- header-unit 
+    include header-blog.pug
+
+    //- Article-title-unit 
+    header.article-title-unit
+      .container
+        .article-title-section.grid-center
+          .titlebox.col-8_md-6_sm-11
+            h1 About us
+
+            p SitePoint is a hub for web developers to share their passion for building incredible Internet things. Founded by Mark Harbottle and Matt Mickiewicz in 1999, SitePoint is for web professionals, by web professionals: developers, designers, programmers, product creators and entrepreneurs alike.
+
+            p We love our rich and engaged community and our contributors, who are truly leaders in their field.
+
+
+
+          .col-4_md-5_sm-8
+            .component
+              img.sitepoint-view(src='images/sitepoint-view.jpg',)
+              
+    .container
+      .about-page.grid-center
+        .col-12_md-12_sm-11
+          include _team.pug
+
+
+    include icons-lib.pug
+
+    include footer-blog.pug

@@ -15,16 +15,24 @@ header.article-title-unit
           li By Kate Kendall
           li Entreprenuer
           li December 05, 2019
+        ul.hzlist.share
+          li Share:
+          li
+            a(href="#" title="Facebook")
+              svg( class="util-icon" )
+                use(href='#icon-fb')
           li 
-            a(href="#")
-              img(src='images/icon-fb.svg')
+            a(href="#"  title="Reddit" )
+              svg(viewBox='0 0 24 24', class="util-icon" )
+                use(href='#icon-reddit')
           li
-            a(href="#")
-              img(src='images/icon-tw.svg')
+            a(href="#" title="Twitter")
+              svg(viewBox='0 0 24 24', class="util-icon" )
+                use(href='#icon-tw')
           li
-            a(href="#")
-              img(src='images/icon-bm.svg' )
-
+            a(href="#" title="Email link")
+              svg(viewBox='0 0 24 24', class="util-icon" )
+                use(href='#icon-mail')
 
 
       .col-4_md-5_sm-hidden
@@ -40,36 +48,53 @@ header.article-title-unit
   .article-body-section.grid-center
     .col-8_md-8_sm-11
       include:markdown-it(html='true' typographer='true' linkify) ../md/blog1.md
-    .col-4_md-3_sm-12
+    .col-4_md-3_sm-12.vbreak
       .author-profile
       
         //h4 Meet the author
         img.avatar(src='images/authors/author-rachel_andrew_thumb.png')
-        h5 Kate Kendall
+        h5 Rachel Andrew
         ul.hzlist
           li 
-            svg(viewBox='0 0 24 24', width='24', y='24' xmlns='http://www.w3.org/2000/svg')
-              use(xlink:href='#icon-tw', x='0', y='0', fill='#333')
+            a(href="#"  title="My Twitter")
+              svg(viewBox='0 0 24 24', class="util-icon" )
+                use(href='#icon-tw')
           li 
-            svg(viewBox='0 0 24 24', width='24', y='24' xmlns='http://www.w3.org/2000/svg')
-              use(xlink:href='#icon-medium', x='0', y='0', fill='#333')
+            a(href="#"  title="My Medium")
+              svg(viewBox='0 0 24 24', class="util-icon" )
+                use(href='#icon-md')
           li 
-            svg(viewBox='0 0 24 24', width='24', y='24' xmlns='http://www.w3.org/2000/svg')
-              use(xlink:href='#icon-codepen', x='0', y='0', fill='#333')
+            a(href="#"  title="My CodePen")
+              svg(viewBox='0 0 24 24', class="util-icon" )
+                use(href='#icon-codepen', x='0', y='0')
         
-        p Kate Kendall is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.
+        p Rachel Andrew is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.
 
 
-   
+        #component-300x600.component.component-300x600.md-hidden
+          .flag
+          include fallback-300x600-A
+        .component.component-120x600.sm-hidden.md-only
+          img(src="images/ad-sizes/amex-skyscraper-ad-example.gif")
 
-      #component-300x600.component.component-300x600.md-hidden
-        .flag
-        include fallback-300x600-A
-      .component.component-120x600.sm-hidden.md-only
-        img(src="https://cdn.business2community.com/wp-content/uploads/2015/08/amex-skyscraper-ad-example.gif.gif")
-      .footer-mobile-wrapper.sm-only
-        .ad-320x100
-          img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")
-    
-    
-      include related-books.pug
+      
+
+        .booklist
+          h5 Popular Books
+          ul
+            li 
+              a.minor(href="#")
+                img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/34dcc72f-800f-4332-ab0c-31f0c4c4aad7.png') 
+                | PHP &amp; MySQL: Novice to Ninja, 6th Edition
+            li
+              a.minor(href="#") 
+                img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/b2c2ec59-ad9f-472f-8808-3e79355b600d_medium.png') 
+                | HTML5 Games: Novice to Ninja
+            li 
+              a.minor(href='#')
+                img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/ee3c684b-45e4-468a-9b7a-b2c53313f324_medium.png')
+                | The Python Apprentice
+
+        .footer-mobile-wrapper.sm-only
+          .component-320x100
+            img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")

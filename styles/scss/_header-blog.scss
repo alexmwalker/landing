@@ -1,10 +1,12 @@
 /* ===  HEADER === */
-$easing: .4s cubic-bezier(.45,.45,.37,1.36); /* overflip pop ease */
-$easing-menu: .4s cubic-bezier(0,.86,.15,1) ; 
+$easing: .4s cubic-bezier(.45, .45, .37, 1.36);
+/* overflip pop ease */
+$easing-menu: .4s cubic-bezier(0, .86, .15, 1);
 $text-color: #fff;
 
-.sitepoint-branding ul.nav{
-  padding: 0; margin: 0;
+.sitepoint-branding ul.nav {
+  padding: 0;
+  margin: 0;
   float: right;
   display: flex;
   flex-direction: row;
@@ -12,8 +14,9 @@ $text-color: #fff;
   justify-content: flex-start;
   align-items: center;
   align-content: stretch;
-  text-align: right; 
-  li{
+  text-align: right;
+
+  li {
     padding: 0 1rem;
     list-style-type: none;
     line-height: calc(var(--baseline)*2);
@@ -27,34 +30,40 @@ $text-color: #fff;
     -ms-flex-item-align: auto;
     align-self: auto;
     height: calc(var(--baseline)*2);
-    a{
-      color:#E5E5E5;
+
+    a {
+      color: #E5E5E5;
       padding: 0 1px;
       position: relative;
-      &:after{ /* The underscore nav marker */
+
+      &:after {
+        /* The underscore nav marker */
         display: block;
         position: absolute;
         content: '';
         width: 0%;
         height: 2px;
-        background: rgba(255,255,255,0);
+        background: rgba(255, 255, 255, 0);
         transition: all .1s ease-out;
         border-radius: 2px;
         bottom: -0.4rem;
         right: 0;
       }
-      &.youarehere:after{
+
+      &.youarehere:after {
         width: 100%;
-        background: rgba(255,255,255,.3);
+        background: rgba(255, 255, 255, .3);
         transition: all .1s ease-out;
       }
-      &:hover{
-        color:#fff;
+
+      &:hover {
+        color: #fff;
         font-weight: 500;
         padding: 0 0;
-        &:after{
+
+        &:after {
           width: 100%;
-          background: rgba(255,255,255,.3);
+          background: rgba(255, 255, 255, .3);
           transition: all .1s ease-out;
         }
       }
@@ -62,32 +71,38 @@ $text-color: #fff;
   }
 }
 
+.dark {
+  background: #232023;
+  color: #fff;
+}
 
 .sitepoint-branding {
   background: #232023;
   color: #ddd;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   height: calc(var(--baseline)*2);
- 
-    .hamburger{
-      color: #fff
-    }
-    .pink{
-      margin-top: calc(var(--baseline)/2);
-    }
- 
+
+  .hamburger {
+    color: #fff
+  }
+
+  .pink {
+    margin-top: calc(var(--baseline)/2);
+  }
+
 }
 
 
 .branding {
-    height: calc(var(--baseline) * 2);
-    margin: 0 0 0 1rem;
-    .branding-logo {
-      height: calc(var(--baseline));
-      margin-top: calc(var(--baseline)/2);
-    }
+  height: calc(var(--baseline) * 2);
+  margin: 0 0 0 1rem;
+
+  .branding-logo {
+    height: calc(var(--baseline));
+    margin-top: calc(var(--baseline)/2);
+  }
 }
 
 
@@ -99,30 +114,31 @@ button.pink {
 }
 
 .pink {
-    height: calc(var(--baseline));
-    background: #FA3292;
-    color: #eee;
-    border-radius: 4px;
-    font-size: calc(1rem / var(--typescale));
-    border: 0 none;
-    padding: 0 1rem;
-    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  height: calc(var(--baseline));
+  background: #FA3292;
+  color: #eee;
+  border-radius: 4px;
+  font-size: calc(1rem / var(--typescale));
+  border: 0 none;
+  padding: 0 1rem;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 
 
 
-/*  CSS-only hamburger */ 
+/*  CSS-only hamburger */
 
 @mixin hiddenInput {
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; 
-  width: 1px; 
-  margin: -1px; 
-  padding: 0; border: 0; 
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 .hamburger {
@@ -131,78 +147,100 @@ button.pink {
   //position: relative;
   pointer-events: none;
   margin: 0;
+
   ul {
-    padding: 0;margin: 0;
+    padding: 0;
+    margin: 0;
     border-bottom: 1rem solid #000;
-    }
+  }
+
   li {
     list-style-type: none;
     line-height: calc(var(--baseline) * 3);
     pointer-events: auto;
-    a:link, a:visited{
-      color:$text-color;
-      text-decoration:none;
+
+    a:link,
+    a:visited {
+      color: $text-color;
+      text-decoration: none;
       display: block;
       padding: 0rem 2rem;
-      &:hover{
+
+      &:hover {
         background: #000;
       }
     }
   }
+
   &_input {
     pointer-events: auto;
     @include hiddenInput;
+
     &:checked {
-      ~ .hamburger_body {
+      ~.hamburger_body {
         width: 100%;
         //outline: 1px red dashed;
         display: block;
         transition: width 0s;
-        ul{
+
+        ul {
           transform: translateX(0%);
           transition: transform $easing-menu;
         }
       }
     }
   }
+
   &_label {
     display: block;
     font-weight: bold;
     font-size: inherit;
     cursor: pointer;
   }
+
   &_body {
     width: 0;
     overflow: hidden;
     left: 0;
     position: absolute;
     transition: width 0s linear 0.3s;
-    ul{
-      margin:0;
-      padding:0;
+
+    ul {
+      margin: 0;
+      padding: 0;
       background: #161616;
-      box-shadow: 0 0 4px rgba(0,0,0,0.5);
-      transform: translateX(-100%);
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+      transform: translateX(100%);
       transition: all $easing-menu;
     }
-    li{
+
+    li {
       list-style: none;
       //background: #111;
       line-height: calc(var(--baseline) * 1.5);
       font-size: calc(1rem * var(--typescale));
       padding: 0;
-      a:link{color: #ccc;}
-      a:hover, a:active{color: #fff; font-weight: 500;}
+
+      a:link {
+        color: #ccc;
       }
+
+      a:hover,
+      a:active {
+        color: #fff;
+        font-weight: 500;
+      }
+    }
   }
 }
 
-.hamburger_label{
+.hamburger_label {
   font-size: calc(1rem * var(--typescale));
   height: calc(var(--baseline)*2);
   width: 100%;
   pointer-events: auto;
-  span{
+
+  span {
     background: $text-color;
     border-radius: 0.5rem;
     display: block;
@@ -213,35 +251,41 @@ button.pink {
     transform-origin: 50% 50%;
     transform: translateY(1.6rem);
     transition: background-color $easing;
-    &:before, &:after{
+
+    &:before,
+    &:after {
       background-color: $text-color;
       border-radius: inherit;
       display: inherit;
       position: absolute;
       content: '';
-      width:inherit;
-      height:inherit;
+      width: inherit;
+      height: inherit;
       top: 0;
       left: 0;
       transform-origin: 50% 50%;
-      transform: translateY(.7rem);// rotate(45deg);
+      transform: translateY(.7rem); // rotate(45deg);
       transition: transform $easing;
     }
-     &:before{
-      transform: translateY(-.7rem);// rotate(45deg);
+
+    &:before {
+      transform: translateY(-.7rem); // rotate(45deg);
     }
   }
 }
+
 //switch hamburger to x animation
-.hamburger{
-  input:checked+.hamburger_label span{
+.hamburger {
+  input:checked+.hamburger_label span {
     background: transparent;
-    transition: background-color  $easing;  
-    &:after{
+    transition: background-color $easing;
+
+    &:after {
       transform: translateY(0) rotate(-135deg);
       transition: transform $easing
     }
-    &:before{
+
+    &:before {
       transform: translateY(0) rotate(135deg);
       transition: transform $easing
     }
@@ -249,17 +293,19 @@ button.pink {
 }
 
 
-.loggedout{
+.loggedout {
   display: none;
 }
 
-.membership{
+.membership {
+
   //outline: 1px red dashed;
-  .loggedin{
+  .loggedin {
     //outline: 1px yellow dashed;
     display: none;
   }
-  .loggedout{
+
+  .loggedout {
     display: block;
   }
 }

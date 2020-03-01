@@ -107,7 +107,10 @@ h5,
   font-weight: 400;
 }
 
-h2:first-child, h3:first-child, h4:first-child, h5:first-child {
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
   margin-top: 0;
 }
 
@@ -178,14 +181,16 @@ sub {
   bottom: -0.25em;
 }
 
-a:link {
+a:link,
+a:visited {
   text-decoration: none;
   color: #20272f;
 }
 
-a:visited {
+.dark a:link,
+.dark a:visited {
   text-decoration: none;
-  color: #20272f;
+  color: #fff;
 }
 
 ::-webkit-input-placeholder {
@@ -233,10 +238,19 @@ a:visited {
   clear: right;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .hzlist li {
   float: left;
   margin: 0 1rem 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .hzlist ~ p {
   clear: both;
@@ -306,7 +320,7 @@ figure {
 [class*=col_] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 0.5rem 0;
+  padding: 0 1rem 0;
   max-width: 100%;
 }
 

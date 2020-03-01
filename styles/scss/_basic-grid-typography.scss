@@ -33,7 +33,7 @@
   /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
   //width: 62rem;
   max-width: 58rem;
-  margin: 0 auto!important;
+  margin: 0 auto !important;
   //outline: 1px red dashed;
 }
 
@@ -123,8 +123,11 @@ h5,
   //text-transform: capitalize;
 }
 
-h2:first-child,h3:first-child,h4:first-child,h5:first-child{
-  margin-top: 0; // kill the top margin when first child (the container should have padding)
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+  margin-top: 0; // kill the top margin when first child (the container should have padding instead)
 }
 
 p,
@@ -205,15 +208,20 @@ sub {
   bottom: -0.25em;
 }
 
-a:link {
-  text-decoration: none;
-  color: #20272f;
-}
-
+a:link,
 a:visited {
   text-decoration: none;
   color: #20272f;
 }
+
+
+.dark a:link,
+.dark a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+
 
 ::placeholder {
   color: #bbb;
@@ -229,22 +237,29 @@ a:visited {
   align-items: stretch;
   line-height: calc(var(--baseline) / 2);
 }
-.hzlist { /* floated list */
+
+.hzlist {
+  /* floated list */
   list-style: none;
   line-height: calc(var(--baseline) / 2);
-  float:left;
+  float: left;
   clear: right;
   margin: 0;
   padding: 0;
-  li{
-  float: left;
-  margin: 0 1rem 0 0  ;
-  
+  display: flex;
+
+  li {
+    float: left;
+    margin: 0 1rem 0 0;
+    align-items: center;
+    display: flex;
   }
-  & ~ p{
+
+  &~p {
     clear: both;
   }
 }
+
 form {
   padding: 0;
   margin: 0;

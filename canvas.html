@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body data-rsssl=1>
+    <canvas id="canvas" width="578" height="200"></canvas>
+
+
+    <script>
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+
+      //let p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+      let p = new Path2D('M50 86c.893 0 1.786-.336 2.455-1.008l34.766-33.594C87.723 50.894 100 39.641 100 26.203 100 9.798 90.011 0 73.326 0 63.56 0 54.409 7.727 50 12.094 45.592 7.727 36.44 0 26.674 0 9.99 0 0 9.798 0 26.203c0 13.438 12.277 24.692 12.723 25.083l34.822 33.706A3.456 3.456 0 0050 86z');
+      
+      ctx.fill(p);
+
+    </script>
+  </body>
+</html>      

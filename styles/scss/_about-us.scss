@@ -1,0 +1,33 @@
+ul.AboutUs_team{
+  list-style: none;
+  padding: 0;
+  li{
+    text-align: center;
+    img{
+      border-radius: 50%;
+      margin: 0 auto calc(var(--baseline)/2);
+      width: 50%;
+    }
+  }
+}
+.AboutUs_teamMemberInfo{
+  h3{
+    margin-bottom: 0;
+  }
+  a{
+    .team-member_twitter{
+      margin: 0;
+      fill: #1DA1F3;color:#1DA1F3;
+    }
+  }
+}
+.sitepoint-view{
+  width: 80%;
+  margin: calc(var(--baseline)/2) 10%;
+}
+.team-member_title{
+  margin: 0;
+}
+.about-page{
+  padding: calc(var(--baseline)*2) 0;
+}
