@@ -1,10 +1,9 @@
 include vars.pug
-
+- var title = "Your First Week With Bootstrap";
 doctype html
 head
   meta(content='ie=edge', http-equiv='x-ua-compatible')
-  title
-    | Your First Week With Bootstrap - SitePoint
+  title #{title} | - SitePoint
   meta(content='SitePoint Book - Your First Week With Bootstrap', name='description')
   meta(content='width=device-width, initial-scale=1', name='viewport')
   link(href='styles/css/book.css?cache=4321', rel='stylesheet', type='text/css')

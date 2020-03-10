@@ -1,34 +1,38 @@
-
-
 #toolstrip {
   background-color: #222;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   transform-origin: 50% calc(var(--baseline)*-1) 0;
   transition: transform .1s ease-in;
   width: 100%;
   z-index: 999;
-  display: none;  /* Note: this is hidden by default (mobile) and only display on tablet and larger */
+  display: none;
+  /* Note: this is hidden by default (mobile) and only display on tablet and larger */
 }
 
 .fixed-nav {
-	position: fixed;
-	top: calc(var(--baseline) * 1);
+  position: fixed;
+  top: calc(var(--baseline) * 1);
   width: 100%;
   z-index: 2;
 }
 
-#downloadBook svg{
-margin:0 0 -0.6rem 1rem;
+#downloadBook svg {
+  margin: 0 0 -0.6rem 1rem;
 }
 
 .toolbar {
   height: calc(var(--baseline) * 1.5);
   z-index: 100;
 
+  [class*=grid-]>[class*=col-2] {
+    padding: 0
+  }
 }
+
 .toolbar .grid-12>div:first-of-type a.toolbarLink {
   border-left: 1px #383838 solid;
 }
+
 .toolbar .toolbarLink {
   color: #eee;
   font-weight: 400;
@@ -37,29 +41,32 @@ margin:0 0 -0.6rem 1rem;
   text-align: center;
   line-height: calc(var(--baseline) * 1.5);
   border-right: 1px solid #383838;
-  font-size: calc(1rem /  var(--typescale));
-  &:hover{
+  font-size: calc(1rem / var(--typescale));
+
+  &:hover {
     font-weight: 500;
     //background-color: #111;
     transition: all .2s ease-out;
   }
+
   .svg-icon {
     margin-left: 0;
   }
 }
 
 /* Center  */
-#offlinemode{
+#offlinemode {
   height: calc(var(--baseline) * 1.5);
   position: relative;
-  .state{
-    margin:0.889rem;
+
+  .state {
+    margin: 0.889rem;
   }
 }
 
 $dialog-speed: 9s;
 
-.tooltip-dialog{
+.tooltip-dialog {
   opacity: 0;
   position: absolute;
   width: 283px;
@@ -69,14 +76,19 @@ $dialog-speed: 9s;
   padding: calc(var(--baseline) / 2) 0;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
-  .screen{position: relative;}
-  .tooltip-loader{
+
+  .screen {
+    position: relative;
+  }
+
+  .tooltip-loader {
     position: relative;
     margin: calc(var(--baseline) / 2) 1rem 0;
     height: calc(var(--baseline) / 2);
     background: #222;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    .tooltip-progress{
+
+    .tooltip-progress {
       background: #1094F6;
       width: 0%;
       height: calc(var(--baseline) / 2);
@@ -87,12 +99,13 @@ $dialog-speed: 9s;
 
 
 .button-library {
-  width:  calc(var(--baseline) * 1);
-  height:  calc(var(--baseline) * 1);
+  width: calc(var(--baseline) * 1);
+  height: calc(var(--baseline) * 1);
   margin: 0 calc(var(--baseline) / 2);
   float: left;
   border-radius: 4px;
   background: #000;
+
   .svg-icon {
     height: 1.75rem;
     width: 1.75rem;
@@ -100,57 +113,68 @@ $dialog-speed: 9s;
   }
 }
 
-#offlinemode input[type='checkbox']:checked ~ .tooltip-dialog{
+#offlinemode input[type='checkbox']:checked~.tooltip-dialog {
   animation: onoff $dialog-speed forwards; // switches general dialog on an off
-  
-  .screen-1{
-    animation: screens $dialog-speed forwards; 
+
+  .screen-1 {
+    animation: screens $dialog-speed forwards;
   }
-  .screen-2{
+
+  .screen-2 {
     text-align: left;
-    animation: screens $dialog-speed forwards; 
+    animation: screens $dialog-speed forwards;
     margin: calc(var(--baseline) / 1) 0;
   }
-  .tooltip-loader .tooltip-progress{ // progress indicator
+
+  .tooltip-loader .tooltip-progress {
+    // progress indicator
     animation: progress ($dialog-speed/2) forwards;
   }
 }
 
 @keyframes screens {
-  0%{
+  0% {
     top: 0;
   }
-  50%{
+
+  50% {
     top: 0;
   }
-  55%{
+
+  55% {
     top: calc(var(--baseline) * -2);
   }
-  100%{
+
+  100% {
     top: calc(var(--baseline) * -2);
   }
 }
 
 @keyframes onoff {
-  0%{
+  0% {
     opacity: 0;
 
   }
-  5%{
+
+  5% {
     opacity: 1;
   }
-  95%{
+
+  95% {
     opacity: 1;
   }
-  100%{
+
+  100% {
     opacity: 0;
   }
 }
+
 @keyframes progress {
-  0%{
+  0% {
     width: 0%;
   }
-  100%{
+
+  100% {
     width: 100%;
   }
 }
@@ -158,10 +182,10 @@ $dialog-speed: 9s;
 
 
 
-/* ==== Chapter menu  === */ 
+/* ==== Chapter menu  === */
 
 
-#toc-anchor{
+#toc-anchor {
   //outline: 1px red dashed;
   z-index: 2000;
   width: 100%;
@@ -169,18 +193,20 @@ $dialog-speed: 9s;
   top: calc(var(--baseline) * 2);
 }
 
-.toc-container{
+.toc-container {
   position: absolute;
   transform: scaleY(0);
   transform: translateX(-110%);
   width: 100%;
   transition: transform .2s ease-out;
-  &.open{
+
+  &.open {
     transform: scaleY(1);
     transform: translateX(0px);
     transition: transform .2s ease-out;
   }
-  .toc{
+
+  .toc {
     margin: 0;
     color: #111;
     padding-top: calc(var(--baseline) * 1);
@@ -193,15 +219,16 @@ $dialog-speed: 9s;
     line-height: calc(var(--baseline) * 1.25);
     width: 100%;
     padding-left: 1rem;
-    i{
+
+    i {
       margin-left: 2rem;
     }
 
   }
 }
 
-#closetoc{
-  width:  calc(var(--baseline) * 1);
+#closetoc {
+  width: calc(var(--baseline) * 1);
   height: calc(var(--baseline) * 1);
   display: block;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 21 21'%3E%3Ccircle cx='10.5' cy='10.5' r='10.5' fill='%23000'/%3E%3Cpath fill='%23fff' d='M15.803 15.803a1.5 1.5 0 0 0 0-2.121L12.621 10.5l3.182-3.182a1.5 1.5 0 1 0-2.121-2.121L10.5 8.379 7.318 5.197a1.5 1.5 0 0 0-2.121 2.121L8.379 10.5l-3.182 3.182a1.5 1.5 0 1 0 2.121 2.121l3.182-3.182 3.182 3.182a1.5 1.5 0 0 0 2.121 0z'/%3E%3C/svg%3E");
@@ -210,14 +237,13 @@ $dialog-speed: 9s;
   font-size: calc(var(--baseline) * 1);
   cursor: pointer;
   right: 1rem;
-  top:   1rem;
+  top: 1rem;
   z-index: 999;
 }
-li.toc-chapter{
+
+li.toc-chapter {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 85%;
   overflow: hidden;
 }
-
-

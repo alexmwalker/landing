@@ -1,9 +1,11 @@
+
+
 header.sitepoint-branding
   .container
     .grid-12
       .col-6_md-4_sm-10.trim
         .titlebar
-          | Your First Week With Bootstrap
+          | #{title}
       .col-6_md-4_sm-2.showmobile
         .hamburger
           .hamburger-box
@@ -14,7 +16,7 @@ header.sitepoint-branding
             a.viewchapters(href='#')
               svg.svg-icon
                 use(fill='#fff', href='#my-toc')
-              | Table of Contents
+              | Contents
           li
             a(href='#')
               svg.svg-icon
@@ -67,13 +69,10 @@ header.sitepoint-branding
 
 
 
-          //
-            <li class="logged-in mobile-controls">
-            <form action="search.html">
-            <input class="form-control" id="mobilesearch" name="mobilesearch" type="text"
-            placeholder="Search books..." />
-            </form>
-            </li>
+          
+          li.logged-in.mobile-controls
+            form(action="search.html")
+              input.form-control(id="mobilesearch" name="mobilesearch" type="text" placeholder="Search books...")
       .col-6_md-8_sm-hidden
         ul.nav
           li
@@ -91,6 +90,11 @@ header.sitepoint-branding
               svg.svg-icon
                 use(fill='#fff', href='#my-library')
               |  Library
+          li
+            a(href='#')
+              svg.svg-icon
+                use(fill='#fff', href='#my-search')
+              |  Search
           li
             a(href='#')
               svg.svg-icon
