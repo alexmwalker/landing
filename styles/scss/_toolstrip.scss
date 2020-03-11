@@ -23,14 +23,15 @@
 .toolbar {
   height: calc(var(--baseline) * 1.5);
   z-index: 100;
-
-  [class*=grid-]>[class*=col-2] {
-    padding: 0
-  }
 }
 
 .toolbar .grid-12>div:first-of-type a.toolbarLink {
   border-left: 1px #383838 solid;
+}
+
+
+.toolbar .grid-12 div {
+  border-right: 1px solid #383838;
 }
 
 .toolbar .toolbarLink {
@@ -40,7 +41,6 @@
   display: inline-block;
   text-align: center;
   line-height: calc(var(--baseline) * 1.5);
-  border-right: 1px solid #383838;
   font-size: calc(1rem / var(--typescale));
 
   &:hover {
@@ -49,7 +49,7 @@
     transition: all .2s ease-out;
   }
 
-  .svg-icon {
+  .svg-icon { 
     margin-left: 0;
   }
 }

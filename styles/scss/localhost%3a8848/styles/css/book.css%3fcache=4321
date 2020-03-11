@@ -2788,7 +2788,7 @@ table {
   font-size: calc(var(--typescale) * var(--typescale) * 1rem);
   border-radius: 6px;
   margin-top: calc(var(--baseline) /5);
-  width: 90%;
+  /* width: 88%; */
 }
 .mobilenav li label {
   display: inline-block;

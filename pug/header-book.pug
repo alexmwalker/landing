@@ -12,6 +12,12 @@ header.sitepoint-branding
           .hamburger-inner
       nav.mobilenav
         ul
+          li.logged-in.mobile-controls
+            form(action="search.html")
+              svg.svg-icon
+                use(fill='#fff', href='#my-search')
+              input.form-control(id="mobilesearch" name="mobilesearch" type="text" placeholder="Search books...")
+
           li
             a.viewchapters(href='#')
               svg.svg-icon
@@ -52,27 +58,9 @@ header.sitepoint-branding
                   input(type='checkbox')
                   .state.p-success
                     label Make available offline
-                    //
-                      .tooltip-dialog
-                        .screen.screen-1
-                          b Downloading to your offline Library...
-                          .tooltip-loader
-                            .tooltip-progress
-                        .screen.screen-2
-                          .button-library
-                            svg.svg-icon
-                              use(fill='#fff', href='#my-library')
-                          b Download complete
-                          br
-                          p.small
-                            | Access this book in your library
 
 
 
-          
-          li.logged-in.mobile-controls
-            form(action="search.html")
-              input.form-control(id="mobilesearch" name="mobilesearch" type="text" placeholder="Search books...")
       .col-6_md-8_sm-hidden
         ul.nav
           li

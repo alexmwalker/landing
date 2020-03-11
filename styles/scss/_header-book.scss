@@ -1,6 +1,5 @@
 /* ===  HEADER === */
 
-
 .sitepoint-branding ul.nav {
   padding: 0;
   margin: 0;
@@ -255,7 +254,14 @@
   //float: right;
   line-height: calc(var(--baseline) * 1.5);
   height: calc(var(--baseline) * 1.5);
+
   text-align: center;
+
+  input {
+    display: inline-block;
+    outline: 1px red dashed;
+    width: 90%;
+  }
 
   a {
     width: 48%;
