@@ -68,216 +68,58 @@
         </nav>
         <div class="col-6_md-8_sm-hidden">
           <ul class="nav">
-            <li><a class="darkmode" href="#">
+            <li><a class="darkmode" href="#" onclick="return false">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-dark"></use>
                 </svg></a></li>
             <li id="font-adjuster-wrapper"><a id="showfontchanger" href="#">A &pm;</a>
               <div id="font-adjuster-container"><span>Text-size:</span>
-                <button class="fontsizedown go"> A-</button>
-                <button class="fontsizeup go">   A+</button>
+                <button class="fontsizedown go">A-</button>
+                <button class="fontsizeup go">A+</button>
               </div>
             </li>
             <li class="library"><a href="library.html">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-library"></use>
                 </svg> Library</a></li>
-            <li><a href="#" id="search-control">
+            <li><a href="#" id="search-control" onclick=" return false">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-search"></use>
                 </svg> Search</a></li>
             <li><a href="#">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-activity"></use>
-                </svg> Your Activity</a></li>
+                </svg> Your Activity
+                <te></te></a></li>
           </ul>
         </div>
       </div>
     </div>
-  </header>
-  <nav class="library-nav">
-    <div class="container">
-      <div class="grid-noGutter-center">
-        <div class="col-6_md-11">
-          <input type="search" placeholder="Search the library">
-          <!--input.click(type="submit", value="Go")-->
-        </div>
-        <div class="col-6_md-11">
-          <select name="Filter by: " id="Filter by: ">
-            <option value="All">All</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="HTML &amp; CSS">HTML & CSS</option>
-            <option value="PHP">PHP</option>
-            <option value="Design &amp; UX">Design & UX</option>
-            <option value="Mobile">Mobile</option>
-            <option value="WordPress">WordPress</option>
-            <option value="Workflow">Workflow</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <div id="search-panel">
-    <div class="container">
-      <div class="grid-center search-body">
-        <div class="col-9_sm-12">
-          <h5>Book titles covering 'CSS Animation'</h5>
-        </div>
-        <div class="col-3_sm-hidden">
-          <p class="minor showall">6 results - <a href="#">(Show All)     </a></p>
-        </div>
-        <div class="col-9_sm-12">
-          <h5>'CSS Animation' located in books...</h5>
-        </div>
-        <div class="col-3_sm-hidden">
-          <p class="minor showall">8 results - <a href="#">(Show All) </a></p>
-        </div>
-        <div class="col-12 results-list"> 
-          <div class="grid-center">
-            <div class="col-12"> 
-              <h5> <a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">CSS: Tools & Skills </a>found in <a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">Chapter 2: CSS Selectors</a></h5>
+    <div id="search-panel">
+      <form action="search.html" method="get">
+        <div class="container">
+          <div class="grid-noGutter-center searchbox">
+            <div class="col-8_md-11">
+              <input type="search" id="booksearch" placeholder="      Search the book">
             </div>
-            <div class="col-11_sm-12 result-text">
-              <blockquote>
-                <p> Without any doubts, <span class="search-term">CSS animations  </span> are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...              </p>
-              </blockquote>
-            </div>
-            <div class="col-1_sm-12 result-book">
-              <div class="grid-noGutter-center">
-                <div class="col-12_sm-2">
-                  <div class="thumbframe"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/d1d4edbe-5a22-4b6a-842c-b1f1210245db_medium.png"></div>
-                </div>
-                <div class="col-12_sm-10"><a class="go" href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read"><span>Go  </span></a></div>
-              </div>
-            </div>
-            <div class="col-12"> 
-              <h5> <a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS: Tools &amp; Skills </a>found in <a href="https://www.sitepoint.com/premium/books/modern-css/read">Chapter 6: CSS Selectors</a></h5>
-            </div>
-            <div class="col-11_sm-12 result-text">
-              <blockquote>
-                <p> Why should your site look like 101 others? Consider developing your own <span class="search-term">CSS Animation  </span>theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</p>
-              </blockquote>
-            </div>
-            <div class="col-1_sm-12 result-book">
-              <div class="grid-noGutter-center">
-                <div class="col-12_sm-2">
-                  <div class="thumbframe"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/2942e3e7-a0e6-4736-ad00-efc05f21f186.png"></div>
-                </div>
-                <div class="col-12_sm-10"><a class="go" href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read"> <span>Go </span></a></div>
-              </div>
-            </div>
-            <div class="col-12"> 
-              <h5> <a href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read">Modern CSS </a>found in <a href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read">Chapter 2: CSS Selectors</a></h5>
-            </div>
-            <div class="col-11_sm-12 result-text">
-              <blockquote>
-                <p> ...for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, <span class="search-term">CSS Animation  </span>represents a "JavaScript everywhere" paradigm, unifying web application development around a single programming language, rather than different languages for server side and client side scripts.</p>
-              </blockquote>
-            </div>
-            <div class="col-1_sm-12 result-book">
-              <div class="grid-noGutter-center">
-                <div class="col-12_sm-2">
-                  <div class="thumbframe"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/a34214fb-74db-418b-b343-8caf658eeed2_medium.png"></div>
-                </div>
-                <div class="col-12_sm-10"><a class="go" href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read"> <span>Go </span></a></div>
-              </div>
-            </div>
-            <div class="col-12"> 
-              <h5> <a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">8 Practical Bootstrap Projects </a>found in <a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">Chapter 3: Animating Bootstrap Carousels with GSAP’s Animation Library</a></h5>
-            </div>
-            <div class="col-11_sm-12 result-text">
-              <blockquote>
-                <p> At this point, let’s try to make the carousel more appealing by adding some <span class="search-term">CSS Animation  </span>. To achieve this, we’ll take advantage of GSAP, one of the most powerful JavaScript animation libraries out there. If you’re looking for a thorough introduction to GreenSock, check out GreenSock for Beginners: a Web Animation Tutorial (Part 1).</p>
-              </blockquote>
-            </div>
-            <div class="col-1_sm-12 result-book">
-              <div class="grid-noGutter-center">
-                <div class="col-12_sm-2">
-                  <div class="thumbframe"><img src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/8-practical-bootstrap-projects/images/cover-front.png"></div>
-                </div>
-                <div class="col-12_sm-10"><a class="go" href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read"> <span>Go </span></a></div>
-              </div>
-            </div>
-            <div class="col-12"> 
-              <h5> <a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">Modern CSS </a>found in <a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">Chapter 2: CSS Selectors</a></h5>
-            </div>
-            <div class="col-11_sm-12 result-text">
-              <blockquote>
-                <p> Without any doubts, <span class="search-term">CSS animations  </span> are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...              </p>
-              </blockquote>
-            </div>
-            <div class="col-1_sm-12 result-book">
-              <div class="grid-noGutter-center">
-                <div class="col-12_sm-2">
-                  <div class="thumbframe"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/eacf6980-2f5e-4367-9729-9dfee3c25e3b_medium.png"></div>
-                </div>
-                <div class="col-12_sm-10"><a class="go" href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read"> <span>Go </span></a></div>
-              </div>
-            </div>
-            <div class="col-12"> 
-              <h5> <a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS: Tools &amp; Skills </a>found in <a href="https://www.sitepoint.com/premium/books/modern-css/read">Chapter 6: CSS Selectors</a></h5>
-            </div>
-            <div class="col-11_sm-12 result-text">
-              <blockquote>
-                <p> Why should your site look like 101 others? Consider developing your own <span class="search-term">CSS Animation  </span>theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</p>
-              </blockquote>
-            </div>
-            <div class="col-1_sm-12 result-book">
-              <div class="grid-noGutter-center">
-                <div class="col-12_sm-2">
-                  <div class="thumbframe"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/d1d4edbe-5a22-4b6a-842c-b1f1210245db_medium.png"></div>
-                </div>
-                <div class="col-12_sm-10"><a class="go" href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read"> <span>Go </span></a></div>
-              </div>
-            </div>
-            <div class="col-12"> 
-              <h5> <a href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read"> CSS Master </a>found in <a href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read">Chapter 2: CSS Selectors</a></h5>
-            </div>
-            <div class="col-11_sm-12 result-text">
-              <blockquote>
-                <p> ...for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, <span class="search-term">CSS Animation  </span>represents a "JavaScript everywhere" paradigm, unifying web application development around a single programming language, rather than different languages for server side and client side scripts.</p>
-              </blockquote>
-            </div>
-            <div class="col-1_sm-12 result-book">
-              <div class="grid-noGutter-center">
-                <div class="col-12_sm-2">
-                  <div class="thumbframe"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/a34214fb-74db-418b-b343-8caf658eeed2_medium.png"></div>
-                </div>
-                <div class="col-12_sm-10"><a class="go" href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read"> <span>Go </span></a></div>
-              </div>
-            </div>
-            <div class="col-12"> 
-              <h5> <a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">8 Practical Bootstrap Projects </a>found in <a href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read">Chapter 3: Animating Bootstrap Carousels with GSAP’s Animation Library</a></h5>
-            </div>
-            <div class="col-11_sm-12 result-text">
-              <blockquote>
-                <p> At this point, let’s try to make the carousel more appealing by adding some <span class="search-term">CSS Animation  </span>. To achieve this, we’ll take advantage of GSAP, one of the most powerful JavaScript animation libraries out there. If you’re looking for a thorough introduction to GreenSock, check out GreenSock for Beginners: a Web Animation Tutorial (Part 1).</p>
-              </blockquote>
-            </div>
-            <div class="col-1_sm-12 result-book">
-              <div class="grid-noGutter-center">
-                <div class="col-12_sm-2">
-                  <div class="thumbframe"><img src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/8-practical-bootstrap-projects/images/cover-front.png"></div>
-                </div>
-                <div class="col-12_sm-10"><a class="go" href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read"> <span>Go  </span></a></div>
-              </div>
-            </div>
+            <div class="col-2_md-11"><a href="search.html">
+                <input class="insetbutton" type="submit" value="Go"></a></div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
-  </div>
+  </header>
   <section class="bookpanel">
     <div class="container">
       <div class="grid-center">
         <div class="col-10_md-12">
           <div class="grid-center">
             <div class="col-3_sm-12">
-              <div class="thumbnail-book"><img src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/your-first-week-with-bootstrap/images/cover-front.png"></div>
+              <div class="thumbnail-book"><img src="images/covers/bootstrap-1@2x.png"></div>
             </div>
             <div class="col-9_sm-12">
               <h1>Your First Week With Bootstrap</h1>
-              <p>Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
+              <p> Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
             </div>
           </div>
         </div>
@@ -564,23 +406,25 @@
     $(document).ready(function () {
     $('.showmobile').click(function () {
     $(this).toggleClass('open');
-    $('.mobilenav').toggleClass('open');
+      $('.mobilenav').toggleClass('open');
     });
     $('.viewchapters').click(function () {
-    $('.toc-container').toggleClass('open');
-    $('.viewchapters').toggleClass('open');
+      $('.toc-container').toggleClass('open');
+      $('.viewchapters').toggleClass('open');
     });
     $('#closetoc').click(function () {
-    $('.toc-container').removeClass('open');
+      $('.toc-container').removeClass('open');
     });
     $('#showfontchanger').click(function () {
-    $('#font-adjuster-container').toggleClass('open');
+      $('#font-adjuster-container').toggleClass('open');
     });
     $('.darkmode').click(function () {
-    $('#reeedr').toggleClass('dark');
+      $('#reeedr').toggleClass('dark');
     });
+    
     $('#search-control').click(function () {
-    $('#search-panel').toggleClass('open');
+      $('#search-panel').toggleClass('open');
+      $('#booksearch').focus();
     });
     
     $("#offlinemode input").change(function () {

@@ -19,20 +19,25 @@ script.
   $(document).ready(function () {
   $('.showmobile').click(function () {
   $(this).toggleClass('open');
-  $('.mobilenav').toggleClass('open');
+    $('.mobilenav').toggleClass('open');
   });
   $('.viewchapters').click(function () {
-  $('.toc-container').toggleClass('open');
-  $('.viewchapters').toggleClass('open');
+    $('.toc-container').toggleClass('open');
+    $('.viewchapters').toggleClass('open');
   });
   $('#closetoc').click(function () {
-  $('.toc-container').removeClass('open');
+    $('.toc-container').removeClass('open');
   });
   $('#showfontchanger').click(function () {
-  $('#font-adjuster-container').toggleClass('open');
+    $('#font-adjuster-container').toggleClass('open');
   });
   $('.darkmode').click(function () {
-  $('#reeedr').toggleClass('dark');
+    $('#reeedr').toggleClass('dark');
+  });
+
+  $('#search-control').click(function () {
+    $('#search-panel').toggleClass('open');
+    $('#booksearch').focus();
   });
 
   $("#offlinemode input").change(function () {

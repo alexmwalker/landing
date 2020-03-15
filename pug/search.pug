@@ -1,31 +1,26 @@
-- var hidesearch = 1
 
-html
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title SitePoint - Learn with Books, Video and Code
-    meta(name='description', content='SitePoint Library')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+include vars.pug
 
-    link(rel='stylesheet', type='text/css', href='styles/css/search.css?r=123')
+doctype html
+head
+  meta(content='ie=edge', http-equiv='x-ua-compatible')
+  title #{title} | - SitePoint
+  meta(name='description', content =`${titledescription}`)
+  meta(content='width=device-width, initial-scale=1', name='viewport')
+  link(href='styles/css/book.css?cache=4321', rel='stylesheet', type='text/css')
+  link(href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css', rel='stylesheet', type='text/css')
 
 
 
-  body.-vr.-labelling.-borders
+body.vr.-labelling.borders#reeedr 
 
-    include header-simple.pug
+  include header-book.pug
 
-    section.contentbody
+  //- NOTE - The search is included in the <header> above
 
-      include search-big.pug
-      .container 
-        .col-12
-          h4.underline Search Results for: 
-            em ‘CSS Animation’
+  include search-results.pug
 
-      include search-books.pug
-    
-      //include search-locate.pug
+  include book-footer.pug
+  include scripts-book.pug
 
-    include footer.pug
+  include svg-icons.pug

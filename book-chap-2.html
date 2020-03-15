@@ -50,13 +50,6 @@
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-dark"></use>
                 </svg> Dark/Light Mode</a></li>
-            <!--
-            li
-              a(href='#')
-                svg.svg-icon
-                  use(fill='#fff', href='#my-activity')
-                |  Your Activity
-            -->
             <li class="mobile-controls">
               <button class="fontsizedown go">A -</button>
               <button class="fontsizeup go">A +</button>
@@ -75,7 +68,7 @@
         </nav>
         <div class="col-6_md-8_sm-hidden">
           <ul class="nav">
-            <li><a class="darkmode" href="#">
+            <li><a class="darkmode" href="#" onclick="return false">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-dark"></use>
                 </svg></a></li>
@@ -89,17 +82,31 @@
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-library"></use>
                 </svg> Library</a></li>
-            <li><a href="#">
+            <li><a href="#" id="search-control" onclick=" return false">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-search"></use>
                 </svg> Search</a></li>
             <li><a href="#">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-activity"></use>
-                </svg> Your Activity</a></li>
+                </svg> Your Activity
+                <te></te></a></li>
           </ul>
         </div>
       </div>
+    </div>
+    <div id="search-panel">
+      <form action="search.html" method="get">
+        <div class="container">
+          <div class="grid-noGutter-center searchbox">
+            <div class="col-8_md-11">
+              <input type="search" id="booksearch" placeholder="      Search the book">
+            </div>
+            <div class="col-2_md-11"><a href="search.html">
+                <input class="insetbutton" type="submit" value="Go"></a></div>
+          </div>
+        </div>
+      </form>
     </div>
   </header>
   <section class="bookpanel">
@@ -108,11 +115,11 @@
         <div class="col-10_md-12">
           <div class="grid-center">
             <div class="col-3_sm-12">
-              <div class="thumbnail-book"><img src="https://s3.amazonaws.com/learnable-static/premium/reeedr/books/your-first-week-with-bootstrap/images/cover-front.png"></div>
+              <div class="thumbnail-book"><img src="images/covers/bootstrap-1@2x.png"></div>
             </div>
             <div class="col-9_sm-12">
               <h1>Your First Week With Bootstrap</h1>
-              <p>Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
+              <p> Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
             </div>
           </div>
         </div>
@@ -471,20 +478,25 @@ Lorem Ipsum...
     $(document).ready(function () {
     $('.showmobile').click(function () {
     $(this).toggleClass('open');
-    $('.mobilenav').toggleClass('open');
+      $('.mobilenav').toggleClass('open');
     });
     $('.viewchapters').click(function () {
-    $('.toc-container').toggleClass('open');
-    $('.viewchapters').toggleClass('open');
+      $('.toc-container').toggleClass('open');
+      $('.viewchapters').toggleClass('open');
     });
     $('#closetoc').click(function () {
-    $('.toc-container').removeClass('open');
+      $('.toc-container').removeClass('open');
     });
     $('#showfontchanger').click(function () {
-    $('#font-adjuster-container').toggleClass('open');
+      $('#font-adjuster-container').toggleClass('open');
     });
     $('.darkmode').click(function () {
-    $('#reeedr').toggleClass('dark');
+      $('#reeedr').toggleClass('dark');
+    });
+    
+    $('#search-control').click(function () {
+      $('#search-panel').toggleClass('open');
+      $('#booksearch').focus();
     });
     
     $("#offlinemode input").change(function () {

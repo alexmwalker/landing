@@ -3179,34 +3179,47 @@ textarea:focus, input:focus {
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.book-search-results-list {
+.results-list {
   background: #fff;
   display: block;
   border-radius: 10px;
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  padding: calc(var(--baseline) * 1) 0 0 0;
+  padding: calc(var(--baseline) / 2) 0 0 0;
   margin: 0 0.75rem calc(var(--baseline) * 1);
   border: 1px #eee solid;
+  /* 
+   .cardtitle {
+     text-align: center;
+     font-weight: 500;
+     font-size: calc(1rem / var(--typescale));
+     line-height: calc(var(--baseline) / 2);
+     height: calc(var(--baseline) * 1.5);
+     max-height: calc(var(--baseline) * 1.5);
+     overflow: hidden;
+     margin: 0 1rem;
+     color: #333;
+     display: flex;
+     align-items: center;
+     //outline: 1px red dashed;
+     justify-content: center;
+   }
+
+   .bookframe {
+     display: flex;
+     width: 86%;
+     margin: 0 7% calc(var(--baseline) / 4);
+     height: calc(var(--baseline) * 8.7);
+     overflow: hidden;
+     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+   }
+
+   img {
+     width: 100%;
+   }*/
 }
-.book-search-results-list dl dd {
-  margin: calc(var(--baseline)/2) calc(var(--baseline)/2);
-}
-.book-search-results-list h5 {
-  margin: 0;
-}
-.book-search-results-list p {
-  background: #f3f6f9;
-  font-style: italic;
-  margin: 0 0 calc(var(--baseline)/1) 0;
+.results-list dl dd blockquote {
   font-size: calc(1rem / var(--typescale));
-  line-height: calc(var(--baseline) * 0.75);
-  padding: calc(var(--baseline)/2) 1em;
-  letter-spacing: 0.03rem;
-  border-left: 5px solid #c6c8dd;
-}
-.book-search-results-list .search-term {
-  background: yellow;
 }
 
 .library-nav {

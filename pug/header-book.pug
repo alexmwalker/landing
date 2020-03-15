@@ -43,12 +43,7 @@ header.sitepoint-branding
               svg.svg-icon
                 use(fill='#fff', href='#my-dark')
               |  Dark/Light Mode
-          //
-            li
-              a(href='#')
-                svg.svg-icon
-                  use(fill='#fff', href='#my-activity')
-                |  Your Activity
+
           li.mobile-controls
             button.fontsizedown.go A -
             button.fontsizeup.go A +
@@ -64,7 +59,7 @@ header.sitepoint-branding
       .col-6_md-8_sm-hidden
         ul.nav
           li
-            a.darkmode(href='#')
+            a.darkmode(href='#',  onclick="return false")
               svg.svg-icon
                 use(fill='#fff', href='#my-dark')
           li#font-adjuster-wrapper
@@ -79,7 +74,7 @@ header.sitepoint-branding
                 use(fill='#fff', href='#my-library')
               |  Library
           li
-            a(href='#')
+            a(href='#', id='search-control',  onclick=" return false")
               svg.svg-icon
                 use(fill='#fff', href='#my-search')
               |  Search
@@ -88,3 +83,5 @@ header.sitepoint-branding
               svg.svg-icon
                 use(fill='#fff', href='#my-activity')
               |  Your Activity
+              te
+  include search-books.pug
