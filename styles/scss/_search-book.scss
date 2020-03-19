@@ -92,9 +92,7 @@ textarea:focus, input:focus{
     border-radius: calc(var(--baseline) * 2);
 
     &:hover{ 
-    //@extend: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 90 90'%3E%3Cpath fill='url(%23paint0_radial)' d='M0 0h90v90H0z'/%3E%3Cpath fill='%23595757' d='M58.62 56.208l-5.453-5.452a1.312 1.312 0 0 0-.93-.383h-.892a11.317 11.317 0 0 0 2.407-7C53.752 37.092 48.66 32 42.376 32S31 37.09 31 43.374c0 6.283 5.092 11.374 11.376 11.374 2.641 0 5.07-.897 7-2.406v.891c0 .35.137.684.383.93l5.453 5.452a1.307 1.307 0 0 0 1.854 0l1.548-1.548a1.318 1.318 0 0 0 .005-1.86zm-16.244-5.835c-3.867 0-7-3.128-7-7 0-3.865 3.128-6.998 7-6.998 3.867 0 7 3.127 7 6.999 0 3.866-3.128 7-7 7z'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='47' cy='47' r='55' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.4' stop-color='%23fff'/%3E%3Cstop offset='.95' stop-color='%23eee'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");   
-      //background-size: 100% 100%;
-      //background-position: center center;
+
       border: 3px solid #bbb;
       box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
     }
@@ -102,31 +100,106 @@ textarea:focus, input:focus{
 }
 
 .book-search-results-list {
-  background: #fff;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, .1);
-  padding: calc(var(--baseline) * 1) 0 0 0;
+  padding: calc(var(--baseline) /2) 0 0 0;
   margin: 0 0.75rem calc(var(--baseline) * 1);
-  border: 1px #eee solid;
+  //border: 1px #eee solid;
+}
+.book-search-results-list h5 {
+  margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) /2);
+}
+.book-search-results-list dl dd {
+  margin: 0 0 calc(var(--baseline)/2) 0;
+	padding:calc(var(--baseline)/4) calc(var(--baseline)/4) calc(var(--baseline)/2);
+	border-left: 5px solid #c6c8dd;
+	background: #f3f6f9;
+}
+.book-search-results-list p {
+  margin: 0;
+  font-size: calc(1rem / var(--typescale)/ var(--typescale));
+  line-height: calc(var(--baseline) * 0.75);
+  //padding: calc(var(--baseline)/2) 1em;
+	// NOTE: Padding-bottom breaks line-clamp
+  letter-spacing: 0.03rem;
+  
+}
+.book-search-results-list .search-term {
+  background: yellow;
+}
 
-  dl dd {
-    margin: calc(var(--baseline)/2) calc(var(--baseline)/2)
+/* Trimming Multi-Line Text in CSS
+SHOUTOUT: @eladsc 
+SRC: https://medium.com/@elad/trimming-multi-lines-in-css-5ae59d5e6d84 
+DEMO: https://codepen.io/elad2412/pen/Poovzzb
+*/
+
+@mixin trim($numLines: null){
+  @if $numLines != null {
+     display:-webkit-box;
+     -webkit-line-clamp:$numLines;
+     -webkit-box-orient:vertical; 
+     overflow:hidden;
   }
-  h5{
-    margin: 0;
-  }
-  p {
-    background: #f3f6f9;
-    font-style:italic;
-    margin: 0 0 calc(var(--baseline)/1) 0;
-    font-size: calc(1rem / var(--typescale));
-    line-height: calc(var(--baseline) * 0.75);
-    padding: calc(var(--baseline)/2) 1em;
-    letter-spacing: .03rem;
-    border-left: 5px solid #c6c8dd;
-  }
-  .search-term {
-    background: yellow;
+  @else{
+     text-overflow:ellipsis;
+     white-space:nowrap;
+     overflow:hidden;
+     display:block;
   }
 }
+
+.trim-singleline{@include trim}
+.trim-multiline{
+	@include trim(3); // 3 line line clamp in mobile
+	transition: all .3s;
+}
+
+.trim-multiline:before{
+	display: block;
+	position: absolute;
+  content: '[+] EXPAND';
+  background: #f3f6f9;
+	color:#999;
+	text-align: right;
+	font-size: calc(1rem / 1.15); 
+	font-size: 7px;
+	//outline: 1px red dashed;
+	pointer-events: none;
+  right: 0rem;
+  padding-right: .5rem;
+	bottom: 2px;
+	height: calc(var(--baseline) / 2);
+	width: 4rem;
+}
+dd:hover .trim-multiline:before{
+	color:green;
+	font-weight:500
+}
+
+
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  .trim-multiline{@include trim(2); // 2 line line-clamp in tablet up
+  }
+}
+
+/* the 'Expand' control on search results */
+.book-search-results-list dd{
+	position: relative;
+	input{
+		position: absolute;
+		right:0;
+		bottom:0;
+		height: calc(var(--baseline) / 2);
+		width: 3rem;
+		opacity: 0; // <-- this makes the checkbox invisible	
+	}
+}
+
+input:checked +  .trim-multiline{
+	@include trim(6); // expand on checkbox check - close on uncheck
+	transition: all .3s;
+}
+
+input:checked + .trim-multiline:before{
+	content: '[-] HIDE'; // expand switch says 'hide' after expanding
+} 

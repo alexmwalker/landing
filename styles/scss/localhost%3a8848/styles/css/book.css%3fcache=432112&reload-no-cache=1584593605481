@@ -3184,20 +3184,16 @@ textarea:focus, input:focus {
   margin: 0 0.75rem calc(var(--baseline) * 1);
 }
 
-.book-search-results-list h5 {
-  margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) /2);
-}
-
 .book-search-results-list dl dd {
   margin: 0 0 calc(var(--baseline)/2) 0;
-  padding: calc(var(--baseline)/4) calc(var(--baseline)/4) calc(var(--baseline)/2);
+  padding: calc(var(--baseline)/2);
   border-left: 5px solid #c6c8dd;
   background: #f3f6f9;
 }
 
 .book-search-results-list p {
   margin: 0;
-  font-size: calc(1rem / var(--typescale)/ var(--typescale));
+  font-size: calc(1rem / var(--typescale)/ var);
   line-height: calc(var(--baseline) * 0.75);
   letter-spacing: 0.03rem;
 }
@@ -3233,17 +3229,15 @@ DEMO: https://codepen.io/elad2412/pen/Poovzzb
   display: block;
   position: absolute;
   content: "[+] EXPAND";
-  background: #f3f6f9;
   color: #999;
   text-align: right;
   font-size: calc(1rem / 1.15);
   font-size: 7px;
   pointer-events: none;
-  right: 0rem;
-  padding-right: 0.5rem;
-  bottom: 2px;
+  right: 0.5rem;
+  bottom: 0.25rem;
   height: calc(var(--baseline) / 2);
-  width: 4rem;
+  width: 5rem;
 }
 
 dd:hover .trim-multiline:before {

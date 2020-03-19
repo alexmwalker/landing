@@ -1,12 +1,5 @@
 .container
   .grid-center.search-body
-    .col-9_sm-12
-      h5 Book titles covering 'CSS Animation'
-    .col-3_sm-hidden
-      p.minor.showall 6 results - 
-        a(href="#") (Show All)     
-
-
 
     .col-9_sm-12
       h5 'CSS Animation' located in books...
@@ -14,191 +7,88 @@
       p.minor.showall 8 results - 
         a(href="#") (Show All) 
 
-    .col-12.book-search-results-list 
-      dl.grid
+  .grid-center.search-body
+    .col-9_sm-12
+      h2 Book titles covering 'CSS Animation'
+    .col-3_sm-hidden
+      p.minor.showall
+        | 6 results - 
+        a(href='#') (Show All)     
+    .col-9_sm-12
+      h4 'CSS Animation' located in books...
+    .col-3_sm-hidden
+      p.minor 8 results 
+    .col-12.book-search-results-list
+      dl
         dt
-          h5 CSS: Tools &amp; Skills found in Chapter 2: CSS Selectors
+          h5.trim-singleline
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS Master in Chapter 2: CSS Selectors
         dd
-          p Why should your site look like 101 others? Consider developing your own 
-            span.search-term CSS Animation  
-            | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.
-
-        dt
-          h5 
-            a(href="https://www.sitepoint.com/premium/books/modern-css/read") CSS: Tools &amp; Skills 
-            | found in 
-            a(href="https://www.sitepoint.com/premium/books/modern-css/read") Chapter 6: CSS Selectors
-        dd
-          p Without any doubts, 
-            span.search-term CSS animations  
-            |  are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...              
-
-
-  //  .col-12.results-list 
-      .grid-center
-        .col-12 
-          h5 
-            a(href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read") CSS: Tools & Skills 
-            | found in 
-            a(href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read") Chapter 2: CSS Selectors
-        .col-11_sm-12.result-text
-          blockquote
-            p  Without any doubts, 
-              span.search-term CSS animations  
-              |  are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...              
-
-        .col-1_sm-12.result-book
-          .grid-noGutter-center
-            .col-12_sm-2
-              .thumbframe
-                img(src='https://d2sis3lil8ndrq.cloudfront.net/books/d1d4edbe-5a22-4b6a-842c-b1f1210245db_medium.png')
-            .col-12_sm-10
-              a.go(href='https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read')
-                span Go  
-
-
-        .col-12 
-          h5 
-            a(href="https://www.sitepoint.com/premium/books/modern-css/read") CSS: Tools &amp; Skills 
-            | found in 
-            a(href="https://www.sitepoint.com/premium/books/modern-css/read") Chapter 6: CSS Selectors
-        .col-11_sm-12.result-text
-          blockquote
-            p  Why should your site look like 101 others? Consider developing your own 
+          input.expand(type='checkbox')
+          p.trim-multiline
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read')
+              | Why should your site look like 101 others? Consider developing your own 
               span.search-term CSS Animation  
               | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.
-
-        .col-1_sm-12.result-book
-          .grid-noGutter-center
-            .col-12_sm-2
-              .thumbframe
-                img(src='https://d2sis3lil8ndrq.cloudfront.net/books/2942e3e7-a0e6-4736-ad00-efc05f21f186.png')
-            .col-12_sm-10
-              a.go(href='https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read')  
-                span Go 
-
-
-        .col-12 
-          h5 
-            a(href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read") Modern CSS 
+        dt
+          h5.trim-singleline
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS: Tools & Skills 
             | found in 
-            a(href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read") Chapter 2: CSS Selectors
-        .col-11_sm-12.result-text
-          blockquote
-            p  ...for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, 
-              span.search-term CSS Animation  
-              | represents a "JavaScript everywhere" paradigm, unifying web application development around a single programming language, rather than different languages for server side and client side scripts.
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') Chapter 6: CSS Selectors
+        dd
+          input.expand(type='checkbox')
+          p.trim-multiline
+            | Without any doubts, 
+            span.search-term
+              a(href='book.html?stuff') CSS animations  
+            a(href='book.html?stuff')
+              | are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...
 
-        .col-1_sm-12.result-book
-          .grid-noGutter-center
-            .col-12_sm-2
-              .thumbframe
-                img(src='https://d2sis3lil8ndrq.cloudfront.net/books/a34214fb-74db-418b-b343-8caf658eeed2_medium.png')
-            .col-12_sm-10
-              a.go(href='https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read')  
-                span Go 
-
-
-        .col-12 
-          h5 
-            a(href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read") 8 Practical Bootstrap Projects 
-            | found in 
-            a(href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read") Chapter 3: Animating Bootstrap Carousels with GSAP’s Animation Library
-        .col-11_sm-12.result-text
-          blockquote
-            p  At this point, let’s try to make the carousel more appealing by adding some 
-              span.search-term CSS Animation  
-              | . To achieve this, we’ll take advantage of GSAP, one of the most powerful JavaScript animation libraries out there. If you’re looking for a thorough introduction to GreenSock, check out GreenSock for Beginners: a Web Animation Tutorial (Part 1).
-
-        .col-1_sm-12.result-book
-          .grid-noGutter-center
-            .col-12_sm-2
-              .thumbframe
-                img(src='https://s3.amazonaws.com/learnable-static/premium/reeedr/books/8-practical-bootstrap-projects/images/cover-front.png')
-            .col-12_sm-10
-              a.go(href='https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read')  
-                span Go 
-
-        .col-12 
-          h5 
-            a(href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read") Modern CSS 
-            | found in 
-            a(href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read") Chapter 2: CSS Selectors
-        .col-11_sm-12.result-text
-          blockquote
-            p  Without any doubts, 
-              span.search-term CSS animations  
-              |  are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...              
-
-        .col-1_sm-12.result-book
-          .grid-noGutter-center
-            .col-12_sm-2
-              .thumbframe
-                img(src='https://d2sis3lil8ndrq.cloudfront.net/books/eacf6980-2f5e-4367-9729-9dfee3c25e3b_medium.png')
-            .col-12_sm-10
-              a.go(href='https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read')  
-                span Go 
-
-
-        .col-12 
-          h5 
-            a(href="https://www.sitepoint.com/premium/books/modern-css/read") CSS: Tools &amp; Skills 
-            | found in 
-            a(href="https://www.sitepoint.com/premium/books/modern-css/read") Chapter 6: CSS Selectors
-        .col-11_sm-12.result-text
-          blockquote
-            p  Why should your site look like 101 others? Consider developing your own 
+        dt
+          h5.trim-singleline
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS Master in Chapter 2: CSS Selectors
+        dd
+          input.expand(type='checkbox')
+          p.trim-multiline
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read')
+              | Why should your site look like 101 others? Consider developing your own 
               span.search-term CSS Animation  
               | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.
-
-        .col-1_sm-12.result-book
-          .grid-noGutter-center
-            .col-12_sm-2
-              .thumbframe
-                img(src='https://d2sis3lil8ndrq.cloudfront.net/books/d1d4edbe-5a22-4b6a-842c-b1f1210245db_medium.png')
-            .col-12_sm-10
-              a.go(href='https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read')  
-                span Go 
-
-
-        .col-12 
-          h5 
-            a(href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read")  CSS Master 
+        dt
+          h5.trim-singleline
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS: Tools & Skills 
             | found in 
-            a(href="https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read") Chapter 2: CSS Selectors
-        .col-11_sm-12.result-text
-          blockquote
-            p  ...for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, 
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') Chapter 6: CSS Selectors
+        dd
+          input.expand(type='checkbox')
+          p.trim-multiline
+            | Without any doubts, 
+            span.search-term
+              a(href='book.html?stuff') CSS animations  
+            a(href='book.html?stuff')
+              | are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...
+
+        dt
+          h5.trim-singleline
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS Master in Chapter 2: CSS Selectors
+        dd
+          input.expand(type='checkbox')
+          p.trim-multiline
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read')
+              | Why should your site look like 101 others? Consider developing your own 
               span.search-term CSS Animation  
-              | represents a "JavaScript everywhere" paradigm, unifying web application development around a single programming language, rather than different languages for server side and client side scripts.
-
-        .col-1_sm-12.result-book
-          .grid-noGutter-center
-            .col-12_sm-2
-              .thumbframe
-                img(src='https://d2sis3lil8ndrq.cloudfront.net/books/a34214fb-74db-418b-b343-8caf658eeed2_medium.png')
-            .col-12_sm-10
-              a.go(href='https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read')  
-                span Go 
-
-
-        .col-12 
-          h5 
-            a(href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read") 8 Practical Bootstrap Projects 
+              | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.
+        dt
+          h5.trim-singleline
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS: Tools & Skills 
             | found in 
-            a(href="https://www.sitepoint.com/premium/books/8-practical-bootstrap-projects/read") Chapter 3: Animating Bootstrap Carousels with GSAP’s Animation Library
-        .col-11_sm-12.result-text
-          blockquote
-            p  At this point, let’s try to make the carousel more appealing by adding some 
-              span.search-term CSS Animation  
-              | . To achieve this, we’ll take advantage of GSAP, one of the most powerful JavaScript animation libraries out there. If you’re looking for a thorough introduction to GreenSock, check out GreenSock for Beginners: a Web Animation Tutorial (Part 1).
-
-        .col-1_sm-12.result-book
-          .grid-noGutter-center
-            .col-12_sm-2
-              .thumbframe
-                img(src='https://s3.amazonaws.com/learnable-static/premium/reeedr/books/8-practical-bootstrap-projects/images/cover-front.png')
-            .col-12_sm-10
-              a.go(href='https://www.sitepoint.com/premium/books/your-first-week-with-wordpress/read')  
-                span Go  
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') Chapter 6: CSS Selectors
+        dd
+          input.expand(type='checkbox')
+          p.trim-multiline
+            | Without any doubts, 
+            span.search-term
+              a(href='book.html?stuff') CSS animations  
+            a(href='book.html?stuff')
+              | are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...
 

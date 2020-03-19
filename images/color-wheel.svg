@@ -1,0 +1,126 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 579 578">
+
+	<style>
+		text{ fill: #999}
+		.joiner{ 
+			stroke-width: 3; 
+			stroke: #000;
+			stroke-opacity: .4;
+			transition: all .3s;
+			stroke-dasharray: 3 3;
+		}
+		.ones:hover .joiner, .twos:hover .joiner, .threes:hover .joiner{
+			stroke: red;
+			stroke-width: 5; 
+			stroke-opacity: 1;
+			font-size: 40;
+			transition: all .3s;
+			stroke-dasharray: 1 0;
+		}
+			.ones:hover text, .twos:hover text, .threes:hover text{
+			fill: #000;
+    font-weight: 600;
+			transition: all .3s;
+		}
+    circle{
+    fill:#fff;
+    }
+	</style>
+
+    <path class="background" fill="#fff" d="M0 0h579v578H0z"/>
+		
+    <path class="backloop" fill="#777" fill-opacity="1" fill-rule="evenodd" d="M213.356 566.413c153.372 41.096 311.018-49.922 352.114-203.293 41.096-153.372-49.921-311.019-203.293-352.114C208.806-30.09 51.159 60.928 10.063 214.299c-41.096 153.372 49.922 311.018 203.293 352.114zm22.293-85.131c106.693 28.589 216.361-34.728 244.949-141.421C509.187 233.167 445.87 123.5 339.177 94.911 232.484 66.324 122.816 129.64 94.227 236.334 65.64 343.026 128.957 452.694 235.65 481.282z" clip-rule="evenodd"/>
+		
+		
+		<!-- start pies -->
+		
+    <path class="yellow one" fill="#FEF200" d="M236.054 95.007c32.833-8.836 68.362-9.41 103.567.023l22.517-84.035c-50.507-13.441-101.465-12.564-148.557.139l22.473 83.873z"/>
+    <path class="violet two" fill="#733598" d="M339.014 482.062c-32.833 8.836-68.362 9.409-103.567-.024l-22.517 84.035c50.507 13.441 101.465 12.565 148.557-.139l-22.473-83.872z"/>
+    <path class="grass three" fill="#8AC81F"  d="M146.187 146.674c24.017-24.068 54.499-42.33 89.704-51.763l-22.517-84.035c-50.462 13.613-94.154 39.851-128.586 74.4l61.399 61.398z"/>
+    <path class="magenta three" fill="#C5037E" d="M428.88 430.394c-24.016 24.068-54.498 42.329-89.703 51.763l22.517 84.035c50.461-13.613 94.154-39.851 128.585-74.399l-61.399-61.399z"/>
+    <path class="green two" fill="#008F5A" d="M94.194 236.354c8.765-32.853 26.033-63.908 51.805-89.68L84.481 85.156c-36.895 37.02-61.614 81.589-74.16 128.724l83.873 22.474z"/>
+    <path class="red one" fill="#FE0000" d="M480.873 340.715c-8.764 32.852-26.032 63.908-51.804 89.68l61.518 61.518c36.895-37.02 61.614-81.589 74.159-128.724l-83.873-22.474z"/>
+    <path class="cyan three" fill="#0395BA" d="M94.007 340.014c-8.837-32.833-9.41-68.362.023-103.567L9.995 213.93c-13.441 50.507-12.565 101.465.139 148.558l83.873-22.474z"/>
+    <path class="darkorange three" fill="#FF6201" d="M481.061 237.054c8.836 32.833 9.41 68.362-.024 103.567l84.035 22.518c13.442-50.508 12.565-101.465-.138-148.558l-83.873 22.473z"/>
+    <path class="blue three" fill="#2772B3" d="M145.674 429.881c-24.068-24.016-42.33-54.499-51.763-89.704L9.876 362.694c13.613 50.462 39.851 94.154 74.4 128.586l61.398-61.399z"/>
+    <path class="orange two" fill="#FF9000" d="M429.4 147.187c24.069 24.017 42.33 54.499 51.763 89.704l84.035-22.517c-13.613-50.462-39.851-94.154-74.399-128.586l-61.399 61.399z"/>
+    <path class="navy three" fill="#434EA0" d="M235.353 481.873c-32.852-8.764-63.908-26.032-89.68-51.804l-61.518 61.518c37.021 36.895 81.589 61.614 128.725 74.159l22.473-83.873z"/>
+    <path class="sand three" fill="#FFC700" d="M339.715 95.194c32.852 8.765 63.908 26.033 89.68 51.805l61.517-61.518c-37.02-36.895-81.588-61.614-128.724-74.16l-22.473 83.873z"/>
+		<!-- end pies -->
+		
+		<!-- twos -->
+		<g class="twos">
+    <circle cx="285" cy="528" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="275.424" y="540.3">2</tspan>
+    </text>
+    <circle cx="75" cy="170" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="65.424" y="182.3">2</tspan>
+    </text>
+    <circle cx="495" cy="170" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="485.424" y="182.3">2</tspan>
+    </text>
+    <path class="joiner" stroke-width="5" d="M100.281 176.112l185.209 329.21 189.25-327.791-374.459-1.419z"/>
+    <text fill="#000" font-family="Roboto" font-size="28" >
+      <tspan class="label" x="207" y="295">2. Secondary</tspan>
+    </text>
+		</g>
+		
+		
+		<!-- ones -->
+			<g class="ones">
+    <circle cx="289" cy="48" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="279" y="60.3">1</tspan>
+    </text>
+    <circle cx="75" cy="411" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="65" y="423.3">1</tspan>
+    </text>
+    <circle cx="495" cy="410" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="485" y="422.3">1</tspan>
+    </text>
+    <path  class="joiner" stroke-width="5"  d="M289.531 71l-192.5 325h378.5l-186-325z"/>
+    <text fill="#000" font-family="Roboto" font-size="28" >
+      <tspan class="label" x="229" y="243">1.Primary</tspan>
+    </text>
+		</g>
+		
+		
+				<g class="threes">
+		<!-- threes -->
+    <circle cx="164" cy="498" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="154.4" y="510.3">3</tspan>
+    </text>
+    <circle cx="405" cy="498" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="395.4" y="510.3">3</tspan>
+    </text>
+    <circle cx="168" cy="81" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="158.4" y="93.3">3</tspan>
+    </text>
+    <circle cx="45" cy="292" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="35.4" y="304.3">3</tspan>
+    </text>
+    <circle cx="530" cy="291" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="520.4" y="303.3">3</tspan>
+    </text>
+    <circle cx="409" cy="81" r="25" fill="#fff"/>
+    <text fill="#000" font-family="Roboto" font-size="36" >
+      <tspan x="399.4" y="93.3">3</tspan>
+    </text>
+    <text fill="#000" font-family="Roboto" font-size="28" >
+      <tspan  class="label" x="223" y="340">3. Tertiary</tspan>
+    </text>
+    <path class="joiner" stroke="#000" stroke-width="4" d="M76.5 290.5L180 105h213.5l104 185.5-109.5 178H180l-103.5-178z"/>
+  </g>
+	
+</svg>
