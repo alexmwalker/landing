@@ -3048,10 +3048,11 @@ html.offline #offline-notification.tuckaway {
 
 #search-panel {
   position: relative;
-  background: #F700F7;
+  background: #F7F7F7;
   z-index: -1;
-  width: 90%;
+  width: 100%;
   margin: 0 auto !important;
+  background: #fff;
   color: #333;
   display: block;
   opacity: 0;
@@ -3061,18 +3062,20 @@ html.offline #offline-notification.tuckaway {
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  overflow: visible;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   outline: 3px red dashed;
 }
 #search-panel.open {
   opacity: 1;
   -webkit-transform: translateY(0) scaleY(1);
-      -ms-transform: translateY(0) scaleY(1);
-          transform: translateY(0) scaleY(1);
+  -ms-transform: translateY(0) scaleY(1);
+  transform: translateY(0) scaleY(1);
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   background: #fff;
+  overflow: auto;
 }
 
 textarea:focus,
@@ -3081,7 +3084,7 @@ input:focus {
 }
 
 .searchbox {
-  background: #696767;
+  background: #fff;
   padding: calc(var(--baseline) * 1) 0 calc(var(--baseline) /1);
 }
 .searchbox input[type=search] {

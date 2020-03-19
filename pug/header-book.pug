@@ -3,21 +3,24 @@
 header.sitepoint-branding
   .container
     .grid-12
-      .col-6_md-4_sm-10.trim
+      .col-6_md-4_sm-8.trim
         .titlebar
           | #{title}
+      .col-6_md-4_sm-2.showmobile
+        a(href='#')
+          svg(style='height: calc(var(--baseline)*1.25);width:calc(var(--baseline)*1.25);margin: calc(var(--baseline)/4);color:#fff ')
+            use(fill='#fff', href='#my-search')
       .col-6_md-4_sm-2.showmobile
         .hamburger
           .hamburger-box
           .hamburger-inner
       nav.mobilenav
         ul
-          li.logged-in.mobile-controls
+          //li.logged-in.mobile-controls
             form(action="search.html")
               svg.svg-icon
                 use(fill='#fff', href='#my-search')
               input.form-control(id="mobilesearch" name="mobilesearch" type="text" placeholder="Search books...")
-
           li
             a.viewchapters(href='#')
               svg.svg-icon
@@ -83,5 +86,5 @@ header.sitepoint-branding
               svg.svg-icon
                 use(fill='#fff', href='#my-activity')
               |  Your Activity
-              te
+
   include search-books.pug

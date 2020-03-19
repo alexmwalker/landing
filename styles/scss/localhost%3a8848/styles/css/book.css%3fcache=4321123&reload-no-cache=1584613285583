@@ -3050,18 +3050,20 @@ html.offline #offline-notification.tuckaway {
   position: relative;
   background: #F700F7;
   z-index: -1;
-  width: 90%;
+  width: 10%;
   margin: 0 auto !important;
+  background: #fff;
   color: #333;
   display: block;
   opacity: 0;
   -webkit-transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
-      -ms-transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
-          transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
+  -ms-transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
+  transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  overflow: visible;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   outline: 3px red dashed;
 }
 #search-panel.open {

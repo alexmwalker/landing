@@ -185,6 +185,7 @@ a:link,
 a:visited {
   text-decoration: none;
   color: #20272f;
+  float: left;
 }
 
 .dark a:link,
@@ -2595,15 +2596,15 @@ table {
   width: 100%;
   z-index: 1000;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   height: calc(var(--baseline) * 2);
   position: fixed;
   top: 0;
   -webkit-transform-origin: 50% 0 0;
-      -ms-transform-origin: 50% 0 0;
-          transform-origin: 50% 0 0;
+  -ms-transform-origin: 50% 0 0;
+  transform-origin: 50% 0 0;
   -webkit-transform: perspective(1000px) translate3d(0, 0, 0);
-          transform: perspective(1000px) translate3d(0, 0, 0);
+  transform: perspective(1000px) translate3d(0, 0, 0);
   -webkit-transition: all 0.1s ease-in;
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
@@ -3047,22 +3048,22 @@ html.offline #offline-notification.tuckaway {
 }
 
 #search-panel {
-  position: relative;
-  background: #F700F7;
+  position: absolute;
+  background: #F7F7F7;
   z-index: -1;
-  width: 90%;
+  width: 100%;
   margin: 0 auto !important;
-  color: #333;
+  background: #fff;
   display: block;
   opacity: 0;
   -webkit-transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
-      -ms-transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
-          transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
+  -ms-transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
+  transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  overflow: visible;
-  outline: 3px red dashed;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 #search-panel.open {
   opacity: 1;
@@ -3072,29 +3073,29 @@ html.offline #offline-notification.tuckaway {
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  background: #fff;
+  background: #F7F7F7;
 }
 
-textarea:focus,
-input:focus {
+textarea:focus, input:focus {
   outline: none;
 }
 
 .searchbox {
-  background: #696767;
+  background: #F7F7F7;
   padding: calc(var(--baseline) * 1) 0 calc(var(--baseline) /1);
 }
 .searchbox input[type=search] {
   font-size: calc(1rem * var(--typescale));
   height: calc(var(--baseline) * 1.5);
   border: 2px solid #ddd;
-  left: 1rem;
+  /* left: 1rem; */
   position: relative;
   float: left;
-  width: 90%;
+  float: left;
+  width: 100%;
   padding: 0 5%;
   -webkit-box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
   border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
 }
 .searchbox input[type=search]::-webkit-input-placeholder {
@@ -3118,6 +3119,41 @@ input:focus {
   background-size: auto 90%;
 }
 
+.searchbox {
+  margin: 0 0 calc(var(--baseline) / 2);
+}
+.searchbox .grid-noGutter-center {
+  padding: calc(var(--baseline) * 1.5) 0 0;
+  margin: 0;
+}
+.searchbox input[type*=text] {
+  font-size: calc(1rem * var(--typescale));
+  height: calc(var(--baseline) * 1.5);
+  border: 2px solid #ddd;
+  left: 1rem;
+  position: relative;
+  float: left;
+  width: 80%;
+  padding: 0 5%;
+  -webkit-box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
+  border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
+}
+.searchbox input[type*=text]::-webkit-input-placeholder {
+  color: #999;
+}
+.searchbox input[type*=text]::-moz-placeholder {
+  color: #999;
+}
+.searchbox input[type*=text]:-ms-input-placeholder {
+  color: #999;
+}
+.searchbox input[type*=text]::-ms-input-placeholder {
+  color: #999;
+}
+.searchbox input[type*=text]::placeholder {
+  color: #999;
+}
 .searchbox .insetbutton {
   padding: 0rem;
   float: left;
@@ -3205,7 +3241,7 @@ DEMO: https://codepen.io/elad2412/pen/Poovzzb
   font-size: calc(1rem / 1.15);
   font-size: 7px;
   pointer-events: none;
-  right: 0;
+  right: 0rem;
   padding-right: 0.5rem;
   bottom: 2px;
   height: calc(var(--baseline) / 2);
