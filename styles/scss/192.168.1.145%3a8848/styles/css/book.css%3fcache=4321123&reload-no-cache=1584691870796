@@ -183,7 +183,7 @@ sub {
 
 a:link,
 a:visited {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: #20272f;
 }
 
@@ -2660,6 +2660,7 @@ table {
   display: inline-block;
   width: 2.5rem;
   height: 1rem;
+  outline: 1px red dashed;
   height: calc(var(--baseline)*1);
 }
 
@@ -2724,6 +2725,7 @@ table {
 .showmobile .search-control {
   height: calc(var(--baseline)*1);
   width: calc(var(--baseline)*0.5);
+  outline: 1px yellow dashed;
 }
 .showmobile svg {
   height: calc(var(--baseline)*1);
@@ -3176,7 +3178,7 @@ input:focus {
   margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) /2);
 }
 
-dl.book-search-results-list dd {
+.book-search-results-list dl dd {
   margin: 0 0 calc(var(--baseline)/2) 0;
   padding: calc(var(--baseline)/4) 1rem calc(var(--baseline)/2);
   border-left: 5px solid #c6c8dd;
@@ -3273,6 +3275,28 @@ input:checked + .trim-multiline {
 
 input:checked + .trim-multiline:before {
   content: "[-] HIDE";
+}
+
+@-webkit-keyframes searchfeed {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes searchfeed {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.book-search-results-list {
+  -webkit-animation: searchfeed 3s;
+          animation: searchfeed 3s;
 }
 
 .library-nav {

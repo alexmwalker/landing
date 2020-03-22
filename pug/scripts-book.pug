@@ -17,7 +17,7 @@ script.
   });
   /* == simple nav controls/animations  == */
   $(document).ready(function () {
-  $('.showmobile').click(function () {
+  $('.hamburger').click(function () {
   $(this).toggleClass('open');
     $('.mobilenav').toggleClass('open');
   });
@@ -28,6 +28,9 @@ script.
   $('#closetoc').click(function () {
     $('.toc-container').removeClass('open');
   });
+
+  $('#start-search').click(startSearch);
+
   $('#showfontchanger').click(function () {
     $('#font-adjuster-container').toggleClass('open');
   });
@@ -35,7 +38,7 @@ script.
     $('#reeedr').toggleClass('dark');
   });
 
-  $('#search-control').click(function () {
+  $('.search-control').click(function () {
     $('#search-panel').toggleClass('open');
     $('#booksearch').focus();
   });
@@ -179,3 +182,123 @@ script.
     }
   }
   checkConnection();
+
+
+  /* *****  Script for mimicking live search  **** */
+
+  var delayInMilliseconds = 1000; //1 second
+  //your code to be executed after 1 second
+
+
+
+  function startSearch() {
+    fetch('search.json')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        appendData(data);
+      })
+      .catch(function (err) {
+        console.log('error: ' + err);
+      });
+    var delayInMilliseconds = 1000; //1 second
+    function appendData(data) {
+      var mainContainer = document.getElementById("myData");
+      for (var i = 0; i < data.length; i++) {
+        sleep(300);
+        // build the search result header
+        var dth5 = document.createElement("h5");
+        dth5.className = "trim-singleline";
+        dth5.innerHTML = data[i].id + ' : ' + data[i].searchTitle;
+
+        var dt = document.createElement("dt");
+        dt.appendChild(dth5);
+
+        //var dta = document.createElement("a");
+        //dta.innerHTML = data[i].searchLink;
+
+        
+        // build the search result text <dd><p>
+
+        var dd = document.createElement("dd");
+        var expand = document.createElement("input");
+        expand.className = "expand";
+        expand.type = "checkbox";
+        dd.appendChild(expand);
+
+        var ddp = document.createElement("p");
+        ddp.className = "trim-multiline";
+
+        ddp.innerHTML = data[i].searchDesc;
+        dd.appendChild(ddp);
+
+        // Inject new search result (with a slight delay)
+        console.log("before dt");
+        mainContainer.appendChild(dt); 
+          
+        mainContainer.appendChild(dd);
+        
+        console.log("After dd!");
+
+      }
+    }
+  }
+
+
+  function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+
+
+
+  /*
+  <dl class="">
+            <dt class="">
+              <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read" class="">CSS Master in Chapter 2: CSS Selectors</a></h5>
+            </dt>
+            <dd class="">
+              <input class="expand" type="checkbox">
+              <p class="trim-multiline"><a href="https://www.sitepoint.com/premium/books/modern-css/read" class="">Why should your site look like 101 others? Consider developing your own <span class="search-term">CSS Animation  </span>theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</a></p>
+            </dd>
+            <dt class="">
+              <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS: Tools &amp; Skills </a>found in <a href="https://www.sitepoint.com/premium/books/modern-css/read">Chapter 6: CSS Selectors</a></h5>
+            </dt>
+            <dd class="">
+              <input class="expand" type="checkbox">
+              <p class="trim-multiline">Without any doubts, <span class="search-term">CSS animations  </span>are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...</p>
+            </dd>
+            <dt class="">
+              <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS Master in Chapter 2: CSS Selectors</a></h5>
+            </dt>
+            <dd class="">
+              <input class="expand" type="checkbox">
+              <p class="trim-multiline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">Why should your site look like 101 others? Consider developing your own <span class="search-term">CSS Animation  </span>theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</a></p>
+            </dd>
+            <dt>
+              <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS: Tools &amp; Skills </a>found in <a href="https://www.sitepoint.com/premium/books/modern-css/read">Chapter 6: CSS Selectors</a></h5>
+            </dt>
+            <dd>
+              <input class="expand" type="checkbox">
+              <p class="trim-multiline">Without any doubts, <span class="search-term"><a href="book.html?stuff">CSS animations  </a></span><a href="book.html?stuff">are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...</a></p>
+            </dd>
+            <dt>
+              <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS Master in Chapter 2: CSS Selectors</a></h5>
+            </dt>
+            <dd>
+              <input class="expand" type="checkbox">
+              <p class="trim-multiline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">Why should your site look like 101 others? Consider developing your own <span class="search-term">CSS Animation  </span>theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</a></p>
+            </dd>
+            <dt>
+              <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS: Tools &amp; Skills </a>found in <a href="https://www.sitepoint.com/premium/books/modern-css/read">Chapter 6: CSS Selectors</a></h5>
+            </dt>
+            <dd>
+              <input class="expand" type="checkbox">
+              <p class="trim-multiline">Without any doubts, <span class="search-term"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS animations  </a></span><a href="https://www.sitepoint.com/premium/books/modern-css/read">are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...</a></p>
+            </dd>
+          </dl>
+          */

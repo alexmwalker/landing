@@ -111,7 +111,7 @@
   overflow: visible;
   text-align: right;
   margin: calc(var(--baseline)/2) -0.5rem 0 0;
-  padding: 15px 0;
+  //padding: 15px 0;
   cursor: pointer;
   transition-timing-function: linear;
   transition-duration: .25s;
@@ -125,8 +125,10 @@
 .hamburger-box {
   position: relative;
   display: inline-block;
-  width: 3rem;
+  width: 2.5rem;
   height: 1rem;
+  //outline: 1px red dashed;
+  height: calc(var(--baseline)*1);
 }
 
 .hamburger-inner,
@@ -134,8 +136,9 @@
 .hamburger-inner:before {
   position: absolute;
   display: block;
-  width: 2.5rem;
-  height: .3rem;
+  width: 1.75rem;
+  height: .25rem;
+  right: 0;
   transition-timing-function: ease;
   transition-duration: .35s;
   transition-property: all;
@@ -144,9 +147,10 @@
 }
 
 .hamburger-inner {
-  top: 40%;
+  top: 45%;
   margin-top: 0px;
-  transform: translateX(-0.5rem);
+  right: 4px;
+  transform: translateX(-0.75rem);
 }
 
 .hamburger-inner:after,
@@ -169,8 +173,27 @@
 .showmobile {
   display: none;
   text-align: right;
-  padding-right: 0rem;
+  padding-right: 0;
 
+  .search-control {
+    height: calc(var(--baseline)*1);
+    width: calc(var(--baseline)*0.5);
+    //outline: 1px yellow dashed;
+
+  }
+
+  svg {
+    //search icon on mobile
+    height: calc(var(--baseline)*1);
+    width: calc(var(--baseline)*1);
+    margin: calc(var(--baseline)/2);
+    color: #fff;
+    outline: 1px red dashed;
+
+    :active {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .open {
@@ -185,7 +208,7 @@
   .hamburger-inner {
     background-color: #111;
     transition: all .45s cubic-bezier(.49, -0.32, .60, 1.7);
-    transform: translateX(0.5rem);
+    transform: translateX(0);
   }
 }
 
@@ -454,8 +477,6 @@ $pop: all .4s cubic-bezier(0, .59, .2, 1.66);
   top: 0.2rem;
   left: 2.3rem;
 }
-
-.toolbarLink.open {}
 
 /* ====  Bottom Offline notification ==== */
 

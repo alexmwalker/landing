@@ -3050,7 +3050,7 @@ html.offline #offline-notification.tuckaway {
 #search-panel {
   position: absolute;
   background: #F7F7F7;
-  z-index: -1;
+  z-index: 1;
   width: 100%;
   margin: 0 auto !important;
   background: #fff;

@@ -1,29 +1,22 @@
 
 
 #search-panel
-  form(action="search.html" , method="get")
-    .container
-      .grid-noGutter-center.searchbox
-        .col-8_md-11
-          input(type="search", id="booksearch", placeholder="      Search the book")
-          a(href="search.html")
-            input.insetbutton(type="submit", value="Go" )
+  .container
+    .grid-noGutter-center.searchbox
+      .col-8_md-11
+        input(type="search", id="booksearch", placeholder="      Search the book")
+        input#start-search.insetbutton(type="submit", value="Go" )
 
           
 
   .container
-    .grid-center.search-body
-      .col-9_sm-12
-        h2 Book titles covering 'CSS Animation'
-      .col-3_sm-hidden
-        p.minor.showall
-          | 6 results -     
-      .col-9_sm-12
-        h4 'CSS Animation' located in books...
-      .col-3_sm-hidden
-        p.minor 8 results 
-      .col-12.book-search-results-list
-        dl
+    .grid-center.search-body 
+      .col-12
+        h4 Results for '<em>CSS Animation</em>' located in books... 
+        dl#myData.book-search-results-list
+        
+         
+        //-dl
           dt
             h5.trim-singleline
               a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS Master in Chapter 2: CSS Selectors
@@ -43,11 +36,8 @@
             input.expand(type='checkbox')
             p.trim-multiline
               | Without any doubts, 
-              span.search-term
-                a(href='book.html?stuff') CSS animations  
-              a(href='book.html?stuff')
-                | are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...
-
+              span.search-term CSS animations  
+              | are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...
           dt
             h5.trim-singleline
               a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS Master in Chapter 2: CSS Selectors
