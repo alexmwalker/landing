@@ -1,6 +1,6 @@
 #search-panel {
   position: absolute;
-  background: #fff;
+  //background: #fff;
   z-index: 1;
   //margin: 0 auto !important;
   color: #333;
@@ -20,7 +20,7 @@
     opacity: 1;
     //transform: translateY(0) scaleY(1);
     transition: .3s ease-out;
-    background: #fff;
+    //background: #fff;
   }
 
   &.showresults {
@@ -37,6 +37,7 @@ input:focus {
   padding: calc(var(--baseline) * 1) 0 calc(var(--baseline) /1);
   margin-bottom: calc(var(--baseline) / 1);
   display: none;
+  background: #fff;
 }
 
 .searchbox {

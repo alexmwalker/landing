@@ -3087,7 +3087,7 @@ html.offline #offline-notification.tuckaway {
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  background: #fff;
+  background: radial-gradient(black, transparent);
 }
 #search-panel.showresults {
   bottom: 0px;
@@ -3439,6 +3439,7 @@ input:checked + .trim-multiline:before {
 
 .search-body {
   margin: 0;
+  background: #fff;
 }
 
 .underline {

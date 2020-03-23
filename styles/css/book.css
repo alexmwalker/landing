@@ -3064,7 +3064,6 @@ html.offline #offline-notification.tuckaway {
 
 #search-panel {
   position: absolute;
-  background: #fff;
   z-index: 1;
   color: #333;
   display: block;
@@ -3086,7 +3085,6 @@ html.offline #offline-notification.tuckaway {
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  background: #fff;
 }
 #search-panel.showresults {
   bottom: 0px;
@@ -3101,6 +3099,7 @@ input:focus {
   padding: calc(var(--baseline) * 1) 0 calc(var(--baseline) /1);
   margin-bottom: calc(var(--baseline) / 1);
   display: none;
+  background: #fff;
 }
 
 .searchbox {
