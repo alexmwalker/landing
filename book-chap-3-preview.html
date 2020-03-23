@@ -14,7 +14,7 @@
         <div class="col-6_md-4_sm-9">
           <div class="titlebar trim-singleline">Your First Week With Bootstrap </div>
         </div>
-        <div class="col-6_md-4_sm-1 showmobile"><a class="search-control" href="#" onclick=" return false">
+        <div class="col-6_md-4_sm-1 showmobile"><a class="search-control" href="#" onclick="return false">
             <svg>
               <use fill="#fff" href="#my-search"></use>
             </svg></a></div>
@@ -78,7 +78,7 @@
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-library"></use>
                 </svg> Library</a></li>
-            <li><a class="search-control" href="#" onclick=" return false">
+            <li><a class="search-control" href="#" onclick="return false">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-search"></use>
                 </svg> Search</a></li>
@@ -358,16 +358,28 @@ $gray-300: #dee2e6 !default;
       $('.toc-container').removeClass('open');
     });
     
-    $('#start-search').click(startSearch);
+    //$('#start-search').click(startSearch);
+    
+    $('#start-search').click(function () {
+      startSearch(),
+      $('#font-adjuster-container').toggleClass('open');
+    });
     
     $('#showfontchanger').click(function () {
       $('#font-adjuster-container').toggleClass('open');
     });
+    
     $('.darkmode').click(function () {
       $('#reeedr').toggleClass('dark');
     });
     
-    $('.search-control').click(function () {
+    $('#start-search').click(function () {
+      startSearch();
+      //myLoop();
+      $('#search-panel').toggleClass('showresults');
+    });
+    
+    $('.search-control').click(function () { 
       $('#search-panel').toggleClass('open');
       $('#booksearch').focus();
     });
@@ -515,27 +527,84 @@ $gray-300: #dee2e6 !default;
     
     /* *****  Script for mimicking live search  **** */
     
-    var delayInMilliseconds = 1000; //1 second
-    //your code to be executed after 1 second
-    
-    
+    var i = 0;   
     
     function startSearch() {
+      //show search-body
+      $('.search-body').css('display', 'block');
+      //load search results from JSON
       fetch('search.json')
         .then(function (response) {
           return response.json();
         })
         .then(function (data) {
-          appendData(data);
+          myLoop(data);
         })
         .catch(function (err) {
           console.log('error: ' + err);
         });
-      var delayInMilliseconds = 1000; //1 second
+    
+    
+                      //  set your counter to 1
+    
+    var magGlassSVG = "<svg class='svg-icon'><use fill='currentColor' href='#my-search'/></svg>"
+    
+    function myLoop(data) {           //  create a loop function
+    var mainContainer = document.getElementById("myData");
+      setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+    
+        
+          //for (var i = 0; i < data.length; i++) { // old loop
+          
+          // build the search result header
+          var dth5 = document.createElement("h5");
+          dth5.className = "trim-singleline";
+          dth5.innerHTML =  magGlassSVG + " - " + data[i].searchTitle;
+    
+          var dt = document.createElement("dt");
+          dt.appendChild(dth5);
+    
+          //var dta = document.createElement("a");
+          //dta.innerHTML = data[i].searchLink;
+    
+          
+          // build the search result text <dd><p>
+    
+          var dd = document.createElement("dd");
+          var expand = document.createElement("input");
+          expand.className = "expand";
+          expand.type = "checkbox";
+          dd.appendChild(expand);
+    
+          var ddp = document.createElement("p");
+          ddp.className = "trim-multiline";
+    
+          ddp.innerHTML = data[i].searchDesc;
+          dd.appendChild(ddp);
+    
+          // Inject new search result (with a slight delay)
+          console.log("loop running");
+          mainContainer.appendChild(dt);           
+          mainContainer.appendChild(dd);
+    
+    
+        
+          console.log('hello :# ' + i);  //  your code here
+          i++;                     //  increment the counter
+          if (i < data.length-1) {            //  if the counter < 10, call the loop function
+            myLoop(data);   
+            console.log("I'm in the loops !");          //  ..  again which will trigger another 
+          }                        
+        }, 1000) //  ..  setTimeout() delivers staggered results
+        console.log("Loop done !");
+      }
+    }
+    
+      /*
       function appendData(data) {
         var mainContainer = document.getElementById("myData");
         for (var i = 0; i < data.length; i++) {
-          sleep(300);
+          
           // build the search result header
           var dth5 = document.createElement("h5");
           dth5.className = "trim-singleline";
@@ -563,25 +632,22 @@ $gray-300: #dee2e6 !default;
           dd.appendChild(ddp);
     
           // Inject new search result (with a slight delay)
-          console.log("before dt");
-          mainContainer.appendChild(dt); 
-            
-          mainContainer.appendChild(dd);
-          
-          console.log("After dd!");
+          console.log("loop running");
     
+          mainContainer.appendChild(dt);           
+          mainContainer.appendChild(dd);
         }
+        
       }
     }
     
     
-    function sleep(milliseconds) {
-      const date = Date.now();
-      let currentDate = null;
-      do {
-        currentDate = Date.now();
-      } while (currentDate - date < milliseconds);
-    }
+    
+    
+    
+    //myLoop();                      //  start the loop
+    
+    
     
     
     

@@ -188,7 +188,7 @@
     width: calc(var(--baseline)*1);
     margin: calc(var(--baseline)/2);
     color: #fff;
-    outline: 1px red dashed;
+    //outline: 1px red dashed;
 
     :active {
       transform: scale(1.1);
@@ -282,7 +282,7 @@
 
   input {
     display: inline-block;
-    outline: 1px red dashed;
+    //outline: 1px red dashed;
     width: 90%;
   }
 

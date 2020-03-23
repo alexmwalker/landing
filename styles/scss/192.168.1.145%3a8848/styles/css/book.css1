@@ -3100,14 +3100,12 @@ input:focus {
 .search-body {
   padding: calc(var(--baseline) * 1) 0 calc(var(--baseline) /1);
   margin-bottom: calc(var(--baseline) / 1);
-  display: none;
 }
 
 .searchbox {
-  background: #222;
-  position: relative;
+  background: #22;
   padding: calc(var(--baseline) * 2) 0 calc(var(--baseline) /1);
-  margin-bottom: calc(var(--baseline) / 1) 0;
+  margin-bottom: calc(var(--baseline) / 1);
 }
 .searchbox input[type=search] {
   font-size: calc(1rem * var(--typescale));
@@ -3141,26 +3139,6 @@ input:focus {
 .searchbox input[type=search]::placeholder {
   background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 101 101'%3E%3Cpath fill='currentcolor' fill-rule='evenodd' d='M62.27 69.134a32.99 32.99 0 01-20.19 6.856C23.81 75.99 9 61.218 9 42.995 9 24.773 23.81 10 42.08 10c18.27 0 33.08 14.773 33.08 32.995 0 7.178-2.298 13.82-6.2 19.236l21.63 21.576a4.79 4.79 0 010 6.787 4.82 4.82 0 01-6.804 0L62.27 69.134zm3.266-26.139c0 12.922-10.502 23.397-23.456 23.397-12.955 0-23.457-10.475-23.457-23.397 0-12.921 10.502-23.396 23.457-23.396s23.456 10.475 23.456 23.396z' /%3E%3C/svg%3E") left center no-repeat;
   background-size: auto 90%;
-}
-.searchbox #search-close {
-  color: #fff;
-  outline: 1px red dashed;
-  width: calc(var(--baseline) * 1);
-  height: calc(var(--baseline) * 1);
-  display: block;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 21 21'%3E%3Ccircle cx='10.5' cy='10.5' r='10.5' fill='white'/%3E%3Cpath fill='black' d='M15.803 15.803a1.5 1.5 0 0 0 0-2.121L12.621 10.5l3.182-3.182a1.5 1.5 0 1 0-2.121-2.121L10.5 8.379 7.318 5.197a1.5 1.5 0 0 0-2.121 2.121L8.379 10.5l-3.182 3.182a1.5 1.5 0 1 0 2.121 2.121l3.182-3.182 3.182 3.182a1.5 1.5 0 0 0 2.121 0z' fill='#fff' /%3E%3C/svg%3E");
-  background-size: 100% 100%;
-  position: absolute;
-  font-size: calc(var(--baseline) * 1);
-  cursor: pointer;
-  right: 1rem;
-  top: calc(var(--baseline) * 1.5);
-  z-index: 999;
-}
-.searchbox .loader {
-  width: 100%;
-  outline: 1px red dashed;
-  height: calc(var(--baseline) * 2);
 }
 .searchbox .insetbutton {
   padding: 0rem;

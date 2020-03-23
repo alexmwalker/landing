@@ -6,6 +6,7 @@
       .col-8_md-11
         input(type="search", id="booksearch", placeholder="      Search the book")
         input#start-search.insetbutton(type="submit", value="Go" )
+        div#search-close 
 
           
 
@@ -14,77 +15,12 @@
       .col-12
         h4 Results for '<em>CSS Animation</em>' located in books... 
         dl#myData.book-search-results-list
-        
-         
-        //-dl
-          dt
-            h5.trim-singleline
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS Master in Chapter 2: CSS Selectors
-          dd
-            input.expand(type='checkbox')
-            p.trim-multiline
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read')
-                | Why should your site look like 101 others? Consider developing your own 
-                span.search-term CSS Animation  
-                | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.
-          dt
-            h5.trim-singleline
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS: Tools & Skills 
-              | found in 
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read') Chapter 6: CSS Selectors
-          dd
-            input.expand(type='checkbox')
-            p.trim-multiline
-              | Without any doubts, 
-              span.search-term CSS animations  
-              | are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...
-          dt
-            h5.trim-singleline
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS Master in Chapter 2: CSS Selectors
-          dd
-            input.expand(type='checkbox')
-            p.trim-multiline
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read')
-                | Why should your site look like 101 others? Consider developing your own 
-                span.search-term CSS Animation  
-                | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.
-          dt
-            h5.trim-singleline
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS: Tools & Skills 
-              | found in 
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read') Chapter 6: CSS Selectors
-          dd
-            input.expand(type='checkbox')
-            p.trim-multiline
-              | Without any doubts, 
-              span.search-term
-                a(href='book.html?stuff') CSS animations  
-              a(href='book.html?stuff')
-                | are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...
+        .loader
+          svg(xmlns='http://www.w3.org/2000/svg', display='block', preserveAspectRatio='xMidYMid', style='margin:auto; width: 3rem', viewBox='0 0 100 100')
+            circle(cx='50', cy='50', r='35', fill='none', stroke='#9dd8f3', stroke-dasharray='165 57', stroke-width='9', transform='rotate(254.156 50 50)')
+              animatetransform(attributeName='transform', dur='1.9s', keyTimes='0;1', repeatCount='indefinite', type='rotate', values='0 50 50;360 50 50')
 
-          dt
-            h5.trim-singleline
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS Master in Chapter 2: CSS Selectors
-          dd
-            input.expand(type='checkbox')
-            p.trim-multiline
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read')
-                | Why should your site look like 101 others? Consider developing your own 
-                span.search-term CSS Animation  
-                | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.
-          dt
-            h5.trim-singleline
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS: Tools & Skills 
-              | found in 
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read') Chapter 6: CSS Selectors
-          dd
-            input.expand(type='checkbox')
-            p.trim-multiline
-              | Without any doubts, 
-              span.search-term
-                a(href='https://www.sitepoint.com/premium/books/modern-css/read') CSS animations  
-              a(href='https://www.sitepoint.com/premium/books/modern-css/read')
-                | are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...
-
-
-
+                  
+          // The seach results are from a 'search.json' 
+          // they are loaded through 'scripts-book.pug'
+          // via a function called startSearch();
