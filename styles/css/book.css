@@ -2903,7 +2903,7 @@ button.go:active {
   pointer-events: none;
 }
 
-#font-adjuster-container.open {
+#font-adjuster-container.show {
   -webkit-transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   -o-transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);

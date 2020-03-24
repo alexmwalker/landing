@@ -369,7 +369,7 @@ button.go {
   pointer-events: none;
 }
 
-#font-adjuster-container.open {
+#font-adjuster-container.show {
   transition: all .25s cubic-bezier(.49, -0.32, .42, 1.35);
   opacity: 1;
   pointer-events: auto;
