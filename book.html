@@ -446,6 +446,12 @@
       $('#search-panel').toggleClass('showresults');
     });
     
+    $('#search-close').click(function () {
+      //$('#search-panel').toggleClass('showresults');
+      $('.book-search-results-list dt').remove();
+      $('.book-search-results-list dd').remove();
+    });
+    
     $('.search-control').click(function () { 
       $('#search-panel').toggleClass('open');
       $('#booksearch').focus();
