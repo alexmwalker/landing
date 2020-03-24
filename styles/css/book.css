@@ -3152,8 +3152,9 @@ input:focus {
   position: absolute;
   font-size: calc(var(--baseline) * 1);
   cursor: pointer;
-  right: 1rem;
-  top: calc(var(--baseline) * 1.5);
+  position: fixed;
+  right: 3rem;
+  top: calc(var(--baseline) * 2.5);
   z-index: 999;
 }
 .searchbox .loader {

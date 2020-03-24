@@ -192,9 +192,8 @@
       $('.toc-container').removeClass('open');
     });
     
-    //$('#start-search').click(startSearch);
     
-    $('#start-search').click(function () {
+    $('#start-search').click(function () { // pretend search
       startSearch(),
       $('#font-adjuster-container').toggleClass('open');
     });
@@ -209,7 +208,6 @@
     
     $('#start-search').click(function () {
       startSearch();
-      //myLoop();
       $('#search-panel').toggleClass('showresults');
     });
     
@@ -226,60 +224,61 @@
     /* ===  Font rescaling  ===  */
     /*   scaling the --basegrid :root font-size translates through to everything.   */
     $('.fontsizedown').click(function () {
-    newcurrentgrid = parseInt(currentgrid, 10) - 4 + 'px';
-    $(":root").css("--basegrid", newcurrentgrid);
-    //console.log("currentgrid: " + currentgrid);
-    //console.log("newcurrentgrid: " + newcurrentgrid);
-    currentgrid = newcurrentgrid;
-    newcurrentgridtablet = parseInt(currentgridtablet, 10) - 4 + 'px';
-    $(":root").css("--basegrid-tablet", newcurrentgridtablet);
-    //console.log("currentgridtablet: " + currentgridtablet);
-    //console.log("newcurrentgridtablet: " + newcurrentgridtablet);
-    currentgridtablet = newcurrentgridtablet;
-    newcurrentgridlaptop = parseInt(currentgridlaptop, 10) - 4 + 'px';
-    $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
-    currentgridlaptop = newcurrentgridlaptop;
-    newcurrentgridwide = parseInt(currentgridwide, 10) - 4 + 'px';
-    $(":root").css("--basegrid-wide", newcurrentgridwide);
-    currentgridwide = newcurrentgridwide;
+      newcurrentgrid = parseInt(currentgrid, 10) - 4 + 'px';
+      $(":root").css("--basegrid", newcurrentgrid);
+      //console.log("currentgrid: " + currentgrid);
+      //console.log("newcurrentgrid: " + newcurrentgrid);
+      currentgrid = newcurrentgrid;
+      newcurrentgridtablet = parseInt(currentgridtablet, 10) - 4 + 'px';
+      $(":root").css("--basegrid-tablet", newcurrentgridtablet);
+      //console.log("currentgridtablet: " + currentgridtablet);
+      //console.log("newcurrentgridtablet: " + newcurrentgridtablet);
+      currentgridtablet = newcurrentgridtablet;
+      newcurrentgridlaptop = parseInt(currentgridlaptop, 10) - 4 + 'px';
+      $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
+      currentgridlaptop = newcurrentgridlaptop;
+      newcurrentgridwide = parseInt(currentgridwide, 10) - 4 + 'px';
+      $(":root").css("--basegrid-wide", newcurrentgridwide);
+      currentgridwide = newcurrentgridwide;
     });
     
     $('.fontsizeup').click(function () {
-    newcurrentgrid = parseInt(currentgrid, 10) + 4 + 'px';
-    $(":root").css("--basegrid", newcurrentgrid);
-    currentgrid = newcurrentgrid;
-    newcurrentgridtablet = parseInt(currentgridtablet, 10) + 4 + 'px';
-    $(":root").css("--basegrid-tablet", newcurrentgridtablet);
-    currentgridtablet = newcurrentgridtablet;
-    newcurrentgridlaptop = parseInt(currentgridlaptop, 10) + 4 + 'px';
-    $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
-    currentgridlaptop = newcurrentgridlaptop;
-    newcurrentgridwide = parseInt(currentgridwide, 10) + 4 + 'px';
-    $(":root").css("--basegrid-wide", newcurrentgridwide);
-    currentgridwide = newcurrentgridwide;
-    });
+      newcurrentgrid = parseInt(currentgrid, 10) + 4 + 'px';
+      $(":root").css("--basegrid", newcurrentgrid);
+      currentgrid = newcurrentgrid;
+      newcurrentgridtablet = parseInt(currentgridtablet, 10) + 4 + 'px';
+      $(":root").css("--basegrid-tablet", newcurrentgridtablet);
+      currentgridtablet = newcurrentgridtablet;
+      newcurrentgridlaptop = parseInt(currentgridlaptop, 10) + 4 + 'px';
+      $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
+      currentgridlaptop = newcurrentgridlaptop;
+      newcurrentgridwide = parseInt(currentgridwide, 10) + 4 + 'px';
+      $(":root").css("--basegrid-wide", newcurrentgridwide);
+      currentgridwide = newcurrentgridwide;
+      });
     
     });
     
     
     /* ==  Fixed nav   == */
     $(window).resize(function () {
-    /* close the menu on screen resize */
-    $('.showmobile').removeClass('open');
-    $('.mobilenav').removeClass('open');
+        /* close the menu on screen resize */
+        $('.showmobile').removeClass('open');
+        $('.mobilenav').removeClass('open');
     });
     $(window).scroll(function () {
-    /* close the menu on scroll */
-    $('.showmobile').removeClass('open');
-    $('.mobilenav').removeClass('open');
+        /* close the menu on scroll */
+        $('.showmobile').removeClass('open');
+        $('.mobilenav').removeClass('open');
     });
+    
     function scrollActions() {
     const brand = document.querySelector('.sitepoint-branding'); // select the brand
     const toolcontainer = document.querySelector('#tool-container'); // height of the toolstrip
     const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
     const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
     const totalbody = $( "#reeedr-body" ).height(); // height of the bookpanel
-    const previewMax = document.querySelector('.preview-label'); // height of the bookpanel
+    //const previewMax = document.querySelector('.preview-label'); // height of the bookpanel
     const offlinebar = document.querySelector('#offline-notification'); // offline bar for tuckaway
     const navTop = toolcontainer.offsetTop; // distance from top edge
     const navMin = navTop / 4; // the delay before the title rolls on to the titlebar
@@ -290,17 +289,17 @@
     
     var lastScrollTop = 0; // set for updating to determine scroll direction
     function stickyNavigation() {
-    console.log('navTop = ' + navTop);
-    console.log('scrollY = ' + window.scrollY);
+      console.log('navTop = ' + navTop);
+      console.log('scrollY = ' + window.scrollY);
     //console.log('toolbaroffset = ' + toolbaroffset);
-    var st = window.pageYOffset || document.documentElement.scrollTop;
-    if (window.scrollY >= navTop) { // If scroll pos is greater than 418
-    //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
-    toolcontainer.classList.add('fixed-nav'); // add class that fixes toolstrip in place
-    } else {
-    //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
-    toolcontainer.classList.remove('fixed-nav');
-    }
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      if (window.scrollY >= navTop) { // If scroll pos is greater than 418
+        //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
+        toolcontainer.classList.add('fixed-nav'); // add class that fixes toolstrip in place
+      } else {
+        //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
+        toolcontainer.classList.remove('fixed-nav');
+      }
     
     /* minize brand bar on scroll */
     if (window.scrollY >= navMin) {
@@ -308,28 +307,28 @@
       } else {
         brand.classList.remove('min');
       }
-      //preview maxie
+    /*  //preview maxie - removed 24 mar 2020 - not being used for non=preview versions
     if (window.scrollY >= maxpreview) {
         previewMax.classList.add('min');
         console.log('scrollY = ' + window.scrollY + ' is more than ' + maxpreview);
       } else {
         previewMax.classList.remove('min');
         console.log('scrollY = ' + window.scrollY + ' is less than ' + maxpreview);
-      }
+      }*/
     
     
     if (st > lastScrollTop && window.scrollY >= navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
-    brand.classList.add('tuckaway');
-    toolstrip.classList.add('tuckaway');
-    offlinebar.classList.add('tuckaway');
+      brand.classList.add('tuckaway');
+      toolstrip.classList.add('tuckaway');
+      offlinebar.classList.add('tuckaway');   
     } else {
-    brand.classList.remove('tuckaway');
-    toolstrip.classList.remove('tuckaway');
-    offlinebar.classList.remove('tuckaway');
+      brand.classList.remove('tuckaway');
+      toolstrip.classList.remove('tuckaway');
+      offlinebar.classList.remove('tuckaway');  
     }
-    lastScrollTop = st <= 0 ? 0 : st; /* For Mobile or negative scrolling */
+      lastScrollTop = st <= 0 ? 0 : st; /* For Mobile or negative scrolling */
     }
-    window.addEventListener('scroll', stickyNavigation);
+      window.addEventListener('scroll', stickyNavigation);
     }
     scrollActions();
     
@@ -363,7 +362,7 @@
     
     var i = 0;   
     
-    function startSearch() {
+    function startSearch() { // triggered on 'Go' search
       //show search-body
       $('.search-body').css('display', 'block');
       //load search results from JSON
@@ -387,20 +386,27 @@
     var mainContainer = document.getElementById("myData");
       setTimeout(function () {    //  call a 3s setTimeout when the loop is called
     
-        
-          //for (var i = 0; i < data.length; i++) { // old loop
+          //var dta = document.createElement("a");
+          //dta.innerHTML = data[i].searchLink;
           
+          var dta = document.createElement('a');
+          var linkText = document.createTextNode(data[i].searchTitle);
+          dta.appendChild(linkText);
+          //dta.title = "Search result";
+          dta.href = data[i].searchLink;
+          //document.body.appendChild(a);
+    
+    
           // build the search result header
           var dth5 = document.createElement("h5");
           dth5.className = "trim-singleline";
-          dth5.innerHTML =  magGlassSVG + " - " + data[i].searchTitle;
+          //dth5.innerHTML =  magGlassSVG + " - " + data[i].searchTitle;
+          dth5.appendChild(dta);
     
           var dt = document.createElement("dt");
           dt.appendChild(dth5);
     
-          //var dta = document.createElement("a");
-          //dta.innerHTML = data[i].searchLink;
-    
+          
           
           // build the search result text <dd><p>
     
@@ -429,108 +435,10 @@
             myLoop(data);   
             console.log("I'm in the loops !");          //  ..  again which will trigger another 
           }                        
-        }, 1000) //  ..  setTimeout() delivers staggered results
+        }, 1500) //  ..  setTimeout() delivers staggered results
         console.log("Loop done !");
       }
     }
-    
-      /*
-      function appendData(data) {
-        var mainContainer = document.getElementById("myData");
-        for (var i = 0; i < data.length; i++) {
-          
-          // build the search result header
-          var dth5 = document.createElement("h5");
-          dth5.className = "trim-singleline";
-          dth5.innerHTML = data[i].id + ' : ' + data[i].searchTitle;
-    
-          var dt = document.createElement("dt");
-          dt.appendChild(dth5);
-    
-          //var dta = document.createElement("a");
-          //dta.innerHTML = data[i].searchLink;
-    
-          
-          // build the search result text <dd><p>
-    
-          var dd = document.createElement("dd");
-          var expand = document.createElement("input");
-          expand.className = "expand";
-          expand.type = "checkbox";
-          dd.appendChild(expand);
-    
-          var ddp = document.createElement("p");
-          ddp.className = "trim-multiline";
-    
-          ddp.innerHTML = data[i].searchDesc;
-          dd.appendChild(ddp);
-    
-          // Inject new search result (with a slight delay)
-          console.log("loop running");
-    
-          mainContainer.appendChild(dt);           
-          mainContainer.appendChild(dd);
-        }
-        
-      }
-    }
-    
-    
-    
-    
-    
-    //myLoop();                      //  start the loop
-    
-    
-    
-    
-    
-    /*
-    <dl class="">
-              <dt class="">
-                <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read" class="">CSS Master in Chapter 2: CSS Selectors</a></h5>
-              </dt>
-              <dd class="">
-                <input class="expand" type="checkbox">
-                <p class="trim-multiline"><a href="https://www.sitepoint.com/premium/books/modern-css/read" class="">Why should your site look like 101 others? Consider developing your own <span class="search-term">CSS Animation  </span>theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</a></p>
-              </dd>
-              <dt class="">
-                <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS: Tools &amp; Skills </a>found in <a href="https://www.sitepoint.com/premium/books/modern-css/read">Chapter 6: CSS Selectors</a></h5>
-              </dt>
-              <dd class="">
-                <input class="expand" type="checkbox">
-                <p class="trim-multiline">Without any doubts, <span class="search-term">CSS animations  </span>are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...</p>
-              </dd>
-              <dt class="">
-                <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS Master in Chapter 2: CSS Selectors</a></h5>
-              </dt>
-              <dd class="">
-                <input class="expand" type="checkbox">
-                <p class="trim-multiline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">Why should your site look like 101 others? Consider developing your own <span class="search-term">CSS Animation  </span>theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</a></p>
-              </dd>
-              <dt>
-                <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS: Tools &amp; Skills </a>found in <a href="https://www.sitepoint.com/premium/books/modern-css/read">Chapter 6: CSS Selectors</a></h5>
-              </dt>
-              <dd>
-                <input class="expand" type="checkbox">
-                <p class="trim-multiline">Without any doubts, <span class="search-term"><a href="book.html?stuff">CSS animations  </a></span><a href="book.html?stuff">are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...</a></p>
-              </dd>
-              <dt>
-                <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS Master in Chapter 2: CSS Selectors</a></h5>
-              </dt>
-              <dd>
-                <input class="expand" type="checkbox">
-                <p class="trim-multiline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">Why should your site look like 101 others? Consider developing your own <span class="search-term">CSS Animation  </span>theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</a></p>
-              </dd>
-              <dt>
-                <h5 class="trim-singleline"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS: Tools &amp; Skills </a>found in <a href="https://www.sitepoint.com/premium/books/modern-css/read">Chapter 6: CSS Selectors</a></h5>
-              </dt>
-              <dd>
-                <input class="expand" type="checkbox">
-                <p class="trim-multiline">Without any doubts, <span class="search-term"><a href="https://www.sitepoint.com/premium/books/modern-css/read">CSS animations  </a></span><a href="https://www.sitepoint.com/premium/books/modern-css/read">are very powerful tools that can be used to create interesting and beautiful effects. However, it’s important to be reasonable about their usage and not abuse them. Remember that you’re creating websites for users and not for yourself (in most cases, anyway). Therefore, CSS should be utilized ...</a></p>
-              </dd>
-            </dl>
-            */
   </script>
   <svg fill="none" width="0" height="0">
     <defs>
