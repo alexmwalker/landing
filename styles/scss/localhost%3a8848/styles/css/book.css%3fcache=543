@@ -3151,7 +3151,7 @@ input:focus {
   position: absolute;
   font-size: calc(var(--baseline) * 1);
   cursor: pointer;
-  position: fixed;
+  /* position: fixed; */
   right: 3rem;
   top: calc(var(--baseline) * 2.5);
   z-index: 999;

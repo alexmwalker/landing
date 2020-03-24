@@ -3097,7 +3097,6 @@ input:focus {
 .search-body {
   padding: calc(var(--baseline) * 1) 0 calc(var(--baseline) /1);
   margin-bottom: calc(var(--baseline) / 1);
-  display: none;
   background: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
           box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
@@ -3194,17 +3193,8 @@ input:focus {
   padding: 0;
   margin: 0 0.75rem calc(var(--baseline) * 1);
 }
-.book-search-results-list .skeleton {
-  background: #F3F6F9;
-  -webkit-animation: skeleton 1.6s infinite;
-          animation: skeleton 1.6s infinite;
-  margin: 0 0 calc(var(--baseline)/1) 0;
-}
 .book-search-results-list h5 {
   margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) /2);
-}
-.book-search-results-list dt.skeleton {
-  margin: 0 0 calc(var(--baseline)/2) 0;
 }
 .book-search-results-list dd {
   margin: 0 0 calc(var(--baseline)/2) 0;
@@ -3212,43 +3202,42 @@ input:focus {
   border-left: 5px solid #c6c8dd;
   background: #f3f6f9;
 }
-.book-search-results-list dd .skeleton {
-  background: #F3F6F9;
-  -webkit-animation: skeleton 1.6s infinite;
-          animation: skeleton 1.6s infinite;
-  margin: 0 0 calc(var(--baseline)/2) 0;
-}
-.book-search-results-list dd p {
+.book-search-results-list p {
   margin: 0;
   font-size: calc(1rem / var(--typescale)/ var(--typescale));
   line-height: calc(var(--baseline) * 0.75);
   letter-spacing: 0.03rem;
 }
-.book-search-results-list dd .search-term {
+.book-search-results-list .search-term {
   background: yellow;
 }
+.book-search-results-list .skeleton {
+  background: #ddd;
+  -webkit-animation: pulse 0.6s;
+  animation: pulse 0.6s;
+}
 
-@-webkit-keyframes skeleton {
+@-webkit-keyframes pulse {
   0% {
-    background: #F3F6F9;
+    background: #bbb;
   }
   50% {
-    background: #e1e4e9;
+    background: #888;
   }
   100% {
-    background: #F3F6F9;
+    background: #bbb;
   }
 }
 
-@keyframes skeleton {
+@keyframes pulse {
   0% {
-    background: #F3F6F9;
+    background: #bbb;
   }
   50% {
-    background: #e1e4e9;
+    background: #888;
   }
   100% {
-    background: #F3F6F9;
+    background: #bbb;
   }
 }
 /* Trimming Multi-Line Text in CSS

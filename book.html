@@ -4,7 +4,7 @@
   <title>Your First Week With Bootstrap | - SitePoint</title>
   <meta name="description" content="In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="styles/css/book.css?cache=543" rel="stylesheet" type="text/css">
+  <link href="styles/css/book.css?cache=54321" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
 </head>
 <body class="-vr -labelling borders" id="reeedr"> 
@@ -92,20 +92,23 @@
     </div>
   </header>
   <div id="search-panel">
-    <div class="container">
-      <div class="grid-noGutter-center searchbox">
-        <div class="col-8_md-11">
-          <input type="search" id="booksearch" placeholder="      Search the book">
-          <input class="insetbutton" id="start-search" type="submit" value="Go">
-          <div id="search-close"> </div>
-        </div>
+    <div class="grid-noGutter-center searchbox">
+      <div class="col-8_md-11">
+        <input type="search" id="booksearch" placeholder="      Search the book">
+        <input class="insetbutton" id="start-search" type="submit" value="Go">
+        <div id="search-close"> </div>
       </div>
     </div>
     <div class="container">
       <div class="grid-center search-body"> 
         <div class="col-12">
           <h4>Results for '<em>CSS Animation</em>' located in books... </h4>
-          <dl class="book-search-results-list" id="myData"></dl>
+          <dl class="book-search-results-list" id="myData">
+            <dt class="skeleton">&nbsp;</dt>
+            <dd class="skeleton">&nbsp;</dd>
+            <dt class="skeleton">&nbsp;</dt>
+            <dd class="skeleton">&nbsp;</dd>
+          </dl>
           <div class="loader">
             <svg xmlns="http://www.w3.org/2000/svg" display="block" preserveAspectRatio="xMidYMid" style="margin:auto; width: 3rem" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="35" fill="none" stroke="#9dd8f3" stroke-dasharray="165 57" stroke-width="9" transform="rotate(254.156 50 50)">
@@ -665,8 +668,9 @@
     
           // Inject new search result (with a slight delay)
           console.log("loop running");
-          mainContainer.appendChild(dt);           
-          mainContainer.appendChild(dd);
+          mainContainer.prepend(dd);
+          mainContainer.prepend(dt);           
+          
     
     
         

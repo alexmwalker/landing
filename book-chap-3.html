@@ -592,8 +592,9 @@ $gray-300: #dee2e6 !default;
     
           // Inject new search result (with a slight delay)
           console.log("loop running");
-          mainContainer.appendChild(dt);           
-          mainContainer.appendChild(dd);
+          mainContainer.prepend(dd);
+          mainContainer.prepend(dt);           
+          
     
     
         
