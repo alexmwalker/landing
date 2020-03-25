@@ -370,6 +370,12 @@ $gray-300: #dee2e6 !default;
       $('#search-panel').toggleClass('showresults');
     });
     
+    $( "#searchform" ).submit(function( event ) {
+      //alert( "Handler for .submit() called." );
+      startSearch();
+      event.preventDefault();
+    });
+    
     $('#search-close').click(function () {
       //$('#search-panel').toggleClass('showresults');
       $('.book-search-results-list dt').remove();

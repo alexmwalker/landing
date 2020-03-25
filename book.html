@@ -94,9 +94,11 @@
   <div id="search-panel">
     <div class="grid-noGutter-center searchbox">
       <div class="col-8_md-11">
-        <input type="search" id="booksearch" placeholder="      Search the book">
-        <input class="insetbutton" id="start-search" type="submit" value="Go">
-        <div id="search-close" title="Clear search"> </div>
+        <form id="searchform">
+          <input type="search" id="booksearch" placeholder="      Search the book">
+          <input class="insetbutton" id="start-search" type="submit" value="Go">
+          <div id="search-close" title="Clear search"> </div>
+        </form>
       </div>
     </div>
     <div class="container">
@@ -439,6 +441,12 @@
     $('#start-search').click(function () {
       startSearch();
       $('#search-panel').toggleClass('showresults');
+    });
+    
+    $( "#searchform" ).submit(function( event ) {
+      //alert( "Handler for .submit() called." );
+      startSearch();
+      event.preventDefault();
     });
     
     $('#search-close').click(function () {
