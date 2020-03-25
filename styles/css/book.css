@@ -3194,7 +3194,7 @@ input:focus {
 
 .book-search-results-list {
   padding: 0;
-  margin: 0 0.75rem calc(var(--baseline) * 1);
+  margin: 0 0 calc(var(--baseline) * 1);
 }
 .book-search-results-list .skeleton {
   background: #F3F6F9;

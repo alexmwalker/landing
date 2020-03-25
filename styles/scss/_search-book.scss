@@ -12,7 +12,6 @@
   right: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0);
-
   overflow: auto;
   border-radius: 6px;
 
@@ -125,7 +124,7 @@ input:focus {
 
 .book-search-results-list {
   padding: 0;
-  margin: 0 0.75rem calc(var(--baseline) * 1);
+  margin: 0 0 calc(var(--baseline) * 1);
 
   .skeleton {
     background: #F3F6F9;
