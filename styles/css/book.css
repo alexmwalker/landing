@@ -3227,6 +3227,23 @@ input:focus {
   background: yellow;
 }
 
+@-webkit-keyframes fadeInner {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInner {
+  to {
+    opacity: 1;
+  }
+}
+.fade-inner {
+  opacity: 0;
+  -webkit-animation: fadeInner 0.5s ease-in 1 forwards;
+          animation: fadeInner 0.5s ease-in 1 forwards;
+}
+
 @-webkit-keyframes skeleton {
   0% {
     background: #F3F6F9;

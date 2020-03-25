@@ -169,6 +169,18 @@ input:focus {
   }
 }
 
+@keyframes fadeInner {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-inner {
+  opacity: 0;
+  animation: fadeInner .5s ease-in 1 forwards;
+}
+
+
 @keyframes skeleton {
   0% {
     background: #F3F6F9;

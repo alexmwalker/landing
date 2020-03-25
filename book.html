@@ -649,6 +649,7 @@
           // build the search result header
           var dth5 = document.createElement("h5");
           dth5.className = "trim-singleline";
+          dth5.className = "fade-inner";
           //dth5.innerHTML =  magGlassSVG + " - " + data[i].searchTitle;
           dth5.appendChild(dta);
     
@@ -667,6 +668,7 @@
     
           var ddp = document.createElement("p");
           ddp.className = "trim-multiline";
+          ddp.className = "fade-inner";
     
           ddp.innerHTML = data[i].searchDesc;
           dd.appendChild(ddp);
@@ -702,7 +704,7 @@
         
           console.log('hello :# ' + i);         //  your code here
           i++;                                  //  increment the counter
-          if (i < data.length-1) {              //  if the counter < 10, call the loop function
+          if (i < data.length) {              //  if the counter < 10, call the loop function
             myLoop(data);   
             console.log("I'm in the loops !");  //  ..  again which will trigger another 
           }                        
