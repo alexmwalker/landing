@@ -1,13 +1,41 @@
 
 
 #search-panel
-  form(action="search.html" , method="get")
-    .container
-      .grid-noGutter-center.searchbox
-        .col-8_md-11
-          input(type="search", id="booksearch", placeholder="      Search the book")
-        .col-2_md-11
-          a(href="search.html")
-            input.insetbutton(type="submit", value="Go" )
+  .grid-noGutter-center.searchbox
+    .col-8_md-11
+      form(id="searchform")
+        input(type="search", id="booksearch", placeholder="      Search the book")
+        input#start-search.insetbutton(type="submit", value="Go" )
+        div#search-close(title='Clear search') 
 
+          
 
+  .container
+    .grid-center.search-body 
+      .col-12
+        h4 Results for '
+          em.query
+          | ' located in books... 
+        dl#myData.book-search-results-list
+          dt.skeleton &nbsp;
+          dd.skeleton &nbsp;
+        //-  dt.skeleton &nbsp;
+          dd.skeleton &nbsp;
+          dt.skeleton &nbsp;
+          dd.skeleton &nbsp;
+          dt.skeleton &nbsp;
+          dd.skeleton &nbsp;
+          dt.skeleton &nbsp;
+          dd.skeleton &nbsp;
+          dt.skeleton &nbsp;
+          dd.skeleton &nbsp;
+
+        //-.loader
+          svg(xmlns='http://www.w3.org/2000/svg', display='block', preserveAspectRatio='xMidYMid', style='margin:auto; width: 3rem', viewBox='0 0 100 100')
+            circle(cx='50', cy='50', r='35', fill='none', stroke='#9dd8f3', stroke-dasharray='165 57', stroke-width='9', transform='rotate(254.156 50 50)')
+              animatetransform(attributeName='transform', dur='1.9s', keyTimes='0;1', repeatCount='indefinite', type='rotate', values='0 50 50;360 50 50')
+
+                  
+          // The seach results are from a 'search.json' 
+          // they are loaded through 'scripts-book.pug'
+          // via a function called startSearch();

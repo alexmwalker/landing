@@ -2639,7 +2639,6 @@ table {
   overflow: visible;
   text-align: right;
   margin: calc(var(--baseline)/2) -0.5rem 0 0;
-  padding: 15px 0;
   cursor: pointer;
   -webkit-transition-timing-function: linear;
        -o-transition-timing-function: linear;
@@ -2659,8 +2658,9 @@ table {
 .hamburger-box {
   position: relative;
   display: inline-block;
-  width: 3rem;
+  width: 2.5rem;
   height: 1rem;
+  height: calc(var(--baseline)*1);
 }
 
 .hamburger-inner,
@@ -2668,8 +2668,9 @@ table {
 .hamburger-inner:before {
   position: absolute;
   display: block;
-  width: 2.5rem;
-  height: 0.3rem;
+  width: 1.75rem;
+  height: 0.25rem;
+  right: 0;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -2684,11 +2685,12 @@ table {
 }
 
 .hamburger-inner {
-  top: 40%;
+  top: 45%;
   margin-top: 0px;
-  -webkit-transform: translateX(-0.5rem);
-      -ms-transform: translateX(-0.5rem);
-          transform: translateX(-0.5rem);
+  right: 4px;
+  -webkit-transform: translateX(-0.75rem);
+      -ms-transform: translateX(-0.75rem);
+          transform: translateX(-0.75rem);
 }
 
 .hamburger-inner:after,
@@ -2717,7 +2719,22 @@ table {
 .showmobile {
   display: none;
   text-align: right;
-  padding-right: 0rem;
+  padding-right: 0;
+}
+.showmobile .search-control {
+  height: calc(var(--baseline)*1);
+  width: calc(var(--baseline)*0.5);
+}
+.showmobile svg {
+  height: calc(var(--baseline)*1);
+  width: calc(var(--baseline)*1);
+  margin: calc(var(--baseline)/2);
+  color: #fff;
+}
+.showmobile svg :active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .open .hamburger-inner:before {
@@ -2735,9 +2752,9 @@ table {
   -webkit-transition: all 0.45s cubic-bezier(0.49, -0.32, 0.6, 1.7);
   -o-transition: all 0.45s cubic-bezier(0.49, -0.32, 0.6, 1.7);
   transition: all 0.45s cubic-bezier(0.49, -0.32, 0.6, 1.7);
-  -webkit-transform: translateX(0.5rem);
-      -ms-transform: translateX(0.5rem);
-          transform: translateX(0.5rem);
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .mobilenav {
@@ -2802,7 +2819,6 @@ table {
 }
 .mobile-controls input {
   display: inline-block;
-  outline: 1px red dashed;
   width: 90%;
 }
 .mobile-controls a {
@@ -2887,7 +2903,7 @@ button.go:active {
   pointer-events: none;
 }
 
-#font-adjuster-container.open {
+#font-adjuster-container.show {
   -webkit-transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   -o-transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
   transition: all 0.25s cubic-bezier(0.49, -0.32, 0.42, 1.35);
@@ -3047,51 +3063,64 @@ html.offline #offline-notification.tuckaway {
 }
 
 #search-panel {
-  position: fixed;
-  background: #F7F7F7;
-  z-index: -1;
-  width: 100%;
-  margin: 0 auto !important;
+  position: absolute;
   background: #fff;
+  z-index: 1;
+  color: #212121;
   display: block;
   opacity: 0;
-  -webkit-transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
-      -ms-transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
-          transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  top: calc(var(--baseline) * 1);
+  right: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: auto;
+  border-radius: 6px;
 }
 #search-panel.open {
   opacity: 1;
-  -webkit-transform: translateY(0) scaleY(1);
-      -ms-transform: translateY(0) scaleY(1);
-          transform: translateY(0) scaleY(1);
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  background: #F7F7F7;
+}
+#search-panel.showresults {
+  bottom: 0px;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
 }
 
-.searchbox {
-  background: #F7F7F7;
+.search-body {
   padding: calc(var(--baseline) * 1) 0 calc(var(--baseline) /1);
+  margin-bottom: calc(var(--baseline) / 1);
+  display: none;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
+          box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
+}
+
+.searchbox {
+  background: #222;
+  position: relative;
+  padding: calc(var(--baseline) * 2) 0 calc(var(--baseline) /1);
+  margin-bottom: calc(var(--baseline) / 1) 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
+          box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
 }
 .searchbox input[type=search] {
   font-size: calc(1rem * var(--typescale));
   height: calc(var(--baseline) * 1.5);
+  background: #fff;
   border: 2px solid #ddd;
   left: 1rem;
   position: relative;
   float: left;
-  width: 100%;
-  padding: 0 5%;
+  width: 80%;
+  padding: 0 0 0 1rem;
   -webkit-box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
           box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
   border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
@@ -3116,41 +3145,19 @@ textarea:focus, input:focus {
   background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 101 101'%3E%3Cpath fill='currentcolor' fill-rule='evenodd' d='M62.27 69.134a32.99 32.99 0 01-20.19 6.856C23.81 75.99 9 61.218 9 42.995 9 24.773 23.81 10 42.08 10c18.27 0 33.08 14.773 33.08 32.995 0 7.178-2.298 13.82-6.2 19.236l21.63 21.576a4.79 4.79 0 010 6.787 4.82 4.82 0 01-6.804 0L62.27 69.134zm3.266-26.139c0 12.922-10.502 23.397-23.456 23.397-12.955 0-23.457-10.475-23.457-23.397 0-12.921 10.502-23.396 23.457-23.396s23.456 10.475 23.456 23.396z' /%3E%3C/svg%3E") left center no-repeat;
   background-size: auto 90%;
 }
-
-.searchbox {
-  margin: 0 0 calc(var(--baseline) / 2);
-}
-.searchbox .grid-noGutter-center {
-  padding: calc(var(--baseline) * 1.5) 0 0;
-  margin: 0;
-}
-.searchbox input[type*=text] {
-  font-size: calc(1rem * var(--typescale));
-  height: calc(var(--baseline) * 1.5);
-  border: 2px solid #ddd;
-  left: 1rem;
-  position: relative;
-  float: left;
-  width: 80%;
-  padding: 0 5%;
-  -webkit-box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
-  border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
-}
-.searchbox input[type*=text]::-webkit-input-placeholder {
-  color: #999;
-}
-.searchbox input[type*=text]::-moz-placeholder {
-  color: #999;
-}
-.searchbox input[type*=text]:-ms-input-placeholder {
-  color: #999;
-}
-.searchbox input[type*=text]::-ms-input-placeholder {
-  color: #999;
-}
-.searchbox input[type*=text]::placeholder {
-  color: #999;
+.searchbox #search-close {
+  color: #fff;
+  width: calc(var(--baseline) * 1);
+  height: calc(var(--baseline) * 1);
+  display: block;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='20.5' fill='%23fff' stroke='%23000' stroke-width='3'/%3E%3Cpath fill='%23000' d='M35.96 13.54a3 3 0 00-4.242 0L25 20.258l-6.718-6.718a3 3 0 00-4.242 4.243l6.717 6.717-6.717 6.718a3 3 0 004.242 4.243L25 28.743l6.718 6.718a3 3 0 004.242-4.243L29.243 24.5l6.717-6.717a3 3 0 000-4.243z'/%3E%3C/svg%3E");
+  position: absolute;
+  font-size: calc(var(--baseline) * 1);
+  cursor: pointer;
+  right: 2rem;
+  top: calc(var(--baseline) * 2.0);
+  z-index: 999;
 }
 .searchbox .insetbutton {
   padding: 0rem;
@@ -3159,6 +3166,7 @@ textarea:focus, input:focus {
   -webkit-appearance: button;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
   background-position: center center;
+  background: #fff;
   background-repeat: no-repeat;
   border: 3px solid #ddd;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
@@ -3179,34 +3187,173 @@ textarea:focus, input:focus {
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.book-search-results-list {
-  background: #fff;
-  display: block;
-  border-radius: 10px;
-  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  padding: calc(var(--baseline) * 1) 0 0 0;
-  margin: 0 0.75rem calc(var(--baseline) * 1);
-  border: 1px #eee solid;
+.loader {
+  width: 100%;
+  height: calc(var(--baseline) * 2);
 }
-.book-search-results-list dl dd {
-  margin: calc(var(--baseline)/2) calc(var(--baseline)/2);
+
+.book-search-results-list {
+  padding: 0;
+  margin: 0 0 calc(var(--baseline) * 1);
+}
+.book-search-results-list .skeleton {
+  background: #F3F6F9;
+  -webkit-animation: skeleton 1.6s infinite;
+          animation: skeleton 1.6s infinite;
+  margin: 0 0 calc(var(--baseline)/1) 0;
 }
 .book-search-results-list h5 {
-  margin: 0;
+  margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) /2);
+  line-height: calc(var(--baseline) / 1);
 }
-.book-search-results-list p {
-  background: #f3f6f9;
-  font-style: italic;
-  margin: 0 0 calc(var(--baseline)/1) 0;
-  font-size: calc(1rem / var(--typescale));
-  line-height: calc(var(--baseline) * 0.75);
-  padding: calc(var(--baseline)/2) 1em;
-  letter-spacing: 0.03rem;
+.book-search-results-list dt.skeleton {
+  margin: 0 0 calc(var(--baseline)/2) 0;
+}
+.book-search-results-list dd {
+  margin: 0 0 calc(var(--baseline)/2) 0;
+  padding: calc(var(--baseline)/4) 1rem calc(var(--baseline)/2);
   border-left: 5px solid #c6c8dd;
+  background: #f3f6f9;
 }
-.book-search-results-list .search-term {
-  background: yellow;
+.book-search-results-list dd .skeleton {
+  margin: 0 0 calc(var(--baseline)/2) 0;
+  min-height: calc(var(--baseline)*2);
+}
+.book-search-results-list dd p {
+  margin: 0;
+  font-size: calc(1rem / var(--typescale)/ var(--typescale));
+  line-height: calc(var(--baseline) * 0.75);
+  letter-spacing: 0.03rem;
+}
+
+.search-term {
+  background: #fcfcaf;
+}
+
+.query {
+  border-bottom: 2px dotted #afafaf;
+  font-style: normal;
+}
+
+@-webkit-keyframes fadeInner {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInner {
+  to {
+    opacity: 1;
+  }
+}
+.fade-inner {
+  opacity: 0;
+  -webkit-animation: fadeInner 0.5s ease-in 1 forwards;
+          animation: fadeInner 0.5s ease-in 1 forwards;
+}
+
+@-webkit-keyframes skeleton {
+  0% {
+    background: #F3F6F9;
+  }
+  50% {
+    background: #e6e9f0;
+  }
+  100% {
+    background: #F3F6F9;
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    background: #F3F6F9;
+  }
+  50% {
+    background: #e6e9f0;
+  }
+  100% {
+    background: #F3F6F9;
+  }
+}
+/* Trimming Multi-Line Text in CSS
+SHOUTOUT: @eladsc 
+SRC: https://medium.com/@elad/trimming-multi-lines-in-css-5ae59d5e6d84 
+DEMO: https://codepen.io/elad2412/pen/Poovzzb
+*/
+.trim-singleline {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.trim-multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.trim-multiline:before {
+  display: block;
+  position: absolute;
+  content: "[+] EXPAND";
+  background: #f3f6f9;
+  color: #999;
+  text-align: right;
+  font-size: calc(1rem / 1.15);
+  font-size: 7px;
+  pointer-events: none;
+  right: 0;
+  padding-right: 0.5rem;
+  bottom: 2px;
+  height: calc(var(--baseline) / 2);
+  width: 4rem;
+}
+
+dd:hover .trim-multiline:before {
+  color: green;
+  font-weight: 500;
+}
+
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  .trim-multiline {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+/* the 'Expand' control on search results */
+.book-search-results-list dd {
+  position: relative;
+}
+.book-search-results-list dd input {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: calc(var(--baseline) / 2);
+  width: 3rem;
+  opacity: 0;
+}
+
+input:checked + .trim-multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+input:checked + .trim-multiline:before {
+  content: "[-] HIDE";
 }
 
 .library-nav {

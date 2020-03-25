@@ -203,12 +203,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li title="Alex" data-toggle="tooltip" data-placement="bottom" data-offset="0,5">
                     <a class="ui-profile-label" data-toggle="dropdown">
                         <img class="ui-avatar" width="30" height="30" src="https://avatars.githubusercontent.com/u/322887?s=96">
-                    </a>
-                    <ul id="profile-dropdown" class="dropdown-menu" aria-labelledby="profileLabel">
-                        
-                            <li><a href="https://hackmd.io/profile" target="_blank"><i class="fa fa-user-circle-o fa-fw"></i> Profile</a></li>
-                        
-                        <li><a href="https://hackmd.io/features" target="_blank"><i class="fa fa-dot-circle-o fa-fw"></i> Features</a></li>
+                
+    border-radius: 0 0 4px 4px;
+    overflow: scroll;
+    max-height: 280px;
+    max-height: 16.5vw;
+    min-height: calc(var(--baseline) * 14);
                         
                             <li><a href="https://hackmd.io/pricing" target="_blank"><i class="fa fa-magic fa-fw"></i> Pricing</a></li>
                         
