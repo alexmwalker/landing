@@ -3114,6 +3114,7 @@ input:focus {
 .searchbox input[type=search] {
   font-size: calc(1rem * var(--typescale));
   height: calc(var(--baseline) * 1.5);
+  background: #fff;
   border: 2px solid #ddd;
   left: 1rem;
   position: relative;
@@ -3203,6 +3204,7 @@ input:focus {
 }
 .book-search-results-list h5 {
   margin: calc(var(--baseline) * 1) 0 calc(var(--baseline) /2);
+  line-height: calc(var(--baseline) / 1);
 }
 .book-search-results-list dt.skeleton {
   margin: 0 0 calc(var(--baseline)/2) 0;
@@ -3223,8 +3225,14 @@ input:focus {
   line-height: calc(var(--baseline) * 0.75);
   letter-spacing: 0.03rem;
 }
-.book-search-results-list dd .search-term {
-  background: yellow;
+
+.search-term {
+  background: #fcfcaf;
+}
+
+.query {
+  border-bottom: 2px dotted #afafaf;
+  font-style: normal;
 }
 
 @-webkit-keyframes fadeInner {

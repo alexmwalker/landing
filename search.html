@@ -211,6 +211,7 @@
     $( "#searchform" ).submit(function( event ) {
       //alert( "Handler for .submit() called." );
       startSearch();
+      grabSearch();
       event.preventDefault();
     });
     
@@ -230,6 +231,15 @@
     $("#offlinemode input").change(function () {
       $("body").toggleClass("local", this.checked);
       });
+    
+    /* ===  Take search term from input for use in page  ===  */
+      function grabSearch(){
+        var searchterm = document.querySelector("#booksearch").value;
+        //alert('The searchterm is ' + searchterm);
+        //document.queryselectorAll("em.query");
+        $( "em.query" ).append( searchterm );
+      }
+    
     
     
     /* ===  Font rescaling  ===  */
@@ -404,13 +414,6 @@
     
       setTimeout(function () {    //  call a 3s setTimeout when the loop is called
           
-        /* create skeleton DT
-          var skDt = document.createElement("dt");
-          var skTxt = document.createTextNode("   ...");
-          skDt.appendChild(skTxt); 
-          skDt.className = "skeleton"; 
-          mainContainer.append(skDt);*/
-          
           var dta = document.createElement('a');
           var linkText = document.createTextNode(data[i].searchTitle);
           dta.appendChild(linkText);
@@ -421,8 +424,7 @@
     
           // build the search result header
           var dth5 = document.createElement("h5");
-          dth5.className = "trim-singleline";
-          dth5.className = "fade-inner";
+          dth5.className = "trim-singleline fade-inner";
           //dth5.innerHTML =  magGlassSVG + " - " + data[i].searchTitle;
           dth5.appendChild(dta);
     
@@ -440,11 +442,12 @@
           dd.appendChild(expand);
     
           var ddp = document.createElement("p");
-          ddp.className = "trim-multiline";
-          ddp.className = "fade-inner";
+          ddp.className = "trim-multiline fade-inner";
+          //ddp.className = "fade-inner";
     
           ddp.innerHTML = data[i].searchDesc;
           dd.appendChild(ddp);
+    
     
           // Inject new search result (with a slight delay)
           console.log("loop running");
@@ -477,7 +480,7 @@
         
           console.log('hello :# ' + i);         //  your code here
           i++;                                  //  increment the counter
-          if (i < data.length) {              //  if the counter < 10, call the loop function
+          if (i < data.length-1) {              //  if the counter < 10, call the loop function
             myLoop(data);   
             console.log("I'm in the loops !");  //  ..  again which will trigger another 
           }                        
