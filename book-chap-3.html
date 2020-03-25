@@ -355,10 +355,7 @@ $gray-300: #dee2e6 !default;
     });
     
     
-    $('#start-search').click(function () { // pretend search
-      startSearch(),
-      $('#font-adjuster-container').toggleClass('open');
-    });
+    
     
     $('#showfontchanger').click(function () {
       $('#font-adjuster-container').toggleClass('show');
@@ -377,6 +374,8 @@ $gray-300: #dee2e6 !default;
       //$('#search-panel').toggleClass('showresults');
       $('.book-search-results-list dt').remove();
       $('.book-search-results-list dd').remove();
+      $('#search-panel').removeClass('showresults');
+      $('#search-panel').removeClass('open');
     });
     
     $('.search-control').click(function () { 
@@ -546,16 +545,27 @@ $gray-300: #dee2e6 !default;
         });
     
     
-                      //  set your counter to 1
+    /* Load empty Skeletons for replacement with real results later  
+    var mainContainer = document.getElementById("myData");
+      var dt = document.createElement("dt");
+          dt.appendChild(dth5);*/
+    
     
     var magGlassSVG = "<svg class='svg-icon'><use fill='currentColor' href='#my-search'/></svg>"
     
     function myLoop(data) {           //  create a loop function
     var mainContainer = document.getElementById("myData");
-      setTimeout(function () {    //  call a 3s setTimeout when the loop is called
     
-          //var dta = document.createElement("a");
-          //dta.innerHTML = data[i].searchLink;
+      //$('#myData > dt').next('dt').style.border = "3px dashed green";
+    
+      setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+          
+        /* create skeleton DT
+          var skDt = document.createElement("dt");
+          var skTxt = document.createTextNode("   ...");
+          skDt.appendChild(skTxt); 
+          skDt.className = "skeleton"; 
+          mainContainer.append(skDt);*/
           
           var dta = document.createElement('a');
           var linkText = document.createTextNode(data[i].searchTitle);
@@ -592,19 +602,40 @@ $gray-300: #dee2e6 !default;
     
           // Inject new search result (with a slight delay)
           console.log("loop running");
-          mainContainer.prepend(dd);
-          mainContainer.prepend(dt);           
-          
+          //mainContainer.prepend(dd);
+          //mainContainer.prepend(dt);
+    
+    
+          // replacer code DT
+          var grabDtSkel = document.querySelector('#myData dt.skeleton');
+          grabDtSkel.parentNode.replaceChild(dt, grabDtSkel); // switch it with real DT
+    
+          // replacer code DD
+          var grabDdSkel = document.querySelector('#myData dd.skeleton');
+          grabDdSkel.parentNode.replaceChild(dd, grabDdSkel); // switch it with real DD
+    
+          // create a new empty DT skeleton
+          var nextDt = document.createElement('dt');
+          nextDt.className = "skeleton";
+          nextDt.innerHTML = '<h5 class="trim-singleline">  ...</h5>';;
+          mainContainer.append(nextDt);
+    
+          // create a new empty DD skeleton
+          var nextDd = document.createElement('dd');
+          nextDd.className = "skeleton";
+          nextDd.innerHTML = '<p class="trim-multiline">...</p>';
+          mainContainer.append(nextDd);
+    
     
     
         
-          console.log('hello :# ' + i);  //  your code here
-          i++;                     //  increment the counter
-          if (i < data.length-1) {            //  if the counter < 10, call the loop function
+          console.log('hello :# ' + i);         //  your code here
+          i++;                                  //  increment the counter
+          if (i < data.length-1) {              //  if the counter < 10, call the loop function
             myLoop(data);   
-            console.log("I'm in the loops !");          //  ..  again which will trigger another 
+            console.log("I'm in the loops !");  //  ..  again which will trigger another 
           }                        
-        }, 1500) //  ..  setTimeout() delivers staggered results
+        }, 1500)                                //  ..  setTimeout() delivers staggered results
         console.log("Loop done !");
       }
     }
