@@ -36,3 +36,4 @@ images/SVG/Archive.zip
 node_modules
 node_modules
 prepros.config
+styles/scss/_article-title-unit.scss
