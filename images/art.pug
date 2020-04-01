@@ -15,15 +15,17 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
    .base{
     /*filter: url(#spray);*/
     fill: rgba(255,255,255,.15);
+    fill: rgba(0,0,0,.15);
     transform-origin: 50% 50%;
     transform: rotate(24deg);
     }
    .keyline{
     /*filter: url(#slight-texture);*/
-    stroke: rgba(0,255,255,0.2);
+    stroke: rgba(255,255,255,0.25);
     fill: none;
     stroke-width: 0;
     transform-origin: 50% 50%;
+    transform: rotate(24deg);
    }
     /* DEFS */
   
@@ -44,8 +46,8 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
     use.base(href='#icon-laptop', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-laptop', x='22%', y='-10%',  width='180')
    g#design.icon
-    use.base(href='#icon-quill', x='22%', y='-10%', width='180')
-    use.keyline(href='#icon-quill', x='22%', y='-10%',  width='180')
+    use.base(href='#icon-eye', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-eye', x='22%', y='-10%',  width='180')
    g#web.icon
     use.base(href='#icon-sphere', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-sphere', x='22%', y='-10%',  width='180')
@@ -59,7 +61,7 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
     use.base(href='#icon-stats-bars', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-stats-bars', x='22%', y='-10%',  width='180')
    g#blogs.icon
-    use.base(href='#icon-pen', x='22%', y='-10%', width='180')
+    use.base(href='#icon-quotes-right', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-pen', x='22%', y='-10%',  width='180')
    g#wordpress.icon
     use.base(href='#icon-bullhorn', x='22%', y='-10%', width='180')
