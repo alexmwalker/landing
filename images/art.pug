@@ -6,12 +6,21 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
    font-family: Barlow, Helvetica, 'Helvetica Neue', sans-serif;
    font-size: 8px;
    }
-   .icon {
+   g {
+    display:inline;  
+    outline: 1px green dashed;  
+    }
+   g:not(:target) {
+    display: none;      
+    outline: 1px red dashed;       
+    }
+   g.icon {
     display: none;
     }
-   .icon:target {
+   g.icon:target {
     display: inline;             
    }
+   
    .base{
     /*filter: url(#spray);*/
     fill: rgba(255,255,255,.15);
@@ -42,15 +51,22 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
  rect(width='1000', height='610', x='0', y='0', fill='rgba(0, 0, 0, 0)')
  svg(x='300', y='140', width='500', height='500', viewBox='0 0 500 500')
    circle.base(cx='200', cy='200', r='170')
+
+   // g#web.default
+     use.base(href='#icon-sphere', x='22%', y='-10%', width='180')
+     use.keyline(href='#icon-sphere', x='22%', y='-10%',  width='180')
    g#programming.icon
     use.base(href='#icon-laptop', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-laptop', x='22%', y='-10%',  width='180')
+   g#design-ux.icon
+    use.base(href='#icon-eye', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-eye', x='22%', y='-10%',  width='180')
    g#design.icon
     use.base(href='#icon-eye', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-eye', x='22%', y='-10%',  width='180')
-   g#web.icon
-    use.base(href='#icon-sphere', x='22%', y='-10%', width='180')
-    use.keyline(href='#icon-sphere', x='22%', y='-10%',  width='180')
+   g#ux.icon
+    use.base(href='#icon-eye', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-eye', x='22%', y='-10%',  width='180')
    g#javascript.icon
     use.base(href='#icon-rocket', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-rocket', x='22%', y='-10%',  width='180')
@@ -60,15 +76,26 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
    g#entrepreneur.icon
     use.base(href='#icon-stats-bars', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-stats-bars', x='22%', y='-10%',  width='180')
+   g#php.icon
+    use.base(href='#icon-php', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-php', x='22%', y='-10%',  width='180')
    g#blogs.icon
     use.base(href='#icon-quotes-right', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-pen', x='22%', y='-10%',  width='180')
    g#wordpress.icon
     use.base(href='#icon-bullhorn', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-bullhorn', x='22%', y='-10%',  width='180')
-   g#html5.icon
+   g#html.icon
     use.base(href='#icon-html5', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-html5', x='22%', y='-10%',  width='180')
-   g#css3.icon
+   g#html-css.icon
+    use.base(href='#icon-html5', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-html5', x='22%', y='-10%',  width='180')
+   g#css.icon
     use.base(href='#icon-css3', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-css3', x='22%', y='-10%',  width='180')
+   g
+    use.base(href='#icon-sphere', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-sphere', x='22%', y='-10%',  width='180')
+    
+//html-css, html, css, javascript, mobile, design-ux, design, ux, entrepreneur, web, php, ruby, woorank, wordpress, bitbucket, developer-center, java, blogs 

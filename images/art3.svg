@@ -7,12 +7,21 @@
       font-family: Barlow, Helvetica, 'Helvetica Neue', sans-serif;
       font-size: 8px;
       }
-      .icon {
+      g {
+       display:inline;  
+       outline: 1px green dashed;  
+       }
+      g:not(:target) {
+       display: none;      
+       outline: 1px red dashed;       
+       }
+      g.icon {
        display: none;
        }
-      .icon:target {
+      g.icon:target {
        display: inline;             
       }
+      
       .base{
        /*filter: url(#spray);*/
        fill: rgba(255,255,255,.15);
@@ -108,6 +117,10 @@
       <title>eye</title>
       <path class="path1" d="M8 3c-3.489 0-6.514 2.032-8 5 1.486 2.968 4.511 5 8 5s6.514-2.032 8-5c-1.486-2.968-4.511-5-8-5zM11.945 5.652c0.94 0.6 1.737 1.403 2.335 2.348-0.598 0.946-1.395 1.749-2.335 2.348-1.181 0.753-2.545 1.152-3.944 1.152s-2.763-0.398-3.945-1.152c-0.94-0.6-1.737-1.403-2.335-2.348 0.598-0.946 1.395-1.749 2.335-2.348 0.061-0.039 0.123-0.077 0.185-0.114-0.156 0.427-0.241 0.888-0.241 1.369 0 2.209 1.791 4 4 4s4-1.791 4-4c0-0.481-0.085-0.942-0.241-1.369 0.062 0.037 0.124 0.075 0.185 0.114v0zM8 6.5c0 0.828-0.672 1.5-1.5 1.5s-1.5-0.672-1.5-1.5 0.672-1.5 1.5-1.5 1.5 0.672 1.5 1.5z"></path>
     </symbol>
+    <symbol id="icon-php" viewBox="0 0 16 16">
+      <title>php</title>
+      <path fill-rule="evenodd" d="M5.86 9.86l1.06-5.38h1.26l-.26 1.4h1.2c1.06.06 1.45.6 1.32 1.26l-.46 2.72H8.65L9.1 7.4c.07-.33.07-.53-.4-.53h-.99l-.6 2.99H5.86zM1 11.26l1.06-5.38h2.46c1.06.06 1.59.6 1.59 1.52 0 1.6-1.26 2.52-2.39 2.46h-1.2l-.26 1.4H1zm1.8-2.4l.32-1.99H4c.46 0 .8.2.8.6-.07 1.13-.6 1.33-1.2 1.4h-.8zm8.15-2.98L9.9 11.25h1.26l.27-1.4h1.2C13.73 9.93 15 9 15 7.4c0-.93-.53-1.46-1.6-1.52h-2.45zm1.06 1l-.33 1.98h.8c.6-.06 1.13-.26 1.2-1.4 0-.39-.34-.59-.8-.59H12z" clip-rule="evenodd"></path>
+    </symbol>
     <!--include _symbols.pug-->
     <!--include _patterns.pug-->
     <!--include _filter.pug-->
@@ -115,17 +128,25 @@
   <rect width="1000" height="610" x="0" y="0" fill="rgba(0, 0, 0, 0)"></rect>
   <svg x="300" y="140" width="500" height="500" viewBox="0 0 500 500">
     <circle class="base" cx="200" cy="200" r="170"></circle>
+    <!-- g#web.default
+    use.base(href='#icon-sphere', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-sphere', x='22%', y='-10%',  width='180')
+    -->
     <g class="icon" id="programming">
       <use class="base" href="#icon-laptop" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-laptop" x="22%" y="-10%" width="180"></use>
+    </g>
+    <g class="icon" id="design-ux">
+      <use class="base" href="#icon-eye" x="22%" y="-10%" width="180"></use>
+      <use class="keyline" href="#icon-eye" x="22%" y="-10%" width="180"></use>
     </g>
     <g class="icon" id="design">
       <use class="base" href="#icon-eye" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-eye" x="22%" y="-10%" width="180"></use>
     </g>
-    <g class="icon" id="web">
-      <use class="base" href="#icon-sphere" x="22%" y="-10%" width="180"></use>
-      <use class="keyline" href="#icon-sphere" x="22%" y="-10%" width="180"></use>
+    <g class="icon" id="ux">
+      <use class="base" href="#icon-eye" x="22%" y="-10%" width="180"></use>
+      <use class="keyline" href="#icon-eye" x="22%" y="-10%" width="180"></use>
     </g>
     <g class="icon" id="javascript">
       <use class="base" href="#icon-rocket" x="22%" y="-10%" width="180"></use>
@@ -139,6 +160,10 @@
       <use class="base" href="#icon-stats-bars" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-stats-bars" x="22%" y="-10%" width="180"></use>
     </g>
+    <g class="icon" id="php">
+      <use class="base" href="#icon-php" x="22%" y="-10%" width="180"></use>
+      <use class="keyline" href="#icon-php" x="22%" y="-10%" width="180"></use>
+    </g>
     <g class="icon" id="blogs">
       <use class="base" href="#icon-quotes-right" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-pen" x="22%" y="-10%" width="180"></use>
@@ -147,13 +172,22 @@
       <use class="base" href="#icon-bullhorn" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-bullhorn" x="22%" y="-10%" width="180"></use>
     </g>
-    <g class="icon" id="html5">
+    <g class="icon" id="html">
       <use class="base" href="#icon-html5" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-html5" x="22%" y="-10%" width="180"></use>
     </g>
-    <g class="icon" id="css3">
+    <g class="icon" id="html-css">
+      <use class="base" href="#icon-html5" x="22%" y="-10%" width="180"></use>
+      <use class="keyline" href="#icon-html5" x="22%" y="-10%" width="180"></use>
+    </g>
+    <g class="icon" id="css">
       <use class="base" href="#icon-css3" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-css3" x="22%" y="-10%" width="180"></use>
     </g>
+    <g>
+      <use class="base" href="#icon-sphere" x="22%" y="-10%" width="180"></use>
+      <use class="keyline" href="#icon-sphere" x="22%" y="-10%" width="180"></use>
+    </g>
   </svg>
 </svg>
+<!--html-css, html, css, javascript, mobile, design-ux, design, ux, entrepreneur, web, php, ruby, woorank, wordpress, bitbucket, developer-center, java, blogs -->
