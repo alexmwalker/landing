@@ -21,7 +21,7 @@
        }
       .keyline{
        /*filter: url(#slight-texture);*/
-       stroke: rgba(0,255,255,.225);
+       stroke: rgba(0,255,255,0.2);
        fill: none;
        stroke-width: 0;
        transform-origin: 50% 50%;
@@ -111,9 +111,9 @@
     <!--include _patterns.pug-->
     <!--include _filter.pug-->
   </defs>
-  <rect width="1000" height="610" x="0" y="0" fill="rgba(0, 0, 0, .15)"></rect>
-  <svg x="300" y="140" width="500" height="500" viewBox="0 0 500 500" style="fill:rbga(255,45,100,.5)">
-    <circle class="base" cx="200" cy="200" r="170" fill="hsl(544, 52%, 75%)" style="fill-opacity:0.6"></circle>
+  <rect width="1000" height="610" x="0" y="0" fill="rgba(0, 0, 0, 0)"></rect>
+  <svg x="300" y="140" width="500" height="500" viewBox="0 0 500 500">
+    <circle class="base" cx="200" cy="200" r="170"></circle>
     <g class="icon" id="programming">
       <use class="base" href="#icon-laptop" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-laptop" x="22%" y="-10%" width="180"></use>

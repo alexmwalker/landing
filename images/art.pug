@@ -20,7 +20,7 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
     }
    .keyline{
     /*filter: url(#slight-texture);*/
-    stroke: rgba(0,255,255,.225);
+    stroke: rgba(0,255,255,0.2);
     fill: none;
     stroke-width: 0;
     transform-origin: 50% 50%;
@@ -37,9 +37,9 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
   //include _filter.pug
       
 
- rect(width='1000', height='610', x='0', y='0', fill='rgba(0, 0, 0, .15)')
- svg(x='300', y='140', width='500', height='500', viewBox='0 0 500 500', style='fill:rbga(255,45,100,.5)')
-   circle.base(cx='200', cy='200', r='170', fill='hsl(544, 52%, 75%)', style='fill-opacity:0.6')
+ rect(width='1000', height='610', x='0', y='0', fill='rgba(0, 0, 0, 0)')
+ svg(x='300', y='140', width='500', height='500', viewBox='0 0 500 500')
+   circle.base(cx='200', cy='200', r='170')
    g#programming.icon
     use.base(href='#icon-laptop', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-laptop', x='22%', y='-10%',  width='180')
