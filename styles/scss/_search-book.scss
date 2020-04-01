@@ -216,6 +216,7 @@ DEMO: https://codepen.io/elad2412/pen/Poovzzb
     -webkit-line-clamp: $numLines;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    //min-height: calc(var(--baseline) * 2);
   }
 
   @else {
@@ -233,6 +234,7 @@ DEMO: https://codepen.io/elad2412/pen/Poovzzb
 .trim-multiline {
   @include trim(3); // 3 line line clamp in mobile
   transition: all .3s;
+  //min-height: calc(var(--baseline) * 2);
 }
 
 .trim-multiline:before {

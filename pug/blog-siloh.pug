@@ -1,0 +1,90 @@
+
+
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title SitePoint - Learn with Books, Video and Code
+    meta(name='description', content='SitePoint Library')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', type='text/css', href='styles/css/blog2.css?r=123456')
+
+
+
+  body.vr.-labelling.-borders
+    #checker External ads 
+      i SEEM 
+      | to be blocked! &#128683; 
+    #ad-placement allowed! &#9989;
+    #memberstatus External ads are OFF for members 💖
+
+
+    include breaker-unit.pug
+
+
+    //- header-unit 
+    include header-blog.pug
+
+    include siloah.pug
+
+
+    .container
+      .article-body-section.grid-center
+        .col-8_md-8_sm-11
+          include:markdown-it(html='true' typographer='true' linkify) ../md/blog1.md
+        .col-4_md-3_sm-12.vbreak
+          .author-profile
+          
+            //h4 Meet the author
+            img.avatar(src='images/authors/author-rachel_andrew_thumb.png')
+            h5 Rachel Andrew
+            ul.hzlist
+              li 
+                a(href="#"  title="My Twitter")
+                  svg(viewBox='0 0 24 24', class="util-icon" )
+                    use(href='#icon-tw')
+              li 
+                a(href="#"  title="My Medium")
+                  svg(viewBox='0 0 24 24', class="util-icon" )
+                    use(href='#icon-md')
+              li 
+                a(href="#"  title="My CodePen")
+                  svg(viewBox='0 0 24 24', class="util-icon" )
+                    use(href='#icon-codepen', x='0', y='0')
+            
+            p Rachel Andrew is a tech entrepreneur, community builder, writer, and advisor. She is the founder of Indie Labs (which produces IndieConf), CloudPeeps freelance marketplace, The Fetch city guides, and Atto Accelerator for female founders. She recently left Silicon Valley and now lives in a small Australian country town. Follow her on Twitter.
+
+
+            #component-300x600.component.component-300x600.md-hidden
+              .flag
+              include fallback-300x600-A
+            .component.component-120x600.sm-hidden.md-only
+              img(src="images/ad-sizes/amex-skyscraper-ad-example.gif")
+
+          
+
+            .booklist
+              h5 Popular Books
+              ul
+                li 
+                  a.minor(href="#")
+                    img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/34dcc72f-800f-4332-ab0c-31f0c4c4aad7.png') 
+                    | PHP &amp; MySQL: Novice to Ninja, 6th Edition
+                li
+                  a.minor(href="#") 
+                    img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/b2c2ec59-ad9f-472f-8808-3e79355b600d_medium.png') 
+                    | HTML5 Games: Novice to Ninja
+                li 
+                  a.minor(href='#')
+                    img.cover(src='https://d2sis3lil8ndrq.cloudfront.net/books/ee3c684b-45e4-468a-9b7a-b2c53313f324_medium.png')
+                    | The Python Apprentice
+
+            .footer-mobile-wrapper.sm-only
+              .component-320x100
+                img(src="https://texturefabrik.files.wordpress.com/2018/04/320x100-banner.jpg")
+
+
+    include icons-lib.pug
+
+    include footer-blog.pug

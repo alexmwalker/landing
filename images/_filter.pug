@@ -1,0 +1,10 @@
+filter#slight-texture(xmlns='http://www.w3.org/2000/svg', width='200%', height='200%', x='-50%', y='-50%', filterUnits='objectBoundingBox')
+  feturbulence(baseFrequency='4.5', numOctaves='3', result='turb', seed='20')
+  fedisplacementmap(in='SourceGraphic', in2='turb', scale='2', xChannelSelector='A', yChannelSelector='B')
+
+filter#spray(xmlns='http://www.w3.org/2000/svg', width='200%', height='200%', x='-50%', y='-50%', filterUnits='objectBoundingBox')
+  feturbulence(baseFrequency='1.5', numOctaves='2', result='turb', seed='10')
+  fedisplacementmap(in='SourceGraphic', in2='turb', scale='15', xChannelSelector='A', yChannelSelector='B')
+
+filter#shadow3
+  fedropshadow(dx='-0.8', dy='-0.8', stddeviation='0', flood-color='pink', flood-opacity='0.5')

@@ -1,7 +1,4 @@
 <svg id="art1" viewBox="0 0 1000 610" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        svg{margin:0;font-family:Barlow,Helvetica,&apos;Helvetica Neue&apos;,sans-serif;font-size:8px}g{isolation:isolate}
-    </style>
     <!--DEFS-->
     <defs>
         <symbol id="icon-pencil2" viewBox="0 0 16 16">
@@ -1287,22 +1284,10 @@
         <pattern id="pattern-paper" patternUnits="userSpaceOnUse" width="100" height="100">
             <image href="../images/paper.jpg" x="0" y="0" width="100" height="100"/>
         </pattern>
-        <filter xmlns="http://www.w3.org/2000/svg" id="slight-texture" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox">
-            <feTurbulence baseFrequency="4.5" numOctaves="3" result="turb" seed="20"/>
-            <feDisplacementMap in="SourceGraphic" in2="turb" scale="2" xChannelSelector="A" yChannelSelector="B"/>
-        </filter>
-        <filter xmlns="http://www.w3.org/2000/svg" id="spray" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox">
-            <feTurbulence baseFrequency="1.5" numOctaves="2" result="turb" seed="10"/>
-            <feDisplacementMap in="SourceGraphic" in2="turb" scale="15" xChannelSelector="A" yChannelSelector="B"/>
-        </filter>
-        <style>
-            .base{filter:url(#spray)}
-        </style>
     </defs>
-    <rect width="1000" height="610" x="0" y="0" fill="rgba(255, 200, 255, .2)"/>
+    <rect width="1000" height="610" x="0" y="0" fill="rgba(0, 0, 0, 0)"/>
     <svg x="300" y="140" width="500" height="500" viewbox="0 0 500 500" style="fill:rbga(255,45,100,.5)">
-        <circle class="base" cx="200" cy="200" r="170" stroke="#556677" stroke-width="20px" fill="hsl(544, 52%, 75%)" style="fill-opacity:.4"/>
-        <use class="base" href="#icon-laptop" x="22%" y="-10%" fill="rgba(255,255,255,.5)" width="180"/>
-        <use href="#icon-laptop" x="23%" y="-9%" fill="rgba(0,0,0,0)" width="180" style="filter:url(#slight-texture);stroke-width:.05px;stroke:rgba(0,0,0,.2)"/>
+        <circle cx="200" cy="200" r="170" fill="hsl(544, 52%, 75%)" style="transform-origin:50% 50%;fill-opacity:.4"/>
+        <use href="#icon-laptop" x="22%" y="-10%" fill="rgba(0,0,0,.2)" width="180"/>
     </svg>
 </svg>

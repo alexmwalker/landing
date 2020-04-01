@@ -1,0 +1,72 @@
+svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
+ defs
+  style.
+   svg {
+   margin: 0;
+   font-family: Barlow, Helvetica, 'Helvetica Neue', sans-serif;
+   font-size: 8px;
+   }
+   .icon {
+    display: none;
+    }
+   .icon:target {
+    display: inline;             
+   }
+   .base{
+    /*filter: url(#spray);*/
+    fill: rgba(255,255,255,.15);
+    transform-origin: 50% 50%;
+    transform: rotate(24deg);
+    }
+   .keyline{
+    /*filter: url(#slight-texture);*/
+    stroke: rgba(0,255,255,.225);
+    fill: none;
+    stroke-width: 0;
+    transform-origin: 50% 50%;
+   }
+    /* DEFS */
+  
+  include _main.pug
+
+
+  //include _symbols.pug
+
+  //include _patterns.pug
+
+  //include _filter.pug
+      
+
+ rect(width='1000', height='610', x='0', y='0', fill='rgba(0, 0, 0, .15)')
+ svg(x='300', y='140', width='500', height='500', viewBox='0 0 500 500', style='fill:rbga(255,45,100,.5)')
+   circle.base(cx='200', cy='200', r='170', fill='hsl(544, 52%, 75%)', style='fill-opacity:0.6')
+   g#programming.icon
+    use.base(href='#icon-laptop', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-laptop', x='22%', y='-10%',  width='180')
+   g#design.icon
+    use.base(href='#icon-quill', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-quill', x='22%', y='-10%',  width='180')
+   g#web.icon
+    use.base(href='#icon-sphere', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-sphere', x='22%', y='-10%',  width='180')
+   g#javascript.icon
+    use.base(href='#icon-rocket', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-rocket', x='22%', y='-10%',  width='180')
+   g#mobile.icon
+    use.base(href='#icon-mobile', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-mobile', x='22%', y='-10%',  width='180')
+   g#entrepreneur.icon
+    use.base(href='#icon-stats-bars', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-stats-bars', x='22%', y='-10%',  width='180')
+   g#blogs.icon
+    use.base(href='#icon-pen', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-pen', x='22%', y='-10%',  width='180')
+   g#wordpress.icon
+    use.base(href='#icon-bullhorn', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-bullhorn', x='22%', y='-10%',  width='180')
+   g#html5.icon
+    use.base(href='#icon-html5', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-html5', x='22%', y='-10%',  width='180')
+   g#css3.icon
+    use.base(href='#icon-css3', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-css3', x='22%', y='-10%',  width='180')

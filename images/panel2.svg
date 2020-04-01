@@ -1,0 +1,51 @@
+<svg id="art1" viewBox="0 0 1000 610" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <symbol id="icon-pencil2" viewBox="0 0 16 16">
+            <title>
+                pencil2
+            </title>
+            <path class="path1" d="M6 10l2-1 7-7-1-1-7 7-1 2zM4.52 13.548c-0.494-1.043-1.026-1.574-2.069-2.069l1.548-4.262 2-1.217 6-6h-3l-6 6-3 10 10-3 6-6v-3l-6 6-1.217 2z"/>
+        </symbol>
+        <symbol id="icon-quill" viewBox="0 0 16 16">
+            <title>
+                quill
+            </title>
+            <path class="path1" d="M0 16c2-6 7.234-16 16-16-4.109 3.297-6 11-9 11s-3 0-3 0l-3 5h-1z"/>
+        </symbol>
+        <symbol id="icon-pen" viewBox="0 0 16 16">
+            <title>
+                pen
+            </title>
+            <path class="path1" d="M15.909 4.561l-4.47-4.47c-0.146-0.146-0.338-0.113-0.427 0.073l-0.599 1.248 4.175 4.175 1.248-0.599c0.186-0.089 0.219-0.282 0.073-0.427z"/>
+            <path class="path2" d="M9.615 2.115l-4.115 0.343c-0.273 0.034-0.501 0.092-0.58 0.449-0 0-0 0.001-0 0.001-1.116 5.36-4.92 10.591-4.92 10.591l0.896 0.896 4.25-4.25c-0.094-0.196-0.146-0.415-0.146-0.647 0-0.828 0.672-1.5 1.5-1.5s1.5 0.672 1.5 1.5-0.672 1.5-1.5 1.5c-0.232 0-0.451-0.053-0.647-0.146l-4.25 4.25 0.896 0.896c0 0 5.231-3.804 10.591-4.92 0-0 0.001-0 0.001-0 0.357-0.078 0.415-0.306 0.449-0.58l0.343-4.115-4.269-4.269z"/>
+        </symbol>
+        <symbol id="icon-eyedropper" viewBox="0 0 16 16">
+            <title>
+                eyedropper
+            </title>
+            <path class="path1" d="M15.414 0.586c-0.781-0.781-2.047-0.781-2.828 0l-2.689 2.689-1.896-1.896-2.121 2.121 1.663 1.663-7.377 7.377c-0.126 0.126-0.179 0.296-0.161 0.46h-0.004v2.5c0 0.276 0.224 0.5 0.5 0.5h2.5c0 0 0.042 0 0.063 0 0.144 0 0.288-0.055 0.398-0.165l7.377-7.377 1.663 1.663 2.121-2.121-1.896-1.896 2.689-2.689c0.781-0.781 0.781-2.047 0-2.828zM2.705 15h-1.705v-1.705l7.337-7.337 1.704 1.704-7.337 7.337z"/>
+        </symbol>
+        <symbol id="icon-laptop" viewBox="0 0 16 16">
+            <title>
+                laptop
+            </title>
+            <path class="path1" d="M14 11v-8c0-0.55-0.45-1-1-1h-10c-0.55 0-1 0.45-1 1v8h-2v3h16v-3h-2zM10 13h-4v-1h4v1zM13 11h-10v-7.998c0.001-0.001 0.001-0.001 0.002-0.002h9.996c0.001 0.001 0.001 0.001 0.002 0.002v7.998z"/>
+        </symbol>
+        <filter id="linear">
+            <feColorMatrix type="matrix" values="1 0 0 0 0
+              0 1 0 0 0
+              -0.2 0.2 0.1 0.4 0
+              0 0 0 1 0 "/>
+        </filter>
+        <!--hueRotate-->
+        <filter id="colorMeHueRotate">
+            <feColorMatrix in="SourceGraphic" type="hueRotate" values="270"/>
+        </filter>
+        
+    </defs>
+    <rect width="1000" height="610" x="0" y="0" fill="rgba(1,151,13,0.5)"/>
+    <svg x="300" y="140" width="500" height="500" viewbox="0 0 500 500" style="fill:rbga(255,45,100,.5)">
+        <circle cx="200" cy="200" r="170" fill="#00" style="fill-opacity:.4;" filter="url(#colorMeHueRotate)"/>
+        <use href="#icon-laptop" x="22%" y="-10%" fill="rgba(0,0,0,.5)" width="180"/>
+    </svg>
+</svg>
