@@ -6,21 +6,19 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
    font-family: Barlow, Helvetica, 'Helvetica Neue', sans-serif;
    font-size: 8px;
    }
-   g {
-    display:inline;  
-    outline: 1px green dashed;  
-    }
-   g:not(:target) {
-    display: none;      
-    outline: 1px red dashed;       
-    }
+
    g.icon {
     display: none;
     }
    g.icon:target {
     display: inline;             
    }
-   
+   g.icon:target ~  g.icon:last-child{
+    display: none;            
+   }
+   g.default {
+    display:inline;  
+    }
    .base{
     /*filter: url(#spray);*/
     fill: rgba(255,255,255,.15);
@@ -79,9 +77,12 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
    g#php.icon
     use.base(href='#icon-php', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-php', x='22%', y='-10%',  width='180')
+   g#ruby.icon
+    use.base(href='#icon-ruby', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-ruby', x='22%', y='-10%',  width='180')
    g#blogs.icon
     use.base(href='#icon-quotes-right', x='22%', y='-10%', width='180')
-    use.keyline(href='#icon-pen', x='22%', y='-10%',  width='180')
+    use.keyline(href='#icon-quotes-right', x='22%', y='-10%',  width='180')
    g#wordpress.icon
     use.base(href='#icon-bullhorn', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-bullhorn', x='22%', y='-10%',  width='180')
@@ -94,7 +95,12 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
    g#css.icon
     use.base(href='#icon-css3', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-css3', x='22%', y='-10%',  width='180')
-   g
+   g#bitbucket.icon
+    use.base(href='#icon-bitbucket', x='22%', y='-10%', width='180')
+    use.keyline(href='#icon-bitbucket', x='22%', y='-10%',  width='180')
+
+   // ALWAYS!! put the following icon last as it's the fallback default
+   g.icon.default 
     use.base(href='#icon-sphere', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-sphere', x='22%', y='-10%',  width='180')
     

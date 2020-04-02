@@ -7,21 +7,19 @@
       font-family: Barlow, Helvetica, 'Helvetica Neue', sans-serif;
       font-size: 8px;
       }
-      g {
-       display:inline;  
-       outline: 1px green dashed;  
-       }
-      g:not(:target) {
-       display: none;      
-       outline: 1px red dashed;       
-       }
+      
       g.icon {
        display: none;
        }
       g.icon:target {
        display: inline;             
       }
-      
+      g.icon:target ~  g.icon:last-child{
+       display: none;            
+      }
+      g.default {
+       display:inline;  
+       }
       .base{
        /*filter: url(#spray);*/
        fill: rgba(255,255,255,.15);
@@ -119,7 +117,17 @@
     </symbol>
     <symbol id="icon-php" viewBox="0 0 16 16">
       <title>php</title>
-      <path fill-rule="evenodd" d="M5.86 9.86l1.06-5.38h1.26l-.26 1.4h1.2c1.06.06 1.45.6 1.32 1.26l-.46 2.72H8.65L9.1 7.4c.07-.33.07-.53-.4-.53h-.99l-.6 2.99H5.86zM1 11.26l1.06-5.38h2.46c1.06.06 1.59.6 1.59 1.52 0 1.6-1.26 2.52-2.39 2.46h-1.2l-.26 1.4H1zm1.8-2.4l.32-1.99H4c.46 0 .8.2.8.6-.07 1.13-.6 1.33-1.2 1.4h-.8zm8.15-2.98L9.9 11.25h1.26l.27-1.4h1.2C13.73 9.93 15 9 15 7.4c0-.93-.53-1.46-1.6-1.52h-2.45zm1.06 1l-.33 1.98h.8c.6-.06 1.13-.26 1.2-1.4 0-.39-.34-.59-.8-.59H12z" clip-rule="evenodd"></path>
+      <path fill-rule="evenodd" d="M5.557 10.142L6.77 4h1.44l-.302 1.592h1.365c1.213.076 1.668.683 1.516 1.441l-.53 3.11H8.741l.53-2.807c.076-.379.076-.606-.454-.606H7.68l-.682 3.412H5.557zM0 11.735l1.213-6.143H4.02c1.213.076 1.82.683 1.82 1.745 0 1.82-1.44 2.881-2.73 2.805H1.744l-.303 1.593H0zm2.047-2.73l.38-2.275h.985c.531 0 .91.227.91.682-.076 1.29-.682 1.517-1.365 1.593h-.91zm9.327-3.413l-1.213 6.143h1.44l.304-1.593h1.365c1.29.076 2.73-.986 2.73-2.805 0-1.062-.607-1.669-1.82-1.745h-2.806zm1.214 1.138l-.38 2.275h.91c.683-.076 1.29-.304 1.365-1.593 0-.455-.379-.682-.91-.682h-.985z"></path>
+    </symbol>
+    <symbol id="icon-ruby" viewBox="0 0 16 16">
+      <title>ruby</title>
+      <path d="M13.101 3H2.9L0 6.77 8 14l8-7.23L13.101 3zm-2.054 4.044l-3.046 5.843-3.02-5.843h6.066zm-5.785-.622L8 3.75l2.738 2.67H5.262zm3.508-2.8h3.704l-1.046 2.594L8.77 3.622zM4.612 6.176l-.873-2.554H7.23L4.612 6.176zm-.345.868l2.652 5.13-5.678-5.13h3.026zm7.496 0h2.996l-5.665 5.119 2.669-5.12zm.268-.622l.999-2.479 1.905 2.479H12.03zM3.113 3.757l.91 2.665H1.066l2.048-2.665z"></path>
+    </symbol>
+    <symbol id="icon-bitbucket" viewBox="0 0 16 16">
+      <title>bitbucket</title>
+      <path d="M9.094 7.712c0 .597-.49 1.08-1.094 1.08a1.087 1.087 0 01-1.094-1.08c0-.597.49-1.081 1.094-1.081.604 0 1.094.484 1.094 1.08z"></path>
+      <path fill-rule="evenodd" d="M15 2.306c0 .06-.007.12-.02.178l.02.002-1.436 7.394c-1.288.962-3.286 1.58-5.528 1.58-2.3 0-4.341-.65-5.625-1.655l-1.357-7.21A.81.81 0 011 2.306C1 1.033 4.134 0 8 0s7 1.033 7 2.306zm-2.406-.252c0 .577-2.073 1.045-4.63 1.045-2.558 0-4.63-.468-4.63-1.045S5.405 1.01 7.963 1.01c2.557 0 4.63.468 4.63 1.045zM8 9.874c1.208 0 2.188-.968 2.188-2.162S9.207 5.55 8 5.55c-1.208 0-2.188.968-2.188 2.162S6.793 9.874 8 9.874z"></path>
+      <path d="M2.657 11.115l.567 3.011C3.224 15.141 5.382 16 8 16s4.74-.859 4.74-1.874l.57-2.938c-1.289.874-3.174 1.425-5.274 1.425-2.157 0-4.088-.582-5.379-1.498z"></path>
     </symbol>
     <!--include _symbols.pug-->
     <!--include _patterns.pug-->
@@ -164,9 +172,13 @@
       <use class="base" href="#icon-php" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-php" x="22%" y="-10%" width="180"></use>
     </g>
+    <g class="icon" id="ruby">
+      <use class="base" href="#icon-ruby" x="22%" y="-10%" width="180"></use>
+      <use class="keyline" href="#icon-ruby" x="22%" y="-10%" width="180"></use>
+    </g>
     <g class="icon" id="blogs">
       <use class="base" href="#icon-quotes-right" x="22%" y="-10%" width="180"></use>
-      <use class="keyline" href="#icon-pen" x="22%" y="-10%" width="180"></use>
+      <use class="keyline" href="#icon-quotes-right" x="22%" y="-10%" width="180"></use>
     </g>
     <g class="icon" id="wordpress">
       <use class="base" href="#icon-bullhorn" x="22%" y="-10%" width="180"></use>
@@ -184,7 +196,12 @@
       <use class="base" href="#icon-css3" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-css3" x="22%" y="-10%" width="180"></use>
     </g>
-    <g>
+    <g class="icon" id="bitbucket">
+      <use class="base" href="#icon-bitbucket" x="22%" y="-10%" width="180"></use>
+      <use class="keyline" href="#icon-bitbucket" x="22%" y="-10%" width="180"></use>
+    </g>
+    <!-- ALWAYS!! put the following icon last as it's the fallback default-->
+    <g class="icon default"> 
       <use class="base" href="#icon-sphere" x="22%" y="-10%" width="180"></use>
       <use class="keyline" href="#icon-sphere" x="22%" y="-10%" width="180"></use>
     </g>
