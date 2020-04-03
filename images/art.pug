@@ -6,34 +6,33 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
    font-family: Barlow, Helvetica, 'Helvetica Neue', sans-serif;
    font-size: 8px;
    }
-
    g.icon {
-    display: none;
-    }
-   g.icon:target {
-    display: inline;             
+   display: none;
    }
-   g.icon:target ~  g.icon:last-child{
-    display: none;            
+   g.icon:target {
+   display: inline;
+   }
+   g.icon:target ~ g.icon:last-child{
+   display: none;
    }
    g.default {
-    display:inline;  
-    }
-   .base{
-    /*filter: url(#spray);*/
-    fill: rgba(255,255,255,.15);
-    fill: rgba(0,0,0,.15);
-    transform-origin: 50% 50%;
-    transform: rotate(24deg);
-    }
-   .keyline{
-    /*filter: url(#slight-texture);*/
-    stroke: rgba(255,255,255,0.25);
-    fill: none;
-    stroke-width: 0;
-    transform-origin: 50% 50%;
-    transform: rotate(24deg);
+   display:inline;
    }
+   .base{
+   fill: rgba(255,255,255,.15);
+   fill: rgba(0,0,0,.15);
+   transform-origin: 50% 50%;
+   transform: rotate(24deg);
+   }
+   .keyline{
+   stroke: rgba(255,255,255,0.25);
+   fill: none;
+   stroke-width: 0;
+   transform-origin: 50% 50%;
+   transform: rotate(24deg);
+   }
+
+   
     /* DEFS */
   
   include _main.pug
@@ -50,9 +49,6 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
  svg(x='300', y='140', width='500', height='500', viewBox='0 0 500 500')
    circle.base(cx='200', cy='200', r='170')
 
-   // g#web.default
-     use.base(href='#icon-sphere', x='22%', y='-10%', width='180')
-     use.keyline(href='#icon-sphere', x='22%', y='-10%',  width='180')
    g#programming.icon
     use.base(href='#icon-laptop', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-laptop', x='22%', y='-10%',  width='180')
@@ -99,9 +95,8 @@ svg#art1(viewBox='0 0 1000 610', xmlns='http://www.w3.org/2000/svg')
     use.base(href='#icon-bitbucket', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-bitbucket', x='22%', y='-10%',  width='180')
 
-   // ALWAYS!! put the following icon last as it's the fallback default
+   // ALWAYS!! put the following icon last as it is the fallback default
    g.icon.default 
     use.base(href='#icon-sphere', x='22%', y='-10%', width='180')
     use.keyline(href='#icon-sphere', x='22%', y='-10%',  width='180')
     
-//html-css, html, css, javascript, mobile, design-ux, design, ux, entrepreneur, web, php, ruby, woorank, wordpress, bitbucket, developer-center, java, blogs 
