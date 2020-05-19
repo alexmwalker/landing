@@ -11,33 +11,6 @@
   <body class="vr -labelling -borders">
     <div class="horizon"><span class="message">🔥 Get <strong>3 months </strong>access to 400+ books and courses for <strong class="underline">$3/m! </strong>
         <button class="access">Access now</button></span></div>
-    <div class="book-download"> 
-      <div class="book-download-body grid-center"> 
-        <div id="closeit">
-          <input type="checkbox" name="closeit" value="closeit"/>
-        </div>
-        <div class="col-3"> 
-          <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/4c7f6303-60e8-45dc-a95b-aae08a4f32a3.png"/></div>
-        </div>
-        <div class="col-9">
-          <h3>FREE Interactive JavaScript Book</h3><span>* Valued at $11.95 on Amazon. Your's free!</span>
-          <form class="grid-center-noGutter">           
-            <div class="col-4"> 
-              <input name="name" type="text" value="" placeholder="Name"/>
-            </div>
-            <div class="col-4">
-              <input name="email" type="text" value="" placeholder="your@email.com"/>
-            </div>
-            <div class="col-4"> 
-              <button class="access" type="submit" value="Submit">Submit</button>
-            </div>
-          </form>
-        </div>
-        <div class="col-12 terms">
-          <p class="small">This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy </a>and <a href="#">Terms of Service </a>apply</p>
-        </div>
-      </div>
-    </div>
     <header class="sitepoint-branding">
       <div class="grid-center container"> 
         <div class="col-4_md-2_sm-6">
@@ -273,6 +246,28 @@
         </div>
       </div>
     </div>
+    <div id="book-download"> 
+      <div class="book-download-body grid-center"> <a id="closeit" href="#0"> </a>
+        <div class="col-3"> 
+          <div class="frame"><img class="cover" src="https://d2sis3lil8ndrq.cloudfront.net/books/4c7f6303-60e8-45dc-a95b-aae08a4f32a3.png"/></div>
+        </div>
+        <div class="col-9 terms">
+          <h3>FREE JavaScript Book</h3><span class="tagline">* Valued at $11.95 on Amazon. Your's free!</span>
+          <form class="grid-center-noGutter">           
+            <div class="col-4"> 
+              <input name="name" type="text" value="" placeholder="Name"/>
+            </div>
+            <div class="col-4">
+              <input name="email" type="text" value="" placeholder="your@email.com"/>
+            </div>
+            <div class="col-4"> 
+              <button class="access" type="submit" value="Submit">Submit</button>
+            </div>
+          </form>
+          <p class="small">This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy </a>and <a href="#">Terms of Service </a>apply.</p>
+        </div>
+      </div>
+    </div>
   </body>
   <svg width="0" height="0" fill="none">
     <!-- SVG Symbol Sheet //-->
@@ -359,6 +354,6 @@
   </footer>
   <!--include svg-icons.pug-->
   <!--* script(src="https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js", type="text/javascript")-->
-  <!--* script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="scripts/roller.js"></script>
 </html>

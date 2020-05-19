@@ -207,6 +207,8 @@ window.addEventListener('scroll', function() {
 });
 
 
+
+
 window.addEventListener('resize', measureAndSetup);
 
 //window.onresize = reportWindowSize;
@@ -216,5 +218,10 @@ window.addEventListener('resize', measureAndSetup);
 
 
 
-
+function hideShowBookDL(){
+  $( "a#closeit" ).click(function() {
+    $( "#book-download" ).toggleClass( "minimize", 1000, "easeOutSine" );
+  });
+}
+hideShowBookDL();
 

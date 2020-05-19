@@ -2458,46 +2458,54 @@ button.access:hover {
   transition: all 0.3s;
 }
 
-.book-download {
+/* MINIMIZED Book downloader */
+#book-download {
   width: 100%;
   position: fixed;
   background: #333333;
   color: #fff;
   padding: calc(var(--baseline) * 1) 0 0;
-  left: 0px;
+  right: 0;
   bottom: 0;
   -webkit-box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.25);
           box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.25);
   z-index: 9;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
-.book-download a:link {
+#book-download a:link {
   color: #28CBC2;
 }
-.book-download .book-download-body {
+#book-download .book-download-body {
   width: 50%;
   margin: 0 auto;
   position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
-.book-download .book-download-body #closeit {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 32a16 16 0 100-32 16 16 0 000 32zm5-24.8l3.8 3.8-5 5 5 5-3.8 3.8-5-5-5 5L7.2 21l5-5-5-5L11 7.2l5 5 5-5z' fill='%23C4C4C4'/%3E%3C/svg%3E");
+#book-download .book-download-body h3 {
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#book-download .book-download-body a#closeit {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 22 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.3 3.7c.4-.4.4-.9 0-1.2L19.1.3a.8.8 0 00-1.2 0l-7.1 7-7.1-7a.8.8 0 00-1.2 0L.3 2.5c-.4.3-.4.8 0 1.2l9.9 9.9c.3.3.9.3 1.2 0l10-10z' fill='%23fff'/%3E%3C/svg%3E");
   background-size: 100% 100%;
-  width: calc(var(--baseline) / 1);
-  height: calc(var(--baseline) / 1);
+  width: calc(var(--baseline) / 1.5);
+  height: calc(var(--baseline) / 1.5);
   position: absolute;
   right: calc(var(--baseline) * -2);
-  top: calc(var(--baseline) / -2);
+  top: 0.3rem;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
-.book-download .book-download-body #closeit input {
-  width: calc(var(--baseline) / 1);
-  height: calc(var(--baseline) / 1);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-.book-download .book-download-body form {
+#book-download .book-download-body form {
   margin: calc(var(--baseline) / 2) 0 0;
 }
-.book-download .book-download-body input[type=text] {
+#book-download .book-download-body input[type=text] {
   font-size: 1rem;
   font-weight: 300;
   width: 95%;
@@ -2505,16 +2513,19 @@ button.access:hover {
   line-height: calc(var(--baseline) / 1);
   height: calc(var(--baseline) / 1);
 }
-.book-download .book-download-body .frame {
+#book-download .book-download-body .frame {
   width: 100%;
   position: relative;
   -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
 }
-.book-download .book-download-body .frame img {
+#book-download .book-download-body .frame img {
   width: 100%;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
-.book-download .book-download-body .frame:after {
+#book-download .book-download-body .frame:after {
   display: block;
   position: absolute;
   content: "";
@@ -2529,9 +2540,63 @@ button.access:hover {
 }
 
 .terms p {
-  line-height: calc(var(--baseline) * 2);
+  line-height: calc(var(--baseline) /2);
+  color: #999;
   text-align: center;
-  margin: 0;
+  margin: calc(var(--baseline) /2) 0;
+  font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
+}
+
+/* MINIMIZED Book downloader */
+#book-download.minimize {
+  width: 100%;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#book-download.minimize .book-download-body {
+  width: 30%;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+  overflow: hidden;
+  float: right;
+  height: calc(var(--baseline) /1);
+  margin-bottom: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#book-download.minimize .book-download-body h3 {
+  font-size: calc(1rem / var(--typescale));
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#book-download.minimize .book-download-body a#closeit {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  right: calc(var(--baseline) * 1);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#book-download.minimize .book-download-body .frame {
+  -webkit-transform: translatey(0.2rem) rotate(-5deg);
+      -ms-transform: translatey(0.2rem) rotate(-5deg);
+          transform: translatey(0.2rem) rotate(-5deg);
+}
+#book-download.minimize form.grid-center-noGutter, #book-download.minimize p.small, #book-download.minimize span.tagline {
+  overflow: hidden;
+  -webkit-transform: scale(0.05);
+      -ms-transform: scale(0.05);
+          transform: scale(0.05);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .component {

@@ -1,13 +1,12 @@
-.book-download 
+#book-download 
   .book-download-body.grid-center 
-    #closeit
-      input(type='checkbox', name='closeit', value='closeit')
+    a#closeit(href='#0')  
     .col-3 
       .frame
         img.cover(src="https://d2sis3lil8ndrq.cloudfront.net/books/4c7f6303-60e8-45dc-a95b-aae08a4f32a3.png") 
-    .col-9
-      h3 FREE Interactive JavaScript Book
-      span * Valued at $11.95 on Amazon. Your's free!
+    .col-9.terms
+      h3 FREE JavaScript Book
+      span.tagline * Valued at $11.95 on Amazon. Your's free!
       form.grid-center-noGutter            
         .col-4 
           input(name='name', type='text', value='', placeholder="Name")
@@ -15,9 +14,9 @@
           input(name='email', type='text', value='', placeholder="your@email.com")
         .col-4 
           button(type='submit', value='Submit', class="access") Submit
-    .col-12.terms
       p.small This site is protected by reCAPTCHA and the Google 
         a(href="#") Privacy Policy 
         | and 
         a(href="#") Terms of Service 
-        | apply
+        | apply.
+
