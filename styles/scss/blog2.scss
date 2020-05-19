@@ -9,11 +9,11 @@ $b-rad: 6px;
 
 
 @import 'header-blog';
-
+@import 'horizon';
 @import 'adsizes';
 @import 'bookcards1';
 //@import 'article-title-unit';
-@import '_siloah';
+@import '_siloah'; // matching siloah's layout CSS
 @import 'article-body-unit';
 @import 'about-us';
 
