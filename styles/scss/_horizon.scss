@@ -56,26 +56,32 @@ transition: all .3s;
   }
 }
 
-/* MINIMIZED Book downloader */
+/*  Book downloader */
 #book-download{
-  width: 100%;
+  //width: 100%;
   position: fixed;
   background: #333333;
   color: #fff;
-  padding: calc(var(--baseline) * 1) 0 0;
-  right: 0;
+  padding: calc(var(--baseline) /2) 0 ;
+  left: 0;
   bottom: 0;
   box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.25);
   z-index: 9;
   transition: $transition;
   a:link{
-  color:#28CBC2;
+    color:#28CBC2;
+  }
+  form.grid-center-noGutter, span.tagline{
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+    transition: $transition;
   }
  .book-download-body{
-    width: 50%;
-    margin: 0 auto;
+    //width: 50%;
+    margin: 0 auto ;
     position: relative;
     transition: $transition;
+    //outline: 1px red dashed;
     h3{
       transition: $transition;
     }
@@ -102,7 +108,8 @@ transition: all .3s;
    }
   
   .frame{
-   width: 100%;
+   width: 80%;
+   float:right;
    position: relative;
    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
    img{
@@ -126,13 +133,7 @@ transition: all .3s;
  }
 
 }
-.terms p{
- line-height: calc(var(--baseline) /2);
- color:#999;
- text-align: center;
- margin: calc(var(--baseline) /2) 0;
- font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
-}
+
 /* MINIMIZED Book downloader */
 
 #book-download.minimize{
@@ -143,26 +144,24 @@ transition: all .3s;
     width: 30%;
     transition: all .6s;
     overflow: hidden;
-    float: right;
     height: calc(var(--baseline) /1);
     margin-bottom: 0;
     transition: $transition;
-    h3{
+    h3{ // scale down the heading
       font-size:calc(1rem / var(--typescale));
       transition: $transition;
     }
-    a#closeit{
+    a#closeit{ // flip the chevron 180deg
       transform: rotate(180deg);
       right: calc(var(--baseline) * 1);
       transition: all .3s;
     }
     .frame{
-      transform: translatey(.2rem) rotate(-5deg) ;
+      transform: translatey(.2rem) rotate(-5deg) ; // give the book a jaunty angle
     }
   }
-  form.grid-center-noGutter, p.small, span.tagline{
-    overflow: hidden;
-    transform: scale(.05);
+  form.grid-center-noGutter, span.tagline{
+    transform: scale3d(0, 0, 0);
     opacity: 0;
     transition: $transition;
   }

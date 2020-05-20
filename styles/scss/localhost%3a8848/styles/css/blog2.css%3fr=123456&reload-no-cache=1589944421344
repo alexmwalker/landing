@@ -2555,7 +2555,7 @@ button.access:hover {
   transition: all 0.3s ease-out;
 }
 #book-download.minimize .book-download-body {
-  width: 30%;
+  width: 0%;
   -webkit-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
