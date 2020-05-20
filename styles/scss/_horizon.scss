@@ -10,7 +10,8 @@ $transition: all .3s ease-out;
  background-position: left bottom, center center;
  animation: sheen 12s infinite;
  margin: calc(var(--baseline) * 0) 0 ;
- line-height: calc(var(--baseline) * 2 );
+ line-height: calc(var(--baseline) * 1 );
+ padding: calc(var(--baseline) /2 ) 0;
  color: #fff;
  text-align: center;
 }
@@ -58,7 +59,7 @@ transition: all .3s;
 
 /*  Book downloader */
 #book-download{
-  //width: 100%;
+  width: 100%;
   position: fixed;
   background: #333333;
   color: #fff;
@@ -77,12 +78,13 @@ transition: all .3s;
     transition: $transition;
   }
  .book-download-body{
-    //width: 50%;
+    //width: 40%;
     margin: 0 auto ;
     position: relative;
     transition: $transition;
     //outline: 1px red dashed;
     h3{
+      position: relative;
       transition: $transition;
     }
   a#closeit{
@@ -91,7 +93,7 @@ transition: all .3s;
     width: calc(var(--baseline) / 1.5);
     height: calc(var(--baseline) / 1.5);
     position: absolute;
-    right: calc(var(--baseline) * -2);
+    right: 0;
     top: .3rem;
     transition: all .3s;
   }
@@ -137,11 +139,10 @@ transition: all .3s;
 /* MINIMIZED Book downloader */
 
 #book-download.minimize{
-  width: 100%;
   padding: 0;
+  align-items:  flex-end ;
   transition: $transition;
   .book-download-body{
-    width: 30%;
     transition: all .6s;
     overflow: hidden;
     height: calc(var(--baseline) /1);
@@ -149,13 +150,17 @@ transition: all .3s;
     transition: $transition;
     h3{ // scale down the heading
       font-size:calc(1rem / var(--typescale));
+      float: left;
+      padding-right: 4rem;
       transition: $transition;
     }
     a#closeit{ // flip the chevron 180deg
       transform: rotate(180deg);
-      right: calc(var(--baseline) * 1);
+      right:  calc(var(--baseline) / 1);
+      position: absolute;
+      top: 0;
       transition: all .3s;
-    }
+      }
     .frame{
       transform: translatey(.2rem) rotate(-5deg) ; // give the book a jaunty angle
     }
