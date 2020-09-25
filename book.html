@@ -220,9 +220,9 @@
             <pre></pre>
             <h3 class="breakbefore" id="preface-tips">Tips, Notes, and Warnings</h3>
             <div class="box tip">
-              <h4>Hey, You!</h4>
+              <h4>Pssst... Try this.</h4>
               <div class="body">
-                <p>Tips provide helpful little pointers.</p>
+                <p>Tips that provide helpful little pointers.</p>
               </div>
             </div>
             <div class="box note">
@@ -258,10 +258,7 @@
           </div>
           <div class="chapter grid-center-reverse" data-chapter-number="6">
             <div class="col-3_sm-12 ch-head">
-              <div class="chapter-head">
-                Chapter
-                                5
-              </div>
+              <div class="chapter-head">Chapter<span>5</span></div>
             </div>
             <div class="col-7_sm-12 chapter-start align-r">
               <h1 class="chaptertitle">The Card Component: A Complete Introduction</h1>
@@ -307,6 +304,14 @@
           <p>We can also use the class <code>.card-img-bottom</code> with the <code><img></code> tag to add the image at the bottom of the card:</p>
           <p class="image-wrapper"><img alt="Bootstrap card component: Adding the image at the bottom of the card" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518997006image-bottom.png"></p>
           <p>The card top and bottom images are called <a href="https://getbootstrap.com/docs/4.0/components/card/#image-caps" target="_blank">image caps</a>.</p>
+          <div class="box tip">
+            <h4>Always Declare Your Data Properties</h4>
+            <div class="body">
+              <p>
+                 It may be that some of the data you want to work with won’t be available to your instance when you initialize it (for example, if it’s loaded via an Ajax request). Vue requires you to declare all root-level keys up front, as they can’t be added dynamically later on.</p>
+              <p>It’s good practice to declare default values anyway, as you won’t run into errors trying to access non-existent properties, and it helps to document the data structure of your instance (or component, as we’ll see later).</p>
+            </div>
+          </div>
           <h2 id="controlling-bootstrap-card-component-width-and-height">Controlling Bootstrap Card Component Width and Height</h2>
           <p>By default, cards take all the available width in their parent container, but you can use the <code>width</code> and <code>max-width</code> classes to control take control of the card&apos;s dimensions. So, let&apos;s change the previous example by reducing the width of the card:</p>
           <p class="image-wrapper"><img alt="Bootstrap card component: Reducing card width" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518997200reduce-width-1024x277.png"></p>
@@ -331,6 +336,9 @@
           <p class="image-wrapper"><img alt="Bootstrap card component: Adding navigation pills" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518998670navigation-pills-1024x334.png"></p>
           <p>You can find out more information about this in the <a href="https://getbootstrap.com/docs/4.0/components/navs/" target="_blank">Bootstrap navigation components documentation</a>.</p>
           <h2 id="adding-links-to-the-bootstrap-card-component">Adding Links to the Bootstrap Card Component</h2>
+          <div class="anchor">
+            <div class="anchor-body"></div>
+          </div>
           <p>We can quickly add links inside cards using the <code>&lt;a&gt;</code> tag with a<code>.card-link</code> class:</p>
           <p class="image-wrapper"><img alt="Bootstrap card component: Adding links inside cards" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518998851adding-links-1024x160.png"></p>
           <h2 id="aligning-and-transforming-text-in-bootstrap-card-components">Aligning and Transforming Text in Bootstrap Card Components</h2>

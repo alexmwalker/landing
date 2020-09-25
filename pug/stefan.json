@@ -1,0 +1,515 @@
+{
+    "username": "Stefan",
+    "positioning": [
+      {
+        "name": "Front-end",
+        "percentage": 55.35714285714286
+      },
+      {
+        "name": "Back-end (JavaScript, PHP)",
+        "percentage": 14.285714285714285
+      },
+      {
+        "name": "Cloud Computing",
+        "percentage": 7.142857142857142
+      },
+      {
+        "name": "Databases",
+        "percentage": 7.142857142857142
+      },
+      {
+        "name": "Other",
+        "percentage": 16.071428571428584
+      }
+    ],
+    "blocks": [
+      {
+        "blockname": "Overall Formatting",
+        "checks": [
+          {
+            "name": "File Format",
+            "isgood": true,
+            "details": {
+              "fileext": ".pdf"
+            }
+          },
+          {
+            "name": "Resume Size",
+            "isgood": false,
+            "details": {
+              "amount": 3
+            }
+          },
+          {
+            "name": "Pictures and Graphics",
+            "isgood": true,
+            "details": {
+              "haspicture": false
+            }
+          }
+        ]
+      },
+      {
+        "blockname": "Personal Info",
+        "checks": [
+          {
+            "name": "Street Address",
+            "isgood": true,
+            "details": {
+              "hasaddress": false
+            }
+          },
+          {
+            "name": "Phone Number",
+            "isgood": true,
+            "details": {
+              "hastelephone": true
+            }
+          },
+          {
+            "name": "Online Presence",
+            "isgood": true,
+            "details": {
+              "amount": 2,
+              "foundlinks": [
+                {
+                  "domain": "github",
+                  "link": "https://github.com/steve-/"
+                },
+                {
+                  "domain": "linkedin",
+                  "link": "https://linkedin.com/in/stefan-milenkovic-920351113/"
+                }
+              ],
+              "notfoundlinks": [
+                "hackerrank",
+                "stackoverflow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "blockname": "Professional Summary",
+        "checks": [
+          {
+            "name": "Professional Summary/Objective",
+            "isgood": false,
+            "details": {
+              "foundblock": "The goal is to work on big and challenging projects, where my knowledge about computers and programming can grow and evolve. Programming is my dream job, and because of that, I really enjoy working with computers. The ultimate goal is (of course) my own IT company one day.\n"
+            }
+          }
+        ]
+      },
+      {
+        "blockname": "Work History",
+        "checks": [
+          {
+            "name": "Employment History",
+            "isgood": true,
+            "details": {
+              "correctorder": true
+            }
+          },
+          {
+            "name": "Accomplishments",
+            "isgood": false,
+            "details": {
+              "amount": 1,
+              "verbs": [
+                {
+                  "verb": "made",
+                  "tag": "VBD"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Action Verbs",
+            "isgood": false,
+            "details": {
+              "foundkeywords": [],
+              "notfoundkeywords": [
+                "Architected",
+                "Assembled",
+                "Automated",
+                "Built",
+                "Coded",
+                "Debugged",
+                "Designed",
+                "Developed",
+                "Devised",
+                "Engineered",
+                "Improved",
+                "Initiated",
+                "Investigated",
+                "Led",
+                "Maintained",
+                "Overhauled",
+                "Programmed",
+                "Re-engineered",
+                "Rebuilt",
+                "Redesigned",
+                "Reduced",
+                "Refactored",
+                "Resolved",
+                "Upgraded"
+              ]
+            }
+          },
+          {
+            "name": "Numbers",
+            "isgood": true,
+            "details": {
+              "amount": 3,
+              "measurablevalues": [
+                "Time: 1 year 4 months Tasks: Creating",
+                "Time: 2 years 10 months Tasks: Creating",
+                "Developer Company: Freelancer Time: 3 years 4 months Tasks: Creating"
+              ]
+            }
+          },
+          {
+            "name": "Bullet Points",
+            "isgood": true,
+            "details": {
+              "amount": 0,
+              "employmenthistory": []
+            }
+          },
+          {
+            "name": "The Length of Bullet Points",
+            "isgood": true,
+            "details": {
+              "amount": 0,
+              "employmenthistory": []
+            }
+          },
+          {
+            "name": "Personal Pronouns",
+            "isgood": true,
+            "details": {
+              "amount": 0,
+              "verbs": []
+            }
+          },
+          {
+            "name": "Your Old Projects",
+            "isgood": false,
+            "details": {
+              "amount": [
+                52
+              ],
+              "employmenthistory": [
+                {
+                  "orgname": "Unnamed",
+                  "description": "Position:    Front-end Developer\nCompany:  Freelancer\nTime:    3 years 4 months  -------\nTasks:\n     Creating Websites using CMS (WordPress, Custom made)\n     Creating HTML/CSS/JS Templates and Plugins\n     Giving support for all buyers of mine Templates and Plugins\n     Maintaining and improving existing Websites and Plugins\n     Implementing 3rd party software (Facebook, Twitter)\n     Working with GoDaddy",
+                  "start": "2012-09",
+                  "end": "2015-12"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Short-Term Jobs",
+            "isgood": true,
+            "details": {
+              "amount": 0,
+              "employmenthistory": []
+            }
+          }
+        ]
+      },
+      {
+        "blockname": "Education",
+        "checks": [
+          {
+            "name": "GPA",
+            "isgood": true,
+            "details": {
+              "amount": 0,
+              "educationhistory": []
+            }
+          },
+          {
+            "name": "Certifications",
+            "isgood": false,
+            "details": {
+              "amount": 0,
+              "educationhistory": []
+            }
+          }
+        ]
+      },
+      {
+        "blockname": "Additional Recommendations",
+        "checks": [
+          {
+            "name": "References",
+            "isgood": true,
+            "details": {
+              "foundkeywords": [],
+              "notfoundkeywords": [
+                "References",
+                "References – Upon Request",
+                "reference available on request",
+                "references available upon request",
+                "references furnished upon request",
+                "references provided upon request",
+                "references upon request",
+                "to be supplied upon request"
+              ]
+            }
+          },
+          {
+            "name": "URLs",
+            "isgood": true,
+            "details": {
+              "foundkeywords": [],
+              "notfoundkeywords": [
+                "http://",
+                "https://"
+              ]
+            }
+          },
+          {
+            "name": "Broken Links",
+            "isgood": false,
+            "details": {
+              "amount": 2,
+              "validlinks": [
+                {
+                  "domain": "github.com",
+                  "link": "https://github.com/steve-232"
+                },
+                {
+                  "domain": "www.linkedin.com",
+                  "link": "https://www.linkedin.com/in/stefan-milenkovic-920351113/"
+                },
+                {
+                  "domain": "codecanyon.net",
+                  "link": "https://codecanyon.net/user/lizardthemes"
+                },
+                {
+                  "domain": "play.google.com",
+                  "link": "https://play.google.com/store/apps/details?id=com.counting"
+                },
+                {
+                  "domain": "lizard-themes.com",
+                  "link": "https://lizard-themes.com/"
+                },
+                {
+                  "domain": "stefan-milenkovic.com",
+                  "link": "https://stefan-milenkovic.com/"
+                },
+                {
+                  "domain": "cyprotelfaliraki.com",
+                  "link": "https://cyprotelfaliraki.com/"
+                },
+                {
+                  "domain": "fixas.co.uk",
+                  "link": "https://fixas.co.uk/"
+                },
+                {
+                  "domain": "www.portofolakis.com",
+                  "link": "https://www.portofolakis.com/"
+                },
+                {
+                  "domain": "www.countryandtownhouse.co.uk",
+                  "link": "https://www.countryandtownhouse.co.uk/"
+                },
+                {
+                  "domain": "wyng.it",
+                  "link": "https://wyng.it/"
+                },
+                {
+                  "domain": "cuvva.com",
+                  "link": "https://cuvva.com/"
+                },
+                {
+                  "domain": "backwa.sh",
+                  "link": "https://backwa.sh/"
+                },
+                {
+                  "domain": "www.trading101.com",
+                  "link": "https://www.trading101.com/"
+                }
+              ],
+              "invalidlinks": [
+                {
+                  "domain": "creativemarket.com",
+                  "link": "https://creativemarket.com/LizardThemes/shop"
+                },
+                {
+                  "domain": "yuzulondon.com",
+                  "link": "https://yuzulondon.com/"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Typos",
+            "isgood": true,
+            "details": {
+              "amount": 1,
+              "typos": [
+                {
+                  "typo": "Socket.io",
+                  "corrected": "Socket.IO"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Revision Date",
+            "isgood": true,
+            "details": {
+              "revisiondate": "2020-09-03"
+            }
+          }
+        ]
+      },
+      {
+        "blockname": "Technical Skills",
+        "checks": [
+          {
+            "name": "In-Demand Tech Skills",
+            "isgood": true,
+            "details": {
+              "foundkeywords": [
+                {
+                  "keyword": "APIs",
+                  "count": 2
+                },
+                {
+                  "keyword": "AWS",
+                  "count": 2
+                },
+                {
+                  "keyword": "CSS",
+                  "count": 3
+                },
+                {
+                  "keyword": "ECMAScript",
+                  "count": 1
+                },
+                {
+                  "keyword": "Git",
+                  "count": 1
+                },
+                {
+                  "keyword": "GraphQL",
+                  "count": 1
+                },
+                {
+                  "keyword": "HTML",
+                  "count": 3
+                },
+                {
+                  "keyword": "JavaScript",
+                  "count": 1
+                },
+                {
+                  "keyword": "Jest",
+                  "count": 1
+                },
+                {
+                  "keyword": "jQuery",
+                  "count": 1
+                },
+                {
+                  "keyword": "Node.js",
+                  "count": 3
+                },
+                {
+                  "keyword": "npm",
+                  "count": 1
+                },
+                {
+                  "keyword": "React.js",
+                  "count": 4
+                },
+                {
+                  "keyword": "Redux",
+                  "count": 2
+                },
+                {
+                  "keyword": "Vue.js",
+                  "count": 5
+                },
+                {
+                  "keyword": "webpack",
+                  "count": 1
+                }
+              ],
+              "notfoundkeywords": [
+                "Angular",
+                "Continuous Integration (CI)",
+                "Design Patterns",
+                "Docker",
+                "Java",
+                "Mocha",
+                "OOP",
+                "Python",
+                "REST",
+                "React Native",
+                "SQL",
+                "TDD",
+                "TypeScript",
+                "Unit Testing"
+              ]
+            }
+          },
+          {
+            "name": "Niche IT Skills",
+            "isgood": true,
+            "details": {
+              "amount": 4,
+              "terms": [
+                "Vuex",
+                "Enzyme",
+                "Socket.IO",
+                "GraphQL"
+              ],
+              "recommendations": [
+                "Blaze",
+                "CanvasJS",
+                "Babel",
+                "ESLint",
+                "Composer",
+                "Hapi",
+                "Restify",
+                "OpenShift",
+                "Amazon RDS",
+                "BigQuery",
+                "MAAS"
+              ]
+            }
+          },
+          {
+            "name": "Technological Proficiency",
+            "isgood": false,
+            "details": {
+              "amount": 42
+            }
+          },
+          {
+            "name": "Outdated Tech",
+            "isgood": true,
+            "details": {
+              "amount": 0,
+              "terms": []
+            }
+          },
+          {
+            "name": "Abbreviations",
+            "isgood": true,
+            "details": {
+              "amount": 0,
+              "abbreviations": {}
+            }
+          }
+        ]
+      }
+    ]
+  }

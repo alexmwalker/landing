@@ -1,0 +1,105 @@
+-
+  var cardJSList = [
+    {
+      title: "Your First Week With Noodle.js",
+      imgcover: "https://s3.amazonaws.com/learnable-static/premium/reeedr/books/your-first-week-with-node-js/images/cover-front.png",
+      link: "https://www.sitepoint.com/premium/books/your-first-week-with-node-js/read",
+      opened: true,
+      blurb: "Used by some of the biggest companies today, Node is blazingly fast. Taking JavaScript, a ubiquitous language among developers, we'll get you up and running with guides on when to use Node, NPM, Security, as well as connecting with MySQL, MongoDB and more.",
+      rating: 9.2,
+      offline: true
+    }, {
+      title: "Practical ES6",
+      imgcover: "https://s3.amazonaws.com/learnable-static/premium/reeedr/books/practical-es6/images/cover-front.png",
+      link: "https://www.sitepoint.com/premium/books/practical-es6/read",
+      opened: true,
+      blurb: "Gain the most valuable updates and skills for working with JavaScript today. We'll cover new keywords, map collections, array, string and number methods, arrow functions and a whole host of other practical lessons to build with ES6.",
+      rating: 9.7,
+      offline: true
+    }, {
+      title: "JavaScript: Best Practice",
+      imgcover: "https://s3.amazonaws.com/learnable-static/premium/reeedr/books/javascript-best-practice/images/cover-front.png",
+      link: "https://www.sitepoint.com/premium/books/javascript-best-practice/read",
+      blurb: "Write powerful, clean and maintainable JavaScript with clear, practical lessons in application architecture, package management, tools, shorthands, callbacks, classes, flow control and much more.",
+      rating: 9.7,
+      offline: true
+    }, {
+      title: "JavaScript: Novice to Ninja, 2nd Edition",
+      imgcover: "https://d2sis3lil8ndrq.cloudfront.net/books/74438137-2459-4bc9-b9e3-c163ccbe5e4b.png",
+      link: "http://sitepoint.com",
+      blurb: "This step-by-step introduction to coding in JavaScript will show you how to to solve real-world problems, design eye-catching animations, build smarter forms, and develop richer applications.",
+      rating: 4.5
+    }
+  ];
+
+
+script
+    include ./stefan.json
+  
+
+
+
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title SitePoint Library
+    meta(name='description', content='SitePoint Library')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', type='text/css', href='styles/css/library.css')
+    link(rel='stylesheet', type='text/css', href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css')
+
+
+  body.-vr.labelling
+
+    include header-simple.pug
+    
+    section.bodycontent
+        .container
+            h1 hi #{username}
+
+
+
+
+
+            mixin book-card(card)
+                .col
+                    .card(class=typeof card.offline === "undefined" ? "" : "local")
+                    a(href= card.link)
+                        figure(class=typeof card.opened === "undefined" ? "" : "opened")
+                        .frame
+                            img.cover(src= card.imgcover)
+                            span(class=typeof card.opened === "undefined" ? "" : "opened")                      
+                                
+                        figcaption= card.title
+
+
+
+                    if card.offline
+                        p.small.status 
+                        svg.svg-icon
+                            use(fill='#fff' href='#my-available')
+                        | Available offline 
+                    else
+                        p.small.status 
+                        svg.svg-icon
+                            use(fill='#fff' href='#my-not-available') 
+                        | Unavailable offline
+
+
+            
+
+
+            .grid
+                .col-12
+                    h4 JavaScript
+            .grid-4_md-2
+                for card in cardJSList
+                    +book-card(card)
+
+
+
+
+
+    include footer.pug
