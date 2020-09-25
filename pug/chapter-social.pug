@@ -1,79 +1,9 @@
 section#reeedr-body
-  .container
+  .container.social-panel
     .grid-12
       .col-12
         .preface.set-front-matter
-        //
-          h1#preface
-            | Preface
-          p
-            | Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. Since its official release in 2011, it has undergone several changes, and it&rsquo;s now one of the most stable and responsive frameworks available. It&rsquo;s loved by web developers of all levels, as it gives them the capability to build a functional, attractive website design within minutes. A novice developer with just some basic knowledge of HTML and little CSS can easily get started with Bootstrap.
-          p
-            | In this book we&apos;ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.
-          h2#who-should-read-this-book-
-            | Who Should Read This Book?
-          p
-            | This book is for all frontend developers who want to build responsive, mobile-first websites. You&rsquo;ll need to be familiar with HTML and CSS and have a reasonable level of understanding of JavaScript in order to follow the discussion.
-          h2#conventions-used
-            | Conventions Used
-          p
-            | You&rsquo;ll notice that we&rsquo;ve used certain typographic and layout styles throughout this book to signify different types of information. Look out for the following items.
-          h3#code-samples
-            | Code Samples
-          p
-            | Code in this book is displayed using a fixed-width font, like so:
-          pre.
-            
-          p
-            | Where existing code is required for context, rather than repeat all of it, 
-            code &vellip;
-            |  will be displayed:
-          pre.
-            
-          p
-            | Some lines of code should be entered on one line, but we&rsquo;ve had to wrap them because of page constraints. An &#x27A5; indicates a line break that exists for formatting purposes only, and should be ignored:
-          pre.
-            
-          h3#preface-tips.breakbefore
-            | Tips, Notes, and Warnings
-          .box.tip
-            h4
-              | Pssst... Try this.
-            .body
-              p
-                | Tips that provide helpful little pointers.
-          .box.note
-            h4
-              | Ahem, Excuse Me ...
-            .body
-              p
-                | Notes are useful asides that are related&mdash;but not critical&mdash;to the topic at hand. Think of them as extra tidbits of information.
-          .box.attention
-            h4
-              | Make Sure You Always ...
-            .body
-              p
-                | ... pay attention to these important points.
-          .box.warning
-            h4
-              | Watch Out!
-            .body
-              p
-                | Warnings highlight any gotchas that are likely to trip you up along the way.
-          .box.codepen
-            h4
-              | Live Code
-            .body
-              p
-                | This example has a Live 
-                a.uri(href='http://www.codepen.io') Codepen.io demo you can play with.
-          .box.github
-            h4
-              | Github
-            .body
-              p
-                | This example has a code repository available at 
-                a.uri(href='http://www.github.com') Github.com.
+       
 
 
         .chapter.grid-center-reverse(data-chapter-number='6')
@@ -110,6 +40,22 @@ section#reeedr-body
           | What Is the Bootstrap Card Component?
         p
           | Bootstrap introduces a new UI component for creating cards which provides a flexible and stylish container for showing content. Cards come with minimal styling, but you can easily extend them with extra styling options.
+        
+        
+
+
+        .anchor
+          a.social-anchor(href="#0")
+            img(src='https://cdn.statically.io/gh/alexmwalker/landing/e4f0d6ac/images/social-tweet.svg')
+          .anchor-body
+            p.small Wow, I didn’t know that you could use media queries inside an SVG. Awesome usecases for mobile charts and graphs.
+
+
+
+        
+        
+        
+        
         p
           | This component is built on top of Flexbox, and you can use the Bootstrap 
           a(href='https://getbootstrap.com/docs/4.0/utilities/spacing/', target='_blank') spacing utility classes for margins and padding.
@@ -169,6 +115,15 @@ section#reeedr-body
             |  tag to add an image to the top of the card.
         p
           | These are the basic elements that constitute a full but basic card layout, as we can see from the following example:
+
+        .anchor
+          a.social-anchor(href="#0")
+            img(src='https://cdn.statically.io/gh/alexmwalker/landing/1a161551/images/social-pob.png')
+          .anchor-body
+            p.small  Wow, I didn’t know that you could use media queries inside an SVG. Awesome usecases for mobile charts and graphs.
+
+
+
         p
           | This is a screenshot of the result:
         p.image-wrapper
@@ -295,15 +250,6 @@ section#reeedr-body
           | .
         h2#adding-links-to-the-bootstrap-card-component
           | Adding Links to the Bootstrap Card Component
-
-
-        .anchor
-          .a(href="#0")
-            img(src='')
-          .anchor-body
-            p Wow, I didn’t know that you could use media queries inside an SVG. Awesome usecases for mobile charts and graphs.
-
-
         p
           | We can quickly add links inside cards using the 
           code &lt;a&gt;

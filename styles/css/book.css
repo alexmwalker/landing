@@ -4145,6 +4145,34 @@ li.toc-chapter {
   margin-top: calc(var(--baseline) * 2);
 }
 
+#reeedr-body .anchor a.social-anchor {
+  border: 0 none;
+}
+
+.social-panel {
+  padding-right: 8rem;
+}
+
+.anchor {
+  position: relative;
+}
+.anchor .social-anchor {
+  position: absolute;
+  right: -2rem;
+  width: 2rem;
+}
+.anchor .social-anchor img {
+  width: 1.5rem;
+}
+.anchor .anchor-body {
+  position: absolute;
+  width: 7rem;
+  right: -9rem;
+}
+.anchor .anchor-body .small {
+  line-height: calc(var(--baseline) / 2);
+}
+
 .preview-label {
   background: #333;
   width: 100%;
