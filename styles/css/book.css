@@ -4156,6 +4156,7 @@ li.toc-chapter {
 }
 .anchor .social-anchor img {
   width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   border: 1px solid #99AABB;
 }
@@ -4186,20 +4187,19 @@ li.toc-chapter {
   text-indent: 1rem;
 }
 .anchor .anchor-body .cite-logo:before {
-  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/e27e1ebc/images/social-tweet.svg);
   display: block;
   position: absolute;
   content: "";
-  width: 0.75rem;
-  height: 0.75rem;
-  top: 0.15rem;
+  width: 1rem;
+  height: 1rem;
+  top: 0rem;
   left: 0;
 }
 .anchor .anchor-body .twitter:before {
-  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/e27e1ebc/images/social-tweet.svg);
+  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-tweet.svg);
 }
-.anchor .anchor-body .spc:before {
-  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/e27e1ebc/images/social-tweet.svg);
+.anchor .anchor-body .spcom:before {
+  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
 }
 
 .social-panel {
