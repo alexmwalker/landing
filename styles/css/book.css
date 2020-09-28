@@ -4187,6 +4187,7 @@ li.toc-chapter {
   text-indent: 1rem;
 }
 .anchor .anchor-body .cite-logo:before {
+  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
   display: block;
   position: absolute;
   content: "";
@@ -4196,7 +4197,7 @@ li.toc-chapter {
   left: 0;
 }
 .anchor .anchor-body .twitter:before {
-  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-tweet.svg);
+  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/846cab25/images/social-tweet.svg);
 }
 .anchor .anchor-body .spcom:before {
   background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);

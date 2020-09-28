@@ -176,7 +176,8 @@ $panel-reveal: all 0.3s;
       position: relative;
       text-indent: 1rem;
       &:before{
-        // icon placed below
+        background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
+        // Default is SitePoint - override icon placed below
         display: block;
         position: absolute;
         content: '';
@@ -187,7 +188,7 @@ $panel-reveal: all 0.3s;
       }
     }
     .twitter:before{
-      background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-tweet.svg);
+      background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/846cab25/images/social-tweet.svg);
     } 
     .spcom:before{
       background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
