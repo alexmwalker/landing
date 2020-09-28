@@ -200,7 +200,7 @@
     </div>
   </div>
   <section id="reeedr-body">
-    <div class="container social-panel">
+    <div class="container">
       <div class="grid-12">
         <div class="col-12">
           <div class="preface set-front-matter"></div>
@@ -226,9 +226,9 @@
           <p>The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component</a>, which replaces panels, thumbnails and wells from earlier versions of the library.</p>
           <h2 id="what-is-the-bootstrap-card-component-">What Is the Bootstrap Card Component?</h2>
           <p>Bootstrap introduces a new UI component for creating cards which provides a flexible and stylish container for showing content. Cards come with minimal styling, but you can easily extend them with extra styling options.</p>
-          <div class="anchor"><a class="social-anchor" href="#0"><img src="https://cdn.statically.io/gh/alexmwalker/landing/a8309050/images/social-IF.png"></a>
+          <div class="anchor"><a class="social-anchor" href="#0"><img src="https://cdn.statically.io/gh/alexmwalker/landing/e27e1ebc/images/social-IF.png"></a>
             <div class="anchor-body">
-              <p class="small">Wow, I didn’t know that you could use media queries inside an SVG. Awesome usecases for mobile charts and graphs.</p>
+              <p class="small">Possibly a dangerous thing to add as a runtime feature then, if it's going to encourage bad loading practices?<span class="credit twitter"><a href="#">@bluepnume</a></span></p>
             </div>
           </div>
           <p>This component is built on top of Flexbox, and you can use the Bootstrap <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">spacing utility classes for margins and padding.</a></p>
@@ -249,9 +249,9 @@
             <li>use the <code>card-img-top</code> class with the <code><img></code> tag to add an image to the top of the card.</li>
           </ul>
           <p>These are the basic elements that constitute a full but basic card layout, as we can see from the following example:</p>
-          <div class="anchor"><a class="social-anchor" href="#0"><img src="https://cdn.statically.io/gh/alexmwalker/landing/1a161551/images/social-pob.png"></a>
+          <div class="anchor"><a class="social-anchor" href="#0"><img src="https://cdn.statically.io/gh/alexmwalker/landing/e27e1ebc/images/social-pob.png"></a>
             <div class="anchor-body">
-              <p class="small"> Wow, I didn’t know that you could use media queries inside an SVG. Awesome usecases for mobile charts and graphs.</p>
+              <p class="small"> Wow, I didn’t know that you could use media queries inside an SVG. Awesome usecases for mobile charts and graphs.<span class="credit"><a href="#">Paul O'Brien</a></span></p>
             </div>
           </div>
           <p>This is a screenshot of the result:</p>
@@ -396,6 +396,13 @@
     $('#showfontchanger').click(function () {
       $('#font-adjuster-container').toggleClass('show');
     });
+    
+    
+    
+    $('.social-anchor').click(function () {
+      $('#reeedr-body>.container').toggleClass('social-panel');
+    });
+    
     
     $('.darkmode').click(function () {
       $('#reeedr').toggleClass('dark');

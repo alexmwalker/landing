@@ -130,35 +130,75 @@
 }
 
 
+/* ====  SOCIAL PANEL  ==== */ 
 
 
-
-#reeedr-body .anchor a.social-anchor{
-  border: 0 none;
-}
-
-.social-panel{
-  padding-right: 8rem;
-}
-
+$social-panel-width: 12vw;
+$panel-reveal: all 0.3s;
 
 .anchor{
   position: relative;
   .social-anchor{
     position: absolute; 
     right: -2rem;
-    width: 2rem;
+    width: 1.5rem;
     img{
       width: 1.5rem;
     }
   }
   .anchor-body{
     position: absolute; 
-    width: 7rem;
-    right: -9rem;
+    width: $social-panel-width - 2;
+    right: 0;
+    opacity: 0;
+    transition: $panel-reveal;
+    pointer-events: none;
     .small{
       line-height: calc(var(--baseline) / 2);
       //outline: 1px red dashed;
+      color: #777;
+
+    }
+    .credit{
+      display: block;
+      font-weight: 500;
+      a{
+        color: #777;
+        position: relative;
+      }
+    }
+    .twitter{
+      position: relative;
+      text-indent: 1rem;
+      &:before{
+        background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/e27e1ebc/images/social-tweet.svg);
+        display: block;
+        position: absolute;
+        content: '';
+        width: 0.75rem;
+        height: 0.75rem;
+        top: 0.15rem;
+        left: 0;
+      }
     }
   }
+}
+
+.social-panel{
+  padding-right: $social-panel-width; // creates gutter for social content to render in.
+  outline: 1px red dashed;
+  transition: $panel-reveal;
+}
+.social-panel .anchor .anchor-body{ // show social-body
+  right: -$social-panel-width - 2;  
+  transition: $panel-reveal;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+#reeedr-body .anchor a.social-anchor{
+  border: 0 none;
+}
+#reeedr-body>.container{
+  transition: $panel-reveal;
 }
