@@ -4167,7 +4167,7 @@ li.toc-chapter {
 }
 .anchor .anchor-body .small {
   line-height: calc(var(--baseline) / 2);
-  color: #777;
+  color: #555;
   font-style: italic;
 }
 
