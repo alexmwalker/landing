@@ -4174,6 +4174,7 @@ li.toc-chapter {
 .anchor .anchor-body .credit {
   display: block;
   font-weight: 500;
+  margin-top: calc(var(--baseline) / 2);
 }
 .anchor .anchor-body .credit a {
   color: #777;
@@ -4196,7 +4197,6 @@ li.toc-chapter {
 
 .social-panel {
   padding-right: 12vw;
-  outline: 1px red dashed;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;

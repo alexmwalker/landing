@@ -162,6 +162,7 @@ $panel-reveal: all 0.3s;
     .credit{
       display: block;
       font-weight: 500;
+      margin-top: calc(var(--baseline) / 2);
       a{
         color: #777;
         position: relative;
@@ -186,7 +187,6 @@ $panel-reveal: all 0.3s;
 
 .social-panel{
   padding-right: $social-panel-width; // creates gutter for social content to render in.
-  outline: 1px red dashed;
   transition: $panel-reveal;
 }
 .social-panel .anchor .anchor-body{ // show social-body
