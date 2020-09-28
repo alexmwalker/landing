@@ -4171,20 +4171,19 @@ li.toc-chapter {
   line-height: calc(var(--baseline) / 2);
   color: #777;
 }
-.anchor .anchor-body .credit {
+.anchor .anchor-body .cite {
   display: block;
-  font-weight: 500;
   margin-top: calc(var(--baseline) / 2);
 }
-.anchor .anchor-body .credit a {
+.anchor .anchor-body .cite a {
   color: #777;
   position: relative;
 }
-.anchor .anchor-body .twitter {
+.anchor .anchor-body .cite-logo {
   position: relative;
   text-indent: 1rem;
 }
-.anchor .anchor-body .twitter:before {
+.anchor .anchor-body .cite-logo:before {
   background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/e27e1ebc/images/social-tweet.svg);
   display: block;
   position: absolute;
@@ -4193,6 +4192,12 @@ li.toc-chapter {
   height: 0.75rem;
   top: 0.15rem;
   left: 0;
+}
+.anchor .anchor-body .twitter:before {
+  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/e27e1ebc/images/social-tweet.svg);
+}
+.anchor .anchor-body .spc:before {
+  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/e27e1ebc/images/social-tweet.svg);
 }
 
 .social-panel {
