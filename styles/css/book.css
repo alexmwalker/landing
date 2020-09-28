@@ -4156,6 +4156,8 @@ li.toc-chapter {
 }
 .anchor .social-anchor img {
   width: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #99AABB;
 }
 .anchor .anchor-body {
   position: absolute;
