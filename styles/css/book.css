@@ -4024,6 +4024,8 @@ li.toc-chapter {
 --basebackground: #fff; // flipped in dark mode
 --basefontcolor: #222;
 }*/
+/* ====  SOCIAL PANEL VARS ==== */
+/* === */
 #reeedr-body {
   background-color: var(--basebackground);
   color: var(--basefontcolor);
@@ -4146,13 +4148,16 @@ li.toc-chapter {
 }
 
 /* ====  SOCIAL PANEL  ==== */
+/* Default Mobile set up */
 .anchor {
   position: relative;
+  overflow: auto;
 }
 .anchor .social-anchor {
-  position: absolute;
-  right: -2rem;
+  position: relative;
   width: 1.5rem;
+  float: left;
+  padding-right: 0.5rem;
 }
 .anchor .social-anchor img {
   width: 1.5rem;
@@ -4160,73 +4165,89 @@ li.toc-chapter {
   border-radius: 50%;
   border: 1px solid #99AABB;
 }
-.anchor .anchor-body {
-  position: absolute;
-  width: 10vw;
-  right: 0;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  pointer-events: none;
-}
 .anchor .anchor-body .small {
   line-height: calc(var(--baseline) / 2);
   color: #777;
-}
-.anchor .anchor-body .cite {
-  display: block;
-  margin-top: calc(var(--baseline) / 2);
-}
-.anchor .anchor-body .cite a {
-  color: #777;
-  position: relative;
-}
-.anchor .anchor-body .cite-logo {
-  position: relative;
-  text-indent: 1rem;
-}
-.anchor .anchor-body .cite-logo:before {
-  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
-  display: block;
-  position: absolute;
-  content: "";
-  width: 1rem;
-  height: 1rem;
-  top: 0rem;
-  left: 0;
-}
-.anchor .anchor-body .twitter:before {
-  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/846cab25/images/social-tweet.svg);
-}
-.anchor .anchor-body .spcom:before {
-  background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
+  font-style: italic;
 }
 
-.social-panel {
-  padding-right: 12vw;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+.cite {
+  padding: 0 0.5rem;
 }
 
-.social-panel .anchor .anchor-body {
-  right: -14vw;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 1;
-  pointer-events: initial;
-}
+@media all and (min-width: 55em) {
+  .anchor {
+    overflow: initial;
+  }
+  .anchor .social-anchor {
+    position: absolute;
+    right: -1rem;
+    float: none;
+    padding-right: 0;
+  }
+  .anchor .anchor-body {
+    position: absolute;
+    width: 9rem;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+    -o-transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+    transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+    pointer-events: none;
+  }
+  .anchor .anchor-body .cite {
+    display: block;
+    margin-top: calc(var(--baseline) / 2);
+  }
+  .anchor .anchor-body .cite a {
+    color: #777;
+    position: relative;
+  }
+  .anchor .anchor-body .cite-logo {
+    position: relative;
+    text-indent: 1rem;
+  }
+  .anchor .anchor-body .cite-logo:before {
+    background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
+    display: block;
+    position: absolute;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    top: 0rem;
+    left: 0;
+  }
+  .anchor .anchor-body .twitter:before {
+    background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/846cab25/images/social-tweet.svg);
+  }
+  .anchor .anchor-body .spcom:before {
+    background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
+  }
 
+  .social-panel {
+    padding-right: 10rem;
+    -webkit-transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+    -o-transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+    transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+  }
+
+  .social-panel .anchor .anchor-body {
+    right: -11rem;
+    -webkit-transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+    -o-transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+    transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
 #reeedr-body .anchor a.social-anchor {
   border: 0 none;
 }
 
 #reeedr-body > .container {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+  -o-transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
+  transition: all 0.3s cubic-bezier(0.36, 0.01, 0.6, 1);
 }
 
 .preview-label {

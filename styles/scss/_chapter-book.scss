@@ -4,6 +4,13 @@
 --basefontcolor: #222;
 }*/
 
+/* ====  SOCIAL PANEL VARS ==== */ 
+
+$social-panel-width: 10rem;
+$panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
+
+/* === */ 
+
 #reeedr-body {
   background-color: var(--basebackground);
   color: var(--basefontcolor);
@@ -132,84 +139,125 @@
 
 /* ====  SOCIAL PANEL  ==== */ 
 
+/* Default Mobile set up */ 
 
-$social-panel-width: 12vw;
-$panel-reveal: all 0.3s;
 
-.anchor{
+
+.anchor {
   position: relative;
-  .social-anchor{
-    position: absolute; 
-    right: -2rem;
+  overflow: auto;
+  .social-anchor {
+
+    position: relative;
     width: 1.5rem;
-    
-    img{
+    float: left;
+    padding-right: 0.5rem;
+    img {
       width: 1.5rem;
       height: 1.5rem;
-      border-radius:50%;
+      border-radius: 50%;
       border: 1px solid #99AABB;
     }
   }
-  .anchor-body{
-    position: absolute; 
-    width: $social-panel-width - 2;
-    right: 0;
-    opacity: 0;
-    transition: $panel-reveal;
-    pointer-events: none;
-    .small{
-      line-height: calc(var(--baseline) / 2);
-      //outline: 1px red dashed;
-      color: #777;
-
-    }
-    .cite{
-      display: block;
-      //font-weight: 500;
-      margin-top: calc(var(--baseline) / 2);
-      a{
+    .anchor-body {
+      .small{
+        line-height: calc(var(--baseline) / 2);
         color: #777;
-        position: relative;
-      }
+        font-style: italic;
     }
-    .cite-logo{ // has icon leading the cite
-      position: relative;
-      text-indent: 1rem;
-      &:before{
-        background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
-        // Default is SitePoint - override icon placed below
-        display: block;
-        position: absolute;
-        content: '';
-        width: 1rem;
-        height: 1rem;
-        top: 0rem;
-        left: 0;
-      }
-    }
-    .twitter:before{
-      background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/846cab25/images/social-tweet.svg);
-    } 
-    .spcom:before{
-      background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
-    }      
   }
 }
-
-.social-panel{
-  padding-right: $social-panel-width; // creates gutter for social content to render in.
-  transition: $panel-reveal;
-}
-.social-panel .anchor .anchor-body{ // show social-body
-  right: -$social-panel-width - 2;  
-  transition: $panel-reveal;
-  opacity: 1;
-  pointer-events: initial;
+.cite {
+  padding: 0 .5rem;
 }
 
-#reeedr-body .anchor a.social-anchor{
+
+*{
+  //outline: 1px red dashed;
+}
+
+
+@media all and (min-width: 55em) {
+
+  #reeedr-body>.container {
+    //background: lawngreen;
+  }
+
+  .anchor {
+    overflow: initial;
+    .social-anchor {
+      position: absolute;
+  
+      right: -1rem;
+      float: none;
+      padding-right: 0;
+    }
+    .anchor-body {
+      position: absolute;
+      width: $social-panel-width - 1;
+      right: 0;
+      opacity: 0;
+      transition: $panel-reveal;
+      pointer-events: none;
+
+      .cite {
+        display: block;
+        margin-top: calc(var(--baseline) / 2);
+
+        a {
+          color: #777;
+          position: relative;
+        }
+      }
+
+      .cite-logo {
+        // has icon leading the cite
+        position: relative;
+        text-indent: 1rem;
+
+        &:before {
+          background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
+          // Default is SitePoint - override icon placed below
+          display: block;
+          position: absolute;
+          content: '';
+          width: 1rem;
+          height: 1rem;
+          top: 0rem;
+          left: 0;
+        }
+      }
+
+      .twitter:before {
+        background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/846cab25/images/social-tweet.svg);
+      }
+
+      .spcom:before {
+        background-image: url(https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-spcom.svg);
+      }
+    }
+  }
+
+  .social-panel {
+    padding-right: $social-panel-width; // creates gutter for social content to render in.
+    transition: $panel-reveal;
+  }
+
+  .social-panel .anchor .anchor-body {
+    // show social-body
+    right: -$social-panel-width - 1;
+    transition: $panel-reveal;
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+}
+
+
+#reeedr-body .anchor a.social-anchor {
   border: 0 none;
 }
-#reeedr-body>.container{
+
+#reeedr-body>.container {
   transition: $panel-reveal;
 }
