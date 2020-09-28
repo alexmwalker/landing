@@ -4152,6 +4152,7 @@ li.toc-chapter {
 .anchor {
   position: relative;
   overflow: auto;
+  pointer-events: none;
 }
 .anchor .social-anchor {
   position: relative;
@@ -4166,6 +4167,7 @@ li.toc-chapter {
   border: 1px solid #99AABB;
 }
 .anchor .anchor-body .small {
+  pointer-events: initial;
   line-height: calc(var(--baseline) / 2);
   color: #555;
   font-style: italic;
@@ -4178,6 +4180,7 @@ li.toc-chapter {
 @media all and (min-width: 55em) {
   .anchor {
     overflow: initial;
+    pointer-events: initial;
   }
   .anchor .social-anchor {
     position: absolute;

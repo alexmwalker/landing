@@ -146,6 +146,7 @@ $panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
 .anchor {
   position: relative;
   overflow: auto;
+  pointer-events: none;
   .social-anchor {
 
     position: relative;
@@ -161,6 +162,7 @@ $panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
   }
     .anchor-body {
       .small{
+        pointer-events: initial;
         line-height: calc(var(--baseline) / 2);
         color: #555;
         font-style: italic;
@@ -172,9 +174,6 @@ $panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
 }
 
 
-*{
-  //outline: 1px red dashed;
-}
 
 
 @media all and (min-width: 55em) {
@@ -185,6 +184,7 @@ $panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
 
   .anchor {
     overflow: initial;
+    pointer-events: initial;
     .social-anchor {
       position: absolute;
       right: -1rem;
