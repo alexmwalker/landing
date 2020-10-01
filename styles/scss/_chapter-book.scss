@@ -4,12 +4,18 @@
 --basefontcolor: #222;
 }*/
 
+
+
+
 /* ====  SOCIAL PANEL VARS ==== */ 
 
 $social-panel-width: 10rem;
-$panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
+$panel-reveal: all 0.45s cubic-bezier(.3,.01,.28,.7);
 
 /* === */ 
+
+
+
 
 #reeedr-body {
   background-color: var(--basebackground);
@@ -18,7 +24,7 @@ $panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
   margin-top: 0;
   padding: 0 0 calc(var(--baseline) * 2);
   width: 100%;
-  transition: all .6s;
+  transition: $panel-reveal ;
 
   a:link {
     border-bottom: 1px dotted;
@@ -137,18 +143,16 @@ $panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
 }
 
 
-/* ====  SOCIAL PANEL  ==== */ 
+
+/* ====  SIDEBAR SOCIAL PANEL  ==== */ 
 
 /* Default Mobile set up */ 
-
-
 
 .anchor {
   position: relative;
   overflow: auto;
   pointer-events: none;
   .social-anchor {
-
     position: relative;
     width: 1.5rem;
     float: left;
@@ -172,8 +176,6 @@ $panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
 .cite {
   padding: 0 .5rem;
 }
-
-
 
 
 @media all and (min-width: 55em) {
@@ -259,4 +261,64 @@ $panel-reveal: all 0.3s cubic-bezier(.36,.01,.6,1);
 
 #reeedr-body>.container {
   transition: $panel-reveal;
+}
+
+
+/* === TOOLTIP   === */
+
+#tooltip {
+  background:red;
+  position: absolute;
+  top: 0;
+}
+
+
+
+/* == new == */ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+
+body{
+  font-family: Inter, Helvetica, Arial, sans-serif; 
+  font-size: 18px; 
+  line-height: 1.778rem;
+}
+
+#tooltip{
+  background: #333;
+  border-radius: 1.5rem;
+  color: #fff;
+  font-size: 8px;
+  float: left;
+  text-align: center;
+  line-height: .75rem;
+  ul{
+    padding:5px 1rem;
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    display:inline-flex
+  }
+  li{
+    text-align: center;
+    //outline: 1px green dashed;
+    padding:0 .2rem;
+    margin: 0;
+  }
+  
+  
+}
+
+#tooltip span{
+  background: url("") center no-repeat;
+  width: auto;
+  height: 1.5rem;
+  display: flex;
+}
+#tooltip .bookmark span{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M4 1c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v23l-8-6-8 6V1z'/%3E%3C/svg%3E%0A");
+}
+#tooltip .share span{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M23 5.1c-.7 1-1.4 1.7-2.3 2.4V8a13.2 13.2 0 01-2.2 7.2 11.3 11.3 0 01-6 5c-1.4.4-2.9.7-4.5.7h-.2C5.3 21 3 20.2 1 19H2.2c2.1 0 4-.7 5.5-2-2 0-3.6-1.3-4.2-3h.9c.4 0 .8 0 1.2-.2-1.1-.2-2-.7-2.6-1.5-.7-.8-1-1.8-1-2.9.5.3 1.2.5 2 .5-.6-.4-1.1-1-1.5-1.6a4.5 4.5 0 010-4.5C3.8 5.2 5 6.3 6.7 7.1c1.6.9 3.3 1.4 5.2 1.5A4.5 4.5 0 0116.2 3c1.3 0 2.5.5 3.3 1.4 1-.2 2-.6 2.9-1-.4 1-1.1 1.9-2 2.4 1 0 1.8-.3 2.6-.7z'/%3E%3C/svg%3E ");
+}
+#tooltip .link span{
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M18.9 16.2c0 .3-.1.6-.3.8L17 18.6c-.2.2-.5.3-.8.3a1 1 0 01-.7-.3l-2.3-2.3a1 1 0 010-1.6c.4.4.7.8 1.3.8.6 0 1-.4 1-1s-.4-.9-.8-1.3c.3-.2.5-.3.8-.3.3 0 .6 0 .8.3l2.3 2.3c.2.2.3.4.3.7zM11 8.5c0 .3-.1.5-.3.8-.4-.4-.7-.8-1.3-.8a1 1 0 00-1 1c0 .6.4.9.8 1.3a1 1 0 01-.8.3 1 1 0 01-.8-.3L5.4 8.5a1 1 0 010-1.5L7 5.4c.2-.2.5-.3.8-.3.3 0 .5.1.7.3l2.3 2.3c.2.2.3.5.3.8zm9.9 7.7c0-.8-.3-1.6-1-2.2l-2.2-2.3a3.2 3.2 0 00-4.6 0l-1-1a3.2 3.2 0 00.1-4.5L10 4C9.5 3.3 8.6 3 7.8 3c-.8 0-1.6.3-2.2 1L3.9 5.4A3.2 3.2 0 004 10l2.3 2.3a3.2 3.2 0 004.6 0l1 1a3.2 3.2 0 00-.1 4.5L14 20c.5.6 1.4.9 2.2.9.8 0 1.6-.3 2.2-1l1.7-1.5c.6-.6.9-1.4.9-2.3z'/%3E%3C/svg%3E%0A");
 }
