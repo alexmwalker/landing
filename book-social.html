@@ -225,7 +225,15 @@
             <li>it uses Flexbox for its grid system</li>
             <li>it provides tons of features and components.</li>
           </ul>
-          <p>The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component</a>, which replaces panels, thumbnails and wells from earlier versions of the library.</p>
+          <p class="selected">The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component</a>, which replaces panels, thumbnails and wells from earlier versions of the library.
+            <div id="tooltip">
+              <ul>
+                <li class="share"><span></span>Tweet</li>
+                <li class="bookmark"><span></span>Bookmark</li>
+                <li class="link"><span></span>Copy Link</li>
+              </ul>
+            </div>
+          </p>
           <h2 id="what-is-the-bootstrap-card-component-">What Is the Bootstrap Card Component?</h2>
           <p>Bootstrap introduces a new UI component for creating cards which provides a flexible and stylish container for showing content. Cards come with minimal styling, but you can easily extend them with extra styling options.</p>
           <div class="anchor"><a class="social-anchor" href="#0"><img src="https://pbs.twimg.com/profile_images/861010112852262912/nbPZKMyR_400x400.jpg"></a>
@@ -352,13 +360,7 @@
       </div>
     </div>
   </section>
-  <div id="tooltip">
-    <ul>
-      <li class="share">Share to Twitter</li>
-      <li class="link">Send as Link</li>
-      <li class="bookmark">Bookmark</li>
-    </ul>
-  </div>
+  <!-- include _tooltip.pug-->
   <!-- footer-->
   <footer class="mainfooter">
     <div class="container">
@@ -410,6 +412,11 @@
       $('#font-adjuster-container').toggleClass('show');
     });
     
+    /* tool tip  */
+    $('#reeedr-body>.container>p').click(function () {
+      $(this).toggleClass('testclass');
+      alert( "Launch a tooltip!" )
+    });
     
     
     $('.social-anchor').click(function () {

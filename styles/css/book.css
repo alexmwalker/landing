@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
 :root {
   --typescale: 1.15;
   /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
@@ -4255,27 +4254,40 @@ li.toc-chapter {
 }
 
 /* === TOOLTIP   === */
-#tooltip {
-  background: red;
-  position: absolute;
-  top: 0;
-}
-
 /* == new == */
-body {
-  font-family: Inter, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.778rem;
+.selected {
+  background: #ffffcc;
+  position: relative;
 }
 
 #tooltip {
   background: #333;
   border-radius: 1.5rem;
-  color: #fff;
-  font-size: 8px;
+  color: #ccc;
+  position: absolute;
+  font-size: 6px;
   float: left;
   text-align: center;
-  line-height: 0.75rem;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+#tooltip:before {
+  display: block;
+  background: -o-linear-gradient(135deg, #333333 0%, #333333 52%, rgba(51, 51, 51, 0) 52%, rgba(51, 51, 51, 0) 100%) no-repeat 50% 50%/100% 100%;
+  background: linear-gradient(-45deg, #333333 0%, #333333 52%, rgba(51, 51, 51, 0) 52%, rgba(51, 51, 51, 0) 100%) no-repeat 50% 50%/100% 100%;
+  position: absolute;
+  pointer-events: none;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  bottom: -0.5rem;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
 }
 #tooltip ul {
   padding: 5px 1rem;
@@ -4288,14 +4300,24 @@ body {
 }
 #tooltip li {
   text-align: center;
+  border-right: 1px #444 solid;
   padding: 0 0.2rem;
+  font-size: 9px;
+  line-height: 0.5rem;
+  min-width: 3rem;
   margin: 0;
+}
+#tooltip li:last-of-type {
+  border-right: 0 none;
+}
+#tooltip li:hover {
+  color: #fff;
 }
 
 #tooltip span {
   background: url("") center no-repeat;
   width: auto;
-  height: 1.5rem;
+  height: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

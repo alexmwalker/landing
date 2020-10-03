@@ -366,6 +366,11 @@ $gray-300: #dee2e6 !default;
       $('#font-adjuster-container').toggleClass('show');
     });
     
+    /* tool tip  */
+    $('#reeedr-body>.container>p').click(function () {
+      $(this).toggleClass('testclass');
+      alert( "Launch a tooltip!" )
+    });
     
     
     $('.social-anchor').click(function () {
