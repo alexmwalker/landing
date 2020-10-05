@@ -4939,7 +4939,7 @@ li.toc-chapter {
 }
 
 #tooltip .bookmark span {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M4 1c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v23l-8-6-8 6V1z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M6 4c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v18l-6-4.8L6 22V4z'/%3E%3C/svg%3E");
 }
 
 #tooltip .share span {
