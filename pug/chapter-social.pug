@@ -31,12 +31,12 @@ section#reeedr-body
           li
             | it provides tons of features and components.
 
-        p.selected
+        p#selected
             | The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new 
             a(href='http://getbootstrap.com/docs/4.0/components/card/', target='_blank') card component
             | , which replaces panels, thumbnails and wells from earlier versions of the library.
 
-            #tooltip
+            //#tooltip
                 ul
                     li.share
                         span
@@ -47,7 +47,21 @@ section#reeedr-body
                     li.link
                         span
                         | Copy Link
+            //.btn-toolbar.btn-toolbar-dark.pull-left(data-toolbar='user-options' data-toolbar-style='dark')
+              i.fa.fa-cog
 
+            .tool-items
+              a.tool-item(href='#')
+                i.fa.fa-user
+              a.tool-item(href='#')
+                i.fa.fa-star
+              a.tool-item(href='#')
+                i.fa.fa-edit
+              a.tool-item(href='#')
+                i.fa.fa-trash
+              a.tool-item(href='#')
+                i.fa.fa-circle
+            .arrow(style='left: 50%; right: 50%;')
 
 
         h2#what-is-the-bootstrap-card-component-
@@ -416,3 +430,11 @@ section#reeedr-body
         a.next-chapter-button(data-href='#text', data-next-chapter='4', target='_blank')
         // We need to add a 'marker' to idenify the end of a chapter
         .chapter-end
+
+          #toolbar-options.hidden
+            a(href='#')
+              i.fa.fa-plane
+            a(href='#')
+              i.fa.fa-car
+            a(href='#')
+              i.fa.fa-bicycle

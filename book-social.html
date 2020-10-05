@@ -6,6 +6,7 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="styles/css/book.css?cache=65432101" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
+  <script src="scripts/jquery.toolbar.min.js"></script>
 </head>
 <body class="-vr -labelling borders" id="reeedr"> 
   <header class="sitepoint-branding">
@@ -225,14 +226,25 @@
             <li>it uses Flexbox for its grid system</li>
             <li>it provides tons of features and components.</li>
           </ul>
-          <p class="selected">The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component</a>, which replaces panels, thumbnails and wells from earlier versions of the library.
-            <div id="tooltip">
-              <ul>
-                <li class="share"><span></span>Tweet</li>
-                <li class="bookmark"><span></span>Bookmark</li>
-                <li class="link"><span></span>Copy Link</li>
-              </ul>
-            </div>
+          <p id="selected">The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component</a>, which replaces panels, thumbnails and wells from earlier versions of the library.
+            <!--#tooltip
+            ul
+                li.share
+                    span
+                    | Tweet
+                li.bookmark
+                    span
+                    | Bookmark
+                li.link
+                    span
+                    | Copy Link
+            -->
+            <!--.btn-toolbar.btn-toolbar-dark.pull-left(data-toolbar='user-options' data-toolbar-style='dark')
+            i.fa.fa-cog
+            
+            -->
+            <div class="tool-items"><a class="tool-item" href="#"><i class="fa fa-user"></i></a><a class="tool-item" href="#"><i class="fa fa-star"></i></a><a class="tool-item" href="#"><i class="fa fa-edit"></i></a><a class="tool-item" href="#"><i class="fa fa-trash"></i></a><a class="tool-item" href="#"><i class="fa fa-circle"></i></a></div>
+            <div class="arrow" style="left: 50%; right: 50%;"></div>
           </p>
           <h2 id="what-is-the-bootstrap-card-component-">What Is the Bootstrap Card Component?</h2>
           <p>Bootstrap introduces a new UI component for creating cards which provides a flexible and stylish container for showing content. Cards come with minimal styling, but you can easily extend them with extra styling options.</p>
@@ -355,7 +367,9 @@
           <p>As a result of the new features and components, Bootstrap continues to be a powerful CSS framework available to everyone, particularly to developers who need to create their own responsive and modern-style layouts but lack enough time and budget, or the deep knowledge of CSS, necessary to produce custom code.</p>
           <div class="next-chapter-wrapper"><strong>NEXT:</strong><a class="next-chapter-button" data-next-chapter="7" href="#" target="_blank"><span>How to Build a Responsive Type Scale with Bootstrap <i class="fas fa-chevron-right"></i></span></a></div><a class="next-chapter-button" data-href="#text" data-next-chapter="4" target="_blank"></a>
           <!-- We need to add a 'marker' to idenify the end of a chapter-->
-          <div class="chapter-end"></div>
+          <div class="chapter-end">
+            <div class="hidden" id="toolbar-options"><a href="#"><i class="fa fa-plane"></i></a><a href="#"><i class="fa fa-car"></i></a><a href="#"><i class="fa fa-bicycle"></i></a></div>
+          </div>
         </div>
       </div>
     </div>
@@ -422,6 +436,12 @@
     $('.social-anchor').click(function () {
       $('#reeedr-body>.container').toggleClass('social-panel');
     });
+    
+    
+    $('#selected').toolbar({
+      content: '#toolbar-options',
+    });
+    
     
     
     $('.darkmode').click(function () {
