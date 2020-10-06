@@ -38,13 +38,16 @@ section#reeedr-body
 
             //#tooltip
                 ul
-                    li.share
+                    li
+                      a(href="#").share
                         span
                         | Tweet
-                    li.bookmark
+                    li
+                      a(href="#").bookmark
                         span
                         | Bookmark
-                    li.link
+                    li
+                      a(href="#").link
                         span
                         | Copy Link
             //.btn-toolbar.btn-toolbar-dark.pull-left(data-toolbar='user-options' data-toolbar-style='dark')
@@ -420,10 +423,17 @@ section#reeedr-body
         // We need to add a 'marker' to idenify the end of a chapter
         .chapter-end
         
-          #toolbar-options.hidden
-            a(href='#')
-              i.fa.fa-plane
-            a(href='#')
-              i.fa.fa-car
-            a(href='#')
-              i.fa.fa-bicycle
+
+
+
+          #tooltip
+              ul
+                li.share
+                    span
+                    | Tweet
+                li.bookmark
+                    span
+                    | Bookmark
+                li.link
+                    span
+                    | Copy Link
