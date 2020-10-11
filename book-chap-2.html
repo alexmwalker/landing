@@ -459,9 +459,36 @@ Lorem Ipsum...
     e.preventDefault();
     });
     
+    /* === CREATE CLICKPOP TOOLBAR === */
+    
+    // TOOLBAR ORDER: label, link, class
+    let actions = [
+      ['Tweet', 'http://twitter.com', 'tweet'],
+      ['Link','#', 'link'],
+      ['Bookmark','#', 'bookmark']
+    ];
+    
+    let fragment = new DocumentFragment();
+    
+    let ul = document.createElement('ul');
+    ul.setAttribute('class', 'tooltip');
+    
+    actions.forEach((action) => {
+      let li = document.createElement('li');
+      let a = document.createElement('a');
+      a.setAttribute('href', action[1]);
+      a.setAttribute('class', action[2]);
+      a.innerHTML = action[0];
+      li.appendChild(a);
+      ul.appendChild(li);
+    })
+    
+    fragment.appendChild(ul)
     
     
-    /* == simple nav controls/animations  == */
+    
+    
+     /* == simple nav controls/animations  == */
     $(document).ready(function () {
       $('.hamburger').click(function () {
         $(this).toggleClass('open');
@@ -475,8 +502,6 @@ Lorem Ipsum...
       $('.toc-container').removeClass('open');
     });
     
-    
-    
     $('#showfontchanger').click(function () {
       $('#font-adjuster-container').toggleClass('show');
     });
@@ -487,10 +512,15 @@ Lorem Ipsum...
     });
     
     
-    $('#reeedr-body>.container p').click(function () {
-      $(this).toggleClass('selected');
-    });
+    $('#reeedr-body p').append(fragment); // Add toolbar to every P
     
+    
+     $('#reeedr-body p').click(function () {
+       $('p').remove( '.tooltip' );
+       $('p').removeClass('selected');
+       $(this).addClass('selected');
+       // $(this).append(fragment);
+    });
     
     
     
