@@ -2,10 +2,10 @@ $b-rad: 6px;
 
 @import 'basic-grid-typography';
 
-@import "gridlex-vars";
-@import "gridlex-preprocessing";
-@import "gridlex-mixins";
-@import "gridlex-classes";
+@import 'gridlex-vars';
+@import 'gridlex-preprocessing';
+@import 'gridlex-mixins';
+@import 'gridlex-classes';
 
 @import 'prism';
 @import 'overrides'; // overrides for generated Prism CSS
