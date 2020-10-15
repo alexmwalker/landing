@@ -345,13 +345,14 @@ $gray-300: #dee2e6 !default;
     
     /* === CREATE CLICKPOP TOOLBAR === */
     
-    // TOOLBAR ORDER: label, link, class
+    // TOOLBAR MENU ORDER: label, link, class
     let actions = [
       ['Tweet', 'http://twitter.com', 'tweet'],
       ['Link','#', 'link'],
       ['Bookmark','#', 'bookmark']
     ];
     
+    // BUILD TEXTTOOL UI UNIT
     let fragment = new DocumentFragment();
     
     let ul = document.createElement('ul');
@@ -396,7 +397,7 @@ $gray-300: #dee2e6 !default;
     });
     
     
-    $('#reeedr-body p').append(fragment); // Add toolbar to every P
+    $('#reeedr-body . col-12>p').append(fragment); // Add toolbar to every P
     
     
      $('#reeedr-body p').click(function () {

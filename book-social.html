@@ -4,7 +4,7 @@
   <title>Your First Week With Bootstrap | - SitePoint</title>
   <meta name="description" content="In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="styles/css/book.css?cache=65432101" rel="stylesheet" type="text/css">
+  <link href="styles/css/book.css?cache=123" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
 </head>
 <body class="-vr -labelling borders" id="reeedr"> 
@@ -388,7 +388,17 @@
       </div>
     </div>
   </section>
-  <!-- include _tooltip.pug-->
+  <div id="modalbase">
+    <dialog id="linkmodal">
+      <div class="linkmodal-body">
+        <h4>Send a link to this paragraph</h4>
+        <p class="small">Anyone with this link can view this section of the book.</p>
+        <p class="linkback"><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
+        <div class="close-link">x</div>
+        <button id="copy-link">Copy Link</button>
+      </div>
+    </dialog>
+  </div>
   <!-- footer-->
   <footer class="mainfooter">
     <div class="container">
@@ -423,13 +433,14 @@
     
     /* === CREATE CLICKPOP TOOLBAR === */
     
-    // TOOLBAR ORDER: label, link, class
+    // TOOLBAR MENU ORDER: label, link, class
     let actions = [
       ['Tweet', 'http://twitter.com', 'tweet'],
       ['Link','#', 'link'],
       ['Bookmark','#', 'bookmark']
     ];
     
+    // BUILD TEXTTOOL UI UNIT
     let fragment = new DocumentFragment();
     
     let ul = document.createElement('ul');
@@ -474,7 +485,7 @@
     });
     
     
-    $('#reeedr-body p').append(fragment); // Add toolbar to every P
+    $('#reeedr-body . col-12>p').append(fragment); // Add toolbar to every P
     
     
      $('#reeedr-body p').click(function () {
