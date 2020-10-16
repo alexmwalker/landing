@@ -8,6 +8,14 @@
     top:0;
     left: 0;
     z-index: 2;
+    opacity: 0;
+    transition: opacity .6s;
+    pointer-events: none;
+    &.show{
+      opacity: 1;
+      transition: opacity .6s;
+      pointer-events: initial;
+    }
    }
    #linkmodal{
     color: #fff;
