@@ -401,6 +401,10 @@ $gray-300: #dee2e6 !default;
     });
     
     
+    /*$('#reeedr-body').click(function () {
+        $('p').removeClass('selected');
+      });*/
+    
     $('#reeedr-body .col-12>p').append(fragment); // Add toolbar to every <P>
     
     
@@ -420,6 +424,7 @@ $gray-300: #dee2e6 !default;
       });
     $('#modalbase .close-link').click(function () {
           $('#modalbase').removeClass('show');
+          $('#reeedr-body p').removeClass('selected');
           return false;
       });
     

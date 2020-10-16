@@ -4207,7 +4207,7 @@ body {
 #linkmodal .linkback {
   background: #2C2C2C;
   padding: 0 0.2rem calc(var(--baseline) / 2);
-  margin: calc(var(--baseline) / 2);
+  margin: calc(var(--baseline) / 2) 0;
 }
 #linkmodal a:link {
   color: #059FF5;
