@@ -94,9 +94,11 @@ that need device level targeting. This is where we do it. */
   #reeedr .bookpanel .thumbnail-book img {
     width: 100%;
   }
+
+  
 }
 
-/*  <--  end of the MOBILE media query  */
+/*  <--  end of the NON-MOBILE media query  */
 
 
 @media (min-width: 48em) {
@@ -139,6 +141,11 @@ that need device level targeting. This is where we do it. */
       }
     }
   }
+
+  #modal-dialog{
+    width: 50vw;
+  }
+
 
   #toolstrip {
     display: block;

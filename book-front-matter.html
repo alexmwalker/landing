@@ -392,7 +392,11 @@ new_variable = &quot;Hello&quot;;
     });
     
     
-    $('#reeedr-body . col-12>p').append(fragment); // Add toolbar to every P
+    /*$('#reeedr-body').click(function () {
+        $('p').removeClass('selected');
+      });*/
+    
+    $('#reeedr-body .col-12>p').append(fragment); // Add toolbar to every <P>
     
     
      $('#reeedr-body p').click(function () {
@@ -403,6 +407,17 @@ new_variable = &quot;Hello&quot;;
     });
     
     
+    // .selected > ul a.link
+    
+    $('ul.tooltip li a.link').click(function () {
+        $('#modalbase').addClass('show');
+        return false;
+      });
+    $('#modalbase .close-link').click(function () {
+          $('#modalbase').removeClass('show');
+          $('#reeedr-body p').removeClass('selected');
+          return false;
+      });
     
     
     $('.darkmode').click(function () {

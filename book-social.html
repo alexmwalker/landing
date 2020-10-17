@@ -4,7 +4,7 @@
   <title>Your First Week With Bootstrap | - SitePoint</title>
   <meta name="description" content="In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="styles/css/book.css?cache=123" rel="stylesheet" type="text/css">
+  <link href="styles/css/book.css" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
 </head>
 <body class="-vr -labelling borders" id="reeedr"> 
@@ -388,7 +388,19 @@
       </div>
     </div>
   </section>
-  <!--include _modalbase.pug-->
+
+  <div id="modalbase">
+    <dialog id="modal-dialog">
+      <div class="linkmodal-body">
+        <h4>Send a link to this paragraph</h4>
+        <p class="small">Anyone with this link can view this section of the book.</p>
+        <p class="linkback"><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
+        <div class="close-link">x</div>
+        <button id="copy-link">Copy Link</button>
+      </div>
+    </dialog>
+  </div>
+
   <!-- footer-->
   <footer class="mainfooter">
     <div class="container">
@@ -475,7 +487,11 @@
     });
     
     
-    $('#reeedr-body . col-12>p').append(fragment); // Add toolbar to every P
+    /*$('#reeedr-body').click(function () {
+        $('p').removeClass('selected');
+      });*/
+    
+    $('#reeedr-body .col-12>p').append(fragment); // Add toolbar to every <P>
     
     
      $('#reeedr-body p').click(function () {
@@ -486,6 +502,17 @@
     });
     
     
+    // .selected > ul a.link
+    
+    $('ul.tooltip li a.link').click(function () {
+        $('#modalbase').addClass('show');
+        return false;
+      });
+    $('#modalbase .close-link').click(function () {
+          $('#modalbase').removeClass('show');
+          $('#reeedr-body p').removeClass('selected');
+          return false;
+      });
     
     
     $('.darkmode').click(function () {
