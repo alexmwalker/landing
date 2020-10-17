@@ -8,6 +8,7 @@
     top:0;
     left: 0;
     z-index: 2;
+    display: none;
    }
    #linkmodal{
     color: #fff;
@@ -88,6 +89,6 @@
    
    
    dialog{
-    display: block
+    //display: block
    }
    
