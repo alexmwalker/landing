@@ -463,7 +463,7 @@ Lorem Ipsum...
     
     // TOOLBAR MENU ORDER: label, link, class
     let actions = [
-      ['Tweet', 'http://twitter.com', 'tweet'],
+      ['Tweet', '#', 'tweet'],
       ['Link','#', 'link'],
       ['Bookmark','#', 'bookmark']
     ];
@@ -528,15 +528,27 @@ Lorem Ipsum...
     });
     
     
-    // .selected > ul a.link
+    // Texttool controls
     
-    $('ul.tooltip li a.link').click(function () {
+    $('ul.tooltip li a.link').click(function () { // send link
         $('#modalbase').addClass('show');
+        $('.linkmodal-body').addClass('show');
         return false;
       });
-    $('#modalbase .close-link').click(function () {
+    $('ul.tooltip li a.bookmark').click(function () { // send link
+        $('#modalbase').addClass('show');
+        $('.bookmark-body').addClass('show');
+        return false;
+      });
+      $('ul.tooltip li a.tweet').click(function () { // send link
+        $('#modalbase').addClass('show');
+        $('.tweet-body').addClass('show');
+        return false;
+      });
+    $('#modalbase .close-link').click(function () { // close
           $('#modalbase').removeClass('show');
           $('#reeedr-body p').removeClass('selected');
+          $('.linkmodal-body').removeClass('show');
           return false;
       });
     

@@ -388,11 +388,24 @@
       </div>
     </div>
   </section>
-
   <div id="modalbase">
     <dialog id="modal-dialog">
       <div class="linkmodal-body">
-        <h4>Send a link to this paragraph</h4>
+        <h4>Create a link to this paragraph</h4>
+        <p class="small">Anyone with this link can view this section of the book.</p>
+        <p class="linkback"><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
+        <div class="close-link">x</div>
+        <button id="copy-link">Copy Link</button>
+      </div>
+      <div class="tweet-body">
+        <h4>Tweet a link to thhis parapgraph </h4>
+        <p class="small">Anyone with this link can view this section of the book.</p>
+        <p class="linkback"><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
+        <div class="close-link">x</div>
+        <button id="copy-link">Copy Link</button>
+      </div>
+      <div class="bookmark-body">
+        <h4>Add a bookmark </h4>
         <p class="small">Anyone with this link can view this section of the book.</p>
         <p class="linkback"><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
         <div class="close-link">x</div>
@@ -400,7 +413,6 @@
       </div>
     </dialog>
   </div>
-
   <!-- footer-->
   <footer class="mainfooter">
     <div class="container">
@@ -437,7 +449,7 @@
     
     // TOOLBAR MENU ORDER: label, link, class
     let actions = [
-      ['Tweet', 'http://twitter.com', 'tweet'],
+      ['Tweet', '#', 'tweet'],
       ['Link','#', 'link'],
       ['Bookmark','#', 'bookmark']
     ];
@@ -502,15 +514,27 @@
     });
     
     
-    // .selected > ul a.link
+    // Texttool controls
     
-    $('ul.tooltip li a.link').click(function () {
+    $('ul.tooltip li a.link').click(function () { // send link
         $('#modalbase').addClass('show');
+        $('.linkmodal-body').addClass('show');
         return false;
       });
-    $('#modalbase .close-link').click(function () {
+    $('ul.tooltip li a.bookmark').click(function () { // send link
+        $('#modalbase').addClass('show');
+        $('.bookmark-body').addClass('show');
+        return false;
+      });
+      $('ul.tooltip li a.tweet').click(function () { // send link
+        $('#modalbase').addClass('show');
+        $('.tweet-body').addClass('show');
+        return false;
+      });
+    $('#modalbase .close-link').click(function () { // close
           $('#modalbase').removeClass('show');
           $('#reeedr-body p').removeClass('selected');
+          $('.linkmodal-body').removeClass('show');
           return false;
       });
     
