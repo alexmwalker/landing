@@ -4186,17 +4186,25 @@ body {
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
-#modal-dialog .linkmodal-body, #modal-dialog .bookmark-body, #modal-dialog .tweet-body {
+#modal-dialog .linkmodal-body,
+#modal-dialog .bookmark-body,
+#modal-dialog .tweet-body {
   margin: 0;
   display: none;
 }
-#modal-dialog .linkmodal-body.show, #modal-dialog .bookmark-body.show, #modal-dialog .tweet-body.show {
+#modal-dialog .linkmodal-body.show,
+#modal-dialog .bookmark-body.show,
+#modal-dialog .tweet-body.show {
   display: block;
 }
-#modal-dialog .linkmodal-body .small, #modal-dialog .bookmark-body .small, #modal-dialog .tweet-body .small {
+#modal-dialog .linkmodal-body .small,
+#modal-dialog .bookmark-body .small,
+#modal-dialog .tweet-body .small {
   color: #8799A7;
 }
-#modal-dialog .linkmodal-body .small:before, #modal-dialog .bookmark-body .small:before, #modal-dialog .tweet-body .small:before {
+#modal-dialog .linkmodal-body .small:before,
+#modal-dialog .bookmark-body .small:before,
+#modal-dialog .tweet-body .small:before {
   display: block;
   position: relative;
   float: left;

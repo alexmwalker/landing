@@ -535,20 +535,23 @@ Lorem Ipsum...
         $('.linkmodal-body').addClass('show');
         return false;
       });
-    $('ul.tooltip li a.bookmark').click(function () { // send link
+    $('ul.tooltip li a.bookmark').click(function () { // bookmark
         $('#modalbase').addClass('show');
         $('.bookmark-body').addClass('show');
         return false;
       });
-      $('ul.tooltip li a.tweet').click(function () { // send link
+      $('ul.tooltip li a.tweet').click(function () { // send tweet
         $('#modalbase').addClass('show');
         $('.tweet-body').addClass('show');
         return false;
       });
-    $('#modalbase .close-link').click(function () { // close
+    
+    $('#modalbase'||'.close-link').click(function () { // close modal
           $('#modalbase').removeClass('show');
           $('#reeedr-body p').removeClass('selected');
           $('.linkmodal-body').removeClass('show');
+          $('.bookmark-body').removeClass('show');
+          $('.tweet-body').removeClass('show');
           return false;
       });
     
