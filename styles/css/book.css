@@ -4308,10 +4308,10 @@ li.toc-chapter {
   background: #000;
   content: "Copied to clipboard";
   font-size: calc(1rem / var(--typescale) / var(--typescale) / var(--typescale));
-  line-height: calc(var(--baseline) / 2);
+  line-height: calc(var(--baseline));
   border-radius: 1rem;
   padding: 0 1rem;
-  top: -1.25rem;
+  top: -2rem;
   right: 1rem;
   -webkit-animation: fader 5s;
           animation: fader 5s;
