@@ -1,0 +1,40 @@
+
+  background: #059FF5;
+  color: #fff;
+  border: 0 none;
+  line-height: 2rem;
+  border-radius: 2rem;
+  border: 0 none;
+  font-size: 1rem;
+  padding: 0 1rem;
+  float: right;
+
+  background: #059FF5;
+  color: #fff;
+  border: 0 none;
+  line-height: 2rem;
+  border-radius: 2rem;
+  border: 0 navajowhite;
+  font-size: 1rem;
+  padding: 0 1rem;
+  float: right;
+
+  background: #059FF5;
+  color: #fff;
+  border: 0 none;
+  line-height: 2rem;
+  border-radius: 2rem;
+  border: 0 n;
+  font-size: 1rem;
+  padding: 0 1rem;
+  float: right;
+
+  background: #059FF5;
+  color: #fff;
+  border: 0 none;
+  line-height: 2rem;
+  border-radius: 2rem;
+  border: 0;
+  font-size: 1rem;
+  padding: 0 1rem;
+  float: right;

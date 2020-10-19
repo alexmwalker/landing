@@ -514,37 +514,41 @@ Lorem Ipsum...
     });
     
     
-    /*$('#reeedr-body').click(function () {
-        $('p').removeClass('selected');
-      });*/
-    
     $('#reeedr-body .col-12>p').append(fragment); // Add toolbar to every <P>
     
     
-     $('#reeedr-body p').click(function () {
-       $('p').remove( '.tooltip' );
-       $('p').removeClass('selected');
+     $('#reeedr-body p'||'#reeedr-body ul').click(function () { // clear other 'selected's on click
+       //$('p').remove( '.tooltip' );
+       $('p'||'ul').removeClass('selected'); 
        $(this).addClass('selected');
-       // $(this).append(fragment);
+    
     });
     
     
     // Texttool controls
     
-    $('ul.tooltip li a.link').click(function () { // send link
+    $('ul.tooltip li a.link').click(function () { // click copy link
         $('#modalbase').addClass('show');
         $('.linkmodal-body').addClass('show');
         return false;
       });
-    $('ul.tooltip li a.bookmark').click(function () { // bookmark
+    $('ul.tooltip li a.bookmark').click(function () { // click bookmark
         $('#modalbase').addClass('show');
         $('.bookmark-body').addClass('show');
         return false;
       });
-      $('ul.tooltip li a.tweet').click(function () { // send tweet
+      $('ul.tooltip li a.tweet').click(function () { // click send tweet
         $('#modalbase').addClass('show');
         $('.tweet-body').addClass('show');
         return false;
+      });
+    
+    $('#copy-link').click(function () { // Copy link button - confirm 'copy' was successful
+          $('.linkback').addClass('copied');
+          setTimeout(function() {
+            $(".linkback").removeClass("copied");
+          }, 5000);
+          return false;
       });
     
     $('#modalbase'||'.close-link').click(function () { // close modal

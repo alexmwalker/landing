@@ -1,11 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
 
-
-body {
- font-family: Inter, Helvetica, Arial, sans-serif;
- font-size: 18px;
- line-height: 1.778rem;
-}
 
 /* === TOOLTIP   === */
 
@@ -35,7 +28,7 @@ body {
  text-align: center;
  display: inline-flex;
  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
- &:before { // toolbar pointer
+ &:before { // toolbar down pointer
   display: block;
   background: linear-gradient(
     -45deg,
@@ -70,7 +63,7 @@ body {
    text-decoration: none;
    position: relative;
    padding-top: 1rem;
-   font-size: calc(1rem / var(--typescale) / var(--typescale) / var(--typescale) / var(--typescale) / var(--typescale));
+   font-size: calc(1rem / var(--typescale) / var(--typescale) / var(--typescale));
     line-height: calc(var(--baseline) / 4);
    &:link {
     color: #ccc;
