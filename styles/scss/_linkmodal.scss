@@ -157,7 +157,7 @@
   position:relative;
   animation: copyflash .6s ease-out;
   
-  &:after, &:before{
+  &:after, &:before{ // the 'Copied to clipboard' message
    display: block;
    position: absolute;
    opacity: 0;
@@ -171,7 +171,7 @@
    right: 1rem;
    animation: fader 5s
   }
-  &:before{
+  &:before{ // the triangle 
    content:'';
    top: -.75rem;
    opacity: 0;

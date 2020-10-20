@@ -225,30 +225,7 @@
             <li>it uses Flexbox for its grid system</li>
             <li>it provides tons of features and components.</li>
           </ul>
-          <p>The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component,</a>which replaces panels, thumbnails and wells from earlier versions of the library.
-            <!--#tooltip
-            ul
-                li
-                  a(href="#").share
-                    span
-                    | Tweet
-                li
-                  a(href="#").bookmark
-                    span
-                    | Bookmark
-                li
-                  a(href="#").link
-                    span
-                    | Copy Link
-            -->
-            <!--.btn-toolbar.btn-toolbar-dark.pull-left(data-toolbar='user-options' data-toolbar-style='dark')
-            i.fa.fa-cog
-            
-            
-            
-            
-            -->
-          </p>
+          <p>The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component,</a>which replaces panels, thumbnails and wells from earlier versions of the library.</p>
           <h2 id="what-is-the-bootstrap-card-component-">What Is the Bootstrap Card Component?</h2>
           <p>Bootstrap introduces a new UI component for creating cards which provides a flexible and stylish container for showing content. Cards come with minimal styling, but you can easily extend them with extra styling options.</p>
           <div class="anchor"><a class="social-anchor" href="#0"><img src="https://pbs.twimg.com/profile_images/861010112852262912/nbPZKMyR_400x400.jpg"></a>
@@ -536,8 +513,10 @@
     
     $('#copy-link').click(function () { // Copy link button - confirm 'copy' was successful
           $('.linkback').addClass('copied');
+          $("#copy-link").text("       Copied!  ");
           setTimeout(function() {
             $(".linkback").removeClass("copied");
+            $("#copy-link").text("Copy link");
           }, 5000);
           return false;
       });

@@ -429,8 +429,10 @@ $gray-300: #dee2e6 !default;
     
     $('#copy-link').click(function () { // Copy link button - confirm 'copy' was successful
           $('.linkback').addClass('copied');
+          $("#copy-link").text("       Copied!  ");
           setTimeout(function() {
             $(".linkback").removeClass("copied");
+            $("#copy-link").text("Copy link");
           }, 5000);
           return false;
       });
