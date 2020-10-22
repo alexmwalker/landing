@@ -156,7 +156,8 @@
 .copied{
   position:relative;
   animation: copyflash .6s ease-out;
-  
+/*  // DISABLED: speech bubble tooltip confirming content has been copied 
+    // REPLACED WITH: Switching the button text from 'Copy text' to 'Copied'
   &:after, &:before{ // the 'Copied to clipboard' message
    display: block;
    position: absolute;
@@ -184,7 +185,7 @@
    border-width: 1rem 1rem 0;
    background: none;
    border-radius: 0;
-  }
+  }*/
  }
  
  
