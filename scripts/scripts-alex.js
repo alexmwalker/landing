@@ -96,15 +96,19 @@
       return false;
     });
   
-  $('#copy-link').click(function () { // Copy link button - confirm 'copy' was successful
-        $('.linkback').addClass('copied');
-        $("#copy-link").text("Copied!"); //switch text
-        setTimeout(function() { // switch text back
-          $(".linkback").removeClass("copied");
-          $("#copy-link").text("Copy link");
-        }, 5000);
-        return false;
-    });
+    $('#copy-link').click(function () { // Copy link button - confirm 'copy' was successful
+    $('.linkback').addClass('copied');
+    $("#copy-link").text("       Copied!  ");
+    $("#copy-link").css("background", "#f60");
+    setTimeout(function() {
+      $(".linkback").removeClass("copied");
+      $("#copy-link").text("Copy link");
+      $("#copy-link").css("background", "#059FF5");
+    }, 3000);
+    return false;
+});
+
+ 
 
   $('#modalbase'||'.close-link').click(function () { // close modal
         $('#modalbase').removeClass('show');
