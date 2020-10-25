@@ -4355,34 +4355,12 @@ li.toc-chapter {
     background: #2C2C2C;
   }
 }
-@-webkit-keyframes fader {
-  000% {
-    opacity: 0;
-  }
-  020% {
-    opacity: 1;
-  }
-  070% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fader {
-  000% {
-    opacity: 0;
-  }
-  020% {
-    opacity: 1;
-  }
-  070% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+/*@keyframes fader{
+ 000%{opacity: 0;}
+ 020%{opacity: 1;}
+ 070%{opacity: 1;}
+ 100%{opacity: 0;}
+}*/
 dialog {
   display: block;
 }
