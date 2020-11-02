@@ -16,7 +16,7 @@
 
   // TOOLBAR MENU ORDER: label, link, class
   let actions = [
-    //['Ask','#', 'ask'],
+    ['Ask a question','#', 'ask'],
     ['Link','#', 'link'],
     ['Tweet', '#', 'tweet'],
     ['Bookmark','#', 'bookmark']
@@ -90,12 +90,17 @@
       $('.bookmark-body').addClass('show');
       return false;
     });
-    $('ul.tooltip li a.tweet').click(function () { // click send tweet
+  $('ul.tooltip li a.tweet').click(function () { // click send tweet
       $('#modalbase').addClass('show');
       $('.tweet-body').addClass('show');
       return false;
     });
-  
+    $('ul.tooltip li a.ask').click(function () { // click send tweet
+      $('#modalbase').addClass('show');
+      $('.askquestion-body').addClass('show');
+      return false;
+    });
+
     $('#copy-link').click(function () { // Copy link button - confirm 'copy' was successful
     $('.linkback').addClass('copied');
     $("#copy-link").text("       Copied!  ");
@@ -109,12 +114,13 @@
 });
 
  
-
-  $('#modalbase'||'.close-link').click(function () { // close modal
+  //$('#modalbase'||'.close-link').click(function
+  $('.close-link').click(function () { // close modal
         $('#modalbase').removeClass('show');
         $('#reeedr-body p').removeClass('selected');
         $('.linkmodal-body').removeClass('show');
         $('.bookmark-body').removeClass('show');
+        $('.askquestion-body').removeClass('show');
         $('.tweet-body').removeClass('show');
         return false;
     });

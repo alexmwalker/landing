@@ -4202,7 +4202,10 @@ li.toc-chapter {
 #modal-dialog .tweet-body .small {
   color: #8799A7;
 }
-#modal-dialog .global:before {
+#modal-dialog .linkmodal-body .small:before,
+#modal-dialog .bookmark-body .small:before,
+#modal-dialog .askquestion-body .small:before,
+#modal-dialog .tweet-body .small:before {
   /* Globe icon */
   display: block;
   position: relative;
@@ -4214,13 +4217,13 @@ li.toc-chapter {
   margin-right: 0.5rem;
   background-size: auto 100%;
 }
-#modal-dialog .modal-avatar-gutter {
+#modal-dialog .linkback, #modal-dialog .tweetback {
   /* textarea */
   background: #2C2C2C;
   padding: 0 0.2rem calc(var(--baseline) / 2);
   margin: calc(var(--baseline) / 2) 0;
 }
-#modal-dialog .modal-avatar-gutter {
+#modal-dialog .tweetback {
   margin-left: calc(var(--baseline) * 2.5);
 }
 #modal-dialog a:link {
@@ -4291,11 +4294,6 @@ li.toc-chapter {
 }
 .tweet-body .username, .askquestion-body .username {
   display: block;
-}
-
-.full {
-  width: 100%;
-  margin-bottom: 0;
 }
 
 .twitter-controls {

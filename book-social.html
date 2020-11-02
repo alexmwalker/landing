@@ -4,7 +4,7 @@
   <title>Your First Week With Bootstrap | - SitePoint</title>
   <meta name="description" content="In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="styles/css/book.css?cache=1" rel="stylesheet" type="text/css">
+  <link href="styles/css/book.css?cache=12" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
 </head>
 <body class="-vr -labelling borders" id="reeedr"> 
@@ -225,7 +225,7 @@
             <li>it uses Flexbox for its grid system</li>
             <li>it provides tons of features and components.</li>
           </ul>
-          <p>The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component,</a>which replaces panels, thumbnails and wells from earlier versions of the library.</p>
+          <p>The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component, </a>which replaces panels, thumbnails and wells from earlier versions of the library.</p>
           <h2 id="what-is-the-bootstrap-card-component-">What Is the Bootstrap Card Component?</h2>
           <p>Bootstrap introduces a new UI component for creating cards which provides a flexible and stylish container for showing content. Cards come with minimal styling, but you can easily extend them with extra styling options.</p>
           <div class="anchor"><a class="social-anchor" href="#0"><img src="https://pbs.twimg.com/profile_images/861010112852262912/nbPZKMyR_400x400.jpg"></a>
@@ -367,17 +367,19 @@
   </section>
   <div id="modalbase">
     <dialog id="modal-dialog">
+      <!--* Send a link-->
       <div class="linkmodal-body">
         <h4>Create a link to this paragraph</h4>
-        <p class="small">Anyone with this link can view this section of the book.</p>
+        <p class="small global">Anyone with this link can view this section of the book.</p>
         <p class="linkback"><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
         <div class="close-link">x</div>
         <div class="button" id="copy-link">Copy Link</div>
       </div>
+      <!--* Tweet a link-->
       <div class="tweet-body">
         <h4>Tweet a link to this paragraph </h4><img class="avatar" src="images/authors/author-malcurtis.png">
-        <p class="tweetback"><span class="username"> <strong>Mal Curtis </strong>@IntrepidFaux</span><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
-        <p class="small">Anyone with this link can view this section of the book.</p>
+        <p class="modal-avatar-gutter"><span class="username"> <strong>Mal Curtis </strong>@IntrepidFaux</span><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
+        <p class="small global">Anyone with this link can view this section of the book.</p>
         <div class="close-link">x</div>
         <svg class="twitter-controls" viewBox="0 0 141 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M100.6 6.6a1 1 0 100-2 1 1 0 000 2zM105.3 5.6a1 1 0 11-1.9 0 1 1 0 012 0z" fill="#059FF5"></path>
@@ -389,8 +391,30 @@
         </svg>
         <div class="button" id="copy-link">Tweet</div>
       </div>
+      <!--* Bookmark -->
       <div class="bookmark-body">
         <h4>Bookmark Added!</h4>
+        <div class="close-link">x</div>
+      </div>
+      <!--* Ask a question-->
+      <div class="askquestion-body">
+        <h4>Post a question to the SitePoint Community</h4>
+        <svg class="avatar" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="20" fill="#C3002F"></rect>
+          <path d="M14.7 23.7h-4.1L9.8 26H7.3l4.3-11.4h2.1L18 26h-2.5l-.8-2.3zm-3.5-2h2.9l-1.5-4.2-1.4 4.3zm16.4 1l1.5-8h2.4L28.9 26h-2.3l-1.9-7.6L23 26h-2.4L18 14.6h2.3l1.6 8.1 1.9-8h2l1.8 8z" fill="#fff"></path>
+        </svg>
+        <form class="discourse-post modal-avatar-gutter">
+          <label class="minor" for="ask-a-question">What is your question in one brief sentence.
+            <input class="minor full" id="ask-a-question" type="text" placeholder=" ">
+          </label>
+          <label class="minor" for="question-details">Explain any details here: 
+            <textarea class="minor full" id="question-details" type="textarea" rows="5" placeholder="(Markdown is ok)"></textarea>
+          </label>
+          <label class="small" for="include-link">
+            <input id="include-link" type="checkbox" checked=""> Include a link to this book section (Y/N?)
+          </label>
+          <button class="button" type="submit">Post your question</button>
+        </form>
         <div class="close-link">x</div>
       </div>
     </dialog>

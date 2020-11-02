@@ -139,7 +139,7 @@ figcaption {
   font-size: calc(1rem / var(--typescale));
   line-height: calc(var(--baseline) / 1.5);
   margin-top: 0;
-  margin-bottom: calc(var(--baseline) / 2);
+  /* margin-bottom: calc(var(--baseline) / 2); */
 }
 
 .small {
@@ -4294,8 +4294,8 @@ li.toc-chapter {
 }
 
 .full {
+  outline: 1px red dashed;
   width: 100%;
-  margin-bottom: 0;
 }
 
 .twitter-controls {

@@ -1,25 +1,29 @@
 #modalbase
   dialog#modal-dialog
+
+    //* Send a link
     .linkmodal-body
       h4 Create a link to this paragraph
-      p.small Anyone with this link can view this section of the book.
+      p.small.global Anyone with this link can view this section of the book.
       p.linkback
         a(href='https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo')
           | https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo
       .close-link x
       .button#copy-link Copy Link
 
+
+    //* Tweet a link
     .tweet-body
       h4 Tweet a link to this paragraph 
       img.avatar(src='images/authors/author-malcurtis.png')
       
-      p.tweetback
+      p.modal-avatar-gutter
         span.username 
           strong Mal Curtis 
           | @IntrepidFaux
         a(href='https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo')
           | https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo
-      p.small Anyone with this link can view this section of the book.
+      p.small.global Anyone with this link can view this section of the book.
 
       .close-link x
       svg(class='twitter-controls' viewBox='0 0 141 16' fill='none' xmlns='http://www.w3.org/2000/svg')
@@ -32,7 +36,31 @@
 
       .button#copy-link Tweet
 
-
+    //* Bookmark 
     .bookmark-body
       h4 Bookmark Added!
+      .close-link x
+
+
+    //* Ask a question
+    .askquestion-body
+      h4 Post a question to the SitePoint Community
+
+      svg.avatar( viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+        rect(width='40' height='40' rx='20' fill='#C3002F')
+        path(d='M14.7 23.7h-4.1L9.8 26H7.3l4.3-11.4h2.1L18 26h-2.5l-.8-2.3zm-3.5-2h2.9l-1.5-4.2-1.4 4.3zm16.4 1l1.5-8h2.4L28.9 26h-2.3l-1.9-7.6L23 26h-2.4L18 14.6h2.3l1.6 8.1 1.9-8h2l1.8 8z' fill='#fff')
+
+
+
+      form.discourse-post.modal-avatar-gutter
+        label.minor(for='ask-a-question') What is your question in one brief sentence.
+          input#ask-a-question.minor.full(type='text' placeholder=' ')
+        label.minor(for='question-details') Explain any details here: 
+          textarea#question-details.minor.full(type='textarea' rows='5' placeholder='(Markdown is ok)' )
+        label.small(for='include-link')
+          input#include-link(type='checkbox' checked='')
+          |  Include a link to this book section (Y/N?)
+        button.button(type='submit') Post your question
+
+
       .close-link x
