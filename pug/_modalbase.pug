@@ -51,7 +51,6 @@
         path(d='M14.7 23.7h-4.1L9.8 26H7.3l4.3-11.4h2.1L18 26h-2.5l-.8-2.3zm-3.5-2h2.9l-1.5-4.2-1.4 4.3zm16.4 1l1.5-8h2.4L28.9 26h-2.3l-1.9-7.6L23 26h-2.4L18 14.6h2.3l1.6 8.1 1.9-8h2l1.8 8z' fill='#fff')
 
 
-
       form.discourse-post.modal-avatar-gutter
         label.minor(for='ask-a-question') What is your question in one brief sentence.
           input#ask-a-question.minor.full(type='text' placeholder=' ')
@@ -59,8 +58,8 @@
           textarea#question-details.minor.full(type='textarea' rows='5' placeholder='(Markdown is ok)' )
         label.small(for='include-link')
           input#include-link(type='checkbox' checked='')
-          |  Include a link to this book section (Y/N?)
-        button.button(type='submit') Post your question
+          |  Include a link to this book section?
+        button#ask.button(type='submit') Post your question
 
 
       .close-link x

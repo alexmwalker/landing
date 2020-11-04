@@ -4217,7 +4217,7 @@ li.toc-chapter {
 #modal-dialog .modal-avatar-gutter {
   /* textarea */
   background: #2C2C2C;
-  padding: 0 0.5rem calc(var(--baseline) / 2);
+  padding: 0 0.2rem calc(var(--baseline) / 2);
   margin: calc(var(--baseline) / 2) 0;
 }
 #modal-dialog .modal-avatar-gutter {
@@ -4293,15 +4293,10 @@ li.toc-chapter {
   display: block;
 }
 
-/* piecemeal adjustments */
 .full {
-  width: calc(100% - 0.5rem);
-  display: block;
-  margin: 0;
-}
-
-.askquestion-body .button {
-  margin-top: calc(var(--baseline) / 4);
+  width: auto;
+  /* display: block; */
+  margin: 0 1rem 0 0;
 }
 
 .twitter-controls {

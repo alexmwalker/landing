@@ -4216,8 +4216,8 @@ li.toc-chapter {
 }
 #modal-dialog .modal-avatar-gutter {
   /* textarea */
-  background: #2C2C2C;
-  padding: 0 0.5rem calc(var(--baseline) / 2);
+  /* background: #2C2C2C; */
+  padding: 0 0.2rem calc(var(--baseline) / 2);
   margin: calc(var(--baseline) / 2) 0;
 }
 #modal-dialog .modal-avatar-gutter {
@@ -4293,26 +4293,50 @@ li.toc-chapter {
   display: block;
 }
 
-/* piecemeal adjustments */
 .full {
-  width: calc(100% - 0.5rem);
-  display: block;
-  margin: 0;
-}
-
-.askquestion-body .button {
-  margin-top: calc(var(--baseline) / 4);
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .twitter-controls {
   height: calc(var(--baseline) / 2);
 }
 
-/* === COPY success confirmation mechanism  === */
+/* === COPY confirmation mechanism  === */
 .copied {
   position: relative;
   -webkit-animation: copyflash 0.6s ease-out;
           animation: copyflash 0.6s ease-out;
+  /*  // DISABLED: speech bubble tooltip confirming content has been copied 
+      // REPLACED WITH: Switching the button text from 'Copy text' to 'Copied'
+    &:after, &:before{ // the 'Copied to clipboard' message
+     display: block;
+     position: absolute;
+     opacity: 0;
+     background: #000;
+     content: 'Copied to clipboard';
+     font-size: calc(1rem / var(--typescale) / var(--typescale) / var(--typescale));
+     line-height: calc(var(--baseline));
+     border-radius: 1rem;
+     padding: 0 1rem;
+     top: -2rem;
+     right: 1rem;
+     animation: fader 5s
+    }
+    &:before{ // the triangle 
+     content:'';
+     top: -.75rem;
+     opacity: 0;
+     right: 3rem;
+     width: 0rem;
+     height: 0rem;
+     padding: 0;
+     border: 1rem solid transparent;
+     border-color:#000 rgba(0,0,0,0) rgba(0,0,0,0);
+     border-width: 1rem 1rem 0;
+     background: none;
+     border-radius: 0;
+    }*/
 }
 
 @-webkit-keyframes copyflash {
