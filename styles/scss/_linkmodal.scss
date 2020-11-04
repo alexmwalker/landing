@@ -60,14 +60,15 @@
     background-size: auto 100%;
   }
 
-
+  .modal-gutter { /* create link */
+    background: #2C2C2C;
+    padding: 0 .5rem calc(var(--baseline) / 2);
+    margin: calc(var(--baseline) / 2) 0;
+  }
   .modal-avatar-gutter { /* textarea */
     background: #2C2C2C;
     padding: 0 .5rem calc(var(--baseline) / 2);
     margin: calc(var(--baseline) / 2) 0;
-    //overflow: hidden;
-  }
-  .modal-avatar-gutter{
     margin-left: calc(var(--baseline) * 2.5);
   }
   a:link {
@@ -134,10 +135,24 @@
     position: absolute;
     top: 0;
     right: 1rem;
+    width: 1rem;
+    height: 1rem;
     cursor: pointer;
+    svg{
+      width: 100%;
+      display: inline;
+    }
   }
 }
-.tweet-body, .askquestion-body{
+
+textarea{
+
+}
+
+.linkmodal-body,
+.bookmark-body,
+.askquestion-body,
+.tweet-body {
   position: relative;
   
   .avatar{
@@ -161,6 +176,29 @@
 }
 .twitter-controls{ //svg
   height: calc(var(--baseline) / 2);
+}
+.discourse-post label{
+  position: relative;
+}
+.post-controls {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  top: calc(var(--baseline) * .75);
+  left: 0rem;
+  right:0;
+  padding: 0.25rem 1rem;
+  //border-bottom: 1px #999 solid;
+  svg{
+    height: calc(var(--baseline) / 2);
+  }
+}
+#question-details{
+  padding-top: calc(var(--baseline) * 1);
+}
+
+.part-2, .part-3{
+  display: none;
 }
 /* === COPY success confirmation mechanism  === */ 
 .copied { 
