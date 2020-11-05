@@ -115,18 +115,17 @@
 
   $('#ask').click(function () { // Copy link button - confirm 'copy' was successful
     $('.part-1').css("display", "none");
-    $('.part-3').css("display", "block");
-    //setTimeout(function() {
-      //$(".linkback").removeClass("copied");
-      //$("#copy-link").text("Copy link");
-      //$("#copy-link").css("background", "#059FF5");
-    //}, 3000);
+    $('.part-2').css("display", "block");
+    setTimeout(function() {
+      $('.part-2').css("display", "none");
+      $('.part-3').css("display", "block");
+    }, 2000);
     return false;
   });
 
  
   //$('#modalbase'||'.close-link').click(function
-  $('.close-link').click(function () { // close modal
+  $('.closeme').click(function () { // close modal
         $('#modalbase').removeClass('show');
         $('#reeedr-body p').removeClass('selected');
         $('.linkmodal-body').removeClass('show');

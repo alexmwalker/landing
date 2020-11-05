@@ -10,7 +10,7 @@
         a(href='https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo')
           | https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo
 
-      .close-link
+      .close-link.closeme
         svg(viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg')
           path(d='M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z' fill='#059FF5')
 
@@ -31,7 +31,7 @@
 
       p.small.global Anyone with this link can view this section of the book.
 
-      .close-link 
+      .close-link.closeme 
         svg(viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg')
           path(d='M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z' fill='#059FF5')
 
@@ -48,7 +48,7 @@
     //* Bookmark 
     .bookmark-body
       h4 Bookmark Added!
-      .close-link 
+      .close-link.closeme 
         svg(width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg')
           path(d='M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z' fill='#059FF5')
 
@@ -97,6 +97,7 @@
                     path(d='M81.6 4c0-.6.5-1 1-1h3c.6 0 1 .4 1 1v5a4 4 0 01-4 4v-2.2a3 3 0 002-2.8h-2a1 1 0 01-1-1V4z')
 
             textarea#question-details.minor.full(type='textarea' rows='5' placeholder='' )
+
           label.small(for='include-link')
             input#include-link(type='checkbox' checked='')
             |  Include a link to this book section?
@@ -104,30 +105,32 @@
 
       .part-2
         h4 Posting...
-          svg.avatar( viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
-            rect(width='40' height='40' rx='20' fill='#C3002F')
-            path(d='M14.7 23.7h-4.1L9.8 26H7.3l4.3-11.4h2.1L18 26h-2.5l-.8-2.3zm-3.5-2h2.9l-1.5-4.2-1.4 4.3zm16.4 1l1.5-8h2.4L28.9 26h-2.3l-1.9-7.6L23 26h-2.4L18 14.6h2.3l1.6 8.1 1.9-8h2l1.8 8z' fill='#fff')
-
-        .spinner-holder
-          h5 Preparing Post
+      
+        .loader
+          svg.lds-infinity(xmlns='http://www.w3.org/2000/svg' viewBox='0 20 100 60' preserveAspectRatio='xMidYMid')
+            path(fill='none' d='M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z' stroke='rgba(255,255,255,0.05)' stroke-width='7')
+            path(fill='none' d='M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z' stroke='#CC3F72' stroke-width='7' stroke-dasharray='110 8 7 6 5 4 3 2 1 110')
+              animate(attributeName='stroke-dashoffset' calcMode='linear' values='0;256.6' keyTimes='0;1' dur='2.3' begin='0s' repeatCount='indefinite')
+          |   Preparing to post...
 
       .part-3
-        h4 Question posting
+        h4 Success!
         svg.avatar( viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
           rect(width='40' height='40' rx='20' fill='#C3002F')
           path(d='M14.7 23.7h-4.1L9.8 26H7.3l4.3-11.4h2.1L18 26h-2.5l-.8-2.3zm-3.5-2h2.9l-1.5-4.2-1.4 4.3zm16.4 1l1.5-8h2.4L28.9 26h-2.3l-1.9-7.6L23 26h-2.4L18 14.6h2.3l1.6 8.1 1.9-8h2l1.8 8z' fill='#fff')
 
-        h5.modal-avatar-gutter Success!
+        
         p.modal-avatar-gutter Your question has been posted to the 
           a(href="https://www.sitepoint.com/community/") SitePoint Community
           |. We’ll notify you the moment we see a response.  
 
-        a(href="https://www.sitepoint.com/community/t/grid-items-not-centering/359083").button#go-to-post Click here to view your post
+        .center
+          a(href="https://www.sitepoint.com/community/t/grid-items-not-centering/359083").button#go-to-post Click here to view your post
         
         footer
-          a.minor(href="#") (X) Or close this window and return to your book
+          a.minor.closeme(href="#0") (X) Or close this window and return to your book
 
-      .close-link 
+      .close-link.closeme 
         svg(viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg')
           path(d='M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z' fill='#059FF5')
 

@@ -69,7 +69,7 @@
     margin: calc(var(--baseline) / 2) 0;
     margin-left: calc(var(--baseline) * 2.5);
   }
-  a:link {
+  a:link, a:visited {
     color: #059FF5;
   }
 
@@ -127,7 +127,7 @@
       box-shadow: 0 0 4px rgba(0, 0, 0, .4);
       background: #12AAFF;
     }
-    a:link{
+    &:link, &:visited{
       color:#fff;
     }
   }
@@ -146,10 +146,19 @@
   }
   footer{
     text-align: right;
-    border-top: 1px #444 solid
+    border-top: 1px #444 solid;
+    margin-top: calc(var(--baseline) * 1);
+    clear: both; 
+    a{
+      margin-bottom: 0;
+    }
   }
 }
-
+.center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 
 .linkmodal-body,
@@ -176,6 +185,9 @@
 }
 .askquestion-body .button{
   margin-top: calc(var(--baseline) / 4);
+}
+.askquestion-body .part-3 .button{
+  float: none;
 }
 .twitter-controls{ //svg
   height: calc(var(--baseline) / 2);
@@ -206,26 +218,28 @@
 .part-2, .part-3{
   display: none;
 }
+.part-2{
+  .loader{
+    width: 40%;
+    margin: 0 30%;
+    height: 20vw;
+    text-align: center;
+    svg{
+      width: 100%;
+    }
+  }
+}
 /* === COPY success confirmation mechanism  === */ 
 .copied { 
   position: relative;
   animation: copyflash .6s ease-out;
- }
- 
- 
+}
+
  @keyframes copyflash{
   000%{background: #2C2C2C;}
   020%{background: #c2c2c2;}
   100%{background: #2C2C2C;}
- }
- 
- /*@keyframes fader{
-  000%{opacity: 0;}
-  020%{opacity: 1;}
-  070%{opacity: 1;}
-  100%{opacity: 0;}
- }*/
- 
+}
 
 dialog {
   display: block

@@ -4228,7 +4228,7 @@ li.toc-chapter {
   margin: calc(var(--baseline) / 2) 0;
   margin-left: calc(var(--baseline) * 2.5);
 }
-#modal-dialog a:link {
+#modal-dialog a:link, #modal-dialog a:visited {
   color: #059FF5;
 }
 #modal-dialog h4 {
@@ -4278,7 +4278,7 @@ li.toc-chapter {
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   background: #12AAFF;
 }
-#modal-dialog .button a:link {
+#modal-dialog .button:link, #modal-dialog .button:visited {
   color: #fff;
 }
 #modal-dialog .close-link {
@@ -4296,6 +4296,24 @@ li.toc-chapter {
 #modal-dialog footer {
   text-align: right;
   border-top: 1px #444 solid;
+  margin-top: calc(var(--baseline) * 1);
+  clear: both;
+}
+#modal-dialog footer a {
+  margin-bottom: 0;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .linkmodal-body,
@@ -4329,6 +4347,10 @@ li.toc-chapter {
 
 .askquestion-body .button {
   margin-top: calc(var(--baseline) / 4);
+}
+
+.askquestion-body .part-3 .button {
+  float: none;
 }
 
 .twitter-controls {
@@ -4365,6 +4387,16 @@ li.toc-chapter {
   display: none;
 }
 
+.part-2 .loader {
+  width: 40%;
+  margin: 0 30%;
+  height: 20vw;
+  text-align: center;
+}
+.part-2 .loader svg {
+  width: 100%;
+}
+
 /* === COPY success confirmation mechanism  === */
 .copied {
   position: relative;
@@ -4395,12 +4427,6 @@ li.toc-chapter {
     background: #2C2C2C;
   }
 }
-/*@keyframes fader{
- 000%{opacity: 0;}
- 020%{opacity: 1;}
- 070%{opacity: 1;}
- 100%{opacity: 0;}
-}*/
 dialog {
   display: block;
 }
