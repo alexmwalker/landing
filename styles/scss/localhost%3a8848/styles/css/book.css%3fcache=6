@@ -4214,16 +4214,15 @@ li.toc-chapter {
   margin-right: 0.5rem;
   background-size: auto 100%;
 }
-#modal-dialog .darker {
-  background: #2C2C2C;
-}
 #modal-dialog .modal-gutter {
   /* create link */
+  background: #2C2C2C;
   padding: 0 0.5rem calc(var(--baseline) / 2);
   margin: calc(var(--baseline) / 2) 0;
 }
 #modal-dialog .modal-avatar-gutter {
   /* textarea */
+  /* background: #2C2C2C; */
   padding: 0 0.5rem calc(var(--baseline) / 2);
   margin: calc(var(--baseline) / 2) 0;
   margin-left: calc(var(--baseline) * 2.5);
@@ -4292,10 +4291,6 @@ li.toc-chapter {
 #modal-dialog .close-link svg {
   width: 100%;
   display: inline;
-}
-#modal-dialog footer {
-  text-align: right;
-  border-top: 1px #444 solid;
 }
 
 .linkmodal-body,
