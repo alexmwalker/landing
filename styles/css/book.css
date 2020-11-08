@@ -4214,9 +4214,6 @@ li.toc-chapter {
   margin-right: 0.5rem;
   background-size: auto 100%;
 }
-#modal-dialog .darker {
-  background: #2C2C2C;
-}
 #modal-dialog .modal-gutter {
   /* create link */
   padding: 0 0.5rem calc(var(--baseline) / 2);
@@ -4224,9 +4221,12 @@ li.toc-chapter {
 }
 #modal-dialog .modal-avatar-gutter {
   /* textarea */
-  padding: 0 0.5rem calc(var(--baseline) / 2);
   margin: calc(var(--baseline) / 2) 0;
   margin-left: calc(var(--baseline) * 2.5);
+}
+#modal-dialog .darker {
+  background: #2C2C2C;
+  padding: 0 0.5rem calc(var(--baseline) / 2);
 }
 #modal-dialog a:link, #modal-dialog a:visited {
   color: #059FF5;
@@ -4363,20 +4363,17 @@ li.toc-chapter {
 
 .post-controls {
   position: absolute;
+  width: 10rem;
   z-index: 99;
   top: calc(var(--baseline) * .75);
-  left: 0rem;
+  left: 0;
   right: 0;
   padding: 0.25rem 1rem;
 }
-.post-controls svg {
+.post-controls img {
   height: calc(var(--baseline) / 2);
-}
-.post-controls svg a {
-  width: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 200px;
+  position: relative;
 }
 
 #question-details {
@@ -4388,13 +4385,14 @@ li.toc-chapter {
 }
 
 .part-2 .loader {
-  width: 40%;
-  margin: 0 30%;
+  width: 30%;
+  margin: 0 35%;
   height: 20vw;
   text-align: center;
 }
 .part-2 .loader svg {
-  width: 100%;
+  width: 80%;
+  margin: 0 10%;
 }
 
 /* === COPY success confirmation mechanism  === */
