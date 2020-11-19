@@ -3119,7 +3119,7 @@ input:focus {
   left: 1rem;
   position: relative;
   float: left;
-  width: 80%;
+  width: 90%;
   padding: 0 0 0 1rem;
   -webkit-box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
           box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
@@ -3792,7 +3792,7 @@ input:checked + .trim-multiline:before {
   border-left: 1px #383838 solid;
 }
 
-.toolbar .grid-12 div {
+.toolbar .grid-12 > div {
   border-right: 1px solid #383838;
 }
 
@@ -3828,6 +3828,7 @@ input:checked + .trim-multiline:before {
   opacity: 0;
   position: absolute;
   width: 283px;
+  right: 0;
   height: calc(var(--baseline) * 2.5);
   overflow: hidden;
   background: #333333;
