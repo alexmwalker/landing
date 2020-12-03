@@ -4,7 +4,7 @@
   <title>Your First Week With Bootstrap | - SitePoint</title>
   <meta name="description" content="In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="styles/css/book.css?cache=1" rel="stylesheet" type="text/css">
+  <link href="styles/css/book.css?cache=6543" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
 </head>
 <body class="-vr -labelling borders" id="reeedr"> 
@@ -135,22 +135,16 @@
       <div class="container">
         <div class="toolbar">
           <div class="grid-12">
-            <div class="col-3_sm-4"><a class="toolbarLink viewchapters" src="#">
+            <div class="col-3_md-3_sm-4"><a class="toolbarLink viewchapters" src="#">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-chevron"></use>
                 </svg>Contents</a></div>
-            <div class="col-3_sm-4"><a class="toolbarLink" id="bookmarks" src="#">
+            <div class="col-3_md-3_sm-4"><a class="toolbarLink" id="bookmarks" src="#">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-chevron"></use>
                 </svg>My Bookmarks</a></div>
-            <!--.col-2_sm-4
-            a#addbookmarks.toolbarLink(src='#')
-              svg.svg-icon
-                use(fill='#fff', href='#my-add')
-              |  Add Bookmark
-            -->
-            <div class="col-3_sm-hidden"></div>
-            <div class="col-3_sm-hidden">
+            <div class="col-3_md-3_sm-hidden"> </div>
+            <div class="col-3_md-3_sm-hidden">
               <div class="toolbarLink" id="offlinemode">
                 <div class="pretty p-switch p-fill">
                   <input type="checkbox">
@@ -225,30 +219,7 @@
             <li>it uses Flexbox for its grid system</li>
             <li>it provides tons of features and components.</li>
           </ul>
-          <p>The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component,</a>which replaces panels, thumbnails and wells from earlier versions of the library.
-            <!--#tooltip
-            ul
-                li
-                  a(href="#").share
-                    span
-                    | Tweet
-                li
-                  a(href="#").bookmark
-                    span
-                    | Bookmark
-                li
-                  a(href="#").link
-                    span
-                    | Copy Link
-            -->
-            <!--.btn-toolbar.btn-toolbar-dark.pull-left(data-toolbar='user-options' data-toolbar-style='dark')
-            i.fa.fa-cog
-            
-            
-            
-            
-            -->
-          </p>
+          <p>The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component, </a>which replaces panels, thumbnails and wells from earlier versions of the library.</p>
           <h2 id="what-is-the-bootstrap-card-component-">What Is the Bootstrap Card Component?</h2>
           <p>Bootstrap introduces a new UI component for creating cards which provides a flexible and stylish container for showing content. Cards come with minimal styling, but you can easily extend them with extra styling options.</p>
           <div class="anchor"><a class="social-anchor" href="#0"><img src="https://pbs.twimg.com/profile_images/861010112852262912/nbPZKMyR_400x400.jpg"></a>
@@ -390,19 +361,29 @@
   </section>
   <div id="modalbase">
     <dialog id="modal-dialog">
+      <!--* Send a link-->
       <div class="linkmodal-body">
         <h4>Create a link to this paragraph</h4>
-        <p class="small">Anyone with this link can view this section of the book.</p>
-        <p class="linkback"><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
-        <div class="close-link">x</div>
-        <button id="copy-link">Copy Link</button>
+        <p class="small global">Anyone with this link can view this section of the book.</p>
+        <p class="linkback modal-gutter darker"><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
+        <div class="close-link closeme">
+          <svg viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z" fill="#059FF5"></path>
+          </svg>
+        </div>
+        <div class="button" id="copy-link">Copy Link</div>
       </div>
+      <!--* Tweet a link-->
       <div class="tweet-body">
         <h4>Tweet a link to this paragraph </h4><img class="avatar" src="images/authors/author-malcurtis.png">
-        <p class="tweetback"><span class="username"> <strong>Mal Curtis </strong>@IntrepidFaux</span><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
-        <p class="small">Anyone with this link can view this section of the book.</p>
-        <div class="close-link">x</div>
-        <svg class="twitter-controls" viewBox="0 0 141 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <p class="modal-avatar-gutter darker"><span class="username"> <strong>Mal Curtis </strong>@IntrepidFaux</span><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
+        <p class="modal-avatar-gutter small global">Anyone with this link can view this section of the book.</p>
+        <div class="close-link closeme"> 
+          <svg viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z" fill="#059FF5"></path>
+          </svg>
+        </div>
+        <svg class="modal-avatar-gutter twitter-controls" viewBox="0 0 141 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M100.6 6.6a1 1 0 100-2 1 1 0 000 2zM105.3 5.6a1 1 0 11-1.9 0 1 1 0 012 0z" fill="#059FF5"></path>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M110 7.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0zm-1.2 0a6.3 6.3 0 11-12.6 0 6.3 6.3 0 0112.6 0z" fill="#059FF5"></path>
           <path d="M102.7 9.4a5.5 5.5 0 01-.3 0c-1.7 0-2.6-.7-2.8-1a.6.6 0 00-.8-.2c-.2.2-.3.5-.1.8.4.6 1.7 1.6 3.7 1.6a7 7 0 00.3 0c2 0 3.3-1 3.7-1.6.2-.3.1-.6-.1-.8a.6.6 0 00-.8.2c-.2.3-1.1 1-2.8 1z" fill="#059FF5"></path>
@@ -410,11 +391,66 @@
           <path d="M36.4 7.1c0-.3-.3-.5-.7-.5-.6 0-1 .4-1 1.2 0 .7.4 1.2 1 1.2.5 0 .8-.3.8-.7h-.8v-.7h1.7v.5c0 1-.7 1.7-1.7 1.7-1.2 0-2-.8-2-2 0-1.3.9-2 2-2 .9 0 1.6.5 1.7 1.3h-1zM39.4 5.8v4h-1v-4h1zM40.5 9.8v-4h2.7v.8h-1.7v.8H43v.8h-1.6v1.6h-1z" fill="#059FF5"></path>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.6C0 .7.7 0 1.6 0h11.8c.9 0 1.6.7 1.6 1.6v11.8c0 .9-.7 1.6-1.6 1.6H1.6C.7 15 0 14.3 0 13.4V1.6zm1.6-.2c-.1 0-.2 0-.2.2v9.3L5 7.3l1.7 1.4L10 5.4l3.6 3.3V1.6c0-.1 0-.2-.2-.2H1.6zm12 9.1L10 7.3 7.7 9.6l4.6 4h1.1c.1 0 .2 0 .2-.2v-2.9zm-3.3 3.1L5 9.1l-3.6 3.7v.6c0 .1 0 .2.2.2h8.7zM6.3 5a1.4 1.4 0 11-2.7 0 1.4 1.4 0 012.8 0zM65 .5a.5.5 0 10-1 0V14.5a.5.5 0 101 0v-1.6h9.7V9.6h5.4V5.4h-3.2V2H65V.5zm0 2.7v2.2h10.8V3.2H65zm0 3.2v2.2h14V6.4H65.1zm0 3.2v2.2h8.6V9.6h-8.5zM130.6 0c.4 0 .7.3.7.6V1h5.7V.6a.6.6 0 011.3 0V1h.7a2 2 0 012 2v5.3c-.3-.5-.8-.9-1.3-1.2V5h-11.4v7c0 .4.3.8.7.8h2.1l.5 1.2H129a2 2 0 01-2-2V3c0-1.1.9-2 2-2h1V.6c0-.3.3-.6.6-.6zm6.4 2.3a.6.6 0 001.3 0h.7c.4 0 .8.3.8.7v1h-11.6V3c0-.4.4-.8.8-.8h1v.2a.6.6 0 001.3 0v-.1h5.7zm-.5 4.7a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm0 8.1a3.6 3.6 0 110-7.2 3.6 3.6 0 010 7.2zm-.5-6.6v2.8l3 1.7.5-.7L137 11V8.5h-1z" fill="#059FF5"></path>
         </svg>
-        <button id="copy-link">Tweet</button>
+        <div class="button" id="copy-link">Tweet</div>
       </div>
+      <!--* Bookmark -->
       <div class="bookmark-body">
         <h4>Bookmark Added!</h4>
-        <div class="close-link">x</div>
+        <div class="close-link closeme"> 
+          <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z" fill="#059FF5"></path>
+          </svg>
+        </div>
+      </div>
+      <!--* Ask a question-->
+      <div class="askquestion-body">
+        <div class="part-1">
+          <h4>Post a question to the SitePoint Community</h4>
+          <svg class="avatar" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="20" fill="#C3002F"></rect>
+            <path d="M14.7 23.7h-4.1L9.8 26H7.3l4.3-11.4h2.1L18 26h-2.5l-.8-2.3zm-3.5-2h2.9l-1.5-4.2-1.4 4.3zm16.4 1l1.5-8h2.4L28.9 26h-2.3l-1.9-7.6L23 26h-2.4L18 14.6h2.3l1.6 8.1 1.9-8h2l1.8 8z" fill="#fff"></path>
+          </svg>
+          <form class="discourse-post modal-avatar-gutter">
+            <label class="minor" for="ask-a-question">What is your question in one brief sentence.
+              <input class="minor full" id="ask-a-question" type="text" placeholder=" ">
+            </label>
+            <label class="minor" for="question-details">Explain any details here (Markdown is ok): 
+              <!--img(src="images/post-ui.svg" width = "186" height="15")-->
+              <div class="post-controls"><img src="images/post-ui.svg" width="186" height="15"></div>
+              <textarea class="minor full" id="question-details" type="textarea" rows="5" placeholder=""></textarea>
+            </label>
+            <label class="small" for="include-link">
+              <input id="include-link" type="checkbox" checked=""> Include a link to this book section?
+            </label>
+            <button class="button" id="ask" type="submit">Post your question</button>
+          </form>
+        </div>
+        <div class="part-2">
+          <h4>Posting...</h4>
+          <div class="loader">
+            <svg class="lds-infinity" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 100 60" preserveAspectRatio="xMidYMid">
+              <path fill="none" d="M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z" stroke="rgba(255,255,255,0.05)" stroke-width="7"></path>
+              <path fill="none" d="M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z" stroke="#CC3F72" stroke-width="7" stroke-dasharray="110 8 7 6 5 4 3 2 1 110">
+                <animate attributeName="stroke-dashoffset" calcMode="linear" values="0;256.6" keyTimes="0;1" dur="2.3" begin="0s" repeatCount="indefinite"></animate>
+              </path>
+            </svg>  Preparing to post...
+          </div>
+        </div>
+        <div class="part-3">
+          <h4>Success!</h4>
+          <svg class="avatar" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="20" fill="#C3002F"></rect>
+            <path d="M14.7 23.7h-4.1L9.8 26H7.3l4.3-11.4h2.1L18 26h-2.5l-.8-2.3zm-3.5-2h2.9l-1.5-4.2-1.4 4.3zm16.4 1l1.5-8h2.4L28.9 26h-2.3l-1.9-7.6L23 26h-2.4L18 14.6h2.3l1.6 8.1 1.9-8h2l1.8 8z" fill="#fff"></path>
+          </svg>
+          <p class="modal-avatar-gutter">Your question has been posted to the <a href="https://www.sitepoint.com/community/">SitePoint Community</a>. We’ll notify you the moment we see a response.  </p>
+          <div class="center"><a class="button" href="https://www.sitepoint.com/community/t/grid-items-not-centering/359083" id="go-to-post">Click here to view your post</a></div>
+          <footer><a class="minor closeme" href="#0">(X) Or close this window and return to your book</a></footer>
+        </div>
+        <div class="close-link closeme"> 
+          <svg viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z" fill="#059FF5"></path>
+          </svg>
+        </div>
       </div>
     </dialog>
   </div>
@@ -422,7 +458,7 @@
   <footer class="mainfooter">
     <div class="container">
       <div class="grid">
-        <div class="col-6">Copyright 2018 SitePoint</div>
+        <div class="col-6">Copyright 2020 SitePoint</div>
         <div class="col-6" id="log"> </div>
       </div>
     </div>
@@ -435,406 +471,7 @@
   <!-- script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")-->
   <script src="scripts/jquery-3.4.0.min.js"></script>
   <script src="scripts/prism.js"></script>
-  <script>
-    /* ==  Alex's font-size changer   ==  */
-    /* ==  Scaling the root scales all font's proportionally   ==  */
-    var currentgrid = $(":root").css("--basegrid");
-    var currentgridtablet = $(":root").css("--basegrid-tablet");
-    var currentgridlaptop = $(":root").css("--basegrid-laptop");
-    var currentgridwide = $(":root").css("--basegrid-wide");
-    var newcurrentgrid;
-    var newcurrentgridtablet;
-    var newcurrentgridlaptop;
-    var newcurrentgridwide;
-    $('a.darkmode').click(function(e) {
-    e.preventDefault();
-    });
-    
-    /* === CREATE CLICKPOP TOOLBAR === */
-    
-    // TOOLBAR MENU ORDER: label, link, class
-    let actions = [
-      //['Ask','#', 'ask'],
-      ['Link','#', 'link'],
-      ['Tweet', '#', 'tweet'],
-      ['Bookmark','#', 'bookmark']
-    ];
-    
-    // BUILD TEXTTOOL UI UNIT
-    let fragment = new DocumentFragment();
-    
-    let ul = document.createElement('ul');
-    ul.setAttribute('class', 'tooltip');
-    
-    actions.forEach((action) => {
-      let li = document.createElement('li');
-      let a = document.createElement('a');
-      a.setAttribute('href', action[1]);
-      a.setAttribute('class', action[2]);
-      a.innerHTML = action[0];
-      li.appendChild(a);
-      ul.appendChild(li);
-    })
-    
-    fragment.appendChild(ul)
-    
-    
-    
-    
-     /* == simple nav controls/animations  == */
-    $(document).ready(function () {
-      $('.hamburger').click(function () {
-        $(this).toggleClass('open');
-      $('.mobilenav').toggleClass('open');
-    });
-    $('.viewchapters').click(function () {
-      $('.toc-container').toggleClass('open');
-      $('.viewchapters').toggleClass('open');
-    });
-    $('#closetoc').click(function () {
-      $('.toc-container').removeClass('open');
-    });
-    
-    $('#showfontchanger').click(function () {
-      $('#font-adjuster-container').toggleClass('show');
-    });
-    
-    
-    $('.social-anchor').click(function () {
-      $('#reeedr-body>.container').toggleClass('social-panel');
-    });
-    
-    
-    /*$('#reeedr-body').click(function () {
-        $('p').removeClass('selected');
-      });*/
-    
-    $('#reeedr-body .col-12>p').append(fragment); // Add toolbar to every <P>
-    
-    
-     $('#reeedr-body p').click(function () {
-       $('p').remove( '.tooltip' );
-       $('p').removeClass('selected');
-       $(this).addClass('selected');
-       // $(this).append(fragment);
-    });
-    
-    
-    // Texttool controls
-    
-    $('ul.tooltip li a.link').click(function () { // send link
-        $('#modalbase').addClass('show');
-        $('.linkmodal-body').addClass('show');
-        return false;
-      });
-    $('ul.tooltip li a.bookmark').click(function () { // bookmark
-        $('#modalbase').addClass('show');
-        $('.bookmark-body').addClass('show');
-        return false;
-      });
-      $('ul.tooltip li a.tweet').click(function () { // send tweet
-        $('#modalbase').addClass('show');
-        $('.tweet-body').addClass('show');
-        return false;
-      });
-    
-    $('#modalbase'||'.close-link').click(function () { // close modal
-          $('#modalbase').removeClass('show');
-          $('#reeedr-body p').removeClass('selected');
-          $('.linkmodal-body').removeClass('show');
-          $('.bookmark-body').removeClass('show');
-          $('.tweet-body').removeClass('show');
-          return false;
-      });
-    
-    
-    $('.darkmode').click(function () {
-      $('#reeedr').toggleClass('dark');
-    });
-    
-    $('#start-search').click(function () {
-      startSearch();
-      $('#search-panel').toggleClass('showresults');
-    });
-    
-    $( "#searchform" ).submit(function( event ) {
-      //alert( "Handler for .submit() called." );
-      startSearch();
-      grabSearch();
-      event.preventDefault();
-    });
-    
-    $('#search-close').click(function () {
-      //$('#search-panel').toggleClass('showresults');
-      $('.book-search-results-list dt').remove();
-      $('.book-search-results-list dd').remove();
-      $('#search-panel').removeClass('showresults');
-      $('#search-panel').removeClass('open');
-    });
-    
-    $('.search-control').click(function () { 
-      $('#search-panel').toggleClass('open');
-      $('#booksearch').focus();
-    });
-    
-    $("#offlinemode input").change(function () {
-      $("body").toggleClass("local", this.checked);
-      });
-    
-    /* ===  Take search term from input for use in page  ===  */
-      function grabSearch(){
-        var searchterm = document.querySelector("#booksearch").value;
-        //alert('The searchterm is ' + searchterm);
-        //document.queryselectorAll("em.query");
-        $( "em.query" ).append( searchterm );
-      }
-    
-    
-    
-    /* ===  Font rescaling  ===  */
-    /*   scaling the --basegrid :root font-size translates through to everything.   */
-    $('.fontsizedown').click(function () {
-      newcurrentgrid = parseInt(currentgrid, 10) - 4 + 'px';
-      $(":root").css("--basegrid", newcurrentgrid);
-      //console.log("currentgrid: " + currentgrid);
-      //console.log("newcurrentgrid: " + newcurrentgrid);
-      currentgrid = newcurrentgrid;
-      newcurrentgridtablet = parseInt(currentgridtablet, 10) - 4 + 'px';
-      $(":root").css("--basegrid-tablet", newcurrentgridtablet);
-      //console.log("currentgridtablet: " + currentgridtablet);
-      //console.log("newcurrentgridtablet: " + newcurrentgridtablet);
-      currentgridtablet = newcurrentgridtablet;
-      newcurrentgridlaptop = parseInt(currentgridlaptop, 10) - 4 + 'px';
-      $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
-      currentgridlaptop = newcurrentgridlaptop;
-      newcurrentgridwide = parseInt(currentgridwide, 10) - 4 + 'px';
-      $(":root").css("--basegrid-wide", newcurrentgridwide);
-      currentgridwide = newcurrentgridwide;
-    });
-    
-    $('.fontsizeup').click(function () {
-      newcurrentgrid = parseInt(currentgrid, 10) + 4 + 'px';
-      $(":root").css("--basegrid", newcurrentgrid);
-      currentgrid = newcurrentgrid;
-      newcurrentgridtablet = parseInt(currentgridtablet, 10) + 4 + 'px';
-      $(":root").css("--basegrid-tablet", newcurrentgridtablet);
-      currentgridtablet = newcurrentgridtablet;
-      newcurrentgridlaptop = parseInt(currentgridlaptop, 10) + 4 + 'px';
-      $(":root").css("--basegrid-laptop", newcurrentgridlaptop);
-      currentgridlaptop = newcurrentgridlaptop;
-      newcurrentgridwide = parseInt(currentgridwide, 10) + 4 + 'px';
-      $(":root").css("--basegrid-wide", newcurrentgridwide);
-      currentgridwide = newcurrentgridwide;
-      });
-    
-    });
-    
-    
-    /* ==  Fixed nav   == */
-    $(window).resize(function () {
-        /* close the menu on screen resize */
-        $('.showmobile').removeClass('open');
-        $('.mobilenav').removeClass('open');
-    });
-    $(window).scroll(function () {
-        /* close the menu on scroll */
-        $('.showmobile').removeClass('open');
-        $('.mobilenav').removeClass('open');
-    });
-    
-    function scrollActions() {
-    const brand = document.querySelector('.sitepoint-branding'); // select the brand
-    const toolcontainer = document.querySelector('#tool-container'); // height of the toolstrip
-    const toolstrip = document.querySelector('#toolstrip'); // height of the toolstrip
-    const bookpanel = document.querySelector('.bookpanel'); // height of the bookpanel
-    const totalbody = $( "#reeedr-body" ).height(); // height of the bookpanel
-    //const previewMax = document.querySelector('.preview-label'); // height of the bookpanel
-    const offlinebar = document.querySelector('#offline-notification'); // offline bar for tuckaway
-    const navTop = toolcontainer.offsetTop; // distance from top edge
-    const navMin = navTop / 4; // the delay before the title rolls on to the titlebar
-    
-    
-    const maxpreview = totalbody-300;
-    console.log('try this: ' + maxpreview);
-    
-    var lastScrollTop = 0; // set for updating to determine scroll direction
-    function stickyNavigation() {
-      //console.log('navTop = ' + navTop);
-      //console.log('scrollY = ' + window.scrollY);
-    //console.log('toolbaroffset = ' + toolbaroffset);
-      var st = window.pageYOffset || document.documentElement.scrollTop;
-      if (window.scrollY >= navTop) { // If scroll pos is greater than 418
-        //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
-        toolcontainer.classList.add('fixed-nav'); // add class that fixes toolstrip in place
-      } else {
-        //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
-        toolcontainer.classList.remove('fixed-nav');
-      }
-    
-    /* minize brand bar on scroll */
-    if (window.scrollY >= navMin) {
-        brand.classList.add('min');
-      } else {
-        brand.classList.remove('min');
-      }
-    /*  //preview maxie - removed 24 mar 2020 - not being used for non=preview versions
-    if (window.scrollY >= maxpreview) {
-        previewMax.classList.add('min');
-        console.log('scrollY = ' + window.scrollY + ' is more than ' + maxpreview);
-      } else {
-        previewMax.classList.remove('min');
-        console.log('scrollY = ' + window.scrollY + ' is less than ' + maxpreview);
-      }*/
-    
-    
-    if (st > lastScrollTop && window.scrollY >= navTop) { // tuck the brandstrip away when scrolling down - reveal on up scroll
-      brand.classList.add('tuckaway');
-      toolstrip.classList.add('tuckaway');
-      offlinebar.classList.add('tuckaway');   
-    } else {
-      brand.classList.remove('tuckaway');
-      toolstrip.classList.remove('tuckaway');
-      offlinebar.classList.remove('tuckaway');  
-    }
-      lastScrollTop = st <= 0 ? 0 : st; /* For Mobile or negative scrolling */
-    }
-      window.addEventListener('scroll', stickyNavigation);
-    }
-    scrollActions();
-    
-    /* ===  Mimic offline mode ===  */
-    /*   http://10.48.101.187:7883/book.html?offline=1   */
-    
-    function getUrlVars() {
-      var vars = {};
-      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-      });
-      return vars;
-    }
-    var offline = getUrlVars()["offline"];
-    var search = getUrlVars()["search"];
-    console.log('Variable is: ' + search );
-    
-    function checkConnection(){
-      if (offline == 1){
-      //alert('You  are currently offline. Reconnect to the internet to access this item.');
-      $('html').addClass('offline');
-        } else {
-      $('html').removeClass('offline');
-      //alert('You  are currently online.');
-      }
-    }
-    checkConnection();
-    
-    
-    /* *****  Script for mimicking live search  **** */
-    
-    var i = 0;   
-    
-    function startSearch() { // triggered on 'Go' search
-      //show search-body
-      $('.search-body').css('display', 'block');
-      //load search results from JSON
-      fetch('search.json')
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          myLoop(data);
-        })
-        .catch(function (err) {
-          console.log('error: ' + err);
-        });
-    
-    
-    /* Load empty Skeletons for replacement with real results later  
-    var mainContainer = document.getElementById("myData");
-      var dt = document.createElement("dt");
-          dt.appendChild(dth5);*/
-    
-    
-    var magGlassSVG = "<svg class='svg-icon'><use fill='currentColor' href='#my-search'/></svg>"
-    
-    function myLoop(data) {           //  create a loop function
-    var mainContainer = document.getElementById("myData");
-    
-      //$('#myData > dt').next('dt').style.border = "3px dashed green";
-    
-      setTimeout(function () {    //  call a 3s setTimeout when the loop is called
-          
-          var dta = document.createElement('a');
-          var linkText = document.createTextNode(data[i].searchTitle);
-          dta.appendChild(linkText);
-          //dta.title = "Search result";
-          dta.href = data[i].searchLink;
-          //document.body.appendChild(a);
-    
-    
-          // build the search result header <dt><h5>
-          var dth5 = document.createElement("h5");
-          dth5.className = "trim-singleline fade-inner";
-          //dth5.innerHTML =  magGlassSVG + " - " + data[i].searchTitle;
-          dth5.appendChild(dta);
-          var dt = document.createElement("dt");
-          dt.appendChild(dth5);
-       
-          // build the search result text <dd><p>
-    
-          var dd = document.createElement("dd");
-          var expand = document.createElement("input");
-          expand.className = "expand";
-          expand.type = "checkbox";
-          dd.appendChild(expand);
-    
-          var ddp = document.createElement("p");
-          ddp.className = "trim-multiline fade-inner";
-          //ddp.className = "fade-inner";
-    
-          ddp.innerHTML = data[i].searchDesc;
-          dd.appendChild(ddp);
-    
-    
-          // Inject new search result (with a slight delay)
-          console.log("loop running");
-          //mainContainer.prepend(dd);
-          //mainContainer.prepend(dt);
-    
-    
-          // replacer code DT
-          var grabDtSkel = document.querySelector('#myData dt.skeleton');
-          grabDtSkel.parentNode.replaceChild(dt, grabDtSkel); // switch it with real DT
-    
-          // replacer code DD
-          var grabDdSkel = document.querySelector('#myData dd.skeleton');
-          grabDdSkel.parentNode.replaceChild(dd, grabDdSkel); // switch it with real DD
-    
-          // create a new empty DT skeleton
-          var nextDt = document.createElement('dt');
-          nextDt.className = "skeleton";
-          nextDt.innerHTML = '<h5 class="trim-singleline">  ...</h5>';;
-          mainContainer.append(nextDt);
-    
-          // create a new empty DD skeleton
-          var nextDd = document.createElement('dd');
-          nextDd.className = "skeleton";
-          nextDd.innerHTML = '<p class="trim-multiline">...</p>';
-          mainContainer.append(nextDd);
-    
-    
-    
-        
-          console.log('hello :# ' + i);         //  your code here
-          i++;                                  //  increment the counter
-          if (i < data.length-1) {              //  if the counter < 10, call the loop function
-            myLoop(data);   
-            console.log("I'm in the loops !");  //  ..  again which will trigger another 
-          }                        
-        }, 1500)                                //  ..  setTimeout() delivers staggered results
-        console.log("Loop done !");
-      }
-    }
-  </script>
+  <script src="scripts/scripts-alex.js"></script>
   <svg fill="none" width="0" height="0">
     <defs>
       <symbol id="my-not-available" viewbox="0 0 101 101">

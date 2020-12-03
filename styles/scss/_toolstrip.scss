@@ -30,7 +30,7 @@
 }
 
 
-.toolbar .grid-12 div {
+.toolbar .grid-12>div {
   border-right: 1px solid #383838;
 }
 
@@ -70,6 +70,7 @@ $dialog-speed: 9s;
   opacity: 0;
   position: absolute;
   width: 283px;
+  right: 0;
   height: calc(var(--baseline) * 2.5);
   overflow: hidden;
   background: #333333;
