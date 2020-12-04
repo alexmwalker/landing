@@ -1,0 +1,39 @@
+
+.currentquery{
+    &.underline{
+        margin-bottom: calc(var(--baseline) * 1);
+    }
+}
+.query{
+    background-color: #ffffcc;
+}
+.book-listing{
+    line-height: calc(var(--baseline) * 1.5);
+    margin: 0;
+    //outline: 1px red dashed;
+    position: relative;
+    img.cover{
+        height: calc(var(--baseline) * 1.5);
+        margin: 0 1rem calc(var(--baseline) * -0.5) 0;        
+        position: relative;
+        display: inline-block;
+    }
+}
+.sample{
+    border: 1px #ddd solid;
+    font-style: italic;
+    padding: calc(var(--baseline) /4) .5rem;
+    margin: calc(var(--baseline) /2) 0 calc(var(--baseline) /1);
+    line-height: calc(var(--baseline) /1.5);
+    box-shadow: 0 0 8px inset rgba(0,0,0,.05);
+}
+.results-books{
+    border-bottom: 1px #ccc solid;
+}
+.result-unit{
+    //outline: 1px red dashed;
+    padding-top: calc(var(--baseline) /2);
+}
+.showall p {
+    margin-bottom: 0;
+}

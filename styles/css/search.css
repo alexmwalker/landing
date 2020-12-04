@@ -26,6 +26,7 @@
   /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
   max-width: 58rem;
   margin: 0 auto !important;
+  color: var(--basefontcolor);
 }
 
 /*
@@ -137,7 +138,7 @@ figcaption {
 
 .minor {
   font-size: calc(1rem / var(--typescale));
-  line-height: calc(var(--baseline) / 1.5);
+  line-height: calc(var(--baseline) / 1);
   margin-top: 0;
   margin-bottom: calc(var(--baseline) / 2);
 }
@@ -2716,7 +2717,7 @@ html.offline #offline-notification {
   left: 1rem;
   position: relative;
   float: left;
-  width: 80%;
+  width: calc(100% - 4rem);
   padding: 0 5%;
   -webkit-box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
           box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
@@ -2739,33 +2740,53 @@ html.offline #offline-notification {
 }
 .search-big .insetbutton {
   padding: 1rem;
-  float: left;
   position: relative;
   -webkit-appearance: button;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 90 90'%3E%3Cpath fill='url(%23paint0_radial)' d='M0 0h90v90H0z'/%3E%3Cpath fill='%23898787' d='M58.62 56.208l-5.453-5.452a1.312 1.312 0 0 0-.93-.383h-.892a11.317 11.317 0 0 0 2.407-7C53.752 37.092 48.66 32 42.376 32S31 37.09 31 43.374c0 6.283 5.092 11.374 11.376 11.374 2.641 0 5.07-.897 7-2.406v.891c0 .35.137.684.383.93l5.453 5.452a1.307 1.307 0 0 0 1.854 0l1.548-1.548a1.318 1.318 0 0 0 .005-1.86zm-16.244-5.835c-3.867 0-7-3.128-7-7 0-3.865 3.128-6.998 7-6.998 3.867 0 7 3.127 7 6.999 0 3.866-3.128 7-7 7z'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='43' cy='43' r='60' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.5' stop-color='%23fff'/%3E%3Cstop offset='.95' stop-color='%23eee'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
-  background-size: 103% 103%;
+  background-size: 150% 150%;
   background-position: center center;
   background-repeat: no-repeat;
-  border: 3px solid #ddd;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-  margin: calc(var(--baseline) / -8) 0 0 -1rem;
+  border: 1px solid #ddd;
+  border-width: 2px 2px 2px 1px;
+  -webkit-box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.1);
+  margin: 0 0 0 -1rem;
   color: #555;
   font-size: 1rem;
-  height: calc(var(--baseline) * 1.8);
-  width: calc(var(--baseline) * 1.8);
+  height: calc(var(--baseline) * 1.5);
+  width: 4rem;
   overflow: hidden;
   white-space: nowrap;
-  border-radius: calc(var(--baseline) * 2);
+  border-radius: 0 calc(var(--baseline) * 2) calc(var(--baseline) * 2) 0;
 }
 .search-big .insetbutton:hover {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 90 90'%3E%3Cpath fill='url(%23paint0_radial)' d='M0 0h90v90H0z'/%3E%3Cpath fill='%23595757' d='M58.62 56.208l-5.453-5.452a1.312 1.312 0 0 0-.93-.383h-.892a11.317 11.317 0 0 0 2.407-7C53.752 37.092 48.66 32 42.376 32S31 37.09 31 43.374c0 6.283 5.092 11.374 11.376 11.374 2.641 0 5.07-.897 7-2.406v.891c0 .35.137.684.383.93l5.453 5.452a1.307 1.307 0 0 0 1.854 0l1.548-1.548a1.318 1.318 0 0 0 .005-1.86zm-16.244-5.835c-3.867 0-7-3.128-7-7 0-3.865 3.128-6.998 7-6.998 3.867 0 7 3.127 7 6.999 0 3.866-3.128 7-7 7z'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='47' cy='47' r='55' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.4' stop-color='%23fff'/%3E%3Cstop offset='.95' stop-color='%23eee'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
-  background-size: 100% 100%;
-  background-position: center center;
-  border: 3px solid #bbb;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  background-size: 145% 145%;
+  border-color: #ccc;
+  -webkit-box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.15);
+}
+.search-big .insetbutton:active {
+  background-size: 135% 135%;
+  -webkit-box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.25);
+  outline: 0 none;
+}
+
+.media-selector {
+  color: #999;
+}
+.media-selector input[type=checkbox] {
+  height: auto;
+}
+.media-selector span {
+  line-height: calc(var(--baseline) * 1.5);
+}
+.media-selector label {
+  display: inline;
+  float: none;
+  color: #333;
+  margin-left: 0.5rem;
 }
 
 .inset {
@@ -2792,13 +2813,6 @@ html.offline #offline-notification {
 
 .rel {
   position: relative;
-}
-
-.label {
-  position: absolute;
-  top: calc(var(--baseline) / -1.25);
-  color: #888;
-  font-size: calc(1rem / var(--typescale) / var(--typescale));
 }
 
 .bookcard {
@@ -2997,6 +3011,9 @@ footer.mainfooter {
   background: #3D383E;
   padding: calc(var(--baseline)) 0 calc(var(--baseline)) 0;
   font-size: 0.75rem;
+  color: #ccc;
+}
+footer.mainfooter h4 {
   color: #ccc;
 }
 footer.mainfooter ul li a {

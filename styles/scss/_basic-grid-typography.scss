@@ -34,6 +34,7 @@
   //width: 62rem;
   max-width: 58rem;
   margin: 0 auto !important;
+  color: var(--basefontcolor);
   //outline: 1px red dashed;
 }
 
@@ -153,7 +154,7 @@ figcaption {
 
 .minor {
   font-size: calc(1rem / var(--typescale));
-  line-height: calc(var(--baseline) / 1.5);
+  line-height: calc(var(--baseline) / 1);
   margin-top: 0;
   margin-bottom: calc(var(--baseline) / 2);
 }

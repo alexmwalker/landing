@@ -26,6 +26,7 @@
   /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
   max-width: 58rem;
   margin: 0 auto !important;
+  color: var(--basefontcolor);
 }
 
 /*
@@ -137,7 +138,7 @@ figcaption {
 
 .minor {
   font-size: calc(1rem / var(--typescale));
-  line-height: calc(var(--baseline) / 1.5);
+  line-height: calc(var(--baseline) / 1);
   margin-top: 0;
   margin-bottom: calc(var(--baseline) / 2);
 }
@@ -3110,6 +3111,36 @@ input:focus {
   margin-bottom: calc(var(--baseline) / 1) 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
           box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
+  /*
+  .insetbutton {
+    padding: 0rem;
+    float: left;
+    position: relative;
+    -webkit-appearance: button;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+    background-position: center center;
+    background: #fff;
+    background-repeat: no-repeat;
+    border: 3px solid #ddd;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    margin: calc(var(--baseline) / -8) 0 0 -1rem;
+    color: #555;
+    font-size: 1rem;
+    height: calc(var(--baseline) * 1.8);
+    width: calc(var(--baseline) * 1.8);
+    overflow: hidden;
+    //padding: 5px 10px;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-border-radius: calc(var(--baseline) * 2);
+    -moz-border-radius: calc(var(--baseline) * 2);
+    border-radius: calc(var(--baseline) * 2);
+
+    &:hover {
+      border: 3px solid #bbb;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  }*/
 }
 .searchbox input[type=search] {
   font-size: calc(1rem * var(--typescale));
@@ -3160,34 +3191,16 @@ input:focus {
   z-index: 999;
 }
 .searchbox .insetbutton {
-  padding: 0rem;
-  float: left;
-  position: relative;
-  -webkit-appearance: button;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
-  background-position: center center;
-  background: #fff;
-  background-repeat: no-repeat;
-  border: 3px solid #ddd;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-  margin: calc(var(--baseline) / -8) 0 0 -1rem;
-  color: #555;
-  font-size: 1rem;
-  height: calc(var(--baseline) * 1.8);
-  width: calc(var(--baseline) * 1.8);
-  overflow: hidden;
-  text-align: center;
-  white-space: nowrap;
-  border-radius: calc(var(--baseline) * 2);
-}
-.searchbox .insetbutton:hover {
-  border: 3px solid #bbb;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  padding-right: 1.15rem;
+  border-left: 1px solid #ccc;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(18.36%, #f9fafc), color-stop(72.54%, #eff3f6));
+  background: -o-linear-gradient(top, #f9fafc 18.36%, #eff3f6 72.54%);
+  background: linear-gradient(180deg, #f9fafc 18.36%, #eff3f6 72.54%);
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 101 101'%3E%3Cpath fill='currentcolor' fill-rule='evenodd' d='M62.27 69.134a32.99 32.99 0 01-20.19 6.856C23.81 75.99 9 61.218 9 42.995 9 24.773 23.81 10 42.08 10c18.27 0 33.08 14.773 33.08 32.995 0 7.178-2.298 13.82-6.2 19.236l21.63 21.576a4.79 4.79 0 010 6.787 4.82 4.82 0 01-6.804 0L62.27 69.134zm3.266-26.139c0 12.922-10.502 23.397-23.456 23.397-12.955 0-23.457-10.475-23.457-23.397 0-12.921 10.502-23.396 23.457-23.396s23.456 10.475 23.456 23.396z' /%3E%3C/svg%3E") left center no-repeat;
+  background-size: auto 90%;
 }
 
-.loader {
+.insetbutton .loader {
   width: 100%;
   height: calc(var(--baseline) * 2);
 }
@@ -3441,7 +3454,7 @@ input:checked + .trim-multiline:before {
   left: 1rem;
   position: relative;
   float: left;
-  width: 80%;
+  width: calc(100% - 4rem);
   padding: 0 5%;
   -webkit-box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
           box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
@@ -3464,33 +3477,53 @@ input:checked + .trim-multiline:before {
 }
 .search-big .insetbutton {
   padding: 1rem;
-  float: left;
   position: relative;
   -webkit-appearance: button;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 90 90'%3E%3Cpath fill='url(%23paint0_radial)' d='M0 0h90v90H0z'/%3E%3Cpath fill='%23898787' d='M58.62 56.208l-5.453-5.452a1.312 1.312 0 0 0-.93-.383h-.892a11.317 11.317 0 0 0 2.407-7C53.752 37.092 48.66 32 42.376 32S31 37.09 31 43.374c0 6.283 5.092 11.374 11.376 11.374 2.641 0 5.07-.897 7-2.406v.891c0 .35.137.684.383.93l5.453 5.452a1.307 1.307 0 0 0 1.854 0l1.548-1.548a1.318 1.318 0 0 0 .005-1.86zm-16.244-5.835c-3.867 0-7-3.128-7-7 0-3.865 3.128-6.998 7-6.998 3.867 0 7 3.127 7 6.999 0 3.866-3.128 7-7 7z'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='43' cy='43' r='60' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.5' stop-color='%23fff'/%3E%3Cstop offset='.95' stop-color='%23eee'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
-  background-size: 103% 103%;
+  background-size: 150% 150%;
   background-position: center center;
   background-repeat: no-repeat;
-  border: 3px solid #ddd;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-  margin: calc(var(--baseline) / -8) 0 0 -1rem;
+  border: 1px solid #ddd;
+  border-width: 2px 2px 2px 1px;
+  -webkit-box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.1);
+  margin: 0 0 0 -1rem;
   color: #555;
   font-size: 1rem;
-  height: calc(var(--baseline) * 1.8);
-  width: calc(var(--baseline) * 1.8);
+  height: calc(var(--baseline) * 1.5);
+  width: 4rem;
   overflow: hidden;
   white-space: nowrap;
-  border-radius: calc(var(--baseline) * 2);
+  border-radius: 0 calc(var(--baseline) * 2) calc(var(--baseline) * 2) 0;
 }
 .search-big .insetbutton:hover {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 90 90'%3E%3Cpath fill='url(%23paint0_radial)' d='M0 0h90v90H0z'/%3E%3Cpath fill='%23595757' d='M58.62 56.208l-5.453-5.452a1.312 1.312 0 0 0-.93-.383h-.892a11.317 11.317 0 0 0 2.407-7C53.752 37.092 48.66 32 42.376 32S31 37.09 31 43.374c0 6.283 5.092 11.374 11.376 11.374 2.641 0 5.07-.897 7-2.406v.891c0 .35.137.684.383.93l5.453 5.452a1.307 1.307 0 0 0 1.854 0l1.548-1.548a1.318 1.318 0 0 0 .005-1.86zm-16.244-5.835c-3.867 0-7-3.128-7-7 0-3.865 3.128-6.998 7-6.998 3.867 0 7 3.127 7 6.999 0 3.866-3.128 7-7 7z'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial' cx='47' cy='47' r='55' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.4' stop-color='%23fff'/%3E%3Cstop offset='.95' stop-color='%23eee'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
-  background-size: 100% 100%;
-  background-position: center center;
-  border: 3px solid #bbb;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  background-size: 145% 145%;
+  border-color: #ccc;
+  -webkit-box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.15);
+}
+.search-big .insetbutton:active {
+  background-size: 135% 135%;
+  -webkit-box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px inset rgba(0, 0, 0, 0.25);
+  outline: 0 none;
+}
+
+.media-selector {
+  color: #999;
+}
+.media-selector input[type=checkbox] {
+  height: auto;
+}
+.media-selector span {
+  line-height: calc(var(--baseline) * 1.5);
+}
+.media-selector label {
+  display: inline;
+  float: none;
+  color: #333;
+  margin-left: 0.5rem;
 }
 
 .inset {
@@ -3517,13 +3550,6 @@ input:checked + .trim-multiline:before {
 
 .rel {
   position: relative;
-}
-
-.label {
-  position: absolute;
-  top: calc(var(--baseline) / -1.25);
-  color: #888;
-  font-size: calc(1rem / var(--typescale) / var(--typescale));
 }
 
 .bookcard {

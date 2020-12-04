@@ -26,6 +26,7 @@
   /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
   max-width: 58rem;
   margin: 0 auto !important;
+  color: var(--basefontcolor);
 }
 
 /*
@@ -137,7 +138,7 @@ figcaption {
 
 .minor {
   font-size: calc(1rem / var(--typescale));
-  line-height: calc(var(--baseline) / 1.5);
+  line-height: calc(var(--baseline) / 1);
   margin-top: 0;
   margin-bottom: calc(var(--baseline) / 2);
 }
@@ -3793,6 +3794,9 @@ footer.mainfooter {
   background: #3D383E;
   padding: calc(var(--baseline)) 0 calc(var(--baseline)) 0;
   font-size: 0.75rem;
+  color: #ccc;
+}
+footer.mainfooter h4 {
   color: #ccc;
 }
 footer.mainfooter ul li a {

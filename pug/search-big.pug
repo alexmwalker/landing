@@ -2,9 +2,30 @@ nav.search-big
   .container
     form(action="search.html")
       .grid-noGutter-center
-        .col-8_md-10
+        .col-10_md-12
           input#Search.form-control(name='Search', type='text', placeholder='Search for...')
           button.insetbutton(name='singlebutton') &nbsp;
 
+          p.media-selector.textcenter.minor Include:
+            span
+              label(for='books') Books 
+                input#books(type='checkbox' checked='checked')
+              
+            span
+              label(for='courses') Courses
+                input#courses(type='checkbox' checked='checked')
+              
+            span
+              label(for='talks') Tech talks 
+                input#talks(type='checkbox' checked='checked' )
+              
+            span
+              label(for='articles') Articles
+                input#articles(type='checkbox' checked='checked')
+      
+
+
+              
+        
 
             

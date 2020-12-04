@@ -84,7 +84,7 @@ input:focus {
   }
 
 
-
+  /*
   .insetbutton {
     padding: 0rem;
     float: left;
@@ -113,8 +113,18 @@ input:focus {
       border: 3px solid #bbb;
       box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
     }
+  }*/
+  .insetbutton{
+    padding-right: 1.15rem;
+    border-left: 1px solid #ccc;
+    background: linear-gradient(180deg, #f9fafc 18.36%, #eff3f6 72.54%);
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 101 101'%3E%3Cpath fill='currentcolor' fill-rule='evenodd' d='M62.27 69.134a32.99 32.99 0 01-20.19 6.856C23.81 75.99 9 61.218 9 42.995 9 24.773 23.81 10 42.08 10c18.27 0 33.08 14.773 33.08 32.995 0 7.178-2.298 13.82-6.2 19.236l21.63 21.576a4.79 4.79 0 010 6.787 4.82 4.82 0 01-6.804 0L62.27 69.134zm3.266-26.139c0 12.922-10.502 23.397-23.456 23.397-12.955 0-23.457-10.475-23.457-23.397 0-12.921 10.502-23.396 23.457-23.396s23.456 10.475 23.456 23.396z' /%3E%3C/svg%3E") left center no-repeat;
+    background-size: auto 90%;
   }
 }
+
+.insetbutton
+
 
 .loader {
   width: 100%;

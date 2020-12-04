@@ -4,10 +4,10 @@
   <title>Your First Week With Bootstrap | - SitePoint</title>
   <meta name="description" content="In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="styles/css/book.css?cache=43" rel="stylesheet" type="text/css">
+  <link href="styles/css/book.css?cache=65432" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
 </head>
-<body class="vr -labelling borders" id="reeedr"> 
+<body class="-vr -labelling borders" id="reeedr"> 
   <header class="sitepoint-branding">
     <div class="container">
       <div class="grid-12-noGutter">
@@ -91,6 +91,28 @@
       </div>
     </div>
   </header>
+  <div id="search-panel">
+    <div class="grid-noGutter-center searchbox">
+      <div class="col-8_md-11">
+        <form id="searchform">
+          <input type="search" id="booksearch" placeholder="      Search the book">
+          <input class="insetbutton" id="start-search" type="submit" value="Go">
+          <div id="search-close" title="Clear search"> </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid-center search-body"> 
+        <div class="col-12">
+          <h4>Results for '<em class="query"></em>' located in books... </h4>
+          <dl class="book-search-results-list" id="myData">
+            <dt class="skeleton">&nbsp;</dt>
+            <dd class="skeleton">&nbsp;</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="grid-center search-body">
       <div class="col-9_sm-12">
@@ -146,6 +168,347 @@
         </dl>
       </div>
     </div>
+  </div>
+  <section class="bookpanel">
+    <div class="container">
+      <div class="grid-center">
+        <div class="col-11_md-12">
+          <div class="grid-center">
+            <div class="col-3_sm-12">
+              <div class="thumbnail-book"><img src="images/covers/bootstrap-1@2x.png"></div>
+            </div>
+            <div class="col-9_sm-12">
+              <h1>Your First Week With Bootstrap</h1>
+              <p> Bootstrap stands as one of the most popular, open-source, front-end frameworks on the Web. In this book we’ll take you through Bootstrap basics, introduce you to its major features, and get you building your first Bootstrap sites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="tool-container">
+    <nav id="toolstrip">
+      <div class="container">
+        <div class="toolbar">
+          <div class="grid-12">
+            <div class="col-3_md-3_sm-4"><a class="toolbarLink viewchapters" src="#">
+                <svg class="svg-icon">
+                  <use fill="#fff" href="#my-chevron"></use>
+                </svg>Contents</a></div>
+            <div class="col-3_md-3_sm-4"><a class="toolbarLink" id="bookmarks" src="#">
+                <svg class="svg-icon">
+                  <use fill="#fff" href="#my-chevron"></use>
+                </svg>My Bookmarks</a></div>
+            <div class="col-3_md-3_sm-hidden"> </div>
+            <div class="col-3_md-3_sm-hidden">
+              <div class="toolbarLink" id="offlinemode">
+                <div class="pretty p-switch p-fill">
+                  <input type="checkbox">
+                  <div class="state p-success">
+                    <label>Make available offline</label>
+                  </div>
+                  <div class="tooltip-dialog">
+                    <div class="screen screen-1"><b>Downloading to your offline Library...</b>
+                      <div class="tooltip-loader">
+                        <div class="tooltip-progress"></div>
+                      </div>
+                    </div>
+                    <div class="screen screen-2">
+                      <div class="button-library">
+                        <svg class="svg-icon">
+                          <use fill="#fff" href="#my-library"></use>
+                        </svg>
+                      </div><b>Download complete</b><br>
+                      <p class="small">Access this book in your library</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="toc-anchor">
+      <div class="container">
+        <div class="toc-container"><i id="closetoc"></i>
+          <ol class="toc" start="0">
+            <li class="toc-chapter accordion-item preface"><a id="preface" title="Preface"><span class="l-w-100">Preface</span></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-1" title="Why I Love Bootstrap, and Why You Should Too"><span class="l-w-100">Why I Love Bootstrap, and Why You Should Too</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter current-chapter"><a id="chapter-2" title="Understanding Bootstrap: How it Works, and What's New"><span class="l-w-100">Understanding Bootstrap: How it Works, and What&apos;s New</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-3" title="Super Smart New Features to Win You Over"><span class="l-w-100">Super Smart New Features to Win You Over</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-4" title="Understanding Bootstrap Modals"><span class="l-w-100">Understanding Bootstrap Modals</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-5" title="UA Deep Dive into the Bootstrap Form Component"><span class="l-w-100">UA Deep Dive into the Bootstrap Form Component</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon toc-bookmarked fas far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-6" title="The Card Component: A Complete Introduction"><span class="l-w-100">The Card Component: A Complete Introduction</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-7" title="How to Build a Responsive Type Scale with Bootstrap"><span class="l-w-100">How to Build a Responsive Type Scale with Bootstrap</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-8" title="A Beginner's Guide to the Latest Bootstrap Utility Classes"><span class="l-w-100">A Beginner&apos;s Guide to the Latest Bootstrap Utility Classes</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-9" title="3 Tips for Speeding Up Your Bootstrap Website"><span class="l-w-100">3 Tips for Speeding Up Your Bootstrap Website</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-10" title="Customizing Bootstrap jQuery Plugins"><span class="l-w-100">Customizing Bootstrap jQuery Plugins</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-11" title="8 Tips for Improving Bootstrap Accessibility"><span class="l-w-100">8 Tips for Improving Bootstrap Accessibility</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+            <li class="toc-chapter accordion-item chapter"><a id="chapter-12" title="Front-end Frameworks: Custom vs Ready-to-use Solutions"><span class="l-w-100">Front-end Frameworks: Custom vs Ready-to-use Solutions</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="reeedr-body">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-12">
+          <div class="preface set-front-matter"></div>
+          <div class="chapter grid-center-reverse" data-chapter-number="6">
+            <div class="col-3_sm-12 ch-head">
+              <div class="chapter-head">Chapter</div>5
+            </div>
+            <div class="col-7_sm-12 chapter-start align-r">
+              <h1 class="chaptertitle">The Card Component: A Complete Introduction</h1>
+              <h3 class="author">Ahmed Bouchefra</h3>
+            </div>
+          </div>
+          <p class="intro bookmark-highlight">In this chapter, I&apos;m going to introduce you to the Bootstrap card component and walk you through its many features and uses. By the end of this tutorial, you&apos;ll be able to incorporate Bootstrap cards in your web projects for great layouts and page content organization.</p>
+          <p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for quickly creating responsive and mobile-first web layouts.</p>
+          <p>Using Bootstrap offers many advantages to developers, including the following:</p>
+          <ul>
+            <li>you can easily and quickly build a responsive layout by having only some knowledge of HTML and CSS</li>
+            <li>the library was built to be mobile-first from the core</li>
+            <li>it&apos;s compatible with all modern browsers etc.</li>
+            <li>it uses Flexbox for its grid system</li>
+            <li>it provides tons of features and components.</li>
+          </ul>
+          <p>The latest release of Bootstrap offers many new, modern features --- such as the support for Flexbox, and the new <a href="http://getbootstrap.com/docs/4.0/components/card/" target="_blank">card component, </a>which replaces panels, thumbnails and wells from earlier versions of the library.</p>
+          <h2 id="what-is-the-bootstrap-card-component-">What Is the Bootstrap Card Component?</h2>
+          <p>Bootstrap introduces a new UI component for creating cards which provides a flexible and stylish container for showing content. Cards come with minimal styling, but you can easily extend them with extra styling options.</p>
+          <div class="anchor"><a class="social-anchor" href="#0"><img src="https://pbs.twimg.com/profile_images/861010112852262912/nbPZKMyR_400x400.jpg"></a>
+            <div class="anchor-body">
+              <p class="small">I'm ready to call it: ES2015 modules are way more useful as an authoring format than as a browser runtime feature...<span class="cite cite-logo twitter"><a href="https://twitter.com/wycats">@wycats</a></span></p>
+            </div>
+          </div>
+          <p>This component is built on top of Flexbox, and you can use the Bootstrap <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">spacing utility classes for margins and padding.</a></p>
+          <p>Cards can conveniently accommodate different types of content like title, subtitle, body copy, and images etc., and optional header and footer sections. You can also include different sections (card blocks) to construct different types of cards depending on your use.</p>
+          <h2 id="including-bootstrap-in-your-project">Including Bootstrap in Your Project</h2>
+          <p>You can very easily start using Bootstrap in your website by either including it from a CDN or downloading it from <a href="https://getbootstrap.com/" target="_blank">getbootstrap.com</a>.</p>
+          <p>For the sake of introducing the new Bootstrap card component, you&apos;re going to create a simple HTML page with Bootstrap styling to demonstrate the basic elements of the card component. Go ahead and create the <code>index.html</code> file inside your project folder, then add the following content from the <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank">docs starter template</a>:</p>
+          <p>We&apos;ve included Bootstrap files and their dependencies (jQuery and popper.js) from different CDNs, then created a container division.</p>
+          <h2 id="minimal-styling-for-cards">Minimal Styling for Cards</h2>
+          <p>In order to create a basic card, we need to ---</p>
+          <ul>
+            <li>use <code>.card</code> with a <code>div</code> tag to create the outer container</li>
+            <li>add the <code>.card-body</code> class to an inner <code>div</code> tag to create the card body</li>
+            <li>use <code>.card-title</code> and <code>card-subtitle</code> classes with heading tags for adding the title and the subtitle</li>
+            <li>use the <code>card-text</code> class with <code></code>
+              <p><code></code> tags to add textual content</p>
+            </li>
+            <li>use the <code>card-img-top</code> class with the <code><img></code> tag to add an image to the top of the card.</li>
+          </ul>
+          <p>These are the basic elements that constitute a full but basic card layout, as we can see from the following example:</p>
+          <div class="anchor"><a class="social-anchor" href="#0"><img src="https://cdn.statically.io/gh/alexmwalker/landing/fd8f436e/images/social-pob.png"></a>
+            <div class="anchor-body">
+              <p class="small"> Wow, I didn’t know that you could use media queries inside an SVG. Awesome usecases for mobile charts and graphs.<span class="cite cite-logo spcom"><a href="#">Paul O'Brien</a></span></p>
+            </div>
+          </div>
+          <p>This is a screenshot of the result:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Basic card layout" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518996722basic-card-1024x728.jpg"></p>
+          <p>As can be seen, the card takes the full width of its container <code>div</code>.</p>
+          <p>By simply switching the <code>card-body</code> class with the <code>card-img-overlay</code> class, we can use the image as an overlay:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Adding a .card-deck class to a parent div" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518999808adding-card-deck-1024x187.png"></p>
+          <p>We can also use the class <code>.card-img-bottom</code> with the <code><img></code> tag to add the image at the bottom of the card:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Adding the image at the bottom of the card" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518997006image-bottom.png"></p>
+          <p>The card top and bottom images are called <a href="https://getbootstrap.com/docs/4.0/components/card/#image-caps" target="_blank">image caps</a>.</p>
+          <div class="box tip">
+            <h4>Always Declare Your Data Properties</h4>
+            <div class="body">
+              <p>
+                 It may be that some of the data you want to work with won’t be available to your instance when you initialize it (for example, if it’s loaded via an Ajax request). Vue requires you to declare all root-level keys up front, as they can’t be added dynamically later on.</p>
+              <p>It’s good practice to declare default values anyway, as you won’t run into errors trying to access non-existent properties, and it helps to document the data structure of your instance (or component, as we’ll see later).</p>
+            </div>
+          </div>
+          <h2 id="controlling-bootstrap-card-component-width-and-height">Controlling Bootstrap Card Component Width and Height</h2>
+          <p>By default, cards take all the available width in their parent container, but you can use the <code>width</code> and <code>max-width</code> classes to control take control of the card&apos;s dimensions. So, let&apos;s change the previous example by reducing the width of the card:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Reducing card width" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518997200reduce-width-1024x277.png"></p>
+          <p>Normally, the height of the card will be adjusted to vertically fit the content of the card, but we can also control it using custom CSS (for example,</p>
+          <pre></pre>
+          <p>Please, note that the latest release of Bootstrap has switched to <em>rem</em> units instead of _px_ units because <em>rem</em> is a scalable measurement unit --- so it works better with user settings, which makes text much <a href="https://www.sitepoint.com/making-bootstrap-accessible/" target="_blank">more accessible</a>. The result is that all elements in the page will scale with the screen size.</p>
+          <blockquote class="jynr4i43" data-block="jynr4i43" font-size="2,2,3,3">
+            <p class="Text-sc-1j8rci6-0 kptiob" font-size="2,2,3,3">Designing humane experiences means being kind and humble, and emphasizing qualities that matter to the company and to users. That means highlighting privacy, respect, ethics, and transparency, but also reflecting the personality of people working on the product.</p>
+          </blockquote>
+          <p>Another option for controlling the width of the Bootstrap card component is to use the <a href="http://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap grid</a> (rows and columns):</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Controlling card width with Bootstrap grid" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518998143card-width-grid-1024x272.png"></p>
+          <h2 id="bootstrap-card-component-header-and-footer">Bootstrap Card Component Header and Footer</h2>
+          <p>A Bootstrap card component can optionally have a header and footer by adding heading ( <code>&lt;h*&gt;</code>) and <code>div</code> tags with <code>.card-header</code> and<code>.card-footer</code> classes respectively.</p>
+          <p>Continuing with our example, let&apos;s add a header and footer to our Bootstrap card component:</p>
+          <p>This is the screenshot of the result:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Adding a header and footer" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518998319adding-header-footer-1024x321.png"></p>
+          <h2 id="adding-navigation">Adding Navigation</h2>
+          <p>Another nice feature of the Bootstrap card component is the possibility of adding advanced navigation patterns to the header section such as tabs and navigation pills.</p>
+          <p>So let&apos;s change our simple example by adding a tabbed navigation element to the header section of the card with the <code>.nav-tabs</code> and<code>.card-header-tabs</code> classes on the <code>&lt;ul&gt;</code> tag:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Adding a tabbed navigation element" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518998509tabbed-navigation-1024x325.png"></p>
+          <p>In the same way, we can add navigation pills by simply replacing<code>.nav-tabs</code> with <code>nav-pills</code> and <code>.card-header-tabs</code> with<code>card-header-pill</code> on the <code>&lt;ul&gt;</code> list tag:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Adding navigation pills" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518998670navigation-pills-1024x334.png"></p>
+          <p>You can find out more information about this in the <a href="https://getbootstrap.com/docs/4.0/components/navs/" target="_blank">Bootstrap navigation components documentation</a>.</p>
+          <h2 id="adding-links-to-the-bootstrap-card-component">Adding Links to the Bootstrap Card Component</h2>
+          <p>We can quickly add links inside cards using the <code>&lt;a&gt;</code> tag with a<code>.card-link</code> class:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Adding links inside cards" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518998851adding-links-1024x160.png"></p>
+          <h2 id="aligning-and-transforming-text-in-bootstrap-card-components">Aligning and Transforming Text in Bootstrap Card Components</h2>
+          <p>We can use different Bootstrap classes ( <a href="https://getbootstrap.com/docs/4.0/utilities/text/" target="_blank">text utilities</a>) to align text within a card component such as <code>.text-left</code> (align text to left),<code>.text-right</code> (align text to right), <code>.text-center</code> (center text),<code>.text-justify</code> (justify text) and <code>.text-nowrap</code> (prevent text from wrapping).</p>
+          <p>We can also apply text transformation with <code>.text-lowercase</code> (transform text to lowercase), <code>.text-uppercase</code> (transform text to uppercase) and<code>.text-capitalize</code> (transform the first letter of each word to uppercase).</p>
+          <h2 id="customizing-bootstrap-card-component-background-foreground-and-border-colors">Customizing Bootstrap Card Component Background, Foreground and Border Colors</h2>
+          <p>A Bootstrap card component&apos;s background and foreground colors can be fully customized using Bootstrap text and background <a href="https://getbootstrap.com/docs/4.0/utilities/colors/" target="_blank">color utilities</a> ---<code>text-primary, text-white, bg-primary</code> and so on.</p>
+          <p>Using the Bootstrap&apos;s border utilities (for example, <code>border-primary</code>) we can quickly set the border color of a card.</p>
+          <!--.box.codepen
+          h4
+            | Live Code
+          .body
+            iframe(allowfullscreen='true', allowtransparency='true', frameborder='no', height='300', scrolling='no', src='https://codepen.io/SitePoint/embed/mXqdda/?height=300&theme-id=6441&default-tab=html,result&editable=true', style='width: 95%;', title='Bootstrap 4 Card Examples')
+              | See the Pen 
+              a(href='https://codepen.io/SitePoint/pen/mXqdda/') Bootstrap 4 Card Examples
+              |  by SitePoint (
+              a(href='https://codepen.io/SitePoint') @SitePoint
+              | ) on 
+              a(href='https://codepen.io') CodePen
+              | .
+          -->
+          <h2 id="creating-advanced-layouts-with-the-bootstrap-card-component">Creating Advanced Layouts with the Bootstrap Card Component</h2>
+          <p>The card is a modern UI component that&apos;s utilized in many websites as a way to display items of mixed and different content types (such as text and images etc.) as a single/grouped entity, but more commonly as a collection of similar items with a different or the same width and height. A popular layout where cards can be used is the <a href="https://www.sitepoint.com/understanding-masonry-layout/" target="_blank">Masonry layout</a>, also called the Pinterest-like Layout</p>
+          <p class="image-wrapper"><img alt="A Pinterest card layout" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518999430pinterest-card-layout-1024x728.png"></p>
+          <p>Cards can be used for creating layouts for image albums, blog posts, ecommerce products etc. Big companies like Google and Facebook are making use of cards for their different web platforms.</p>
+          <p>Normally, if we want to create complex layouts based on cards, we&apos;d need to have deep knowledge of CSS and HTML. However, thanks to the latest features of Bootstrap, we can quickly build such layouts by wrapping our set of cards inside <code>div</code>s with some special classes such as<code>.card-group</code>, <code>.card-deck</code> and <code>.card-columns</code>.</p>
+          <h3 id="grouping-nesting-cards">Grouping/Nesting Cards</h3>
+          <p><a href="https://getbootstrap.com/docs/4.0/components/card/#card-groups" target="_blank">Groups</a> are used to display multiple Bootstrap card components as single and attached elements with uniform sizing --- that is, cards have the same width and height. This is achieved using the <code>display: flex;</code> property.</p>
+          <p>We can create a group of cards using the <code>.card-group</code> class with a wrapper <code>div</code> that contains the child cards.</p>
+          <p>Let&apos;s add the following code to create a group with three cards:</p>
+          <p>This is a screenshot of the result:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Creating a group with three cards" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518999682card-group-1024x193.png"></p>
+          <p>As can be seen, the three cards are attached and have the same width and height.</p>
+          <h3 id="card-decks">Card Decks</h3>
+          <p><a href="https://getbootstrap.com/docs/4.0/components/card/#card-decks" target="_blank">Decks</a> provide you with a layout similar to the previous one (that is, same width and height for each card) but with the one difference that cards are not attached to each other.</p>
+          <p>We can simply add a <code>.card-deck</code> class to a parent <code>div</code> element to create a card deck:</p>
+          <p class="image-wrapper"><img alt="Bootstrap card component: Adding a .card-deck class to a parent div" src="https://learnable-static.s3.amazonaws.com/premium/reeedr/books/your-first-week-with-bootstrap/images/1518999808adding-card-deck-1024x187.png"></p>
+          <p>As we can see, the cards are of the same size with some margin between them.</p>
+          <h3 id="card-columns">Card Columns</h3>
+          <div class="anchor"><a class="social-anchor" href="#0"><img src="https://pbs.twimg.com/profile_images/738608465212366849/etPIzWeg_400x400.jpg"></a>
+            <div class="anchor-body">
+              <p class="small"> Yep, though my solution is to basically have static samples pre-render as SVG symbols.<span class="cite"><a href="https://twitter.com/ajlkn/status/1154817337457074177?s=20">@ajlkn</a></span></p>
+            </div>
+          </div>
+          <p>Just like groups and decks, card columns can be used to lay out a set of cards in a Masonry-like style. We can achieve this popular layout style simply by wrapping our cards in a <code>div</code> and adding the <code>.card-columns</code> class. That&apos;s all we need to do and Bootstrap will take care of the rest without having to use a JavaScript/jQuery plugin.</p>
+          <p>Bootstrap uses CSS columns to create the Masonry-like layout where cards are added from top to bottom and left to right. However, if we need a <a href="https://github.com/twbs/bootstrap/issues/17882" target="_blank">different kind of behavior</a> based on some algorithm, we&apos;ll have to resort to a JavaScript library or a jQuery plugin like <a href="https://masonry.desandro.com/" target="_blank">Masonry</a>.</p>
+          <h2 id="conclusion-6">Conclusion</h2>
+          <p>The Bootstrap card component is a powerful addition to the Bootstrap framework, which allows developers to create modern-style web pages without going deeply into how CSS works. You can add card layouts to represent image galleries, dashboard widgets, to display blog posts or products for an ecommerce website, by just adding a bunch of CSS classes.</p>
+          <p>As a result of the new features and components, Bootstrap continues to be a powerful CSS framework available to everyone, particularly to developers who need to create their own responsive and modern-style layouts but lack enough time and budget, or the deep knowledge of CSS, necessary to produce custom code.</p>
+          <div class="next-chapter-wrapper"><strong>NEXT:</strong><a class="next-chapter-button" data-next-chapter="7" href="#" target="_blank"><span>How to Build a Responsive Type Scale with Bootstrap <i class="fas fa-chevron-right"></i></span></a></div><a class="next-chapter-button" data-href="#text" data-next-chapter="4" target="_blank"></a>
+          <!-- We need to add a 'marker' to idenify the end of a chapter-->
+          <div class="chapter-end">
+            <!--#tooltip
+            ul
+              li.share
+                  span
+                  | Tweet
+              li.bookmark
+                  span
+                  | Bookmark
+              li.link
+                  span
+                  | Copy Link
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="modalbase">
+    <dialog id="modal-dialog">
+      <!--* Send a link-->
+      <div class="linkmodal-body">
+        <h4>Create a link to this paragraph</h4>
+        <p class="small global">Anyone with this link can view this section of the book.</p>
+        <p class="linkback modal-gutter darker"><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
+        <div class="close-link closeme">
+          <svg viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z" fill="#059FF5"></path>
+          </svg>
+        </div>
+        <div class="button" id="copy-link">Copy Link</div>
+      </div>
+      <!--* Tweet a link-->
+      <div class="tweet-body">
+        <h4>Tweet a link to this paragraph </h4><img class="avatar" src="images/authors/author-malcurtis.png">
+        <p class="modal-avatar-gutter darker"><span class="username"> <strong>Mal Curtis </strong>@IntrepidFaux</span><a href="https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo">https://www.sitepoint.com/premium/books/the-principles-of-beautiful-web-design-4th-edition/link/kew5dfmo</a></p>
+        <p class="modal-avatar-gutter small global">Anyone with this link can view this section of the book.</p>
+        <div class="close-link closeme"> 
+          <svg viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z" fill="#059FF5"></path>
+          </svg>
+        </div>
+        <svg class="modal-avatar-gutter twitter-controls" viewBox="0 0 141 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100.6 6.6a1 1 0 100-2 1 1 0 000 2zM105.3 5.6a1 1 0 11-1.9 0 1 1 0 012 0z" fill="#059FF5"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M110 7.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0zm-1.2 0a6.3 6.3 0 11-12.6 0 6.3 6.3 0 0112.6 0z" fill="#059FF5"></path>
+          <path d="M102.7 9.4a5.5 5.5 0 01-.3 0c-1.7 0-2.6-.7-2.8-1a.6.6 0 00-.8-.2c-.2.2-.3.5-.1.8.4.6 1.7 1.6 3.7 1.6a7 7 0 00.3 0c2 0 3.3-1 3.7-1.6.2-.3.1-.6-.1-.8a.6.6 0 00-.8.2c-.2.3-1.1 1-2.8 1z" fill="#059FF5"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M31 1.6c0-.9.7-1.6 1.6-1.6h11.8c.9 0 1.6.7 1.6 1.6v11.8c0 .9-.7 1.6-1.6 1.6H32.6c-.9 0-1.6-.7-1.6-1.6V1.6zm1.6-.2c-.1 0-.2 0-.2.2v11.8c0 .1 0 .2.2.2h11.8c.1 0 .2 0 .2-.2V1.6c0-.1 0-.2-.2-.2H32.6z" fill="#059FF5"></path>
+          <path d="M36.4 7.1c0-.3-.3-.5-.7-.5-.6 0-1 .4-1 1.2 0 .7.4 1.2 1 1.2.5 0 .8-.3.8-.7h-.8v-.7h1.7v.5c0 1-.7 1.7-1.7 1.7-1.2 0-2-.8-2-2 0-1.3.9-2 2-2 .9 0 1.6.5 1.7 1.3h-1zM39.4 5.8v4h-1v-4h1zM40.5 9.8v-4h2.7v.8h-1.7v.8H43v.8h-1.6v1.6h-1z" fill="#059FF5"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.6C0 .7.7 0 1.6 0h11.8c.9 0 1.6.7 1.6 1.6v11.8c0 .9-.7 1.6-1.6 1.6H1.6C.7 15 0 14.3 0 13.4V1.6zm1.6-.2c-.1 0-.2 0-.2.2v9.3L5 7.3l1.7 1.4L10 5.4l3.6 3.3V1.6c0-.1 0-.2-.2-.2H1.6zm12 9.1L10 7.3 7.7 9.6l4.6 4h1.1c.1 0 .2 0 .2-.2v-2.9zm-3.3 3.1L5 9.1l-3.6 3.7v.6c0 .1 0 .2.2.2h8.7zM6.3 5a1.4 1.4 0 11-2.7 0 1.4 1.4 0 012.8 0zM65 .5a.5.5 0 10-1 0V14.5a.5.5 0 101 0v-1.6h9.7V9.6h5.4V5.4h-3.2V2H65V.5zm0 2.7v2.2h10.8V3.2H65zm0 3.2v2.2h14V6.4H65.1zm0 3.2v2.2h8.6V9.6h-8.5zM130.6 0c.4 0 .7.3.7.6V1h5.7V.6a.6.6 0 011.3 0V1h.7a2 2 0 012 2v5.3c-.3-.5-.8-.9-1.3-1.2V5h-11.4v7c0 .4.3.8.7.8h2.1l.5 1.2H129a2 2 0 01-2-2V3c0-1.1.9-2 2-2h1V.6c0-.3.3-.6.6-.6zm6.4 2.3a.6.6 0 001.3 0h.7c.4 0 .8.3.8.7v1h-11.6V3c0-.4.4-.8.8-.8h1v.2a.6.6 0 001.3 0v-.1h5.7zm-.5 4.7a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm0 8.1a3.6 3.6 0 110-7.2 3.6 3.6 0 010 7.2zm-.5-6.6v2.8l3 1.7.5-.7L137 11V8.5h-1z" fill="#059FF5"></path>
+        </svg>
+        <div class="button" id="copy-link">Tweet</div>
+      </div>
+      <!--* Bookmark -->
+      <div class="bookmark-body">
+        <h4>Bookmark Added!</h4>
+        <div class="close-link closeme"> 
+          <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z" fill="#059FF5"></path>
+          </svg>
+        </div>
+      </div>
+      <!--* Ask a question-->
+      <div class="askquestion-body">
+        <div class="part-1">
+          <h4>Post a question to the SitePoint Community</h4>
+          <svg class="avatar" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="20" fill="#C3002F"></rect>
+            <path d="M14.7 23.7h-4.1L9.8 26H7.3l4.3-11.4h2.1L18 26h-2.5l-.8-2.3zm-3.5-2h2.9l-1.5-4.2-1.4 4.3zm16.4 1l1.5-8h2.4L28.9 26h-2.3l-1.9-7.6L23 26h-2.4L18 14.6h2.3l1.6 8.1 1.9-8h2l1.8 8z" fill="#fff"></path>
+          </svg>
+          <form class="discourse-post modal-avatar-gutter">
+            <label class="minor" for="ask-a-question">What is your question in one brief sentence.
+              <input class="minor full" id="ask-a-question" type="text" placeholder=" ">
+            </label>
+            <label class="minor" for="question-details">Explain any details here (Markdown is ok): 
+              <!--img(src="images/post-ui.svg" width = "186" height="15")-->
+              <div class="post-controls"><img src="images/post-ui.svg" width="186" height="15"></div>
+              <textarea class="minor full" id="question-details" type="textarea" rows="5" placeholder=""></textarea>
+            </label>
+            <label class="small" for="include-link">
+              <input id="include-link" type="checkbox" checked=""> Include a link to this book section?
+            </label>
+            <button class="button" id="ask" type="submit">Post your question</button>
+          </form>
+        </div>
+        <div class="part-2">
+          <h4>Posting...</h4>
+          <div class="loader">
+            <svg class="lds-infinity" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 100 60" preserveAspectRatio="xMidYMid">
+              <path fill="none" d="M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z" stroke="rgba(255,255,255,0.05)" stroke-width="7"></path>
+              <path fill="none" d="M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z" stroke="#CC3F72" stroke-width="7" stroke-dasharray="110 8 7 6 5 4 3 2 1 110">
+                <animate attributeName="stroke-dashoffset" calcMode="linear" values="0;256.6" keyTimes="0;1" dur="2.3" begin="0s" repeatCount="indefinite"></animate>
+              </path>
+            </svg>  Preparing to post...
+          </div>
+        </div>
+        <div class="part-3">
+          <h4>Success!</h4>
+          <svg class="avatar" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="20" fill="#C3002F"></rect>
+            <path d="M14.7 23.7h-4.1L9.8 26H7.3l4.3-11.4h2.1L18 26h-2.5l-.8-2.3zm-3.5-2h2.9l-1.5-4.2-1.4 4.3zm16.4 1l1.5-8h2.4L28.9 26h-2.3l-1.9-7.6L23 26h-2.4L18 14.6h2.3l1.6 8.1 1.9-8h2l1.8 8z" fill="#fff"></path>
+          </svg>
+          <p class="modal-avatar-gutter">Your question has been posted to the <a href="https://www.sitepoint.com/community/">SitePoint Community</a>. We’ll notify you the moment we see a response.  </p>
+          <div class="center"><a class="button" href="https://www.sitepoint.com/community/t/grid-items-not-centering/359083" id="go-to-post">Click here to view your post</a></div>
+          <footer><a class="minor closeme" href="#0">(X) Or close this window and return to your book</a></footer>
+        </div>
+        <div class="close-link closeme"> 
+          <svg viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z" fill="#059FF5"></path>
+          </svg>
+        </div>
+      </div>
+    </dialog>
   </div>
   <!-- footer-->
   <footer class="mainfooter">

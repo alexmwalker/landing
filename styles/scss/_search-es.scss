@@ -1,0 +1,35 @@
+.product-gutter, .product-data, .product-meta{
+    padding-top: calc(var(--baseline) / 2);
+    padding-bottom: calc(var(--baseline) / 2);
+}
+
+.product-gutter{
+    background-color: #f1f1f1;
+    text-align: center;
+    .cover{
+        width: 80%;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+    .course{
+        width: 95%;
+        img{
+            box-shadow: 2px 2px 3px  rgba(0,0,0,0.2);
+        }
+    }
+}
+.product-data{
+    //
+}
+.product-meta{
+    ul {
+        list-style: none;
+        font-size: calc(1rem / var(--typescale) / var(--typescale));
+        text-align: right;
+        line-height: calc(var(--baseline) / 2);
+    }
+}
+.media-type.book{
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='7.5' r='7.5' fill='%2321759B'/%3E%3Cpath d='M10.4 4.7s-.2 0-.2.2V11c0 .1 0 .2-.2.2H5.4a.6.6 0 01-.6-.6c0-.3.3-.6.6-.6h3.8c.3 0 .6-.3.6-.6v-5c0-.3-.3-.5-.6-.5H5c-.4 0-.6.2-.6.6v6c0 .7.4 1.1 1 1.1H10c.4 0 .6-.3.6-.6V4.9c0-.1 0-.2-.2-.2z' fill='%23fff'/%3E%3Cpath d='M9.6 10.8H5.4c-.1 0-.2 0-.2-.2 0-.1 0-.2.2-.2h4.2c.1 0 .2 0 .2.2 0 .1 0 .2-.2.2z' fill='%23fff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    
+}

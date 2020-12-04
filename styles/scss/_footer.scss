@@ -5,6 +5,9 @@ footer.mainfooter {
   padding: calc(var(--baseline)) 0 calc(var(--baseline)) 0;
   font-size: .75rem;
   color: #ccc;
+  h4{
+    color: #ccc;
+  }
   ul li a{
     color: #ddd;
   }
