@@ -2907,6 +2907,10 @@ html.offline #offline-notification {
   background-color: #ffc;
 }
 
+.sample {
+  font-style: italic;
+}
+
 /* ===  FOOTER === */
 footer.mainfooter {
   background: #3D383E;
