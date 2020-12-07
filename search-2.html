@@ -7,11 +7,10 @@
     <meta name="description" content="SitePoint Library"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="styles/css/new-search.css?cache=654321"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
     <!-- type inspector-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
-  <body class="vr -labelling borders">
+  <body class="-vr -labelling -borders">
     <!-- header-simple.pug-->
     <!-- Set `- var hidesearch = 1` on top of page to hide the navbar search (see 'search.pug')-->
     <!-- -->
@@ -24,8 +23,11 @@
             </div>
             <div class="col-9_sm-hidden">
               <ul class="nav">
-                <!--i.search-navsearch is removed 
-                -->
+                <li class="search-nav">
+                  <form action="search.html">
+                    <input placeholder="Search" type="text"/>
+                  </form>
+                </li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a class="youarehere" href="#">Community</a></li>
                 <li class="library"><a href="library.html">Library</a></li>
@@ -109,14 +111,14 @@
               <div class="col-10_md-12">
                 <input class="form-control" id="Search" name="Search" type="text" placeholder="Search for..."/>
                 <button class="insetbutton" name="singlebutton">&nbsp;</button>
-                <p class="media-selector textcenter minor">Include:<span>
+                <p class="media-selector textcenter minor"><span>
                     <label for="books">Books 
                       <input id="books" type="checkbox" checked="checked"/>
                     </label></span><span>
                     <label for="courses">Courses
                       <input id="courses" type="checkbox" checked="checked"/>
                     </label></span><span>
-                    <label for="talks">Tech talks 
+                    <label for="talks">Talks 
                       <input id="talks" type="checkbox" checked="checked"/>
                     </label></span><span>
                     <label for="articles">Articles
@@ -127,106 +129,77 @@
           </form>
         </div>
       </nav>
-      <div class="container">
-        <div class="grid">
-          <div class="col-12">
-            <h3 class="underline currentquery">Showing 113 results for: </h3>
-          </div>
-        </div>
+      <div class="container results">
         <!--.grid-noGutter-->
         <section class="grid result-unit">
-          <div class="col-2_sm-4 product-gutter"> <img class="cover" src="images/covers/learning-docker.png"/></div>
+          <div class="col-2_sm-4 product-gutter"> 
+            <div class="cover"><img src="images/covers/learning-docker.png"/></div>
+          </div>
           <div class="col-8_sm-8 product-data">
             <h4>Learning Docker - Second Edition</h4>
             <p class="small">Docker lets you create, deploy, and manage scalable app containers across multiple platforms. Learn how to package apps and build, ship, and scale containers. Delve into microservice architecture. Explore real-world examples of securing and managing Docker containers.</p>
           </div>
           <div class="col-2_sm-hidden product-meta">
-            <ul>
-              <li class="media-type book">Book: 311 pages</li>
+            <ul class="media-type book">
+              <li>Book </li>
+              <li class="pages"> 311 pages</li>
               <li class="pubdate">Jan 2020</li>
               <!--li.stars-->
             </ul>
           </div>
         </section>
         <section class="grid result-unit">
-          <div class="col-2_sm-4 product-gutter"> <img class="course" src="images/courses/react-course.png"/></div>
-          <div class="col-8_sm-8 product-data">
+          <div class="col-2_sm-4 product-gutter course"> 
+            <div class="course"> <img src="images/courses/react-course.png"/></div>
+          </div>
+          <div class="col-8_sm-8 product-data"><a href="result-1.html"></a>
             <h4>Introduction to React</h4>
             <p class="small">In this course, you’ll get a thorough introduction to real-world React. We’ll introduce you to the tools that’ll help you get ahead and create a React skeleton project. Then we’ll start building our project, an online swag shop, diving into promises, components, props, state, data services and notifications.</p>
           </div>
           <div class="col-2_sm-hidden product-meta">
-            <ul>
-              <li class="media-type book">Book</li>
-              <li class="pages">311 pages</li>
-              <li class="pubdate">Jan 2020</li>
+            <ul class="media-type course">
+              <li>Course</li>
+              <li class="pages">3 hours 25min </li>
+              <li class="pubdate">Apr 2020</li>
               <!--li.stars-->
             </ul>
           </div>
         </section>
         <section class="grid result-unit">
-          <div class="col-2_sm-4 product-gutter"> <img class="cover" src="images/covers/html5games.png"/></div>
+          <div class="col-2_sm-4 product-gutter"> 
+            <div class="cover"><img src="images/covers/dockerfordevelopers.png"/></div>
+          </div>
           <div class="col-8_sm-8 product-data">
-            <h4>Learning Docker - Second Edition</h4>
-            <p class="small">Docker lets you create, deploy, and manage scalable app containers across multiple platforms. Learn how to package apps and build, ship, and scale containers. Delve into microservice architecture. Explore real-world examples of securing and managing Docker containers.</p>
+            <h4>‘Installing’, ‘docker’ and ‘OSX’ found for 13 times in this book</h4>
+            <p class="small"> <span class="term">Install Docker on macOS. </span> <span class="term">Docker Desktop for Mac OS </span>Sierra 10.13 and abovecan be downloaded from <span class="term">Docker </span>Hub. The package includes the Docker server, CLI, Docker Compose, Docker Swarm, and Kubernetes. Two editions are available: stable and edge with experimental features. The stable version...</p>
           </div>
           <div class="col-2_sm-hidden product-meta">
-            <ul>
-              <li class="media-type course">Course</li>
-              <li class="length">1hour 5min</li>
+            <ul class="media-type course">
+              <li>Course</li>
+              <li class="length">1hour 11</li>
+              <li class="pubdate">Apr 2019</li>
+              <!--li.stars -->
+            </ul>
+          </div>
+        </section>
+        <section class="grid result-unit">
+          <div class="col-2_sm-4 product-gutter techtalk"> 
+            <div class="techtalk"><img src="images/techtalks/techtalk.png"/></div>
+          </div>
+          <div class="col-8_sm-8 product-data">
+            <h4>‘Installing’, ‘docker’ and ‘OSX’ found for 13 times in this book</h4>
+            <p class="small"> <span class="term">Install Docker on macOS. </span> <span class="term">Docker Desktop for Mac OS </span>Sierra 10.13 and above can be downloaded from <span class="term">Docker </span>Hub. The package includes the Docker server, CLI, Docker Compose, Docker Swarm, and Kubernetes. Two editions are available: stable and edge with experimental features. The stable version...</p>
+          </div>
+          <div class="col-2_sm-hidden product-meta">
+            <ul class="media-type techtalks">
+              <li>Tech talk</li>
+              <li class="length">1hour 5</li>
               <li class="pubdate">Apr 2019</li>
               <!--li.stars -->
             </ul>
           </div>
         </section>
       </div>
-      <!--            h4.book-listing
-                  strong 16 
-                  | results found in 
-                  em HTML Games: Novice to Ninja
-          .col-3.showall
-              p 
-                  a(href="#") Show all 16 results
-          .col-12
-              .grid-noGutter.result-units
-                  .col-12.result-unit
-                      h5 Chapter 3:  CSS Selectors 
-                      p.minor.sample Why should your site look like 101 others? Consider developing  your own 
-                          span.query CSS Animation 
-                          | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two... 
-      
-                  .col-12.result-unit
-                      h5 Chapter 6: Interactive elements
-                      p.minor.sample Think of 
-                          span.query CSS animation 
-                          | as the more sophisticated sister to CSS transitions. Animations differ from transitions in a few key ways: Animations don’t degrade gracefully. If there’s no support from the browser, the user is out of luck. The alternative is to use JavaScript...
-      
-      
-      
-      section.grid-noGutter.results-books
-          .col-9    
-              h4.book-listing
-                  img.cover(src='images/covers/adobexd.png')
-                  strong 16 
-                  | results found in 
-                  em Adobe XD: Novice to Ninja
-          .col-3.showall
-              p 
-                  a(href="#") Show all 16 results
-          .col-12
-              .grid-noGutter.result-units
-                  .col-12.result-unit
-                      h5 Chapter 3:  CSS Selectors 
-                      p.minor.sample Why should your site look like 101 others? Consider developing  your own 
-                          span.query CSS Animation 
-                          | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two... 
-      
-                  .col-12.result-unit
-                      h5 Chapter 6: Interactive elements
-                      p.minor.sample Think of 
-                          span.query CSS animation 
-                          | as the more sophisticated sister to CSS transitions. Animations differ from transitions in a few key ways: Animations don’t degrade gracefully. If there’s no support from the browser, the user is out of luck. The alternative is to use JavaScript...
-                          
-      -->
       <!--include search-library.pug-->
       <!--include book-cards.pug -->
     </section>

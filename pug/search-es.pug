@@ -1,94 +1,72 @@
-.container
-    .grid
-        .col-12
-            h3.underline.currentquery Showing 113 results for: 
-
-
+.container.results
+    
     //.grid-noGutter
     section.grid.result-unit
         .col-2_sm-4.product-gutter  
-            img.cover(src='images/covers/learning-docker.png')  
+            .cover
+                img(src='images/covers/learning-docker.png')  
         .col-8_sm-8.product-data
             h4 Learning Docker - Second Edition
             p.small Docker lets you create, deploy, and manage scalable app containers across multiple platforms. Learn how to package apps and build, ship, and scale containers. Delve into microservice architecture. Explore real-world examples of securing and managing Docker containers.
         .col-2_sm-hidden.product-meta
-            ul
-                li.media-type.book Book: 311 pages
+            ul.media-type.book
+                li Book 
+                li.pages  311 pages
                 li.pubdate Jan 2020
                 //li.stars
 
     section.grid.result-unit
-        .col-2_sm-4.product-gutter  
-            img.course(src='images/courses/react-course.png')  
+        .col-2_sm-4.product-gutter.course  
+            .course 
+                img(src='images/courses/react-course.png')  
         .col-8_sm-8.product-data
+            a(href='result-1.html')
             h4 Introduction to React
             p.small In this course, you’ll get a thorough introduction to real-world React. We’ll introduce you to the tools that’ll help you get ahead and create a React skeleton project. Then we’ll start building our project, an online swag shop, diving into promises, components, props, state, data services and notifications.
         .col-2_sm-hidden.product-meta
-            ul
-                li.media-type.book Book
-                li.pages 311 pages
-                li.pubdate Jan 2020
+            ul.media-type.course
+                li Course
+                li.pages 3 hours 25min 
+                li.pubdate Apr 2020
                 //li.stars
 
     section.grid.result-unit
         .col-2_sm-4.product-gutter  
-            img.cover(src='images/covers/html5games.png')  
+            .cover
+                img(src='images/covers/dockerfordevelopers.png')  
         .col-8_sm-8.product-data
-            h4 Learning Docker - Second Edition
-            p.small Docker lets you create, deploy, and manage scalable app containers across multiple platforms. Learn how to package apps and build, ship, and scale containers. Delve into microservice architecture. Explore real-world examples of securing and managing Docker containers.
+            h4 ‘Installing’, ‘docker’ and ‘OSX’ found for 13 times in this book
+            p.small 
+                span.term Install Docker on macOS. 
+                | 
+                span.term Docker Desktop for Mac OS 
+                | Sierra 10.13 and abovecan be downloaded from 
+                span.term Docker 
+                | Hub. The package includes the Docker server, CLI, Docker Compose, Docker Swarm, and Kubernetes. Two editions are available: stable and edge with experimental features. The stable version...
         .col-2_sm-hidden.product-meta
-            ul
-                li.media-type.course Course
-                li.length 1hour 5min
+            ul.media-type.course
+                li Course
+                li.length 1hour 11
                 li.pubdate Apr 2019
                 //li.stars 
 
+    section.grid.result-unit
+        .col-2_sm-4.product-gutter.techtalk  
+            .techtalk
+                img(src='images/techtalks/techtalk.png')  
+        .col-8_sm-8.product-data
+            h4 ‘Installing’, ‘docker’ and ‘OSX’ found for 13 times in this book
+            p.small 
+                span.term Install Docker on macOS. 
+                | 
+                span.term Docker Desktop for Mac OS 
+                | Sierra 10.13 and above can be downloaded from 
+                span.term Docker 
+                | Hub. The package includes the Docker server, CLI, Docker Compose, Docker Swarm, and Kubernetes. Two editions are available: stable and edge with experimental features. The stable version...
+        .col-2_sm-hidden.product-meta
+            ul.media-type.techtalks
+                li Tech talk
+                li.length 1hour 5
+                li.pubdate Apr 2019
+                //li.stars 
 
-//            h4.book-listing
-                
-                strong 16 
-                | results found in 
-                em HTML Games: Novice to Ninja
-        .col-3.showall
-            p 
-                a(href="#") Show all 16 results
-        .col-12
-            .grid-noGutter.result-units
-                .col-12.result-unit
-                    h5 Chapter 3:  CSS Selectors 
-                    p.minor.sample Why should your site look like 101 others? Consider developing  your own 
-                        span.query CSS Animation 
-                        | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two... 
-
-                .col-12.result-unit
-                    h5 Chapter 6: Interactive elements
-                    p.minor.sample Think of 
-                        span.query CSS animation 
-                        | as the more sophisticated sister to CSS transitions. Animations differ from transitions in a few key ways: Animations don’t degrade gracefully. If there’s no support from the browser, the user is out of luck. The alternative is to use JavaScript...
-
-    
-    
-    section.grid-noGutter.results-books
-        .col-9    
-            h4.book-listing
-                img.cover(src='images/covers/adobexd.png')
-                strong 16 
-                | results found in 
-                em Adobe XD: Novice to Ninja
-        .col-3.showall
-            p 
-                a(href="#") Show all 16 results
-        .col-12
-            .grid-noGutter.result-units
-                .col-12.result-unit
-                    h5 Chapter 3:  CSS Selectors 
-                    p.minor.sample Why should your site look like 101 others? Consider developing  your own 
-                        span.query CSS Animation 
-                        | theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two... 
-
-                .col-12.result-unit
-                    h5 Chapter 6: Interactive elements
-                    p.minor.sample Think of 
-                        span.query CSS animation 
-                        | as the more sophisticated sister to CSS transitions. Animations differ from transitions in a few key ways: Animations don’t degrade gracefully. If there’s no support from the browser, the user is out of luck. The alternative is to use JavaScript...
-                        

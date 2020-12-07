@@ -60,9 +60,9 @@ $b-rad: 6px;
 }
 
 .search-big{
-  margin: 0 0 calc(var(--baseline) / 2);
+  margin: 0;
   .grid-noGutter-center{
-    padding: calc(var(--baseline) * 1.5) 0 0;
+    padding: calc(var(--baseline) * 1.0) 0 0;
     margin: 0;
   }
   input[type*="text"]{ 
