@@ -3200,7 +3200,7 @@ input:focus {
   background-size: auto 90%;
 }
 
-.insetbutton .loader {
+.loader {
   width: 100%;
   height: calc(var(--baseline) * 2);
 }

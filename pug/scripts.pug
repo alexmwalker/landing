@@ -1,6 +1,6 @@
 
-script(src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js", type="text/javascript")
-script(src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" , type="text/javascript")
+//script(src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js", type="text/javascript")
+//script(src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" , type="text/javascript")
 //script(src="scripts/typography.js" , type="text/javascript")
 //script(src="scripts/hopscotch.js" , type="text/javascript")
 script.
@@ -8,10 +8,30 @@ script.
     $('.showmobile').click(function(){
       $(this).toggleClass('open');
     });
+
     $('.loggedout a').click(function(){
       $('.login-panel').toggleClass('open');
     });
+
+    $('input#books').click(function(){
+      $('.book-unit').fadeToggle("1000");
+    });
+
+    $('input#courses').click(function(){
+      $('.course-unit').fadeToggle("1000");
+    });
+
+    $('input#talks').click(function(){
+      $('.techtalk-unit').fadeToggle("1000");
+    });
+
+    $('input#articles').click(function(){
+      $('.article-unit').fadeToggle("1000");
+    });
+
   });
+
+
     $(window).resize(function(){ /* close the menu on screen resize */
       $('.showmobile').removeClass('open');
       $('.login-panel').removeClass('open');
