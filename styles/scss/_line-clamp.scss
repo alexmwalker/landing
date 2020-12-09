@@ -1,0 +1,89 @@
+
+
+/* Trimming Multi-Line Text in CSS
+SHOUTOUT: @eladsc 
+SRC: https://medium.com/@elad/trimming-multi-lines-in-css-5ae59d5e6d84 
+DEMO: https://codepen.io/elad2412/pen/Poovzzb
+*/
+
+@mixin trim($numLines: null) {
+    @if $numLines !=null {
+      display: -webkit-box;
+      -webkit-line-clamp: $numLines;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      //min-height: calc(var(--baseline) * 2);
+    }
+  
+    @else {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+    }
+  }
+  
+  .trim-singleline {
+    @include trim
+  }
+  
+  .trim-multiline {
+    @include trim(4); // 3 line line clamp in mobile
+    transition: all .3s;
+    //min-height: calc(var(--baseline) * 2);
+  }
+  
+  .trim-multiline:before {
+    display: block;
+    position: absolute;
+    content: '[+] EXPAND';
+    background: #f3f6f9;
+    color: #999;
+    text-align: right;
+    font-size: calc(1rem / 1.15);
+    font-size: 7px;
+    pointer-events: none;
+    right: 0;
+    padding-right: .5rem;
+    bottom: 2px;
+    height: calc(var(--baseline) / 2);
+    width: 4rem;
+  }
+  
+  dd:hover .trim-multiline:before {
+    color: green;
+    font-weight: 500
+  }
+  
+  
+  /* Medium devices (tablets, 48em and up)*/
+  @media (min-width: 48em) {
+    .trim-multiline {
+      @include trim(3); // 2 line line-clamp in tablet up
+    }
+  }
+  
+  /* the 'Expand' control on search results */
+  .book-search-results-list dd {
+    position: relative;
+  
+    input {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: calc(var(--baseline) / 2);
+      width: 3rem;
+      opacity: 0; // <-- this makes the checkbox invisible	
+    }
+  }
+  
+  input:checked+.trim-multiline {
+    @include trim(4); // expand on checkbox check - close on uncheck
+    transition: all .3s;
+  }
+  
+  input:checked+.trim-multiline:before {
+    content: '[-] HIDE'; // expand switch says 'hide' after expanding
+  }
+
+
