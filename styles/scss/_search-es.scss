@@ -1,6 +1,6 @@
 .results{
-    border-top: 1px solid #ccc;
-    padding-top: calc(var(--baseline) / 2);
+    border-top: 1px solid #ddd;
+    padding-top: 0; // calc(var(--baseline) / 2);
     transform: perspective(500px);
 }
 
@@ -13,7 +13,9 @@
     margin-bottom: 0;
 } 
 
-
+.grid.result-unit{
+    border-bottom: 1px solid #ddd;
+}
 
 .product-gutter{
     background-color: #f1f1f1;
@@ -110,7 +112,7 @@
   @media (max-width: 48em){
 
     .product-gutter{
-        padding-top: calc(var(--baseline) * 0.0);
+        padding-top: calc(var(--baseline) * 0.5);
         background: #f1f1f1;
         ul {
             font-size: calc(1rem / var(--typescale) / var(--typescale)/ var(--typescale)/ var(--typescale));

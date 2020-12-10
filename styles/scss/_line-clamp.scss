@@ -32,7 +32,7 @@ DEMO: https://codepen.io/elad2412/pen/Poovzzb
     transition: all .3s;
     //min-height: calc(var(--baseline) * 2);
   }
-  
+  /*
   .trim-multiline:before {
     display: block;
     position: absolute;
@@ -49,12 +49,13 @@ DEMO: https://codepen.io/elad2412/pen/Poovzzb
     height: calc(var(--baseline) / 2);
     width: 4rem;
   }
-  
+  */
+  /*
   dd:hover .trim-multiline:before {
     color: green;
     font-weight: 500
   }
-  
+  */
   
   /* Medium devices (tablets, 48em and up)*/
   @media (min-width: 48em) {

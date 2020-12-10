@@ -2816,8 +2816,8 @@ html.offline #offline-notification {
 }
 
 .results {
-  border-top: 1px solid #ccc;
-  padding-top: calc(var(--baseline) / 2);
+  border-top: 1px solid #ddd;
+  padding-top: 0;
   -webkit-transform: perspective(500px);
           transform: perspective(500px);
 }
@@ -2829,6 +2829,10 @@ html.offline #offline-notification {
 
 .search-big .media-selector {
   margin-bottom: 0;
+}
+
+.grid.result-unit {
+  border-bottom: 1px solid #ddd;
 }
 
 .product-gutter {
@@ -2927,7 +2931,7 @@ html.offline #offline-notification {
 
 @media (max-width: 48em) {
   .product-gutter {
-    padding-top: calc(var(--baseline) * 0.0);
+    padding-top: calc(var(--baseline) * 0.5);
     background: #f1f1f1;
   }
   .product-gutter ul {
@@ -2961,10 +2965,11 @@ DEMO: https://codepen.io/elad2412/pen/Poovzzb
   transition: all 0.3s;
 }
 
+/*
 .trim-multiline:before {
   display: block;
   position: absolute;
-  content: "[+] EXPAND";
+  content: '[+] EXPAND';
   background: #f3f6f9;
   color: #999;
   text-align: right;
@@ -2972,17 +2977,18 @@ DEMO: https://codepen.io/elad2412/pen/Poovzzb
   font-size: 7px;
   pointer-events: none;
   right: 0;
-  padding-right: 0.5rem;
+  padding-right: .5rem;
   bottom: 2px;
   height: calc(var(--baseline) / 2);
   width: 4rem;
 }
-
+*/
+/*
 dd:hover .trim-multiline:before {
   color: green;
-  font-weight: 500;
+  font-weight: 500
 }
-
+*/
 /* Medium devices (tablets, 48em and up)*/
 @media (min-width: 48em) {
   .trim-multiline {
