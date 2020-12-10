@@ -74,14 +74,14 @@
                 <button class="fontsizeup go">A+</button>
               </div>
             </li>
-            <li class="library"><a href="library.html">
-                <svg class="svg-icon">
-                  <use fill="#fff" href="#my-library"></use>
-                </svg> Library</a></li>
             <li><a class="search-control" href="#" onclick="return false">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-search"></use>
                 </svg> Search</a></li>
+            <li class="library"><a href="library.html">
+                <svg class="svg-icon">
+                  <use fill="#fff" href="#my-library"></use>
+                </svg> Library</a></li>
             <li><a href="#">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-activity"></use>
@@ -92,11 +92,12 @@
     </div>
   </header>
   <div id="search-panel">
-    <div class="grid-noGutter-center searchbox">
-      <div class="col-8_md-11">
-        <form id="searchform">
+    <div class="grid-noGutter-center searchbox search-big">
+      <div class="col-10_md-10">
+        <form id="searchform" action="search.html">
           <input type="search" id="booksearch" placeholder="      Search the book">
-          <input class="insetbutton" id="start-search" type="submit" value="Go">
+          <!--input#start-search.insetbutton(type="submit", value="Go" )-->
+          <button class="insetbutton" name="singlebutton">&nbsp;</button>
           <div id="search-close" title="Clear search"> </div>
         </form>
       </div>
@@ -194,12 +195,15 @@
             <div class="col-3_md-3_sm-4"><a class="toolbarLink viewchapters" src="#">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-chevron"></use>
-                </svg>Contents</a></div>
+                </svg>Table of Contents</a></div>
             <div class="col-3_md-3_sm-4"><a class="toolbarLink" id="bookmarks" src="#">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-chevron"></use>
                 </svg>My Bookmarks</a></div>
-            <div class="col-3_md-3_sm-hidden"> </div>
+            <div class="col-3_md-3_sm-hidden"> <a class="toolbarLink searchlink" href="#" onclick="return false">
+                <svg class="svg-icon">
+                  <use fill="#fff" href="#my-search"></use>
+                </svg>Search</a></div>
             <div class="col-3_md-3_sm-hidden">
               <div class="toolbarLink" id="offlinemode">
                 <div class="pretty p-switch p-fill">

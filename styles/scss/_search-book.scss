@@ -55,7 +55,7 @@ input:focus {
     left: 1rem;
     position: relative;
     float: left;
-    width: 90%;
+    width: calc(100% - 4rem);
     padding: 0 0 0 1rem;
     box-shadow: 2px 3px 6px inset rgba(0, 0, 0, .1);
     border-radius: calc(var(--baseline) * 2) 0 0 calc(var(--baseline) * 2);
@@ -84,36 +84,7 @@ input:focus {
   }
 
 
-  /*
-  .insetbutton {
-    padding: 0rem;
-    float: left;
-    position: relative;
-    -webkit-appearance: button;
-    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
-    background-position: center center;
-    background: #fff;
-    background-repeat: no-repeat;
-    border: 3px solid #ddd;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-    margin: calc(var(--baseline) / -8) 0 0 -1rem;
-    color: #555;
-    font-size: 1rem;
-    height: calc(var(--baseline) * 1.8);
-    width: calc(var(--baseline) * 1.8);
-    overflow: hidden;
-    //padding: 5px 10px;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-border-radius: calc(var(--baseline) * 2);
-    -moz-border-radius: calc(var(--baseline) * 2);
-    border-radius: calc(var(--baseline) * 2);
 
-    &:hover {
-      border: 3px solid #bbb;
-      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-    }
-  }*/
   .insetbutton{
     padding-right: 1.15rem;
     border-left: 1px solid #ccc;
@@ -213,88 +184,3 @@ input:focus {
   }
 }
 
-/* Trimming Multi-Line Text in CSS
-SHOUTOUT: @eladsc 
-SRC: https://medium.com/@elad/trimming-multi-lines-in-css-5ae59d5e6d84 
-DEMO: https://codepen.io/elad2412/pen/Poovzzb
-*/
-
-@mixin trim($numLines: null) {
-  @if $numLines !=null {
-    display: -webkit-box;
-    -webkit-line-clamp: $numLines;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    //min-height: calc(var(--baseline) * 2);
-  }
-
-  @else {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-  }
-}
-
-.trim-singleline {
-  @include trim
-}
-
-.trim-multiline {
-  @include trim(3); // 3 line line clamp in mobile
-  transition: all .3s;
-  //min-height: calc(var(--baseline) * 2);
-}
-
-.trim-multiline:before {
-  display: block;
-  position: absolute;
-  content: '[+] EXPAND';
-  background: #f3f6f9;
-  color: #999;
-  text-align: right;
-  font-size: calc(1rem / 1.15);
-  font-size: 7px;
-  pointer-events: none;
-  right: 0;
-  padding-right: .5rem;
-  bottom: 2px;
-  height: calc(var(--baseline) / 2);
-  width: 4rem;
-}
-
-dd:hover .trim-multiline:before {
-  color: green;
-  font-weight: 500
-}
-
-
-/* Medium devices (tablets, 48em and up)*/
-@media (min-width: 48em) {
-  .trim-multiline {
-    @include trim(2); // 2 line line-clamp in tablet up
-  }
-}
-
-/* the 'Expand' control on search results */
-.book-search-results-list dd {
-  position: relative;
-
-  input {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: calc(var(--baseline) / 2);
-    width: 3rem;
-    opacity: 0; // <-- this makes the checkbox invisible	
-  }
-}
-
-input:checked+.trim-multiline {
-  @include trim(6); // expand on checkbox check - close on uncheck
-  transition: all .3s;
-}
-
-input:checked+.trim-multiline:before {
-  content: '[-] HIDE'; // expand switch says 'hide' after expanding
-}

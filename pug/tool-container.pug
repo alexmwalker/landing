@@ -7,7 +7,7 @@
             a.toolbarLink.viewchapters(src='#')
               svg.svg-icon
                 use(fill='#fff', href='#my-chevron')
-              | Contents
+              | Table of Contents
           .col-3_md-3_sm-4
             a#bookmarks.toolbarLink(src='#')
               svg.svg-icon
@@ -15,6 +15,10 @@
               | My Bookmarks
 
           .col-3_md-3_sm-hidden 
+            a.toolbarLink.searchlink(href='#',  onclick="return false")
+              svg.svg-icon
+                use(fill='#fff', href='#my-search')
+              | Search
           .col-3_md-3_sm-hidden
             #offlinemode.toolbarLink
               .pretty.p-switch.p-fill

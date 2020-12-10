@@ -1,11 +1,14 @@
 
 
+
+
 #search-panel
-  .grid-noGutter-center.searchbox
-    .col-8_md-11
-      form(id="searchform")
+  .grid-noGutter-center.searchbox.search-big
+    .col-10_md-10
+      form(id="searchform" action="search.html")
         input(type="search", id="booksearch", placeholder="      Search the book")
-        input#start-search.insetbutton(type="submit", value="Go" )
+        //input#start-search.insetbutton(type="submit", value="Go" )
+        button.insetbutton(name='singlebutton') &nbsp;
         div#search-close(title='Clear search') 
 
           
