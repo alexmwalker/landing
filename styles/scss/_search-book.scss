@@ -1,9 +1,9 @@
 #search-panel {
-  position: absolute;
+  position: fixed;
   background: #fff;
   z-index: 1;
   //margin: 0 auto !important;
-  color: #212121;
+  color: #f12121;
   display: block;
   opacity: 0;
   //transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
@@ -11,6 +11,7 @@
   top: calc(var(--baseline) * 1);
   right: 0;
   width: 100%;
+  z-index: -1;
   background-color: rgba(255, 255, 255, 0);
   overflow: auto;
   border-radius: 6px;

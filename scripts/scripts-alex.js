@@ -22,7 +22,7 @@
     ['Bookmark','#', 'bookmark']
   ];
   
-  // BUILD TEXTTOOL UI UNIT
+  // BUILD TEXTTOOL UI UNIT FROM A UL
   let fragment = new DocumentFragment();
 
   let ul = document.createElement('ul');

@@ -3076,10 +3076,10 @@ html.offline #offline-notification.tuckaway {
   top: calc(var(--baseline) * 1);
   right: 0;
   width: 100%;
-  z-index: -1;
   background-color: rgba(255, 255, 255, 0);
   overflow: auto;
   border-radius: 6px;
+  z-index: -1;
 }
 #search-panel.open {
   opacity: 1;

@@ -7,7 +7,7 @@
   },
   {
       "id": "2",
-      "searchTitle": "How to Get Started with CSS Animation : CSS Master > Chapter 2",
+      "searchTitle": "2: How to Get Started with CSS Animation : CSS Master ",
       "searchLink": "https://www.sitepoint.com/premium/books/modern-css/read",
       "searchDesc": "Adding a slider or carousel to showcase content on a website is a common client request for developers. The amount of free and premium <span class='search-term'>CSS animation</span> carousel plugins available is overwhelming, and a good many of them offer plenty of useful configuration options and dynamic effects. There are times, however, when a lightweight carousel with minimal options is all you need. "
   },
@@ -19,13 +19,13 @@
   },
   {
     "id": "4",
-    "searchTitle": "CSS Selectors : CSS Master > Chapter 5",
+    "searchTitle": "Ch 5. CSS Selectors",
     "searchLink": "https://www.sitepoint.com/premium/books/modern-css/read",
     "searchDesc": "As rewarding as crafting my own animation effects can be, I’m going to use a well-known, open-source <span class='search-term'>CSS3 animation</span> library most aptly called Animate.css, by Dan Eden. This is so that I can focus on the task at hand, rather than on explaining the code for CSS3 animations. However, if you want to delve into that topic, you’ll enjoy the CSS3 Animations series here on SitePoint, by Craig Buckler."
 },
 {
     "id": "5",
-    "searchTitle": "How to Get Started with CSS Animation : CSS Master > Chapter 2",
+    "searchTitle": "Chapter 6: How to Get Started with CSS Animation : CSS Master  ",
     "searchLink": "https://www.sitepoint.com/premium/books/modern-css/read",
     "searchDesc": "Adding a slider or carousel to showcase content on a website is a common client request for developers. The amount of free and premium <span class='search-term'>CSS animation</span> carousel plugins available is overwhelming, and a good many of them offer plenty of useful configuration options and dynamic effects. There are times, however, when a lightweight carousel with minimal options is all you need. "
 },

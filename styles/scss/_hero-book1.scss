@@ -1,9 +1,10 @@
 /* bookpanel */ 
-
+#reeedr .bookpanel .container {
+  color: #fff;
+}
 #reeedr .bookpanel {
   background-color: #333;
   margin-bottom: 0;
-  color: #fff!important;
   padding-top: calc(var(--baseline)*2);
   width: 100%;
   .thumbnail-book{

@@ -26,7 +26,7 @@
   /* This is handy for stopping layouts running wide on super wide monitors. It's unneccessary if you have proper layout CSS */
   max-width: 58rem;
   margin: 0 auto !important;
-  color: var(--basefontcolor);
+  /* color: var(--basefontcolor); */
 }
 
 /*
@@ -3064,10 +3064,10 @@ html.offline #offline-notification.tuckaway {
 }
 
 #search-panel {
-  position: fixed;
+  position: absolute;
   background: #fff;
   z-index: 1;
-  color: #f12121;
+  color: #212121;
   display: block;
   opacity: 0;
   -webkit-transition: 0.3s ease-out;
@@ -3076,7 +3076,6 @@ html.offline #offline-notification.tuckaway {
   top: calc(var(--baseline) * 1);
   right: 0;
   width: 100%;
-  z-index: -1;
   background-color: rgba(255, 255, 255, 0);
   overflow: auto;
   border-radius: 6px;
@@ -3634,13 +3633,10 @@ input:focus {
 }
 
 /* bookpanel */
-#reeedr .bookpanel .container {
-  color: #fff;
-}
-
 #reeedr .bookpanel {
   background-color: #333;
   margin-bottom: 0;
+  color: #fff;
   padding-top: calc(var(--baseline)*2);
   width: 100%;
 }
@@ -4440,7 +4436,7 @@ dialog {
   width: 100%;
   text-decoration: none;
   -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 0 2.66667rem 0;

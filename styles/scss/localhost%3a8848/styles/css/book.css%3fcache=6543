@@ -3150,7 +3150,7 @@ input:focus {
   left: 1rem;
   position: relative;
   float: left;
-  width: 90%;
+  width:  calc(100% - 4rem);
   padding: 0 0 0 1rem;
   -webkit-box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
   box-shadow: 2px 3px 6px inset rgba(0, 0, 0, 0.1);
@@ -3186,7 +3186,7 @@ input:focus {
   position: absolute;
   font-size: calc(var(--baseline) * 1);
   cursor: pointer;
-  right: 2rem;
+  right: 1rem;
   top: calc(var(--baseline) * 2.0);
   z-index: 999;
 }

@@ -74,10 +74,12 @@
                 <button class="fontsizeup go">A+</button>
               </div>
             </li>
-            <li><a class="search-control" href="#" onclick="return false">
-                <svg class="svg-icon">
-                  <use fill="#fff" href="#my-search"></use>
-                </svg> Search</a></li>
+            <!--li
+            a.search-control(href='#',  onclick="return false")
+              svg.svg-icon
+                use(fill='#fff', href='#my-search')
+              |  Search
+            -->
             <li class="library"><a href="library.html">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-library"></use>
@@ -95,7 +97,7 @@
     <div class="grid-noGutter-center searchbox search-big">
       <div class="col-10_md-10">
         <form id="searchform" action="search.html">
-          <input type="search" id="booksearch" placeholder="      Search the book">
+          <input type="search" id="booksearch" placeholder="      Search this book">
           <!--input#start-search.insetbutton(type="submit", value="Go" )-->
           <button class="insetbutton" name="singlebutton">&nbsp;</button>
           <div id="search-close" title="Clear search"> </div>
@@ -200,7 +202,7 @@
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-chevron"></use>
                 </svg>My Bookmarks</a></div>
-            <div class="col-3_md-3_sm-hidden"> <a class="toolbarLink searchlink" href="#" onclick="return false">
+            <div class="col-3_md-3_sm-hidden"> <a class="toolbarLink search-control" href="#" onclick="return false">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-search"></use>
                 </svg>Search</a></div>
@@ -251,6 +253,29 @@
             <li class="toc-chapter accordion-item chapter"><a id="chapter-11" title="8 Tips for Improving Bootstrap Accessibility"><span class="l-w-100">8 Tips for Improving Bootstrap Accessibility</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
             <li class="toc-chapter accordion-item chapter"><a id="chapter-12" title="Front-end Frameworks: Custom vs Ready-to-use Solutions"><span class="l-w-100">Front-end Frameworks: Custom vs Ready-to-use Solutions</span></a><a class="bookmark-icon-stack-wrapper undefined"><i class="bookmark-icon far far fa-bookmark"></i></a></li>
           </ol>
+        </div>
+      </div>
+    </div>
+    <div id="search-panel">
+      <div class="grid-noGutter-center searchbox search-big">
+        <div class="col-10_md-10">
+          <form id="searchform" action="search.html">
+            <input type="search" id="booksearch" placeholder="      Search this book">
+            <!--input#start-search.insetbutton(type="submit", value="Go" )-->
+            <button class="insetbutton" name="singlebutton">&nbsp;</button>
+            <div id="search-close" title="Clear search"> </div>
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="grid-center search-body"> 
+          <div class="col-12">
+            <h4>Results for '<em class="query"></em>' located in books... </h4>
+            <dl class="book-search-results-list" id="myData">
+              <dt class="skeleton">&nbsp;</dt>
+              <dd class="skeleton">&nbsp;</dd>
+            </dl>
+          </div>
         </div>
       </div>
     </div>
