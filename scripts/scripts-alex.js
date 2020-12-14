@@ -140,6 +140,8 @@
     $('#reeedr').toggleClass('dark');
   });
 
+
+
   $('#start-search').click(function () {
     startSearch();
     $('#search-panel').toggleClass('showresults');
@@ -223,11 +225,13 @@
       /* close the menu on screen resize */
       $('.showmobile').removeClass('open');
       $('.mobilenav').removeClass('open');
+      $('#search-panel').removeClass('open');
   });
   $(window).scroll(function () {
       /* close the menu on scroll */
       $('.showmobile').removeClass('open');
       $('.mobilenav').removeClass('open');
+      $('#search-panel').removeClass('open');
   });
 
   function scrollActions() {
