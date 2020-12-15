@@ -2895,7 +2895,7 @@ html.offline #offline-notification {
   background: #000;
   color: #fff;
   font-size: calc(1rem / var(--typescale) / var(--typescale)/ var(--typescale)/ var(--typescale));
-  line-height: calc(var(--baseline) / 3);
+  line-height: calc(var(--baseline) / 2);
 }
 .timecoder div {
   float: left;
