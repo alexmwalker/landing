@@ -165,7 +165,6 @@
     $('.book-search-results-list dd').remove();
     $('#search-panel').removeClass('showresults');
     $('#search-panel').removeClass('open');
-    $('#search-panel').removeClass('lock');
   });
 
   $('.search-control').click(function () { 
@@ -312,7 +311,7 @@
   }
   var offline = getUrlVars()["offline"];
   var search = getUrlVars()["search"];
-  console.log('Variable is: ' + search );
+  //console.log('Variable is: ' + search );
 
   function checkConnection(){
     if (offline == 1){
@@ -380,10 +379,11 @@
         // build the search result text <dd><p>
 
         var dd = document.createElement("dd");
-        var expand = document.createElement("input");
-        expand.className = "expand";
-        expand.type = "checkbox";
-        dd.appendChild(expand);
+        // REMOVING the clickable expander INPUT
+        //var expand = document.createElement("input");
+        //expand.className = "expand";
+        //expand.type = "checkbox";
+        //dd.appendChild(expand);
 
         var ddp = document.createElement("p");
         ddp.className = "trim-multiline fade-inner";

@@ -19,7 +19,11 @@
     transform: translateY(0) scaleY(1);
     transition: .3s ease-out;
   }
-
+  &.lock {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+    transition: .3s ease-out;
+  }
   &.showresults {
     bottom: 0px;
   }

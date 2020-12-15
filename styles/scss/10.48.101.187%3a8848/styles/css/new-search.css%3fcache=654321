@@ -320,7 +320,7 @@ figure {
 [class*=col-],
 [class*=col_] {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0 1rem 0;
   max-width: 100%;
 }
@@ -2838,35 +2838,21 @@ html.offline #offline-notification {
 .product-gutter {
   background-color: #f1f1f1;
   position: relative;
-  /*.course-wrapper:after, .techtalk-wrapper:after{  // video scrubber 
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 144 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='2' width='144' height='2' rx='1' fill='%23C4C4C4'/%3E%3Crect y='2' width='5.6' height='2' rx='1' fill='%23C3002F'/%3E%3Cellipse cx='5.2' cy='3' rx='3.1' ry='3' fill='%23D30000'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 0.5rem;
-      display: block;
-      position: absolute;
-      content: '';
-      bottom: calc(var(--baseline) * -0.5);
-      left: 0;
-      z-index: 999;
-  }*/
 }
 .product-gutter .cover-wrapper, .product-gutter .course-wrapper, .product-gutter .techtalk-wrapper, .product-gutter .article-wrapper {
-  width: 85%;
+  width: 95%;
   position: relative;
-  margin: 0 auto;
 }
 .product-gutter .cover-wrapper img, .product-gutter .course-wrapper img, .product-gutter .techtalk-wrapper img, .product-gutter .article-wrapper img {
   width: 100%;
 }
 .product-gutter .cover-wrapper {
   width: 80%;
-  /* book display is portrait view - not landscape */
   -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 .product-gutter .cover-wrapper:after {
-  /* book reflection */
+  /* reflection */
   position: absolute;
   content: "";
   width: 100%;
@@ -2877,42 +2863,24 @@ html.offline #offline-notification {
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0) 1%, rgba(250, 250, 250, 0.23) 2.5%, rgba(0, 0, 0, 0.1) 3.4%, rgba(250, 250, 250, 0.1) 4.2%, rgba(0, 0, 0, 0.1) 5.6%, rgba(250, 250, 250, 0.2) 6.8%, transparent 25%, transparent 30%, rgba(0, 0, 0, 0.2));
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0) 1%, rgba(250, 250, 250, 0.23) 2.5%, rgba(0, 0, 0, 0.1) 3.4%, rgba(250, 250, 250, 0.1) 4.2%, rgba(0, 0, 0, 0.1) 5.6%, rgba(250, 250, 250, 0.2) 6.8%, transparent 25%, transparent 30%, rgba(0, 0, 0, 0.2));
 }
-.product-gutter .course-wrapper, .product-gutter .techtalk-wrapper {
-  position: relative;
+.product-gutter .course-wrapper:after, .product-gutter .techtalk-wrapper:after {
+  /* scrubber */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 144 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='2' width='144' height='2' rx='1' fill='%23C4C4C4'/%3E%3Crect y='2' width='5.6' height='2' rx='1' fill='%23C3002F'/%3E%3Cellipse cx='5.2' cy='3' rx='3.1' ry='3' fill='%23D30000'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0.5rem;
+  display: block;
+  position: absolute;
+  content: "";
+  bottom: calc(var(--baseline) * -0.5);
+  left: 0;
+  z-index: 999;
 }
 .product-gutter .article-wrapper {
   background-color: #F6B33C;
 }
 .product-gutter .media-type {
   padding-top: calc(var(--baseline) / 2);
-}
-
-/* video timecoder overlay*/
-.timecoder {
-  position: absolute;
-  right: 0.25rem;
-  bottom: 0.2rem;
-  background: #000;
-  color: #fff;
-  font-size: calc(1rem / var(--typescale) / var(--typescale)/ var(--typescale)/ var(--typescale));
-  line-height: calc(var(--baseline) / 3);
-}
-.timecoder div {
-  float: left;
-  padding: 0 0.1rem;
-}
-.timecoder .time-hrs, .timecoder .time-sec {
-  position: relative;
-}
-.timecoder .time-hrs:before, .timecoder .time-sec:before {
-  display: block;
-  position: absolute;
-  content: ":";
-  top: 0;
-  right: -0.1rem;
-}
-.timecoder .time-sec:before {
-  left: -0.1rem;
 }
 
 .product-data {
@@ -2959,36 +2927,6 @@ html.offline #offline-notification {
   font-style: italic;
 }
 
-/* ####  SEARCH PAGINATION #### */
-ul.paginate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  list-style: none;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-ul.paginate li {
-  padding: 0 1rem;
-}
-ul.paginate .current {
-  font-weight: 600;
-}
-
-/* #### MOBILE to TABLET FIDDLES #### */
 @media (max-width: 48em) {
   .product-gutter {
     padding-top: calc(var(--baseline) * 0.5);

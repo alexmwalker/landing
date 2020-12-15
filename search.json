@@ -1,19 +1,19 @@
 [
   {
       "id": "1",
-      "searchTitle": "CSS Selectors : CSS Master > Chapter 5",
+      "searchTitle": "Ch 1: CSS Selectors",
       "searchLink": "https://www.sitepoint.com/premium/books/modern-css/read",
       "searchDesc": "As rewarding as crafting my own animation effects can be, I’m going to use a well-known, open-source <span class='search-term'>CSS3 animation</span> library most aptly called Animate.css, by Dan Eden. This is so that I can focus on the task at hand, rather than on explaining the code for CSS3 animations. However, if you want to delve into that topic, you’ll enjoy the CSS3 Animations series here on SitePoint, by Craig Buckler."
   },
   {
       "id": "2",
-      "searchTitle": "2: How to Get Started with CSS Animation : CSS Master ",
+      "searchTitle": "Ch 2: How to Get Started with CSS Animation ",
       "searchLink": "https://www.sitepoint.com/premium/books/modern-css/read",
       "searchDesc": "Adding a slider or carousel to showcase content on a website is a common client request for developers. The amount of free and premium <span class='search-term'>CSS animation</span> carousel plugins available is overwhelming, and a good many of them offer plenty of useful configuration options and dynamic effects. There are times, however, when a lightweight carousel with minimal options is all you need. "
   },
   {
       "id": "3",
-      "searchTitle":"5 Projects to Help You Master Modern CSS: HTML5 Games: Novice to Ninja  > Chapter 4",
+      "searchTitle":"Ch 4: Projects to Help You Master Modern CSS: HTML5 Games: Novice to Ninja  > Chapter 4",
       "searchLink": "https://www.sitepoint.com/premium/books/modern-css/read",
       "searchDesc": "Why should your site look like 101 others? Consider developing your own <span class='search-term'>CSS Animation </span> theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</a>"
   },
@@ -22,17 +22,5 @@
     "searchTitle": "Ch 5. CSS Selectors",
     "searchLink": "https://www.sitepoint.com/premium/books/modern-css/read",
     "searchDesc": "As rewarding as crafting my own animation effects can be, I’m going to use a well-known, open-source <span class='search-term'>CSS3 animation</span> library most aptly called Animate.css, by Dan Eden. This is so that I can focus on the task at hand, rather than on explaining the code for CSS3 animations. However, if you want to delve into that topic, you’ll enjoy the CSS3 Animations series here on SitePoint, by Craig Buckler."
-},
-{
-    "id": "5",
-    "searchTitle": "Chapter 6: How to Get Started with CSS Animation : CSS Master  ",
-    "searchLink": "https://www.sitepoint.com/premium/books/modern-css/read",
-    "searchDesc": "Adding a slider or carousel to showcase content on a website is a common client request for developers. The amount of free and premium <span class='search-term'>CSS animation</span> carousel plugins available is overwhelming, and a good many of them offer plenty of useful configuration options and dynamic effects. There are times, however, when a lightweight carousel with minimal options is all you need. "
-},
-{
-    "id": "6",
-    "searchTitle": "5 Projects to Help You Master Modern CSS: HTML5 Games: Novice to Ninja  > Chapter 4",
-    "searchLink": "https://www.sitepoint.com/premium/books/modern-css/read",
-    "searchDesc": "Why should your site look like 101 others? Consider developing your own <span class='search-term'>CSS Animation </span> theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</a>"
 }
 ]

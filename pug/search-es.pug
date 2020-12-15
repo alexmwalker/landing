@@ -4,7 +4,7 @@
             a(href='result-1.html')
                 .cover-wrapper
                     img(src='images/covers/learning-docker.png') 
-                ul.media-type.bookicon.showmobile
+                ul.media-type.bookicon.showmobile 
                     li Book 
                     li.pages  311 pages
                     li.pubdate Jan 2020 
@@ -24,6 +24,10 @@
             a(href='result-2.html')
                 .course-wrapper 
                     img(src='images/courses/react-course.png')  
+                    .timecoder 
+                        .time-hrs 1
+                        .time-min 25
+                        .time-sec 15
                 ul.media-type.courseicon.showmobile
                     li Course
                     li.pages 3hr 25min 
@@ -70,7 +74,11 @@
         .col-2_sm-4.product-gutter  
             a(href='result-4.html')
                 .techtalk-wrapper
-                    img(src='images/techtalks/techtalk.png')  
+                    img(src='images/techtalks/techtalk.png')
+                    .timecoder 
+                        .time-hrs 02
+                        .time-min 05
+                        .time-sec 27
                 ul.media-type.techtalkicon.showmobile
                     li Tech talk
                     li.length 1hr 5min
@@ -115,6 +123,7 @@
             a(href='result-1.html')
                 .cover-wrapper
                     img(src='https://d2sis3lil8ndrq.cloudfront.net/books/07c0549a-cf17-41ad-8d3c-a4cb27253aa7_medium.png')
+
                 ul.media-type.bookicon.showmobile
                     li Book 
                     li.pages  311 pages
@@ -135,6 +144,9 @@
             a(href='result-2.html')
                 .course-wrapper 
                     img(src='images/courses/react-course.png')  
+                    .timecoder 
+                        .time-min 45
+                        .time-sec 27
                 ul.media-type.courseicon.showmobile
                     li Course
                     li.pages 3hr 25min 
@@ -181,6 +193,10 @@
             a(href='result-4.html')
                 .techtalk-wrapper
                     img(src='images/techtalks/techtalk.png')  
+                    .timecoder
+                        .time-hrs 01 
+                        .time-min 05
+                        .time-sec 49
                 ul.media-type.techtalkicon.showmobile
                     li Tech talk
                     li.length 1hr 5min
@@ -213,9 +229,11 @@
                 li Article
                 li.length  4 minute read
                 li.pubdate Oct 8, 2020
+
         //        
             ul.media-type.articleicon
                 li Article
                 li.length 4 minute read
                 li.pubdate Oct 8 2020
  
+        include paginate.pug
