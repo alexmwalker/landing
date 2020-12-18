@@ -3263,11 +3263,11 @@ input:focus {
 
 #panel-search {
   position: relative;
-  top: calc(var(--baseline) * 0);
+  top: calc(var(--baseline) * 5);
   left: 0%;
   background: rgba(255, 255, 255, 0.9);
   width: 100%;
-  height: 3000px;
+  /* height: 3000px; */
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;

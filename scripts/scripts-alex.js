@@ -158,7 +158,6 @@
 
 
 
-
   $('#search-close').click(function () {
     //$('#search-panel').toggleClass('showresults');
     $('.book-search-results-list dt').remove();
@@ -166,12 +165,16 @@
     $('#search-panel').removeClass('showresults');
     $('#search-panel').removeClass('open');
     $('#search-panel').removeClass('lock');
+
   });
 
-  $('.search-control').click(function () { 
-    $('#search-panel').toggleClass('open');
-    $('#booksearch').focus();
+  $('#test').click(function () { 
+    $('#search-container').addClass('focus');
+    $('#main').addClass('defocus');
+    //$('#booksearch').focus();
+    //console.log("Search is locked! " + scrollY);
   });
+
 
   $("#offlinemode input").change(function () {
     $("body").toggleClass("local", this.checked);
@@ -257,15 +260,15 @@
 
   var lastScrollTop = 0; // set for updating to determine scroll direction
   function stickyNavigation() {
-    //console.log('navTop = ' + navTop);
-    //console.log('scrollY = ' + window.scrollY);
-  //console.log('toolbaroffset = ' + toolbaroffset);
+    console.log('navTop = ' + navTop);
+    console.log('scrollY = ' + window.scrollY);
+    //console.log('toolbaroffset = ' + toolbaroffset);
     var st = window.pageYOffset || document.documentElement.scrollTop;
     if (window.scrollY >= navTop) { // If scroll pos is greater than 418
-      //console.log('scrollY = ' + window.scrollY + 'is greater than ' + navTop);
+      console.log('scrollY = ' + window.scrollY + ' is greater than ' + navTop);
       toolcontainer.classList.add('fixed-nav'); // add class that fixes toolstrip in place
     } else {
-      //console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
+      console.log('scrollY = ' + window.scrollY + ' is less than ' + navTop);
       toolcontainer.classList.remove('fixed-nav');
     }
 

@@ -150,6 +150,47 @@ input:focus {
 
   }
 }
+#main{
+  width: 100%;
+  outline: 2px cyan dashed;
+}
+.defocus{
+  overflow: hidden;
+  position: absolute;
+  outline: 2px greenyellow dashed;
+  left: 0;
+  height: 100vh; 
+}
+
+#search-container{
+  width: 100%;
+  //height: 100vh ;
+  overflow: hidden;
+  position: absolute;
+  outline: 2px greenyellow dashed;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+  z-index: -1;
+  &.focus{
+    z-index: 999;
+    overflow: auto;
+    outline: 2px greenyellow dashed;
+    background: red ;
+    //display: none;
+  }
+}
+#panel-search{
+  position: relative;
+  top: calc(var(--baseline) * 0);
+  left: 0%;
+  background: rgba(255, 255, 255, .9);
+  width: 100%;
+  height: 3000px;
+  transition: all .3s;
+}
+
+
 
 
 .search-term {
@@ -161,6 +202,11 @@ input:focus {
   border-bottom: 2px dotted rgb(175, 175, 175);
   font-style: normal;
 }
+
+
+
+/* LOADER ANIMATIONS */
+
 
 @keyframes fadeInner {
   to {

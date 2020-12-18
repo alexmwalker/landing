@@ -6,27 +6,29 @@ head
   title #{title} | - SitePoint
   meta(name='description', content =`${titledescription}`)
   meta(content='width=device-width, initial-scale=1', name='viewport')
-  link(href='styles/css/book.css?cache=9876', rel='stylesheet', type='text/css')
+  link(href='styles/css/book.css?cache=9876543', rel='stylesheet', type='text/css')
   link(href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css', rel='stylesheet', type='text/css')
 
 
 
 
 body.vr.-labelling.borders#reeedr 
+  #main
+    include header-book.pug
+    
 
-  include header-book.pug
-  
+    //- NOTE - The search is included in the <header> above
 
-  //- NOTE - The search is included in the <header> above
-
-  include hero-panel.pug
-  include tool-container.pug
+    include hero-panel.pug
+    include tool-container.pug
 
 
-  include chapter-social.pug
-  include _modalbase.pug
+    include chapter-social.pug
+
   include book-footer.pug
 
+  include _modalbase.pug
+  include search-container.pug
   include scripts-book.pug
 
   include svg-icons.pug

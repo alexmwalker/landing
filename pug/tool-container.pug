@@ -15,10 +15,14 @@
               | My Bookmarks
 
           .col-3_md-3_sm-hidden 
-            a.toolbarLink.search-control(href='#',  onclick="return false")
+            //a.toolbarLink.search-control(href='#',  onclick="return false")
               svg.svg-icon
                 use(fill='#fff', href='#my-search')
               | Search
+
+            // temp button for testing only.
+            a#test.toolbarLink(href='#',  onclick="return false") 
+              | test 
           .col-3_md-3_sm-hidden
             #offlinemode.toolbarLink
               .pretty.p-switch.p-fill

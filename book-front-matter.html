@@ -123,10 +123,16 @@
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-chevron"></use>
                 </svg>My Bookmarks</a></div>
-            <div class="col-3_md-3_sm-hidden"> <a class="toolbarLink search-control" href="#" onclick="return false">
-                <svg class="svg-icon">
-                  <use fill="#fff" href="#my-search"></use>
-                </svg>Search</a></div>
+            <div class="col-3_md-3_sm-hidden"> 
+              <!--a.toolbarLink.search-control(href='#',  onclick="return false")
+              svg.svg-icon
+                use(fill='#fff', href='#my-search')
+              | Search
+              
+              -->
+              <!-- temp button for testing only.--><a class="toolbarLink" id="test" href="#" onclick="return false">
+                 test </a>
+            </div>
             <div class="col-3_md-3_sm-hidden">
               <div class="toolbarLink" id="offlinemode">
                 <div class="pretty p-switch p-fill">
@@ -345,7 +351,7 @@ new_variable = &quot;Hello&quot;;
   <!-- script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")-->
   <script src="scripts/jquery-3.4.0.min.js"></script>
   <script src="scripts/prism.js"></script>
-  <script src="scripts/scripts-alex.js"></script>
+  <script src="scripts/scripts-alex.js?r=1"></script>
   <svg fill="none" width="0" height="0">
     <defs>
       <symbol id="my-not-available" viewbox="0 0 101 101">
