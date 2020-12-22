@@ -2,5 +2,6 @@
     "sync.autoDownload": true,
     "sync.autoUpload": true,
     "sync.forceUpload": true,
-    "sync.forceDownload": true
+    "sync.forceDownload": true,
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace"
 }
