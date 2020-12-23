@@ -3261,8 +3261,8 @@ input:focus {
 
 .search-content {
   position: relative;
-  max-height: 90%;
-  margin: 2rem 3vw 1rem;
+  height: 70vh;
+  margin: 25vh 4vw 1rem 3vw;
   background-color: white;
   overflow-y: auto;
   z-index: 4;
@@ -3282,10 +3282,11 @@ input:focus {
   /*max-width: 70vw;
   max-height: 75vh;*/
   padding: 1.5em;
-  padding-top: 2rem;
+  padding-top: 23vh;
   margin: 0;
   width: 87vw;
   z-index: 10;
+  /* height: 70vh; */
   outline: 1px greenyellow dashed;
 }
 
