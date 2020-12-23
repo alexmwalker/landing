@@ -3063,26 +3063,16 @@ html.offline #offline-notification.tuckaway {
   transition: all 0.3s ease-out;
 }
 
-.search-term {
-  background: #fcfcaf;
-}
-
-.query {
-  border-bottom: 2px dotted #afafaf;
-  font-style: normal;
-}
-
-/*
 #search-panel {
   position: fixed;
   background: #fff;
   z-index: 1;
-  //margin: 0 auto !important;
   color: #f12121;
   display: block;
   opacity: 0;
-  //transform: translateY(calc(var(--baseline) * -2)) scaleY(0);
-  transition: .3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
   top: calc(var(--baseline) * 1);
   right: 0;
   width: 100%;
@@ -3090,24 +3080,27 @@ html.offline #offline-notification.tuckaway {
   background-color: rgba(255, 255, 255, 0);
   overflow: auto;
   border-radius: 6px;
-
-  &.open {
-    opacity: 1;
-    //transform: translateY(0) scaleY(1);
-    transition: .3s ease-out;
-    //background: #fff;
-  }
-  &.lock {
-    opacity: 1;
-    transform: translateY(0) scaleY(1);
-    transition: .3s ease-out;
-    position: relative!important;
-  }
-  &.showresults {
-    bottom: 0px;
-  }
 }
-*/
+#search-panel.open {
+  opacity: 1;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+#search-panel.lock {
+  opacity: 1;
+  -webkit-transform: translateY(0) scaleY(1);
+      -ms-transform: translateY(0) scaleY(1);
+          transform: translateY(0) scaleY(1);
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  position: relative !important;
+}
+#search-panel.showresults {
+  bottom: 0px;
+}
+
 textarea:focus,
 input:focus {
   outline: none;
@@ -3124,12 +3117,12 @@ input:focus {
 
 .searchbox {
   background: #222;
+  border-radius: 3px 3px 0 0;
   position: relative;
-  border-radius: 4px;
   padding: calc(var(--baseline) * 1) 0 calc(var(--baseline) /1);
   margin-bottom: calc(var(--baseline) / 1) 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
-          box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
 }
 .searchbox input[type=search] {
   font-size: calc(1rem * var(--typescale));
@@ -3165,7 +3158,7 @@ input:focus {
   background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 101 101'%3E%3Cpath fill='currentcolor' fill-rule='evenodd' d='M62.27 69.134a32.99 32.99 0 01-20.19 6.856C23.81 75.99 9 61.218 9 42.995 9 24.773 23.81 10 42.08 10c18.27 0 33.08 14.773 33.08 32.995 0 7.178-2.298 13.82-6.2 19.236l21.63 21.576a4.79 4.79 0 010 6.787 4.82 4.82 0 01-6.804 0L62.27 69.134zm3.266-26.139c0 12.922-10.502 23.397-23.456 23.397-12.955 0-23.457-10.475-23.457-23.397 0-12.921 10.502-23.396 23.457-23.396s23.456 10.475 23.456 23.396z' /%3E%3C/svg%3E") left center no-repeat;
   background-size: auto 90%;
 }
-.searchbox #search-closeme {
+.searchbox #search-close {
   color: #fff;
   width: calc(var(--baseline) * 1);
   height: calc(var(--baseline) * 1);
@@ -3176,8 +3169,9 @@ input:focus {
   font-size: calc(var(--baseline) * 1);
   cursor: pointer;
   right: 2rem;
-  top: calc(var(--baseline) * 1.2);
+  top: calc(var(--baseline) * 1.3);
   z-index: 999;
+  /* border-radius: 3px 3px 0 0; */
 }
 .searchbox .insetbutton {
   padding-right: 1.15rem;
@@ -3228,96 +3222,21 @@ input:focus {
   letter-spacing: 0.03rem;
 }
 
-/*  ===== Floating Search Island ===== */
-.search-active {
-  overflow: hidden;
+.search-term {
+  background: #fcfcaf;
 }
 
-.search-container {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 4;
-}
-.search-container.open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.query {
+  border-bottom: 2px dotted #afafaf;
+  font-style: normal;
 }
 
-.search-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 3;
-  overflow: auto;
-}
-
-.search-content {
-  position: relative;
-  max-height: 100%;
-  height: 50vh;
-  margin: 9rem 3vw 1rem;
-  background-color: white;
-  overflow-y: auto;
-  z-index: 4;
-  outline: 2px red dotted;
-}
-
-.search-head {
-  position: fixed;
-  top: 3rem;
-  padding: 0;
-  margin: 0 3vw;
-  width: 92vw;
-  z-index: 10;
-}
-
-.search-modal {
-  /*max-width: 70vw;
-  max-height: 75vh;*/
-  padding: 1.5em;
-  padding-top: 4rem;
-  margin: 0 2rem;
-  width: 100%;
-  z-index: 10;
-  outline: 1px greenyellow dashed;
-}
-
-/* demo stuff */
-/*html,
-body {
-  height: 200%; /* create scrollbar
-}*/
-.search-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
-}
-
-/* ===== Animations  ===== */
 @-webkit-keyframes fadeInner {
   to {
     opacity: 1;
   }
 }
+
 @keyframes fadeInner {
   to {
     opacity: 1;
@@ -3533,6 +3452,85 @@ body {
 
 .rel {
   position: relative;
+}
+
+.search-active {
+  overflow: hidden;
+}
+
+.search-head {
+  position: fixed;
+  width: 87.21%;
+  z-index: 9;
+}
+
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.search-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  overflow: auto;
+}
+
+.search-content {
+  position: relative;
+  max-height: 100%;
+  background-color: white;
+  overflow-y: auto;
+  z-index: 4;
+}
+
+/* demo stuff */
+.search-modal {
+  max-width: 70vw;
+  max-height: 70vh;
+  padding: 1.5em;
+  margin: 0 3rem;
+  padding-top: 4rem;
+}
+
+html,
+body {
+  height: 200%;
+  /* create scrollbar */
+}
+
+.search-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
 }
 
 .bookcard {

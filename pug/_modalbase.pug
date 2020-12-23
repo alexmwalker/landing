@@ -111,3 +111,60 @@
           path(d='M10.8 2c.3-.4.3-.9 0-1.2a.7.7 0 00-1 0L5.6 5.1 1.7.9a.7.7 0 00-1 0c-.4.3-.4.8 0 1.1l3.9 4.2-4.4 4.5c-.3.4-.3.9 0 1.2.3.3.8.3 1 0l4.5-4.6 4.4 4.6c.3.4.8.4 1 0 .4-.3.4-.8 0-1L6.8 6.1l4-4.3z' fill='#059FF5')
 
       
+.search-container 
+  // the modal base
+  .search-layer 
+ 
+  .search-head
+    .grid-noGutter-center.searchbox.search-big
+      .col-10_md-10
+        form#searchform(action='search.html')
+          input#booksearch(type='search' placeholder='      Search this book')
+          // input#start-search.insetbutton(type="submit", value="Go" )
+          button.insetbutton(name='singlebutton')  
+          #search-closeme(title='Clear search') 
+
+  .search-content
+    .search-modal
+      h4
+        | Results for '
+        em.query CSS animation
+        | ' located in books...
+      dl#myData.book-search-results-list
+        dt
+          h5.trim-singleline.fade-inner
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') Ch 1: CSS Selectors
+        dd
+          p.trim-multiline.fade-inner
+            | As rewarding as crafting my own animation effects can be, I’m going to use a well-known, open-source 
+            span.search-term CSS3 animation
+            |  library most aptly called Animate.css, by Dan Eden. This is so that I can focus on the task at hand, rather than on explaining the code for CSS3 animations. However, if you want to delve into that topic, you’ll enjoy the CSS3 Animations series here on SitePoint, by Craig Buckler.
+        dt
+          h5.trim-singleline.fade-inner
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') Ch 2: How to Get Started with CSS Animation 
+        dd
+          p.trim-multiline.fade-inner
+            | Adding a slider or carousel to showcase content on a website is a common client request for developers. The amount of free and premium 
+            span.search-term CSS animation
+            |  carousel plugins available is overwhelming, and a good many of them offer plenty of useful configuration options and dynamic effects. There are times, however, when a lightweight carousel with minimal options is all you need.
+        dt
+          h5.trim-singleline.fade-inner
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read')
+              | Ch 4: Projects to Help You Master Modern CSS: HTML5 Games: Novice to Ninja  > Chapter 4
+        dd
+          p.trim-multiline.fade-inner
+            | Why should your site look like 101 others? Consider developing your own 
+            span.search-term CSS Animation 
+            |  theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.
+        dt
+          h5.trim-singleline.fade-inner
+            a(href='https://www.sitepoint.com/premium/books/modern-css/read') Ch 5. CSS Selectors
+        dd
+          p.trim-multiline.fade-inner
+            | As rewarding as crafting my own animation effects can be, I’m going to use a well-known, open-source 
+            span.search-term CSS3 animation
+            |  library most aptly called Animate.css, by Dan Eden. This is so that I can focus on the task at hand, rather than on explaining the code for CSS3 animations. However, if you want to delve into that topic, you’ll enjoy the CSS3 Animations series here on SitePoint, by Craig Buckler.
+        dt.skeleton
+          h5.trim-singleline   ...
+        dd.skeleton
+          p.trim-multiline ...

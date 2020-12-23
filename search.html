@@ -202,10 +202,12 @@
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-chevron"></use>
                 </svg>My Bookmarks</a></div>
-            <div class="col-3_md-3_sm-hidden"> <a class="toolbarLink search-control" href="#" onclick="return false">
+            <div class="col-3_md-3_sm-hidden"> 
+              <!-- button#open-modal-btn.toolbarLink Open Modal--><a class="toolbarLink search-control" href="#" onclick="return false">
                 <svg class="svg-icon">
                   <use fill="#fff" href="#my-search"></use>
-                </svg>Search</a></div>
+                </svg>Search</a>
+            </div>
             <div class="col-3_md-3_sm-hidden">
               <div class="toolbarLink" id="offlinemode">
                 <div class="pretty p-switch p-fill">
@@ -256,29 +258,7 @@
         </div>
       </div>
     </div>
-    <div id="search-panel">
-      <div class="grid-noGutter-center searchbox search-big">
-        <div class="col-10_md-10">
-          <form id="searchform" action="search.html">
-            <input type="search" id="booksearch" placeholder="      Search this book">
-            <!--input#start-search.insetbutton(type="submit", value="Go" )-->
-            <button class="insetbutton" name="singlebutton">&nbsp;</button>
-            <div id="search-close" title="Clear search"> </div>
-          </form>
-        </div>
-      </div>
-      <div class="container">
-        <div class="grid-center search-body"> 
-          <div class="col-12">
-            <h4>Results for '<em class="query"></em>' located in books... </h4>
-            <dl class="book-search-results-list" id="myData">
-              <dt class="skeleton">&nbsp;</dt>
-              <dd class="skeleton">&nbsp;</dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--include search-books.pug-->
   </div>
   <section id="reeedr-body">
     <div class="container">
@@ -539,6 +519,59 @@
       </div>
     </dialog>
   </div>
+  <div class="search-container"> 
+    <!-- the modal base-->
+    <div class="search-layer"> </div>
+    <div class="search-head">
+      <div class="grid-noGutter-center searchbox search-big">
+        <div class="col-10_md-10">
+          <form id="searchform" action="search.html">
+            <input id="booksearch" type="search" placeholder="      Search this book">
+            <!-- input#start-search.insetbutton(type="submit", value="Go" )-->
+            <button class="insetbutton" name="singlebutton"> </button>
+            <div id="search-closeme" title="Clear search"> </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="search-content">
+      <div class="search-modal">
+        <h4>Results for '<em class="query">CSS animation</em>' located in books...</h4>
+        <dl class="book-search-results-list" id="myData">
+          <dt>
+            <h5 class="trim-singleline fade-inner"><a href="https://www.sitepoint.com/premium/books/modern-css/read">Ch 1: CSS Selectors</a></h5>
+          </dt>
+          <dd>
+            <p class="trim-multiline fade-inner">As rewarding as crafting my own animation effects can be, I’m going to use a well-known, open-source <span class="search-term">CSS3 animation</span> library most aptly called Animate.css, by Dan Eden. This is so that I can focus on the task at hand, rather than on explaining the code for CSS3 animations. However, if you want to delve into that topic, you’ll enjoy the CSS3 Animations series here on SitePoint, by Craig Buckler.</p>
+          </dd>
+          <dt>
+            <h5 class="trim-singleline fade-inner"><a href="https://www.sitepoint.com/premium/books/modern-css/read">Ch 2: How to Get Started with CSS Animation </a></h5>
+          </dt>
+          <dd>
+            <p class="trim-multiline fade-inner">Adding a slider or carousel to showcase content on a website is a common client request for developers. The amount of free and premium <span class="search-term">CSS animation</span> carousel plugins available is overwhelming, and a good many of them offer plenty of useful configuration options and dynamic effects. There are times, however, when a lightweight carousel with minimal options is all you need.</p>
+          </dd>
+          <dt>
+            <h5 class="trim-singleline fade-inner"><a href="https://www.sitepoint.com/premium/books/modern-css/read">Ch 4: Projects to Help You Master Modern CSS: HTML5 Games: Novice to Ninja  > Chapter 4</a></h5>
+          </dt>
+          <dd>
+            <p class="trim-multiline fade-inner">Why should your site look like 101 others? Consider developing your own <span class="search-term">CSS Animation </span> theme. You'll require some HTML, CSS and PHP knowledge but a custom theme offers more flexibility and better performance than any off-the-shelf option. There are two potential approaches: Adapt a barebones theme.</p>
+          </dd>
+          <dt>
+            <h5 class="trim-singleline fade-inner"><a href="https://www.sitepoint.com/premium/books/modern-css/read">Ch 5. CSS Selectors</a></h5>
+          </dt>
+          <dd>
+            <p class="trim-multiline fade-inner">As rewarding as crafting my own animation effects can be, I’m going to use a well-known, open-source <span class="search-term">CSS3 animation</span> library most aptly called Animate.css, by Dan Eden. This is so that I can focus on the task at hand, rather than on explaining the code for CSS3 animations. However, if you want to delve into that topic, you’ll enjoy the CSS3 Animations series here on SitePoint, by Craig Buckler.</p>
+          </dd>
+          <dt class="skeleton">
+            <h5 class="trim-singleline">  ...</h5>
+          </dt>
+          <dd class="skeleton">
+            <p class="trim-multiline">...</p>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
   <!-- footer-->
   <footer class="mainfooter">
     <div class="container">
@@ -556,7 +589,7 @@
   <!-- script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")-->
   <script src="scripts/jquery-3.4.0.min.js"></script>
   <script src="scripts/prism.js"></script>
-  <script src="scripts/scripts-alex.js"></script>
+  <script src="scripts/scripts-alex.js?r=123"></script>
   <svg fill="none" width="0" height="0">
     <defs>
       <symbol id="my-not-available" viewbox="0 0 101 101">

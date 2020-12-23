@@ -139,17 +139,25 @@
     $('#reeedr').toggleClass('dark');
   });
 
+  // OFFLINE MODE
+
+  $("#offlinemode input").change(function () {
+    $("body").toggleClass("local", this.checked);
+    });
+
+
+  // SEARCH 
 
   $('#start-search').click(function () {
     startSearch();
     $('#search-panel').toggleClass('showresults');
 
   });
-
+  /* watch for search form submit */ 
   $( "#searchform" ).submit(function( event ) {
     //alert( "Handler for .submit() called." );
-    $('#search-panel').removeClass('open');
-    $('#search-panel').addClass('lock');
+    //$('#search-panel').removeClass('open');
+    //$('#search-panel').addClass('lock');
     startSearch();
     grabSearch();
     event.preventDefault();
@@ -158,23 +166,51 @@
 
 
 
-  $('#search-close').click(function () {
+
+  /* CLICK SEARCH */ 
+  $('.search-control').click(function () { 
+    $('.search-container').addClass('open');
+    $('#booksearch').focus();
+ 
+  });
+
+  $('#search-closeme').click(function () {
     //$('#search-panel').toggleClass('showresults');
     $('.book-search-results-list dt').remove();
     $('.book-search-results-list dd').remove();
     $('#search-panel').removeClass('showresults');
-    $('#search-panel').removeClass('open');
-    $('#search-panel').removeClass('lock');
+    //$('#search-panel').removeClass('open');
+    $('.search-container').removeClass('open');
+    /*$('#search-panel').removeClass('lock');
+    $('#reeedr-body').css('height', 'auto');
+    $('#reeedr-body').css('overflow', 'auto');
+    $('#tool-container').css('position', 'relative');*/
   });
 
-  $('.search-control').click(function () { 
-    $('#search-panel').toggleClass('open');
-    $('#booksearch').focus();
-  });
 
-  $("#offlinemode input").change(function () {
-    $("body").toggleClass("local", this.checked);
-    });
+
+/*===================
+  const openModalBtn = document.getElementById("open-modal-btn");
+  const modalContainer = document.querySelector(".modal-container");
+  const modalLayer = modalContainer.querySelector(".modal-layer");
+  
+  function hideModal() {
+    document.documentElement.classList.remove("modal-active");
+    modalContainer.style.display = "none";
+  }
+  
+  function showModal() {
+    document.documentElement.classList.add("modal-active");
+    modalContainer.style.display = null;
+  }
+  
+  openModalBtn.addEventListener("click", showModal);
+  modalLayer.addEventListener("click", hideModal);
+  
+  showModal();
+
+/*===================*/
+
 
   /* ===  Take search term from input for use in page  ===  */
     function grabSearch(){
@@ -330,6 +366,9 @@
   function startSearch() { // triggered on 'Go' search
     //show search-body
     $('.search-body').css('display', 'block');
+    $('#search-panel').css('position', 'relative');
+    $('#reeedr-body').css('height', '100vh');
+    $('#reeedr-body').css('overflow', 'hidden');
     //load search results from JSON
     fetch('search.json')
       .then(function (response) {
@@ -377,10 +416,10 @@
         // build the search result text <dd><p>
 
         var dd = document.createElement("dd");
-        var expand = document.createElement("input");
-        expand.className = "expand";
-        expand.type = "checkbox";
-        dd.appendChild(expand);
+        //var expand = document.createElement("input");
+        //expand.className = "expand";
+        //expand.type = "checkbox";
+        //dd.appendChild(expand);
 
         var ddp = document.createElement("p");
         ddp.className = "trim-multiline fade-inner";
@@ -420,8 +459,9 @@
 
       
         console.log('hello :# ' + i);         //  your code here
+        console.log('Data length is: ' + data.length); 
         i++;                                  //  increment the counter
-        if (i < data.length-1) {              //  if the counter < 10, call the loop function
+        if (i < data.length) {              //  if the counter < 10, call the loop function
           myLoop(data);   
           console.log("I'm in the loops !");  //  ..  again which will trigger another 
         }                        
@@ -429,3 +469,4 @@
       console.log("Loop done !");
     }
   }
+
