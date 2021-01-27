@@ -1,3 +1,0 @@
-.d3rdqui p {
-    font-size: calc(1rem / var(--typescale)/ var(--typescale));
-}
