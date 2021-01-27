@@ -6,5 +6,17 @@
     "jshint": "^2.11.0",
     "jstransformer-markdown-it": "^2.1.0",
     "markdown-it": "^10.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@storybook/addon-actions": "^6.1.15",
+    "@storybook/addon-essentials": "^6.1.15",
+    "@storybook/addon-links": "^6.1.15",
+    "@storybook/html": "^6.1.15",
+    "babel-loader": "^8.2.2"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }

@@ -1,0 +1,43 @@
+.container{
+    outline: 2px lightblue dashed;
+    position: relative;
+}
+
+.sg-header{
+    background: #555;
+    overflow-y: auto;
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    padding: calc(var(--baseline) * 1) 0;
+    #logo{
+        height: calc(var(--baseline) * 1.5);
+        
+    }
+}
+.catalog-Menu{
+    transform: translateX(0px);
+    transition: none 0s ease 0s;
+    background: rgb(255, 255, 255);
+    box-sizing: content-box;
+    color: rgb(255, 255, 255);
+    overflow-y: auto;
+    position: fixed;
+    height: 100vh;
+    width: 25%;
+    top: 0px;
+    left: 0px;
+    outline: 1px red dashed;
+    .activeLinkStyle{
+        font-weight: 700;
+    }
+
+}
+.unit{
+    width: 75%;
+    padding-top: calc(var(--baseline) * 1.5);
+    margin-left: 25%;
+    outline: 1px red dashed;
+}
+
+

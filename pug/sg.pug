@@ -1,0 +1,23 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title SitePoint - Styleguide
+    meta(name='description', content='SitePoint Styleguide')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //link(rel='stylesheet', type='text/css', href='../styles/css/styleguide.css')
+    link(rel='stylesheet', type='text/css', href='../styles/css/sg.css')
+    link(rel='icon', type='image/png', href='styleguide/structure/images/favicon.png')
+
+
+  body.vr.borders.labelling
+   
+    main.container
+      
+        div.device
+        include modules/sg-menu.pug
+        .unit
+
+            include modules/module-intro.pug
+
+
