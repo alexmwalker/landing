@@ -1,76 +1,15 @@
 section#introduction.huge-module.anchor.clearfix
-  h2.huge-module__title Introduction
-  .feedback
-    :markdown-it(linkify langPrefix='language-')
-      # The Basics of our Vertical Grids
+  h1 Introduction
+  :markdown-it(linkify langPrefix='language-')
+  
+    The core of our site layout revolves around major points:
 
-      1). We always set the font-size in pixels on the `<html>` element and size everything else in REMs ( ie. `html{ font-size: 18px; }`) . Then we use Media Queries to adjust the HTML font-size and everything else should scale automatically.
+    1. We set a `font-size` and `line-height` on our HTML element (or `:root{}`) in pixels. This gives us our base body text settings and the only time we use pixels.
+    2. Media queries let us scale-up this base body-text/line-height as screens get bigger.
+    3. Using this line-height and a CSS gradient, we can create a lined grid that perfectly fits and contains our base text. We can set a CSS variable (i.e `var(--baseline);`) to make it easy to re-use this line-height measurement.  
+    4. From then on, ALL vertical dimensions (e.g. margin-top, margin-bottom, padding-top, padding-bottom, line-height, height, etc) are set using this CSS variable as our 'unit of measure'.  Forget pixels, REMs, and EMs.
+    5. For instance, a simple bottom margin is set as `margin-bottom: var(--baseline);`. 
+    6. A half-height margin is set using a CSS calc like this: `margin-top: calc(var(--baseline) / 2);`. 
+    7. A container panel requiring extra padding might use multiples of our --baseline like this: `padding-top: calc(var(--baseline) * 3)`.   
+    8. Often it's even worth setting the heights of IMGs or SVG logos in --baseline (and letting the width set itself), as it guarantees the IMG will fit into the grid.
 
-      2). The base font-sizes set for the 4 different screen widths are currently set at:
-
-      ```css
-        --basegrid: 32px; /* the body grid size on phone */ 
-        --basegrid-tablet: 28px; 
-        --basegrid-laptop: 32px; 
-        --basegrid-wide: 36px; 
-      ```
-      We can be adjusted (and have been) if we decide they aren't working for a given device or size.
-
-      ## Setting the line-height 
-
-      3). The default CSS `line-height` for the `<html>` element (or `:root' in the CSS) is very important as it becomes the basic '*Lego block grid height*' that everything else fits into. 
-      
-      The underlying `<HTML>` line-height is the heart of our grid. It is the most single important unit that all our typography is based on. If you're creating a button, a link, nav-item or any text component, give it vertical dimension with `line-height` before you even look at margin, height or padding.
-
-      I've set our base 'line-height ratio' at 16/9. That means a basic 1rem `<p>` tag will sit comfortably inside a 1.7778rem line-height.
-      
-      ```css
-        --baselineratio: calc(16/9); 
-        /* This is the 'line-height:basefont' size ratio ( i.e 16/9 = 1.777778)*/  
-        --baseline: calc(var(--baselineratio) * 1rem);  /* convert this to REMs */  
-      ```
-
-      In theory, we should able to change this to, say, `16/10` at any time and the design will adjust instantly.
-
-      This `--baseline` CSS variable is _THE_ standard unit of measure that we refer to constantly in our CSS. All line-heights and margins should be expressed in '--baseline' units. Here's an example:
-
-      ```css
-      .is-size-5 {
-        font-size: 1rem;
-        line-height: calc(var(--baseline));  /* One line-height */
-        margin-top: calc(var(--baseline) / 2); /* Half a line-height */
-        margin-bottom: calc(var(--baseline) * 2); /* Two line-heights */
-      ```
-      **Note:**: The visual grid overlaid in the prototype styleguide shows two lines per grid line (i.e. half grids) - just to help with small typography.
-      
-      ## Setting the base font-size 
-
-      Since now we now  know the `--basegrid` (32px) and the `--baselineratio` (16/9), we can calculate the base font size (i.e. 32px / 1.7778 = 18px).
-
-      Later we'll calculate the headings using that base font size.
-
-      ## Margins
-
-      Margins are the next most important CSS property in our typography. Vertical space between typography should be set with top and bottom margins.
-
-      ```css
-        margin-bottom: calc(var(--baseline));
-        margin-top: calc(var(--baseline) / 2); /* Half a line-height */
-      ```
-
-      ## Vertical `Padding` and `Height` are no-nos with type
-
-      As a general rule, we try hard to avoid using `padding` or setting explicit `heights` on any typography elements. This includes:
-
-      - headings and paragraphs
-      - buttons
-      - form elements
-      - icons
-      - links
-      - other type objects. 
-
-      Note that `padding` is fine for setting spacing on larger vertical spacing in SECTIONs, ARTICLEs, NAVs, HEADERs, DIVs and larger structural components - just really try to avoid them on the basic typographic rules.
-
-      ### What does Alex have against padding?
-
-      Nothing. It just complicates calculating the heights of elements when added to line-height. By avoiding padding and explicit heights it's almost impossible NOT to stay on the grid. Buttons line up, adjacent columns align, and stuff generally looks cohesive without trying.

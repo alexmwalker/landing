@@ -5,7 +5,7 @@
   --baselineratio: calc(16/9);
   /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
   --basegrid: 32px;
-  /* the body grid size on phone */
+  /* the body text line-height grid size on phone */
   --basegrid-tablet: 28px;
   --basegrid-laptop: 32px;
   --basegrid-wide: 36px;
@@ -61,17 +61,7 @@ xs: 36em
   }
 }
 /* The New Typography */
-h1,
-.is-size1 {
-  font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
-  line-height: calc(var(--baseline) * 2);
-  /* 4 grid lines */
-  margin-top: calc(var(--baseline) / 2);
-  margin-bottom: var(--baseline);
-  font-weight: 400;
-}
-
-h2,
+v x h2,
 .is-size2 {
   font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1.5);

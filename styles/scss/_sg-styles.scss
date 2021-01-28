@@ -24,12 +24,16 @@
     overflow-y: auto;
     position: fixed;
     height: 100vh;
-    width: 25%;
+    width: 23%;
     top: 0px;
     left: 0px;
     outline: 1px red dashed;
     .activeLinkStyle{
         font-weight: 700;
+    }
+    li::marker{
+        color:#888;
+        border: 1px red dashed;
     }
 
 }
@@ -41,3 +45,14 @@
 }
 
 
+.demo{
+    border-radius: .25rem;
+    background-color: #fcfcfc;
+    box-shadow: 1px 1px 4px 6px inset rgba(0,0,0,0.05) ;
+    padding: calc(var(--baseline) * .5);
+    &:hover{
+        h1,h2,h3,h4{
+        background-color: bisque;
+        }
+    }
+}

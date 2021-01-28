@@ -8,7 +8,7 @@
   --baselineratio: calc(16/9);
   /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
   --basegrid: 32px;
-  /* the body grid size on phone */
+  /* the body text line-height grid size on phone */
   --basegrid-tablet: 28px;
   --basegrid-laptop: 32px;
   --basegrid-wide: 36px;
@@ -2109,7 +2109,7 @@ figure {
   overflow-y: auto;
   position: fixed;
   height: 100vh;
-  width: 25%;
+  width: 23%;
   top: 0px;
   left: 0px;
   outline: 1px red dashed;
@@ -2117,12 +2117,27 @@ figure {
 .catalog-Menu .activeLinkStyle {
   font-weight: 700;
 }
+.catalog-Menu li::marker {
+  color: #888;
+  border: 1px red dashed;
+}
 
 .unit {
   width: 75%;
   padding-top: calc(var(--baseline) * 1.5);
   margin-left: 25%;
   outline: 1px red dashed;
+}
+
+.demo {
+  border-radius: 0.25rem;
+  background-color: #fcfcfc;
+  -webkit-box-shadow: 1px 1px 4px 6px inset rgba(0, 0, 0, 0.05);
+          box-shadow: 1px 1px 4px 6px inset rgba(0, 0, 0, 0.05);
+  padding: calc(var(--baseline) * .5);
+}
+.demo:hover h1, .demo:hover h2, .demo:hover h3, .demo:hover h4 {
+  background-color: bisque;
 }
 
 /* PrismJS 1.16.0
@@ -2542,6 +2557,9 @@ coding. Currently it:
   content: "li";
 }
 
+/*------------------------------------*\
+  #DEVICE FLAG UNIT
+\*------------------------------------*/
 :root {
   --deviceUI: 2.5;
 }
@@ -2578,6 +2596,7 @@ coding. Currently it:
 
 .device {
   background-position: left top;
+  opacity: 0.8;
 }
 
 /* Broadcast currently active Typescale */
@@ -2609,7 +2628,44 @@ coding. Currently it:
     background: orange;
   }
 }
-/* default device-targeting CSS */
+/*------------------------------------*\
+  #SEE BORDERS
+\*------------------------------------*/
+.borders div {
+  outline: 1px rgba(255, 0, 0, 0.1) dashed;
+}
+
+.borders section {
+  outline: 1px rgba(255, 0, 255, 0.1) dashed;
+}
+
+/*------------------------------------*\
+  #VERTICAL GRID
+\*------------------------------------*/
+.vr {
+  position: relative;
+}
+
+.vr:after {
+  position: absolute;
+  width: auto;
+  height: 1500vh;
+  z-index: 9999;
+  content: "";
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: var(--baseline) var(--baseline);
+  background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
+  background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
+}
+
+/*------------------------------------*\
+  #DEVICE TARGETTING CLASSES
+\*------------------------------------*/
 .mobile-only {
   display: inline;
 }
