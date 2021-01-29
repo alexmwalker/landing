@@ -61,7 +61,17 @@ xs: 36em
   }
 }
 /* The New Typography */
-v x h2,
+h1,
+.is-size1 {
+  font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
+  line-height: calc(var(--baseline) * 2);
+  /* 4 grid lines */
+  margin-top: calc(var(--baseline) / 2);
+  margin-bottom: var(--baseline);
+  font-weight: 400;
+}
+
+h2,
 .is-size2 {
   font-size: calc(var(--typescale) * var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1.5);

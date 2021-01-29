@@ -5,7 +5,7 @@
   --baselineratio: calc(16/9);
   /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
   --basegrid: 32px;
-  /* the body grid size on phone */
+  /* the body text line-height grid size on phone */
   --basegrid-tablet: 28px;
   --basegrid-laptop: 32px;
   --basegrid-wide: 36px;
