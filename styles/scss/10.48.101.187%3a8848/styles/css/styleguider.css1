@@ -1,0 +1,964 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------------------*\
+  #IMPORTANT CROSS SITE VARIABLES
+\*------------------------------------*/
+:root {
+  --typescale: 1.15;
+  /* Mobile & default */
+  /* This is the scaling factor for headings relative to the <p>. 
+  ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
+  --typescale-lg: 1.25;
+  /* Tablet, Laptop and Wide-screen */
+  --baselineratio: calc(16 / 9);
+  /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778) */
+  /* The body font is 9/16ths of the line-height – a little over half  */
+  --basegrid: 32px;
+  /* --basegrid is the default body text line-height grid size on phone */
+  --basegrid-tablet: 28px;
+  --basegrid-laptop: 32px;
+  --basegrid-wide: 36px;
+  --baseline: calc(var(--baselineratio) * 1rem);
+  --basefont: calc(var(--basegrid) / var(--baselineratio));
+  --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
+  --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
+  --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
+  --basebackground: #fff;
+  --basefontcolor: #222;
+  --basebackground-dark: #111518;
+  --basefontcolor-dark: #ddd;
+  /* Apparently you can't use CSS Variables to set breakpoint - booo..*/
+  --bp-phone: 48em;
+  --bp-tablet: 64em;
+  --bp-laptop: 64em;
+  --bp-wide: 80em;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+/*------------------------------------*\
+  #:ROOT TEXT SIZE SETTINGS 
+
+  This is the main 'engine' for driving
+  responsive typography. 90% of scaling
+  happens here.
+
+\*------------------------------------*/
+:root {
+  /* DEFAULTS - (that means mobile) */
+  font-size: var(--basefont);
+  line-height: var(--baseline);
+}
+
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  :root {
+    font-size: var(--basefont-tablet);
+    --typescale: var(--typescale-lg);
+    /* We ramp up the typescale on non-phone screens. 
+    This means h1s are larger than Ps in RELATIVE 
+    terms on non-phones */
+  }
+}
+/* Large devices (desktops, 62em and up) */
+@media (min-width: 64em) {
+  :root {
+    font-size: var(--basefont-laptop);
+  }
+}
+/* Extra large devices (large desktops, 75em and up)*/
+@media (min-width: 80em) {
+  :root {
+    font-size: var(--basefont-wide);
+  }
+}
+/*------------------------------------*\
+  #CORE TYPOGRAPHY (SCALED FROM :ROOT)
+\*------------------------------------*/
+h1,
+.is-size1 {
+  font-size: calc( var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem );
+  line-height: calc(var(--baseline) * 1.5);
+  /* 3 grid lines mobile - becomes 4 on tablet + to suit larger typescale */
+  margin-bottom: var(--baseline);
+  font-weight: 400;
+}
+
+h2,
+.is-size2 {
+  font-size: calc( var(--typescale) * var(--typescale) * var(--typescale) * 1rem );
+  line-height: calc(var(--baseline) * 1.5);
+  margin-top: 0rem;
+  margin-bottom: calc(var(--baseline) / 2);
+  font-weight: 400;
+}
+
+h3,
+.is-size-3,
+.h3 {
+  font-size: calc(var(--typescale) * var(--typescale) * 1rem);
+  line-height: calc(var(--baseline) * 1);
+  margin-top: 0;
+  margin-bottom: calc(var(--baseline) / 2);
+  font-weight: 400;
+}
+
+h4,
+.is-size-h4,
+.h4 {
+  font-size: calc(var(--typescale) * 1rem);
+  line-height: calc(var(--baseline) * 1);
+  margin-top: calc(var(--baseline) * 1);
+  margin-bottom: calc(var(--baseline) / 2);
+  font-weight: 400;
+}
+
+h5,
+.is-size-5,
+.h5 {
+  /* h5s are same size as <p> but bolder */
+  font-size: 1rem;
+  line-height: calc(var(--baseline) / 2);
+  margin-top: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / 2);
+  font-weight: 400;
+}
+
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+  margin-top: 0;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote,
+figcaption,
+.is-size-base {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0rem;
+  line-height: calc(var(--baseline) / 1);
+  margin-bottom: calc(var(--baseline) / 1);
+}
+
+.major {
+  font-weight: 400;
+  font-size: calc( var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem );
+  line-height: calc(var(--baseline) * 1.5);
+}
+
+.minor {
+  font-size: calc(1rem / var(--typescale));
+  line-height: calc(var(--baseline) / 1);
+  margin-top: 0;
+  margin-bottom: calc(var(--baseline) / 2);
+}
+
+.small {
+  font-size: calc(1rem / var(--typescale) / var(--typescale));
+  line-height: calc(var(--baseline) / 2);
+  margin-top: 0;
+  margin-bottom: calc(var(--baseline) / 2);
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* Let's make sure all's aligned */
+hr,
+.hr {
+  border-top: 1px solid #8c8b8b;
+  margin: 0;
+  height: 0;
+  background: none;
+}
+
+code {
+  font-family: monospace;
+  background: #ddd;
+  padding: 0 0.5rem;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #20272f;
+}
+
+.dark a:link,
+.dark a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+::-moz-placeholder {
+  color: #bbb;
+}
+
+:-ms-input-placeholder {
+  color: #bbb;
+}
+
+::-ms-input-placeholder {
+  color: #bbb;
+}
+
+::placeholder {
+  color: #bbb;
+}
+
+input[type=checkbox] {
+  margin: 0;
+}
+
+/*------------------------------------*\
+  #TYPOGRAPHY MEDIA TWEAKS
+  The type system above automatically
+  works pretty well at most sizes, but
+  we need a very small amount of manual 
+  line-height and margin tweaks. 
+  That's what these are.
+\*------------------------------------*/
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  h1 {
+    line-height: calc(var(--baseline) * 2);
+    margin-bottom: calc(var(--baseline) * 1);
+  }
+
+  .major {
+    line-height: calc(var(--baseline) * 2);
+  }
+
+  h2 {
+    margin-bottom: calc(var(--baseline) * 1);
+  }
+}
+/*------------------------------------*\
+  #STYLEGUIDE LAYOUT UNITS
+
+  CSS Specific to this particular layout
+
+\*------------------------------------*/
+.container {
+  /* This is handy for stopping layouts running 
+    wide on super wide monitors. It's unneccessary 
+    if you have proper layout CSS */
+  width: 96%;
+  max-width: 58rem;
+  margin: 0 auto !important;
+  color: var(--basefontcolor);
+  background: #fff;
+}
+
+.layout {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-gap: 1rem;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/*------------------------------------*\
+  #STYLE GUIDE GUIDEBODY 
+\*------------------------------------*/
+.guidebody {
+  padding-top: calc(var(--baseline) * 4.5);
+}
+
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  .guidebody {
+    width: 70%;
+    border-right: 1px solid #999;
+    padding-right: 1rem;
+  }
+
+  .guidebody .report span.ui-unit {
+    right: -38%;
+    width: 33%;
+  }
+}
+.header-float {
+  width: 100%;
+  max-width: 58rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: normal;
+      align-content: normal;
+  position: fixed;
+  z-index: 999;
+  background: #fee;
+  -webkit-box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
+  padding: calc(var(--baseline) / 2) 0 0;
+}
+.header-float > * {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  width: 30%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  margin: 0 1%;
+}
+.header-float .branding {
+  text-align: center;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-weight: 400;
+  margin-top: 0;
+}
+.header-float .pagestate {
+  width: 50%;
+}
+.header-float .pagestate dl {
+  width: 100%;
+}
+.header-float .pagestate dt {
+  float: left;
+  text-align: right;
+  font-weight: bold;
+  width: 25%;
+}
+.header-float .pagestate dt::after {
+  content: ":";
+}
+.header-float .pagestate dd {
+  margin: 0 0 0 2%;
+  padding: 0;
+  float: left;
+  width: 15%;
+}
+
+.devicestate {
+  width: 20%;
+  text-align: right;
+  position: relative;
+}
+
+.device {
+  position: relative;
+  float: right;
+  left: auto;
+  right: 0;
+  top: 0;
+}
+
+.controls {
+  clear: both;
+  /* Selected */
+}
+.controls li {
+  display: inline-block;
+}
+.controls [type=checkbox] {
+  position: absolute;
+  left: -150vw;
+}
+.controls label {
+  background: #eee;
+  line-height: calc(var(--baseline) * 1);
+  padding: 0.2rem 0.3rem;
+  color: #999;
+  border: 1px solid #999;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+  border-radius: 0.2rem;
+}
+.controls [type=checkbox]:checked + label {
+  background: #c8ff00;
+  font-weight: 600;
+  color: #155a00;
+  border: 1px solid #155a00;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+}
+
+/*------------------------------------*\
+  #PURPLE REPORT UI CSS
+\*------------------------------------*/
+.report {
+  font-family: Roboto, sans-serif;
+  position: relative;
+}
+
+.report span.ui-unit li {
+  outline: 1px #eee solid;
+  background-color: #fff;
+  padding-left: 0.5rem;
+}
+
+.report span.ui-unit li:not(:first-child) {
+  list-style: circle;
+  padding-left: 0.5rem;
+  list-style-position: inside;
+}
+
+.report span.ui-unit {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 12rem;
+  padding: 0;
+  outline: 1px #ddd solid;
+  color: #444;
+  z-index: 99;
+  background: #eee;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.report span.ui-unit input {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.report span.ui-unit input:checked {
+  position: absolute;
+}
+
+.report span.ui-unit input + ul {
+  line-height: 0.8888888889rem;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0rem 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  height: 4.5rem;
+}
+
+.report span.ui-unit input + ul:after {
+  display: block;
+  position: absolute;
+  content: "▼";
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  top: 0;
+  right: 0.5rem;
+}
+
+.report span.ui-unit input:checked + ul {
+  height: 0.8888888889rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.report span.ui-unit input:checked + ul:after {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  top: 0.2rem;
+}
+
+.report span.ui-unit .type {
+  list-style-position: inside;
+  margin-left: 0;
+  background: #88f;
+  color: #fff;
+}
+
+/* PrismJS 1.16.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*=language-],
+pre[class*=language-] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: calc(1rem / var(--typescale));
+  line-height: calc(var(--baseline) / 1);
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection,
+code[class*=language-]::-moz-selection, code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection, code[class*=language-]::-moz-selection, code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*=language-]::selection, pre[class*=language-] ::selection,
+code[class*=language-]::selection, code[class*=language-] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*=language-],
+pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+pre[class*=language-] {
+  padding: calc(var(--baseline) / 1) 1em;
+  margin: calc(var(--baseline) / 1) 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: #f5f2f0;
+  background-size: calc(var(--baseline) * 2) calc(var(--baseline) * 2);
+  background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.02) 0%, rgba(173, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
+  background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.02) 0%, rgba(173, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Inline code */
+:not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #9a6e3a;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.function,
+.token.class-name {
+  color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/*------------------------------------*\
+  #GRID Vertical
+\*------------------------------------*/
+/* ===  CONSTRUCTION  CSS === */
+/* ===  
+This file contains temporary non-production CSS that helps with early development
+coding. Currently it:
+- Add `.borders` to show DIV edges
+- Add `.vr` to the BODY to show the vertical rhythm for the typography grid
+- Add `.labelling` to the BODY to show how line-height and margins fit into the grid
+- Add an empty `.device` DIV to broadcast the media queries setting (top-right)
+- Add `.report` (and attach `type-inspector.js`) to generate a small 'typography 
+  inspector' unit that will document its relevant CSS properties. 
+=== */
+.borders div {
+  outline: 1px rgba(255, 0, 0, 0.1) dashed;
+}
+
+.borders section {
+  outline: 1px rgba(255, 0, 255, 0.1) dashed;
+}
+
+/*  Vertical rhythm grid lines  */
+.vr {
+  position: relative;
+}
+
+.vr:after {
+  position: absolute;
+  width: auto;
+  height: 1500vh;
+  z-index: 9999;
+  content: "";
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: var(--baseline) var(--baseline);
+  background-image: -o-repeating-linear-gradient(top, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
+  background-image: repeating-linear-gradient(to bottom, rgba(173, 0, 0, 0.04) 0%, rgba(173, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 50.01%, rgba(0, 0, 0, 0) 100%);
+}
+
+/*------------------------------------*\
+  #THAT LITTLE FLOATING DEVICE UI UNIT 
+  IN THE TOP RIGHT (`.device`)
+\*------------------------------------*/
+:root {
+  --deviceUI: 2.0;
+  /* sizing the .device UI thing in the styleguide on the grid */
+}
+
+.device {
+  font-size: 1rem;
+  width: calc(var(--baseline) * var(--deviceUI));
+  height: calc(var(--baseline) * var(--deviceUI));
+  /* left: 100%; */
+  margin: 0 1rem 1rem 0;
+  position: relative;
+  outline: 1px #ddd solid;
+  /* top: calc(var(--baseline) * 2.5); */
+  background-size: 400% auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27none%27%20viewBox%3D%270%200%20128%2026%27%3E%3Cpath%20fill%3D%27%23fff%27%20d%3D%27M0%200h128v26H0z%27%2F%3E%3Cpath%20fill%3D%27%23aaa%27%20d%3D%27M124.1333%2018.0417c0%20.2435-.2187.4583-.4666.4583h-23.33337c-.24791%200-.46666-.2148-.46666-.4583V4.29167c0-.24349.21875-.45834.46666-.45834h23.33337c.2479%200%20.4666.21485.4666.45834V18.0417zM126%204.29167C126%203.03125%20124.95%202%20123.6667%202h-23.33337C99.05%202%2098%203.03125%2098%204.29167V18.0417c0%201.2604%201.05%202.2916%202.33333%202.2916h10.73337v1.8334h-5.13337c-.2625%200-.46666.2005-.46666.4583v.9167c0%20.2578.20416.4583.46666.4583h12.13337c.2625%200%20.4666-.2005.4666-.4583v-.9167c0-.2578-.2041-.4583-.4666-.4583h-5.1334v-1.8334h10.7334c1.2833%200%202.3333-1.0312%202.3333-2.2916V4.29167zM49.57143%2021.1429c0%20.4687-.38839.8571-.85714.8571s-.85715-.3884-.85715-.8571c0-.4688.3884-.8572.85715-.8572.46875%200%20.85714.3884.85714.8572zM54.7143%2019c0%20.2277-.2009.4286-.4286.4286H43.14286c-.22768%200-.42857-.2009-.42857-.4286V6.14286c0-.22768.20089-.42858.42857-.42858H54.2857c.2277%200%20.4286.2009.4286.42858V19zm1.7143-12.85714C56.4286%204.96429%2055.4643%204%2054.2857%204H43.14286C41.96429%204%2041%204.96428%2041%206.14286V20.7143c0%201.1786.96429%202.1428%202.14286%202.1428H54.2857c1.1786%200%202.1429-.9642%202.1429-2.1428V6.14286zM17.21429%2020.36692c0%20.5893-.48215%201.0714-1.07143%201.0714-.58929%200-1.07143-.4821-1.07143-1.0714%200-.5893.48214-1.0715%201.07143-1.0715.58928%200%201.07143.4822%201.07143%201.0715zm3.10514-2.1429c0%20.2277-.2009.4286-.42858.4286h-7.46228c-.22768%200-.42857-.2009-.42857-.4286V6.93832c0-.22768.20089-.42857.42857-.42857h7.46228c.22768%200%20.42858.20089.42858.42857v11.2857zM17.42857%205.86689c0%20.12054-.09375.21429-.21428.21429h-2.14286c-.12054%200-.21429-.09375-.21429-.21429%200-.12053.09375-.21428.21429-.21428h2.14286c.12053%200%20.21428.09375.21428.21428zm3.85713.78572c0-.9375-.77677-1.71429-1.71427-1.71429h-6.85714c-.9375%200-1.71429.77679-1.71429%201.71429v13.71431c0%20.9375.77679%201.7143%201.71429%201.7143h6.85714c.9375%200%201.71427-.7768%201.71427-1.7143V6.65261zM70.42667%2020.8421H89.5333c1.3347%200%202.4267-.9145%202.4267-2.2895V6.5c0-1.375-1.092-2.5-2.4267-2.5H70.42667C69.092%204%2068%205.125%2068%206.5v12.0526c0%201.375%201.092%202.2895%202.42667%202.2895zM69.94133%206.5c0-.26563.2275-.5.48534-.5H89.5333c.2579%200%20.4854.23437.4854.5v12.0526c0%20.2657-.2275.5-.4854.5H70.42667c-.25784%200-.48534-.2343-.48534-.5V6.5zM67%2022v.9474C67%2023.7755%2067.74533%2024%2069.08%2024h21.84c1.3347%200%202.08-.2245%202.08-1.0526V22H67zm15.7074%201.0973h-5.4807c-.1365%200-.24271-.1094-.24271-.25s.10621-.2759.24271-.2759h5.4807c.1365%200%20.2426.1353.2426.2759%200%20.1406-.1061.25-.2426.25z%27%2F%3E%3C%2Fsvg%3E");
+}
+
+.device:after {
+  display: block;
+  position: absolute;
+  content: "Mobile";
+  width: calc(var(--baseline) * var(--deviceUI));
+  display: block;
+  top: calc(var(--baseline) * var(--deviceUI));
+  background: #9a0;
+  text-align: center;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 0.5rem;
+  line-height: calc(var(--baseline) / 2);
+  text-transform: uppercase;
+  -webkit-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+/*------------------------------------*\
+  #MEDIA-SPECIFIC TARGETTING CSS CLASSES
+  - .mobile-only
+  - .laptop-only
+  - .laptop-only
+  - .wide-only  
+\*------------------------------------*/
+.mobile-only {
+  display: inline;
+}
+
+.tablet-only,
+.laptop-only,
+.wide-only {
+  display: none;
+}
+
+/* Medium devices (tablets, 48em and up) */
+@media (min-width: 48em) {
+  .device {
+    background-position: 33.333% top;
+  }
+
+  .device:after {
+    content: "Tablet";
+    background-color: #f60;
+  }
+
+  .tablet-only {
+    display: inline;
+  }
+
+  .mobile-only,
+.laptop-only,
+.wide-only {
+    display: none;
+  }
+}
+/* Large devices (desktops, 62em and up)*/
+@media (min-width: 64em) {
+  .device {
+    background-position: 66.666% top;
+  }
+
+  .device:after {
+    content: "Laptop";
+    background-color: #096;
+  }
+
+  .laptop-only {
+    display: inline;
+  }
+
+  .mobile-only,
+.tablet-only,
+.wide-only {
+    display: none;
+  }
+}
+/* Extra large devices (large desktops, 75em and up)*/
+@media (min-width: 80em) {
+  .device {
+    background-position: right top;
+  }
+
+  .device:after {
+    content: "Wide";
+    background-color: #609;
+  }
+
+  .wide-only {
+    display: inline;
+  }
+
+  .mobile-only,
+.tablet-only,
+.laptop-only {
+    display: none;
+  }
+}
+/*------------------------------------*\
+    #MEDIA HELPERS 
+\*------------------------------------*/
+.mobile-hide {
+  display: none;
+}
+
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  .mobile-hide {
+    display: inline;
+  }
+}
+/*---------------------------------------------*\
+  #LABELLING - THIS SHOWS MARGINS AND LINEHEIGHT 
+\*---------------------------------------------*/
+/* 
+ Add '.labelling' to your BODY or other major wrapping 
+component to color/reveal the line-height space being 
+reserved by each HTML component.This is useful when 
+working with Vertical Rhythm. Add and remove this class 
+as you need it.
+*/
+.vr h1,
+.vr h2,
+.vr h3,
+.vr h4,
+.vr h5,
+.vr h6,
+.vr p,
+.vr li,
+.vr ul,
+.vr ol {
+  position: relative;
+}
+
+.labelling p {
+  background: rgba(255, 200, 0, 0.05);
+}
+
+.labelling h1 {
+  background: rgba(0, 200, 0, 0.05);
+}
+
+.labelling h2 {
+  background: rgba(0, 200, 200, 0.05);
+}
+
+.labelling h3 {
+  background: rgba(0, 0, 200, 0.05);
+}
+
+.labelling h4 {
+  background: rgba(200, 0, 200, 0.05);
+}
+
+.labelling h5 {
+  background: rgba(90, 250, 180, 0.05);
+}
+
+.labelling li {
+  background: rgba(200, 50, 0, 0.05);
+}
+
+.labelling h1:before {
+  display: inline;
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 100%;
+  line-height: inherit;
+  outline: 1px red dashed;
+  top: 0;
+  left: 0;
+}
+/*# sourceMappingURL=styleguider.css.map */

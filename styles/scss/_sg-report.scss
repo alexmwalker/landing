@@ -1,0 +1,85 @@
+
+  /*------------------------------------*\
+    #PURPLE REPORT UI CSS
+  \*------------------------------------*/
+  
+  .report {
+    font-family: Roboto, sans-serif;
+    position: relative;
+  }
+  
+  .report span.ui-unit li {
+    outline: 1px #eee solid;
+    background-color: #fff;
+    padding-left: 0.5rem;
+  }
+  .report span.ui-unit li:not(:first-child) {
+    list-style: circle;
+    padding-left: 0.5rem;
+    list-style-position: inside;
+  }
+  .report span.ui-unit {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 12rem;
+    padding: 0;
+    outline: 1px #ddd solid;
+    color: #444;
+    z-index: 99;
+    background: #eee;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .report span.ui-unit input {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .report span.ui-unit input:checked {
+    position: absolute;
+  }
+  
+  .report span.ui-unit input + ul {
+    line-height: 0.8888888889rem;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0rem 0;
+    transition: all 0.3s ease-in-out;
+    height: 4.5rem;
+  }
+  .report span.ui-unit input + ul:after {
+    display: block;
+    position: absolute;
+    content: "▼";
+    font-size: 0.5rem;
+    line-height: 0.5rem;
+    transform: rotate(180deg);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    top: 0;
+    right: 0.5rem;
+  }
+  
+  .report span.ui-unit input:checked + ul {
+    height: 0.8888888889rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .report span.ui-unit input:checked + ul:after {
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+    top: 0.2rem;
+  }
+  
+  .report span.ui-unit .type {
+    list-style-position: inside;
+    margin-left: 0;
+    background: #88f;
+    color: #fff;
+  }
+  

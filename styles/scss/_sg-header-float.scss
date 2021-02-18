@@ -1,0 +1,107 @@
+.header-float { 
+    width: 100%;
+    max-width: 58rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: normal;
+    position: fixed;
+    //outline: 1px orangered dashed;
+    z-index: 999;
+    background: #fee;
+    box-shadow: 0 .2rem .2rem rgba(0,0,0,.15);
+    padding: calc(var(--baseline) / 2) 0 0;
+    &>*{
+      //outline: 1px green dashed;
+      //border-right: 1px solid #777;
+      display: block;
+      flex-grow: 0;
+      width: 30%;
+      flex-shrink: 1;
+      flex-basis: auto;
+      align-self: auto;
+      order: 0;
+      margin: 0 1%
+    }
+    .branding {
+      text-align: center;  
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: stretch;
+      align-content: center;
+      font-weight: 400;
+      margin-top: 0;
+    }
+  
+    .pagestate {
+      width: 50%;
+      //margin-top: calc(var(--baseline) / 2);
+      dl {
+        width: 100%;
+      }
+      dt {
+        float: left;
+        text-align: right;
+        font-weight: bold;
+        width: 25%;
+        //outline: 1px red dashed;
+      }
+      dt::after {
+        content: ":";
+      }
+      dd {
+        margin: 0 0 0 2%;
+        padding: 0;
+        //outline: 1px red dashed;
+        float: left;
+        width: 15%;
+      }
+    }
+  }
+  
+  .devicestate{
+    //outline: 1px red dashed;
+    width: 20%;
+    text-align: right;
+    position: relative;
+  }
+  .device{
+    //width: 10%;
+    position: relative;
+    float: right;
+    left: auto;
+    right: 0;
+    top:0
+  }
+  .controls{
+    clear: both;
+    li {display: inline-block;}
+     [type=checkbox] {
+    position: absolute;
+    left: -150vw;
+    }
+    label {
+      background: #eee;
+      line-height: calc(var(--baseline) * 1);
+      padding: .2rem .3rem;
+      color: #999;
+      border: 1px solid#999;
+      transition: 400ms;
+      border-radius: .2rem;
+    }
+    /* Selected */
+    [type=checkbox]:checked + label {
+      background: rgb(200, 255, 0);
+      font-weight: 600;
+      color: rgb(21, 90, 0);
+      border: 1px solid rgb(21, 90, 0);
+      transition: 400ms;
+    }
+  }
+  
+ 

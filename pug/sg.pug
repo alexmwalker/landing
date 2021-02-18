@@ -7,12 +7,13 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     //link(rel='stylesheet', type='text/css', href='../styles/css/styleguide.css')
     link(rel='stylesheet', type='text/css', href='../styles/css/sg.css')
+    link(rel='stylesheet', type='text/css', href='https://gistcdn.githack.com/alexmwalker/9c099a4ab551e2082dacafffd715498a/raw/da6c594a81b7ccc5f784a71e627bea197da004fa/reset.css')
     link(rel='icon', type='image/png', href='styleguide/structure/images/favicon.png')
 
 
-  body.vr.borders.labelling
+  body
    
-    main.container
+    main.container.vr.borders.labelling
       
         div.device
         include modules/sg-menu.pug
@@ -21,6 +22,4 @@ html
             include modules/module-intro.pug
 
 
-    script(src='../scripts/jquery-3.4.0.min.js')
-
-    script(src='../scripts/prism.js')
+    include modules/sg-footer.pug
