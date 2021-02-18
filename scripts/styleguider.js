@@ -111,7 +111,8 @@ var navBar = `
     let headerUI = document.createElement('header');
         headerUI.className = 'header-float';
         headerUI.innerHTML = navBar;
-        parentDiv.insertBefore(headerUI, guide); // Inside parent, before Guidebody
+        parentDiv.insertBefore(headerUI, guide); 
+    // Insert inside parent, before .guidebody
 
 
 /*------------------------------------*\
