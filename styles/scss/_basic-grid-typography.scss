@@ -1,6 +1,8 @@
 :root {
   --typescale: 1.15;
   /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
+  --typescale: 1.25;
+
 
   --baselineratio: calc(16/9);
   /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
