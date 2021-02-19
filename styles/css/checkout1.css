@@ -2,7 +2,8 @@
 :root {
   --typescale: 1.15;
   /* This is the heading scaling factor relative to the <p>. ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
-  --typescale: 1.15;
+  --typescale-lg: 1.25;
+  /* This is the steeper typescale used on tablets and above */
   --baselineratio: calc(16/9);
   /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778)*/
   --basegrid: 32px;
@@ -46,7 +47,7 @@ xs: 36em
 @media (min-width: 48em) {
   :root {
     font-size: var(--basefont-tablet);
-    --typescale: 1.25;
+    --typescale: var(--typescale-lg);
   }
 }
 /* Large devices (desktops, 62em and up) */

@@ -86,7 +86,7 @@ var navBar = `
       </dl>
       <ul class="small controls">
         <li>
-          <input type="checkbox" id="feedback" checked /><label for="feedback"> UI View </label>
+          <input type="checkbox" id="feedback" checked /><label for="feedback"> Report </label>
         </li>
         <li>
           <input type="checkbox" id="vr" checked /><label for="vr"> Grid </label>
@@ -132,7 +132,7 @@ function reportBuild() {
 
   myReports.forEach(function (myReport, index) {
     myReport.innerHTML +=
-      '<span class="ui-unit small"><input type="checkbox"  /><ul class="small"><li class="type">Type:</li><li class="weight">Weight:</li><li class="size">Font-size:</li><li class="lineheight">Line-height:</li><li class="margin">Margin: 0</li></span>';
+      '<span class="ui-unit small"><input type="checkbox"  /><ul class="small"><li class="type">Type:</li><li class="size">Font-size:</li><li class="lineheight">Line-height:</li><li class="weight">Font-weight:</li><li class="margin">Margin: 0</li></span>';
   });
 }
 
@@ -291,11 +291,12 @@ const lb = document.querySelector('#labelling');
 const bd = document.querySelector('#borders');
 
 fb.addEventListener("change", function(e) {
-    bodyEl.classList.toggle('fb');
-});
-vr.addEventListener("change", function(e) {
     bodyEl.classList.toggle('feedback');
 });
+vr.addEventListener("change", function(e) {
+    bodyEl.classList.toggle('vr');
+});
+
 lb.addEventListener("change", function(e) {
     bodyEl.classList.toggle('labelling');
 });
@@ -318,9 +319,7 @@ vr.addEventListener('click', function(e) {
 /*let output = controls.length;
 //console.log("Hi:  " + output);*/
 
-vr.addEventListener("change", function(e) {
-    bodyEl.classList.toggle('vr');
-});
+
 
 
 

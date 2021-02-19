@@ -40,13 +40,34 @@
   
   
   /*------------------------------------*\
-    #STYLE GUIDE GUIDEBODY 
+    #STYLEGUIDE GUIDEBODY LAYOUT & CONTROL
   \*------------------------------------*/
 
-  .guidebody{
-    padding-top: calc(var(--baseline) * 4.5); // top clearance for the floating header
+  .header-float + .guidebody{
+    padding-top: calc(var(--baseline) * 4.0); // top clearance for the floating header
   }
-/* Medium devices (tablets, 48em and up)*/
+
+  .guidebody{
+    width: 100%; // show no reports
+    transition: .2s;
+    .report span.ui-unit{
+        overflow: hidden;
+        width: 0;
+        opacity:0;
+    }
+  }
+
+  .feedback .guidebody{
+    width: 70%; // show reports in the margin
+    transition: .2s;
+    .report span.ui-unit {
+        right: -38%;
+        width: 33%;
+        opacity:1;
+      }
+  }
+
+/* Medium devices (tablets, 48em and up)
 @media (min-width: 48em) {
   
     .guidebody {
@@ -59,11 +80,13 @@
       width: 33%;
     }
   }
-  
+  */
 
 
   @import 'sg-header-float';
 
   @import 'sg-report';
-  @import 'prism';
+
   @import 'sg-construction';
+
+  @import 'prism';

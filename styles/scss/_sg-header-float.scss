@@ -1,29 +1,26 @@
+/*------------------------------------*\
+  #FLOATING HEADER BAR CSS
+\*------------------------------------*/
 .header-float { 
     width: 100%;
     max-width: 58rem;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    align-items: center;
+    align-items: top;
     align-content: normal;
     position: fixed;
-    //outline: 1px orangered dashed;
     z-index: 999;
-    background: #fee;
+    background: #eee;
+    border-radius: 3px;
     box-shadow: 0 .2rem .2rem rgba(0,0,0,.15);
     padding: calc(var(--baseline) / 2) 0 0;
     &>*{
-      //outline: 1px green dashed;
-      //border-right: 1px solid #777;
       display: block;
-      flex-grow: 0;
-      width: 30%;
-      flex-shrink: 1;
-      flex-basis: auto;
-      align-self: auto;
-      order: 0;
-      margin: 0 1%
+      margin: 0 1%;
+      //outline: 1px red dashed;
     }
     .branding {
       text-align: center;  
@@ -67,15 +64,15 @@
   .devicestate{
     //outline: 1px red dashed;
     width: 20%;
-    text-align: right;
+    text-align: center;
     position: relative;
   }
   .device{
     //width: 10%;
     position: relative;
-    float: right;
+    display: inline-block;
     left: auto;
-    right: 0;
+    right: auto;
     top:0
   }
   .controls{

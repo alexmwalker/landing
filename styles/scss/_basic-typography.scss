@@ -1,46 +1,4 @@
-/*------------------------------------*\
-  #IMPORTANT CROSS SITE VARIABLES
-\*------------------------------------*/
 
-
-:root { 
-    --typescale: 1.15; /* Mobile & default */
-    /* This is the scaling factor for headings relative to the <p>. 
-    ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
-  
-    --typescale-lg: 1.25; /* Tablet, Laptop and Wide-screen */
-  
-    --baselineratio: calc(16 / 9);
-    /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778) */
-    /* The body font is 9/16ths of the line-height – a little over half  */
-    --basegrid: 32px;
-    /* --basegrid is the default body text line-height grid size on phone */
-    --basegrid-tablet: 28px;
-    --basegrid-laptop: 32px;
-    --basegrid-wide: 36px;
-  
-    --baseline: calc(var(--baselineratio) * 1rem);
-    --basefont: calc(var(--basegrid) / var(--baselineratio));
-    --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
-    --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
-    --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
-  
-    --basebackground: #fff; // flipped in dark mode
-    --basefontcolor: #222;
-  
-    --basebackground-dark: #111518;
-    --basefontcolor-dark: #ddd;
-  
-    /* Apparently you can't use CSS Variables to set breakpoint - booo..*/
-    --bp-phone: 48em;
-    --bp-tablet: 64em;
-    --bp-laptop: 64em;
-    --bp-wide: 80em;
-  
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
-  }
-  
   @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
   
   /*------------------------------------*\
@@ -59,7 +17,7 @@
   }
   
   /* Medium devices (tablets, 48em and up)*/
-  @media (min-width: 48em) {
+  @media (min-width: $bp-tablet) {
     :root {
       font-size: var(--basefont-tablet); 
       //--typescale: 1.25;
@@ -71,14 +29,14 @@
   }
   
   /* Large devices (desktops, 62em and up) */
-  @media (min-width: 64em) {
+  @media (min-width: $bp-laptop) {
     :root {
       font-size: var(--basefont-laptop);
     }
   }
   
   /* Extra large devices (large desktops, 75em and up)*/
-  @media (min-width: 80em) {
+  @media (min-width: $bp-wide) {
     :root {
       font-size: var(--basefont-wide);
     }
@@ -256,20 +214,22 @@
     #TYPOGRAPHY MEDIA TWEAKS
     The type system above automatically
     works pretty well at most sizes, but
-    we need a very small amount of manual 
-    line-height and margin tweaks. 
+    sometimes - usually after tyescale 
+    tweaks - we need to make small manual 
+    adjustments to LINE-HEIGHT and MARGIN. 
     That's what these are.
   \*------------------------------------*/
   
   /* Medium devices (tablets, 48em and up)*/
-  @media (min-width: 48em) {
+  @media (min-width: $bp-tablet) {
     h1 {
-      line-height: calc(var(--baseline) * 2);
+      line-height: calc(var(--baseline) * 1.5);
       margin-bottom: calc(var(--baseline) * 1);
+      &.major {
+        line-height: calc(var(--baseline) * 2);
+      }
     }
-    .major {
-      line-height: calc(var(--baseline) * 2);
-    }
+    
     h2 {
       margin-bottom: calc(var(--baseline) * 1);
     }

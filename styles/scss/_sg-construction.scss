@@ -56,7 +56,7 @@ coding. Currently it:
 \*------------------------------------*/
 
 :root {
-  --deviceUI: 2.0;
+  --deviceUI: 1.5;
   /* sizing the .device UI thing in the styleguide on the grid */
 }
 
@@ -83,7 +83,7 @@ coding. Currently it:
   width: calc(var(--baseline) * var(--deviceUI));
   display: block;
   top: calc(var(--baseline) * var(--deviceUI));
-  background: #9a0;
+  background: #f60;
   text-align: center;
   color: #fff;
   font-family: sans-serif;
@@ -120,7 +120,7 @@ coding. Currently it:
   }
   .device:after {
     content: "Tablet";
-    background-color: #f60;
+    background-color: rgb(34, 194, 2);
   }
   .tablet-only {
     display: inline;
@@ -139,7 +139,7 @@ coding. Currently it:
   }
   .device:after {
     content: "Laptop";
-    background-color: #096;
+    background-color: rgb(2, 174, 218);
   }
   .laptop-only {
     display: inline;
@@ -158,7 +158,7 @@ coding. Currently it:
   }
   .device:after {
     content: "Wide";
-    background-color: #609;
+    background-color: rgb(149, 13, 218);
   }
   .wide-only {
     display: inline;
@@ -238,15 +238,4 @@ as you need it.
 
 .labelling li {
   background: rgba(200, 50, 0, 0.05);
-}
-.labelling h1:before{
-  display: inline;
-  position: absolute;
-  content: '';
-  width: 10px;
-  height: 100%;
-  line-height: inherit;
-  outline: 1px red dashed;
-  top: 0;
-  left: 0;
 }
