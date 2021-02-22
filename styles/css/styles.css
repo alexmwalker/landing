@@ -106,7 +106,7 @@ table {
   }
 }
 /* Extra large devices (large desktops, 75em and up)*/
-@media (min-width: 64em) {
+@media (min-width: 80em) {
   :root {
     font-size: var(--basefont-wide);
   }

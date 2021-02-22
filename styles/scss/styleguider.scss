@@ -39,6 +39,8 @@
     #STYLEGUIDE GUIDEBODY LAYOUT & CONTROL
   \*------------------------------------*/
 
+
+
   .header-float + .guidebody{
     padding-top: calc(var(--baseline) * 4.0); // top clearance for the floating header
   }
@@ -54,7 +56,7 @@
   }
 
   .feedback .guidebody{
-    width: 70%; // show reports in the margin
+    width: 70%; // show reports in the margin 
     transition: .2s;
     .report span.ui-unit {
         right: -38%;
@@ -63,6 +65,9 @@
       }
   }
 
+  .section{
+    
+  }
 /* Medium devices (tablets, 48em and up)
 @media (min-width: 48em) {
   
