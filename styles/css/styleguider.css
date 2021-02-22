@@ -74,7 +74,7 @@
   #FLOATING HEADER BAR CSS
 \*------------------------------------*/
 .header-float {
-  width: 100%;
+  width: 96%;
   max-width: 58rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

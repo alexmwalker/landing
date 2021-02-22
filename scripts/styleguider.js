@@ -48,10 +48,11 @@ function addCSS(filename) {
 \*------------------------------------*/
 
 
-let bodyEl = document.querySelector('.container');  
+let bodyEl = document.querySelector('body');  
 
 
-/* Static navBar code to be inserted live */ 
+
+/* NAVBAR TEMPLATE CODE -  to be inserted live */ 
 var navBar = `
     <div class="h3 branding">
       SitePoint Styleguide
@@ -305,19 +306,6 @@ bd.addEventListener("change", function(e) {
 });
 
 //let controls = document.querySelectorAll('.controls input');
-
-
-/*
-vr.addEventListener('click', function(e) {
-    e.preventDefault();
-    if (bodyEl.classList.contains('vr')) {
-        bodyEl.classList.remove('vr');
-    } else {
-        bodyEl.classList.add('vr');
-    }
-});  */
-/*let output = controls.length;
-//console.log("Hi:  " + output);*/
 
 
 
