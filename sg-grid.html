@@ -10,18 +10,19 @@
     <link rel="stylesheet" type="text/css" href="../styles/css/sg.css"/>
     <link rel="icon" type="image/png" href="styleguide/structure/images/favicon.png"/>
   </head>
-  <body class="vr borders labelling">
+  <body class="vr borders -labelling">
     <label> </label>
     <main class="container">
-      <div class="device"></div>
+      <!--div.device-->
       <div class="catalog-Menu">
-        <header class="sg-header">
-          <!--h1 SitePoint library --><img id="logo" src="https://www.gitcdn.xyz/repo/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg"/>
-          <h4>Styleguide &amp; Component Library</h4>
-        </header>
+        <!--header.sg-header
+        //h1 SitePoint library 
+        img(id='logo' src='https://www.gitcdn.xyz/repo/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
+        h4 Styleguide &amp; Component Library
+        -->
         <ul>
           <li> 
-            <div><a href="/styleguide/sg-buttons.html">Introduction
+            <div><a href="/styleguide/sg.html">Introduction
                 <ul> 
                   <li> <a href="/styleguide/sg-grid.html">Basics of our Vertical grid</a></li>
                 </ul></a></div>
@@ -29,9 +30,10 @@
           <li> 
             <div><a href="/styleguide/sg-typography.html">Typography
                 <ul> 
-                  <li> <a href="/styleguide/sg.html">Headings</a></li>
-                  <li> <a href="/styleguide/sg.html">Body text</a></li>
-                  <li> <a href="/styleguide/sg.html">Small text</a></li>
+                  <li> <a href="/styleguide/sg-typography.html">How headings are scaled</a></li>
+                  <li> <a href="/styleguide/sg-typography.html#headings">Headings</a></li>
+                  <li> <a href="/styleguide/sg-typography.html#bodytext">Body text</a></li>
+                  <li> <a href="/styleguide/sg-typography.html#smalltext">Small text</a></li>
                 </ul></a></div>
           </li>
           <li> 
@@ -96,7 +98,19 @@
         </section>
       </div>
     </main>
-    <script src="../scripts/jquery-3.4.0.min.js"></script>
-    <script src="../scripts/prism.js"></script>
+    <section class="huge-module anchor clearfix" id="introduction">
+      <h1>Introduction</h1><p>The core of our site layout revolves around major points:</p>
+<ol>
+<li>We set a <code>font-size</code> and <code>line-height</code> on our HTML element (or <code>:root{}</code>) in pixels. This gives us our base body text settings and the only time we use pixels.</li>
+<li>Media queries let us scale-up this base body-text/line-height as screens get bigger.</li>
+<li>Using this line-height and a CSS gradient, we can create a lined grid that perfectly fits and contains our base text. We can set a CSS variable (i.e <code>var(--baseline);</code>) to make it easy to re-use this line-height measurement.</li>
+<li>From then on, ALL vertical dimensions (e.g. margin-top, margin-bottom, padding-top, padding-bottom, line-height, height, etc) are set using this CSS variable as our 'unit of measure'.  Forget pixels, REMs, and EMs.</li>
+<li>For instance, a simple bottom margin is set as <code>margin-bottom: var(--baseline);</code>.</li>
+<li>A half-height margin is set using a CSS calc like this: <code>margin-top: calc(var(--baseline) / 2);</code>.</li>
+<li>A container panel requiring extra padding might use multiples of our --baseline like this: <code>padding-top: calc(var(--baseline) * 3)</code>.</li>
+<li>Often it's even worth setting the heights of IMGs or SVG logos in --baseline (and letting the width set itself), as it guarantees the IMG will fit into the grid.</li>
+</ol>
+
+    </section>
   </body>
 </html>

@@ -115,7 +115,7 @@ table {
   #CORE TYPOGRAPHY (SCALED FROM :ROOT)
 \*------------------------------------*/
 h1,
-.is-size1 {
+.is-size-h1 {
   font-size: calc( var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * 1rem );
   line-height: calc(var(--baseline) * 1.5);
   /* 3 grid lines mobile - becomes 4 on tablet + to suit larger typescale */
@@ -124,7 +124,7 @@ h1,
 }
 
 h2,
-.is-size2 {
+.is-size-h2 {
   font-size: calc( var(--typescale) * var(--typescale) * var(--typescale) * 1rem );
   line-height: calc(var(--baseline) * 1.5);
   margin-top: 0rem;
@@ -133,7 +133,7 @@ h2,
 }
 
 h3,
-.is-size-3,
+.is-size-h3,
 .h3 {
   font-size: calc(var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
@@ -153,7 +153,7 @@ h4,
 }
 
 h5,
-.is-size-5,
+.is-size-h5,
 .h5 {
   /* h5s are same size as <p> but bolder */
   font-size: 1rem;

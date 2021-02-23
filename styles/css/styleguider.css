@@ -56,20 +56,44 @@
   opacity: 1;
 }
 
-/* Medium devices (tablets, 48em and up)
-@media (min-width: 48em) {
+.section {
+  background: #eee;
+  color: #666;
+  margin: calc(var(--baseline)/2) 0;
+  padding: calc(var(--baseline)/2) 1rem;
+}
 
-    .guidebody {
-      width: 70%;
-      border-right: 1px solid #999;
-      padding-right: 1rem;
-    }
-    .guidebody .report span.ui-unit {
-      right: -38%;
-      width: 33%;
-    }
-  }
-  */
+.catalog-Menu {
+  width: 20rem;
+  height: 100vh;
+  z-index: 999;
+  position: absolute;
+  background: #eee;
+  top: calc(var(--baseline) * 3);
+  margin: calc(var(--baseline) / 2) 0;
+  padding: calc(var(--baseline)/2) 1rem calc(var(--baseline)/2) 0;
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transform: perspective(500px) scale3d(0.05, 1, 1);
+          transform: perspective(500px) scale3d(0.05, 1, 1);
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.showmenu .catalog-Menu {
+  opacity: 1;
+  -webkit-transform: perspective(500px) scale3d(1, 1, 1);
+          transform: perspective(500px) scale3d(1, 1, 1);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
 /*------------------------------------*\
   #FLOATING HEADER BAR CSS
 \*------------------------------------*/
@@ -102,10 +126,16 @@
   -webkit-box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
   padding: calc(var(--baseline) / 2) 0 0;
+  /*------------------------------------*\
+  #Hamburger & animation
+  \*------------------------------------*/
 }
 .header-float > * {
   display: block;
   margin: 0 1%;
+}
+.header-float .nav {
+  width: 5%;
 }
 .header-float .branding {
   text-align: center;
@@ -130,8 +160,50 @@
   font-weight: 400;
   margin-top: 0;
 }
+.header-float #showmenu {
+  position: relative;
+  cursor: hand;
+  height: 2em;
+  width: 2rem;
+  top: calc(var(--baseline) / 2);
+}
+.header-float #showmenu span {
+  position: relative;
+  -webkit-perspective: none;
+          perspective: none;
+  height: 0.2em;
+  width: 2rem;
+  -webkit-transform: translateY(calc(var(--baseline) / 2));
+      -ms-transform: translateY(calc(var(--baseline) / 2));
+          transform: translateY(calc(var(--baseline) / 2));
+  background: var(--basefontcolor);
+  display: block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.header-float #showmenu span:after, .header-float #showmenu span:before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: var(--basefontcolor);
+  -webkit-transform: translateY(calc(var(--baseline) / 3));
+      -ms-transform: translateY(calc(var(--baseline) / 3));
+          transform: translateY(calc(var(--baseline) / 3));
+  left: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.header-float #showmenu span:before {
+  -webkit-transform: translateY(calc(var(--baseline) / -3));
+      -ms-transform: translateY(calc(var(--baseline) / -3));
+          transform: translateY(calc(var(--baseline) / -3));
+}
 .header-float .pagestate {
-  width: 50%;
+  width: 45%;
 }
 .header-float .pagestate dl {
   width: 100%;
@@ -153,7 +225,7 @@
 }
 
 .devicestate {
-  width: 20%;
+  width: 10%;
   text-align: center;
   position: relative;
 }
@@ -198,6 +270,29 @@
   transition: 400ms;
 }
 
+.showmenu .header-float #showmenu span {
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.showmenu .header-float #showmenu span:before {
+  -webkit-transform: rotateZ(405deg);
+      -ms-transform: rotate(405deg);
+          transform: rotateZ(405deg);
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+}
+.showmenu .header-float #showmenu span:after {
+  -webkit-transform: rotateZ(-405deg);
+      -ms-transform: rotate(-405deg);
+          transform: rotateZ(-405deg);
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+}
+
 /*------------------------------------*\
   #PURPLE REPORT UI CSS
 \*------------------------------------*/
@@ -226,7 +321,7 @@
   width: 12rem;
   padding: 0;
   outline: 1px #ddd solid;
-  color: #444;
+  color: #555;
   z-index: 99;
   background: #eee;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -296,6 +391,7 @@
   margin-left: 0;
   background: #88f;
   color: #fff;
+  font-weight: 500;
 }
 
 /*------------------------------------*\

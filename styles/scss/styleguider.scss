@@ -57,7 +57,7 @@
 
   .feedback .guidebody{
     width: 70%; // show reports in the margin 
-    transition: .2s;
+    transition: 0.2s;
     .report span.ui-unit {
         right: -38%;
         width: 33%;
@@ -66,24 +66,33 @@
   }
 
   .section{
-    
+    //border-bottom: 1px solid #999;
+    background: #eee;
+    color: #666;
+    margin: calc(var(--baseline)/2) 0 ;
+    padding: calc(var(--baseline)/2) 1rem
   }
-/* Medium devices (tablets, 48em and up)
-@media (min-width: 48em) {
-  
-    .guidebody {
-      width: 70%;
-      border-right: 1px solid #999;
-      padding-right: 1rem;
-    }
-    .guidebody .report span.ui-unit {
-      right: -38%;
-      width: 33%;
-    }
+  .catalog-Menu{
+    width: 20rem;
+    height: 100vh ;
+    z-index: 999;
+    position: absolute;
+    background: #eee;
+    top: calc(var(--baseline) * 3);
+    margin: calc(var(--baseline) / 2) 0;
+    padding: calc(var(--baseline)/2) 1rem calc(var(--baseline)/2) 0 ;
+    box-shadow: .2rem .2rem .2rem rgba(0,0,0,.3);
+    opacity: 0;
+    transform: perspective(500px) scale3d(0.05, 1, 1);
+    transform-origin: top left;
+    transition: .3s;
   }
-  */
 
-
+  .showmenu .catalog-Menu{
+    opacity: 1;
+    transform: perspective(500px) scale3d(1, 1, 1);
+    transition: .3s;
+  }
   @import 'sg-header-float';
 
   @import 'sg-report';

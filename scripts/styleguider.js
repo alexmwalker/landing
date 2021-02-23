@@ -50,18 +50,22 @@ function addCSS(filename) {
 
 let bodyEl = document.querySelector('body');  
 
-
+function navBarBuild(){
 
 /* NAVBAR TEMPLATE CODE -  to be inserted live */ 
 var navBar = `
+    <div class="nav h3">
+      <div id="showmenu"><span></span></div>
+    </div>
     <div class="h3 branding">
-      SitePoint Styleguide
-      <div class="minor mobile-hide">Grid &amp; Type:
+      <a href="/styleguide/index.html">SitePoint Styleguide</a>
+      <!--<div class="minor mobile-hide">Grid &amp; Type:
         <span class="mobile-only"> mobile</span>
         <span class="tablet-only"> tablet</span>
         <span class="laptop-only"> laptop</span>
         <span class="wide-only"> wide-screens</span>
-      </div>
+      </div>-->
+
     </div>
     
     <div class="pagestate">
@@ -74,7 +78,6 @@ var navBar = `
         <dt>
           <span class="mobile-hide">Base line-height</span>
           <span class="mobile-only">LH</span>
-            
           </dt>
         <dd class="lineheight">-</dd>
         <dt>
@@ -115,6 +118,34 @@ var navBar = `
         parentDiv.insertBefore(headerUI, guide); 
     // Insert inside parent, before .guidebody
 
+      /* for toggling useful classes */
+
+      const fb = document.querySelector('#feedback'); 
+      const vr = document.querySelector('#vr');
+      const lb = document.querySelector('#labelling');
+      const bd = document.querySelector('#borders');
+      const mn = document.querySelector('#showmenu');
+
+      fb.addEventListener("change", function(e) {
+          bodyEl.classList.toggle('feedback');
+      });
+      vr.addEventListener("change", function(e) {
+          bodyEl.classList.toggle('vr');
+      });
+      lb.addEventListener("change", function(e) {
+          bodyEl.classList.toggle('labelling');
+      });
+      bd.addEventListener("change", function(e) {
+          bodyEl.classList.toggle('borders');
+      });
+      mn.addEventListener("click", function(e) {
+        bodyEl.classList.toggle('showmenu');
+      });
+
+
+
+
+  }
 
 /*------------------------------------*\
   #3. CONSTRUCT THE REPORT UNITS
@@ -182,16 +213,14 @@ function reportType() {
   
   
   /*  
-      Interate through the elements with the .report class, 
-      inspect their CSS (font-size, font-weight, line-height, 
+      Interate through the elements tagged with the `.report` class, 
+      inspect their CSS (font-size, font-weight, line-height, and 
       margin) and inject the results into the corresponding
       UI Unit.
-  
   */
   
   myElements.forEach(function (myElement, index) {
-    style = window.getComputedStyle
-      ? getComputedStyle(myElement, null)
+    style = window.getComputedStyle ? getComputedStyle(myElement, null)
       : myElement.currentStyle;
 
     //console.log(myElement.nodeName);
@@ -207,7 +236,7 @@ function reportType() {
       if (value != 'report') { // filter out the .report class
         lister = lister + value;
         //console.log("classList: " + lister);
-      };
+      }
       // span.textContent += value + ' ++ ';
       
     }
@@ -284,33 +313,14 @@ function reportType() {
 }
 
 
-/* for toggling useful classes */
 
-const fb = document.querySelector('#feedback'); 
-const vr = document.querySelector('#vr');
-const lb = document.querySelector('#labelling');
-const bd = document.querySelector('#borders');
-
-fb.addEventListener("change", function(e) {
-    bodyEl.classList.toggle('feedback');
-});
-vr.addEventListener("change", function(e) {
-    bodyEl.classList.toggle('vr');
-});
-
-lb.addEventListener("change", function(e) {
-    bodyEl.classList.toggle('labelling');
-});
-bd.addEventListener("change", function(e) {
-    bodyEl.classList.toggle('borders');
-});
 
 //let controls = document.querySelectorAll('.controls input');
 
 
 
 
-
+navBarBuild();
 reportBuild();
 reportType();
 

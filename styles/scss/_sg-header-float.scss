@@ -1,6 +1,7 @@
 /*------------------------------------*\
   #FLOATING HEADER BAR CSS
 \*------------------------------------*/
+
 .header-float { 
     width: 96%;
     max-width: 58rem;
@@ -20,7 +21,10 @@
     &>*{
       display: block;
       margin: 0 1%;
-      //outline: 1px red dashed;
+      //outline: 1px rgba(0,0,0,.2) dashed;
+    }
+    .nav{
+      width: 5%;
     }
     .branding {
       text-align: center;  
@@ -34,9 +38,47 @@
       font-weight: 400;
       margin-top: 0;
     }
+  // hamburger
+  /*------------------------------------*\
+  #Hamburger & animation
+  \*------------------------------------*/
+    #showmenu{ 
+      position: relative;
+      cursor: hand;
+      height: 2em;
+      width: 2rem;
+      //outline: 1px green dashed;
+      top: calc(var(--baseline) / 2);
+      span{
+        position: relative;
+        perspective: none;
+        height: .2em;
+        width: 2rem;
+        transform: translateY(calc(var(--baseline) / 2));
+        //outline: 1px green dashed;
+        background: var(--basefontcolor);
+        display: block;
+        transition: .3s;
+        &:after, &:before{
+          display: block;
+          position: absolute;
+          content: '';
+          height: inherit;
+          width: inherit;
+          background: var(--basefontcolor);
+          transform: translateY(calc(var(--baseline) / 3));
+          left: 0;
+          transition: .3s;
+        }
+        &:before{
+          transform: translateY(calc(var(--baseline) / -3));
+        }
+      }
+      
+  }
   
     .pagestate {
-      width: 50%;
+      width: 45%;
       //margin-top: calc(var(--baseline) / 2);
       dl {
         width: 100%;
@@ -63,7 +105,7 @@
   
   .devicestate{
     //outline: 1px red dashed;
-    width: 20%;
+    width: 10%;
     text-align: center;
     position: relative;
   }
@@ -100,5 +142,19 @@
       transition: 400ms;
     }
   }
-  
- 
+
+  .showmenu .header-float #showmenu{ //clicked hamburger animation
+    span{
+      background: rgba(0,0,0,0);//clear
+      transition: .3s;
+      &:before{
+        transform: rotateZ(405deg);
+        transition: inherit;
+    }
+      &:after{
+        transform: rotateZ(-405deg);
+        transition: inherit;
+    }
+  }
+}
+
