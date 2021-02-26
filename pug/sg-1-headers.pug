@@ -7,29 +7,56 @@ html
         meta(name='description', content='SitePoint Styleguide - Headers')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='stylesheet', type='text/css', href='../styles/css/styles.css')
-        link(rel='stylesheet', type='text/css', href='../styles/css/styleguider.css?r=123')
+        link(rel='stylesheet', type='text/css', href='../styles/css/styleguider.css?r=1234')
 
     body.feedback.labelling.vr
         main.container
             include modules/sg-menu.pug
             section.guidebody
-                header.section.is-size-h3 Headings and paragraphs
-                p.small.crumbtrail  Home > Headings
-                h1.major.report h1.major: Heading two-line Jackdaws love my big sphinx of quartz.
-                h1.report Heading 1 - Jackdaws love my big sphinx of quartz.
-                h2.report Heading 2 - Jackdaws love my big sphinx of quartz.
-                h3.report Heading 3 - Jackie will budget for the most expensive zoology equipment. 
-                h4.report Heading 4 - Jackie will budget for the most expensive zoology equipment. 
-                h5.report Heading 5 - Jackie will budget for the most expensive zoology equipment.
-                p
-                    | Paragraph Standard - It was a dreamworld, if the dreamers were testosterone-fueled males who were never forced to behave like adults. Dreams come true all the time, just not for the dreamers. We can charge the Unnecessarily Painful Slow Death torpedoes on the trip. Zaphod drifted away from the conversation, already impatient with a situation that did not feature him. “Zaphod! I am so happy to see you.”
-                p.report
-                    | Paragraph Standard - They did not realize that because of the quasi-reciprocal and circular nature of all Improbability calculations, anything that was Infinitely Improbable was actually very likely to happen almost immediately. “In other words—and this is the rock-solid principle on which the whole of the Corporation’s Galaxywide success is founded—their fundamental design flaws are completely hidden by their superficial design flaws.” And so the Sandwich Maker sang as he worked. “You want the taste of dried leaves boiled in water?” “Er, yes. With milk.” Gods have god-sized egos, so we need a lot of love to stay healthy.
-                p.minor.report 
-                    | Paragraph.minor - The early morning’s thinnest sliver of light appeared silently. Several billion trillion tons of superhot exploding hydrogen nuclei rose slowly above the horizon and managed to look small, cold and slightly damp. In so far as it is possible for a green blur to arch its eyebrows disdainfully, this is what the green blur now did. All we need to do is snatch Jean Claude and it’s whole-wheat crepes for everyone. “If there’s anything more important than my ego around, I want it caught and shot now.” Arthur looked as though he’d had quite enough bad news for one day.
-                p.small.report 
-                    | Paragraph.small - This bird was really pushy. There. All done. No more nastiness. “Do you need a reservation for the afterlife?” “Why’s it all in hardware?” Spring is overrated.
+                .section--preview.grid
+                    header.col-12.section.is-size-h5 Headings and paragraphs
+                    p.small.crumbtrail  Home > Headings
+                    h1.major.report h1.major: Heading two-line Jackdaws love my big sphinx of quartz.
+                    h1.report Heading 1 - Jackdaws love my big sphinx of quartz.
+                    h2.report Heading 2 - Jackdaws love my big sphinx of quartz.
+                    h3.report Heading 3 - Jackie will budget for the most expensive zoology equipment. 
+                    h4.report Heading 4 - Jackie will budget for the most expensive zoology equipment. 
+                    h5.report Heading 5 - Jackie will budget for the most expensive zoology equipment.
+                    p
+                        | Paragraph Standard - It was a dreamworld, if the dreamers were testosterone-fueled males who were never forced to behave like adults. Dreams come true all the time, just not for the dreamers. We can charge the Unnecessarily Painful Slow Death torpedoes on the trip. Zaphod drifted away from the conversation, already impatient with a situation that did not feature him. “Zaphod! I am so happy to see you.”
+                    p.report
+                        | Paragraph Standard - They did not realize that because of the quasi-reciprocal and circular nature of all Improbability calculations, anything that was Infinitely Improbable was actually very likely to happen almost immediately. “In other words—and this is the rock-solid principle on which the whole of the Corporation’s Galaxywide success is founded—their fundamental design flaws are completely hidden by their superficial design flaws.” And so the Sandwich Maker sang as he worked. “You want the taste of dried leaves boiled in water?” “Er, yes. With milk.” Gods have god-sized egos, so we need a lot of love to stay healthy.
+                    p.minor.report 
+                        | Paragraph.minor - The early morning’s thinnest sliver of light appeared silently. Several billion trillion tons of superhot exploding hydrogen nuclei rose slowly above the horizon and managed to look small, cold and slightly damp. In so far as it is possible for a green blur to arch its eyebrows disdainfully, this is what the green blur now did. All we need to do is snatch Jean Claude and it’s whole-wheat crepes for everyone. “If there’s anything more important than my ego around, I want it caught and shot now.” Arthur looked as though he’d had quite enough bad news for one day.
+                    p.small.report 
+                        | Paragraph.small - This bird was really pushy. There. All done. No more nastiness. “Do you need a reservation for the afterlife?” “Why’s it all in hardware?” Spring is overrated.
+                    
+                .section--preview.grid
+                    header.col-12.section.is-size-h5 Buttons &amp; CTAs
+
+                    .col-4.wrap
+                        figcaption Standard button
+                        button.pink.report Free 7-Day Trial
+                    .col-4.wrap
+                        figcaption Standard button
+                        button.pink Free 7-Day Trial                        
+                    .col-4.wrap
+                        figcaption Standard button
+                        button.pink Free 7-Day Trial
+
+                .section--preview.grid
+
+                    header.col-12.section.is-size-h5 Logos and Branding
+
+                    .col-4.dark.center 
+                        img(src='https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
                 
+                    .col-4.center 
+                        img(src='https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
+
+                    .col-4.center
+                        img(src='https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
+                    
 
     script(src='../scripts/styleguider.js')
     script(src='../scripts/prism.js')

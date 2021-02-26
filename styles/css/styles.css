@@ -4,7 +4,7 @@
 
   I'd preferred to have written these 
   as CSS variables (like most variables)
-  but apparently you can't write a CSS
+  but apparently you can't use a CSS
   variable as a breakpoint. Doesn't matter 
   much as they don't need to change to be
   dynamic. Just would have been neater.
@@ -351,5 +351,21 @@ input[type=checkbox] {
 
 .textright {
   text-align: right;
+}
+
+button.pink {
+  margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);
+}
+
+.pink {
+  height: calc(var(--baseline));
+  background: #FA3292;
+  color: #eee;
+  border-radius: 4px;
+  font-size: calc(1rem / var(--typescale));
+  border: 0 none;
+  padding: 0 1rem;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=styles.css.map */

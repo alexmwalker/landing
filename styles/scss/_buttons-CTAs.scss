@@ -1,0 +1,14 @@
+button.pink {
+    margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);
+}
+.pink {
+    height: calc(var(--baseline));
+    background: #FA3292;
+    color: #eee;
+    border-radius: 4px;
+    font-size: calc(1rem / var(--typescale));
+    border: 0 none;
+    padding: 0 1rem;
+    -webkit-box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+    box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+}

@@ -1,14 +1,21 @@
+/*------------------------------------*\
+  #LAYOUT UNITS FROM GRIDLEX
+\*------------------------------------*/
 
- 
+@import "gridlex-vars";
+@import "gridlex-preprocessing";
+@import "gridlex-mixins";
+@import "gridlex-classes";
 
 
-  /*------------------------------------*\
+
+/*------------------------------------*\
     #STYLEGUIDE LAYOUT UNITS
   
     CSS Specific to this particular layout
   
   \*------------------------------------*/
-  .container {
+.container {
     /* This is handy for stopping layouts running 
       wide on super wide monitors. It's unneccessary 
       if you have proper layout CSS */
@@ -18,11 +25,11 @@
     color: var(--basefontcolor);
     background: #fff;
     //outline: 1px red dashed;
-  }
-  
-  
-  
-  .layout {
+}
+
+
+
+.layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     grid-gap: 1rem;
@@ -30,73 +37,100 @@
     //background: cyan;
     padding: 0 !important;
     margin: 0 !important;
-  }
+}
 
-  
 
-  
-  /*------------------------------------*\
+
+
+/*------------------------------------*\
     #STYLEGUIDE GUIDEBODY LAYOUT & CONTROL
   \*------------------------------------*/
 
 
 
-  .header-float + .guidebody{
+.header-float+.guidebody {
     padding-top: calc(var(--baseline) * 4.0); // top clearance for the floating header
-  }
+}
 
-  .guidebody{
+.guidebody {
     width: 100%; // show no reports
     transition: .2s;
-    .report span.ui-unit{
+
+    .report span.ui-unit {
         overflow: hidden;
         width: 0;
-        opacity:0;
+        opacity: 0;
     }
-  }
+}
 
-  .feedback .guidebody{
+.feedback .guidebody {
     width: 70%; // show reports in the margin 
     transition: 0.2s;
+
     .report span.ui-unit {
         right: -38%;
         width: 33%;
-        opacity:1;
-      }
-  }
+        opacity: 1;
+    }
+}
 
-  .section{
+.section {
     //border-bottom: 1px solid #999;
     background: #eee;
     color: #666;
-    margin: calc(var(--baseline)/2) 0 ;
-    padding: calc(var(--baseline)/2) 1rem
-  }
-  .catalog-Menu{ // hidden menu
+    margin: calc(var(--baseline)/2) 0;
+    padding: calc(var(--baseline)/2) 1rem;
+    text-indent: 1rem;
+}
+
+.section--preview {
+    padding: 0 calc(var(--baseline)/2) calc(var(--baseline)/2);
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 3px;
+    width: 100%;
+    //display: inline-block;
+    box-sizing: border-box;
+    margin: -1px 0; // allows for border width when stacking on grid
+    [class~=col], [class*=col-], [class*=col]{
+        padding: calc(var(--baseline)/2) 0;
+        //outline: 1px red dashed;
+    }
+}
+.dark{
+    background-color: grey;
+}
+.center{
+    text-align: center;
+}
+
+.catalog-Menu {
+    // hidden menu
     width: 20rem;
-    height: 100vh ;
+    height: 100vh;
     z-index: 999;
     position: absolute;
     background: #eee;
     top: calc(var(--baseline) * 3);
     margin: calc(var(--baseline) / 2) 0;
-    padding: calc(var(--baseline)/2) 1rem calc(var(--baseline)/2) 0 ;
-    box-shadow: .2rem .2rem .2rem rgba(0,0,0,.3);
+    padding: calc(var(--baseline)/2) 1rem calc(var(--baseline)/2) 0;
+    box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .3);
     opacity: 0;
     transform: perspective(500px) scale3d(0.05, 1, 1);
     transform-origin: top left;
     transition: .3s;
-  }
+}
 
-  .showmenu .catalog-Menu{ // show menu
-    opacity: 1; 
+.showmenu .catalog-Menu {
+    // show menu
+    opacity: 1;
     transform: perspective(500px) scale3d(1, 1, 1);
     transition: .3s;
-  }
-  @import 'sg-header-float';
+}
 
-  @import 'sg-report';
+@import 'sg-header-float';
 
-  @import 'sg-construction';
+@import 'sg-report';
 
-  @import 'prism';
+@import 'sg-construction';
+
+@import 'prism';
