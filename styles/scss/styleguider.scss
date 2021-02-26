@@ -72,7 +72,7 @@
     margin: calc(var(--baseline)/2) 0 ;
     padding: calc(var(--baseline)/2) 1rem
   }
-  .catalog-Menu{
+  .catalog-Menu{ // hidden menu
     width: 20rem;
     height: 100vh ;
     z-index: 999;
@@ -88,8 +88,8 @@
     transition: .3s;
   }
 
-  .showmenu .catalog-Menu{
-    opacity: 1;
+  .showmenu .catalog-Menu{ // show menu
+    opacity: 1; 
     transform: perspective(500px) scale3d(1, 1, 1);
     transition: .3s;
   }

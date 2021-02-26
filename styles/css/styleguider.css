@@ -85,7 +85,7 @@
   transition: 0.3s;
 }
 
-.showmenu .catalog-Menu {
+.showmenu .catalog-Menu { 
   opacity: 1;
   -webkit-transform: perspective(500px) scale3d(1, 1, 1);
           transform: perspective(500px) scale3d(1, 1, 1);

@@ -142,7 +142,7 @@ var navBar = `
         bodyEl.classList.toggle('showmenu');
       });
 
-
+ 
 
 
   }
@@ -200,15 +200,15 @@ function reportType() {
   
   /* Write the gridsize to screen */
   let gridsize = document.querySelector('.gridsize');
-    gridsize.textContent =  currentRootLineheight/2 + 'px';
+    gridsize.textContent =  `${currentRootLineheight / 2}px`;
   
   /* Write the gridsize to screen */
   let lineheight = document.querySelector('.lineheight');
-    lineheight.textContent =  currentRootLineheight + 'px';
+    lineheight.textContent =  `${currentRootLineheight}px`;
   
   /* Write the rootFont size to screen */
   let rootFont = document.querySelector('.currentRootFont');
-    rootFont.textContent = currentRootFont + 'px';
+    rootFont.textContent = `${currentRootFont}px`;
   //console.log(currentGrid.nodeName);
   
   
