@@ -2959,6 +2959,10 @@ html.offline #offline-notification {
 
 .sample {
   font-style: italic;
+  padding: calc(var(--baseline) / 2);
+  border: 1px solid #eee;
+  -webkit-box-shadow: 1px 1px 3px inset rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 3px inset rgba(0, 0, 0, 0.1);
 }
 
 /* ####  SEARCH PAGINATION #### */
