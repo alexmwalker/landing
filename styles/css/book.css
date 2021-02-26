@@ -3410,7 +3410,7 @@ body {
 
 /* Book results */
 .contentbody {
-  background-color: #f7f7f7;
+  background-color: #fff;
   padding: 0 0 calc(var(--baseline)*2);
 }
 .contentbody h3 {
