@@ -1819,14 +1819,14 @@
 }
 
 .feedback .guidebody {
-  width: 70%;
+  width: 70vw;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
 }
 .feedback .guidebody .report span.ui-unit {
-  right: -38%;
-  width: 33%;
+  right: -21vw;
+  width: 18vw;
   opacity: 1;
 }
 

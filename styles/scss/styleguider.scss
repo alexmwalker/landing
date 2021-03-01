@@ -64,12 +64,12 @@
 }
 
 .feedback .guidebody {
-    width: 70%; // show reports in the margin 
+    width: 70vw; // show reports in the margin 
     transition: 0.2s;
 
     .report span.ui-unit {
-        right: -38%;
-        width: 33%;
+        right: -21vw;
+        width: 18vw;
         opacity: 1;
     }
 }
