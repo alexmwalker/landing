@@ -1,0 +1,13 @@
+.bg{
+    padding: 1rem;
+    outline: 1px red dashed;
+    margin: calc(var(--baseline) * 1) 1rem;
+}
+.bg-dark{
+    background: #333;
+    color:#fff;
+}
+.bg-lite{
+    background: #fff;
+    color:#333;
+}

@@ -49,8 +49,10 @@
     overflow: hidden;
     list-style: none;
     padding: 0;
-    margin: 0rem 0;
+    margin: 0 0;
     transition: all 0.3s ease-in-out;
+    text-align: left;
+    font-size: calc(1rem / var(--typescale) / var(--typescale) / var(--typescale));
     height: 4.5rem;
   }
   .report span.ui-unit input + ul:after {
@@ -69,6 +71,7 @@
   .report span.ui-unit input:checked + ul {
     height: 0.8888888889rem;
     transition: all 0.3s ease-in-out;
+    text-align: left;
   }
   .report span.ui-unit input:checked + ul:after {
     transform: rotate(0deg);

@@ -7,7 +7,7 @@ html
         meta(name='description', content='SitePoint Styleguide - Headers')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='stylesheet', type='text/css', href='../styles/css/styles.css')
-        link(rel='stylesheet', type='text/css', href='../styles/css/styleguider.css?r=1234')
+        link(rel='stylesheet', type='text/css', href='../styles/css/styleguider.css?r=1')
 
     body.feedback.labelling.vr
         main.container
@@ -32,31 +32,47 @@ html
                         | Paragraph.small - This bird was really pushy. There. All done. No more nastiness. “Do you need a reservation for the afterlife?” “Why’s it all in hardware?” Spring is overrated.
                     
                 .section--preview.grid
-                    header.col-12.section.is-size-h5 Buttons &amp; CTAs
-
-                    .col-4.wrap
-                        figcaption Standard button
+                    header.col-12.section.is-size-h5 Buttons &amp; CTAs 
+                    // _buttons-CTAs.scss
+                    .col-6.wrap
+                        figcaption Standard CTA button
                         button.pink.report Free 7-Day Trial
-                    .col-4.wrap
-                        figcaption Standard button
-                        button.pink Free 7-Day Trial                        
-                    .col-4.wrap
-                        figcaption Standard button
-                        button.pink Free 7-Day Trial
+                     
+                    .col-6.wrap
+                        figcaption Large CTA button
+                        button.pink.large.report Free 7-Day Trial
+
+                    .col-6.wrap
+                        figcaption Major Search switch - active
+                        button.search-type.books.report Books
+                     
+                    .col-6.wrap
+                        figcaption Major Search switch  - inactive
+                        button.search-type.books.inactive.report Books
+
+                    .col-6.wrap
+                        figcaption Major Search switch  - inactive
+                        .tick-switch 
 
                 .section--preview.grid
 
                     header.col-12.section.is-size-h5 Logos and Branding
+                    // _logos-branding.scss
+                   
+                    .col-6
+                        figcaption Logo - dark
+                        .bg.bg-lite
+                            
+                            include ../images/sitepoint-logo.pug
 
-                    .col-4.dark.center 
-                        img(src='https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
-                
-                    .col-4.center 
-                        img(src='https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
+                    .col-6
+                        figcaption Logo - Light
+                        .bg.bg-dark
+                            
+                            include ../images/sitepoint-logo.pug
+ 
+                        
 
-                    .col-4.center
-                        img(src='https://cdn.staticaly.com/gist/alexmwalker/038d08ab767b9fa0ae765b00d7f41622/raw/cae0ad85c9b3af1d9e6f849c75da729b8f3f4fde/sp-logo.svg')
-                    
 
     script(src='../scripts/styleguider.js')
     script(src='../scripts/prism.js')

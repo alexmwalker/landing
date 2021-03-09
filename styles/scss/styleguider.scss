@@ -69,7 +69,7 @@
 
     .report span.ui-unit {
         right: -21vw;
-        width: 18vw;
+        width: 15vw;
         opacity: 1;
     }
 }
@@ -94,6 +94,12 @@
     [class~=col], [class*=col-], [class*=col]{
         padding: calc(var(--baseline)/2) 0;
         //outline: 1px red dashed;
+    }
+    figcaption{
+        margin-bottom: calc(var(--baseline)/2);
+        font-size: calc(1rem / var(--typescale));
+        color: #777;
+        border-bottom: 1px rgb(180, 180, 180) solid;
     }
 }
 .dark{
@@ -126,6 +132,15 @@
     transform: perspective(500px) scale3d(1, 1, 1);
     transition: .3s;
 }
+
+/* CSS MODULES */
+
+// in styles.css
+
+
+
+
+/* STYLEGUIDE MODULES */
 
 @import 'sg-header-float';
 
