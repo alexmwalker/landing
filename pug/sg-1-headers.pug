@@ -32,8 +32,9 @@ html
                         | Paragraph.small - This bird was really pushy. There. All done. No more nastiness. “Do you need a reservation for the afterlife?” “Why’s it all in hardware?” Spring is overrated.
                     
                 .section--preview.grid
-                    header.col-12.section.is-size-h5 Buttons &amp; CTAs 
                     // _buttons-CTAs.scss
+                    header.col-12.section.is-size-h5 Buttons &amp; CTAs 
+                    // Pink CTA
                     .col-6.wrap
                         figcaption Standard CTA button
                         button.pink.report Free 7-Day Trial
@@ -42,6 +43,7 @@ html
                         figcaption Large CTA button
                         button.pink.large.report Free 7-Day Trial
 
+                    // 
                     .col-6.wrap
                         figcaption Major Search switch - active
                         button.search-type.books.report Books
@@ -53,11 +55,25 @@ html
                     .col-6.wrap
                         figcaption Major Search switch  - inactive
                         .tick-switch 
+                    
+                    .col-6.wrap
+                        figcaption Major Search switch  - inactive
+
+                        input#search-book.search-switch(type='checkbox' value='Book')
+                        label.search-type(for='search-book') Book
+                        
+
+                    .col-6.wrap
+                        figcaption Course
+
+                        input#search-course.search-switch(type='checkbox' checked='checked' value='Course')
+                        label.search-type(for='search-course') Course
+
 
                 .section--preview.grid
-
-                    header.col-12.section.is-size-h5 Logos and Branding
                     // _logos-branding.scss
+                    header.col-12.section.is-size-h5 Logos and Branding
+                    
                    
                     .col-6
                         figcaption Logo - dark
