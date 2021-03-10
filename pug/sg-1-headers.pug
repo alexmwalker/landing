@@ -48,7 +48,7 @@ html
                     
                     .col-6.wrap
                         figcaption Major Search switch (default style) 
-                        .search-switch
+                        .search-switch(data-codeblock="#target-div")
                             input#search-book(type='checkbox' value='Book')
                             label.search-type.report(for='search-book') Book
                         
@@ -107,8 +107,7 @@ html
                 .section--preview.grid
                     // _logos-branding.scss
                     header.col-12.section.is-size-h5 Logos and Branding
-                    
-                   
+                                       
                     .col-6
                         figcaption Logo - dark
                         .bg.bg-lite
@@ -121,7 +120,7 @@ html
                             
                             include ../images/sitepoint-logo.pug
  
-                        
+    script(src='../scripts/jquery-3.4.0.min.js')                        
     script(src='../scripts/styleguider.js')
     script(src='../scripts/prism.js')
 

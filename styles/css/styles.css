@@ -154,7 +154,7 @@ h4,
 .h4 {
   font-size: calc(var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
-  margin-top: calc(var(--baseline) * 1);
+  margin-top: 0;
   margin-bottom: calc(var(--baseline) / 2);
   font-weight: 400;
 }
@@ -376,17 +376,38 @@ button.large {
 }
 
 .pink {
-  background: #FA3292;
+  background: #d2005f;
   color: #eee;
   border-radius: 4px;
   border: 0 none;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.pink:hover {
+  color: #fff;
+  background: #FA3292;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.search-switch {
+  margin: 0;
+  padding: 0;
 }
 
 .search-switch input {
-  left: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* hide native checkbox */
+  left: -2rem;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 .search-switch input:focus {
   outline: none;
@@ -394,7 +415,7 @@ button.large {
 .search-switch input + label.search-type {
   display: inline-block;
   position: relative;
-  margin: calc(var(--baseline) / 2) 0;
+  margin: 0 0.5rem calc(var(--baseline) / 2) 0;
   height: calc(var(--baseline));
   line-height: calc(var(--baseline));
   background: #fff;
@@ -404,9 +425,9 @@ button.large {
   font-size: calc(1rem / var(--typescale));
   padding: 0 1rem;
   text-indent: 1rem;
-  -webkit-transition: 0.15s steps(8);
-  -o-transition: 0.15s steps(8);
-  transition: 0.15s steps(8);
+  -webkit-transition: 0.25s steps(8);
+  -o-transition: 0.25s steps(8);
+  transition: 0.25s steps(8);
 }
 .search-switch input + label.search-type:after {
   display: block;
@@ -425,7 +446,7 @@ button.large {
 }
 .search-switch input:checked + label.search-type {
   background: #fff;
-  border: 1px solid #5096F1;
+  border-color: #5096F1;
   color: #0F56B3;
 }
 .search-switch input:checked + label.search-type:after {
@@ -437,7 +458,7 @@ button.large {
   line-height: calc(var(--baseline) / 2);
   height: calc(var(--baseline) / 2);
   text-indent: 0.5rem;
-  margin: calc(var(--baseline) / 4) 0.2rem;
+  margin: 0 0.2rem calc(var(--baseline) / 2);
   padding: 0 0.65rem;
 }
 .search-switch.smaller input + label.search-type:after {
@@ -455,6 +476,7 @@ button.large {
       align-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: calc(var(--baseline) / 2) 0;
 }
 
 .bg {

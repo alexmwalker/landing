@@ -2897,7 +2897,7 @@ html.offline #offline-notification {
 }
 
 .search-big .media-selector {
-  margin: calc(var(--baseline) / 1) 0 calc(var(--baseline) / 2);
+  margin: calc(var(--baseline) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

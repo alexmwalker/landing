@@ -2897,7 +2897,7 @@ html.offline #offline-notification {
 }
 
 .search-big .media-selector {
-  margin: calc(var(--baseline) / 1) 0 calc(var(--baseline) / 2);
+  margin: calc(var(--baseline) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3190,16 +3190,10 @@ button.large {
   border: 0 none;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
 }
 .pink:hover {
   color: #fff;
   background: #FA3292;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .search-switch {

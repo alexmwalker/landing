@@ -149,7 +149,7 @@ $bp-wide: 80em;
   .h4{
     font-size: calc(var(--typescale) * 1rem);
     line-height: calc(var(--baseline) * 1);
-    margin-top: calc(var(--baseline) * 1);
+    margin-top: 0;
     margin-bottom: calc(var(--baseline) / 2);
     font-weight: 400;
   }

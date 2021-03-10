@@ -10,7 +10,7 @@
 }
 
 .search-big .media-selector{
-    margin: calc(var(--baseline) / 2);
+    margin: calc(var(--baseline) / 1) 0 calc(var(--baseline) / 2);
     //outline: 1px #ccc dashed;
     display: flex;
     justify-content: center;
