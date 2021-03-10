@@ -52,19 +52,13 @@ let bodyEl = document.querySelector('body');
 
 function navBarBuild(){
 
-/* NAVBAR TEMPLATE CODE -  to be inserted live */ 
+/* TOP NAVBAR TEMPLATE CODE -  to be inserted live */ 
 var navBar = `
     <div class="nav h3">
       <div id="showmenu"><span></span></div>
     </div>
     <div class="h3 branding">
       <a href="/styleguide/index.html">SitePoint Styleguide</a>
-      <!--<div class="minor mobile-hide">Grid &amp; Type:
-        <span class="mobile-only"> mobile</span>
-        <span class="tablet-only"> tablet</span>
-        <span class="laptop-only"> laptop</span>
-        <span class="wide-only"> wide-screens</span>
-      </div>-->
 
     </div>
     
@@ -164,7 +158,7 @@ function reportBuild() {
 
   myReports.forEach(function (myReport, index) {
     myReport.innerHTML +=
-      '<span class="ui-unit small"><input type="checkbox"  /><ul class="small"><li class="type">Type:</li><li class="size">Font-size:</li><li class="lineheight">Line-height:</li><li class="weight">Font-weight:</li><li class="margin">Margin: 0</li></span>';
+      '<span class="ui-unit small"><input type="checkbox" /><ul class="small"><li class="type">Type:</li><li class="size">Font-size:</li><li class="lineheight">Line-height:</li><li class="weight">Font-weight:</li><li class="margin">Margin: 0</li></span>';
   });
 }
 
@@ -234,7 +228,7 @@ function reportType() {
     var lister = '';
     for (let value of iterator) {
       if (value != 'report') { // filter out the .report class
-        lister = lister + value;
+        lister = lister + '.' + value;
         //console.log("classList: " + lister);
       }
       // span.textContent += value + ' ++ ';
@@ -278,7 +272,7 @@ function reportType() {
     var newType = document.createElement("li");
     newType.className = "type";
   if (lister != ''){
-    newType.innerHTML = "<b>&nbsp;&lt;" + fn + " ." + lister + "&gt;</b>";
+    newType.innerHTML = "<b>&nbsp;&lt;" + fn + lister + "&gt;</b>";
     } else {
       newType.innerHTML = "<b>&nbsp;&lt;" + fn + "&gt;</b>";
     }

@@ -110,19 +110,24 @@
                 <input class="form-control" id="Search" name="Search" type="text" value="{searchterm}" placeholder="Search for..."/>
                 <!--button#searchSubmit.insetbutton(name='singlebutton') &nbsp;-->
                 <input class="insetbutton" id="searchSubmit" name="singlebutton"/>
-                <p class="media-selector textcenter minor"><span>
-                    <label for="books">Books 
-                      <input id="books" type="checkbox" checked="checked"/>
-                    </label></span><span>
-                    <label for="courses">Courses
-                      <input id="courses" type="checkbox" checked="checked"/>
-                    </label></span><span>
-                    <label for="talks">Talks 
-                      <input id="talks" type="checkbox" checked="checked"/>
-                    </label></span><span>
-                    <label for="articles">Articles
-                      <input id="articles" type="checkbox" checked="checked"/>
-                    </label></span></p>
+                <div class="media-selector textcenter">
+                  <div class="search-switch">
+                    <input id="search-books" type="checkbox" checked="checked" value="books"/>
+                    <label class="search-type" for="search-books">Books</label>
+                  </div>
+                  <div class="search-switch">
+                    <input id="search-course" type="checkbox" checked="checked" value="courses"/>
+                    <label class="search-type" for="search-course">Courses</label>
+                  </div>
+                  <div class="search-switch">
+                    <input id="search-talks" type="checkbox" checked="checked" value="talks"/>
+                    <label class="search-type" for="search-talks">Talks</label>
+                  </div>
+                  <div class="search-switch">
+                    <input id="search-code" type="checkbox" checked="checked" value="code"/>
+                    <label class="search-type" for="search-code">Code</label>
+                  </div>
+                </div>
               </div>
             </div>
           </form>

@@ -10,7 +10,11 @@
 }
 
 .search-big .media-selector{
-    margin-bottom: 0;
+    margin: calc(var(--baseline) / 2);
+    //outline: 1px #ccc dashed;
+    display: flex;
+    justify-content: center;
+    
 } 
 
 .grid.result-unit{

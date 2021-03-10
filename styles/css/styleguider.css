@@ -1848,13 +1848,14 @@
   margin: -1px 0;
 }
 .section--preview [class~=col], .section--preview [class*=col-], .section--preview [class*=col] {
-  padding: calc(var(--baseline)/2) 0;
+  padding: 0;
 }
 .section--preview figcaption {
-  margin-bottom: calc(var(--baseline)/2);
+  margin-bottom: calc(var(--baseline) / 2);
   font-size: calc(1rem / var(--typescale));
   color: #777;
   border-bottom: 1px #b4b4b4 solid;
+  margin: -1px 0 -2px;
 }
 
 .dark {
@@ -1873,7 +1874,7 @@
   background: #eee;
   top: calc(var(--baseline) * 3);
   margin: calc(var(--baseline) / 2) 0;
-  padding: calc(var(--baseline)/2) 1rem calc(var(--baseline)/2) 0;
+  padding: calc(var(--baseline) / 2) 1rem calc(var(--baseline) / 2) 0;
   -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
           box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -1894,6 +1895,10 @@
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+
+.tag-group {
+  outline: 1px #ccc dotted;
 }
 
 /* CSS MODULES */
@@ -2140,10 +2145,9 @@
   z-index: 100;
 }
 
-.report span.ui-unit input:checked {
+/*.report span.ui-unit input:checked {
   position: absolute;
-}
-
+}*/
 .report span.ui-unit input + ul {
   line-height: 0.8888888889rem;
   overflow: hidden;
@@ -2171,12 +2175,12 @@
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  top: 0;
+  top: 0.1rem;
   right: 0.5rem;
 }
 
 .report span.ui-unit input:checked + ul {
-  height: 0.8888888889rem;
+  height: 0.88889rem;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;

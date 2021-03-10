@@ -7,8 +7,8 @@
     <link rel="icon" type="image/png" href="styleguide/structure/images/favicon.png"/>
     <meta name="description" content="SitePoint Styleguide - Headers"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="../styles/css/styles.css"/>
-    <link rel="stylesheet" type="text/css" href="../styles/css/styleguider.css?r=1"/>
+    <link rel="stylesheet" type="text/css" href="../styles/css/styles.css?r=1234"/>
+    <link rel="stylesheet" type="text/css" href="../styles/css/styleguider.css?r=1234"/>
   </head>
   <body class="feedback labelling vr">
     <main class="container">
@@ -71,28 +71,66 @@
             <figcaption>Large CTA button</figcaption>
             <button class="pink large report">Free 7-Day Trial</button>
           </div>
-          <!-- -->
+          <!-- Input Switch-->
           <div class="col-6 wrap">
-            <figcaption>Major Search switch - active</figcaption>
-            <button class="search-type books report">Books</button>
+            <figcaption>Major Search switch (default style) </figcaption>
+            <div class="search-switch">
+              <input id="search-book" type="checkbox" value="Book"/>
+              <label class="search-type report" for="search-book">Book</label>
+            </div>
           </div>
           <div class="col-6 wrap">
-            <figcaption>Major Search switch  - inactive</figcaption>
-            <button class="search-type books inactive report">Books</button>
-          </div>
-          <div class="col-6 wrap">
-            <figcaption>Major Search switch  - inactive</figcaption>
-            <div class="tick-switch"> </div>
-          </div>
-          <div class="col-6 wrap">
-            <figcaption>Major Search switch  - inactive</figcaption>
-            <input class="search-switch" id="search-book" type="checkbox" value="Book"/>
-            <label class="search-type" for="search-book">Book</label>
-          </div>
-          <div class="col-6 wrap">
-            <figcaption>Course</figcaption>
-            <input class="search-switch" id="search-course" type="checkbox" checked="checked" value="Course"/>
-            <label class="search-type" for="search-course">Course</label>
+            <figcaption>Major Search switch (small)</figcaption>
+            <div class="tag-group">
+              <div class="search-switch smaller">
+                <input id="search-javascript" type="checkbox" checked="checked" value="javascript"/>
+                <label class="search-type" for="search-javascript">JavaScript</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-html" type="checkbox" checked="checked" value="html"/>
+                <label class="search-type" for="search-html">HTML</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-css" type="checkbox" checked="checked" value="css"/>
+                <label class="search-type" for="search-css">CSS</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-vue" type="checkbox" checked="checked" value="vue"/>
+                <label class="search-type" for="search-vue">Vue</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-nodejs" type="checkbox" checked="checked" value="nodejs"/>
+                <label class="search-type" for="search-nodejs">NodeJS</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-design" type="checkbox" checked="checked" value="design"/>
+                <label class="search-type" for="search-design">Design</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-bootstrap" type="checkbox" checked="checked" value="bootstrap"/>
+                <label class="search-type" for="search-bootstrap">Bootstrap</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-ruby" type="checkbox" checked="checked" value="ruby"/>
+                <label class="search-type" for="search-ruby">Ruby</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-angular" type="checkbox" checked="checked" value="angular"/>
+                <label class="search-type" for="search-angular">Angular</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-react" type="checkbox" checked="checked" value="react"/>
+                <label class="search-type" for="search-react">React</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-sql" type="checkbox" checked="checked" value="sql"/>
+                <label class="search-type" for="search-sql">SQL</label>
+              </div>
+              <div class="search-switch smaller">
+                <input id="search-php" type="checkbox" checked="checked" value="php"/>
+                <label class="search-type" for="search-php">PHP</label>
+              </div>
+            </div>
           </div>
         </div>
         <div class="section--preview grid">
@@ -101,8 +139,8 @@
           <div class="col-6">
             <figcaption>Logo - dark</figcaption>
             <div class="bg bg-lite">
-              <svg viewBox="0 0 123 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <desc></desc>
+              <svg class="report" viewBox="0 0 123 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <desc>The SitePoint Logo</desc>
                 <style>path{fill:currentColor;fill-rule:evenodd}</style>
                 <g class="logo">
                   <path d="M34.5 18c1.2 0 3.1-.4 3.1-1.9 0-1.8-2.8-1.8-4.2-2.3-2-.7-4.2-1-4.2-3.5 0-2.6 2.5-3.4 4.8-3.5 2.6 0 5.2 1 5.2 4h-2C37 9.1 35.5 8.5 34 8.5c-1.5 0-2.6.7-2.6 1.8 0 .8 1.4 1.4 2.9 1.8 2.2.6 5.5.7 5.5 3.8 0 2.6-2.2 3.9-5.3 3.9-3 0-5.2-1.2-5.6-4.2H31c0 1.7 2 2.4 3.5 2.4z"></path>
@@ -125,8 +163,8 @@
           <div class="col-6">
             <figcaption>Logo - Light</figcaption>
             <div class="bg bg-dark">
-              <svg viewBox="0 0 123 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <desc></desc>
+              <svg class="report" viewBox="0 0 123 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <desc>The SitePoint Logo</desc>
                 <style>path{fill:currentColor;fill-rule:evenodd}</style>
                 <g class="logo">
                   <path d="M34.5 18c1.2 0 3.1-.4 3.1-1.9 0-1.8-2.8-1.8-4.2-2.3-2-.7-4.2-1-4.2-3.5 0-2.6 2.5-3.4 4.8-3.5 2.6 0 5.2 1 5.2 4h-2C37 9.1 35.5 8.5 34 8.5c-1.5 0-2.6.7-2.6 1.8 0 .8 1.4 1.4 2.9 1.8 2.2.6 5.5.7 5.5 3.8 0 2.6-2.2 3.9-5.3 3.9-3 0-5.2-1.2-5.6-4.2H31c0 1.7 2 2.4 3.5 2.4z"></path>

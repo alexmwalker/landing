@@ -6,8 +6,8 @@ html
         link(rel='icon', type='image/png', href='styleguide/structure/images/favicon.png')
         meta(name='description', content='SitePoint Styleguide - Headers')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        link(rel='stylesheet', type='text/css', href='../styles/css/styles.css')
-        link(rel='stylesheet', type='text/css', href='../styles/css/styleguider.css?r=1')
+        link(rel='stylesheet', type='text/css', href='../styles/css/styles.css?r=1234')
+        link(rel='stylesheet', type='text/css', href='../styles/css/styleguider.css?r=1234')
 
     body.feedback.labelling.vr
         main.container
@@ -43,32 +43,66 @@ html
                         figcaption Large CTA button
                         button.pink.large.report Free 7-Day Trial
 
-                    // 
-                    .col-6.wrap
-                        figcaption Major Search switch - active
-                        button.search-type.books.report Books
-                     
-                    .col-6.wrap
-                        figcaption Major Search switch  - inactive
-                        button.search-type.books.inactive.report Books
-
-                    .col-6.wrap
-                        figcaption Major Search switch  - inactive
-                        .tick-switch 
+                    // Input Switch
+ 
                     
                     .col-6.wrap
-                        figcaption Major Search switch  - inactive
-
-                        input#search-book.search-switch(type='checkbox' value='Book')
-                        label.search-type(for='search-book') Book
+                        figcaption Major Search switch (default style) 
+                        .search-switch
+                            input#search-book(type='checkbox' value='Book')
+                            label.search-type.report(for='search-book') Book
                         
 
                     .col-6.wrap
-                        figcaption Course
+                        figcaption Major Search switch (small)
+                        .tag-group
+                            .search-switch.smaller
+                                input#search-javascript(type='checkbox' checked='checked' value='javascript')
+                                label.search-type(for='search-javascript') JavaScript
 
-                        input#search-course.search-switch(type='checkbox' checked='checked' value='Course')
-                        label.search-type(for='search-course') Course
+                            .search-switch.smaller
+                                input#search-html(type='checkbox' checked='checked' value='html')
+                                label.search-type(for='search-html') HTML
 
+                            .search-switch.smaller
+                                input#search-css(type='checkbox' checked='checked' value='css')
+                                label.search-type(for='search-css') CSS
+                                
+                            .search-switch.smaller
+                                input#search-vue(type='checkbox' checked='checked' value='vue')
+                                label.search-type(for='search-vue') Vue
+
+                            .search-switch.smaller
+                                input#search-nodejs(type='checkbox' checked='checked' value='nodejs')
+                                label.search-type(for='search-nodejs') NodeJS
+                                
+                            .search-switch.smaller
+                                input#search-design(type='checkbox' checked='checked' value='design')
+                                label.search-type(for='search-design') Design
+
+                            .search-switch.smaller
+                                input#search-bootstrap(type='checkbox' checked='checked' value='bootstrap')
+                                label.search-type(for='search-bootstrap') Bootstrap
+                                
+                            .search-switch.smaller
+                                input#search-ruby(type='checkbox' checked='checked' value='ruby')
+                                label.search-type(for='search-ruby') Ruby
+                            
+                            .search-switch.smaller
+                                input#search-angular(type='checkbox' checked='checked' value='angular')
+                                label.search-type(for='search-angular') Angular
+                                
+                            .search-switch.smaller
+                                input#search-react(type='checkbox' checked='checked' value='react')
+                                label.search-type(for='search-react') React
+
+                            .search-switch.smaller
+                                input#search-sql(type='checkbox' checked='checked' value='sql')
+                                label.search-type(for='search-sql') SQL
+                                
+                            .search-switch.smaller
+                                input#search-php(type='checkbox' checked='checked' value='php')
+                                label.search-type(for='search-php') PHP
 
                 .section--preview.grid
                     // _logos-branding.scss
@@ -88,8 +122,6 @@ html
                             include ../images/sitepoint-logo.pug
  
                         
-
-
     script(src='../scripts/styleguider.js')
     script(src='../scripts/prism.js')
 

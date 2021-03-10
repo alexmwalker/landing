@@ -1,59 +1,5 @@
 
-/*------------------------------------*\
-  #MEDIA BREAKPOINTS as SASS VARIABLES
 
-  I'd preferred to have written these 
-  as CSS variables (like most variables)
-  but apparently you can't use a CSS
-  variable as a breakpoint. Doesn't matter 
-  much as they don't need to change to be
-  dynamic. Just would have been neater.
-\*------------------------------------*/ 
-
-$bp-tablet: 48em;
-$bp-laptop: 64em;
-$bp-wide: 80em;
-
-
-/*------------------------------------*\
-  #IMPORTANT CROSS SITE CSS VARIABLES
-\*------------------------------------*/
-
-
-:root { 
-    --typescale: 1.15; /* Mobile & default */
-    /* This is the scaling factor for headings relative to the <p>. 
-    ( h4 > h3 > h2 > h1). It's a 'type size ramp'.*/
-  
-    --typescale-lg: 1.25; /* Tablet, Laptop and Wide-screen */
-  
-    --baselineratio: calc(16 / 9);
-    /* This is the 'line-height:basefont size' ratio ( i.e 16/9 = 1.777778) */
-    /* The body font is 9/16ths of the line-height – a little over half  */
-    --basegrid: 32px;
-    /* --basegrid is the default body text line-height grid size on phone */
-    --basegrid-tablet: 28px;
-    --basegrid-laptop: 32px;
-    --basegrid-wide: 36px;
-  
-    --baseline: calc(var(--baselineratio) * 1rem);
-    --basefont: calc(var(--basegrid) / var(--baselineratio));
-    --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
-    --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
-    --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
-  
-    --basebackground: #fff; // flipped in dark mode
-    --basefontcolor: #222;
-  
-    --basebackground-dark: #111518;
-    --basefontcolor-dark: #ddd;
-  
-    /* Apparently you can't use CSS Variables to set breakpoint - booo..*/
-    
-  
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
-  }
   
 
 /*------------------------------------*\

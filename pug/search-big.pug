@@ -10,22 +10,22 @@ nav.search-big
           //button#searchSubmit.insetbutton(name='singlebutton') &nbsp;
           input#searchSubmit.insetbutton(name='singlebutton')
 
-          p.media-selector.textcenter.minor
-            span
-              label(for='books') Books 
-                input#books(type='checkbox' checked='checked')
+          .media-selector.textcenter
+            .search-switch
+              input#search-books(type='checkbox' checked='checked' value='books')
+              label.search-type(for='search-books') Books
               
-            span
-              label(for='courses') Courses
-                input#courses(type='checkbox' checked='checked')
+            .search-switch
+              input#search-course(type='checkbox' checked='checked' value='courses')
+              label.search-type(for='search-course') Courses
               
-            span
-              label(for='talks') Talks 
-                input#talks(type='checkbox' checked='checked' )
+            .search-switch
+              input#search-talks(type='checkbox' checked='checked' value='talks')
+              label.search-type(for='search-talks') Talks
               
-            span
-              label(for='articles') Articles
-                input#articles(type='checkbox' checked='checked')
+            .search-switch
+              input#search-code(type='checkbox' checked='checked' value='code')
+              label.search-type(for='search-code') Code
       
 
 

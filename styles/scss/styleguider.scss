@@ -92,14 +92,16 @@
     box-sizing: border-box;
     margin: -1px 0; // allows for border width when stacking on grid
     [class~=col], [class*=col-], [class*=col]{
-        padding: calc(var(--baseline)/2) 0;
+        padding: 0; //calc(var(--baseline)/2) 0;
         //outline: 1px red dashed;
     }
     figcaption{
-        margin-bottom: calc(var(--baseline)/2);
+        margin-bottom: calc(var(--baseline) / 2);
         font-size: calc(1rem / var(--typescale));
         color: #777;
         border-bottom: 1px rgb(180, 180, 180) solid;
+        //box-sizing: content-box;
+        margin: -1px 0 -2px;
     }
 }
 .dark{
@@ -118,7 +120,7 @@
     background: #eee;
     top: calc(var(--baseline) * 3);
     margin: calc(var(--baseline) / 2) 0;
-    padding: calc(var(--baseline)/2) 1rem calc(var(--baseline)/2) 0;
+    padding: calc(var(--baseline) / 2) 1rem calc(var(--baseline) / 2) 0;
     box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .3);
     opacity: 0;
     transform: perspective(500px) scale3d(0.05, 1, 1);
@@ -131,6 +133,10 @@
     opacity: 1;
     transform: perspective(500px) scale3d(1, 1, 1);
     transition: .3s;
+}
+
+.tag-group{
+    outline: 1px #ccc dotted;
 }
 
 /* CSS MODULES */

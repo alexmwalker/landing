@@ -40,9 +40,9 @@
     z-index: 100;
   }
   
-  .report span.ui-unit input:checked {
+  /*.report span.ui-unit input:checked {
     position: absolute;
-  }
+  }*/
   
   .report span.ui-unit input + ul {
     line-height: 0.8888888889rem;
@@ -64,12 +64,12 @@
     transform: rotate(180deg);
     color: #fff;
     transition: all 0.3s ease-in-out;
-    top: 0;
+    top: 0.1rem;
     right: 0.5rem;
   }
   
   .report span.ui-unit input:checked + ul {
-    height: 0.8888888889rem;
+    height: 0.88889rem;
     transition: all 0.3s ease-in-out;
     text-align: left;
   }

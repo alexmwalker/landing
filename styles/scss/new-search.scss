@@ -1,11 +1,36 @@
+/*------------------------------------*\
+  #MEDIA BREAKPOINTS as SASS VARIABLES
 
-@import 'basic-grid-typography';
-//@import '_kindling'; // grid layout
+  I'd preferred to have written these 
+  as CSS variables (like most variables)
+  but apparently you can't use a CSS
+  variable as a breakpoint. Doesn't matter 
+  much as they don't need to change to be
+  dynamic. Just would have been neater.
+\*------------------------------------*/ 
+
+$bp-tablet: 48em;
+$bp-laptop: 64em;
+$bp-wide: 80em;
+
+@import 'sg-reset';
+@import 'basic-typography';
+//@import 'basic-grid-typography';
+
 
 @import "gridlex-vars";
 @import "gridlex-preprocessing";
 @import "gridlex-mixins";
 @import "gridlex-classes";
+
+
+/*------------------------------------*\
+  #COMPONENT MODULES START HERE
+\*------------------------------------*/
+
+
+
+
 
 @import 'header';
 //@import 'hero-library';
@@ -14,6 +39,10 @@
 @import 'search-es';
 
 @import 'line-clamp';
+
+@import 'buttons-CTAs';
+@import 'logos-branding'; 
+
 
 //@import 'search-booklisting';
 @import 'footer';
