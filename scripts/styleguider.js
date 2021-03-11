@@ -318,7 +318,7 @@ function reportType() {
   
     // Yoinked from Prototype.js
     var escapeHTML = function( code ) {
-        return code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        return code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/(   )\w*/g,' ');
     };
     
     return $('[data-codeblock]').each(function(){

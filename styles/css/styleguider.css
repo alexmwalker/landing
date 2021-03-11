@@ -1855,7 +1855,7 @@
   font-size: calc(1rem / var(--typescale));
   color: #777;
   border-bottom: 1px #b4b4b4 solid;
-  margin: -1px 0 -2px;
+  margin: -1px 0 calc((var(--baseline) / 2) - 1px);
 }
 
 .dark {
@@ -1899,6 +1899,24 @@
 
 .tag-group {
   outline: 1px #ccc dotted;
+}
+
+.style-definition {
+  padding: calc(var(--baseline) / 2) 0;
+}
+
+.codeview {
+  margin: calc(var(--baseline) / 1) 2%;
+}
+.codeview pre {
+  background-color: #f9f9fc;
+  outline: 1px #ccc solid;
+  padding: calc(var(--baseline) / 2) 0;
+}
+.codeview pre code {
+  background-color: #f0f0f3;
+  font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
+  line-height: calc(var(--baseline) / 2);
 }
 
 /* CSS MODULES */
@@ -2126,12 +2144,12 @@
   display: block;
   position: absolute;
   top: 0;
-  right: 0%;
-  width: 15vw;
+  right: 0;
+  width: 12vw;
   padding: 0;
   outline: 1px #ddd solid;
   color: #555;
-  z-index: 99;
+  z-index: 998;
   background: #eee;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -2219,12 +2237,8 @@ coding. Currently it:
 - Add `.report` (and attach `type-inspector.js`) to generate a small 'typography 
   inspector' unit that will document its relevant CSS properties. 
 === */
-.borders div {
-  outline: 1px rgba(255, 0, 0, 0.1) dashed;
-}
-
-.borders section {
-  outline: 1px rgba(255, 0, 255, 0.1) dashed;
+.borders div, .borders section {
+  outline: 1px rgba(255, 0, 0, 0.1) dotted;
 }
 
 /*  Vertical rhythm grid lines  */

@@ -238,7 +238,7 @@ hr,
 
 code {
   font-family: monospace;
-  background: #ddd;
+  background: #eee;
   padding: 0 0.5rem;
 }
 
@@ -2897,7 +2897,7 @@ html.offline #offline-notification {
 }
 
 .search-big .media-selector {
-  margin: calc(var(--baseline) / 1) 0 calc(var(--baseline) / 2);
+  margin: calc(var(--baseline) / 1) 0 calc(var(--baseline) / 1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3171,7 +3171,7 @@ input:checked + .trim-multiline:before {
 button {
   /* button defaults */
   font-size: 1rem;
-  margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);
+  margin: 0 0 calc(var(--baseline)*1);
   line-height: calc(var(--baseline));
   padding-left: 2rem;
   padding-right: 2rem;
@@ -3202,20 +3202,26 @@ button.large {
   transition: 0.3s;
 }
 
+/*------------------------------------*\
+  #INPUT POWERED SWITCHES
+
+\*------------------------------------*/
 .search-switch {
   margin: 0;
   padding: 0;
+  height: calc(var(--baseline) / 1);
+  margin-bottom: calc(var(--baseline) / 2);
 }
 
 .search-switch input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  /* hide native checkbox */
-  left: -2rem;
+  left: 2rem;
+  top: 0;
+  width: 0;
+  height: 0;
   position: relative;
   margin: 0;
   padding: 0;
+  z-index: 999;
 }
 .search-switch input:focus {
   outline: none;
@@ -3223,7 +3229,7 @@ button.large {
 .search-switch input + label.search-type {
   display: inline-block;
   position: relative;
-  margin: 0 0.5rem calc(var(--baseline) / 2) 0;
+  margin: 0 0.25rem calc(var(--baseline) / 2);
   height: calc(var(--baseline));
   line-height: calc(var(--baseline));
   background: #fff;
@@ -3233,9 +3239,9 @@ button.large {
   font-size: calc(1rem / var(--typescale));
   padding: 0 1rem;
   text-indent: 1rem;
-  -webkit-transition: 0.25s steps(8);
-  -o-transition: 0.25s steps(8);
-  transition: 0.25s steps(8);
+  -webkit-transition: 0.15s steps(8);
+  -o-transition: 0.15s steps(8);
+  transition: 0.15s steps(8);
 }
 .search-switch input + label.search-type:after {
   display: block;
@@ -3261,6 +3267,9 @@ button.large {
   background-position: top right;
 }
 
+.search-switch.smaller {
+  margin-bottom: 0;
+}
 .search-switch.smaller input + label.search-type {
   font-size: calc(1rem / var(--typescale) / var(--typescale));
   line-height: calc(var(--baseline) / 2);
@@ -3280,11 +3289,9 @@ button.large {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: calc(var(--baseline) / 2) 0;
+  padding: 0;
 }
 
 .bg {

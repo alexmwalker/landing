@@ -15,13 +15,11 @@ coding. Currently it:
   inspector' unit that will document its relevant CSS properties. 
 === */
 
-.borders div {
-  outline: 1px rgba(255, 0, 0, .1) dashed;
+.borders div, .borders section {
+  outline: 1px rgba(255, 0, 0, .1) dotted;
 }
 
-.borders section {
-  outline: 1px rgba(255, 0, 255, .1) dashed;
-}
+
 
 
 

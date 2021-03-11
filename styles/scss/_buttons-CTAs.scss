@@ -1,6 +1,6 @@
 button { /* button defaults */
     font-size: 1rem;
-    margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);
+    margin: 0 0 calc(var(--baseline)*1);
     line-height: calc(var(--baseline));
     padding-left: 2rem;
     padding-right: 2rem;
@@ -26,23 +26,37 @@ button { /* button defaults */
         transition: .3s;
     }
 }
-.search-switch{
-    //outline: 1px red dashed;
+
+
+
+
+/*------------------------------------*\
+  #INPUT POWERED SWITCHES
+
+\*------------------------------------*/
+.search-switch{ // the wrapper
     margin: 0;padding: 0;
+    height: calc(var(--baseline) / 1);
+    margin-bottom: calc(var(--baseline) / 2);
+    //outline: 1px greenyellow dashed;
 }
 
 .search-switch input{
-    appearance: none; /* hide native checkbox */
-    left: -2rem;
+    //appearance: none; /* hide native checkbox */
+    left: 2rem;
+    top: 0;
+    width: 0;
+    height: 0;
     position: relative;
-    margin:0;padding:0;
+    margin:0; padding:0;
+    z-index: 999;
     &:focus{
         outline: none; 
     }
     & + label.search-type{
         display: inline-block;
         position: relative;
-        margin: 0 .5rem calc(var(--baseline) / 2) 0;
+        margin: 0 .25rem calc(var(--baseline) / 2) ;
         height: calc(var(--baseline));
         line-height: calc(var(--baseline));
         background: #fff;
@@ -52,7 +66,7 @@ button { /* button defaults */
         font-size: calc(1rem / var(--typescale));
         padding: 0 1rem;
         text-indent: 1rem;  
-        transition: .25s steps(8);
+        transition: .15s steps(8);
         &:after{
             display: block;
             position: absolute;
@@ -78,26 +92,30 @@ button { /* button defaults */
     }
 }
 
-.search-switch.smaller input {
-
-    &+ label.search-type{
-    font-size: calc(1rem / var(--typescale) / var(--typescale));
-    line-height: calc(var(--baseline) / 2);
-    height: calc(var(--baseline) / 2);
-    text-indent: 0.5rem; 
-    margin: 0 .2rem calc(var(--baseline) / 2);
-    padding: 0 0.65rem;
-        &:after{
-            width: calc(var(--baseline) / 4);
-            height: calc(var(--baseline) / 4);
-            top: calc(var(--baseline) / 8);
-            left: .35rem;
+.search-switch.smaller {
+    margin-bottom: 0;;
+    input {
+        &+ label.search-type{
+        font-size: calc(1rem / var(--typescale) / var(--typescale));
+        line-height: calc(var(--baseline) / 2);
+        height: calc(var(--baseline) / 2);
+        text-indent: 0.5rem; 
+        margin: 0 .2rem calc(var(--baseline) / 2);
+        padding: 0 0.65rem;
+            &:after{
+                width: calc(var(--baseline) / 4);
+                height: calc(var(--baseline) / 4);
+                top: calc(var(--baseline) / 8);
+                left: .35rem;
+            }
         }
     }
 }
 .tag-group{
     display: flex;
-    align-content: flex-start;
+    //align-content: center;
+    //justify-content: space-evenly;
+    //justify-content: center;
     flex-wrap: wrap;
-    padding: calc(var(--baseline) / 2) 0 ;
+    padding:  0 ;
 }

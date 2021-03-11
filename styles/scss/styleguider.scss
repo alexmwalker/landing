@@ -98,8 +98,8 @@
         color: #777;
         border-bottom: 1px rgb(180, 180, 180) solid;
         //box-sizing: content-box;
-        margin: -1px 0 -2px;
-    }
+        margin: -1px 0 calc((var(--baseline) / 2) - 1px);
+    }   
 }
 .dark{
     background-color: grey;
@@ -135,6 +135,28 @@
 .tag-group{
     outline: 1px #ccc dotted;
 }
+
+
+.style-definition{
+    padding: calc(var(--baseline) / 2) 0;
+    // outline: 1px purple dashed;
+}
+.codeview{
+    //outline: 1px #ccc solid;
+    margin: calc(var(--baseline) / 1) 2%;
+    pre {
+        background-color: #f9f9fc;
+        outline: 1px #ccc solid;
+        padding: calc(var(--baseline) / 2) 0;
+        code {
+        background-color: #f0f0f3;
+        font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
+        line-height: calc(var(--baseline) / 2);
+        }
+    }
+}
+
+
 
 /* CSS MODULES */
 
