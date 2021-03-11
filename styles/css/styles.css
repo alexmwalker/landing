@@ -396,8 +396,17 @@ button.large {
 
 /*------------------------------------*\
   #INPUT POWERED SWITCHES
-
 \*------------------------------------*/
+.media-selector {
+  margin: calc(var(--baseline) / 1) 0 calc(var(--baseline) / 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .search-switch {
   margin: 0;
   padding: 0;
@@ -406,6 +415,10 @@ button.large {
 }
 
 .search-switch input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* hide native checkbox */
   left: 2rem;
   top: 0;
   width: 0;
@@ -459,6 +472,7 @@ button.large {
   background-position: top right;
 }
 
+/* smaller tag switches */
 .search-switch.smaller {
   margin-bottom: 0;
 }
@@ -484,6 +498,11 @@ button.large {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0;
+}
+
+/* Customized search switches  */
+.search-switch input#search-books + label.search-type:after {
+  outline: 1px red dashed;
 }
 
 .bg {

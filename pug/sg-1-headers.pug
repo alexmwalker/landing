@@ -115,12 +115,24 @@ html
                     .col-12.wrap
                         figcaption Customized Search Switches
 
-                        .search-switch
-                            input#search-book(type='checkbox' value='Book')
-                            label.search-type.report(for='search-book') Book
-                    
+                        .media-selector
+                            .search-switch
+                                input#search-books(type='checkbox' value='books')
+                                label.search-type(for='search-books') Books
 
+                            .search-switch
+                                input#search-courses(type='checkbox' value='courses')
+                                label.search-type(for='search-courses') Courses
                         
+                            .search-switch
+                                input#search-talks(type='checkbox' value='talks')
+                                label.search-type(for='search-talks') Talks
+
+                            .search-switch
+                                input#search-code(type='checkbox' value='code')
+                                label.search-type.report(for='search-code') Code
+    
+                            
 
                 .section--preview.grid
                     // _logos-branding.scss

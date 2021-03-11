@@ -32,9 +32,15 @@ button { /* button defaults */
 
 /*------------------------------------*\
   #INPUT POWERED SWITCHES
-
 \*------------------------------------*/
-.search-switch{ // the wrapper
+
+.media-selector{
+    margin: calc(var(--baseline) / 1) 0 calc(var(--baseline) / 1);
+    display: flex;
+    justify-content: center;
+} 
+
+.search-switch{ // container for the input+label
     margin: 0;padding: 0;
     height: calc(var(--baseline) / 1);
     margin-bottom: calc(var(--baseline) / 2);
@@ -42,7 +48,7 @@ button { /* button defaults */
 }
 
 .search-switch input{
-    //appearance: none; /* hide native checkbox */
+    appearance: none; /* hide native checkbox */
     left: 2rem;
     top: 0;
     width: 0;
@@ -92,8 +98,10 @@ button { /* button defaults */
     }
 }
 
+/* smaller tag switches */
+
 .search-switch.smaller {
-    margin-bottom: 0;;
+    margin-bottom: 0;
     input {
         &+ label.search-type{
         font-size: calc(1rem / var(--typescale) / var(--typescale));
@@ -111,6 +119,7 @@ button { /* button defaults */
         }
     }
 }
+
 .tag-group{
     display: flex;
     //align-content: center;
@@ -118,4 +127,20 @@ button { /* button defaults */
     //justify-content: center;
     flex-wrap: wrap;
     padding:  0 ;
+}
+
+/* Customized search switches  */
+
+.search-switch input#search-books + label.search-type{
+
+}
+.search-switch {
+    input#search-books {
+        &+ label.search-type{
+        
+            &:after{
+                outline: 1px red dashed;
+            }
+        }
+    }
 }
