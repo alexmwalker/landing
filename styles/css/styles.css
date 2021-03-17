@@ -66,13 +66,42 @@ table {
   --basefont-tablet: calc(var(--basegrid-tablet) / var(--baselineratio));
   --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
   --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+/*------------------------------------*\
+  #Cross-site color values
+\*------------------------------------*/
+:root {
   --basebackground: #fff;
   --basefontcolor: #222;
   --basebackground-dark: #111518;
   --basefontcolor-dark: #ddd;
-  /* Apparently you can't use CSS Variables to set breakpoint - booo..*/
-  font-family: Roboto, sans-serif;
-  font-weight: 300;
+  --basefontcolor-off-white: #f1f1f1;
+  --border-light:#ddd;
+  --boxshadow: rgba(0,0,0,0.1);
+  --gray-icons: #555;
+  --search-highlight:#ffc;
+  /* Pink button */
+  --cta-1: #D2005F;
+  --cta-1-hover: #FA3292;
+  /* Teal button */
+  --cta-2: #0C8577;
+  --cta-2-hover: #3AB6A7;
+  /* Azure button */
+  --cta-3: #005FDB;
+  --cta-3-hover: #5096F1;
+  /* white-blue button = able (<input><label>) */
+  --cta-4: #0F56B3;
+  --cta-4-border: #5096F1;
+  --cta-4-disabled: #616161;
+  --cta-4-border-disabled: #C4C4C4;
+  /* gray button =  */
+  --cta-5: #333;
+  --cta-5-border: #A3A3A3;
+  --cta-5-hover: #616161;
+  --cta-5-border-hover: #C4C4C4;
 }
 
 .container {
@@ -365,33 +394,59 @@ button {
   font-size: 1rem;
   margin: 0 0 calc(var(--baseline)*1);
   line-height: calc(var(--baseline));
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0 2rem;
+  border-radius: 4px;
+  border: 0 none;
   position: relative;
+  border-radius: 4px;
+  color: #eee;
+  -webkit-box-shadow: 0 3px 5px var(--boxshadow);
+  box-shadow: 0 3px 5px var(--boxshadow);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 button.large {
   font-size: calc(1rem * var(--typescale));
   line-height: calc(var(--baseline) * 1.5);
   height: calc(var(--baseline)* 1.5);
 }
+button:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: #fff;
+}
 
 .pink {
-  background: #d2005f;
-  color: #eee;
-  border-radius: 4px;
-  border: 0 none;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  background: var(--cta-1);
 }
 .pink:hover {
-  color: #fff;
-  background: #FA3292;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  background: var(--cta-1-hover);
+}
+
+.teal {
+  background: var(--cta-2);
+}
+.teal:hover {
+  background: var(--cta-2-hover);
+}
+
+.azure {
+  background: var(--cta-3);
+}
+.azure:hover {
+  background: var(--cta-3-hover);
+}
+
+.gray {
+  background: #fff;
+  color: var(--cta-5);
+  border: 2px solid var(--cta-5-border);
+}
+.gray:hover {
+  color: var(--cta-5-hover);
+  border-color: var(--cta-5-border-hover);
 }
 
 /*------------------------------------*\
@@ -438,8 +493,8 @@ button.large {
   height: calc(var(--baseline));
   line-height: calc(var(--baseline));
   background: #fff;
-  color: #616161;
-  border: 1px solid #E0E0E0;
+  color: var(--cta-4-disabled);
+  border: 1px solid var(--cta-4-border-disabled);
   border-radius: 12px;
   font-size: calc(1rem / var(--typescale));
   padding: 0 1rem;
@@ -449,6 +504,7 @@ button.large {
   transition: 0.15s steps(8);
 }
 .search-switch input + label.search-type:after {
+  /* cross -> tick */
   display: block;
   position: absolute;
   content: "";
@@ -466,8 +522,8 @@ button.large {
 }
 .search-switch input:checked + label.search-type {
   background: #fff;
-  border-color: #5096F1;
-  color: #0F56B3;
+  border-color: var(--cta-4-border);
+  color: var(--cta-4);
 }
 .search-switch input:checked + label.search-type:after {
   background-position: top right;

@@ -42,17 +42,14 @@ $bp-wide: 80em;
   --basefont-laptop: calc(var(--basegrid-laptop) / var(--baselineratio));
   --basefont-wide: calc(var(--basegrid-wide) / var(--baselineratio));
 
-  --basebackground: #fff; // flipped in dark mode
-  --basefontcolor: #222;
 
-  --basebackground-dark: #111518;
-  --basefontcolor-dark: #ddd;
-
-  /* Apparently you can't use CSS Variables to set breakpoint - booo..*/
 
   font-family: Roboto, sans-serif;
   font-weight: 300;
 }
+
+@import 'color-values';
+
 
 .container {
   width: 96%;

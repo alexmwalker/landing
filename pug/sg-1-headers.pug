@@ -37,13 +37,47 @@ html
                     // Pink CTA
                     .col-6
                         .style-definition
-                            figcaption Standard CTA button
-                            button.pink.report Free 7-Day Trial
+                            figcaption Primary CTA button
+                            button.pink Free 7-Day Trial
                      
                     .col-6
                         .style-definition
-                            figcaption Large CTA button
+                            figcaption Primary Large CTA button
                             button.pink.large.report Free 7-Day Trial
+
+                    // teal CTA
+                    .col-6
+                        .style-definition
+                            figcaption Secondary CTA button
+                            button.teal More information
+                     
+                    .col-6
+                        .style-definition
+                            figcaption Secondary Large CTA button
+                            button.teal.large.report  More information
+
+                    // teal CTA
+                    .col-6
+                        .style-definition
+                            figcaption Tertiary CTA button
+                            button.azure More information
+                     
+                    .col-6
+                        .style-definition
+                            figcaption Tertiary Large CTA button
+                            button.azure.large.report  More information
+
+                    // azure CTA
+                    .col-6
+                        .style-definition
+                            figcaption Quaternary CTA button
+                            button.gray More information
+                     
+                    .col-6
+                        .style-definition
+                            figcaption Quaternary Large CTA button
+                            button.gray.large.report  More information
+
 
                     // Input checkbox Switches
  
@@ -52,17 +86,21 @@ html
                         .style-definition
                             figcaption Major Search switch (default style) 
                             .search-switch(data-codeblock="#search-switch-div")
-                                input#search-click(type='checkbox' value='Click me!')
-                                label.search-type.report(for='search-click') Click me!
+                                input#search-click.report(type='checkbox' value='Click me!')
+                                label.search-type(for='search-click') Click me!
 
                             #search-switch-div.codeview
+                                
+                                input.codeshow(type='checkbox')
+                                span.showcode Show markup
+                                
                         
                     // Input checkbox Switches
 
                     .col-6
                         .style-definition
                             figcaption Tag cloud switches (small)
-                            .tag-group
+                            .tag-group(data-codeblock="#search-switch-small")
                                 .search-switch.smaller
                                     input#search-javascript(type='checkbox' checked='checked' value='javascript')
                                     label.search-type(for='search-javascript') JavaScript
@@ -111,11 +149,15 @@ html
                                     input#search-php(type='checkbox' checked='checked' value='php')
                                     label.search-type(for='search-php') PHP
 
+                            #search-switch-small.codeview                                
+                                input.codeshow(type='checkbox')
+                                span.showcode Show markup
+
 
                     .col-12.wrap
                         figcaption Customized Search Switches
 
-                        .media-selector
+                        .media-selector(data-codeblock="#media-selector")
                             .search-switch
                                 input#search-books.custom-icon(type='checkbox' value='books'  checked='checked')
                                 label.search-type(for='search-books') Books
@@ -131,8 +173,13 @@ html
                             .search-switch
                                 input#search-code.custom-icon(type='checkbox' value='code')
                                 label.search-type.report(for='search-code') Code
+
     
-                            
+                        #media-selector.codeview                                
+                            input.codeshow(type='checkbox')
+                            span.showcode Show markup
+
+
 
                 .section--preview.grid
                     // _logos-branding.scss

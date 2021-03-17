@@ -1905,18 +1905,54 @@
   padding: calc(var(--baseline) / 2) 0;
 }
 
+input.codeshow {
+  height: calc(var(--baseline) / 2);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+}
+input.codeshow:focus {
+  outline: none;
+}
+
+.showcode {
+  font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
+  line-height: calc(var(--baseline) / 2);
+  padding: 0 2rem;
+  position: absolute;
+  background: #eee;
+  color: #999;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 .codeview {
-  margin: calc(var(--baseline) / 1) 2%;
+  margin: calc(var(--baseline) / 2) 2% calc(var(--baseline) / 1);
+  position: relative;
 }
 .codeview pre {
   background-color: #f9f9fc;
-  outline: 1px #ccc solid;
-  padding: calc(var(--baseline) / 2) 0;
+  position: relative;
+  top: calc(var(--baseline) / 2);
+  padding: calc(var(--baseline) / 2) 0 calc(var(--baseline) / 2);
+  border: 1px solid #ccc;
+  overflow: hidden;
+  display: none;
 }
 .codeview pre code {
   background-color: #f0f0f3;
   font-size: calc(1rem / var(--typescale)/ var(--typescale)/ var(--typescale));
   line-height: calc(var(--baseline) / 2);
+}
+.codeview input.codeshow:checked ~ pre {
+  height: auto;
+  display: block;
+}
+.codeview input.codeshow:checked ~ .showcode {
+  border-radius: 4px 4px 0 0;
 }
 
 /* CSS MODULES */

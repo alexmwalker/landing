@@ -65,14 +65,53 @@
           <!-- Pink CTA-->
           <div class="col-6">
             <div class="style-definition">
-              <figcaption>Standard CTA button</figcaption>
-              <button class="pink report">Free 7-Day Trial</button>
+              <figcaption>Primary CTA button</figcaption>
+              <button class="pink">Free 7-Day Trial</button>
             </div>
           </div>
           <div class="col-6">
             <div class="style-definition">
-              <figcaption>Large CTA button</figcaption>
+              <figcaption>Primary Large CTA button</figcaption>
               <button class="pink large report">Free 7-Day Trial</button>
+            </div>
+          </div>
+          <!-- teal CTA-->
+          <div class="col-6">
+            <div class="style-definition">
+              <figcaption>Secondary CTA button</figcaption>
+              <button class="teal">More information</button>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="style-definition">
+              <figcaption>Secondary Large CTA button</figcaption>
+              <button class="teal large report"> More information</button>
+            </div>
+          </div>
+          <!-- teal CTA-->
+          <div class="col-6">
+            <div class="style-definition">
+              <figcaption>Tertiary CTA button</figcaption>
+              <button class="azure">More information</button>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="style-definition">
+              <figcaption>Tertiary Large CTA button</figcaption>
+              <button class="azure large report"> More information</button>
+            </div>
+          </div>
+          <!-- azure CTA-->
+          <div class="col-6">
+            <div class="style-definition">
+              <figcaption>Quaternary CTA button</figcaption>
+              <button class="gray">More information</button>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="style-definition">
+              <figcaption>Quaternary Large CTA button</figcaption>
+              <button class="gray large report"> More information</button>
             </div>
           </div>
           <!-- Input checkbox Switches-->
@@ -80,17 +119,19 @@
             <div class="style-definition">
               <figcaption>Major Search switch (default style) </figcaption>
               <div class="search-switch" data-codeblock="#search-switch-div">
-                <input id="search-click" type="checkbox" value="Click me!"/>
-                <label class="search-type report" for="search-click">Click me!</label>
+                <input class="report" id="search-click" type="checkbox" value="Click me!"/>
+                <label class="search-type" for="search-click">Click me!</label>
               </div>
-              <div class="codeview" id="search-switch-div"></div>
+              <div class="codeview" id="search-switch-div">
+                <input class="codeshow" type="checkbox"/><span class="showcode">Show markup</span>
+              </div>
             </div>
           </div>
           <!-- Input checkbox Switches-->
           <div class="col-6">
             <div class="style-definition">
               <figcaption>Tag cloud switches (small)</figcaption>
-              <div class="tag-group">
+              <div class="tag-group" data-codeblock="#search-switch-small">
                 <div class="search-switch smaller">
                   <input id="search-javascript" type="checkbox" checked="checked" value="javascript"/>
                   <label class="search-type" for="search-javascript">JavaScript</label>
@@ -140,11 +181,14 @@
                   <label class="search-type" for="search-php">PHP</label>
                 </div>
               </div>
+              <div class="codeview" id="search-switch-small">                               
+                <input class="codeshow" type="checkbox"/><span class="showcode">Show markup</span>
+              </div>
             </div>
           </div>
           <div class="col-12 wrap">
             <figcaption>Customized Search Switches</figcaption>
-            <div class="media-selector">
+            <div class="media-selector" data-codeblock="#media-selector">
               <div class="search-switch">
                 <input class="custom-icon" id="search-books" type="checkbox" value="books" checked="checked"/>
                 <label class="search-type" for="search-books">Books</label>
@@ -161,6 +205,9 @@
                 <input class="custom-icon" id="search-code" type="checkbox" value="code"/>
                 <label class="search-type report" for="search-code">Code</label>
               </div>
+            </div>
+            <div class="codeview" id="media-selector">                               
+              <input class="codeshow" type="checkbox"/><span class="showcode">Show markup</span>
             </div>
           </div>
         </div>

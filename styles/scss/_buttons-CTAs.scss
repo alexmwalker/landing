@@ -2,33 +2,54 @@ button { /* button defaults */
     font-size: 1rem;
     margin: 0 0 calc(var(--baseline)*1);
     line-height: calc(var(--baseline));
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0 2rem;
+    border-radius: 4px;
+    border: 0 none;
     position: relative;
+    border-radius: 4px;
+    color: #eee;
+    -webkit-box-shadow: 0 3px 5px var(--boxshadow);
+    box-shadow: 0 3px 5px var(--boxshadow);
+    transition: .3s;
     &.large{
         font-size: calc(1rem * var(--typescale));
         line-height: calc(var(--baseline) * 1.5);
         height: calc(var(--baseline)* 1.5);
     }
+    &:hover{
+        transition: .3s;
+        color:#fff;
+    }
 }
 .pink {
-    //height: calc(var(--baseline));
-    background: #d2005f;
-    color: #eee;
-    border-radius: 4px;
-    border: 0 none;
-    -webkit-box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
-    box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
-    transition: .3s;
+    background: var(--cta-1);
     &:hover{
-        color:#fff;
-        background: #FA3292;
-        transition: .3s;
+        background: var(--cta-1-hover);
     }
 }
 
+.teal {
+    background: var(--cta-2);
+    &:hover{
+        background: var(--cta-2-hover);
+    }
+}
+.azure {
+    background: var(--cta-3);
+    &:hover{
+        background: var(--cta-3-hover);
+    }
+}
 
-
+.gray {
+    background: #fff;
+    color: var(--cta-5);
+    border: 2px solid var(--cta-5-border);
+    &:hover{
+        color: var(--cta-5-hover);
+        border-color: var(--cta-5-border-hover);
+    }
+}
 
 /*------------------------------------*\
   #INPUT POWERED SWITCHES
@@ -66,14 +87,14 @@ button { /* button defaults */
         height: calc(var(--baseline));
         line-height: calc(var(--baseline));
         background: #fff;
-        color: #616161; 
-        border: 1px solid #E0E0E0;
+        color: var(--cta-4-disabled); 
+        border: 1px solid var(--cta-4-border-disabled);
         border-radius: 12px;
         font-size: calc(1rem / var(--typescale));
         padding: 0 1rem;
         text-indent: 1rem;  
         transition: .15s steps(8);
-        &:after{
+        &:after{ /* cross -> tick */
             display: block;
             position: absolute;
             content: '';
@@ -90,8 +111,8 @@ button { /* button defaults */
     }
     &:checked + label.search-type{
         background: #fff;
-        border-color: #5096F1;
-        color: #0F56B3;
+        border-color: var(--cta-4-border);
+        color: var(--cta-4);
         &:after{
             background-position: top right; 
         }
@@ -122,9 +143,6 @@ button { /* button defaults */
 
 .tag-group{
     display: flex;
-    //align-content: center;
-    //justify-content: space-evenly;
-    //justify-content: center;
     flex-wrap: wrap;
     padding:  0 ;
 }

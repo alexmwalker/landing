@@ -1,0 +1,46 @@
+/*------------------------------------*\
+  #Cross-site color values
+\*------------------------------------*/
+
+:root { 
+--basebackground: #fff; // flipped in dark mode
+--basefontcolor: #222;
+
+--basebackground-dark: #111518;
+--basefontcolor-dark: #ddd;
+
+--basefontcolor-off-white: #f1f1f1;
+--border-light:#ddd;
+
+--boxshadow: rgba(0,0,0,0.1);
+
+--gray-icons: #555;
+--search-highlight:#ffc;
+
+/* Pink button */
+--cta-1: #D2005F;
+--cta-1-hover: #FA3292;
+
+/* Teal button */
+--cta-2: #0C8577;
+--cta-2-hover: #3AB6A7;
+
+/* Azure button */
+--cta-3: #005FDB;
+--cta-3-hover: #5096F1;
+
+/* white-blue button = able (<input><label>) */
+--cta-4: #0F56B3; // (text color)
+--cta-4-border: #5096F1;
+
+--cta-4-disabled: #616161;
+--cta-4-border-disabled: #C4C4C4;
+
+/* gray button =  */
+--cta-5: #333;
+--cta-5-border: #A3A3A3;
+
+--cta-5-hover: #616161;
+--cta-5-border-hover: #C4C4C4;
+
+}
