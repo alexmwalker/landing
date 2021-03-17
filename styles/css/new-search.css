@@ -181,7 +181,7 @@ h3,
   font-size: calc(var(--typescale) * var(--typescale) * 1rem);
   line-height: calc(var(--baseline) * 1);
   margin-top: 0;
-  margin-bottom: calc(var(--baseline) / 2);
+  margin-bottom: calc(var(--baseline) / 1);
   font-weight: 400;
 }
 
@@ -201,7 +201,7 @@ h5,
   /* h5s are same size as <p> but bolder */
   font-size: 1rem;
   line-height: calc(var(--baseline) / 1);
-  margin-top: calc(var(--baseline) / 2);
+  margin-top: 0;
   margin-bottom: calc(var(--baseline) / 1);
   font-weight: 400;
 }
@@ -3214,6 +3214,8 @@ button:hover {
   -o-transition: 0.3s;
   transition: 0.3s;
   color: #fff;
+  -webkit-box-shadow: 0 2px 3px var(--boxshadow);
+  box-shadow: 0 2px 3px var(--boxshadow);
 }
 
 .pink {

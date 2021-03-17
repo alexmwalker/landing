@@ -316,7 +316,7 @@ function reportType() {
 
   $.fn.dataCodeBlock = function(){
   
-    // Yoinked from Prototype.js
+    // Yoinked from Prototype.js - I'm stripping groups of three spaces too to help formatting
     var escapeHTML = function( code ) {
         return code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/(   )\w*/g,' ');
     };
@@ -343,8 +343,6 @@ function reportType() {
 
 
 //let controls = document.querySelectorAll('.controls input');
-
-
 
 
 navBarBuild();

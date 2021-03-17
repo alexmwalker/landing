@@ -137,7 +137,7 @@ $bp-wide: 80em;
     font-size: calc(var(--typescale) * var(--typescale) * 1rem);
     line-height: calc(var(--baseline) * 1);
     margin-top: 0;
-    margin-bottom: calc(var(--baseline) / 2);
+    margin-bottom: calc(var(--baseline) / 1);
     font-weight: 400;
   }
   
@@ -157,7 +157,7 @@ $bp-wide: 80em;
     /* h5s are same size as <p> but bolder */
     font-size: 1rem;
     line-height: calc(var(--baseline) / 1);
-    margin-top: calc(var(--baseline) / 2);
+    margin-top: 0;
     margin-bottom: calc(var(--baseline) / 1);
     font-weight: 400;
     //text-transform: capitalize;

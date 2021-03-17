@@ -19,6 +19,8 @@ button { /* button defaults */
     &:hover{
         transition: .3s;
         color:#fff;
+        -webkit-box-shadow: 0 2px 3px var(--boxshadow);
+        box-shadow: 0 2px 3px var(--boxshadow);
     }
 }
 .pink {
