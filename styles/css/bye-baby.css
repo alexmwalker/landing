@@ -1,0 +1,87 @@
+/* Create the colored labels in the top left */
+
+.vm-FieldViewComponent-header,
+.vm-FieldViewComponent-activeHeader {
+	position: relative;
+}
+
+.vm-FieldViewComponent-header:before,
+.vm-FieldViewComponent-header:after,
+.vm-FieldViewComponent-activeHeader:before {
+	display: block;
+	position: absolute;
+	color: #fff;
+	font-size: .7rem;
+	line-height: 1.1rem;
+	text-align: center;
+	content: '13';
+	background: #ff00fa;
+	width: 1rem;
+	height: 1rem;
+	top: 0;
+	left: 11rem;
+}
+
+.vm-FieldViewComponent-header:after {
+	left: 10rem;
+	background: #00bbff;
+	content: '12';
+}
+
+.vm-FieldViewComponent-activeHeader:before {
+	left: 12rem;
+	background: orange;
+	content: '14';
+}
+
+
+
+
+.vm-FieldCellComponent-flag,
+.vm-TeamFlagComponent,
+.ng-tns-c202-94 {
+	overflow: visible;
+}
+
+.vm-TeamFlagComponent:after {
+	display: block;
+	position: absolute;
+	content: '';
+	width: 10px;
+	border-radius: 5px;
+	border: 1px #fff solid;
+	height: 10px;
+	top: 0;
+	left: 18px;
+	z-index: 999;
+}
+.vm-TeamFlagComponent:after {
+	background: orange; /* The default */
+}
+/* 
+   r12 GC, NM, PA, HW, GE, GI - blue
+   r13 BR, CA, WB, ES, RI, WC - pink
+	r14 AD, CO, ST, SW, FR, ME - green 
+*/
+
+/* rnd 12 teams */
+[aria-label="Port Adelaide"]:after,
+[aria-label="Hawthorn"]:after,
+[aria-label="GWS Giants"]:after,
+[aria-label="North Melbourne"]:after,
+[aria-label="Gold Coast"]:after,
+[aria-label="Geelong"]:after {
+	background: #00bbff;
+	/* blue */
+}
+
+/* rnd 13 teams */
+[aria-label="Brisbane"]:after,
+[aria-label="Carlton"]:after,
+[aria-label="Western Bulldogs"]:after,
+[aria-label="Essendon"]:after,
+[aria-label="Richmond"]:after,
+[aria-label="West Coast"]:after {
+	background: #ff00fa;
+	/* magenta */
+}

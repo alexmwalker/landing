@@ -1,0 +1,60 @@
+.companies{
+  color: #aaa;
+  background: #2a2a2a;
+  padding: (calc(var(--baseline)*1.5)) 0 ;
+  .container{
+    width: 90%;
+  }
+  h4{
+    color: #ccc;
+    margin-bottom: calc(var(--baseline)/1) ;
+    text-align: center;
+  }
+  .col-3_sm-6{
+    text-align: center;
+    min-height: calc(var(--baseline) * 1.0);
+    color: #aaa;
+    &:hover{
+      color: #fff;
+      }
+    p{
+    font-size: calc(1rem / var(--typescale) / var(--typescale));     
+    position: relative;
+    bottom: 0;
+    }
+
+  }
+  a img{
+    width: 45%;
+    margin: 0 auto;;
+  }
+}
+
+.tech{
+  color: #aaa;
+  background: #2a2a2a;
+  padding : (calc(var(--baseline)*1.5)) 0 ;
+  h2{
+    color: #ccc;
+    margin-bottom: calc(var(--baseline)/1) ;
+  }
+  .col_sm-4 {
+    //outline: 1px red dashed;
+    text-align: center;
+    img{ height: calc(var(--baseline) * 2.0);}
+    a{ min-height: calc(var(--baseline) * 1.0);
+
+    color: #aaa;
+    &:hover{
+      color: #fff;
+      }
+    }
+    p{
+    font-size: calc(1rem / var(--typescale) / var(--typescale));     
+    position: relative;
+    bottom: 0;
+    }
+
+  }
+}
+
