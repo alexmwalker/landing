@@ -17,8 +17,9 @@ $bp-wide: 80em;
 
 @import 'header';
 @import 'hero-landing-2';
-@import 'tech';
+// @import 'tech'; /* combined in companies */
 @import 'companies';
+@import 'why-landing';
 //@import 'sushi-train';
 @import 'reader-demo';
 @import 'authors';

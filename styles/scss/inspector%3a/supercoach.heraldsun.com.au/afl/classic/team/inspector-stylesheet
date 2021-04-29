@@ -1,0 +1,3 @@
+vm-team-flag {
+    outline: 1px red dashed;
+}

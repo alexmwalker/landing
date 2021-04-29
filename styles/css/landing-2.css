@@ -2745,28 +2745,6 @@ html.offline #offline-notification {
      object-position: 100% 0;
 }
 
-.tech {
-  color: #aaa;
-  background: #2a2a2a;
-  padding: calc(var(--baseline)*1.5) 0;
-}
-.tech h2 {
-  color: #ccc;
-  margin-bottom: calc(var(--baseline)/1);
-}
-.tech .col_sm-4 a {
-  min-height: calc(var(--baseline) * 1.0);
-  color: #aaa;
-}
-.tech .col_sm-4 a:hover {
-  color: #fff;
-}
-.tech .col_sm-4 a p {
-  font-size: calc(1rem / var(--typescale) / var(--typescale));
-  position: relative;
-  bottom: 0;
-}
-
 .companies {
   color: #aaa;
   background: #2a2a2a;
@@ -2780,21 +2758,21 @@ html.offline #offline-notification {
   margin-bottom: calc(var(--baseline)/1);
   text-align: center;
 }
-.companies .col-3_sm-6 {
+.companies .col {
   text-align: center;
-  min-height: calc(var(--baseline) * 1.0);
+  min-height: calc(var(--baseline) * 2.0);
   color: #aaa;
 }
-.companies .col-3_sm-6:hover {
+.companies .col:hover {
   color: #fff;
 }
-.companies .col-3_sm-6 p {
+.companies .col p {
   font-size: calc(1rem / var(--typescale) / var(--typescale));
   position: relative;
   bottom: 0;
 }
-.companies a img {
-  width: 45%;
+.companies .company-logo {
+  height: calc(var(--baseline) * 1.5);
   margin: 0 auto;
 }
 
@@ -2803,27 +2781,64 @@ html.offline #offline-notification {
   background: #2a2a2a;
   padding: calc(var(--baseline)*1.5) 0;
 }
-.tech h2 {
+.tech .container {
+  width: 90%;
+}
+.tech h3 {
   color: #ccc;
   margin-bottom: calc(var(--baseline)/1);
-}
-.tech .col_sm-4 {
   text-align: center;
 }
-.tech .col_sm-4 img {
+.tech .col {
+  text-align: center;
+}
+.tech .col img {
   height: calc(var(--baseline) * 2.0);
 }
-.tech .col_sm-4 a {
+.tech .col a {
   min-height: calc(var(--baseline) * 1.0);
   color: #aaa;
 }
-.tech .col_sm-4 a:hover {
+.tech .col a:hover {
   color: #fff;
 }
-.tech .col_sm-4 p {
+.tech .col p {
   font-size: calc(1rem / var(--typescale) / var(--typescale));
   position: relative;
   bottom: 0;
+  margin-bottom: 0;
+}
+
+.why {
+  padding: calc(var(--baseline)*1.5) 0;
+}
+.why .container {
+  width: 90%;
+}
+.why h2 {
+  color: #333;
+  margin-bottom: calc(var(--baseline)/2);
+  text-align: center;
+}
+.why p {
+  position: relative;
+  text-align: center;
+  bottom: 0;
+}
+.why .col {
+  text-align: center;
+  min-height: calc(var(--baseline) * 2.0);
+}
+.why .col img {
+  height: calc(var(--baseline) * 5.0);
+  margin-bottom: calc(var(--baseline)/1);
+}
+.why .col:hover {
+  color: #fff;
+}
+.why .col p {
+  font-size: calc(1rem / var(--typescale)/ var(--typescale));
+  line-height: calc(var(--baseline) /2);
 }
 
 #reader-demo {
