@@ -1,4 +1,4 @@
-.why{
+.books{
     padding: (calc(var(--baseline)*1.5)) 0 ;
     .container{
       width: 90%;
@@ -21,6 +21,7 @@
           height: calc(var(--baseline) * 5.0);
           margin-bottom: calc(var(--baseline)/1) ;
       }
+
         p{
             font-size: calc(1rem / var(--typescale)/ var(--typescale));       
             line-height: calc(var(--baseline) /2);
