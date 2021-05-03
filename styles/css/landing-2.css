@@ -3155,6 +3155,14 @@ that need device level targeting. This is where we do it. */
     display: block;
   }
 }
+.sitepoint-branding {
+  position: fixed;
+}
+
+.landing-parent {
+  padding-top: calc(var(--baseline) * 2);
+}
+
 .pink {
   height: calc(var(--baseline));
   background: var(--cta-1);

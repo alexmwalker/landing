@@ -30,6 +30,12 @@ $bp-wide: 80em;
 @import 'media-tweaks';
 //@import '3d';
 
+.sitepoint-branding{
+  position: fixed;
+}
+.landing-parent{
+  padding-top: calc(var(--baseline) * 2);  // buffer for the fixed nav 
+}
 
 .pink{
   height: calc(var(--baseline));
