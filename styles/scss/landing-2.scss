@@ -19,6 +19,8 @@ $bp-wide: 80em;
 @import 'hero-landing-2';
 // @import 'tech'; /* combined in companies */
 @import 'companies';
+@import 'search-nav';
+@import 'books-landing';
 @import 'why-landing';
 //@import 'sushi-train';
 @import 'reader-demo';
@@ -28,6 +30,7 @@ $bp-wide: 80em;
 @import 'footer';
 
 @import 'media-tweaks';
+@import 'under-construction';
 //@import '3d';
 
 .sitepoint-branding{

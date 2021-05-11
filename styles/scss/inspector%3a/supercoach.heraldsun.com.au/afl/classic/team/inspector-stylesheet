@@ -1,7 +1,0 @@
-vm-chip-dropdown.vm-GridComponent-secondaryPageControls.vm-ChipComponent.vm-ChipDropdownComponent--showByesButton.ng-star-inserted {
-    display: none;
-}vm-team-flag {
-    outline: 1px red dashed;
-}
-
-mat-basic-chip.mat-chip.mat-focus-indicator.vm-UserTeamFieldControlsComponent-fieldControlsButtons--optimise.mat-primary.mat-basic-chip.ng-star-inserted {}

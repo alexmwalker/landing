@@ -3288,7 +3288,7 @@ that need device level targeting. This is where we do it. */
   }
   .search-big .insetbutton {
     padding: 1rem;
-    height: calc(var(--baseline) * 2.75);
+    height: calc(var(--baseline) * 2.5);
     width: calc(var(--baseline) * 2.75);
   }
 
