@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 938 586" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+
+        text {font-family: Roboto, Arial, Helvetica, sans-serif; white-space:pre; letter-spacing: 0em}
+        .head-text{
+        fill: #fff; font-size: 10.5px; 
+        }
+        .hero-text{
+        fill: #fff; font-size: 10.5px; 
+        font-weight: 300;
+        }
+        .body-text{
+        fill: #333; font-size: 10.5px; 
+        font-weight: 300;
+        }
+        .book-text{
+        font-family: Inter, Arial, Helvetica, sans-serif; 
+        fill: #fff;
+        }
+</style>
+    <linearGradient id="paint0_linear" x1="356.1" x2="468.9" y1="-69.3" y2="565.9" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E5E5E5"/>
+      <stop offset="0.2" stop-color="#D5D5D5"/>
+      <stop offset="0.7" stop-color="#C4C4C4"/>
+      <stop offset="0.9" stop-color="#4F4F4F"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="469" x2="469" y1="565" y2="576" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#E5E5E5"/>
+    </linearGradient>
+    <clipPath id="screen-mask">
+      <rect x="-247.892" y="71.624" width="1060" height="524" style="fill: rgb(216, 216, 216);"/>
+    </clipPath>
+    <linearGradient id="gradient-3" x1="0" x2="597" y1="0" y2="0" gradientTransform="matrix(-0.62, 1.3, -0.9, -0.43, 613.43, -117.3)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#45bfef"/>
+      <stop offset="1" style="stop-color:#408ccb"/>
+    </linearGradient>
+    <linearGradient id="gradient-1" x1="2189.1" x2="2189.1" y1="1223.4" y2="1746.1" gradientTransform="translate(-2212 -1017.4)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="rgba(255, 255, 255, 0.46)"/>
+      <stop offset="1" stop-color="rgba(255, 255, 255, 0.02)"/>
+    </linearGradient>
+    <symbol id="header">
+      <text class="head-text" style="white-space: pre;">
+        <tspan x="699" y="20.4">Dashboard</tspan>
+      </text>
+      <g fill="#fff" class="dashicon">
+        <rect width="10" height="1" x="681" y="13"/>
+        <rect width="1" height="3" x="685" y="12"/>
+        <rect width="10" height="1" x="681" y="16"/>
+        <rect width="1" height="3" x="688" y="15"/>
+        <rect width="10" height="1" x="681" y="19"/>
+        <rect width="1" height="3" x="683" y="18"/>
+      </g>
+      <text class="head-text" style="white-space: pre;">
+        <tspan x="630" y="20.4">Library</tspan>
+      </text>
+      <path fill="#fff" fill-rule="evenodd" d="M616.1 12h-2.5v9.6h2.5v-7.4l1.3 7.4 2.5-.4-1.3-7.4-2.5.4V12zm-5.1 2h2v7.6h-2v-7.7z" clip-rule="evenodd"/>
+      <path fill="#fff" fill-rule="evenodd" d="M548 22a5 5 0 100-10 5 5 0 000 10zm0-1h-.2v-8h.2a4 4 0 014 4 4 4 0 01-4 4z" clip-rule="evenodd"/>
+      <g fill="#fff">
+        <path fill-rule="evenodd" d="M578.8 19.5h2.6l.7 2.4h2l-2.6-8.9h-2.7l-2.8 9h2.1l.7-2.5zm2.3-1.4h-2l.7-2.8.2-.8.3.8.8 2.8z" clip-rule="evenodd"/>
+        <path d="M588.1 13.6H587V15h-1.4v1.2h1.4v1.3h1.1v-1.3h1.4V15h-1.4v-1.4z"/>
+        <path d="M589.5 19.4v1.1h-4v-1.1h4z"/>
+      </g>
+    </symbol>
+    <symbol id="toolbar">
+      <g class="toolbar">
+        <rect width="828" height="34" y="227" fill="#000"/>
+        <g>
+          <circle cx="631" cy="244" r="4" fill="#C4C4C4"/>
+          <rect width="22" height="11" x="625.5" y="238.5" stroke="#C4C4C4" rx="5.5"/>
+          <text class="head-text" style="white-space: pre; fill: rgb(255, 255, 255); font-family: Roboto; font-size: 10.5px; line-height: 16.8px; perspective-origin: 691.938px 0px;">
+            <tspan x="652" y="247.4">Make available offline</tspan>
+          </text>
+        </g>
+        <line x1="172.5" x2="172.5" y1="235" y2="254" stroke="#C3C8CC"/>
+        <text class="head-text" style="white-space: pre; fill: rgb(255, 255, 255); font-family: Roboto; font-size: 10.5px; line-height: 16.8px; perspective-origin: 208.641px 0px;">
+          <tspan x="181" y="247.4">My Bookmarks</tspan>
+        </text>
+        <text class="head-text" style="white-space: pre; fill: rgb(255, 255, 255); font-family: Roboto; font-size: 10.5px; line-height: 16.8px; perspective-origin: 103.656px 0px;">
+          <tspan x="71" y="247.4">Table of Contents</tspan>
+        </text>
+        <path fill="#fff" d="M255 243l4.5 4.5 4.5-4.5-1-1-3.5 3.5-3.5-3.5-1 1z"/>
+        <path fill="#fff" d="M156 243l4.5 4.5 4.5-4.5-1-1-3.5 3.5-3.5-3.5-1 1z"/>
+      </g>
+    </symbol>
+    <symbol id="sitepoint" viewBox="0 0 148 34.1">
+      <g fill="#fff">
+        <path d="M37.8 21.2c.2.4.5.7.9 1l1.3.4a7.4 7.4 0 004-.3c.4-.1.7-.4 1-.7.2-.3.3-.8.3-1.2 0-.3 0-.6-.2-.9-.1-.2-.3-.5-.6-.6a6 6 0 00-1.8-.9l-2.5-.5c-.8-.2-1.6-.4-2.4-.8a5 5 0 01-1.9-1.3c-.5-.7-.8-1.5-.7-2.4 0-.7.1-1.4.5-2 .3-.6.8-1 1.3-1.4.6-.4 1.2-.7 1.9-.8l2-.3c.9 0 1.7.1 2.5.3.7.1 1.3.4 2 .8.5.3 1 .9 1.3 1.5.4.7.6 1.5.6 2.4h-2.5a2.4 2.4 0 00-1.3-2.1c-.3-.2-.7-.4-1.1-.4l-1.3-.2-1.1.1c-.4 0-.7.2-1 .3l-.9.6a2 2 0 00-.3 1 1.5 1.5 0 00.5 1.1c.4.4.8.6 1.2.8l1.6.5a120.5 120.5 0 013.7.9 6 6 0 011.6.8c.5.3.9.8 1.1 1.3.4.6.5 1.2.5 1.9 0 .8-.2 1.6-.6 2.3-.4.7-1 1.2-1.5 1.6-.7.4-1.4.6-2.2.8a12.4 12.4 0 01-4.8 0 6 6 0 01-2-1c-.7-.4-1.2-1-1.5-1.6-.4-.8-.6-1.6-.6-2.5h2.6c0 .5.1 1 .4 1.5zM53.5 8.9h-2.6v15.8h2.6V8.9zm10.5 0v2.3h-3v10.5c0 .2.2.3.3.5l.6.1h2.2v2.4h-2a9 9 0 01-1.7-.2c-.4 0-.8-.2-1.1-.5-.3-.2-.6-.6-.7-1l-.2-1.8v-10h-2.6V8.9h2.7V4.2H61v4.7h3zm13.9 14.8a7 7 0 01-4.4 1.3c-1.1 0-2.2-.2-3.2-.6-1-.4-1.7-1-2.3-1.7a7.3 7.3 0 01-1.4-2.6 12 12 0 01-.5-3.3c0-1.2.1-2.3.5-3.3a8 8 0 011.5-2.6 6.9 6.9 0 015.2-2.4 6.3 6.3 0 015.7 3.1c.5 1 .9 2 1.1 3l.3 3H68.8c0 .6 0 1.3.2 2 .2.5.5 1.1.9 1.6s1 .9 1.5 1.1c.7.3 1.4.5 2.2.5 1 0 1.9-.3 2.6-.8.8-.6 1.2-1.4 1.4-2.3h2.5c-.2 1.6-1 3-2.2 4zm-.6-10.2a4.4 4.4 0 00-2.4-2.3c-.5-.3-1.1-.4-1.7-.4a4 4 0 00-1.8.4c-.5.2-1 .5-1.3 1a3.9 3.9 0 00-1.3 3.1h8.9c0-.6-.2-1.2-.4-1.8zm8.3-4.6V11c.5-.8 1.2-1.5 2-1.9 1-.4 2-.6 3-.6 1.1 0 2.2.2 3.2.7.8.4 1.6 1 2.2 1.8a8 8 0 011.3 2.7 11.3 11.3 0 010 6.3 6.4 6.4 0 01-3.5 4.3 7 7 0 01-4.4.6 7 7 0 01-1.4-.4l-1.3-.7-1-1.2v8.1H83V9h2.5zm9.2 5.6c-.2-.7-.5-1.3-.9-1.9a4.3 4.3 0 00-3.6-1.8c-.8 0-1.5.2-2.2.5-.6.4-1 .8-1.5 1.4-.4.6-.6 1.2-.8 1.9a9.3 9.3 0 000 4.4c.2.7.5 1.4.9 2a4.4 4.4 0 003.7 1.8 4 4 0 002.2-.6c.6-.3 1.1-.7 1.5-1.3a6 6 0 00.8-2l.2-2.2c0-.8-.1-1.5-.3-2.2zm5.6-.9c.3-1 .8-2 1.4-2.7a8 8 0 012.4-1.7c2.1-.9 4.4-.9 6.5 0a6.8 6.8 0 013.8 4.4 10.7 10.7 0 010 6.4c-.3 1-.8 1.9-1.4 2.7a8 8 0 01-2.4 1.7c-2 .8-4.4.8-6.5 0a8 8 0 01-2.4-1.7 7.4 7.4 0 01-1.4-2.7 10.7 10.7 0 010-6.5zm2.6 5.8c.2.6.6 1.3 1 1.8a4.5 4.5 0 003.4 1.6c.7 0 1.3-.2 2-.4l1.5-1.2c.4-.5.8-1.2 1-1.8.5-1.7.5-3.5 0-5.1-.2-.7-.6-1.4-1-2a4.4 4.4 0 00-3.5-1.5c-.6 0-1.2.2-1.8.4-.6.3-1.2.7-1.6 1.2-.4.5-.8 1.2-1 1.9a8.9 8.9 0 000 5zm17.7-10.5H118v15.8h2.6V8.9zm6.3 0v2.5c1.1-2 2.8-2.9 5.1-2.9.9 0 1.8.2 2.6.5a4 4 0 011.6 1.1c.4.6.8 1.2.9 1.9.2.7.3 1.5.3 2.3v10.4h-2.6V14a3.2 3.2 0 00-.9-2.3 3.1 3.1 0 00-2.3-.9 4.5 4.5 0 00-3.4 1.4 5 5 0 00-.9 1.6c-.2.6-.3 1.3-.3 2v8.9h-2.5V8.9h2.4zm21 0v2.3h-3.2V21l.1.7c0 .2.2.3.3.5l.6.1h2.1v2.4h-2a9 9 0 01-1.6-.2 2 2 0 01-1.2-.5c-.3-.2-.5-.6-.6-1a6 6 0 01-.2-1.8v-10h-2.6V8.9h2.6V4.2h2.5v4.7h3.1zM.7 15L3 17.3l7.4 7.4 3.2-3.3a1.2 1.2 0 000-1.4l-3-2.7-3-3.2a1.2 1.2 0 010-1.5L16 3.9 12.2 0 3 9.3.7 11.7a2.3 2.3 0 00-.7 1.6A2.4 2.4 0 00.7 15z"/>
+        <path d="M26 19.1l-2.4-2.4-7.4-7.3-3.2 3.3a1.2 1.2 0 000 1.4l3 2.7 3 3.2a1.1 1.1 0 010 1.5l-8.5 8.6 3.9 4 9.1-9.3 2.4-2.4a2.3 2.3 0 00.6-1.7 2.4 2.4 0 00-.6-1.6zM52.2 7.2c.8 0 1.5-.7 1.5-1.5 0-.9-.7-1.5-1.5-1.5s-1.5.6-1.5 1.5c0 .8.7 1.5 1.5 1.5zm67.2 0c.8 0 1.5-.7 1.5-1.5 0-.9-.7-1.5-1.5-1.5s-1.5.6-1.5 1.5c0 .8.7 1.5 1.5 1.5z"/>
+      </g>
+    </symbol>
+    <symbol id="bird" viewBox="0 0 235.4 291.6">
+      <path fill="snow" fill-rule="evenodd" d="M203.9 28.3l-13.5 176-137.7-44 88.6 159.5 57 3.8 2 4.1L23 410l120.9-7.6-67.3 62.7 154.7-66 57-4.6 1.3.4v-.4h.4l37-55.7 28.6-42.7-21.2 32 42.4 17.5-21.2-49.5-53.1-5.9-13.5 12.6-.7-131.9L204 28.3zM221.5 87a6.8 6.8 0 11-13.5-1.5 6.8 6.8 0 0113.5 1.5z" clip-rule="evenodd" transform="matrix(.66 0 0 .66 -15.2 -18.4)"/>
+      <path fill="url(#gradient-2)" d="M2012 948.5l70-3.7 25-35.8-16.8-33.5-78.3 73z" transform="translate(-1904.3 -701)"/>
+      <path fill="#C4C4C4" d="M288.6 303.3L258.9 326l30 69.8-.3-92.6z" transform="matrix(.66 0 0 .66 -15.2 -18.4)"/>
+      <path fill="url(#gradient-4)" d="M1924.3 789.8l59 105.4 60 4-19.6-77.8-99.4-31.6z" transform="translate(-1904.3 -701)"/>
+      <path fill="url(#paint2_linear)" fill-rule="evenodd" d="M2024.5 700.9l56 95.5-67 56.8 11-152.3z" clip-rule="evenodd" transform="translate(-1904.3 -701)"/>
+      <path fill="url(#paint3_radial)" d="M2090.3 875.5l16.2 32.3 19-28.4-35.3-3.9z" transform="translate(-1904.3 -701)"/>
+      <path fill="url(#paint4_linear)" d="M1904.6 955.1l128.2-59.4 14.7 31.6-107.3 64.5 102.8-44.5-138.4 7.8z" transform="translate(-1904.3 -701)"/>
+      <path fill="url(#paint5_linear)" d="M2032.4 896.4l18.3 47.8-111 48.3L1988 947l44.5-50.6z" transform="translate(-1904.3 -701)"/>
+      <path fill="url(#paint6_linear)" d="M2080.5 796.4a740.5 740.5 0 00-79.4 59l43.5 92.5c15 .3 23-.2 36.7-2l-.8-149.5z" transform="translate(-1904.3 -701)"/>
+      <path fill="url(#paint7_linear)" d="M2139.6 912.3l-14-32.9-14.1 21.2 28.1 11.7z" transform="translate(-1904.3 -701)"/>
+    </symbol>
+    <linearGradient id="gradient-2" x1="317" x2="236.1" y1="400.5" y2="327.3" gradientTransform="translate(1889 682.5) scale(.66455)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="0.7" stop-color="#E9E9EA"/>
+      <stop offset="0.9" stop-color="#C5C6C8"/>
+    </linearGradient>
+    <linearGradient id="gradient-4" x1="103.6" x2="187.9" y1="247.5" y2="225.4" gradientTransform="translate(1889 682.5) scale(.66455)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="0.8" stop-color="#E9E9EA"/>
+      <stop offset="1" stop-color="#D6D7D8"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear" x1="187.1" x2="239.3" y1="146.1" y2="217.7" gradientTransform="translate(1889 682.5) scale(.66455)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="0.8" stop-color="#E9E9EA"/>
+      <stop offset="1" stop-color="#C5C6C8"/>
+    </linearGradient>
+    <radialGradient id="paint3_radial" cx="0" cy="0" r="1" gradientTransform="matrix(-18.1 14.5 -29.84 -37.29 2121.5 891.4)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="0.8" stop-color="#E9E9EA"/>
+      <stop offset="1" stop-color="#C5C6C8"/>
+    </radialGradient>
+    <linearGradient id="paint4_linear" x1="119.7" x2="165.2" y1="380" y2="427.6" gradientTransform="translate(1889 682.5) scale(.66455)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="0.4" stop-color="#E9E9EA"/>
+      <stop offset="1" stop-color="#C5C6C8"/>
+    </linearGradient>
+    <linearGradient id="paint5_linear" x1="133.3" x2="155.1" y1="383.6" y2="443.5" gradientTransform="translate(1889 682.5) scale(.66455)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="0.4" stop-color="#E9E9EA"/>
+      <stop offset="1" stop-color="#C5C6C8"/>
+    </linearGradient>
+    <linearGradient id="paint6_linear" x1="229" x2="313.5" y1="264.7" y2="276.7" gradientTransform="translate(1889 682.5) scale(.66455)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="0.8" stop-color="#E9E9EA"/>
+      <stop offset="1" stop-color="#C5C6C8"/>
+    </linearGradient>
+    <linearGradient id="paint7_linear" x1="370" x2="339" y1="337.9" y2="316.3" gradientTransform="translate(1889 682.5) scale(.66455)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="0.8" stop-color="#E9E9EA"/>
+      <stop offset="1" stop-color="#C5C6C8"/>
+    </linearGradient>
+  </defs>
+  <rect class="screen" width="875" height="562" x="31" y="2" fill="#000" stroke="url(#paint0_linear)" stroke-width="4" rx="20"/>
+  <rect class="lp-top" width="938" height="11" y="565" fill="url(#paint1_linear)"/>
+  <path class="lp-bot" fill="#C4C4C4" d="M0 575h938c0 6-5 11-11 11H11c-6 0-11-5-11-11z"/>
+  <g class="mask" transform="matrix(1, 0, 0, 1, 62.369556, -47.506119)" style="clip-path: url(#screen-mask);">
+    <g class="page">
+      <rect width="828" height="1080" fill="#fff"/>
+      <g>
+        <rect width="828" height="851" y="229" fill="#fff"/>
+        <text class="body-text" style="white-space: pre;">
+        <tspan x="66" y="956.1">My personal love of typography is twofold. As a designer, I enjoy working with type for the artistic aspects of it. I like the unique voices that different </tspan><tspan x="66" y="975.1">fonts provide, and the expressiveness of type like the example below After all, the root words that comprise typography aretypos, meaning impression </tspan><tspan x="66" y="994.1">or mark, andgrapheia, meaning writing.Typographyliterally means making impressions with writing. As a programmer, I also appreciate the </tspan><tspan x="66" y="1013.1">puzzle—like problem solving that working with type involves. The choices of font and color are only the tip of the type iceberg. In fact, the majority of </tspan><tspan x="66" y="1032.1">the decisions that need to be made in our work with type involve the spacearoundthe letterforms and text blocks, rather than the actual type itself. </tspan><tspan x="66" y="1051.1">Nevertheless, choosing an appropriate typeface is a crucial step. </tspan><tspan x="66" y="1070.1"/>
+      </text>
+        <text class="body-text" style="white-space: pre;">
+        <tspan x="66" y="833.1">In order to unlock the potential of type, we must first understand it. Admittedly, this is no easy task. The minute details of letterforms and the spaces </tspan><tspan x="66" y="852.1">around them have been carefully calculated over centuries of investigation and practice. In the early days of print, every letter of every typeface had to </tspan><tspan x="66" y="871.1">be carved into wood or cast from lead, inked, and then pressed into paper. This was a professional craft requiring exacting attention to detail. Even </tspan><tspan x="66" y="890.1">though the physical craft has long been surpassed by modern printing methods, many colleges and universities offer classes in letterpress, so that </tspan><tspan x="66" y="909.1">future graphic designers can both appreciate the benefits of working with type on a computer and see the potential for typographic exploration.</tspan>
+      </text>
+        <g>
+          <rect width="684" height="156" x="71.5" y="629.5" fill="#F5FAFE" stroke="#EEF3F6" rx="16.5"/>
+          <rect width="684" height="33" x="71.5" y="629.5" fill="#EBF2FA" stroke="#EEF3F6" rx="16.5"/>
+          <text fill="#36424E" style="white-space:pre" font-family="Roboto" font-size="21.5" letter-spacing="0em">
+          <tspan x="119" y="654.3">This Topic May Be Addictive!</tspan>
+        </text>
+          <text class="body-text" style="white-space: pre; fill: rgb(51, 51, 51); font-family: Roboto; font-size: 10.5px; line-height: 16.8px; perspective-origin: 346.688px 0px;">
+          <tspan x="91" y="700.1">After studying typography for some time, you’ll never look at a billboard, brochure, or book the same way again. You might start snapping </tspan><tspan x="91" y="719.1">pictures of ride signage at theme parks rather than of your kids. Pondering whether the entrées in a restaurant menu are set in Cantoria or </tspan><tspan x="91" y="738.1">Meyer Two may become more interesting than choosing between the entrées themselves. The study of typography is one that draws many </tspan><tspan x="91" y="757.1">people in … and never lets them go! Consider yourself warned.</tspan>
+        </text>
+          <g>
+            <path fill="#E03030" d="M105 646a17 17 0 11-34 0 17 17 0 0134 0z"/>
+            <path fill="#000" fill-rule="evenodd" d="M88 661.8a15.8 15.8 0 100-31.6 15.8 15.8 0 000 31.6zm0 1.2a17 17 0 100-34 17 17 0 000 34z" clip-rule="evenodd"/>
+            <path fill="#fff" d="M91 638.2c-.5 0-.9.2-1.2.4a1.6 1.6 0 00-3.2.2 1.6 1.6 0 00-2.8 1v7.8l-1.6-3a1.6 1.6 0 00-2.9 1.6l3.4 6.3c.2.5.6.7 1 .9.8 1 2 1.6 3.5 1.6h2.7a4.4 4.4 0 004.3-5c.7-.2 1.1-.8 1.1-1.5v-5.8a1.6 1.6 0 00-2.7-1.2v-1.7c0-.9-.7-1.6-1.6-1.6z"/>
+            <path fill="#000" d="M93.8 640.6c-.4 0-.7 0-1 .2v-1.2a1.9 1.9 0 00-2.9-1.5 1.9 1.9 0 00-3.5 0c-.3-.2-.7-.3-1-.3-1 0-2 .8-2 1.8v7l-1.2-2.3c-.2-.4-.6-.7-1-.9-.6 0-1 0-1.5.2a2 2 0 00-.7 2.6l2.5 5c.9 1.8 1.9 3 2.9 3.7.8.6 1.3.6 1.4.6h4.7c.8 0 1.5-.2 2.2-.7.6-.5 1.2-1.2 1.6-2.1a16 16 0 001.4-7v-3.3c0-1-.9-1.8-2-1.8zm1 5.1c0 2.7-.5 5-1.3 6.6-.5 1-1.5 2.3-3 2.3h-4.7s-.4 0-1-.5a9.1 9.1 0 01-2.5-3.3l-2.4-5a1 1 0 01.3-1.4h.7c.2 0 .4.2.5.4l1.5 2.5c.3.6.6.8 1 .7.3 0 .5-.4.5-1v-7.4a1 1 0 011.9 0v6.1a.5.5 0 001 0v-7a1 1 0 011.8 0v7a.5.5 0 001 0v-6a1 1 0 011.8 0v7a.5.5 0 001 0v-4.3a1 1 0 011.8 0v3.3z"/>
+          </g>
+        </g>
+        <text class="body-text" style="white-space: pre; fill: rgb(51, 51, 51); font-family: Roboto; font-size: 10.5px; line-height: 16.8px; perspective-origin: 345.703px 0px;">
+        <tspan x="70" y="546.1">There are numerous obstacles to the effective customization of typography for the Web—and I'll address these in the coming pages—but the power of </tspan><tspan x="70" y="565.1">type should be motivation enough to push the proverbial envelope. Unconvinced? Pick up a magazine, turn on a television, or take a walk through a </tspan><tspan x="70" y="584.1">grocery store. You'll undoubtedly see hundreds of creative and effective uses of type. It's the substance of branding, the key to unspoken </tspan><tspan x="70" y="603.1">communication, and an essential piece of the web design pie.</tspan>
+      </text>
+        <text class="body-text" style="white-space: pre; fill: rgb(51, 51, 51); font-family: Roboto; font-size: 10.5px; line-height: 16.8px; perspective-origin: 345.406px 0px;">
+        <tspan x="70" y="449.1">Let's face it: the core purpose of all web design is communication. Whether we're talking about an online retail store, a web presence for a Fortune </tspan><tspan x="70" y="468.1">500 company, or a profile for a social networking site, typography is a vital component of your message. For most people, typography is simply about </tspan><tspan x="70" y="487.1">arranging a familiar set of shapes to make words, sentences, and paragraphs. But ironically, having the ability to set type with only a few mouse clicks </tspan><tspan x="70" y="506.1">or strokes on a keyboard has allowed us to forget about the creative and artistic possibilities of this medium.</tspan>
+      </text>
+        <g>
+          <text fill="#22252C" style="white-space:pre" font-family="Roboto" font-size="21.5" font-weight="500" letter-spacing="0em">
+          <tspan x="421" y="344.3">Typography</tspan>
+        </text>
+          <text fill="#A1ABB1" style="white-space:pre" font-family="Roboto" font-size="15" font-weight="500" letter-spacing="0em">
+          <tspan x="592" y="336.6">Chapter</tspan>
+        </text>
+          <text fill="#425265" style="white-space:pre" font-family="Roboto" font-size="88" letter-spacing="0em">
+          <tspan x="595" y="416.1">4</tspan>
+        </text>
+          <text fill="#969696" style="white-space:pre" font-family="Roboto" font-size="21.5" letter-spacing="0em">
+          <tspan x="110" y="396.3">Jason Beaird, James George and Alex Walker</tspan>
+        </text>
+          <line x1="551.5" x2="551.5" y1="323" y2="403" stroke="#000"/>
+        </g>
+      </g>
+      <g>
+        <g class="hero">
+          <rect width="828" height="261" fill="#333"/>
+          <text fill="#fff" style="white-space:pre" font-family="Roboto" font-size="21.5" letter-spacing="0em">
+          <tspan x="238" y="100.3">The Principles of Beautiful Web Design, 4th Edition</tspan>
+        </text>
+          <text class="hero-text" style="white-space: pre; fill: rgb(255, 255, 255); font-family: Roboto; font-size: 10.5px; line-height: 16.8px; perspective-origin: 437.938px 0px;">
+          <tspan x="238" y="143.1">Lavishly illustrated with detailed examples, The Principles of Beautiful Web Design is an easy-to-follow guide </tspan><tspan x="238" y="162.1">that will lead you through the process of creating great designs from start to finish. No prior web design </tspan><tspan x="238" y="181.1">experience is required.</tspan>
+        </text>
+        </g>
+        <use transform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#toolbar"/>
+        <rect width="828" height="34" fill="#000"/>
+        <use transform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#header"/>
+        <g class="the-book" transform="matrix(0.212, 0, 0, 0.212, 71.7, 64.83)">
+          <rect width="597" height="730" x="73.33" y="-67.597" style="fill:url(#gradient-3)"/>
+          <g id="cloud" transform="matrix(1, 0, 0, 1, 73.33, -67.6)">
+            <path fill="url(#gradient-1)" d="M597.3 461.9l-.1 265.5-597.5 1.2V207.8c68 7.4 131.2 38.6 168 83.3 39.2 47.6 47.5 109.5 21.6 162.3 26-12 56-11 81.1 2.5 22.8 13.6 33 38.6 24.2 60 8.5-16.4 31-23.8 53.1-19.5 22.2 4.3 38.3 22.3 35.8 39.8 23.1-40.8 72.1-67.8 128.7-76.7a238 238 0 0171 .1l14.1 2.3z" class="cls-26"/>
+            <path fill="rgba(255, 255, 255, 0.18)" d="M597 729.5L.3 730.6v-317c37.2 4.3 73.2 16 105.8 34.2 75.8 43.8 112.2 125 85.2 195 17.7-27.4 58.2-42.5 98-44.7 39.6-2.2 80.2 12.9 102.7 38.1a73 73 0 019.5 87.5c30.8-41.5 101-56.7 161.2-47 28.5 4.6 11.6.3 34.6 8.6l-.3 44.2z" class="cls-26"/>
+          </g>
+          <g transform="matrix(1, 0, 0, 1, 73.330276, -67.596931)">
+            <use width="134.7" height="29.4" transform="matrix(1, 0, 0, 1, 420, 57)" xlink:href="#sitepoint"/>
+            <use width="200" height="262" transform="matrix(1, 0, 0, 1, 100, 350)" xlink:href="#bird"/>
+          </g>
+          <text class="book-text" style="font-size: 31px; font-weight: 600; text-anchor: end; white-space: pre;" x="630.983" y="78.232"><tspan x="631" dy="1em">​</tspan>    THE PRINCIPLES OF</text>
+          <g fill="#fff" transform="matrix(1, 0, 0, 1, 73.33, -67.6)">
+            <title>
+      Fourth Ed Authors
+    </title>
+            <text class="book-text" style="font-size: 20px; font-weight: 600; white-space: pre; text-anchor: end;" x="550" y="340" transform="matrix(1, 0, 0, 1, 5.5, -20.17)"><tspan x="550" dy="1em">​</tspan>FOURTH EDITION</text>
+            <text class="authors book-text" style="font-size: 16px; font-weight: 500; text-anchor: end; white-space: pre;"><tspan><tspan x="0" dy="1em">​</tspan>      </tspan><tspan x="549" y="360" style="font-family: Inter;">BY JASON BEAIRD,</tspan><tspan x="549" dy="1.1em" style="font-family: Inter;">​JAMES GEORGE,</tspan><tspan x="548" dy="1.1em" style="font-family: Inter;">​&amp; ALEX WALKER</tspan></text>
+          </g>
+          <text class="book-text" style="font-size: 16px; font-weight: 700; text-anchor: middle; white-space: pre;" x="373.33" y="612.403">
+    DESIGNING GREAT WEB SITES IS NOT ROCKET SCIENCE!
+  </text>
+          <text x="-291.362" y="85.223" style="white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Roboto Slab&quot;; font-size: 28px;">    </text>
+          <text transform="matrix(1, 0, 0, 1, 506.873444, 52.036476)" class="book-text" style="font-size: 70.8028px; font-weight: 500; text-anchor: end; white-space: pre;"><tspan x="127.882" y="124.746">BEAUTIFUL</tspan><tspan x="127.882" dy="0.9em">​</tspan><tspan>WEB DESIGN​</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

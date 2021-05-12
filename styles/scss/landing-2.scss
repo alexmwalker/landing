@@ -14,6 +14,7 @@ $bp-wide: 80em;
 @import "gridlex-preprocessing";
 @import "gridlex-mixins";
 @import "gridlex-classes";
+@import "utilities";
 
 @import 'header';
 @import 'hero-landing-2';
@@ -24,13 +25,18 @@ $bp-wide: 80em;
 @import 'why-landing';
 //@import 'sushi-train';
 @import 'reader-demo';
-@import 'authors';
+@import 'talks-landing';
+@import 'course-landing';
+
+
+//@import 'authors';
 @import 'reviews';
 @import 'community';
 @import 'footer';
 
 @import 'media-tweaks';
 @import 'under-construction';
+@import 'buttons-CTAs';
 //@import '3d';
 
 .sitepoint-branding{

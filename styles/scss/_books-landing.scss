@@ -1,7 +1,10 @@
 .bookshelf {
     padding-top: calc(var(--baseline) / 1);
-    outline: 1px red dashed;
+    //outline: 1px red dashed;
     .col img{
         box-shadow: 3px 3px 3px var(--boxshadow);
+    }
+    .teal{
+        margin-top: calc(var(--baseline) / 1);
     }
 }

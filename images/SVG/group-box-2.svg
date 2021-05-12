@@ -15,7 +15,7 @@
     }
 
     100% {
-     transform: translateX(-268px)
+     transform: translateX(-300px)
     }
    }
 
@@ -284,15 +284,17 @@
  <use class="think0" width="170.5" height="139" transform="matrix(0.4, 0, 0, 0.4, 262, 667.5)" href="#thinker" />
  <use class="think1" width="170.5" height="139" transform="matrix(0.4, 0, 0, 0.4, 511.1, 601)" href="#thinker-rev" />
  <use class="think2" width="170.5" height="139" transform="matrix(0.4, 0, 0, 0.4, 590.5, 798.9)" href="#thinker-rev" />
-
- <svg x="613" y="642" clip-path="url(#clipper)" style="animation: fader 4.5s infinite; animation-delay: -3.0s">
-  <use width="300" height="100%" y="0" x="0" href="#logoline" style="animation: logoswitch 36s steps(8) infinite;animation-delay:-12s" />
+ 
+ <svg x="532" y="443" clip-path="url(#clipper)" style="animation: fader 4s infinite">
+  <use width="300" height="100%" y="0" x="0" href="#logoline" style="animation: logoswitch 36s steps(9) infinite;" />
  </svg>
 
- <svg x="275" y="510" clip-path="url(#clipper)" style="animation: fader 4.5s infinite; animation-delay: -1.5s">
-  <use width="300" height="100%" y="0" x="0" href="#logoline" style="animation: logoswitch 36s steps(8) infinite;animation-delay:-24s" />
+ <svg x="613" y="642" clip-path="url(#clipper)" style="animation: fader 4s infinite; animation-delay: -1.33s">
+  <use width="300" height="100%" y="0" x="0" href="#logoline" style="animation: logoswitch 36s steps(9) infinite;animation-delay:-13.33s" />
  </svg>
- <svg x="532" y="443" clip-path="url(#clipper)" style="animation: fader 4.5s infinite">
-  <use width="300" height="100%" y="0" x="0" href="#logoline" style="animation: logoswitch 36s steps(8) infinite;" />
+
+ <svg x="275" y="510" clip-path="url(#clipper)" style="animation: fader 4s infinite; animation-delay: -2.66s">
+  <use width="300" height="100%" y="0" x="0" href="#logoline" style="animation: logoswitch 36s steps(9) infinite;animation-delay:-26.66s" />
  </svg>
+ 
 </svg>
