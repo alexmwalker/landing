@@ -3146,9 +3146,9 @@ html.offline #offline-notification {
 .talks-landing, .courses-landing {
   color: #ccc;
   background: #020024;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0.6)), to(rgba(9, 9, 121, 0.4))), url(../../images/talks-bg.jpg);
-  background-image: -o-linear-gradient(left, rgba(2, 0, 36, 0.6) 0%, rgba(9, 9, 121, 0.4) 100%), url(../../images/talks-bg.jpg);
-  background-image: linear-gradient(90deg, rgba(2, 0, 36, 0.6) 0%, rgba(9, 9, 121, 0.4) 100%), url(../../images/talks-bg.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0.6)), to(rgba(9, 9, 121, 0.4))), url(/images/talks-bg.jpg);
+  background-image: -o-linear-gradient(left, rgba(2, 0, 36, 0.6) 0%, rgba(9, 9, 121, 0.4) 100%), url(/images/talks-bg.jpg);
+  background-image: linear-gradient(90deg, rgba(2, 0, 36, 0.6) 0%, rgba(9, 9, 121, 0.4) 100%), url(images/talks-bg.jpg);
   background-size: auto auto, 100% auto;
   padding: 0;
 }
@@ -3184,15 +3184,15 @@ html.offline #offline-notification {
 }
 
 .courses-landing {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(35, 36, 0, 0.6)), to(rgba(121, 104, 9, 0.4))), url(../../images/course-bg.jpg);
-  background-image: -o-linear-gradient(left, rgba(35, 36, 0, 0.6) 0%, rgba(121, 104, 9, 0.4) 100%), url(../../images/course-bg.jpg);
-  background-image: linear-gradient(90deg, rgba(35, 36, 0, 0.6) 0%, rgba(121, 104, 9, 0.4) 100%), url(../../images/course-bg.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(35, 36, 0, 0.6)), to(rgba(121, 104, 9, 0.4))), url(/images/course-bg.jpg);
+  background-image: -o-linear-gradient(left, rgba(35, 36, 0, 0.6) 0%, rgba(121, 104, 9, 0.4) 100%), url(/images/course-bg.jpg);
+  background-image: linear-gradient(90deg, rgba(35, 36, 0, 0.6) 0%, rgba(121, 104, 9, 0.4) 100%), url(/images/course-bg.jpg);
 }
 
 .course-landing {
   color: #aaa;
   background: #2a2a2a;
-  background-image: url(images/course-bg.jpg);
+  background-image: url(/images/course-bg.jpg);
   padding: calc(var(--baseline)*1.5) 0;
 }
 .course-landing .container {
