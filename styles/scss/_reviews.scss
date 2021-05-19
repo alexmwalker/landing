@@ -1,5 +1,5 @@
 .reviews{
-  padding: calc(var(--baseline)*3) 0 ;
+  padding: calc(var(--baseline) * 3) 0 ;
 
   h2{
     margin-bottom: calc(var(--baseline)*2);
@@ -24,10 +24,10 @@
   background-repeat: no-repeat;
   width: calc(var(--baseline)*5);
   height: calc(var(--baseline)*1);
-  margin: 0 auto calc(var(--baseline)*1);
+  margin: 0 auto calc(var(--baseline) * 1);
 }
 .twitter-avatar {
-  margin: calc(var(--baseline)/2) 0 calc(var(--baseline)/1);
+  margin: calc(var(--baseline) / 2) 0 calc(var(--baseline)/1);
   font-size: calc(1rem / var(--typescale) / var(--typescale)); 
   font-weight: 500;
   text-align: right;

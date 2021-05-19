@@ -24,16 +24,19 @@
     }
 
   }
-  .company-logo{
+  .company-logo, .publisher-logo{
     height: calc(var(--baseline) * 1.5) ;
     margin: 0 auto;
+  }
+  .publisher-logo{
+    width: 70% ;
   }
 }
 
 .tech{
   color: #aaa;
   background: #2a2a2a;
-  padding: calc(var(--baseline)*1.5) 0;
+  padding: calc(var(--baseline) * 1.5) 0;
   .container{
     width: 90%;
     //outline: 1px red dashed;
