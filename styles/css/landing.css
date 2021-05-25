@@ -2774,33 +2774,24 @@ html.offline #offline-notification {
   background: red;
 }
 
-#reader-demo {
-  padding: calc(var(--baseline)*2) 0 calc(var(--baseline)*1.5);
-  background: #F7F5F5;
+.reader-demo {
+  color: #ccc;
+  background: #2a2a2a;
+  background-image: url(/images/tile.png);
+  padding: calc(var(--baseline)*1.5) 0;
 }
-
-.features {
-  margin: calc(var(--baseline)*1) 0 calc(var(--baseline)*1);
+.reader-demo .container {
+  width: 90%;
 }
-.features h4 {
-  margin-bottom: calc(var(--baseline)/2);
+.reader-demo h3, .reader-demo a {
+  color: #ccc;
+  margin-bottom: calc(var(--baseline)/1);
 }
-.features img.leadin {
-  height: calc(var(--baseline)*2);
+.reader-demo .laptop {
+  height: calc(var(--baseline) * 11);
 }
-
-.part1, .part2, .part3 {
-  /* Live Code */
-  padding: calc(var(--baseline)*1) 0 calc(var(--baseline)*1.5);
-  background: #fff;
-}
-.part1 img.illustration, .part2 img.illustration, .part3 img.illustration {
-  width: 85%;
-}
-
-.part2 {
-  /* Bookmarks */
-  background: #F7F5F5;
+.reader-demo .laptop img {
+  height: 100%;
 }
 
 .authors {
@@ -2832,7 +2823,7 @@ html.offline #offline-notification {
 }
 
 .reviews {
-  padding: calc(var(--baseline)*3) 0;
+  padding: calc(var(--baseline) * 3) 0;
 }
 .reviews h2 {
   margin-bottom: calc(var(--baseline)*2);
@@ -2858,11 +2849,11 @@ html.offline #offline-notification {
   background-repeat: no-repeat;
   width: calc(var(--baseline)*5);
   height: calc(var(--baseline)*1);
-  margin: 0 auto calc(var(--baseline)*1);
+  margin: 0 auto calc(var(--baseline) * 1);
 }
 
 .twitter-avatar {
-  margin: calc(var(--baseline)/2) 0 calc(var(--baseline)/1);
+  margin: calc(var(--baseline) / 2) 0 calc(var(--baseline)/1);
   font-size: calc(1rem / var(--typescale) / var(--typescale));
   font-weight: 500;
   text-align: right;

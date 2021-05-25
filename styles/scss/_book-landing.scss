@@ -1,0 +1,33 @@
+.books{
+    padding: (calc(var(--baseline)*1.5)) 0 ;
+    .container{
+      width: 90%;
+    }
+    h2{
+      color: #333;
+      margin-bottom: calc(var(--baseline)/2) ;
+      text-align: center;
+    }
+    p{
+        //font-size: calc(1rem / var(--typescale) / var(--typescale));     
+        position: relative;
+        text-align: center;
+        bottom: 0;
+        }
+    .col{
+      text-align: center;
+      min-height: calc(var(--baseline) * 2.0);
+      img{
+          height: calc(var(--baseline) * 5.0);
+          margin-bottom: calc(var(--baseline)/1) ;
+      }
+
+        p{
+            font-size: calc(1rem / var(--typescale)/ var(--typescale));       
+            line-height: calc(var(--baseline) /2);
+        }
+  
+    }
+
+  }
+  

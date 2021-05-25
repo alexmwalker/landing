@@ -1,0 +1,44 @@
+.talks-landing, .courses-landing{
+    color: #ccc;
+    background: rgba(2,0,36,1);
+    background-image: linear-gradient(90deg, rgba(2,0,36,0.6) 0%, rgba(9,9,121,0.4) 100%), url(../../images/talks-bg.jpg);
+    background-size: auto auto, 100% auto;
+    padding: 0 ;
+    .container{
+      width: 90%;
+    }
+    h2, p{
+      color: #eee;
+      margin-bottom: calc(var(--baseline)/1) ;
+    }
+    h2{
+      margin-top: calc(var(--baseline) * 3
+      ) ;
+    }
+    .stack{
+      padding: calc(var(--baseline)/2) 1.5rem;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      figure{
+        img{
+          width: 100%;
+          margin:  calc(var(--baseline) / 1) 0 calc(var(--baseline) / 2);
+        }
+        figcaption{
+          font-size: calc(1rem / var(--typescale));
+          font-weight: 500;
+          line-height: calc(var(--baseline) / 2);
+          margin: 0;
+          span{
+          display: block;
+          font-weight: 300;
+          font-size: calc(1rem / var(--typescale)  / var(--typescale));
+          }
+        }
+      }
+    }
+  }
+
+.courses-landing{  
+  background-image: linear-gradient(90deg, rgba(35, 36, 0, 0.6) 0%, rgba(121, 104, 9, 0.4) 100%), url(../../images/course-bg.jpg);
+}

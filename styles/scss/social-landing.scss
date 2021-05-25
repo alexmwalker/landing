@@ -1,0 +1,45 @@
+.social{
+    margin: calc(var(--baseline) * 2) 0 calc(var(--baseline) * 2);
+}
+
+.tweetbox{
+    border: 2px #2AA2EF solid;
+    padding: calc(var(--baseline)/2) 1rem;
+    line-height: calc(var(--baseline) / 2);
+    margin-bottom: calc(var(--baseline) / 2);
+    .tweet-title{
+        font-size: calc(1rem / var(--typescale)); 
+        font-weight: 500;
+    }
+    .twittername{
+        font-weight: 300;
+        color: #aaa ;
+        display: block;
+        
+        font-size: calc(1rem / var(--typescale) / var(--typescale)); 
+    }
+    .avatar{
+        width: calc(var(--baseline) * 1.0);
+        height: calc(var(--baseline) * 1.0);
+        border-radius: 50%;
+        margin-right: 1rem;
+        float: left;
+    }
+
+}
+.tweet-body {
+    p {
+        font-size: calc(1rem / var(--typescale) / var(--typescale));  
+        margin: calc(var(--baseline)/2) 0;   
+        line-height: calc(var(--baseline)/2);
+    }
+    a{
+    color: #2AA2EF;
+    font-weight: 400;
+    }
+    time{
+        color: #aaa ;
+        display: list-item;
+        list-style-position: inside;
+    }
+}
