@@ -106,7 +106,7 @@ b, strong {
 
 .container {
   width: 96%;
-  max-width: 62rem;
+  max-width: 68rem;
   margin: 0 auto !important;
   color: var(--basefontcolor);
 }
@@ -2195,6 +2195,9 @@ input[type=checkbox] {
   -ms-flex-line-pack: stretch;
       align-content: stretch;
   text-align: right;
+}
+.sitepoint-branding ul.nav svg {
+  outline: 1px red dashed;
 }
 .sitepoint-branding ul.nav li {
   padding: 0 1rem;
