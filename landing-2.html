@@ -10,7 +10,7 @@
     <script src="https://cdn.staticaly.com/gist/alexmwalker/59a0b8f1186f1770e66354f9a05b9dea/raw/76320cef35d97feebfdf80db4e7f1ce6c8fb44d8/typography-inspector.js" type="text/javascript"></script>
     <!-- script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")-->
   </head>
-  <body class="-vr -labelling -borders">
+  <body class="-vr -labelling borders">
     <!-- header-simple.pug-->
     <!-- Set `- var hidesearch = 1` on top of page to hide the navbar search (see 'search.pug')-->
     <!-- -->
@@ -289,41 +289,40 @@
         </div>
       </div>
     </section>
-    <section class="social">
+    <section class="account-creation">
       <div class="container">
-        <div class="grid">
-          <div class="col-12 align-c">
-            <h2>What our members says...</h2>
+        <div class="grid-center"> 
+          <div class="col-5">
+            <h2>Get unlimited access to  SitePoint Premium now!</h2>
+            <ul class="minor"> 
+              <li>Unlimited Access to our entire library of courses and books</li>
+              <li>Join the SitePoint Community of over 100,000 developers</li>
+              <li>No lock ins, cancel at any time</li>
+            </ul>
           </div>
-        </div>
-        <div class="grid-3_sm-1"> 
-          <div class="col">
-            <div class="tweetbox">
-              <div class="tweet-title"> <img class="avatar" src="images/authors/hammad.png"/><a href="#">Hammad Ahmed</a><a class="twittername" href="#">@shammadahmed</a></div>
-              <div class="tweet-body"> 
-                <p> <a href="#">#100DaysOfCode </a>Binge watching basic <a href="#">#HTML </a>and #CSS courses on <a href="#">@sitepointdotcom</a>. Filling knowledge gaps I developed as a self-taught <a href="#">#dev.</a>
-                  <time datetime="2017-16-08 20:30">8:30 PM  - 16th Aug 2017</time>
-                </p>
+          <div class="col-5 price-unit">
+            <div class="grid"> 
+              <div class="col-7 main-price">
+                <div class="big-price">$6</div>per month
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="tweetbox">
-              <div class="tweet-title"> <img class="avatar" src="images/authors/author-malcurtis.jpg"/><a href="#">Mal Curtis</a><a class="twittername" href="#">@websnik</a></div>
-              <div class="tweet-body"> 
-                <p> <a href="#">#100DaysOfCode </a>Binge watching basic <a href="#">#HTML </a>and #CSS courses on <a href="#">@sitepointdotcom</a>. Filling knowledge gaps I developed as a self-taught <a href="#">#dev.</a>
-                  <time datetime="2019-30-04 18:12">6:12 PM  - 30th Apr 2019</time>
-                </p>
+              <div class="col-5 flip">                        
+                <input type="checkbox" id="annual" name="annual"/>
+                <label for="annual">Annual</label>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="tweetbox">
-              <div class="tweet-title"> <img class="avatar" src="images/authors/avatar-girl.png"/><a href="#">Faye Milly</a><a class="twittername" href="#">@anotherFan</a></div>
-              <div class="tweet-body"> 
-                <p> <a href="#">#100DaysOfCode </a>Binge watching basic <a href="#">#HTML </a>and #CSS courses on <a href="#">@sitepointdotcom</a>. Filling knowledge gaps I developed as a self-taught <a href="#">#dev.</a>
-                  <time datetime="2019-03-01 02:53">02:53 AM  - 3rd Jan 2019</time>
-                </p>
+              <div class="col-12"> 
+                <div class="align-c">
+                  <button class="pink large">Create your Account</button>
+                </div>
+                <div class="small align-c">Or log in using your social account</div>
+              </div>
+              <div class="col-4"> 
+                <button class="social-fb">Facebook Login </button>
+              </div>
+              <div class="col-4"> 
+                <button class="social-google">Google Login </button>
+              </div>
+              <div class="col-4"> 
+                <button class="social-github">Github Login                     </button>
               </div>
             </div>
           </div>
@@ -402,6 +401,47 @@
                     <figcaption>Introduction to Python<span>With Simon Sez IT</span></figcaption>
                   </figure>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="social">
+      <div class="container">
+        <div class="grid">
+          <div class="col-12 align-c">
+            <h2>What our members says...</h2>
+          </div>
+        </div>
+        <div class="grid-3_sm-1"> 
+          <div class="col">
+            <div class="tweetbox">
+              <div class="tweet-title"> <img class="avatar" src="images/authors/hammad.png"/><a href="#">Hammad Ahmed</a><a class="twittername" href="#">@shammadahmed</a></div>
+              <div class="tweet-body"> 
+                <p> <a href="#">#100DaysOfCode </a>Binge watching basic <a href="#">#HTML </a>and #CSS courses on <a href="#">@sitepointdotcom</a>. Filling knowledge gaps I developed as a self-taught <a href="#">#dev.</a>
+                  <time datetime="2017-16-08 20:30">8:30 PM  - 16th Aug 2017</time>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="tweetbox">
+              <div class="tweet-title"> <img class="avatar" src="images/authors/author-malcurtis.jpg"/><a href="#">Mal Curtis</a><a class="twittername" href="#">@websnik</a></div>
+              <div class="tweet-body"> 
+                <p> <a href="#">#100DaysOfCode </a>Binge watching basic <a href="#">#HTML </a>and #CSS courses on <a href="#">@sitepointdotcom</a>. Filling knowledge gaps I developed as a self-taught <a href="#">#dev.</a>
+                  <time datetime="2019-30-04 18:12">6:12 PM  - 30th Apr 2019</time>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="tweetbox">
+              <div class="tweet-title"> <img class="avatar" src="images/authors/avatar-girl.png"/><a href="#">Faye Milly</a><a class="twittername" href="#">@anotherFan</a></div>
+              <div class="tweet-body"> 
+                <p> <a href="#">#100DaysOfCode </a>Binge watching basic <a href="#">#HTML </a>and #CSS courses on <a href="#">@sitepointdotcom</a>. Filling knowledge gaps I developed as a self-taught <a href="#">#dev.</a>
+                  <time datetime="2019-03-01 02:53">02:53 AM  - 3rd Jan 2019</time>
+                </p>
               </div>
             </div>
           </div>
