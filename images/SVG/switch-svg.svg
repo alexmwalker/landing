@@ -105,17 +105,17 @@
     <title>
       keys
     </title>
-    <rect width="41" height="4" x="42" y="561" fill="#AAA"/>
-    <rect width="41" height="4" x="90" y="561" fill="#AAA"/>
-    <rect width="41" height="4" x="138" y="561" fill="#AAA"/>
-    <rect width="41" height="4" x="186" y="561" fill="#AAA"/>
-    <rect width="41" height="4" x="234" y="561" fill="#AAA"/>
-    <rect width="373" height="4" x="282" y="561" fill="#AAA"/>
-    <rect width="41" height="4" x="666" y="561" fill="#AAA"/>
-    <rect width="41" height="4" x="714" y="561" fill="#AAA"/>
-    <rect width="41" height="4" x="762" y="561" fill="#AAA"/>
-    <rect width="41" height="4" x="810" y="561" fill="#AAA"/>
-    <rect width="41" height="4" x="858" y="561" fill="#AAA"/>
+    <rect width="41" height="4" x="42" y="561" fill="#aaa"/>
+    <rect width="41" height="4" x="90" y="561" fill="#aaa"/>
+    <rect width="41" height="4" x="138" y="561" fill="#aaa"/>
+    <rect width="41" height="4" x="186" y="561" fill="#aaa"/>
+    <rect width="41" height="4" x="234" y="561" fill="#aaa"/>
+    <rect width="373" height="4" x="282" y="561" fill="#aaa"/>
+    <rect width="41" height="4" x="666" y="561" fill="#aaa"/>
+    <rect width="41" height="4" x="714" y="561" fill="#aaa"/>
+    <rect width="41" height="4" x="762" y="561" fill="#aaa"/>
+    <rect width="41" height="4" x="810" y="561" fill="#aaa"/>
+    <rect width="41" height="4" x="858" y="561" fill="#aaa"/>
   </g>
   
  
@@ -124,19 +124,16 @@
  <use id="demo-3" href="#demo-3" class="hide demo-3" />
  
  <foreignObject  width="820" height="500" x="60" y="20">
-    <!--
-      In the context of SVG embedded in an HTML document, the XHTML
-      namespace could be omitted, but it is mandatory in the
-      context of an SVG document
-    -->
   <style> 
-   .embed{ height: 100%;}</style>
+   .embed{ height: 100%;}
+   </style>
+   <iframe xmlns="http://www.w3.org/1999/xhtml" src="https://www.youtube.com/embed/dXBohfjc4WA" width="100%" height="500" ></iframe>
     <div xmlns="http://www.w3.org/1999/xhtml" class="embed">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Sed mollis mollis mi ut ultricies. Nullam magna ipsum,
       porta vel dui convallis, rutrum imperdiet eros. Aliquam
       erat volutpat.
+
     </div>
   </foreignObject>
- 
 </svg>
