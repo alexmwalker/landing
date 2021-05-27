@@ -1,8 +1,10 @@
 .account-creation{
     padding: calc(var(--baseline)*2) 0;
+    
     .container{ 
         border-radius:3px;
         border: 1px #333 solid;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
     h2{
         margin-top: calc(var(--baseline)*1);    
@@ -41,12 +43,12 @@
             color: #333;
             
             &:before{
-                border: 1px #71dd77 solid;
+                border: 1px #2ccc34 solid;
                 transition: all .3s ease-out;
-                background-color: #ecffe7;
+                background-color: #daf8d2;
             }
             &:after{
-                border: 1px #16dd20 solid;
+                border: 1px  #2ccc34 solid;
                 background-color: #fff;
                 right: -2rem;
                 transition: all .3s ease-out;
@@ -64,7 +66,7 @@
             width: 1.25rem;
             height: calc(var(--baseline)/3);
             border-radius: calc(var(--baseline)/4);
-            border: 1px #ccc solid;
+            border: 1px #bbb solid;
             background-color: #eee;
             top: calc(var(--baseline) *.85);
             right: -2rem;
@@ -77,7 +79,6 @@
             right: -1.3rem;
         }
     }
-
 }
 .social-fb, .social-google, .social-github{
     //width: 100%;
@@ -85,7 +86,10 @@
     font-size: calc(1rem/var(--typescale)/var(--typescale));
     color: #fff;
     background: #333;
+    width: 90%;
     padding: 0 1rem 0 2rem;
+    margin-left: 5%; 
+    margin-right: 5%;
     white-space: nowrap;
     //margin-bottom: calc(var(--baseline)/2);
     border-radius: 4px;
@@ -117,7 +121,4 @@
         background-color: #fff;
         color:#000;
     }
-}
-.flip{
-
 }

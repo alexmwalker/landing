@@ -80,7 +80,8 @@ b, strong {
   --basefontcolor-dark: #ddd;
   --basefontcolor-off-white: #f1f1f1;
   --border-light:#ddd;
-  --boxshadow: rgba(0,0,0,0.1);
+  --boxshadow: rgba(0,0,0,0.2);
+  --fxGradient: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
   --gray-icons: #555;
   --search-highlight:#ffc;
   /* Pink button */
@@ -3100,6 +3101,21 @@ html.offline #offline-notification {
   height: 100%;
 }
 
+.laptop-unit {
+  background-image: url(../../images/SVG/laptop-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: calc(var(--baseline) * 15);
+  height: calc(var(--baseline) * 10);
+  padding: 3% 5%;
+  outline: 1px yellow dashed !important;
+}
+.laptop-unit .screen {
+  outline: 1px cyan dashed !important;
+  width: 100%;
+  height: 90%;
+}
+
 .social {
   margin: calc(var(--baseline) * 2) 0 calc(var(--baseline) * 2);
 }
@@ -3149,6 +3165,8 @@ html.offline #offline-notification {
 .account-creation .container {
   border-radius: 3px;
   border: 1px #333 solid;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .account-creation h2 {
   margin-top: calc(var(--baseline)*1);
@@ -3199,14 +3217,14 @@ html.offline #offline-notification {
   color: #333;
 }
 .price-unit input:checked ~ label:before {
-  border: 1px #71dd77 solid;
+  border: 1px #2ccc34 solid;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  background-color: #ecffe7;
+  background-color: #daf8d2;
 }
 .price-unit input:checked ~ label:after {
-  border: 1px #16dd20 solid;
+  border: 1px #2ccc34 solid;
   background-color: #fff;
   right: -2rem;
   -webkit-transition: all 0.3s ease-out;
@@ -3227,7 +3245,7 @@ html.offline #offline-notification {
   width: 1.25rem;
   height: calc(var(--baseline)/3);
   border-radius: calc(var(--baseline)/4);
-  border: 1px #ccc solid;
+  border: 1px #bbb solid;
   background-color: #eee;
   top: calc(var(--baseline) *.85);
   right: -2rem;
@@ -3247,7 +3265,10 @@ html.offline #offline-notification {
   font-size: calc(1rem/var(--typescale)/var(--typescale));
   color: #fff;
   background: #333;
+  width: 90%;
   padding: 0 1rem 0 2rem;
+  margin-left: 5%;
+  margin-right: 5%;
   white-space: nowrap;
   border-radius: 4px;
   position: relative;
