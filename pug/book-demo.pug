@@ -5,18 +5,18 @@ section.reader-demo
         .grid-reverse
           .col-5_md-12
             h3 How did we build a better book?
-            ul 
+            ol.demo-points 
                 li 
-                    a(href="#") Live in-book coding
+                    a(href="demo/demo-book-1.html" target="screen") Live in-book coding
                 li 
-                    a(href="#") Search in-book and across the entire library
+                    a(href="demo/demo-book-2.html" target="screen") Search in-book and across the entire library
                 li
-                    a(href="#") Link people to book content (even if they don’t own the book)
+                    a(href="demo/demo-book-3.html" target="screen") Link people to book content (even if they don’t own the book)
 
-          .col-7_md-12
+          .col-7_md-12.align-c
             .laptop-unit
               .screen
-                iframe(xmlns='http://www.w3.org/1999/xhtml' src='demo/demo-book-1.html' width='100%' height='100%'  )
+                iframe(name="screen" scrolling="no" xmlns='http://www.w3.org/1999/xhtml' src='demo/demo-book-1.html' width='100%' height='100%'  )
                 //include laptop-2.pug 
                 
                 //img(src='images/SVG/demo.svg?cache=4321')

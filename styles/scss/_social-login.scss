@@ -50,7 +50,7 @@
             &:after{
                 border: 1px  #2ccc34 solid;
                 background-color: #fff;
-                right: -2rem;
+                right: -1.95rem;
                 transition: all .3s ease-out;
             }
         }
@@ -59,7 +59,7 @@
         position: relative;
         color:#aaa;
         transition: all .3s ease-out;
-        &:before, &:after{
+        &:before, &:after{ //runner
             display: block;
             position: absolute;
             content: '';
@@ -72,11 +72,13 @@
             right: -2rem;
             transition: all .3s ease-out;
         }
-        &:after{
-            width: calc(var(--baseline)/3);
+        &:after{ //circle
+            width: calc(var(--baseline)/3.5);
+            height: calc(var(--baseline)/3.5);
             z-index: 99;
             background-color: #fff;
-            right: -1.3rem;
+            right: -1.325rem;
+            top: calc(var(--baseline) *.875);
         }
     }
 }
