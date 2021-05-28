@@ -83,7 +83,8 @@ b, strong {
   --basefontcolor-dark: #ddd;
   --basefontcolor-off-white: #f1f1f1;
   --border-light:#ddd;
-  --boxshadow: rgba(0,0,0,0.1);
+  --boxshadow: rgba(0,0,0,0.2);
+  --fxGradient: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
   --gray-icons: #555;
   --search-highlight:#ffc;
   /* Pink button */

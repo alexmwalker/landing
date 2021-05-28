@@ -1,20 +1,87 @@
 
-
-
-.reader-demo{
+.reader-demo{ 
   color: #ccc;
   background: #2a2a2a;
   background-image: url(/images/tile.png);
-  padding: (calc(var(--baseline)*1.5)) 0 ;
+  padding: (calc(var(--baseline) * 1.5)) 0 ;
   .container{
     width: 90%;
   }
-  h3,a{
-    color: #ccc;
-    margin-bottom: calc(var(--baseline)/1) ;
+  h3,a,p{
+    color: #eee;
+    margin-bottom: calc(var(--baseline)/2) ;
+  }
+  a{
+    display: block;
   }
   .laptop {
     height: calc(var(--baseline) * 11);
     img{height: 100%}
   } 
+}
+.laptop-unit{
+  background-image: url(../../images/SVG/laptop-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto ;
+  width: calc(var(--baseline) * 18);
+  height: calc(var(--baseline) * 11.5);
+  padding: 2.5% 5%;
+  margin: 0 auto;
+  position: relative;
+  &:before{
+    /* screen reflection*/
+    display: block;
+    position: absolute;
+    content: '';
+    outline: 1px yellow dashed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 20px);
+    background: linear-gradient(95deg,  rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.22) 90%, rgba(255, 255, 255, 0) 90.5%, rgba(255, 255, 255, 0) 104%);
+    border-radius: 11px;
+
+  }
+  //outline: 1px yellow dashed!important;
+  .screen{
+    //outline: 1px cyan dashed!important;
+    width: 100%;
+    height: 95%;
+  }
+}
+.demo-points{
+  counter-reset: section;
+  list-style-type: none;
+  padding: 0 0 0 1rem ;
+  a{
+    display: block;
+  }
+}
+.demo-points li{
+  color:#fff;
+  position: relative;
+  margin-left: 0rem;
+  padding-left: 2rem;
+  list-style-position: inside;
+  outline: 1px red dashed;
+  margin-bottom: calc(var(--baseline)/2);
+  z-index: 1;
+  &:hover{ color:#fff; font-weight:400}
+  &:before{
+    display: block;
+    counter-increment: section;  /* Increment the value of section counter by 1 */
+    content: counter(section);
+    line-height: calc(var(--baseline) * .75);
+    text-align: center;
+    position: absolute;
+    width: calc(var(--baseline) * .75);
+    height: calc(var(--baseline) * .75);
+    top: calc(var(--baseline) * 0.1);
+    left: 0;
+    margin-left: 0rem;
+    z-index: -1;
+    background:orangered;
+    border-radius: 50%;
+    pointer-events: none;
+  }
 }

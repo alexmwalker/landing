@@ -1,16 +1,49 @@
+.bookshelf-panel{
+    padding: calc(var(--baseline) * 2) 0 calc(var(--baseline) * 1);
+}
 .bookshelf {
     padding-top: calc(var(--baseline) * 2);
     //outline: 1px red dashed;
     .col {
+        position: relative;        
+    }
+    .cover-spine-overlay{
+        width: 80%;
+        margin: 0 auto;
         position: relative;
+        margin-bottom: calc(var(--baseline) / 1);
+        &:after {
+            background: linear-gradient( 
+                90deg,rgba(0,0,0,.3),
+                rgba(73,36,36,0) 1%,
+                hsla(0,0%,98%,.23) 2.5%,
+                rgba(0,0,0,.1) 3.4%,
+                hsla(0,0%,98%,.1) 4.2%,
+                rgba(0,0,0,.1) 5.6%,
+                hsla(0,0%,98%,.2) 6.8%,
+                transparent 25%,
+                transparent 30%,
+                rgba(0,0,0,.2));
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 3;
+        }
         img{
             box-shadow: 3px 3px 3px var(--boxshadow);
+            margin-bottom: 0;
+            width: 100%;
         }
     }
     .teal{
         margin-top: calc(var(--baseline) / 1);
     }
-    .col:nth-of-type(1):before, .col:nth-of-type(6):after{
+
+    // chevrons
+    .col:nth-of-type(1):before, .col:nth-of-type(6):after{ // chevrons
         display: block;
         position: absolute;
         content: '';
@@ -22,6 +55,7 @@
         background-size: 100% auto;
         opacity: .2;
         transition: all .2s;
+        z-index: 9;
     }
     .col:nth-of-type(6):after{
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 15 15'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M7.5 0a7.5 7.5 0 100 15 7.5 7.5 0 000-15zM5 11.8L6.2 13 11 7.5 6.2 2 5 3.2l3.6 4.3L5 11.8z' clip-rule='evenodd'/%3E%3C/svg%3E");
