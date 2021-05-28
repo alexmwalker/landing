@@ -2734,15 +2734,13 @@ html.offline #offline-notification {
 }
 
 .landing-parent {
-  background: #642B73;
-  background-image: -o-linear-gradient(45deg, #642B73 0%, #C6426E 100%);
-  background-image: linear-gradient(45deg, #642B73 0%, #C6426E 100%);
-  /*background-image: 
-    linear-gradient(45deg, 
-    #6441A5 0%, 
-    /*#E94057 50%,*/
-  /*#2a0845 100%);*/
-  background-size: 100% auto;
+  background: #01a131;
+  background-image: -o-radial-gradient(29% 55%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 4%, transparent 4%, transparent 44%, transparent 44%, transparent 100%), -o-radial-gradient(85% 89%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 51%, transparent 51%, transparent 52%, transparent 52%, transparent 100%), -o-radial-gradient(6% 90%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 53%, transparent 53%, transparent 64%, transparent 64%, transparent 100%), -o-radial-gradient(35% 75%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 6%, transparent 6%, transparent 98%, transparent 98%, transparent 100%), -o-radial-gradient(56% 75%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 16%, transparent 16%, transparent 23%, transparent 23%, transparent 100%), -o-radial-gradient(42% 0%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 3%, transparent 3%, transparent 26%, transparent 26%, transparent 100%), -o-radial-gradient(29% 28%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 51%, transparent 51%, transparent 75%, transparent 75%, transparent 100%), -o-radial-gradient(77% 21%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 35%, transparent 35%, transparent 55%, transparent 55%, transparent 100%), -o-radial-gradient(65% 91%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 46%, transparent 46%, transparent 76%, transparent 76%, transparent 100%), -o-linear-gradient(45deg, #535beb, #4c0bae);
+  background-image: radial-gradient(circle at 29% 55%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 4%, transparent 4%, transparent 44%, transparent 44%, transparent 100%), radial-gradient(circle at 85% 89%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 51%, transparent 51%, transparent 52%, transparent 52%, transparent 100%), radial-gradient(circle at 6% 90%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 53%, transparent 53%, transparent 64%, transparent 64%, transparent 100%), radial-gradient(circle at 35% 75%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 6%, transparent 6%, transparent 98%, transparent 98%, transparent 100%), radial-gradient(circle at 56% 75%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 16%, transparent 16%, transparent 23%, transparent 23%, transparent 100%), radial-gradient(circle at 42% 0%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 3%, transparent 3%, transparent 26%, transparent 26%, transparent 100%), radial-gradient(circle at 29% 28%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 51%, transparent 51%, transparent 75%, transparent 75%, transparent 100%), radial-gradient(circle at 77% 21%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 35%, transparent 35%, transparent 55%, transparent 55%, transparent 100%), radial-gradient(circle at 65% 91%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 46%, transparent 46%, transparent 76%, transparent 76%, transparent 100%), linear-gradient(45deg, #535beb, #4c0bae);
+  background: -webkit-gradient(linear, left top, right top, from(#000428), to(#004e92));
+  background: -o-linear-gradient(left, #000428, #004e92);
+  background: linear-gradient(to right, #000428, #004e92);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -3012,15 +3010,39 @@ html.offline #offline-notification {
   position: relative;
 }
 
+.bookshelf-panel {
+  padding-top: calc(var(--baseline) * 2);
+}
+
 .bookshelf {
   padding-top: calc(var(--baseline) * 2);
 }
 .bookshelf .col {
   position: relative;
 }
-.bookshelf .col img {
+.bookshelf .cover-spine-overlay {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: calc(var(--baseline) / 1);
+}
+.bookshelf .cover-spine-overlay:after {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.3)), color-stop(1%, rgba(73, 36, 36, 0)), color-stop(2.5%, rgba(250, 250, 250, 0.23)), color-stop(3.4%, rgba(0, 0, 0, 0.1)), color-stop(4.2%, rgba(250, 250, 250, 0.1)), color-stop(5.6%, rgba(0, 0, 0, 0.1)), color-stop(6.8%, rgba(250, 250, 250, 0.2)), color-stop(25%, transparent), color-stop(30%, transparent), to(rgba(0, 0, 0, 0.2)));
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.3), rgba(73, 36, 36, 0) 1%, rgba(250, 250, 250, 0.23) 2.5%, rgba(0, 0, 0, 0.1) 3.4%, rgba(250, 250, 250, 0.1) 4.2%, rgba(0, 0, 0, 0.1) 5.6%, rgba(250, 250, 250, 0.2) 6.8%, transparent 25%, transparent 30%, rgba(0, 0, 0, 0.2));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(73, 36, 36, 0) 1%, rgba(250, 250, 250, 0.23) 2.5%, rgba(0, 0, 0, 0.1) 3.4%, rgba(250, 250, 250, 0.1) 4.2%, rgba(0, 0, 0, 0.1) 5.6%, rgba(250, 250, 250, 0.2) 6.8%, transparent 25%, transparent 30%, rgba(0, 0, 0, 0.2));
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+.bookshelf .cover-spine-overlay img {
   -webkit-box-shadow: 3px 3px 3px var(--boxshadow);
           box-shadow: 3px 3px 3px var(--boxshadow);
+  margin-bottom: 0;
+  width: 100%;
 }
 .bookshelf .teal {
   margin-top: calc(var(--baseline) / 1);
@@ -3039,6 +3061,7 @@ html.offline #offline-notification {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  z-index: 9;
 }
 .bookshelf .col:nth-of-type(6):after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 15 15'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M7.5 0a7.5 7.5 0 100 15 7.5 7.5 0 000-15zM5 11.8L6.2 13 11 7.5 6.2 2 5 3.2l3.6 4.3L5 11.8z' clip-rule='evenodd'/%3E%3C/svg%3E");
@@ -3091,8 +3114,11 @@ html.offline #offline-notification {
   width: 90%;
 }
 .reader-demo h3, .reader-demo a {
-  color: #ccc;
+  color: #eee;
   margin-bottom: calc(var(--baseline)/1);
+}
+.reader-demo a {
+  display: block;
 }
 .reader-demo .laptop {
   height: calc(var(--baseline) * 11);
@@ -3120,13 +3146,17 @@ html.offline #offline-notification {
 .demo-points {
   counter-reset: section;
   list-style-type: none;
+  padding: 0 1rem;
+}
+.demo-points a {
+  display: block;
 }
 
 .demo-points li {
   color: #fff;
   position: relative;
   margin-left: 0rem;
-  padding-left: 1rem;
+  padding-left: 2rem;
   list-style-position: inside;
   outline: 1px red dashed;
   z-index: 1;
@@ -3145,12 +3175,13 @@ html.offline #offline-notification {
   position: absolute;
   width: calc(var(--baseline) * .75);
   height: calc(var(--baseline) * .75);
-  top: 0;
-  left: 0rem;
-  margin-left: -1rem;
-  z-index: 0;
+  top: calc(var(--baseline) * 0.1);
+  left: 0;
+  margin-left: 0rem;
+  z-index: -1;
   background: orangered;
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .social {

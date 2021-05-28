@@ -10,8 +10,11 @@
     width: 90%;
   }
   h3,a{
-    color: #ccc;
+    color: #eee;
     margin-bottom: calc(var(--baseline)/1) ;
+  }
+  a{
+    display: block;
   }
   .laptop {
     height: calc(var(--baseline) * 11);
@@ -36,12 +39,16 @@
 .demo-points{
   counter-reset: section;
   list-style-type: none;
+  padding: 0 1rem;
+  a{
+    display: block;
+  }
 }
 .demo-points li{
   color:#fff;
   position: relative;
   margin-left: 0rem;
-  padding-left: 1rem;
+  padding-left: 2rem;
   list-style-position: inside;
   outline: 1px red dashed;
   z-index: 1;
@@ -55,11 +62,12 @@
     position: absolute;
     width: calc(var(--baseline) * .75);
     height: calc(var(--baseline) * .75);
-    top: 0;
-    left: 0rem;
-    margin-left: -1rem;
-    z-index: 0;
+    top: calc(var(--baseline) * 0.1);
+    left: 0;
+    margin-left: 0rem;
+    z-index: -1;
     background:orangered;
     border-radius: 50%;
+    pointer-events: none;
   }
 }
