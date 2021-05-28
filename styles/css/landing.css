@@ -2778,14 +2778,14 @@ html.offline #offline-notification {
   color: #ccc;
   background: #2a2a2a;
   background-image: url(/images/tile.png);
-  padding: calc(var(--baseline)*1.5) 0;
+  padding: calc(var(--baseline) * 1.5) 0;
 }
 .reader-demo .container {
   width: 90%;
 }
-.reader-demo h3, .reader-demo a {
+.reader-demo h3, .reader-demo a, .reader-demo p {
   color: #eee;
-  margin-bottom: calc(var(--baseline)/1);
+  margin-bottom: calc(var(--baseline)/2);
 }
 .reader-demo a {
   display: block;
@@ -2801,14 +2801,27 @@ html.offline #offline-notification {
   background-image: url(../../images/SVG/laptop-bg.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  width: calc(var(--baseline) * 17);
-  height: calc(var(--baseline) * 11);
+  width: calc(var(--baseline) * 18);
+  height: calc(var(--baseline) * 11.5);
   padding: 2.5% 5%;
   margin: 0 auto;
-  outline: 1px yellow dashed !important;
+  position: relative;
+}
+.laptop-unit:before {
+  /* screen reflection*/
+  display: block;
+  position: absolute;
+  content: "";
+  outline: 1px yellow dashed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 20px);
+  background: -o-linear-gradient(355deg, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.22) 90%, rgba(255, 255, 255, 0) 90.5%, rgba(255, 255, 255, 0) 104%);
+  background: linear-gradient(95deg, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.22) 90%, rgba(255, 255, 255, 0) 90.5%, rgba(255, 255, 255, 0) 104%);
+  border-radius: 11px;
 }
 .laptop-unit .screen {
-  outline: 1px cyan dashed !important;
   width: 100%;
   height: 95%;
 }
@@ -2816,7 +2829,7 @@ html.offline #offline-notification {
 .demo-points {
   counter-reset: section;
   list-style-type: none;
-  padding: 0 1rem;
+  padding: 0 0 0 1rem;
 }
 .demo-points a {
   display: block;
@@ -2829,6 +2842,7 @@ html.offline #offline-notification {
   padding-left: 2rem;
   list-style-position: inside;
   outline: 1px red dashed;
+  margin-bottom: calc(var(--baseline)/2);
   z-index: 1;
 }
 .demo-points li:hover {

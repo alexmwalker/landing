@@ -65,7 +65,7 @@
  
  
  
-  <rect width="875" height="575.4" x="31" y="2" fill="url(#paint0_linear)" stroke="url(#paint1_linear)" stroke-width="4" rx="23.4" ry="23.4">
+  <rect width="875" height="575.4" x="31" y="2" fill="#000" stroke="url(#paint1_linear)" stroke-width="4" rx="23.4" ry="23.4">
     <title>
       screen
     </title>

@@ -2734,13 +2734,9 @@ html.offline #offline-notification {
 }
 
 .landing-parent {
-  background: #01a131;
+  background: #535beb;
   background-image: -o-radial-gradient(29% 55%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 4%, transparent 4%, transparent 44%, transparent 44%, transparent 100%), -o-radial-gradient(85% 89%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 51%, transparent 51%, transparent 52%, transparent 52%, transparent 100%), -o-radial-gradient(6% 90%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 53%, transparent 53%, transparent 64%, transparent 64%, transparent 100%), -o-radial-gradient(35% 75%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 6%, transparent 6%, transparent 98%, transparent 98%, transparent 100%), -o-radial-gradient(56% 75%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 16%, transparent 16%, transparent 23%, transparent 23%, transparent 100%), -o-radial-gradient(42% 0%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 3%, transparent 3%, transparent 26%, transparent 26%, transparent 100%), -o-radial-gradient(29% 28%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 51%, transparent 51%, transparent 75%, transparent 75%, transparent 100%), -o-radial-gradient(77% 21%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 35%, transparent 35%, transparent 55%, transparent 55%, transparent 100%), -o-radial-gradient(65% 91%, circle, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 46%, transparent 46%, transparent 76%, transparent 76%, transparent 100%), -o-linear-gradient(45deg, #535beb, #4c0bae);
   background-image: radial-gradient(circle at 29% 55%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 4%, transparent 4%, transparent 44%, transparent 44%, transparent 100%), radial-gradient(circle at 85% 89%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 51%, transparent 51%, transparent 52%, transparent 52%, transparent 100%), radial-gradient(circle at 6% 90%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 53%, transparent 53%, transparent 64%, transparent 64%, transparent 100%), radial-gradient(circle at 35% 75%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 6%, transparent 6%, transparent 98%, transparent 98%, transparent 100%), radial-gradient(circle at 56% 75%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 16%, transparent 16%, transparent 23%, transparent 23%, transparent 100%), radial-gradient(circle at 42% 0%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 3%, transparent 3%, transparent 26%, transparent 26%, transparent 100%), radial-gradient(circle at 29% 28%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 51%, transparent 51%, transparent 75%, transparent 75%, transparent 100%), radial-gradient(circle at 77% 21%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 35%, transparent 35%, transparent 55%, transparent 55%, transparent 100%), radial-gradient(circle at 65% 91%, rgba(252, 252, 252, 0.05) 0%, rgba(252, 252, 252, 0.05) 46%, transparent 46%, transparent 76%, transparent 76%, transparent 100%), linear-gradient(45deg, #535beb, #4c0bae);
-  background: -webkit-gradient(linear, left top, right top, from(#000428), to(#004e92));
-  background: -o-linear-gradient(left, #000428, #004e92);
-  background: linear-gradient(to right, #000428, #004e92);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -3011,7 +3007,7 @@ html.offline #offline-notification {
 }
 
 .bookshelf-panel {
-  padding-top: calc(var(--baseline) * 2);
+  padding: calc(var(--baseline) * 2) 0 calc(var(--baseline) * 1);
 }
 
 .bookshelf {
@@ -3108,14 +3104,14 @@ html.offline #offline-notification {
   color: #ccc;
   background: #2a2a2a;
   background-image: url(/images/tile.png);
-  padding: calc(var(--baseline)*1.5) 0;
+  padding: calc(var(--baseline) * 1.5) 0;
 }
 .reader-demo .container {
   width: 90%;
 }
-.reader-demo h3, .reader-demo a {
+.reader-demo h3, .reader-demo a, .reader-demo p {
   color: #eee;
-  margin-bottom: calc(var(--baseline)/1);
+  margin-bottom: calc(var(--baseline)/2);
 }
 .reader-demo a {
   display: block;
@@ -3131,14 +3127,27 @@ html.offline #offline-notification {
   background-image: url(../../images/SVG/laptop-bg.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  width: calc(var(--baseline) * 17);
-  height: calc(var(--baseline) * 11);
+  width: calc(var(--baseline) * 18);
+  height: calc(var(--baseline) * 11.5);
   padding: 2.5% 5%;
   margin: 0 auto;
-  outline: 1px yellow dashed !important;
+  position: relative;
+}
+.laptop-unit:before {
+  /* screen reflection*/
+  display: block;
+  position: absolute;
+  content: "";
+  outline: 1px yellow dashed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 20px);
+  background: -o-linear-gradient(355deg, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.22) 90%, rgba(255, 255, 255, 0) 90.5%, rgba(255, 255, 255, 0) 104%);
+  background: linear-gradient(95deg, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.22) 90%, rgba(255, 255, 255, 0) 90.5%, rgba(255, 255, 255, 0) 104%);
+  border-radius: 11px;
 }
 .laptop-unit .screen {
-  outline: 1px cyan dashed !important;
   width: 100%;
   height: 95%;
 }
@@ -3146,7 +3155,7 @@ html.offline #offline-notification {
 .demo-points {
   counter-reset: section;
   list-style-type: none;
-  padding: 0 1rem;
+  padding: 0 0 0 1rem;
 }
 .demo-points a {
   display: block;
@@ -3159,6 +3168,7 @@ html.offline #offline-notification {
   padding-left: 2rem;
   list-style-position: inside;
   outline: 1px red dashed;
+  margin-bottom: calc(var(--baseline)/2);
   z-index: 1;
 }
 .demo-points li:hover {
@@ -3431,6 +3441,11 @@ html.offline #offline-notification {
 .course-landing h3, .course-landing a {
   color: #ccc;
   margin-bottom: calc(var(--baseline)/1);
+}
+
+.landing-blog img {
+  width: 100%;
+  margin-bottom: calc(var(--baseline) * 2);
 }
 
 .reviews {
