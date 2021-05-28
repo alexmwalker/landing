@@ -13,14 +13,14 @@
         }
     .main-price{
         text-align: right;
-        line-height: calc(var(--baseline) * 2);
+        line-height: calc(var(--baseline) * 1.5);
         display: flex;
         align-items: center;
         justify-content: center;
         .big-price{
             display: flex;
             font-weight: 700;
-            bottom: calc(var(--baseline) / -2);
+            //bottom: calc(var(--baseline) / -2);
             margin: 0;
             padding: 0 0.5rem 0 0;
             font-size: calc(1rem * var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale));
