@@ -3134,11 +3134,10 @@ html.offline #offline-notification {
   position: relative;
 }
 .laptop-unit:before {
-  /* screen reflection*/
+  /* screen reflection layer */
   display: block;
   position: absolute;
   content: "";
-  outline: 1px yellow dashed;
   top: 0;
   left: 0;
   width: 100%;
@@ -3167,7 +3166,6 @@ html.offline #offline-notification {
   margin-left: 0rem;
   padding-left: 2rem;
   list-style-position: inside;
-  outline: 1px red dashed;
   margin-bottom: calc(var(--baseline)/2);
   z-index: 1;
 }
@@ -3241,10 +3239,15 @@ html.offline #offline-notification {
   padding: calc(var(--baseline)*2) 0;
 }
 .account-creation .container {
-  border-radius: 3px;
-  border: 1px #333 solid;
+  border-radius: 6px;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+  -o-border-image: -o-linear-gradient(left, #1a2a6c, #fdbb2d, #b21f1f);
+     border-image: -webkit-gradient(linear, left top, right top, from(#1a2a6c), color-stop(#fdbb2d), to(#b21f1f));
+     border-image: linear-gradient(to right, #1a2a6c, #fdbb2d, #b21f1f);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-image-slice: 1;
 }
 .account-creation h2 {
   margin-top: calc(var(--baseline)*1);

@@ -29,11 +29,11 @@
   margin: 0 auto;
   position: relative;
   &:before{
-    /* screen reflection*/
+    /* screen reflection layer */
     display: block;
     position: absolute;
     content: '';
-    outline: 1px yellow dashed;
+    //outline: 1px yellow dashed;
     top: 0;
     left: 0;
     width: 100%;
@@ -63,7 +63,7 @@
   margin-left: 0rem;
   padding-left: 2rem;
   list-style-position: inside;
-  outline: 1px red dashed;
+  //outline: 1px red dashed;
   margin-bottom: calc(var(--baseline)/2);
   z-index: 1;
   &:hover{ color:#fff; font-weight:400}

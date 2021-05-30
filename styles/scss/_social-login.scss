@@ -2,9 +2,11 @@
     padding: calc(var(--baseline)*2) 0;
     
     .container{ 
-        border-radius:3px;
-        border: 1px #333 solid;
+        border-radius: 6px;
         box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        border: 2px solid transparent;
+        border-image: linear-gradient(to right, #1a2a6c, #fdbb2d,#b21f1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+        border-image-slice: 1;
     }
     h2{
         margin-top: calc(var(--baseline)*1);    

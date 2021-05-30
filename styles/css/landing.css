@@ -2808,11 +2808,10 @@ html.offline #offline-notification {
   position: relative;
 }
 .laptop-unit:before {
-  /* screen reflection*/
+  /* screen reflection layer */
   display: block;
   position: absolute;
   content: "";
-  outline: 1px yellow dashed;
   top: 0;
   left: 0;
   width: 100%;
@@ -2841,7 +2840,6 @@ html.offline #offline-notification {
   margin-left: 0rem;
   padding-left: 2rem;
   list-style-position: inside;
-  outline: 1px red dashed;
   margin-bottom: calc(var(--baseline)/2);
   z-index: 1;
 }
