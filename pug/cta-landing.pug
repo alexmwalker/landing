@@ -9,19 +9,26 @@ section.account-creation
                     li No lock ins, cancel at any time
             .col-5_md-6.price-unit
                 .grid-noGutter 
-                    .col-7.main-price
-                        .big-price $6
+                    .col-6.main-price
+                        .price-frame
+                            .price-annual $6
+                            .price-monthly $9
                         | per month
                         
-                    .col-5.flip                         
-                        input(type='checkbox' id='annual' name='annual')
-                        label(for='annual') Annual
+                    .col-6
+                        .switcher-wrapper
+                            input.item-1#radios1(type='radio', name='plan', value='Annual' checked)
+                            label.item-2(for='radios1') Annually 
+                            input.item-3#radios2(type='radio', name='plan', value='Monthly')
+                            label.item-4(for='radios2') Monthly
+                            span.fnote (* Billed annually $72)
+
 
                     .col-12 
                         .align-c
                             button.pink.large Create your Account
                         .small.align-c Or log in using your social account
-
+                ///
                     .col-4_sm-12 
                         button.social-google Google Login 
                     .col-4_sm-12
