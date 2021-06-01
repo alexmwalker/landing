@@ -13,7 +13,6 @@
     0% {
      transform: translateX(0)
     }
-
     100% {
      transform: translateX(-300px)
     }
@@ -72,7 +71,7 @@
    <path fill="#2965F1" d="M402.8 67.3l4.7-52.3H383v57.8l19.8-5.5z" />
    <path fill="#EBEBEB" d="M365.5 37.7l.7 7.5H383v-7.5h-17.5zM383 22.5h-18.8l.6 7.5H383v-7.5zM383 65v-7.8l-8.4-2.3-.5-6h-7.6l1 11.8L383 65z" />
    <path fill="#fff" d="M392.2 45.2l-.9 9.7-8.3 2.3V65l15.3-4.3.2-1.2 1.7-19.8.2-2 1.4-15.2H383V30h10.5l-.7 7.7H383v7.5h9.2z" />
-   <rect width="50" height="48" x="278.4" y="26" fill="#000" />
+   <rect width="50" height="48" x="278.4" y="26" fill="#333" />
    <path fill="#F7DF1E" d="M265 10h64.9v64.9H265V10zm59.6 49.4c-.5-3-2.4-5.4-8.2-7.8-2-.9-4.2-1.5-4.8-3-.3-1-.3-1.4-.1-2 .4-1.7 2.4-2.2 4-1.7 1.1.3 2 1.1 2.7 2.4l4.7-3c-.7-1.2-1-1.7-1.5-2.2-1.7-1.9-4-2.8-7.7-2.7l-2 .2a8.7 8.7 0 00-4.5 2.7 8.5 8.5 0 001.5 12.1c3.7 2.8 9 3.4 9.8 6 .6 3.1-2.4 4.1-5.3 3.8-2.2-.5-3.4-1.6-4.8-3.6l-5 2.8c.6 1.3 1.3 1.9 2.3 3 4.7 4.7 16.4 4.5 18.5-2.7.1-.3.7-2 .2-4.5l.2.2zm-24.3-19.6h-6.1v15.7c0 3.3.1 6.4-.4 7.3-.9 1.9-3.2 1.7-4.2 1.3-1.1-.5-1.6-1.2-2.3-2.3l-.3-.5-5 3c.9 1.7 2 3.2 3.6 4.1 2.3 1.4 5.4 1.9 8.7 1.1 2.1-.6 4-1.8 4.9-3.8 1.4-2.5 1-5.6 1-9V39.8z" />
    <path fill="url(#paint0_linear)" d="M213.1 10c-17 0-15.8 7.4-15.8 7.4V25h16.1v2.3h-22.6S180 26 180 43s9.5 16.5 9.5 16.5h5.6v-7.9s-.3-9.5 9.3-9.5h16s9 .2 9-8.7V19S231 10 213.2 10zm-8.9 5.1a3 3 0 013 3 3 3 0 01-3 2.8 3 3 0 01-2.9-2.9 3 3 0 013-2.9z" />
    <path fill="url(#paint1_linear)" d="M213.6 76.4c17 0 16-7.3 16-7.3l-.1-7.6h-16.2v-2.3H236s10.9 1.2 10.9-15.9-9.5-16.5-9.5-16.5h-5.6v8s.3 9.4-9.4 9.4h-16s-9-.1-9 8.7v14.7s-1.4 8.8 16.3 8.8zm9-5a3 3 0 01-3-3 3 3 0 013-2.9 3 3 0 012.9 3 3 3 0 01-3 2.8z" />
@@ -125,7 +124,11 @@
   <path fill="#fff" d="M437.9 86.1V291c0 2.3-2 4.3-4.4 4.3H166.7c-2.4 0-4.4-2-4.4-4.3V86c0-2.4 2-4.4 4.4-4.4h266.8c2.4 0 4.4 2 4.4 4.4z" />
   <path fill="#0E677F" d="M166.7 83a3 3 0 00-3 3.1V291a3 3 0 003 3h266.8a3 3 0 003-3V86a3 3 0 00-3-3H166.7zm266.8 213.6H166.7a5.7 5.7 0 01-5.7-5.7V86c0-3.1 2.6-5.7 5.7-5.7h266.8c3.2 0 5.7 2.6 5.7 5.7v205c0 3.1-2.5 5.7-5.7 5.7" />
   <path fill="#0E677F" d="M438 85.6v19.6H162V85.6c0-1.9 2-3.4 4.4-3.4h267.2c2.4 0 4.4 1.5 4.4 3.4z" />
-  <path fill="#fff" d="M178.5 93.4a5.3 5.3 0 11-10.5 0 5.3 5.3 0 0110.5 0zM201.3 93.4a5.2 5.2 0 11-10.5 0 5.2 5.2 0 0110.5 0zM224 93.4a5.3 5.3 0 11-10.4 0 5.3 5.3 0 0110.5 0z" />
+  
+  <ellipse cx="173" cy="94" fill="#fff" rx="5" ry="5" />
+  <ellipse cx="193" cy="94" fill="#fff" rx="5" ry="5" />
+  <ellipse cx="213" cy="94" fill="#fff" rx="5" ry="5" />
+
   <path fill="#EF2A4E" d="M416.2 205.1H283.6c-.7 0-1.3-.6-1.3-1.3v-72.3c0-.7.6-1.4 1.3-1.4h132.6c.8 0 1.4.7 1.4 1.4v72.3c0 .7-.6 1.3-1.4 1.3" />
   <path fill="#ECECEA" d="M417.6 234.4H282.3V247h135.3v-12.7zM417.6 255.4H282.3V268h135.3v-12.7zM182.6 142.5H269V130h-86.3v12.4zM182.6 163.4H269v-12.3h-86.3v12.3zM182.6 184.4H269V172h-86.3v12.4zM182.6 205.3H269V193h-86.3v12.3zM182.6 226.3H269v-12.4h-86.3v12.4zM182.6 247.2H269V235h-86.3v12.3M182.6 268.1H269v-12.3h-86.3v12.3z" />
   <path fill="#fff" d="M363.4 167.6L337.9 153v29.5l25.5-14.8z" />
@@ -133,8 +136,8 @@
   <path fill="#0D7B9C" d="M408 221.9c-.2 0-.4 0-.5-.2a.6.6 0 010-.8l2.2-2.4-2.2-2.4a.6.6 0 11.9-.8l3 3.2-3 3.2-.5.2z" />
   <path fill="#E0E1DE" d="M285 218.5a5.6 5.6 0 1011.3 0 5.6 5.6 0 00-11.2 0z" />
   <path fill="#0D7B9C" d="M292 221.9c-.2 0-.3 0-.5-.2l-3-3.2 3-3.2c.3-.3.6-.3.9 0 .2.1.2.5 0 .8l-2.3 2.4 2.3 2.4a.6.6 0 01-.4 1" />
-  <rect width="136" height="96" x="282" y="130.2" fill="#000" />
-  <text x="-28.3" style="font-size:6px;word-spacing:0; fill: rgb(193, 218, 224);  white-space: pre;" class="mono" transform="translate(3.8 .4)">
+  <rect width="136" height="96" x="282" y="130.2" fill="#234" />
+  <text x="-28.3" style="font-size:6px; word-spacing:0; fill: rgb(193, 218, 224);  white-space: pre;" class="mono" transform="translate(3.8 .4)">
    <tspan>
     <tspan x="-28.3" dy="1em">​</tspan>
    </tspan>
@@ -142,7 +145,7 @@
    <tspan x="331.2" y="182.8">scale(1);<tspan x="-28.3" dy="1em">​</tspan>
    </tspan>
   </text>
-  <text style="font-size:6px;word-spacing:0; fill: rgb(193, 218, 224); white-space: pre;" class="mono">
+  <text style="font-size:6px; word-spacing:0; fill: rgb(193, 218, 224); white-space: pre;" class="mono">
    <tspan x="305.4" y="154.8">0%</tspan>
    <tspan x="305.4" y="175.8">100%</tspan>
   </text>
@@ -164,9 +167,7 @@
    </tspan>
   </text>
 
-  <text x="-1.7" y=".4" style="font-size:6px;word-spacing:0; fill: rgb(193, 218, 224); white-space: pre;" class="mono">
-   <tspan x="289.3" y="148.2">@keyframes</tspan>
-  </text>
+
   <path fill="#05CA60" d="M58.9 329.3c-.5-2.1-.5-4.1 0-5.6 1.6-5.2 6.6-8.7 10-12.5a25.6 25.6 0 007.3-16.6c0-5 1.1-9.3 4.6-13 3.5-3.8 7.8-6.6 11.4-10.1 3.8-3.8 7.2-7.7 10.2-12.2 2.6-3.7 7.3-9.3 11-3 1.4 2.4 1.9 5.4 1.3 8.2-1.7 7.3-8.4 12-11.2 18.8-1.4 3.4-1.6 7-2 10.7-.3 3.2-1 6.9-3.3 9.4-1.3 1.4-3 2.5-4.3 4-1.7 2.2-2.2 5-2.8 7.6a40 40 0 01-3 8c-3 6.5-7.4 14.1-14.3 17.1a10 10 0 01-6.4.8c-4.7-1.3-7.6-7.2-8.5-11.6" />
   <path fill="#05CA60" d="M48.7 333c-6.9-8.2-11.6-17.9-8.8-28.9 1.1-4.5 2.2-8.3-.6-12.5-1.3-2-3-3.7-4-5.9-2.7-6.4 0-12.7 3-18.4 2.2-4.2 4.6-8.5 5.6-13.2 1.1-4.9 0-10 .7-15 .6-4.7 3.4-10 8.2-10.8 3.1-.5 6.4 1 8.7 3.3 2.7 2.6 4.5 6 5.1 9.7.9 5-.5 10.3 1.5 15 1.8 4.1 5.8 6.8 8.4 10.4 2.8 3.9 3.8 9 2.9 13.6-.8 3.9-2.9 7.4-3.5 11.3-1.4 8.8 4.8 17.4 3.6 26.3-.7 5-3.9 9.7-8.1 12.7a24.5 24.5 0 01-17.6 4.7c-3.1-.6-6-2.4-7.7-5.1" />
   <path fill="#D5F5EC" d="M69.4 273.4a.7.7 0 00-1 .2l-10.2 15.2-2.3-39.7c0-.3-.4-.6-.7-.6-.4 0-.6.4-.6.7l1.7 29-12.7-7a.7.7 0 00-.6 1.1l13.2 7.3h.1l1.6 26.8-10.3-5.2a.7.7 0 10-.5 1.2L58 308l1.2 21.7c0 .3.3.6.6.6h.1c.4 0 .7-.3.6-.7L58.3 291l11.3-16.6c.2-.3 0-.7-.2-1" />
@@ -280,7 +281,54 @@
   <path fill="#0E677F" d="M368.8 326.2v5.9s-7.8.5-8.3-.4c-.5-.9-1-4 .9-5.5 2-1.5 6.8-1.6 7.4 0" />
 
  </g>
-
+<g transform="translate(54 -3.8)">
+      <g transform="translate(224.9 130.6) scale(.31108)">
+        <rect width="450.2" height="303.5" x="6" y="10.5" style="fill:rgb(30, 30, 30)"/>
+        <rect width="436" height="257.8" x="14.6" y="41.8" style="fill:rgb(40, 40, 40)"/>
+        <rect width="32.1" height="253.3" x="30.9" y="44.6" style="fill:rgb(73, 72, 63)"/>
+        <rect width="42.7" height="12" x="70.5" y="49.4" style="fill:rgb(190, 59, 99)"/>
+        <rect width="54.3" height="12" x="119" y="49.2" style="fill:rgb(238, 238, 232)"/>
+        <rect width="54.3" height="12" x="70.5" y="69.3" style="fill:rgb(238, 238, 232)"/>
+        <rect width="90.5" height="12" x="135.6" y="69.3" style="fill:rgb(238, 238, 232)"/>
+        <rect width="54.3" height="12" x="235.7" y="69.2" style="fill:rgb(229, 218, 130)"/>
+        <rect width="42.7" height="12" x="70.5" y="107.6" style="fill:rgb(190, 59, 99)"/>
+        <rect width="54.3" height="12" x="120.7" y="107.4" style="fill:rgb(238, 238, 232)"/>
+        <rect width="12" height="12" x="180.9" y="107.4" style="fill:rgb(238, 238, 232)"/>
+        <rect width="42.7" height="12" x="70.5" y="127" style="fill:rgb(190, 59, 99)"/>
+        <rect width="40.4" height="12" x="120.6" y="127.2" style="fill:rgb(238, 238, 232)"/>
+        <rect width="12" height="12" x="168" y="127.6" style="fill:rgb(180, 223, 83)"/>
+        <rect width="12" height="12" x="188.1" y="127.3" style="fill:rgb(238, 238, 232)"/>
+        <rect width="42.7" height="12" x="70.5" y="165.2" style="fill:rgb(190, 59, 99)"/>
+        <rect width="66.1" height="12" x="120.2" y="165.3" style="fill:rgb(238, 238, 232)"/>
+        <rect width="12" height="12" x="243.1" y="165.5" style="fill:rgb(190, 59, 99)"/>
+        <rect width="18.5" height="12" x="263.3" y="165.5" style="fill:rgb(238, 238, 232)"/>
+        <rect width="43.1" height="12" x="193.3" y="165.5" style="fill:rgb(238, 238, 232)"/>
+        <rect width="42.7" height="12" x="70.5" y="185" style="fill:rgb(190, 59, 99)"/>
+        <rect width="48.1" height="12" x="120.3" y="185.2" style="fill:rgb(238, 238, 232)"/>
+        <rect width="12" height="12" x="175.1" y="185" style="fill:rgb(190, 59, 99)"/>
+        <rect width="20.5" height="12" x="195.7" y="185.3" style="fill:rgb(238, 238, 232)"/>
+        <g transform="translate(-515.5 -59.2)">
+          <rect width="9.4" height="12" x="563" y="108.8" style="fill:rgb(117, 113, 96)"/>
+          <rect width="9.4" height="12" x="563" y="128" style="fill:rgb(117, 113, 96)"/>
+          <rect width="9.4" height="12" x="563" y="147.2" style="fill:rgb(117, 113, 96)"/>
+          <rect width="9.4" height="12" x="563" y="166.4" style="fill:rgb(117, 113, 96)"/>
+          <rect width="9.4" height="12" x="563" y="185.6" style="fill:rgb(117, 113, 96)"/>
+          <rect width="9.4" height="12" x="563" y="204.8" style="fill:rgb(117, 113, 96)"/>
+          <rect width="9.4" height="12" x="563" y="224" style="fill:rgb(117, 113, 96)"/>
+          <rect width="9.4" height="12" x="563" y="243.2" style="fill:rgb(117, 113, 96)"/>
+          <rect width="9.4" height="12" x="563" y="262.4" style="fill:rgb(117, 113, 96)"/>
+          <rect width="12.8" height="12" x="559.6" y="281.6" style="fill:rgb(117, 113, 96)"/>
+          <rect width="12.8" height="12" x="559.6" y="300.8" style="fill:rgb(117, 113, 96)"/>
+          <rect width="12.8" height="12" x="559.6" y="320" style="fill:rgb(117, 113, 96)"/>
+          <rect width="12.8" height="12" x="559.6" y="338.8" style="fill:rgb(117, 113, 96)"/>
+        </g>
+        <rect width="42.7" height="12" x="89.8" y="204.9" style="fill:rgb(238, 238, 232)"/>
+        <rect width="12" height="12" x="70.5" y="204.9" style="fill:rgb(180, 223, 83)"/>
+        <rect width="24.9" height="12" x="140.3" y="204.5" style="fill:rgb(238, 238, 232)"/>
+        <rect width="48.1" height="12" x="73.2" y="241.6" style="fill:rgb(238, 238, 232)"/>
+      </g>
+    </g>
+  </g>
  <use class="think0" width="170.5" height="139" transform="matrix(0.4, 0, 0, 0.4, 262, 667.5)" href="#thinker" />
  <use class="think1" width="170.5" height="139" transform="matrix(0.4, 0, 0, 0.4, 511.1, 601)" href="#thinker-rev" />
  <use class="think2" width="170.5" height="139" transform="matrix(0.4, 0, 0, 0.4, 590.5, 798.9)" href="#thinker-rev" />

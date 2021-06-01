@@ -3127,7 +3127,7 @@ html.offline #offline-notification {
   background-image: url(../../images/SVG/laptop-bg.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  width: calc(var(--baseline) * 21);
+  width: calc(var(--baseline) * 20);
   height: calc(var(--baseline) * 14);
   padding: 2.5% 5%;
   margin: 0 auto 0 -8rem;
@@ -3154,7 +3154,7 @@ html.offline #offline-notification {
 .demo-points {
   counter-reset: section;
   list-style-type: none;
-  padding: 0 0 0 1rem;
+  padding: 0;
 }
 .demo-points a {
   display: block;
@@ -3164,7 +3164,7 @@ html.offline #offline-notification {
   color: #fff;
   position: relative;
   margin-left: 0rem;
-  padding-left: 2rem;
+  padding: 0 0 0 2rem;
   list-style-position: inside;
   margin-bottom: calc(var(--baseline)/2);
   z-index: 1;
