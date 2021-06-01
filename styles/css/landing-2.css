@@ -3253,7 +3253,7 @@ html.offline #offline-notification {
   margin: calc(var(--baseline)*1) 0 calc(var(--baseline)/2);
 }
 .account-creation button.pink {
-  margin: calc(var(--baseline)/1) 0 calc(var(--baseline)/2);
+  margin: calc(var(--baseline)/1) 0;
   width: 100%;
 }
 
@@ -3330,7 +3330,7 @@ html.offline #offline-notification {
 
 /* THE RADIO BUTTON SWITCHES */
 .price-unit {
-  margin: calc(var(--baseline) * 2) 0 calc(var(--baseline) /2);
+  margin: calc(var(--baseline) * 2) 0;
 }
 .price-unit .switcher-wrapper {
   position: relative;

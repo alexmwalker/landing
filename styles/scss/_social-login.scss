@@ -12,7 +12,7 @@
         margin: calc(var(--baseline)*1)  0 calc(var(--baseline)/2);    
         }
     button.pink{
-        margin: calc(var(--baseline)/1) 0 calc(var(--baseline)/2);
+        margin: calc(var(--baseline)/1) 0 ;
         width: 100%;
         }
      
@@ -82,7 +82,7 @@
 /* THE RADIO BUTTON SWITCHES */
 
 .price-unit{
-    margin: calc(var(--baseline) * 2) 0  calc(var(--baseline) /2);
+    margin: calc(var(--baseline) * 2) 0 ;
     .switcher-wrapper{
         //outline: 1px red dashed;
         position: relative;
