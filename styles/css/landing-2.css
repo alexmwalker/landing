@@ -3299,8 +3299,8 @@ html.offline #offline-notification {
 }
 .main-price .price-annual {
   opacity: 1;
-  -webkit-transform: perspective(600px) rotate3d(0, 0, 0, 540deg);
-          transform: perspective(600px) rotate3d(0, 0, 0, 540deg);
+  -webkit-transform: perspective(600px) rotate3d(0, 0, 0, 180deg);
+          transform: perspective(600px) rotate3d(0, 0, 0, 180deg);
 }
 .main-price .price-annual:before {
   display: block;
@@ -3312,20 +3312,20 @@ html.offline #offline-notification {
   left: 30%;
 }
 .main-price .price-monthly {
-  -webkit-transform: perspective(600px) rotate3d(0, 1, 0, 540deg);
-          transform: perspective(600px) rotate3d(0, 1, 0, 540deg);
+  -webkit-transform: perspective(600px) rotate3d(0, 1, 0, 180deg);
+          transform: perspective(600px) rotate3d(0, 1, 0, 180deg);
   opacity: 0;
 }
 
 .monthly-account .main-price .price-annual {
   opacity: 0;
-  -webkit-transform: perspective(600px) rotate3d(0, 1, 0, -540deg);
-          transform: perspective(600px) rotate3d(0, 1, 0, -540deg);
+  -webkit-transform: perspective(600px) rotate3d(0, 1, 0, -180deg);
+          transform: perspective(600px) rotate3d(0, 1, 0, -180deg);
 }
 .monthly-account .main-price .price-monthly {
   opacity: 1;
-  -webkit-transform: perspective(600px) rotate3d(0, 0, 0, -540deg);
-          transform: perspective(600px) rotate3d(0, 0, 0, -540deg);
+  -webkit-transform: perspective(600px) rotate3d(0, 0, 0, -180deg);
+          transform: perspective(600px) rotate3d(0, 0, 0, -180deg);
 }
 
 /* THE RADIO BUTTON SWITCHES */
