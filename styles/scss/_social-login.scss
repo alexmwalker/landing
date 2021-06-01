@@ -4,6 +4,7 @@
     .container{ 
         border-radius: 6px;
         box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        padding-bottom: calc(var(--baseline)/2); 
         border: 2px solid transparent;
         border-image: linear-gradient(to right, #1e3591, #fdbb2d,#b21f1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
         border-image-slice: 1;
@@ -15,7 +16,9 @@
         margin: calc(var(--baseline)/1) 0 ;
         width: 100%;
         }
-     
+     .reasons{
+        margin: calc(var(--baseline)*1)  0 calc(var(--baseline)/2); 
+     }
 }
 /* THE PRICE FLIPPER */ 
 /* Needs `.monthly-account` added to .price-unit to trigger */ 
@@ -82,7 +85,7 @@
 /* THE RADIO BUTTON SWITCHES */
 
 .price-unit{
-    margin: calc(var(--baseline) * 2) 0 ;
+    margin: calc(var(--baseline) * 2) 0 calc(var(--baseline) / 2);
     .switcher-wrapper{
         //outline: 1px red dashed;
         position: relative;
