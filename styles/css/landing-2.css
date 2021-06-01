@@ -3293,9 +3293,9 @@ html.offline #offline-notification {
   font-weight: 700;
   margin: 0;
   padding: 0 0.5rem 0 0;
-  -webkit-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s cubic-bezier(0.32, 0.01, 0.48, 1.44);
+  -o-transition: all 0.6s cubic-bezier(0.32, 0.01, 0.48, 1.44);
+  transition: all 0.6s cubic-bezier(0.32, 0.01, 0.48, 1.44);
 }
 .main-price .price-annual {
   opacity: 1;

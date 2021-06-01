@@ -44,7 +44,7 @@
         //outline: 1px green dashed;
         margin: 0;
         padding: 0 0.5rem 0 0;
-        transition: all .6s ease-in-out;
+        transition: all .6s cubic-bezier(.32,.01,.48,1.44);
         }
     .price-annual{
         opacity: 1;
