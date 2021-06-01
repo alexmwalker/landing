@@ -48,7 +48,7 @@
         }
     .price-annual{
         opacity: 1;
-        transform: perspective(600px) rotate3d(0, 0, 0, 180deg);
+        transform: perspective(600px) rotate3d(0, 0, 0, 360deg);
         &:before{
             display: block;
             position: absolute;
@@ -61,7 +61,7 @@
         }
     }
     .price-monthly{
-        transform: perspective(600px) rotate3d(0, 1, 0, 180deg);
+        transform: perspective(600px) rotate3d(0, 1, 0, 360deg);
         opacity: 0;
     }
         
@@ -69,11 +69,11 @@
 .monthly-account .main-price{
     .price-annual{
         opacity: 0;
-        transform: perspective(600px) rotate3d(0, 1, 0, -180deg);
+        transform: perspective(600px) rotate3d(0, 1, 0, -360deg);
     }
     .price-monthly{
         opacity: 1;
-        transform: perspective(600px) rotate3d(0, 0, 0, -180deg);
+        transform: perspective(600px) rotate3d(0, 0, 0, -360deg);
     }
 
 }
