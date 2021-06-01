@@ -18,7 +18,8 @@
       text-align: center;
       min-height: calc(var(--baseline) * 2.0);
       img{
-          height: calc(var(--baseline) * 5.0);
+          min-height: calc(var(--baseline) * 5.0);
+          max-width: 70%;
           margin-bottom: calc(var(--baseline)/1) ;
       }
         p{
