@@ -2797,17 +2797,10 @@ html.offline #offline-notification {
   height: 100%;
 }
 
-.laptop-unit {
-  background-image: url(../../images/SVG/laptop-bg.svg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  width: calc(var(--baseline) * 20);
-  height: calc(var(--baseline) * 14);
-  padding: 2.5% 5%;
-  margin: 0 auto 0 -8rem;
-  position: relative;
+.laptop-wrapper {
+  width: 100%;
 }
-.laptop-unit:before {
+.laptop-wrapper:before {
   /* screen reflection layer */
   display: block;
   position: absolute;
@@ -2820,9 +2813,15 @@ html.offline #offline-notification {
   background: linear-gradient(95deg, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.22) 90%, rgba(255, 255, 255, 0) 90.5%, rgba(255, 255, 255, 0) 104%);
   border-radius: 11px;
 }
-.laptop-unit .screen {
-  width: 100%;
-  height: calc(var(--baseline) * 13);
+
+.laptop-unit {
+  background-image: url(../../images/SVG/laptop-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: calc(var(--baseline) * 20);
+  height: calc(var(--baseline) * 14);
+  padding: 2.5% 5%;
+  position: relative;
 }
 
 .demo-points {
@@ -2830,14 +2829,10 @@ html.offline #offline-notification {
   list-style-type: none;
   padding: 0;
 }
-.demo-points a {
-  display: block;
-}
-
 .demo-points li {
-  color: #fff;
+  color: #ddd;
   position: relative;
-  margin-left: 0rem;
+  margin: 0rem;
   padding: 0 0 0 2rem;
   list-style-position: inside;
   margin-bottom: calc(var(--baseline)/2);
@@ -2845,7 +2840,6 @@ html.offline #offline-notification {
 }
 .demo-points li:hover {
   color: #fff;
-  font-weight: 400;
 }
 .demo-points li:before {
   display: block;
@@ -2864,6 +2858,10 @@ html.offline #offline-notification {
   background: orangered;
   border-radius: 50%;
   pointer-events: none;
+}
+.demo-points a {
+  display: block;
+  border: 1px solid #5f5;
 }
 
 .authors {
