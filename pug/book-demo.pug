@@ -1,31 +1,12 @@
 section.reader-demo
   .container
     .grid-center
-      .col-12_sm-11
-        .grid-reverse
-          .col-5_md-12
-            h3 The ultimate text based learning experience
-            p Text based learning is proven to be 
-              b twice as fast 
-              | as video or audio lessons
-            ol.demo-points 
-                //-The ultimate text based learning experience
-                  interactive code environments
-                  Bookmark sections to read later
-                  Search across our entire collection of content and code
-                  Share snippets with peers and coworkers (need to figure out the benefit of the sharing feature) 
-                li 
-                    a(href="demo/demo-book-1.html" target="screen") Live interactive code environments
-                li 
-                    a(href="demo/demo-book-2.html" target="screen") Bookmark sections to read later
-                li
-                    a(href="demo/demo-book-3.html" target="screen") Search across our entire collection of content and code
-                li
-                    a(href="demo/demo-book-4.html" target="screen") Share snippets with peers and coworkers
-
-          .col-7_md-12.align-c
+      .col-12_sm-12
+        .grid
+          .col-7_sm-12.align-c
             .laptop-wrapper
-              object(data='images/SVG/laptop-bg.svg', type='image/svg+xml')
+              include demo-svg.pug
+              //-object(data='images/SVG/laptop-bg.svg', type='image/svg+xml')
                 img(src='images/SVG/laptop-bg.svg')
                 //- iframe(name="screen" scrolling="no" xmlns='http://www.w3.org/1999/xhtml' src='demo/demo-book-1.html' width='100%' height='100%'  )
                 //-include laptop-2.pug 
@@ -35,3 +16,18 @@ section.reader-demo
 
 
 
+
+          .col-5_sm-12
+            h3 The ultimate text based learning experience
+            p Text based learning is proven to be 
+              b twice as fast 
+              | as video or audio lessons
+            ol.demo-points 
+              li 
+                a.screen-1(href="demo/demo-book-1.html"  onclick="return false;") Live interactive code environments
+              li 
+                a.screen-2(href="demo/demo-book-2.html"  onclick="return false;") Bookmark sections to read later
+              li
+                a.screen-3(href="demo/demo-book-3.html"  onclick="return false;") Search across our entire collection
+              li
+                a.screen-4(href="demo/demo-book-4.html"  onclick="return false;") Share snippets with peers and coworkers

@@ -3,7 +3,7 @@
   color: #ccc;
   background: #2a2a2a;
   background-image: url(/images/tile.png);
-  padding: (calc(var(--baseline) * 1.5)) 0 ;
+  padding: calc(var(--baseline) * 1.5) 0 ;
   .container{
     width: 90%;
   }
@@ -14,17 +14,45 @@
   a{
     display: block;
   }
-  .laptop {
-    height: calc(var(--baseline) * 11);
-    img{height: 100%}
-  } 
+  
 }
-.laptop-wrapper{
-  //outline: 1px cyan dashed!important;
-  width: 100%;
-  //-height: calc(var(--baseline) * 13);
 
+.laptop-wrapper{
+  margin: 0;
+  width: 100%;
+  margin-bottom: calc(var(--baseline)/1) ;
+  svg{
+    width: 100%;
+  }
 }
+.screen{
+  display: none;
+}
+.demo-1{
+  border: 1px orange solid;
+  .screen-1{
+    display: block;
+  }
+}
+.demo-2{
+  border: 1px greenyellow solid;
+  .screen-2{
+    display: block;
+  }
+}
+.demo-3{
+  border: 1px rgb(70, 160, 243) solid;
+  .screen-3{
+    display: block;
+  }
+}
+.demo-4{
+  border: 1px rgb(206, 46, 238) solid;
+  .screen-4{
+    display: block;
+  }
+}
+
 
 .demo-points{
   counter-reset: section;
@@ -34,12 +62,15 @@
     color:#ddd;
     position: relative;
     margin: 0rem;
-    padding: 0 0 0 2rem;
+    padding: 0 0.5rem 0 2.5rem;
     list-style-position: inside;
+    border: 1px solid #555;
+    border-radius: 1rem;
+    background: rgba(0,0,0,0.2);
     //outline: 1px red dashed;
     margin-bottom: calc(var(--baseline)/2);
     z-index: 1;
-    &:hover{ color:#fff;}
+    &:hover{ color:#fff; background: rgba(0,0,0,0.4);}
     &:before{
       display: block;
       counter-increment: section;  /* Increment the value of section counter by 1 */
@@ -50,16 +81,18 @@
       width: calc(var(--baseline) * .75);
       height: calc(var(--baseline) * .75);
       top: calc(var(--baseline) * 0.1);
-      left: 0;
-      margin-left: 0rem;
+      left: 0.3rem;
+      margin-left: 0;
       z-index: -1;
       background:orangered;
       border-radius: 50%;
       pointer-events: none;
     }
-  }
-  a{
-    display: block;
-    border: 1px solid #5f5;
+    a{
+      display: block;
+      //border: 1px solid #5f5;
+      padding: 0;
+      margin: 0;
+    }
   }
 }

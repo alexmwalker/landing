@@ -2790,15 +2790,46 @@ html.offline #offline-notification {
 .reader-demo a {
   display: block;
 }
-.reader-demo .laptop {
-  height: calc(var(--baseline) * 11);
-}
-.reader-demo .laptop img {
-  height: 100%;
-}
 
 .laptop-wrapper {
+  margin: 0;
   width: 100%;
+  margin-bottom: calc(var(--baseline)/1);
+}
+.laptop-wrapper svg {
+  width: 100%;
+}
+
+.screen {
+  display: none;
+}
+
+.demo-1 {
+  border: 1px orange solid;
+}
+.demo-1 .screen-1 {
+  display: block;
+}
+
+.demo-2 {
+  border: 1px greenyellow solid;
+}
+.demo-2 .screen-2 {
+  display: block;
+}
+
+.demo-3 {
+  border: 1px #46a0f3 solid;
+}
+.demo-3 .screen-3 {
+  display: block;
+}
+
+.demo-4 {
+  border: 1px #ce2eee solid;
+}
+.demo-4 .screen-4 {
+  display: block;
 }
 
 .demo-points {
@@ -2810,13 +2841,17 @@ html.offline #offline-notification {
   color: #ddd;
   position: relative;
   margin: 0rem;
-  padding: 0 0 0 2rem;
+  padding: 0 0.5rem 0 2.5rem;
   list-style-position: inside;
+  border: 1px solid #555;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.2);
   margin-bottom: calc(var(--baseline)/2);
   z-index: 1;
 }
 .demo-points li:hover {
   color: #fff;
+  background: rgba(0, 0, 0, 0.4);
 }
 .demo-points li:before {
   display: block;
@@ -2829,16 +2864,17 @@ html.offline #offline-notification {
   width: calc(var(--baseline) * .75);
   height: calc(var(--baseline) * .75);
   top: calc(var(--baseline) * 0.1);
-  left: 0;
-  margin-left: 0rem;
+  left: 0.3rem;
+  margin-left: 0;
   z-index: -1;
   background: orangered;
   border-radius: 50%;
   pointer-events: none;
 }
-.demo-points a {
+.demo-points li a {
   display: block;
-  border: 1px solid #5f5;
+  padding: 0;
+  margin: 0;
 }
 
 .authors {
@@ -3127,6 +3163,17 @@ that need device level targeting. This is where we do it. */
 @media (min-width: 48em) {
   [class*=sm-only] {
     display: block;
+  }
+
+  .price-unit {
+    margin: calc(var(--baseline) * 2) 0 calc(var(--baseline) / 2);
+  }
+
+  .laptop-wrapper {
+    margin: 0 0 0 -25%;
+  }
+  .laptop-wrapper svg {
+    width: 125%;
   }
 }
 .pink {

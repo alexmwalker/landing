@@ -3135,6 +3135,17 @@ that need device level targeting. This is where we do it. */
   [class*=sm-only] {
     display: block;
   }
+
+  .price-unit {
+    margin: calc(var(--baseline) * 2) 0 calc(var(--baseline) / 2);
+  }
+
+  .laptop-wrapper {
+    margin: 0 0 0 -25%;
+  }
+  .laptop-wrapper svg {
+    width: 125%;
+  }
 }
 .pink {
   height: calc(var(--baseline));
