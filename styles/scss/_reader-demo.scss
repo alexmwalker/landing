@@ -23,33 +23,9 @@
   //outline: 1px cyan dashed!important;
   width: 100%;
   //-height: calc(var(--baseline) * 13);
-  &:before{
-    /* screen reflection layer */
-    display: block;
-    position: absolute;
-    content: '';
-    //outline: 1px yellow dashed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% - (var(--baseline) * 2));
-    background: linear-gradient(95deg,  rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.22) 90%, rgba(255, 255, 255, 0) 90.5%, rgba(255, 255, 255, 0) 104%);
-    border-radius: 11px;
-  }
-}
-.laptop-unit {
-  background-image: url(../../images/SVG/laptop-bg.svg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  width:  calc(var(--baseline) * 20);
-  height: calc(var(--baseline) * 14);
-  padding: 2.5% 5%;
-  //margin: 0 auto 0 -8rem;
-  position: relative;
-  
-  //outline: 1px yellow dashed!important;
 
 }
+
 .demo-points{
   counter-reset: section;
   list-style-type: none;

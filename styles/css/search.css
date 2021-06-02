@@ -3035,7 +3035,7 @@ that need device level targeting. This is where we do it. */
   }
 
   .container {
-    width: 98%;
+    width: 97%;
     margin: 0 1%;
   }
 }

@@ -3127,29 +3127,6 @@ html.offline #offline-notification {
 .laptop-wrapper {
   width: 100%;
 }
-.laptop-wrapper:before {
-  /* screen reflection layer */
-  display: block;
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - (var(--baseline) * 2));
-  background: -o-linear-gradient(355deg, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.22) 90%, rgba(255, 255, 255, 0) 90.5%, rgba(255, 255, 255, 0) 104%);
-  background: linear-gradient(95deg, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.22) 90%, rgba(255, 255, 255, 0) 90.5%, rgba(255, 255, 255, 0) 104%);
-  border-radius: 11px;
-}
-
-.laptop-unit {
-  background-image: url(../../images/SVG/laptop-bg.svg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  width: calc(var(--baseline) * 20);
-  height: calc(var(--baseline) * 14);
-  padding: 2.5% 5%;
-  position: relative;
-}
 
 .demo-points {
   counter-reset: section;
@@ -3191,6 +3168,7 @@ html.offline #offline-notification {
   border: 1px solid #5f5;
 }
 
+/* SOCIAL AND TWITTER TESTIMONIALS */
 .social {
   margin: calc(var(--baseline) * 2) 0 calc(var(--baseline) * 2);
 }
@@ -3416,9 +3394,9 @@ html.offline #offline-notification {
 }
 
 .courses-landing {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(35, 36, 0, 0.6)), to(rgba(121, 104, 9, 0.4))), url(../../images/course-bg.jpg);
-  background-image: -o-linear-gradient(left, rgba(35, 36, 0, 0.6) 0%, rgba(121, 104, 9, 0.4) 100%), url(../../images/course-bg.jpg);
-  background-image: linear-gradient(90deg, rgba(35, 36, 0, 0.6) 0%, rgba(121, 104, 9, 0.4) 100%), url(../../images/course-bg.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 36, 35, 0.6)), to(rgba(9, 104, 121, 0.4))), url(../../images/course-bg.jpg);
+  background-image: -o-linear-gradient(left, rgba(0, 36, 35, 0.6) 0%, rgba(9, 104, 121, 0.4) 100%), url(../../images/course-bg.jpg);
+  background-image: linear-gradient(90deg, rgba(0, 36, 35, 0.6) 0%, rgba(9, 104, 121, 0.4) 100%), url(../../images/course-bg.jpg);
 }
 
 .course-landing {
@@ -3599,7 +3577,7 @@ that need device level targeting. This is where we do it. */
   }
 
   .container {
-    width: 98%;
+    width: 97%;
     margin: 0 1%;
   }
 }

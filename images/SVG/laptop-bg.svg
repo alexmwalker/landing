@@ -11,7 +11,7 @@
     clip-path: url(#screen-mask);   
     }
     .keys rect{
-      rx: 4;
+      rx: 2;
     }
   </style>
 
@@ -27,12 +27,27 @@
   
   <!-- SYMBOLS -->
   
-  
-  
-  
+  <symbol id="screen-1">
+    <g>
+      <rect width="820" height="525" x="60" y="20" style="fill: rgb(186, 218, 85);" rx="3"></rect>
+      <text x="446.9" y="282.3" style="white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;">1</text>
+    </g>
+  </symbol>
+  <symbol id="screen-2">
+    <g>
+      <rect width="820" height="525" x="60" y="20" style="fill: rgb(86, 218, 185);" rx="3"></rect>
+      <text x="446.9" y="282.3" style="white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;">2</text>
+    </g>
+  </symbol>  
+   <symbol id="screen-3">
+    <g>
+      <rect width="820" height="525" x="60" y="20" style="fill: rgb(86, 218, 185);" rx="3"></rect>
+      <text x="446.9" y="282.3" style="white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;">3</text>
+    </g>
+  </symbol>   
   <!-- GRADIENTS -->
   
-    <linearGradient id="paint0_linear" x1="-66" x2="1027" y1="-28" y2="318" gradientTransform="matrix(1 0 0 1.02386 0 0)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="reflection" x1="-66" x2="1027" y1="-28" y2="318" gradientTransform="matrix(1 0 0 1.02386 0 0)" gradientUnits="userSpaceOnUse">
       <stop/>
       <stop offset=".4"/>
       <stop offset=".5" stop-color="#393939"/>
@@ -67,15 +82,43 @@
       <stop offset="1" stop-opacity=".2"/>
     </linearGradient>
 
+
+<linearGradient gradientUnits="userSpaceOnUse" x1="516.5" y1="13" x2="516.5" y2="543.2" id="specular-reflection" gradientTransform="matrix(0.171577, -0.98517, 1.564056, 0.272397, -56.521532, 734.224792)">
+  <stop offset="0" style="stop-opacity: 0.09; stop-color: rgb(255, 255, 255);"></stop>
+  <stop offset="0.443" style="stop-opacity: 0; stop-color: rgb(255, 255, 255);"></stop>
+  <stop offset="0.794" style="stop-color: rgb(255, 255, 255); stop-opacity: 0.22;"></stop>
+  <stop offset="0.81" style="stop-color: rgb(255, 255, 255); stop-opacity: 0;"></stop>
+  <stop offset="1" style="stop-color: rgb(255, 255, 255); stop-opacity: 0.06;"></stop>
+</linearGradient>
+
+    
+    
   </defs>
  
  <!-- DEFS -->
  
   <rect width="875" height="575.4" x="31" y="2" fill="#000" stroke="url(#laptop-edge)" stroke-width="4" rx="23.4" ry="23.4">
     <title>
-      screen
+      Screen back
     </title>
   </rect>
+
+<!-- DEMOS Fit in here -->
+
+<use href="#screen-1" />
+<use href="#screen-2" />
+<use href="#screen-3" />
+
+
+  <rect width="875" height="570" x="31" y="2" fill="url(#specular-reflection)"  rx="23.4" ry="23.4">
+      <title>
+        reflection
+      </title>
+  </rect>
+
+  
+
+<g class="keyboard">
   <rect width="938" height="11" y="565" fill="url(#upperbase)">
     <title>
       upperbase
@@ -111,14 +154,8 @@
     <rect width="41" height="4" x="858" y="561" fill="#aaa"/>
   </g>
   
+ </g>
+
  
- <use id="demo-1" href="#demo-1" class="show demo-1" />
- <use id="demo-2" href="#demo-2" class="hide demo-2" />
- <use id="demo-3" href="#demo-3" class="hide demo-3" />
- 
-  <rect width="875" height="570" x="31" y="2" fill="#000" stroke="red" stroke-width="4" rx="0" ry="23.4">
-      <title>
-        reflection
-      </title>
-    </rect>
+  
 </svg>
