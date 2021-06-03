@@ -1,0 +1,253 @@
+
+<svg viewBox="0 0 761 710" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <clipPath id="clip0">
+      <rect width="761" height="710" fill="white"/>
+    </clipPath>
+    <symbol id="folder-closed" viewBox="0 0 15 12" >
+      <path id="Rectangle 21" d="M108 62C108 61.4477 108.448 61 109 61H113.382C113.761 61 114.107 61.214 114.276 61.5528L114.724 62.4472C114.893 62.786 115.239 63 115.618 63H122C122.552 63 123 63.4477 123 64V72C123 72.5523 122.552 73 122 73H109C108.448 73 108 72.5523 108 72V62Z" fill="#C4C4C4" transform="matrix(1, 0, 0, 1, -107.99999999999999, -61)"/>
+    </symbol>
+    <symbol id="folder-open" viewBox="0 0 17.1335 12" >
+      <g id="folder-icon" transform="matrix(1, 0, 0, 1, -90, -37.99999999999999)">
+        <path d="M90 40C90 38.8955 90.8954 38 92 38H96.382C96.7607 38 97.1071 38.2141 97.2764 38.5527L97.7236 39.4473C97.8929 39.7859 98.2393 40 98.618 40H102C103.105 40 104 40.8955 104 42V43H93.5352C93.2008 43 92.8885 43.167 92.7031 43.4453L90.0464 47.4304C90.016 47.2917 90 47.1477 90 47V40Z" fill="#C4C4C4"/>
+        <path d="M94.5352 44C94.2008 44 93.8885 44.167 93.7031 44.4453L91.0365 48.4453C90.5934 49.1099 91.0698 50 91.8685 50H103.465C103.799 50 104.111 49.833 104.297 49.5547L106.964 45.5547C107.407 44.8901 106.93 44 106.131 44H94.5352Z" fill="#C4C4C4"/>
+      </g>
+    </symbol>
+    <linearGradient id="color-2" >
+      <stop style="stop-color: rgb(255, 203, 0);"/>
+    </linearGradient>
+    <linearGradient id="color-3" >
+      <stop style="stop-color: rgb(82, 164, 218);"/>
+    </linearGradient>
+    <linearGradient id="color-4" >
+      <stop style="stop-color: rgb(166, 139, 223);"/>
+    </linearGradient>
+    <linearGradient id="color-1" >
+      <stop style="stop-color: rgb(134, 205, 149);"/>
+    </linearGradient>
+    <linearGradient id="color-5" >
+      <stop style="stop-color: rgb(143, 143, 143);"/>
+    </linearGradient>
+    <symbol id="close" viewBox="0 0 7.611 7.611" >
+      <title>close-item</title>
+      <path id="Union_6" d="M400.402 17.1131L399.387 16.0983L396.596 18.889L393.805 16.0983L392.791 17.1131L395.581 19.9038L392.791 22.6945L393.805 23.7093L396.596 20.9186L399.387 23.7093L400.402 22.6945L397.611 19.9038L400.402 17.1131Z" fill="#CFCFCF" transform="matrix(1, 0, 0, 1, -392.7909851074219, -16.09830093383789)"/>
+    </symbol>
+    <symbol id="new-item" viewBox="0 0 13 13" >
+      <title>add-item</title>
+      <path id="Union_9" d="M466.5 401H464.5V406.5H459V408.5H464.5V414H466.5V408.5H472V406.5H466.5V401Z" fill="#CFCFCF" transform="matrix(1, 0, 0, 1, -459, -401)"/>
+    </symbol>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;family=Roboto:wght@500;700&amp;display=swap');
+
+            text {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            #code-window text {
+                font-family: 'Roboto Mono', monospace;
+            }
+        </style>
+  </defs>
+  <g id="coder" clip-path="url(#clip0)">
+    <rect id="work-panel-base" x="275" y="1" width="486" height="709" fill="#252E32"/>
+    <g id="dir-panel-base">
+      <title>dir</title>
+      <rect id="Rectangle 2" x="31" width="9" height="711" fill="#38464C"/>
+      <rect id="Rectangle 4" width="4" height="711" transform="matrix(-1 0 0 1 43 0)" fill="#1F282C"/>
+      <rect id="Rectangle 3" x="42" y="1" width="40" height="709" fill="#283134"/>
+      <text id="&lt;/&gt;" fill="#2A95D0" style="white-space: pre" font-family="Roboto" font-size="16" font-weight="bold" letter-spacing="0em">
+                <tspan x="50" y="27.9688">&lt;/&gt;</tspan>
+            </text>
+      <rect id="Rectangle 24" x="80" y="8" width="2" height="33" fill="#2A95D0"/>
+      <g id="dir-tools" transform="matrix(1, 0, 0, 1, 0, -0.028845)">
+        <path id="share" d="M 62.4 588.2 L 59.7 590 M 59.4 592.4 L 62.3 594.9 M 60 591 C 60 592.1 59.1 593 58 593 C 56.9 593 56 592.1 56 591 C 56 589.9 56.9 589 58 589 C 59.1 589 60 589.9 60 591 Z M 66 587 C 66 588.1 65.1 589 64 589 C 62.9 589 62 588.1 62 587 C 62 585.9 62.9 585 64 585 C 65.1 585 66 585.9 66 587 Z M 66 596 C 66 597.1 65.1 598 64 598 C 62.9 598 62 597.1 62 596 C 62 594.9 62.9 594 64 594 C 65.1 594 66 594.9 66 596 Z" stroke="#CFD1D1"/>
+        <g id="settings">
+          <path d="M 59.7 690.5 L 59.7 692.8 C 60.2 692.9 62.4 692.9 62.9 692.8 L 62.9 690.5 C 63.3 690.3 63.7 690.1 64.1 689.9 L 66 691 C 66.4 690.7 67.6 688.9 67.7 688.5 L 65.6 687.3 C 65.6 687.1 65.6 686.3 65.6 686.1 L 67.7 684.9 C 67.6 684.5 66.4 682.7 66 682.4 L 64.1 683.4 C 63.7 683.2 63.3 683 62.9 682.8 L 62.9 680.5 C 62.4 680.4 60.2 680.4 59.7 680.5 L 59.7 682.8 C 59.3 683 58.9 683.2 58.6 683.4 L 56.5 682.4 C 56.1 682.7 55.1 684.5 55 684.9 L 57 686.1 C 57 686.3 57 687.1 57 687.3 L 55 688.5 C 55.1 688.9 56.1 690.7 56.5 691 L 58.6 689.9 C 58.9 690.1 59.3 690.3 59.7 690.5 Z" stroke="#CFD1D1" style="stroke-width: 0.75px;"/>
+          <path d="M 63.1 686.8 C 63.1 687.8 62.3 688.6 61.2 688.6 C 60.2 688.6 59.4 687.8 59.4 686.8 C 59.4 685.7 60.2 684.9 61.2 684.9 C 62.3 684.9 63.1 685.7 63.1 686.8 Z" stroke="#CFD1D1" style="stroke-width: 0.75px;"/>
+        </g>
+        <g id="help">
+          <circle style="stroke: rgb(207, 209, 209);" cx="61.5" cy="642" r="7.4"/>
+          <path style="stroke: rgb(207, 209, 209); stroke-linecap: round;" d="M 59.4 639.9 C 59.4 639.2 60.3 638.3 61.8 638.3 C 63.2 638.3 63.9 639.2 63.9 639.9 C 63.9 640.9 62.9 641 62.3 641.5 C 61.9 641.9 61.5 642.6 61.6 643.9"/>
+          <circle style="fill: rgb(216, 216, 216);" cx="61.6" cy="645.7" r="0.7"/>
+        </g>
+      </g>
+      <rect id="Rectangle 5" width="193" height="709" transform="matrix(-1 0 0 1 275 1)" fill="#38464C"/>
+      <g id="file-directory">
+        <title>file-dir</title>
+        <text id="FILETREE" fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="13" font-weight="900" letter-spacing="0em">
+                    <tspan x="90" y="21.9434">FILETREE</tspan>
+                </text>
+        <g id="workspace">
+          <text id="workspace" fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="13" font-weight="500" letter-spacing="0em">
+                        <tspan x="109" y="48.9434">~/workspace</tspan>
+                    </text>
+        </g>
+        <g id="heroes">
+          <text id="heroes_2" fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="13" font-weight="500" letter-spacing="0em">
+                        <tspan x="128" y="71.9434">heroes</tspan>
+                    </text>
+          <use width="15" height="12" transform="matrix(1, 0, 0, 1, 108.584953, 60.6208)" xlink:href="#folder-closed"/>
+        </g>
+        <g id="notes">
+          <text id="notes.txt" fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="13" font-weight="500" letter-spacing="0em">
+                        <tspan x="129" y="116.943">notes.txt</tspan>
+                    </text>
+          <g>
+            <path id="Rectangle 23" d="M 118 105.5 L 118 109.5 L 118 110 L 118.5 110 L 122.5 110 L 122.5 121.5 L 110.5 121.5 L 110.5 105.5 L 118 105.5 Z M 114 112.5 L 119 112.5 L 114 112.5 Z M 114 115 L 119 115 L 114 115 Z M 114 117.5 L 119 117.5 L 114 117.5 Z" stroke="#E5E5E5"/>
+            <line style="stroke: rgb(229, 229, 229);" x1="118.1" y1="105.4" x2="122.6" y2="109.9"/>
+          </g>
+        </g>
+        <g id="quiz">
+          <text id="quiz_2" fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="13" font-weight="500" letter-spacing="0em">
+                        <tspan x="129" y="94.9434">quiz</tspan>
+                    </text>
+          <use width="15" height="12" transform="matrix(1, 0, 0, 1, 109.19072, 83.601715)" style="" xlink:href="#folder-closed"/>
+        </g>
+        <use width="17.133499145507812" height="12" transform="matrix(1, 0, 0, 1, 410.638582, 270.508831)" xlink:href="#folder-open"/>
+      </g>
+      <g id="sidetab">
+        <title>sidetab</title>
+        <path id="sidetab_2" d="M0 70C0 64.4772 4.47715 60 10 60H31V232H10C4.47715 232 0 227.523 0 222V70Z" fill="#283134"/>
+        <text id="&lt;/&gt;_2" fill="#2A95D0" style="white-space: pre" font-family="Roboto" font-size="16" font-weight="bold" letter-spacing="0em">
+                    <tspan x="4" y="95.9688">&lt;/&gt;</tspan>
+                </text>
+        <text id="LIVE CODE" transform="translate(7 191) rotate(-90)" fill="#2A95D0" style="white-space: pre" font-family="Roboto" font-size="15" font-weight="500" letter-spacing="0em">
+                    <tspan x="0" y="14.127">LIVE CODE</tspan>
+                </text>
+      </g>
+      <use width="17.133499145507812" height="12" transform="matrix(1, 0, 0, 1, 88.870659, 38.450592)" xlink:href="#folder-open"/>
+    </g>
+    <g id="code-window">
+      <title>code-window</title>
+      <rect id="codebase" width="486" height="430" transform="matrix(1 0 0 -1 275 431)" fill="#2B3336"/>
+      <text style="fill: rgb(209, 210, 211); font-weight: 500; white-space: pre;"><tspan>
+                </tspan><tspan x="305" y="55.3264">window.</tspan><tspan style="fill: url(#color-2);">onload</tspan><tspan> </tspan><tspan style="fill: url(#color-3);">=</tspan><tspan> </tspan><tspan style="fill: url(#color-4);">function</tspan><tspan>() {
+                
+                </tspan><tspan x="305" y="76.3264"> </tspan><tspan style="fill: url(#color-2);">setTimeout</tspan><tspan>(() </tspan><tspan style="fill: url(#color-4);">=&gt;</tspan><tspan> {
+                
+                </tspan><tspan x="305" y="97.3264"> </tspan><tspan style="fill: url(#color-4);">const</tspan><tspan> quiz </tspan><tspan style="fill: url(#color-3);">=</tspan><tspan> [
+                
+                </tspan><tspan x="305" y="118.326"> { name: </tspan><tspan style="fill: url(#color-1);">"Superman"</tspan><tspan>,realName: </tspan><tspan style="fill: url(#color-1);">"Clark Kent"</tspan><tspan> },
+                
+                </tspan><tspan x="305" y="139.326"> { name: </tspan><tspan style="fill: rgb(134, 205, 149);">"Wonder Woman"</tspan><tspan>,realName: </tspan><tspan style="fill: url(#color-1);">"Diana Prince"</tspan><tspan> },
+                
+                </tspan><tspan x="305" y="160.326"> { name: </tspan><tspan style="fill: url(#color-1);">"Batman"</tspan><tspan>,realName: </tspan><tspan style="fill: url(#color-1);">"Bruce Wayne"</tspan><tspan> },
+                
+                </tspan><tspan x="305" y="181.326"> ];
+                
+                </tspan><tspan x="305" y="202.326">
+                
+                </tspan><tspan x="305" y="223.326"> </tspan><tspan style="fill: url(#color-4);">const</tspan><tspan> game </tspan><tspan style="fill: url(#color-3);">=</tspan><tspan> {
+                
+                </tspan><tspan x="305" y="244.326"> </tspan><tspan style="fill: url(#color-2);">start</tspan><tspan>(</tspan><tspan style="fill: url(#color-3);">quiz</tspan><tspan>){
+                
+                </tspan><tspan x="305" y="265.326"> </tspan><tspan style="fill: url(#color-4);">this</tspan><tspan>.questions </tspan><tspan style="fill: url(#color-3);">=</tspan><tspan> [</tspan><tspan style="fill: url(#color-3);">...</tspan><tspan>quiz];
+                
+                </tspan><tspan x="305" y="286.326"> </tspan><tspan style="fill: url(#color-4);">this</tspan><tspan>.score </tspan><tspan style="fill: url(#color-3);">=</tspan><tspan> </tspan><tspan style="fill: url(#color-2);">0</tspan><tspan>;
+                
+                </tspan><tspan x="305" y="307.326"> </tspan><tspan style="fill: url(#color-5);">// main game loop</tspan><tspan>
+                
+                </tspan><tspan x="305" y="328.326"> </tspan><tspan style="fill: url(#color-4);">for</tspan><tspan>(</tspan><tspan style="fill: url(#color-4);">const</tspan><tspan> question </tspan><tspan style="fill: url(#color-3);">of</tspan><tspan> </tspan><tspan style="fill: url(#color-4);">this</tspan><tspan>.questions){
+                
+                </tspan><tspan x="305" y="349.326"> </tspan><tspan style="fill: url(#color-4);">this</tspan><tspan>.question </tspan><tspan style="fill: url(#color-3);">=</tspan><tspan> question;
+            </tspan></text>
+      <g id="line-numbers">
+        <g>
+          <rect x="275" y="41" width="27" height="350" style="fill: rgb(35, 44, 46);"/>
+        </g>
+        <text style="fill: rgb(196, 196, 196); font-size: 16px; font-weight: 500; white-space: pre;"><tspan><tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="289.391" y="55.7148">1<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="289.391" y="76.7148">2<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="289.391" y="97.7148">3<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="289.391" y="118.715">4<tspan x="0" dy="1em">​</tspan>        </tspan><tspan>   <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="289.391" y="139.715">5<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="289.391" y="160.715">6<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="289.391" y="181.715">7<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="289.391" y="202.715">8<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="289.391" y="223.715">9<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="279.781" y="244.715">10<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="279.781" y="265.715">11<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="279.781" y="286.715">12<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="279.781" y="307.715">13<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="279.781" y="328.715">14<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                    </tspan><tspan x="279.781" y="349.715">15<tspan x="0" dy="1em">​</tspan>                    <tspan x="0" dy="1em">​</tspan>                </tspan></text>
+      </g>
+    </g>
+    <g id="code-tabs">
+      <title>code-tabs</title>
+      <g id="tab-4-active">
+        <path id="Union_2" d="M626 5C623.239 5 621 7.23857 621 10V35H275V40H761V35H720V10C720 7.23857 717.761 5 715 5H626Z" fill="#313E44">
+          <title>livetab</title>
+        </path>
+        <text id="main.js" fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em">
+                    <tspan x="628" y="24.7852">main.js</tspan>
+                </text>
+        <use width="7.611000061035156" height="7.611000061035156" transform="matrix(0.895334, 0, 0, 0.895334, 696.536072, 16.691935)" xlink:href="#close"/>
+      </g>
+      <g id="tab-3">
+        <text id="styles.css" fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em">
+                    <tspan x="524" y="24.7852">styles.css</tspan>
+                </text>
+        <use width="7.611000061035156" height="7.611000061035156" transform="matrix(1, 0, 0, 1, 604.390503, 16.853603)" xlink:href="#close"/>
+      </g>
+      <g id="tab-2">
+        <use width="7.611000061035156" height="7.611000061035156" transform="matrix(1, 0, 0, 1, 495.889954, 16.702978)" xlink:href="#close"/>
+        <rect id="Rectangle 15" x="516" y="11" width="1" height="18" fill="#C4C4C4" class="breaker"/>
+        <text fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em">
+                    <tspan x="422" y="24.7852">heroes.h..</tspan>
+                </text>
+      </g>
+      <g id="tab-1">
+        <use width="7.611000061035156" height="7.611000061035156" transform="matrix(1, 0, 0, 1, 391.188934, 15.881624)" xlink:href="#close">
+          <title>close</title>
+        </use>
+        <rect id="Rectangle 13" x="413" y="11" width="1" height="18" fill="#C4C4C4" class="breaker"/>
+        <text id="notes.txt_2" fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em">
+                    <tspan x="319" y="24.7852">notes.txt</tspan>
+                </text>
+      </g>
+      <g id="folder">
+        <path id="thumbtab" d="M274 5H289C296.18 5 302 10.8203 302 18V19C302 26.1797 296.18 32 289 32H274V5Z" fill="#334248"/>
+        <use width="13" height="13" transform="matrix(0.895334, 0, 0, 0.895334, 734.243896, 13.84977)" xlink:href="#new-item"/>
+        <use width="17.133499145507812" height="12" transform="matrix(1, 0, 0, 1, 279.347377, 13.505254)" xlink:href="#folder-open"/>
+      </g>
+      <rect id="Rectangle 14" x="310" y="11" width="1" height="18" fill="#C4C4C4" class="breaker"/>
+    </g>
+    <g id="browser">
+      <title>browser</title>
+      <g id="browser-window">
+        <title>browser-window</title>
+        <rect id="Rectangle 7" x="275" y="431" width="486" height="279" fill="white"/>
+        <g id="Rectangle 8">
+          <path d="M275 431H761V474H275V431Z" fill="#E5E5E5"/>
+          <path d="M275 431H761V474H275V431Z" fill="#E5E5E5"/>
+        </g>
+        <rect id="Rectangle 9" x="312.5" y="437.5" width="411" height="30" fill="white" stroke="#C4C4C4"/>
+        <text id="Open an HTML file to view" fill="#889198" style="white-space: pre" font-family="Roboto" font-size="15" font-weight="500" letter-spacing="0em">
+                    <tspan x="429" y="457.127">Open an HTML file to view</tspan>
+                </text>
+        <path id="Ellipse 5" d="M295.385 450.615H300M300 450.615C299.375 447.969 296.837 446 294 446C290.686 446 288 448.686 288 452C288 455.314 290.686 458 294 458C295.522 458 296.911 457.434 297.969 456.5M300 450.615V446" stroke="#889198" style="stroke-width: 1.25px;"/>
+        <path id="Rectangle 16" d="M748 453.5V458C748 458.552 747.552 459 747 459H738C737.448 459 737 458.552 737 458V449C737 448.448 737.448 448 738 448H742.5M740 455L749 446M749 446V450M749 446H745" stroke="#889198"/>
+      </g>
+      <g id="browser-tab">
+        <title>browser-tab</title>
+        <use width="13" height="13" transform="matrix(0.895334, 0, 0, 0.895334, 459.842743, 406.010651)" xlink:href="#new-item">
+          <title>new</title>
+        </use>
+        <path id="browser-tab_2" d="M281 397C279.895 397 279 397.895 279 399V427H275V431H761V427H445V399C445 397.895 444.105 397 443 397H281Z" fill="#324046">
+          <title>active-tab</title>
+        </path>
+        <text id="Web Browser" fill="#E5E5E5" style="white-space: pre" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em">
+                    <tspan x="308" y="415.785">Web Browser</tspan>
+                </text>
+        <path id="world" d="M296 417C293.33 417 291.068 415.257 290.289 412.846M296 417C298.67 417 300.932 415.257 301.711 412.846M296 417C297.784 417 298.769 414.314 298.769 411C298.769 407.686 297.784 405 296 405M296 417C294.216 417 293.231 414.314 293.231 411C293.231 407.686 294.216 405 296 405M296 405C298.67 405 300.932 406.743 301.711 409.154M296 405C293.33 405 291.068 406.743 290.289 409.154M301.711 409.154C301.898 409.735 302 410.356 302 411C302 411.644 301.898 412.265 301.711 412.846M301.711 409.154H290.289M290.289 409.154C290.102 409.735 290 410.356 290 411C290 411.644 290.102 412.265 290.289 412.846M290.289 412.846H301.711" stroke="#E5E5E5"/>
+        <use width="7.611000061035156" height="7.611000061035156" style="" transform="matrix(1, 0, 0, 1, 423.454407, 409.001862)" xlink:href="#close"/>
+      </g>
+    </g>
+    <g id="code-tools">
+      <title>code-tools</title>
+      <rect x="273" y="355" width="488" height="36" fill="#334248"/>
+      <g id="edit">
+        <path d="M298.435 365.707C298.044 365.317 297.411 365.317 297.021 365.707L295.607 367.121L299.142 370.657L300.556 369.243C300.947 368.852 300.947 368.219 300.556 367.828L298.435 365.707Z" fill="#2A95D0"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M294.899 367.828L298.435 371.364L291.303 378.496C291.116 378.683 290.861 378.789 290.596 378.789H288.475C287.923 378.789 287.475 378.341 287.475 377.789V375.667C287.475 375.402 287.58 375.148 287.768 374.96L294.899 367.828ZM288.536 375.607H289.243V377.021H290.657V377.728H288.536V375.607Z" fill="#2A95D0"/>
+      </g>
+      <g id="bin">
+        <path d="M327 366H331L332 367H335V368H323V367H326L327 366Z" fill="#FF5960"/>
+        <path d="M334 369H324L324.453 378.05C324.479 378.582 324.918 379 325.451 379H332.549C333.082 379 333.521 378.582 333.547 378.05L334 369Z" fill="#FF5960"/>
+      </g>
+      <g class="dl">
+        <path id="dl" fill-rule="evenodd" clip-rule="evenodd" d="M 362 366.4 C 362 366.2 362.2 366 362.4 366 L 364.6 366 C 364.8 366 365 366.2 365 366.4 L 365 371 L 367 371 C 367.4 371 367.6 371.5 367.3 371.7 L 363.8 375.6 C 363.7 375.8 363.3 375.8 363.2 375.6 L 359.7 371.7 C 359.4 371.5 359.6 371 360 371 L 362 371 L 362 366.4 Z M 358 375 L 362 375 L 363.2 376.3 C 363.3 376.5 363.7 376.5 363.8 376.3 L 365 375 L 369 375 C 369.6 375 370 375.4 370 376 L 370 378 C 370 378.6 369.6 379 369 379 L 358 379 C 357.4 379 357 378.6 357 378 L 357 376 C 357 375.4 357.4 375 358 375 Z M 366 377 L 367 377 L 367 378 L 366 378 L 366 377 Z M 369 377 L 368 377 L 368 378 L 369 378 L 369 377 Z" fill="#C4C4C4"/>
+      </g>
+      <g id="tool-handle">
+        <rect id="Rectangle 20" x="271.5" y="342.5" width="6" height="30" rx="1.5" fill="#324147" stroke="#243239"/>
+        <path id="Line 1" d="M273.5 350L273.5 365" stroke="#E5E5E5"/>
+        <path id="Line 2" d="M275.5 350L275.5 365" stroke="#E5E5E5"/>
+      </g>
+    </g>
+  </g>
+</svg>
