@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 761 710">
   <defs>
     <path id="reuse-0" d="M275 431h486v43H275v-43z"/>
-
+  <!-- GRADIENTS -->  
     <linearGradient id="color-2">
       <stop style="stop-color:#ffcb00"/>
     </linearGradient>
@@ -17,6 +17,8 @@
     <linearGradient id="color-5">
       <stop style="stop-color:#8f8f8f"/>
     </linearGradient>
+
+    <!-- SYMBOLS -->
     <symbol id="folder-closed" viewBox="0 0 15 12">
       <path id="Rectangle 21" fill="#C4C4C4" d="M108 62c0-.6.4-1 1-1h4.4c.4 0 .7.2.9.6l.4.8c.2.4.5.6 1 .6h6.3c.6 0 1 .4 1 1v8c0 .6-.4 1-1 1h-13a1 1 0 01-1-1V62z" transform="translate(-108 -61)"/>
     </symbol>
@@ -32,13 +34,20 @@
     <symbol id="new-item" viewBox="0 0 13 13">
       <path id="Union_9" fill="#CFCFCF" d="M466.5 401h-2v5.5H459v2h5.5v5.5h2v-5.5h5.5v-2h-5.5V401z" transform="translate(-459 -401)"/>
     </symbol>
+
+    <!-- / SYMBOLS -->
+
+    <!-- CLIP-PATHS -->
     <clipPath id="clip0">
       <rect width="761" height="710" fill="#fff"/>
     </clipPath>
+
     <style>
       @import url(&quot;https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;family=Roboto:wght@500;700&amp;display=swap&quot;);text{font-family:&apos;Roboto&apos;,sans-serif}#code-window text{font-family:&apos;Roboto Mono&apos;,monospace}
     </style>
+
   </defs>
+ 
   <g id="coder" clip-path="url(#clip0)">
     <rect id="work-panel-base" width="486" height="709" x="275" y="1" fill="#252E32"/>
     <g id="dir-panel-base">
@@ -156,23 +165,22 @@
     </g>
     <g id="browser">
       <g id="browser-window">
-        <rect id="Rectangle 7" width="486" height="279" x="275" y="431" fill="#fff"/>
+        <rect width="486" height="279" x="275" y="431" fill="#fff"/>
         <g fill="#E5E5E5">
           <use href="#reuse-0"/>
-          <use href="#reuse-0"/>
         </g>
-        <rect  width="411" height="30" x="312.5" y="437.5" fill="#fff" stroke="#C4C4C4"/>
+        <rect class="address-bar" width="411" height="30" x="312.5" y="437.5" fill="#fff" stroke="#C4C4C4"/>
         <text  fill="#889198"  font-size="15" font-weight="500" >
           <tspan x="429" y="457.1">Open an HTML file to view</tspan>
         </text>
-        <path stroke="#889198" d="M295.4 450.6h4.6m0 0a6.2 6.2 0 00-6-4.6 6 6 0 104 10.5m2-5.9V446" style="stroke-width:1.25px"/>
-        <path stroke="#889198" d="M748 453.5v4.5c0 .6-.4 1-1 1h-9a1 1 0 01-1-1v-9c0-.6.4-1 1-1h4.5m-2.5 7l9-9m0 0v4m0-4h-4"/>
+        <path class="reload" stroke="#889198" d="M295.4 450.6h4.6m0 0a6.2 6.2 0 00-6-4.6 6 6 0 104 10.5m2-5.9V446" style="stroke-width:1.25px"/>
+        <path class="expand" stroke="#889198" d="M748 453.5v4.5c0 .6-.4 1-1 1h-9a1 1 0 01-1-1v-9c0-.6.4-1 1-1h4.5m-2.5 7l9-9m0 0v4m0-4h-4"/>
       </g>
       <g id="browser-tab">
         <use width="13" height="13" transform="matrix(.89533 0 0 .89533 459.8 406)" href="#new-item"/>
         <path  fill="#324046" d="M281 397a2 2 0 00-2 2v28h-4v4h486v-4H445v-28a2 2 0 00-2-2H281z"/>
-        <text  fill="#E5E5E5"  font-size="14" font-weight="bold" >
-          <tspan x="308" y="415.8">Web Browser</tspan>
+        <text fill="#E5E5E5"  font-size="14" font-weight="bold" >
+          <tspan x="308" y="416">Web Browser</tspan>
         </text>
         <path id="world" stroke="#E5E5E5" d="M296 417a6 6 0 01-5.7-4.2m5.7 4.2a6 6 0 005.7-4.2M296 417c1.8 0 2.8-2.7 2.8-6s-1-6-2.8-6m0 12c-1.8 0-2.8-2.7-2.8-6s1-6 2.8-6m0 0a6 6 0 015.7 4.2M296 405a6 6 0 00-5.7 4.2m11.4 0a6 6 0 010 3.6m0-3.6h-11.4m0 0a6 6 0 000 3.6m0 0h11.4"/>
         <use width="7.6" height="7.6" transform="translate(423.5 409)" href="#close"/>

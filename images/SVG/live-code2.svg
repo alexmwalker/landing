@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 761 710">
+  <defs>
+    <path id="reuse-0" d="M275 431h486v43H275v-43z"/>
+  </defs>
+  <defs>
+    <linearGradient id="color-2">
+      <stop style="stop-color:#ffcb00"/>
+    </linearGradient>
+    <linearGradient id="color-3">
+      <stop style="stop-color:#52a4da"/>
+    </linearGradient>
+    <linearGradient id="color-4">
+      <stop style="stop-color:#a68bdf"/>
+    </linearGradient>
+    <linearGradient id="color-1">
+      <stop style="stop-color:#86cd95"/>
+    </linearGradient>
+    <linearGradient id="color-5">
+      <stop style="stop-color:#8f8f8f"/>
+    </linearGradient>
+    <symbol id="folder-closed" viewBox="0 0 15 12">
+      <path fill="#C4C4C4" d="M108 62c0-.6.4-1 1-1h4.4c.4 0 .7.2.9.6l.4.8c.2.4.5.6 1 .6h6.3c.6 0 1 .4 1 1v8c0 .6-.4 1-1 1h-13a1 1 0 01-1-1V62z" transform="translate(-108 -61)"/>
+    </symbol>
+    <symbol id="folder-open" viewBox="0 0 17.1 12">
+      <g fill="#C4C4C4" transform="translate(-90 -38)">
+        <path d="M90 40c0-1.1.9-2 2-2h4.4c.4 0 .7.2.9.6l.4.8c.2.4.5.6 1 .6h3.3a2 2 0 012 2v1H93.5a1 1 0 00-.8.4l-2.7 4V40z"/>
+        <path d="M94.5 44a1 1 0 00-.8.4l-2.7 4A1 1 0 0092 50h11.6c.3 0 .6-.2.8-.4l2.7-4a1 1 0 00-.9-1.6H94.5z"/>
+      </g>
+    </symbol>
+    <symbol id="close" viewBox="0 0 7.6 7.6">
+      <path fill="#CFCFCF" d="M400.4 17.1l-1-1-2.8 2.8-2.8-2.8-1 1 2.8 2.8-2.8 2.8 1 1 2.8-2.8 2.8 2.8 1-1-2.8-2.8 2.8-2.8z" transform="translate(-392.8 -16.1)"/>
+    </symbol>
+    <symbol id="new-item" viewBox="0 0 13 13">
+      <path fill="#CFCFCF" d="M466.5 401h-2v5.5H459v2h5.5v5.5h2v-5.5h5.5v-2h-5.5V401z" transform="translate(-459 -401)"/>
+    </symbol>
+    <clipPath id="clip0">
+      <rect width="761" height="710" fill="#fff"/>
+    </clipPath>
+    <style>
+      @import url(&quot;https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;family=Roboto:wght@500;700&amp;display=swap&quot;);text{font-family:&apos;Roboto&apos;,sans-serif}#code-window text{font-family:&apos;Roboto Mono&apos;,monospace}
+    </style>
+  </defs>
+  <g id="coder" clip-path="url(#clip0)">
+    <rect id="work-panel-base" width="486" height="711" x="275" y="0" fill="#252E32"/>
+    <g id="dir-panel-base">
+      <rect width="9" height="711" x="31" fill="#38464C"/>
+      <rect width="4" height="711" fill="#1F282C" x="40" />
+      <rect width="40" height="711" x="42" y="0" fill="#283134"/>
+      <text  fill="#2A95D0" font-family="Roboto" font-size="16" font-weight="bold" letter-spacing="0em" style="white-space:pre">
+        <tspan x="50" y="28">&lt;/&gt;</tspan>
+      </text>
+      <rect width="2" height="33" x="80" y="8" fill="#2A95D0"/>
+      <g id="dir-tools">
+        <path id="share" stroke="#CFD1D1" d="M62.4 588.2l-2.7 1.8m-.3 2.4l2.9 2.5M60 591a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm6-4a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm0 9a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2z"/>
+        <g id="settings" stroke="#CFD1D1">
+          <path d="M59.7 690.5v2.3c.5.1 2.7.1 3.2 0v-2.3l1.2-.6L66 691a10 10 0 001.7-2.5l-2.1-1.2v-1.2l2.1-1.2a10 10 0 00-1.7-2.5l-1.9 1-1.2-.6v-2.3c-.5-.1-2.7-.1-3.2 0v2.3l-1.1.6-2.1-1c-.4.3-1.4 2.1-1.5 2.5l2 1.2v1.2l-2 1.2c.1.4 1.1 2.2 1.5 2.5l2.1-1.1 1.1.6z" style="stroke-width:.75px"/>
+          <path d="M63.1 686.8c0 1-.8 1.8-1.9 1.8-1 0-1.8-.8-1.8-1.8 0-1.1.8-1.9 1.8-1.9 1.1 0 1.9.8 1.9 1.9z" style="stroke-width:.75px"/>
+        </g>
+        <g id="help">
+          <circle cx="61.5" cy="642" r="7.4" style="stroke:#cfd1d1"/>
+          <path d="M59.4 639.9c0-.7.9-1.6 2.4-1.6 1.4 0 2.1.9 2.1 1.6 0 1-1 1.1-1.6 1.6-.4.4-.8 1.1-.7 2.4" style="stroke:#cfd1d1;stroke-linecap:round"/>
+          <circle cx="61.6" cy="645.7" r=".7" style="fill:#d8d8d8"/>
+        </g>
+      </g>
+      <rect width="193" height="711" fill="#38464C" x="82"/>
+      <g id="file-directory">
+        <text id="FILETREE" fill="#E5E5E5" font-family="Roboto" font-size="13" font-weight="900" letter-spacing="0em" style="white-space:pre">
+          <tspan x="90" y="21.9">FILETREE</tspan>
+        </text>
+        <g id="workspace">
+          <text id="workspace" fill="#E5E5E5" font-family="Roboto" font-size="13" font-weight="500" letter-spacing="0em" style="white-space:pre">
+            <tspan x="109" y="48.9">~/workspace</tspan>
+          </text>
+        </g>
+        <g id="heroes">
+          <text id="heroes_2" fill="#E5E5E5" font-family="Roboto" font-size="13" font-weight="500" letter-spacing="0em" style="white-space:pre">
+            <tspan x="128" y="71.9">heroes</tspan>
+          </text>
+          <use width="15" height="12" transform="translate(108.6 60.6)" xlink:href="#folder-closed"/>
+        </g>
+        <g id="notes">
+          <text id="notes.txt" fill="#E5E5E5" font-family="Roboto" font-size="13" font-weight="500" letter-spacing="0em" style="white-space:pre">
+            <tspan x="129" y="116.9">notes.txt</tspan>
+          </text>
+          <g>
+            <path stroke="#E5E5E5" d="M118 105.5v4.5h4.5v11.5h-12v-16h7.5zm-4 7h5-5zm0 2.5h5-5zm0 2.5h5-5z"/>
+            <line x1="118.1" x2="122.6" y1="105.4" y2="109.9" style="stroke:#e5e5e5"/>
+          </g>
+        </g>
+        <g id="quiz">
+          <text id="quiz_2" fill="#E5E5E5" font-family="Roboto" font-size="13" font-weight="500" letter-spacing="0em" style="white-space:pre">
+            <tspan x="129" y="94.9">quiz</tspan>
+          </text>
+          <use width="15" height="12" transform="translate(109.2 83.6)" xlink:href="#folder-closed"/>
+        </g>
+        <use width="17.1" height="12" transform="translate(410.6 270.5)" xlink:href="#folder-open"/>
+      </g>
+      <g id="sidetab">
+        <path id="sidetab_2" fill="#283134" d="M0 70a10 10 0 0110-10h21v172H10a10 10 0 01-10-10V70z"/>
+        <text id="&lt;/&gt;_2" fill="#2A95D0" font-family="Roboto" font-size="16" font-weight="bold" letter-spacing="0em" style="white-space:pre">
+          <tspan x="4" y="96">&lt;/&gt;</tspan>
+        </text>
+        <text id="LIVE CODE" fill="#2A95D0" font-family="Roboto" font-size="15" font-weight="500" letter-spacing="0em" style="white-space:pre" transform="rotate(-90 99 92)">
+          <tspan x="0" y="14.1">LIVE CODE</tspan>
+        </text>
+      </g>
+      <use width="17.1" height="12" transform="translate(88.9 38.5)" xlink:href="#folder-open"/>
+    </g>
+    <g id="code-window">
+      <rect id="codebase" width="486" height="430" fill="#2B3336" transform="matrix(1 0 0 -1 275 431)"/>
+      <text style="fill:#d1d2d3;font-weight:500;white-space:pre">
+        <tspan></tspan><tspan x="305" y="55.3">window.</tspan><tspan style="fill:url(#color-2)">onload</tspan><tspan> </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> </tspan><tspan style="fill:url(#color-4)">function</tspan><tspan>() { </tspan><tspan x="305" y="76.3"> </tspan><tspan style="fill:url(#color-2)">setTimeout</tspan><tspan>(() </tspan><tspan style="fill:url(#color-4)">=&gt;</tspan><tspan> { </tspan><tspan x="305" y="97.3"> </tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> quiz </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> [ </tspan><tspan x="305" y="118.3"> { name: </tspan><tspan style="fill:url(#color-1)">&quot;Superman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Clark Kent&quot;</tspan><tspan> }, </tspan><tspan x="305" y="139.3"> { name: </tspan><tspan style="fill:#86cd95">&quot;Wonder Woman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Diana Prince&quot;</tspan><tspan> }, </tspan><tspan x="305" y="160.3"> { name: </tspan><tspan style="fill:url(#color-1)">&quot;Batman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Bruce Wayne&quot;</tspan><tspan> }, </tspan><tspan x="305" y="181.3"> ]; </tspan><tspan x="305" y="202.3"> </tspan><tspan x="305" y="223.3"> </tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> game </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> { </tspan><tspan x="305" y="244.3"> </tspan><tspan style="fill:url(#color-2)">start</tspan><tspan>(</tspan><tspan style="fill:url(#color-3)">quiz</tspan><tspan>){ </tspan><tspan x="305" y="265.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.questions </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> [</tspan><tspan style="fill:url(#color-3)">...</tspan><tspan>quiz]; </tspan><tspan x="305" y="286.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.score </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> </tspan><tspan style="fill:url(#color-2)">0</tspan><tspan>; </tspan><tspan x="305" y="307.3"> </tspan><tspan style="fill:url(#color-5)">// main game loop</tspan><tspan> </tspan><tspan x="305" y="328.3"> </tspan><tspan style="fill:url(#color-4)">for</tspan><tspan>(</tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> question </tspan><tspan style="fill:url(#color-3)">of</tspan><tspan> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.questions){ </tspan><tspan x="305" y="349.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.question </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> question;</tspan>
+      </text>
+      <g id="line-numbers">
+        <g>
+          <rect width="27" height="350" x="275" y="41" style="fill:#232c2e"/>
+        </g>
+        <text style="fill:#c4c4c4;font-size:16px;font-weight:500;white-space:pre">
+          <tspan><tspan x="0" dy="1em">​</tspan> </tspan><tspan x="289.4" y="55.7">1<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="289.4" y="76.7">2<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="289.4" y="97.7">3<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="289.4" y="118.7">4<tspan x="0" dy="1em">​</tspan> </tspan><tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="289.4" y="139.7">5<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="289.4" y="160.7">6<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="289.4" y="181.7">7<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="289.4" y="202.7">8<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="289.4" y="223.7">9<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="279.8" y="244.7">10<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="279.8" y="265.7">11<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="279.8" y="286.7">12<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="279.8" y="307.7">13<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="279.8" y="328.7">14<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan> </tspan><tspan x="279.8" y="349.7">15<tspan x="0" dy="1em">​</tspan> <tspan x="0" dy="1em">​</tspan></tspan>
+        </text>
+      </g>
+    </g>
+    <g id="code-tabs">
+      <g id="tab-4-active">
+        <path id="Union_2" fill="#313E44" d="M626 5a5 5 0 00-5 5v25H275v5h486v-5h-41V10a5 5 0 00-5-5h-89z"/>
+        <text id="main.js" fill="#E5E5E5" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em" style="white-space:pre">
+          <tspan x="628" y="24.8">main.js</tspan>
+        </text>
+        <use width="7.6" height="7.6" transform="matrix(.89533 0 0 .89533 696.5 16.7)" xlink:href="#close"/>
+      </g>
+      <g id="tab-3">
+        <text id="styles.css" fill="#E5E5E5" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em" style="white-space:pre">
+          <tspan x="524" y="24.8">styles.css</tspan>
+        </text>
+        <use width="7.6" height="7.6" transform="translate(604.4 16.9)" xlink:href="#close"/>
+      </g>
+      <g id="tab-2">
+        <use width="7.6" height="7.6" transform="translate(495.9 16.7)" xlink:href="#close"/>
+        <rect width="1" height="18" x="516" y="11" fill="#C4C4C4" class="breaker"/>
+        <text fill="#E5E5E5" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em" style="white-space:pre">
+          <tspan x="422" y="24.8">heroes.h..</tspan>
+        </text>
+      </g>
+      <g id="tab-1">
+        <use width="7.6" height="7.6" transform="translate(391.2 15.9)" xlink:href="#close"/>
+        <rect width="1" height="18" x="413" y="11" fill="#C4C4C4" class="breaker"/>
+        <text id="notes.txt_2" fill="#E5E5E5" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em" style="white-space:pre">
+          <tspan x="319" y="24.8">notes.txt</tspan>
+        </text>
+      </g>
+      <g id="folder">
+        <path id="thumbtab" fill="#334248" d="M274 5h15a13 13 0 0113 13v1a13 13 0 01-13 13h-15V5z"/>
+        <use width="13" height="13" transform="matrix(.89533 0 0 .89533 734.2 13.8)" xlink:href="#new-item"/>
+        <use width="17.1" height="12" transform="translate(279.3 13.5)" xlink:href="#folder-open"/>
+      </g>
+      <rect width="1" height="18" x="310" y="11" fill="#C4C4C4" class="breaker"/>
+    </g>
+    <g id="browser">
+      <g id="browser-window">
+        <rect width="486" height="279" x="275" y="431" fill="#fff"/>
+        <g  fill="#E5E5E5">
+          <use xlink:href="#reuse-0"/>
+        </g>
+        <rect width="411" height="30" x="312.5" y="437.5" fill="#fff" stroke="#C4C4C4"/>
+        <text id="Open an HTML file to view" fill="#889198" font-family="Roboto" font-size="15" font-weight="500" letter-spacing="0em" style="white-space:pre">
+          <tspan x="429" y="457.1">Open an HTML file to view</tspan>
+        </text>
+        <path stroke="#889198" d="M295.4 450.6h4.6m0 0a6.2 6.2 0 00-6-4.6 6 6 0 104 10.5m2-5.9V446" style="stroke-width:1.25px"/>
+        <path stroke="#889198" d="M748 453.5v4.5c0 .6-.4 1-1 1h-9a1 1 0 01-1-1v-9c0-.6.4-1 1-1h4.5m-2.5 7l9-9m0 0v4m0-4h-4"/>
+      </g>
+      <g id="browser-tab">
+        <use width="13" height="13" transform="matrix(.89533 0 0 .89533 459.8 406)" xlink:href="#new-item"/>
+        <path id="browser-tab_2" fill="#324046" d="M281 397a2 2 0 00-2 2v28h-4v4h486v-4H445v-28a2 2 0 00-2-2H281z"/>
+        <text id="Web Browser" fill="#E5E5E5" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em" style="white-space:pre">
+          <tspan x="308" y="415.8">Web Browser</tspan>
+        </text>
+        <path id="world" stroke="#E5E5E5" d="M296 417a6 6 0 01-5.7-4.2m5.7 4.2a6 6 0 005.7-4.2M296 417c1.8 0 2.8-2.7 2.8-6s-1-6-2.8-6m0 12c-1.8 0-2.8-2.7-2.8-6s1-6 2.8-6m0 0a6 6 0 015.7 4.2M296 405a6 6 0 00-5.7 4.2m11.4 0a6 6 0 010 3.6m0-3.6h-11.4m0 0a6 6 0 000 3.6m0 0h11.4"/>
+        <use width="7.6" height="7.6" transform="translate(423.5 409)" xlink:href="#close"/>
+      </g>
+    </g>
+    <g id="code-tools">
+      <rect width="488" height="36" x="273" y="355" fill="#334248"/>
+      <g id="edit" fill="#2A95D0">
+        <path d="M298.4 365.7a1 1 0 00-1.4 0l-1.4 1.4 3.5 3.6 1.5-1.5c.3-.3.3-1 0-1.4l-2.2-2z"/>
+        <path fill-rule="evenodd" d="M294.9 367.8l3.5 3.6-7.1 7.1a1 1 0 01-.7.3h-2.1a1 1 0 01-1-1v-2.1c0-.3 0-.6.3-.7l7.1-7.2zm-6.4 7.8h.7v1.4h1.5v.7h-2.2v-2z" clip-rule="evenodd"/>
+      </g>
+      <g id="bin" fill="#FF5960">
+        <path d="M327 366h4l1 1h3v1h-12v-1h3l1-1zM334 369h-10l.5 9c0 .6.4 1 1 1h7c.6 0 1-.4 1-1l.5-9z"/>
+      </g>
+      <g class="dl">
+        <path id="dl" fill="#C4C4C4" fill-rule="evenodd" d="M362 366.4c0-.2.2-.4.4-.4h2.2c.2 0 .4.2.4.4v4.6h2c.4 0 .6.5.3.7l-3.5 3.9c-.1.2-.5.2-.6 0l-3.5-3.9c-.3-.2-.1-.7.3-.7h2v-4.6zm-4 8.6h4l1.2 1.3c.1.2.5.2.6 0l1.2-1.3h4c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1h-11c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1zm8 2h1v1h-1v-1zm3 0h-1v1h1v-1z" clip-rule="evenodd"/>
+      </g>
+      <g id="tool-handle">
+        <rect width="6" height="30" x="271.5" y="342.5" fill="#324147" stroke="#243239" rx="1.5"/>
+        <path  stroke="#E5E5E5" d="M273.5 350v15"/>
+        <path  stroke="#E5E5E5" d="M275.5 350v15"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -45,9 +45,11 @@
   </symbol>   
    <symbol id="screen-4">
     <g>
+    <image />
       <rect width="820" height="525" x="60" y="20" style="fill: rgb(86, 86, 185);" rx="3"></rect>
       <text x="446.9" y="282.3" style="white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;">4</text>
     </g>
+
   </symbol>  
   <!-- GRADIENTS -->
   
