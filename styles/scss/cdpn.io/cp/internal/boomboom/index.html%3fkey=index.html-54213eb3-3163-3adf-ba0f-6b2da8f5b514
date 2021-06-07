@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+  <meta charset='UTF-8'>
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/alexmwalker/pen/GRWxMQL">
+
+  
+  
+
+  <style class="INLINE_PEN_STYLESHEET_ID">
+    body {
+  font-family: sans-serif;
+}
+
+.laptop-wrapper {
+  background: #A68BDF;
+  padding: 0.5rem;
+}
+
+.page-wrapper, .bookmark {
+  transition: all 0.6s ease-in-out;
+}
+
+.pinger {
+  transform: translatex(0px);
+}
+
+.demo-1 .cursor {
+  transform: translate(450px, -120px);
+}
+.demo-1 .stage-1 .pinger {
+  transform: translatex(-260px);
+  transition: transform 2s steps(13) 1.8s;
+}
+.demo-1 #code-panel-pos {
+  transform: matrix(0.9, 0, 0, 0.9, 180, 19);
+  transition-delay: 1.2s;
+}
+
+.demo-2 .cursor {
+  transform: translate(-80px, 120px);
+}
+.demo-2 .stage-1 .pinger {
+  transform: translatex(-260px);
+  transition: transform 2s steps(13) 1.8s;
+}
+.demo-2 foreignObject .page-wrapper {
+  margin-top: -21rem;
+}
+.demo-2 foreignObject .bookmark-section-1 {
+  background: #faffc8;
+}
+
+.demo-3 .cursor {
+  transform: translate(-41px, -158px);
+}
+.demo-3 foreignObject .page-wrapper {
+  margin-top: -95rem;
+}
+.demo-3 foreignObject .bookmark-section-2 {
+  background: #faffc8;
+}
+
+.cursor {
+  transition: all 0.6s ease-in-out;
+}
+
+/* ###  STAGED TRANSITIONS  ### */
+/* EVENTS */
+.reveal {
+  opacity: 0;
+}
+
+.demo-1 .stage-1 .reveal,
+.demo-2 .stage-2 .reveal,
+.demo-3 .stage-3 .reveal,
+.demo-4 .stage-4 .reveal {
+  opacity: 1;
+}
+
+.arrive-1, .arrive-2, .arrive-3, .arrive-4 {
+  pointer-events: none;
+  transition: all 0.6s ease-in-out;
+}
+
+.demo-1 .stage-1 .arrive-2,
+.demo-2 .stage-2 .arrive-2,
+.demo-3 .stage-3 .arrive-2,
+.demo-4 .stage-4 .arrive-2 {
+  transition-delay: 0.6s;
+}
+
+.demo-1 .stage-1 .arrive-3,
+.demo-2 .stage-2 .arrive-3,
+.demo-3 .stage-3 .arrive-3,
+.demo-4 .stage-4 .arrive-3 {
+  transition-delay: 1.2s;
+}
+
+.demo-1 .arrive-4,
+.demo-1 .stage-1 .arrive-4,
+.demo-2 .stage-2 .arrive-4,
+.demo-3 .stage-3 .arrive-4,
+.demo-4 .stage-4 .arrive-4 {
+  transition-delay: 1.8s;
+}
+
+#code-panel-pos {
+  transform: matrix(0.9, 0, 0, 0.9, 710, 19);
+}
+
+/* ### DEMO BACKGROUND ### */
+/* (just to show the switch is working) */
+/* ### Switch button controls ### */
+.kaboom {
+  animation: boom 2.6s linear infinite;
+}
+
+@keyframes boom {
+  0% {
+    stroke-width: 0px;
+    stroke-opacity: 1;
+  }
+  90% {
+    stroke-width: 3.5px;
+    stroke-opacity: 0;
+  }
+  100% {
+    stroke-width: 3.5px;
+    stroke-opacity: 0;
+  }
+}
+.switch {
+  list-style: none;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+  overflow: auto;
+  text-align: center;
+  display: flex;
+}
+.switch li {
+  padding: 0.25em;
+  border-radius: 1rem;
+  border: 1px solid #aaa;
+  width: 10rem;
+  background: #900;
+  margin: 1rem 0.5rem;
+}
+.switch li:hover {
+  background: #c00;
+}
+.switch li a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d8236034cc3508e70b0763f2575a8bb5850f9aea541206ce56704c013047d712.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+  <div class="laptop-wrapper">
+
+ <!-- SVG: start --> 
+ 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 938 586">
+
+    <defs>
+        <style>
+            @import url(&quot;https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;family=Roboto:wght@500;700&amp;display=swap&quot;);
+         svg a{
+          /*outline: 1px red dashed;*/
+          cursor: hand;
+         }
+            text {
+                font-family: 'Roboto', sans-serif
+            }
+            #code-window text {
+                font-family: 'Roboto Mono', monospace;
+            }
+            .hide {
+                clip-path: url(#show-nothing);
+            }
+            .show {
+                clip-path: url(#screen-mask);
+            }
+            .keys rect {
+                rx: 2;
+            }
+        </style>
+
+        <!-- CLIP-PATHS -->
+
+        <clipPath id="screen-mask">
+            <rect fill="#fff" width="820" height="525" x="60" y="20" />
+        </clipPath>
+
+        <clipPath id="show-nothing">
+            <!--show nothing -->
+        </clipPath>
+
+        <clipPath id="clip0">
+            <rect width="761" height="710" fill="#fff" />
+        </clipPath>
+        <!-- / CLIP-PATHS -->
+     
+     <!-- SYMBOLS -->
+     
+     <symbol id="globe-icon" viewBox="0 0 14 14">
+         <path d="M7 13a6 6 0 01-5.7-4.2M7 13a6 6 0 005.7-4.2M7 13c1.8 0 2.8-2.7 2.8-6S8.8 1 7 1m0 12c-1.8 0-2.8-2.7-2.8-6s1-6 2.8-6m0 0a6 6 0 015.7 4.2M7 1a6 6 0 00-5.7 4.2m11.4 0a6 6 0 010 3.6m0-3.6H1.3m0 0a6 6 0 000 3.6m0 0h11.4"/>
+     </symbol>
+
+
+     <symbol id="folder-closed" viewBox="0 0 15 12">
+        <path  fill="#C4C4C4"
+                d="M108 62c0-.6.4-1 1-1h4.4c.4 0 .7.2.9.6l.4.8c.2.4.5.6 1 .6h6.3c.6 0 1 .4 1 1v8c0 .6-.4 1-1 1h-13a1 1 0 01-1-1V62z"
+                transform="translate(-108 -61)" />
+     </symbol>
+
+     <symbol id="folder-open" viewBox="0 0 17.1 12">
+            <g id="folder-icon" fill="#C4C4C4" transform="translate(-90 -38)">
+                <path
+                    d="M90 40c0-1.1.9-2 2-2h4.4c.4 0 .7.2.9.6l.4.8c.2.4.5.6 1 .6h3.3a2 2 0 012 2v1H93.5a1 1 0 00-.8.4l-2.7 4V40z" />
+                <path
+                    d="M94.5 44a1 1 0 00-.8.4l-2.7 4A1 1 0 0092 50h11.6c.3 0 .6-.2.8-.4l2.7-4a1 1 0 00-.9-1.6H94.5z" />
+            </g>
+        </symbol>
+
+     <symbol id="close" viewBox="0 0 7.6 7.6">
+            <path fill="#CFCFCF"
+                d="M400.4 17.1l-1-1-2.8 2.8-2.8-2.8-1 1 2.8 2.8-2.8 2.8 1 1 2.8-2.8 2.8 2.8 1-1-2.8-2.8 2.8-2.8z"
+                transform="translate(-392.8 -16.1)" />
+      </symbol>
+
+     <symbol id="new-item" viewBox="0 0 13 13">
+            <path fill="#CFCFCF" d="M466.5 401h-2v5.5H459v2h5.5v5.5h2v-5.5h5.5v-2h-5.5V401z"
+                transform="translate(-459 -401)" />
+      </symbol>
+
+     <symbol id="hand-cursor" viewBox="0 0 36 38">
+        <g stroke="#000" stroke-linecap="round" stroke-width="2">
+           <path fill="#fff" d="M30.2 37H11.8L3 25.6s-3.8-4.2-1-7.1c3-2.9 5.3 0 5.3 0l2 2V5c0-1.5 1.2-3.9 3.5-3.9 2.7 0 3.5 2 3.5 3.9v12c.2-1.7 0-5.1 3.5-5.1 3 0 3 3.4 3 5 .2-1.4 0-4.2 3.1-4.2 2.3 0 2.3 4.3 2.3 4.3s.2-2.7 2.8-2.7c2.7 0 3 2.7 3 2.7v7.9L30.3 37z"/>
+           <line x1="16.1" x2="16.1" y1="22" y2="30" />
+           <line x1="21.1" x2="21.1" y1="22" y2="30" />
+           <line x1="26.1" x2="26.1" y1="22" y2="30" />
+        </g>
+     </symbol> 
+    
+     <symbol id="topbar" fill="none" viewBox="0 0 1138 47">
+       <path fill="#000" d="M0 0h1138v47H0V0z"/>
+       <g class="topbar-tools" fill="#fff" >
+         <text id="title" font-family="Roboto" font-size="16" >
+           <tspan x="29" y="29.8">JavaScript: Novice to Ninja, 2nd Edition</tspan>
+         </text>
+    
+         <text font-family="Roboto" font-size="14" >
+           <tspan x="1034" y="30">Dashboard</tspan>
+           <tspan x="932.6" y="30">Library</tspan>
+         </text>
+
+         <g id="library-icon">
+           <rect width="3" height="12" x="901" y="19"/>
+           <path d="M909 19.5l4-.7 2 11.5-4 .7-2-11.5z"/>
+           <rect width="4" height="15" x="905" y="16"/>
+         </g>
+         <g id="text-size">
+           <rect width="1.8" height="6.2" x="866.2" y="28" transform="rotate(90 866.2 28)"/>
+           <path  d="M864 19h-1.8v2.2H860v1.7h2.2v2.2h1.8V23h2.2v-1.7H864V19z"/>
+           <path id="a"  d="M853.4 28.2h-4l-1 3.8H845l4.3-14h4.3l4.2 14h-3.3l-1.1-3.8zm-3.6-2.2h3.1l-1.2-4.4-.4-1.3-.3 1.3-1.2 4.4z"/>
+         </g>
+         <path id="darkmode" fill-rule="evenodd" d="M802.5 31a7.5 7.5 0 100-15 7.5 7.5 0 000 15zm0-1.5h-.2v-12a6.1 6.1 0 016.2 6 6 6 0 01-6 6z" clip-rule="evenodd"/>
+         <path id="settings"  transform="translate(0, -2)" d="M1008.4 31.5h-3.4v1.2h3.4v-1.2zm3.5-1.3h-2.5c-.4 0-.6.3-.6.6v2.6c0 .3.2.6.6.6h2.5c.3 0 .6-.3.6-.6v-2.6c0-.3-.3-.6-.6-.6zm1.5-3.8h-8.4v1.2h8.4v-1.2zm-6.2-5.1h-2.2v1.2h2.2v-1.2zm12.8 10.2h-7.2v1.2h7.2v-1.2zm-9.4-11.5h-2.5c-.3 0-.6.3-.6.6v2.6c0 .3.3.6.6.6h2.5c.4 0 .6-.3.6-.6v-2.6c0-.3-.2-.6-.6-.6zm6.3 5h-2.5c-.4 0-.6.4-.6.7v2.6c0 .3.2.6.6.6h2.5c.3 0 .6-.3.6-.6v-2.6c0-.3-.3-.6-.6-.6zm3.1 1.4h-2.2v1.2h2.2v-1.2zm0-5.1h-8.4v1.2h8.4v-1.2z"/>
+       </g>
+     </symbol>
+     
+     <symbol id="bookmark-widget" viewBox="0 0 140 50">   
+      <rect width="140" height="40" fill="#222" rx="20"/>
+      <rect width="13" height="13" x="70.2" y="31" fill="#222" transform="rotate(45 70.2 31)"/>
+      <line x1="69.5" x2="69.5" y1="6" y2="37" stroke="#0D0D0D"/>
+      <line x1="70.5" x2="70.5" y1="6" y2="37" stroke="#3A3A3A"/>
+      <g fill="#fff" style="white-space:pre" xml:space="preserve">
+      <text font-family="Roboto" font-size="10" >
+        <tspan x="15" y="34.4">Bookmark</tspan>
+        <tspan x="76" y="34.4">Send a Link</tspan>
+      </text>
+      <path d="M43 8H32v15l6-2.5 5 2.5V8z"/>
+      <use href="#link-icon" width="40" height="25" x="90" y="0"/>
+      </g>
+     </symbol>
+     
+     <symbol id="link-icon" viewbox="0 0 25 25" >
+      <g transform="rotate(-45 12 12)">
+      <rect width="6" height="6" x="0" y="1" fill="none" stroke="#fff" stroke-width="2" rx="2" />
+       <rect fill="#fff" width="2" height="8" x="2" y="4"  />
+      <rect width="6" height="6" x="0" y="10" fill="none" stroke="#fff" stroke-width="2" rx="2" />
+      </g>
+     </symbol>
+     
+     <symbol id="keyboard-base">
+        <g class="keyboard">
+           <rect width="938" height="11" y="565" fill="url(#upperbase)"/>
+           <path fill="#C4C4C4" d="M0 575h938c0 6-5 11-11 11H11c-6 0-11-5-11-11z"/>
+           <g>
+
+               <path fill="#e9e9e9" d="M389.8 564.4l159.8.1a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
+               <path fill="url(#cutout-1)" d="M389.5 565h159.8a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
+               <path fill="url(#cutout-2)" d="M389.5 565l160-.7a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
+           </g>
+           <g class="keys" fill="#aaa">
+
+               <rect width="41" height="4" x="42" y="561" />
+               <rect width="41" height="4" x="90" y="561" />
+               <rect width="41" height="4" x="138" y="561" />
+               <rect width="41" height="4" x="186" y="561" />
+               <rect width="41" height="4" x="234" y="561" />
+               <rect width="373" height="4" x="282" y="561" />
+               <rect width="41" height="4" x="666" y="561" />
+               <rect width="41" height="4" x="714" y="561" />
+               <rect width="41" height="4" x="762" y="561" />
+               <rect width="41" height="4" x="810" y="561" />
+               <rect width="41" height="4" x="858" y="561" />
+           </g>     
+       </g>
+     </symbol>
+     
+     <symbol id="pinger" viewBox="0 0 20 20">
+       <g class="pinger">
+         <rect height="20" width="280" stroke-width="0" fill="#fff" fill-opacity="0"/>
+         <circle cx="10" cy="10" r="2" stroke="#2A95D0"/>
+         <circle cx="30" cy="10" r="3" stroke-opacity=".8" stroke="#2A95D0"/>
+         <circle cx="50" cy="10" r="5" stroke-opacity=".6" stroke="#2A95D0"/>
+         <circle cx="70" cy="10" r="6" stroke-opacity=".4" stroke="#2A95D0"/>
+         <circle cx="90" cy="10" r="7" stroke-opacity=".1" stroke="#2A95D0"/>
+         <circle cx="130" cy="10" r="2" stroke-opacity=".5" stroke="#2A95D0"/>
+         <circle cx="150" cy="10" r="3"  stroke="#2A95D0"/>
+         <circle cx="170" cy="10" r="4" stroke-opacity=".8" stroke="#2A95D0"/>
+         <circle cx="190" cy="10" r="5" stroke-opacity=".6" stroke="#2A95D0"/>
+         <circle cx="210" cy="10" r="6" stroke-opacity=".4" stroke="#2A95D0"/>
+         <circle cx="230" cy="10" r="7" stroke-opacity=".1" stroke="#2A95D0"/>
+         <circle cx="250" cy="10" r="2" stroke-opacity=".5" stroke="#2A95D0"/>
+       </g>
+     </symbol>
+     
+     <symbol id="note-1">  
+         <rect x="4" width="275" height="110" fill="#FFE794"/>
+         <text fill="black" font-size="18"><tspan x="34" y="38.6">Write and edit code in a</tspan><tspan x="34" y="59.6">live coding environment  </tspan><tspan x="34" y="80.6">without leaving the book.</tspan></text>
+       </symbol>
+     
+     <symbol id="note-2">  
+         <rect x="4" width="275" height="110" fill="#FFE794"/>
+         <text fill="black" font-size="18"><tspan x="34" y="38.6">Bookmark your favorite </tspan><tspan x="34" y="59.6">text and code samples for </tspan><tspan x="34" y="80.6">later reference.</tspan></text>
+       </symbol>
+     
+     <symbol id="note-3">  
+         <rect x="4" width="275" height="110" fill="#FFE794"/>
+         <text fill="black" font-size="18"><tspan x="34" y="38.6">Easily share text and code  </tspan><tspan x="34" y="59.6">samples with friends - even </tspan><tspan x="34" y="80.6">if they donâ€™t have the book.</tspan></text>
+       </symbol>
+     
+     <symbol id="note-4">  
+         <rect x="4" width="275" height="110" fill="#FFE794"/>
+         <text fill="black" font-size="18"><tspan x="34" y="38.6">Bookmark your favorite </tspan><tspan x="34" y="59.6">text and code samples for </tspan><tspan x="34" y="80.6">later reference.</tspan></text>
+       </symbol>    
+     
+     <symbol id="code-panel" viewBox="0 0 761 710">
+        <g id="coder" clip-path="url(#clip0)">
+           <rect id="work-panel-base" width="486" height="711" x="275" y="0" fill="#252E32"/>
+        <g id="dir-panel-base">
+          <rect width="9" height="711" x="31" fill="#38464C"/>
+          <rect width="4" height="711" fill="#1F282C" x="40" />
+          <rect width="40" height="711" x="42" y="0" fill="#283134"/>
+          <text  fill="#2A95D0" font-family="Roboto" font-size="16" font-weight="bold" letter-spacing="0em" style="white-space:pre">
+            <tspan x="50" y="28">&lt;/&gt;</tspan>
+          </text>
+          <rect width="2" height="33" x="80" y="8" fill="#2A95D0"/>
+          <g id="dir-tools">
+            <path id="share" stroke="#CFD1D1" d="M62.4 588.2l-2.7 1.8m-.3 2.4l2.9 2.5M60 591a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm6-4a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm0 9a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2z"/>
+            <g id="settings" stroke="#CFD1D1">
+              <path d="M59.7 690.5v2.3c.5.1 2.7.1 3.2 0v-2.3l1.2-.6L66 691a10 10 0 001.7-2.5l-2.1-1.2v-1.2l2.1-1.2a10 10 0 00-1.7-2.5l-1.9 1-1.2-.6v-2.3c-.5-.1-2.7-.1-3.2 0v2.3l-1.1.6-2.1-1c-.4.3-1.4 2.1-1.5 2.5l2 1.2v1.2l-2 1.2c.1.4 1.1 2.2 1.5 2.5l2.1-1.1 1.1.6z" style="stroke-width:.75px"/>
+              <path d="M63.1 686.8c0 1-.8 1.8-1.9 1.8-1 0-1.8-.8-1.8-1.8 0-1.1.8-1.9 1.8-1.9 1.1 0 1.9.8 1.9 1.9z" style="stroke-width:.75px"/>
+            </g>
+            <g id="help">
+              <circle cx="61.5" cy="642" r="7.4" style="stroke:#cfd1d1"/>
+              <path d="M59.4 639.9c0-.7.9-1.6 2.4-1.6 1.4 0 2.1.9 2.1 1.6 0 1-1 1.1-1.6 1.6-.4.4-.8 1.1-.7 2.4" style="stroke:#cfd1d1;stroke-linecap:round"/>
+              <circle cx="61.6" cy="645.7" r=".7" style="fill:#d8d8d8"/>
+            </g>
+        </g>
+        <rect width="193" height="711" fill="#38464C" x="82"/>
+            <g id="file-directory">
+                <text id="FILETREE" fill="#E5E5E5" font-size="13" font-weight="900">
+                    <tspan x="90" y="21.9">FILETREE</tspan>
+                </text>
+                <g id="workspace">
+                    <text id="workspace" fill="#E5E5E5" font-size="13" font-weight="500">
+                        <tspan x="109" y="48.9">~/workspace</tspan>
+                    </text>
+                </g>
+                <g id="heroes">
+                    <text id="heroes_2" fill="#E5E5E5" font-size="13" font-weight="500">
+                        <tspan x="128" y="71.9">heroes</tspan>
+                    </text>
+                    <use width="15" height="12" transform="translate(108.6 60.6)" href="#folder-closed" />
+                </g>
+                <g id="notes">
+                    <text fill="#E5E5E5" font-size="13" font-weight="500">
+                        <tspan x="129" y="116.9">notes.txt</tspan>
+                    </text>
+                    <g>
+                        <path stroke="#E5E5E5"
+                            d="M118 105.5v4.5h4.5v11.5h-12v-16h7.5zm-4 7h5-5zm0 2.5h5-5zm0 2.5h5-5z" />
+                        <line x1="118.1" x2="122.6" y1="105.4" y2="109.9" style="stroke:#e5e5e5" />
+                    </g>
+                </g>
+                <g id="quiz">
+                    <text id="quiz_2" fill="#E5E5E5" font-size="13" font-weight="500">
+                        <tspan x="129" y="94.9">quiz</tspan>
+                    </text>
+                    <use width="15" height="12" transform="translate(109.2 83.6)" href="#folder-closed" />
+                </g>
+                <use width="17.1" height="12" transform="translate(410.6 270.5)" href="#folder-open" />
+            </g>
+         
+            <g id="sidetab">
+                <path id="sidetab_2" fill="#283134" d="M0 70a10 10 0 0110-10h21v172H10a10 10 0 01-10-10V70z" />
+                <text id="&lt;/&gt;_2" fill="#2A95D0" font-size="16" font-weight="bold">
+                    <tspan x="4" y="96">&lt;/&gt;</tspan>
+                </text>
+                <text fill="#2A95D0" font-size="15" font-weight="500" letter-spacing="0em"
+                    style="white-space:pre" transform="rotate(-90 99 92)">
+                 <tspan x="0" y="14.1">LIVE CODE</tspan>
+             </text>
+            </g>
+                    
+              <use width="17.1" height="12" transform="translate(88.9 38.5)" href="#folder-open" />
+          </g>
+          <g id="code-window">
+              <rect id="codebase" width="486" height="430" fill="#2B3336" transform="matrix(1 0 0 -1 275 431)" />
+              <text style="fill:#d1d2d3;font-weight:500;white-space:pre">
+                  <tspan x="305" y="55.3"> window.</tspan><tspan style="fill:url(#color-2)">onload</tspan><tspan style="fill:url(#color-3)">=</tspan><tspan style="fill:url(#color-4)">function</tspan><tspan>() { </tspan>
+                  <tspan x="325" y="76.3"> </tspan><tspan style="fill:url(#color-2)">setTimeout</tspan><tspan>(() </tspan><tspan style="fill:url(#color-4)">=&gt;</tspan><tspan> { </tspan>
+                  <tspan x="335" y="97.3"> </tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> quiz </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> [ </tspan>
+                  <tspan x="365" y="118.3"> { name: </tspan><tspan style="fill:url(#color-1)">&quot;Superman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Clark Kent&quot;</tspan><tspan> }, </tspan>
+                  <tspan x="365" y="139.3"> { name: </tspan><tspan style="fill:#86cd95">&quot;Wonder Woman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Diana Prince&quot;</tspan><tspan> }, </tspan>
+                  <tspan x="365" y="160.3"> { name: </tspan><tspan style="fill:url(#color-1)">&quot;Batman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Bruce Wayne&quot;</tspan><tspan> }, </tspan><tspan x="305" y="181.3"> ]; </tspan>
+                  <tspan x="305" y="202.3"> </tspan>
+                  <tspan x="315" y="223.3"> </tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> game </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> { </tspan>
+                  <tspan x="335" y="244.3"> </tspan><tspan style="fill:url(#color-2)">start</tspan><tspan>(</tspan><tspan style="fill:url(#color-3)">quiz</tspan><tspan>){ </tspan>
+                  <tspan x="365" y="265.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.questions </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> [</tspan><tspan style="fill:url(#color-3)">...</tspan><tspan>quiz]; </tspan>
+                  <tspan x="365" y="286.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.score </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan style="fill:url(#color-2)"> 0</tspan><tspan>; </tspan>
+                  <tspan x="365" y="307.3"> </tspan><tspan style="fill:url(#color-5)">// main game loop</tspan>
+                  <tspan x="365" y="328.3"> </tspan><tspan style="fill:url(#color-4)">for</tspan><tspan>(</tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> question </tspan><tspan style="fill:url(#color-3)">of</tspan><tspan> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.questions){ </tspan>
+                  <tspan x="365" y="349.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.question </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> question;</tspan>
+              </text>
+              <g id="line-numbers">
+                  <rect width="27" height="350" x="275" y="41" style="fill:#232c2e" />
+                  <text style="fill:#c4c4c4;font-size:16px;font-weight:500;white-space:pre">
+                      <tspan x="289.4" y="55.7">1</tspan>
+                      <tspan x="289.4" y="76.7">2</tspan>
+                      <tspan x="289.4" y="97.7">3</tspan>
+                      <tspan x="289.4" y="118.7">4</tspan>
+                      <tspan x="289.4" y="139.7">5</tspan>
+                      <tspan x="289.4" y="160.7">6</tspan>
+                      <tspan x="289.4" y="181.7">7</tspan>
+                      <tspan x="289.4" y="202.7">8</tspan>
+                      <tspan x="289.4" y="223.7">9</tspan>
+                      <tspan x="279.8" y="244.7">10</tspan>
+                      <tspan x="279.8" y="265.7">11</tspan>
+                      <tspan x="279.8" y="286.7">12</tspan>
+                      <tspan x="279.8" y="307.7">13</tspan>
+                      <tspan x="279.8" y="328.7">14</tspan>
+                      <tspan x="279.8" y="349.7">15</tspan>
+                  </text>
+              </g>
+          </g>
+                <g id="code-tabs">
+                    <g id="tab-4-active">
+                        <path  fill="#313E44"
+                            d="M626 5a5 5 0 00-5 5v25H275v5h486v-5h-41V10a5 5 0 00-5-5h-89z" />
+                        <text id="main" fill="#E5E5E5" font-size="14" font-weight="bold">
+                            <tspan x="628" y="24.8">main.js</tspan>
+                        </text>
+                        <use width="7.6" height="7.6" transform="matrix(.89533 0 0 .89533 696.5 16.7)" href="#close" />
+                    </g>
+                    <g id="tab-3">
+                        <text fill="#E5E5E5" font-size="14" font-weight="bold">
+                            <tspan x="524" y="24.8">styles.css</tspan>
+                        </text>
+                        <use width="7.6" height="7.6" transform="translate(604.4 16.9)" href="#close" />
+                    </g>
+                    <g id="tab-2">
+                        <use width="7.6" height="7.6" transform="translate(495.9 16.7)" href="#close" />
+                        <rect  width="1" height="18" x="516" y="11" fill="#C4C4C4" class="breaker" />
+                        <text fill="#E5E5E5" font-size="14" font-weight="bold">
+                            <tspan x="422" y="24.8">heroes.h..</tspan>
+                        </text>
+                    </g>
+                    <g id="tab-1">
+                        <use width="7.6" height="7.6" transform="translate(391.2 15.9)" href="#close" />
+                        <rect width="1" height="18" x="413" y="11" fill="#C4C4C4" class="breaker" />
+                        <text fill="#E5E5E5" font-size="14" font-weight="bold">
+                            <tspan x="319" y="24.8">notes.txt</tspan>
+                        </text>
+                    </g>
+                    <g id="folder">
+                        <path id="thumbtab" fill="#334248" d="M274 5h15a13 13 0 0113 13v1a13 13 0 01-13 13h-15V5z" />
+                        <use width="13" height="13" transform="matrix(1 0 0 1 734.2 13.8)" href="#new-item" />
+                        <use width="17.1" height="12" transform="translate(279.3 13.5)" href="#folder-open" />
+                    </g>
+                    <rect width="1" height="18" x="310" y="11" fill="#C4C4C4" class="breaker" />
+                </g>
+                <g id="browser">
+                    <g id="browser-window">
+                        <rect width="486" height="279" x="275" y="431" fill="#fff" />
+                        <g fill="#ddd">
+                            <rect width="486" height="45" x="275" y="431"  />
+                        </g>
+                        <rect class="address-bar" width="411" height="30" x="312.5" y="437.5" fill="#fff"
+                            stroke="#C4C4C4" />
+                        <text fill="#889198" font-size="15" font-weight="500">
+                            <tspan x="429" y="457.1">Open an HTML file to view</tspan>
+                        </text>
+                        <path class="reload" stroke="#889198"
+                            d="M295.4 450.6h4.6m0 0a6.2 6.2 0 00-6-4.6 6 6 0 104 10.5m2-5.9V446"
+                            style="stroke-width:1.25px" />
+                        <path class="expand" stroke="#889198"
+                            d="M748 453.5v4.5c0 .6-.4 1-1 1h-9a1 1 0 01-1-1v-9c0-.6.4-1 1-1h4.5m-2.5 7l9-9m0 0v4m0-4h-4" />
+                    </g>
+                <g id="browser-tab">
+                        <use width="13" height="13" transform="matrix(.89533 0 0 .89533 459.8 406)" href="#new-item" />
+                        <path fill="#324046" d="M281 397a2 2 0 00-2 2v28h-4v4h486v-4H445v-28a2 2 0 00-2-2H281z" />
+                        <text fill="#E5E5E5" font-size="14" font-weight="bold">
+                            <tspan x="308" y="416">Web Browser</tspan>
+                        </text>
+ <use href="#globe-icon" stroke="#E5E5E5" width="16" x="285" y="56" />
+                        
+                        <use width="7.6" height="7.6" transform="translate(423.5 409)" href="#close" />
+                    </g>
+                </g>
+                <g id="code-tools">
+                    <rect width="488" height="36" x="273" y="355" fill="#334248" />
+                    <g id="edit" fill="#2A95D0">
+                        <path d="M298.4 365.7a1 1 0 00-1.4 0l-1.4 1.4 3.5 3.6 1.5-1.5c.3-.3.3-1 0-1.4l-2.2-2z" />
+                        <path fill-rule="evenodd"
+                            d="M294.9 367.8l3.5 3.6-7.1 7.1a1 1 0 01-.7.3h-2.1a1 1 0 01-1-1v-2.1c0-.3 0-.6.3-.7l7.1-7.2zm-6.4 7.8h.7v1.4h1.5v.7h-2.2v-2z" clip-rule="evenodd" />
+                    </g>
+                    <g id="bin" fill="#FF5960">
+                        <path
+                            d="M327 366h4l1 1h3v1h-12v-1h3l1-1zM334 369h-10l.5 9c0 .6.4 1 1 1h7c.6 0 1-.4 1-1l.5-9z" />
+                    </g>
+                    <g class="dl">
+                        <path fill="#C4C4C4" fill-rule="evenodd"
+                            d="M362 366.4c0-.2.2-.4.4-.4h2.2c.2 0 .4.2.4.4v4.6h2c.4 0 .6.5.3.7l-3.5 3.9c-.1.2-.5.2-.6 0l-3.5-3.9c-.3-.2-.1-.7.3-.7h2v-4.6zm-4 8.6h4l1.2 1.3c.1.2.5.2.6 0l1.2-1.3h4c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1h-11c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1zm8 2h1v1h-1v-1zm3 0h-1v1h1v-1z" clip-rule="evenodd" />
+                    </g>
+                    <g id="tool-handle">
+                        <rect width="6" height="30" x="271.5" y="342.5" fill="#324147" stroke="#243239" rx="1.5" />
+                        <path stroke="#E5E5E5" d="M273.5 350v15" />
+                        <path stroke="#E5E5E5" d="M275.5 350v15" />
+                    </g>
+                </g>
+            </g>
+        </symbol>
+       
+     <symbol id="share-panel" viewBox="0 0 499 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="499" height="239" rx="4" fill="#222222" />
+          <use href="#link-icon" width="35" height="25" x="15" y="10" />
+          <use fill="#fff" width="15" height="15" x="462" y=" 16px" href="#close" />
+        <line y1="48.5" x2="499" y2="48.5" stroke="#324959" />
+        <rect x="15" y="105" width="469" height="78" fill="#2C2C2C" />
+        <line x1="316.5" y1="196" x2="316.5" y2="227" stroke="#324959" />
+        <rect x="333" y="192" width="151" height="37" rx="18.5" fill="#009AF9" />
+        <text fill="white" font-family="Roboto" font-size="14" font-weight="bold">
+            <tspan x="378" y="214.8">Copy Link</tspan>
+        </text>
+        <text fill="#009AF9" font-family="Roboto" font-size="15">
+            <tspan x="29" y="129.1">https://www.sitepoint.com/premium/books/learn-to-code-with-</tspan>
+            <tspan x="29" y="147.1">javascript/read/1/kml7wxl6?fromShare=true</tspan>
+        </text>
+          <use href="#globe-icon" stroke="#768996" width="16" x="16" y="-47" />
+        <text fill="#768996" font-size="14">
+            <tspan x="41" y="78.8">Anybody with this link can view this part of the book.</tspan>
+        </text>
+        <text fill="white" font-size="19" font-weight="500">
+            <tspan x="41" y="35.5">Send as a link to this paragraph</tspan>
+        </text>
+        <use href="#pinger" />
+      </symbol>
+     
+      
+        <!-- / SYMBOLS -->
+
+        <!-- GRADIENTS -->
+
+        <linearGradient id="color-2">
+            <stop style="stop-color:#ffcb00" />
+        </linearGradient>
+        <linearGradient id="color-3">
+            <stop style="stop-color:#52a4da" />
+        </linearGradient>
+        <linearGradient id="color-4">
+            <stop style="stop-color:#a68bdf" />
+        </linearGradient>
+        <linearGradient id="color-1">
+            <stop style="stop-color:#86cd95" />
+        </linearGradient>
+        <linearGradient id="color-5">
+            <stop style="stop-color:#8f8f8f" />
+        </linearGradient>
+
+       
+
+        <linearGradient id="laptop-edge" x1="356.1" x2="669" y1="-69.3" y2="728.8"
+            gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E5E5E5" />
+            <stop offset=".2" stop-color="#D5D5D5" />
+            <stop offset=".8" stop-color="#C4C4C4" />
+            <stop offset="1" stop-color="#4F4F4F" />
+        </linearGradient>
+        <linearGradient id="upperbase" x1="469" x2="469" y1="565" y2="576" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff" />
+            <stop offset="1" stop-color="#E5E5E5" />
+        </linearGradient>
+
+        <linearGradient id="cutout-1" x1="390.5" x2="551" y1="581" y2="581" gradientTransform="translate(.3 -2)"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#333" stop-opacity=".4" />
+            <stop offset=".2" stop-color="#333" stop-opacity="0" />
+            <stop offset=".8" stop-color="#333" stop-opacity=".1" />
+            <stop offset="1" stop-opacity=".2" />
+        </linearGradient>
+
+        <linearGradient id="cutout-2" x1="469" x2="469" y1="567" y2="581"
+            gradientTransform="matrix(1 -.00719 .00476 .66295 -2.1 191.8)" gradientUnits="userSpaceOnUse">
+            <stop style="stop-opacity:.39;stop-color:rgba(51,51,51,.92)" />
+            <stop offset="1" style="stop-opacity:0;stop-color:rgba(51,51,51,.03)" />
+        </linearGradient>
+
+        <linearGradient id="gradient-2" x1="390.5" x2="551" y1="581" y2="581" gradientTransform="translate(73.6 2.5)"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#333" stop-opacity=".4" />
+            <stop offset=".2" stop-color="#333" stop-opacity="0" />
+            <stop offset=".8" stop-color="#333" stop-opacity=".1" />
+            <stop offset="1" stop-opacity=".2" />
+        </linearGradient>
+
+
+        <linearGradient id="specular-reflection" gradientUnits="userSpaceOnUse" x1="516.5" y1="13" x2="516.5" y2="543.2"
+            gradientTransform="matrix(0.17, -1, 1.56, 0.3, -56.5, 734)">
+            <stop offset="0" style="stop-opacity: 0.09; stop-color: rgb(255, 255, 255);"></stop>
+            <stop offset="0.4" style="stop-opacity: 0; stop-color: rgb(250, 250, 255);"></stop>
+            <stop offset="0.8" style="stop-color: rgb(250, 250, 255); stop-opacity: 0.17;"></stop>
+            <stop offset="0.805" style="stop-color: rgb(250, 250, 255); stop-opacity: 0;"></stop>
+            <stop offset="1" style="stop-color: rgb(255, 255, 255); stop-opacity: 0.06;"></stop>
+        </linearGradient>
+     
+     
+    </defs>
+ 
+ 
+
+    <!-- / DEFS -->
+ 
+ 
+   <!-- BODY STARTS HERE -->
+ 
+ 
+    <g class="screen-back">
+      <rect  width="875" height="575.4" x="31" y="2" fill="#000" stroke="url(#laptop-edge)" stroke-width="4" rx="23.4" ry="23.4" />
+      <rect width="820" height="525" x="60" y="20" style="fill: rgb(86, 118, 185);" rx="3"/>
+   </g>
+
+    <!-- FOREIGNOBJECT -->
+    <!-- Book page is actually HTML inserted as a foreign object -->
+
+     <foreignObject x="60" y="20" width="820" height="525" style="overflow-x: hidden;overflow-y: scroll;" >
+
+        <div class="page-wrapper arrive-1" xmlns="http://www.w3.org/1999/xhtml" >
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+         #chapter-container{
+          line-height: 1.6em;
+          font-size: .9em;
+          font-weight:300;
+          background:#fff;
+          color:#222;
+          font-family: 'Roboto', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          padding: 4rem 3rem 2rem;
+         }
+         h2, h3{font-weight:400;}
+         h2{margin-top: 3rem}
+         code{background:#F5F2F0}
+         .p-unit p{font-weight:300;}
+         .prism-code{
+          padding:0 1rem;
+         }
+       </style>
+          <div id="chapter-container" >
+              <div id="chapter-content" >
+                   <div class="p-unit">
+                      <div style="overflow:hidden">
+                          <div style="width: 70%; float:left; text-align: right">
+                              <h1 style="font-weight: 400 ">The Document Object Model
+                              </h1>
+                              <h3 style="color:#aaa;font-weight: 400 ">Darren Jones</h3>
+                          </div>
+                          <div style="border-left: 1px #333 solid; margin-left:5%; width: 20%;float:left;text-align: center">Chapter<span style="color:rgb(68,82,102);font-size:6rem; font-weight: 500; display: block; margin-top: 1.5rem">6</span></div>
+                      </div> 
+                  </div>
+                   <div class="p-unit">
+                      <p>The Document Object Model (DOM) allows
+                          you to access elements of a web page and enable interaction with the page by adding and removing
+                          elements, changing the order, content and attributes of elements, and even altering how they are styled.
+                      </p> 
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3g" class="p-unit">In this chapter, weâ€™ll cover the
+                          following topics:</p>
+                  </div>
+                   <div class="p-unit">
+                      <ul data-block="k01nwu3h" class="sc-fzXfLP eukCKF">
+                          <li  class="sc-AykKE sc-fzXfLQ ktTlYN">
+                              <p class="p-unit">Introduction to the DOM</p>
+                          </li>
+                          <li  class="sc-AykKE sc-fzXfLQ ktTlYN">
+                              <p class="p-unit">Getting elements â€•&nbsp;<code
+                                      class="sc-fzXfOq ILXMh">getElementById</code> ,&nbsp;<code
+                                      class="sc-fzXfOq ILXMh">getElementsByClassName</code> ,&nbsp;<code
+                                      class="sc-fzXfOq ILXMh">getElementsByTagName</code> ,&nbsp;<code
+                                      class="sc-fzXfOq ILXMh">querySelector</code> and&nbsp;<code
+                                      class="sc-fzXfOq ILXMh">querySelectorAll</code> </p>
+                          </li>
+                          <li  class="sc-AykKE sc-fzXfLQ ktTlYN">
+                              <p class="p-unit">Navigating the DOM</p>
+                          </li>
+                          <li  class="sc-AykKE sc-fzXfLQ ktTlYN">
+                              <p class="p-unit">Getting and setting an elementâ€™s attributes</p>
+                          </li>
+                          <li  class="sc-AykKE sc-fzXfLQ ktTlYN">
+                              <p class="p-unit">Updating the DOM by creating dynamic markup</p>
+                          </li>
+                          <li  class="sc-AykKE sc-fzXfLQ ktTlYN">
+                              <p class="p-unit">Changing the CSS of an element</p>
+                          </li>
+                          <li  class="sc-AykKE sc-fzXfLQ ktTlYN">
+                              <p class="p-unit">Our project â€• we'll dynamically insert each question
+                                  into the HTML</p>
+                          </li>
+                      </ul> 
+                  </div>
+                   <div class="p-unit">
+                      <h2 data-block="k01nwu3i"  letter-spacing="-0.03em" class="sc-AykKF iMpVdq">The Document
+                          Object Model</h2>
+                  </div>
+                   <div class="p-unit">
+                      <h3 data-block="k01nwu3j"  letter-spacing="-0.03em" class="sc-AykKF cHPaKb">What is the
+                          DOM?</h3>
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3k" class="p-unit bookmark-section-1 arrive-2">The Document Object Model, or DOM for short, represents an HTML document as a network of connected nodes that form a tree-like structure.</p>
+
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3l" class="p-unit">The DOM treats everything on a web page
+                          as a node. HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML
+                          tag is the root node, and every other part of the document is a child node of this.</p> 
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3m" class="p-unit">Take the following piece of HTML as an
+                          example:</p>
+                  </div>
+                   <div class="p-unit">
+                      <pre class="prism-code language-js" style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);">	<code><div style="color:rgb(0,0,0);"><span style="color:rgb(6,50,137);">&lt;</span><span>p</span> <span style="color:rgb(0,119,170);">class</span><span style="color:rgb(6,50,137);">=</span><span class="tokenstring"style="color:rgb(102,153,0);">'warning'</span><span style="color:rgb(6,50,137);">&gt;</span><span>Something has gone </span><span style="color:rgb(6,50,137);">&lt;</span><span>em</span><span style ="color:rgb(6,50,137);">&gt;</span><span>very</span><span style="color:rgb(6,50,137);">&lt;</span><span style="color:rgb(6,50,137);">/</span><span>em</span><span style="color:rgb(6,50,137);">&gt; </span><span> wrong</span><span style="color:rgb(6,50,137);">!</span><span style="color:rgb(6,50,137);">&lt;</span><span style="color:rgb(6,50,137);">/</span><span>p</span><span style="color:rgb(6,50,137);">&gt;</span></div></code>
+</pre>
+
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3o" class="p-unit">This can be represented as the tree
+                          diagram shown below.</p>
+                  </div>
+                  <div class="sc-AykKD sc-fzXfNj cxdGoc">
+                      <figure class="imagefig" data-block="k01nwu3p">
+                          <p class="sc-AykKE gCEOsp image-wrapper" >
+                              <svg width="267" height="400" viewBox="0 0 267 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <defs>
+                                      <style>
+                                          .p-label{fill:black; white-space: pre; font-family:Halant, serif; font-size:21px;} 
+                                      </style>    
+                                  </defs>
+                                  <rect width="267" height="400" fill="white" />
+                                  <path d="M33.5 200.5C30.833 190.17 36 162 78 132C120 102 130 71.5 129.5 60M129.5 60C130.17 73.17 141.2 106 180 132C218.8 158 227.8 188.5 227.5 200.5M129.5 60V347.5" stroke="black"/>
+                                  <text  class="p-label"><tspan x="82.3" y="23">p.warning</tspan></text>
+                                  <text  class="p-label"><tspan x="3.7" y="180">#text</tspan></text>
+                                  <text  class="p-label"><tspan x="201.7" y="180">#text</tspan></text>
+                                  <text  class="p-label"><tspan x="102.7" y="337">#text</tspan></text>
+                                  <text  class="p-label"><tspan x="113.7" y="180">em</tspan></text>
+                                  <circle cx="129" cy="52" r="19.5" fill="#3A80B6" stroke="#33629E" stroke-width="3"/>
+                                  <circle cx="129" cy="209" r="19.5" fill="#3A80B6" stroke="#33629E" stroke-width="3"/>
+                                  <circle cx="228" cy="209" r="19.5" fill="#FFCE00" stroke="#FFA100" stroke-width="3"/>
+                                  <circle cx="129" cy="366" r="19.5" fill="#FFCE00" stroke="#FFA100" stroke-width="3"/>
+                                  <circle cx="30" cy="209" r="19.5" fill="#00BE56" stroke="#0AA234" stroke-width="3"/>
+                                  </svg>
+                              </p>
+                          <figcaption>The DOM tree</figcaption>
+                      </figure>
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3q" class="p-unit">The DOM is not actually part of JavaScript because it is<em>language agnostic</em>(although JavaScript is, by far, the language most
+                          commonly used with it). This means it can be used in any programming language, not just JavaScript. We
+                          can use JavaScript to access and modify different parts of a web page using a special built-in object
+                          called&nbsp;<code class="sc-fzXfOq ILXMh">document</code> .</p> 
+                  </div>
+                   <div class="p-unit">
+                      <h2 data-block="k01nwu3r"  letter-spacing="-0.03em" class="sc-AykKF iMpVdq">History of
+                          the DOM</h2>
+                  </div>
+                   <div class="p-unit">
+                      <p class="p-unit bookmark-section-2">In the early days of the web, browser
+                          vendors such as Netscape and Microsoft developed their own distinct ways of accessing and altering parts
+                          of a web page. In the beginning, they tended to focus on common page elements such as images, links and
+                          forms â€“ this was known as Dynamic HTML (DHTML). These methods became known as DOM level 0, or legacy
+                          DOM. Some of the more common methods, such as those used for selecting images and forms, can still be
+                          used in the current DOM.</p>
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3t" class="p-unit">The World Wide Web Consortium (W3C)
+                          started to standardize the process, and created the DOM level 1 in 1998. This introduced a complete
+                          model for web pages that allowed every part of them to be navigated.</p> 
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3u" class="p-unit">The DOM level 2 specification was
+                          published in 2000 and introduced the popular&nbsp;<code class="sc-fzXfOq ILXMh">getElementById()</code>
+                          method, which made it much easier to access specific elements on a web page. The DOM level 3
+                          specification was published in 2004, and since then the W3C has abandoned using levels. The DOM
+                          specification is developed as a<a href="https://www.w3.org/TR/dom/" target="_blank" 
+                              color="link" class="sc-AykKE sc-AykKI ehacSg">living standard</a>.</p> 
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3v" class="p-unit">Despite the standardization process,
+                          browsers have not always implemented the DOM consistently, so itâ€™s been difficult to program for in the
+                          past. Fortunately, since Internet Explorer 8, DOM support has been much more consistent, and modern
+                          browsers now implement the current DOM level 3. Theyâ€™re also implementing more of the new DOM level 4
+                          features with every update.</p>
+                  </div>
+                   <div class="p-unit">
+                      <h2 data-block="k01nwu3w"  letter-spacing="-0.03em" class="sc-AykKF iMpVdq">An Example
+                          Web Page</h2>
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3x" class="p-unit">To illustrate the DOM concepts covered
+                          in this chapter, weâ€™ll use a basic web page that contains a heading and three paragraph elements. Save
+                          the following code in a file called&nbsp;<code class="sc-fzXfOq ILXMh">heroes.html</code> :</p> 
+                  </div>
+                   <div class="p-unit">
+                      <pre class="sc-fzXfNi prism-code language-js" data-block="k01nwu3y"
+                          style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><code><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">!</span><span class="token plain">doctype html</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">html lang</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">"en"</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">head</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">meta charset</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">"utf-8"</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">title</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Justice League</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">title</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">head</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">body</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">header</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">h1 id</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'title'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Justice League</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">h1</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">header</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">ul id</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'roster'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">li </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'hero'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Superman</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">li</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">li </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'vigilante hero'</span><span class="token plain"> id</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'bats'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Batman</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">li</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">li </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'hero'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Wonder Woman</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">li</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">ul</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">body</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">html</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span></div></code></pre>
+
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu3z" class="p-unit">Below is a node tree diagram for
+                          the&nbsp;<code class="sc-fzXfOq ILXMh">&lt;ul&gt;</code> element with a class of&nbsp;<code
+                              class="sc-fzXfOq ILXMh">roster</code> :</p> 
+                  </div>
+
+                   <div class="p-unit">
+                      <div data-block="k01nwu41" type="note" class="sc-AykKD sc-fzXfRb iRllY">
+                          <h4  letter-spacing="-0.03em" class="sc-AykKF jlCtDD">What's With the Extra Text
+                              Nodes?</h4>
+                          <p class="p-unit">There appear to be some extra #text nodes in this
+                              diagram, even in places where there isn't any text. This is because the DOM also stores any
+                              whitespace that is in the HTML document as text nodes.</p>
+                      </div> 
+                  </div>
+                   <div class="p-unit">
+                      <p data-block="k01nwu42" class="p-unit">Because we're using the browser, the
+                          best way to follow along with the examples in this chapter is to use the console built into the web
+                          browser (we discussed how to use this in Chapter 1). This will allow you to enter commands that interact
+                          with the elements on the web page and see the results. The screenshot below shows the page with the
+                          console open.</p>
+                  </div>
+
+                   <div class="p-unit">
+                      <div data-block="k01nwu44" type="note" class="sc-AykKD sc-fzXfRb iRllY">
+                          <h4  letter-spacing="-0.03em" class="sc-AykKF jlCtDD">Console Shortcuts</h4>
+                          <p class="p-unit">Here are a couple of useful shortcuts that will help
+                              speed things up when you're using the console:</p>
+                          <ul class="sc-fzXfLP eukCKF">
+                              <li  class="sc-AykKE sc-fzXfLQ ktTlYN">
+                                  <p class="p-unit">Pressing TAB will autocomplete any methods and
+                                      should show you a list of possible methods</p>
+                              </li>
+                              <li  class="sc-AykKE sc-fzXfLQ ktTlYN">
+                                  <p class="p-unit">Pressing the UP arrow key will select the
+                                      previous command entered.</p>
+                              </li>
+                          </ul>
+                      </div> 
+                  </div>
+                   <div class="p-unit">
+                      <h2 data-block="k01nwu45"  letter-spacing="-0.03em" class="sc-AykKF iMpVdq">Getting
+                          Elements</h2>
+                  </div>
+
+              </div>
+          </div>
+         </div>
+     </foreignObject>
+    
+
+ 
+ <g class="stage-1"  clip-path="url(#screen-mask)">
+   <use class="arrive-2" id="code-panel-pos" href="#code-panel"  />
+  <use href="#note-1" x="500" y="400" class="reveal arrive-4"/>
+  <circle class="kaboom " cx="700" cy="170" r="10" fill="#2D9CDB"  /> 
+ </g>
+ 
+ <g class="stage-2" clip-path="url(#screen-mask)">
+   <use href="#note-2" x="450" y="250" class="reveal arrive-4"/>
+   <use class="reveal arrive-3" href="#bookmark-widget" width="150" x="250" y="70" />
+   <use href="#pinger" width="100" x="310" y="60" class="reveal arrive-4" />
+ </g>
+ 
+  <g class="stage-3" clip-path="url(#screen-mask)">
+   <rect class="reveal arrive-2" width="910" height="544" fill="black" fill-opacity="0.42"/>
+   <use class="reveal arrive-2" href="#bookmark-widget" width="160" x="250" y="-180"></use>
+   <use class="reveal arrive-3" href="#share-panel" width="500" x="200" y="0" />
+   <use href="#note-3" x="550" y="55" class="reveal arrive-4"/>
+ </g>
+ 
+ 
+ <g class="stage-4" clip-path="url(#screen-mask)">
+   <use href="#note-3" x="400" y="400" class="reveal arrive-4"/>
+   
+ </g>
+ 
+  
+   <use class="cursor" href="#hand-cursor" width="30" x="400" /> 
+ 
+ 
+  <g class="foreground">
+    <use href="#topbar" width="820" x="60" y="-262" />
+    <rect class="reflection" width="875" height="570" x="31" y="2" fill="url(#specular-reflection)" style="mix-blend-mode: overlay; pointer-events:none" rx="23.4" ry="23.4" />
+    <use href="#keyboard-base" />
+ </g>
+ 
+
+ 
+ 
+
+ 
+</svg>
+    <!-- SVG: end -->                                                                          
+ <ul class="switch">
+   <li><a class="screen-1" href="#">Live Code</a></li>
+   <li><a class="screen-2" href="#">Bookmark </a></li>
+   <li><a class="screen-3" href="#">Share</a></li>
+   <!--<li><a class="screen-4" href="#">Demo 4</a></li>-->
+ </ul>
+ 
+</div>
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script  src="https://cdpn.io/cp/internal/boomboom/pen.js?key=pen.js-54213eb3-3163-3adf-ba0f-6b2da8f5b514" crossorigin></script>
+</body>
+
+</html>

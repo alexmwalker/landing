@@ -416,13 +416,15 @@
                     context of an SVG document
                     -->
                     <div xmlns="http://www.w3.org/1999/xhtml">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed mollis mollis mi ut ultricies. Nullam magna ipsum,
-                    porta vel dui convallis, rutrum imperdiet eros. Aliquam
-                    erat volutpat.</p><p>
-                    Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy lies a small unregarded yellow sun. Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a pretty neat idea.
-</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed mollis mollis mi ut ultricies. Nullam magna ipsum,
+                        porta vel dui convallis, rutrum imperdiet eros. Aliquam
+                        erat volutpat.</p><p>
+                        Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy lies a small unregarded yellow sun. Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a pretty neat idea.
+                        </p>
                     </div>
+
+                    
                 </foreignObject>
                  
     <use href="#screen-1" />
@@ -430,7 +432,7 @@
     <use href="#screen-3" />
     <use href="#screen-4" />
 
-    <rect width="875" height="570" x="31" y="2" fill="url(#specular-reflection)" mix-blend-mode: overlay;" rx="23.4" ry="23.4" />
+    <rect width="875" height="570" x="31" y="2" fill="url(#specular-reflection)" style="mix-blend-mode: overlay;" rx="23.4" ry="23.4" />
 
 
 <use href="#keyboard-base" />

@@ -23,8 +23,6 @@ that need device level targeting. This is where we do it. */
     flex-basis: 98%;
   }
 
-  
-
   #reeedr .ch-head {
     //font-size: 13rem;
     padding: calc(var(--baseline)*1) 0 0 0;
@@ -105,22 +103,12 @@ that need device level targeting. This is where we do it. */
   .bookcard .bookframe {
     height: 47vw;
   }
-  
 } /*  <--  end of the media query  */ 
 
 
 @media (min-width: 48em) {
   [class*="sm-only"] {
       display: block;
-  }
-  .price-unit{
-    margin: calc(var(--baseline) * 2) 0 calc(var(--baseline) / 2);
-  }
-  .laptop-wrapper{
-    margin: 0 0 0 -25%;
-    svg{
-      width: 125%;
-    }
   }
 }
 
