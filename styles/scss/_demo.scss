@@ -10,13 +10,11 @@ body{
  .page-wrapper, .bookmark{
    transition: all .6s ease-in-out; 
   }
- .pinger{ 
-   transform: translatex(0px);
- }
+ 
  #code-panel-pos{
   transform: matrix(.9, 0, 0, .9, 710, 47);
-}
-
+  }
+.cursor{transition: all .6s ease-in-out;}
 .reveal{
   opacity: 0; // Hide actors by default
  }
@@ -25,7 +23,6 @@ body{
 
  .demo-1 {
    .cursor{transform: translate(450px,-120px);}
-
    #code-panel-pos{
     transform: matrix(.9, 0, 0, .9, 180, 47);
     transition-delay: 1.2s;
@@ -34,7 +31,6 @@ body{
  
  .demo-2 {
    .cursor{transform: translate(-80px,120px);}
-
    foreignObject{ // in HTML
      .page-wrapper{
        margin-top: -21rem; // manipulate the page scroll
@@ -51,24 +47,23 @@ body{
      .page-wrapper{
        margin-top: -95rem; // manipulate the page scroll
        }
-     .bookmark-section-2{
-       background: rgba(250,255,200,1);
+      .bookmark-section-2{
+       background: rgba(250,255,200,1); // yellow para highlight
       }
     }
  }
  
  
- .cursor{transition: all .6s ease-in-out;}
+ 
  
  /* ###  STAGED TRANSITIONS  ### */
  
- /* EVENTS */
  
  .demo-1 .stage-1 .reveal,
  .demo-2 .stage-2 .reveal,
  .demo-3 .stage-3 .reveal,
  .demo-4 .stage-4 .reveal{
-  opacity: 1; // reveal actors
+  opacity: 1; // reveal actors on correct stage 
  }
  // TIMING: Stage cues (timimg classes)
  .arrive-1, .arrive-2, .arrive-3, .arrive-4{
@@ -90,7 +85,7 @@ body{
   transition-delay: 1.2s;
   animation-delay:  1.2s;
  }
- .demo-1 .arrive-4,
+ 
  .demo-1 .stage-1 .arrive-4,
  .demo-2 .stage-2 .arrive-4,
  .demo-3 .stage-3 .arrive-4,
