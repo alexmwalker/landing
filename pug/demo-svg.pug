@@ -1,104 +1,256 @@
-svg(xmlns='http://www.w3.org/2000/svg', xlink='http://www.w3.org/1999/xlink', fill='none', viewBox='0 0 938 586')
+svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='none' viewbox='0 0 938 586')
   defs
-    style.
-      
-      .hide{
-          clip-path: url(#show-nothing);
-          }
-          .show{
-          clip-path: url(#screen-mask);   
-          }
-          .keys rect{
-            rx: 2;
-          }
-      
-    //  CLIP-PATHS 
-    clipPath#screen-mask
-      rect(fill='#fff', width='820', height='525', x='60', y='20')
-    clipPath#show-nothing
-      // show nothing 
-    //  SYMBOLS 
-    symbol#screen-1
-      g
-        rect(width='820', height='525', x='60', y='20', style='fill: rgb(186, 218, 85);', rx='3')
-        text(x='446.9', y='282.3', style='white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;') 1
-    symbol#screen-2
-      g
-        rect(width='820', height='525', x='60', y='20', style='fill: rgb(86, 218, 185);', rx='3')
-        text(x='446.9', y='282.3', style='white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;') 2
-    symbol#screen-3
-      g
-        rect(width='820', height='525', x='60', y='20', style='fill: rgb(185, 65, 185);', rx='3')
-        text(x='446.9', y='282.3', style='white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;') 3
-    symbol#screen-4
-      g
-        rect(width='820', height='525', x='60', y='20', style='fill: rgb(86, 86, 185);', rx='3')
-        text(x='446.9', y='282.3', style='white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;') 4
-    //  GRADIENTS 
-    linearGradient#reflection(x1='-66', x2='1027', y1='-28', y2='318', gradientTransform='matrix(1 0 0 1.02386 0 0)', gradientUnits='userSpaceOnUse')
-      stop
-      stop(offset='.4')
-      stop(offset='.5', stop-color='#393939')
-      stop(offset='.8', stop-color='#313131')
-      stop(offset='.8')
-      stop(offset='1')
-    linearGradient#laptop-edge(x1='356.1', x2='669', y1='-69.3', y2='728.8', gradientTransform='matrix(1 0 0 1.02386 0 0)', gradientUnits='userSpaceOnUse')
-      stop(stop-color='#E5E5E5')
-      stop(offset='.2', stop-color='#D5D5D5')
-      stop(offset='.8', stop-color='#C4C4C4')
-      stop(offset='1', stop-color='#4F4F4F')
-    linearGradient#upperbase(x1='469', x2='469', y1='565', y2='576', gradientUnits='userSpaceOnUse')
-      stop(stop-color='#fff')
-      stop(offset='1', stop-color='#E5E5E5')
-    linearGradient#cutout-1(x1='390.5', x2='551', y1='581', y2='581', gradientTransform='translate(.3 -2)', gradientUnits='userSpaceOnUse')
-      stop(stop-color='#333', stop-opacity='.4')
-      stop(offset='.2', stop-color='#333', stop-opacity='0')
-      stop(offset='.8', stop-color='#333', stop-opacity='.1')
-      stop(offset='1', stop-opacity='.2')
-    linearGradient#cutout-2(x1='469', x2='469', y1='567', y2='581', gradientTransform='matrix(.99997 -.00719 .00476 .66295 -2.1 191.8)', gradientUnits='userSpaceOnUse')
-      stop(style='stop-opacity:.39;stop-color:rgba(51,51,51,.92)')
-      stop(offset='1', style='stop-opacity:0;stop-color:rgba(51,51,51,.03)')
-    linearGradient#gradient-2(x1='390.5', x2='551', y1='581', y2='581', gradientTransform='translate(73.6 2.5)', gradientUnits='userSpaceOnUse')
-      stop(stop-color='#333', stop-opacity='.4')
-      stop(offset='.2', stop-color='#333', stop-opacity='0')
-      stop(offset='.8', stop-color='#333', stop-opacity='.1')
-      stop(offset='1', stop-opacity='.2')
-    linearGradient#specular-reflection(gradientUnits='userSpaceOnUse', x1='516.5', y1='13', x2='516.5', y2='543.2', gradientTransform='matrix(0.171577, -0.98517, 1.564056, 0.272397, -56.521532, 734.224792)')
-      stop(offset='0', style='stop-opacity: 0.09; stop-color: rgb(255, 255, 255);')
-      stop(offset='0.443', style='stop-opacity: 0; stop-color: rgb(255, 255, 255);')
-      stop(offset='0.80', style='stop-color: rgb(255, 255, 255); stop-opacity: 0.12;')
-      stop(offset='0.81', style='stop-color: rgb(255, 255, 255); stop-opacity: 0;')
-      stop(offset='1', style='stop-color: rgb(255, 255, 255); stop-opacity: 0.06;')
-  //  DEFS 
-  rect(width='875', height='575.4', x='31', y='2', fill='#000', stroke='url(#laptop-edge)', stroke-width='4', rx='23.4', ry='23.4')
-  //  DEMOS Fit in here 
-  use.screen.screen-1(href='#screen-1')
-  use.screen.screen-2(href='#screen-2')
-  use.screen.screen-3(href='#screen-3')
-  use.screen.screen-4(href='#screen-4')
-  rect(width='875', height='570', x='31', y='2', fill='url(#specular-reflection)', rx='23.4', ry='23.4')
-  g.keyboard
-    rect(width='938', height='11', y='565', fill='url(#upperbase)')
+    include demo-styles.pug
 
-        
-    path(fill='#C4C4C4', d='M0 575h938c0 6-5 11-11 11H11c-6 0-11-5-11-11z')
+    // CLIP-PATHS
+    clippath#screen-mask
+      rect(fill='#fff' width='820' height='525' x='60' y='20')
+    clippath#show-nothing
+      // show nothing
+    clippath#clip0
+      rect(width='761' height='710' fill='#fff')
+    // / CLIP-PATHS
 
-        
-    g.thumbgroove
-        
-      path(fill='#e9e9e9', d='M389.8 564.4l159.8.1a14 14 0 01-14 14h-132a14 14 0 01-14-14z')
-      path(fill='url(#cutout-1)', d='M389.5 565h159.8a14 14 0 01-14 14h-132a14 14 0 01-14-14z')
-      path(fill='url(#cutout-2)', d='M389.5 565l160-.7a14 14 0 01-14 14h-132a14 14 0 01-14-14z')
-    g.keys
-       
-      rect(width='41', height='4', x='42', y='561', fill='#aaa')
-      rect(width='41', height='4', x='90', y='561', fill='#aaa')
-      rect(width='41', height='4', x='138', y='561', fill='#aaa')
-      rect(width='41', height='4', x='186', y='561', fill='#aaa')
-      rect(width='41', height='4', x='234', y='561', fill='#aaa')
-      rect(width='373', height='4', x='282', y='561', fill='#aaa')
-      rect(width='41', height='4', x='666', y='561', fill='#aaa')
-      rect(width='41', height='4', x='714', y='561', fill='#aaa')
-      rect(width='41', height='4', x='762', y='561', fill='#aaa')
-      rect(width='41', height='4', x='810', y='561', fill='#aaa')
-      rect(width='41', height='4', x='858', y='561', fill='#aaa')
+    // SYMBOLS 
+    include demo-symbols.pug
+
+    // GRADIENTS
+    include demo-gradients.pug
+
+  // / DEFS
+
+
+  // BODY STARTS HERE
+  g.screen-back
+    rect(width='875' height='575.4' x='31' y='2' fill='#000' stroke='url(#laptop-edge)' stroke-width='4' rx='23.4' ry='23.4')
+    rect(width='820' height='525' x='60' y='20' style='fill: rgb(86, 118, 185);' rx='3')
+
+
+  // FOREIGNOBJECT
+  // Book page is actually HTML inserted as a foreign object
+  foreignobject(x='60' y='20' width='820' height='525' style='overflow-x: hidden;overflow-y: scroll;')
+    .page-wrapper.arrive-1(xmlns='http://www.w3.org/1999/xhtml')
+      #chapter-container
+        #chapter-content
+          .p-unit
+            div(style='overflow:hidden')
+              div(style='width: 70%; float:left; text-align: right')
+                h1(style='font-weight: 400 ')
+                  | The Document Object Model
+                h3(style='color:#aaa;font-weight: 400 ') Darren Jones
+              div(style='border-left: 1px #333 solid; margin-left:5%; width: 20%;float:left;text-align: center')
+                | Chapter
+                span(style='color:rgb(68,82,102);font-size:6rem; font-weight: 500; display: block; margin-top: 1.5rem') 6
+          .p-unit
+            p
+              | The Document Object Model (DOM) allows
+              | you to access elements of a web page and enable interaction with the page by adding and removing
+              | elements, changing the order, content and attributes of elements, and even altering how they are styled.
+          .p-unit
+            p.p-unit(data-block='k01nwu3g')
+              | In this chapter, we&rsquo;ll cover the
+              | following topics:
+          .p-unit
+            ul.sc-fzXfLP.eukCKF(data-block='k01nwu3h')
+              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                p.p-unit Introduction to the DOM
+              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                p.p-unit
+                  | Getting elements &horbar;&nbsp;
+                  code.sc-fzXfOq.ILXMh getElementById
+                  |  ,&nbsp;
+                  code.sc-fzXfOq.ILXMh getElementsByClassName
+                  |  ,&nbsp;
+                  code.sc-fzXfOq.ILXMh getElementsByTagName
+                  |  ,&nbsp;
+                  code.sc-fzXfOq.ILXMh querySelector
+                  |  and&nbsp;
+                  code.sc-fzXfOq.ILXMh querySelectorAll
+              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                p.p-unit Navigating the DOM
+              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                p.p-unit Getting and setting an element&rsquo;s attributes
+              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                p.p-unit Updating the DOM by creating dynamic markup
+              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                p.p-unit Changing the CSS of an element
+              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                p.p-unit
+                  | Our project &horbar; we&apos;ll dynamically insert each question
+                  | into the HTML
+          .p-unit
+            h2.sc-AykKF.iMpVdq( letter-spacing='-0.03em')
+              | The Document
+              | Object Model
+          .p-unit
+            h3.sc-AykKF.cHPaKb( letter-spacing='-0.03em')
+              | What is the
+              | DOM?
+          .p-unit
+            p.p-unit.bookmark-section-1.arrive-2(data-block='k01nwu3k')
+              | The Document Object Model, or DOM for short, represents an HTML document as a network of connected nodes that form a tree-like structure.
+          .p-unit
+            p.p-unit(data-block='k01nwu3l')
+              | The DOM treats everything on a web page
+              | as a node. HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML
+              | tag is the root node, and every other part of the document is a child node of this.
+          .p-unit
+            p.p-unit(data-block='k01nwu3m')
+              | Take the following piece of HTML as an
+              | example:
+          .p-unit
+            pre.prism-code.language-js(style='color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);').
+              \n\t              
+                            
+          .p-unit
+            p.p-unit(data-block='k01nwu3o')
+              | This can be represented as the tree
+              | diagram shown below.
+          .sc-AykKD.sc-fzXfNj.cxdGoc
+            figure.imagefig(data-block='k01nwu3p')
+              p.sc-AykKE.gCEOsp.image-wrapper
+                svg(width='267' height='400' viewbox='0 0 267 400' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  defs
+                    style.
+                      .p-label{fill:black; white-space: pre; font-family:Halant, serif; font-size:21px;}
+                  rect(width='267' height='400' fill='white')
+                  path(d='M33.5 200.5C30.833 190.17 36 162 78 132C120 102 130 71.5 129.5 60M129.5 60C130.17 73.17 141.2 106 180 132C218.8 158 227.8 188.5 227.5 200.5M129.5 60V347.5' stroke='black')
+                  text.p-label
+                    tspan(x='82.3' y='23') p.warning
+                  text.p-label
+                    tspan(x='3.7' y='180') #text
+                  text.p-label
+                    tspan(x='201.7' y='180') #text
+                  text.p-label
+                    tspan(x='102.7' y='337') #text
+                  text.p-label
+                    tspan(x='113.7' y='180') em
+                  circle(cx='129' cy='52' r='19.5' fill='#3A80B6' stroke='#33629E' stroke-width='3')
+                  circle(cx='129' cy='209' r='19.5' fill='#3A80B6' stroke='#33629E' stroke-width='3')
+                  circle(cx='228' cy='209' r='19.5' fill='#FFCE00' stroke='#FFA100' stroke-width='3')
+                  circle(cx='129' cy='366' r='19.5' fill='#FFCE00' stroke='#FFA100' stroke-width='3')
+                  circle(cx='30' cy='209' r='19.5' fill='#00BE56' stroke='#0AA234' stroke-width='3')
+              figcaption The DOM tree
+          .p-unit
+            p.p-unit(data-block='k01nwu3q')
+              | The DOM is not actually part of JavaScript because it is
+              em language agnostic
+              | (although JavaScript is, by far, the language most
+              |                           commonly used with it). This means it can be used in any programming language, not just JavaScript. We
+              |                           can use JavaScript to access and modify different parts of a web page using a special built-in object
+              |                           called&nbsp;
+              code.sc-fzXfOq.ILXMh document
+              |  .
+          .p-unit
+            h2.sc-AykKF.iMpVdq(data-block='k01nwu3r' letter-spacing='-0.03em')
+              | History of
+              | the DOM
+          .p-unit
+            p.p-unit.bookmark-section-2
+              | In the early days of the web, browser
+              | vendors such as Netscape and Microsoft developed their own distinct ways of accessing and altering parts
+              | of a web page. In the beginning, they tended to focus on common page elements such as images, links and
+              | forms &ndash; this was known as Dynamic HTML (DHTML). These methods became known as DOM level 0, or legacy
+              | DOM. Some of the more common methods, such as those used for selecting images and forms, can still be
+              | used in the current DOM.
+          .p-unit
+            p.p-unit(data-block='k01nwu3t')
+              | The World Wide Web Consortium (W3C)
+              | started to standardize the process, and created the DOM level 1 in 1998. This introduced a complete
+              | model for web pages that allowed every part of them to be navigated.
+          .p-unit
+            p.p-unit(data-block='k01nwu3u')
+              | The DOM level 2 specification was
+              | published in 2000 and introduced the popular&nbsp;
+              code.sc-fzXfOq.ILXMh getElementById()
+              |                           method, which made it much easier to access specific elements on a web page. The DOM level 3
+              |                           specification was published in 2004, and since then the W3C has abandoned using levels. The DOM
+              |                           specification is developed as a
+              a.sc-AykKE.sc-AykKI.ehacSg(href='https://www.w3.org/TR/dom/' target='_blank' color='link') living standard
+              | .
+          .p-unit
+            p.p-unit(data-block='k01nwu3v')
+              | Despite the standardization process,
+              | browsers have not always implemented the DOM consistently, so it&rsquo;s been difficult to program for in the
+              | past. Fortunately, since Internet Explorer 8, DOM support has been much more consistent, and modern
+              | browsers now implement the current DOM level 3. They&rsquo;re also implementing more of the new DOM level 4
+              | features with every update.
+          .p-unit
+            h2.sc-AykKF.iMpVdq(data-block='k01nwu3w' letter-spacing='-0.03em')
+              | An Example
+              | Web Page
+          .p-unit
+            p.p-unit(data-block='k01nwu3x')
+              | To illustrate the DOM concepts covered
+              | in this chapter, we&rsquo;ll use a basic web page that contains a heading and three paragraph elements. Save
+              | the following code in a file called&nbsp;
+              code.sc-fzXfOq.ILXMh heroes.html
+              |  :
+          .p-unit
+            pre.sc-fzXfNi.prism-code.language-js(data-block='k01nwu3y' style='color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);').
+              
+          .p-unit
+            p.p-unit(data-block='k01nwu3z')
+              | Below is a node tree diagram for
+              | the&nbsp;
+              code.sc-fzXfOq.ILXMh &lt;ul&gt;
+              |  element with a class of&nbsp;
+              code.sc-fzXfOq.ILXMh roster
+              |  :
+          .p-unit
+            .sc-AykKD.sc-fzXfRb.iRllY(data-block='k01nwu41' type='note')
+              h4.sc-AykKF.jlCtDD(letter-spacing='-0.03em')
+                | What&apos;s With the Extra Text
+                | Nodes?
+              p.p-unit
+                | There appear to be some extra #text nodes in this
+                | diagram, even in places where there isn&apos;t any text. This is because the DOM also stores any
+                | whitespace that is in the HTML document as text nodes.
+          .p-unit
+            p.p-unit(data-block='k01nwu42')
+              | Because we&apos;re using the browser, the
+              | best way to follow along with the examples in this chapter is to use the console built into the web
+              | browser (we discussed how to use this in Chapter 1). This will allow you to enter commands that interact
+              | with the elements on the web page and see the results. The screenshot below shows the page with the
+              | console open.
+          .p-unit
+            .sc-AykKD.sc-fzXfRb.iRllY(data-block='k01nwu44' type='note')
+              h4.sc-AykKF.jlCtDD(letter-spacing='-0.03em') Console Shortcuts
+              p.p-unit
+                | Here are a couple of useful shortcuts that will help
+                | speed things up when you&apos;re using the console:
+              ul.sc-fzXfLP.eukCKF
+                li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                  p.p-unit
+                    | Pressing TAB will autocomplete any methods and
+                    | should show you a list of possible methods
+                li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                  p.p-unit
+                    | Pressing the UP arrow key will select the
+                    | previous command entered.
+          .p-unit
+            h2.sc-AykKF.iMpVdq(data-block='k01nwu45' letter-spacing='-0.03em')
+              | Getting
+              | Elements
+  g.stage-1(clip-path='url(#screen-mask)')
+    use#code-panel-pos.arrive-2(href='#code-panel')
+    use.reveal.arrive-4(href='#note-1' width='275' x='380' y='170')
+    circle.kaboom.reveal.arrive-4(cx='700' cy='170' r='10' fill='none' stroke-width='0px' stroke='#2D9CDB')
+  g.stage-2(clip-path='url(#screen-mask)')
+    use.reveal.arrive-3(href='#bookmark-widget' width='150' x='250' y='70')
+    use.reveal.arrive-4(href='#note-2' width='275' x='450' y='0')
+    circle.kaboom.reveal.arrive-4(cx='290' cy='355' r='10' fill='none' stroke-width='0px' stroke='#2D9CDB')
+  g.stage-3(clip-path='url(#screen-mask)')
+    rect.reveal.arrive-2(width='910' height='550' fill='black' fill-opacity='0.5')
+    use.reveal.arrive-2(href='#bookmark-widget' width='160' x='250' y='-180')
+    use.reveal.arrive-3(href='#share-panel' width='500' x='200' y='0')
+    use.reveal.arrive-4(href='#note-3' width='345' x='400' y='-183')
+    circle.kaboom.reveal.arrive-4(cx='370' cy='100' r='10' fill='none' stroke-width='0px' stroke='#2D9CDB')
+  g.stage-4(clip-path='url(#screen-mask)')
+    use.reveal.arrive-4(href='#note-3' x='400' y='400')
+  use.cursor(href='#hand-cursor' width='30' x='400')
+  g.foreground
+    use(href='#topbar' width='820' x='60' y='-262')
+    rect.reflection(width='875' height='570' x='31' y='2' fill='url(#specular-reflection)' style='mix-blend-mode: overlay; pointer-events:none' rx='23.4' ry='23.4')
+    use(href='#keyboard-base')
+// SVG: end
