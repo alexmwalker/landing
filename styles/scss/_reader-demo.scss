@@ -7,7 +7,8 @@
   .container{
     width: 90%;
   }
-  h3,a,p{
+  .ui-area h3{color: #eee}
+  a, p{
     color: #eee;
     margin-bottom: calc(var(--baseline)/2) ;
   }
@@ -25,32 +26,22 @@
     width: 100%;
   }
 }
-.screen{
-  display: none;
-}
+
 .demo-1{
-  border: 1px orange solid;
-  .screen-1{
-    display: block;
-  }
+  outline: 1px orange solid;
+
 }
 .demo-2{
-  border: 1px greenyellow solid;
-  .screen-2{
-    display: block;
-  }
+  outline: 1px greenyellow solid;
+
 }
 .demo-3{
-  border: 1px rgb(70, 160, 243) solid;
-  .screen-3{
-    display: block;
-  }
+  outline: 1px rgb(70, 160, 243) solid;
+
 }
 .demo-4{
-  border: 1px rgb(206, 46, 238) solid;
-  .screen-4{
-    display: block;
-  }
+  outline: 1px rgb(206, 46, 238) solid;
+
 }
 
 
@@ -94,6 +85,18 @@
       //border: 1px solid #5f5;
       padding: 0;
       margin: 0;
+    }
+  }
+}
+
+
+
+@media (min-width: 48em) { /* pad the top on non-phones*/ 
+  .reader-demo .demo-placement{
+    //margin-left: calc(var(--baseline) * -10);
+    margin-left: -10rem;
+    .laptop-wrapper{
+      width: 100%;
     }
   }
 }

@@ -3,31 +3,32 @@ section.reader-demo
     .grid-center
       .col-12_sm-12
         .grid
-          .col-7_sm-12.align-c
-            .laptop-wrapper
-              include demo-svg.pug
-              //-object(data='images/SVG/laptop-bg.svg', type='image/svg+xml')
-                img(src='images/SVG/laptop-bg.svg')
-                //- iframe(name="screen" scrolling="no" xmlns='http://www.w3.org/1999/xhtml' src='demo/demo-book-1.html' width='100%' height='100%'  )
-                //-include laptop-2.pug 
-                
-                //-img(src='images/SVG/demo.svg?cache=4321')
-                //-img(src='images/SVG/switch-svg.svg')
+          .col-7_sm-12
+            .demo-placement
+              .laptop-wrapper
+                include demo-svg.pug
+                //-object(data='images/SVG/laptop-bg.svg', type='image/svg+xml')
+                  img(src='images/SVG/laptop-bg.svg')
+                  //- iframe(name="screen" scrolling="no" xmlns='http://www.w3.org/1999/xhtml' src='demo/demo-book-1.html' width='100%' height='100%'  )
+                  //-include laptop-2.pug 
+                  
+                  //-img(src='images/SVG/demo.svg?cache=4321')
+                  //-img(src='images/SVG/switch-svg.svg')
 
 
 
 
-          .col-5_sm-12
+          .col-5_sm-12.ui-area
             h3 The ultimate text based learning experience
             p Text based learning is proven to be 
               b twice as fast 
               | as video or audio lessons
             ol.demo-points 
               li 
-                a.screen-1(href="demo/demo-book-1.html"  onclick="return false;") Live interactive code environments
+                a.screen-1(href="#"  onclick="return false;") Live interactive code environments
               li 
-                a.screen-2(href="demo/demo-book-2.html"  onclick="return false;") Bookmark sections to read later
+                a.screen-2(href="#"  onclick="return false;") Bookmark sections to read later
               li
-                a.screen-3(href="demo/demo-book-3.html"  onclick="return false;") Search across our entire collection
+                a.screen-3(href="#"  onclick="return false;") Share snippets with peers and coworkers
               li
-                a.screen-4(href="demo/demo-book-4.html"  onclick="return false;") Share snippets with peers and coworkers
+                a.screen-4(href="#"  onclick="return false;") Search... maybe... 

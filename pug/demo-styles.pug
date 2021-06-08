@@ -127,21 +127,37 @@ style.
         stroke-opacity: 0;
         }
     }
+
+
     /* PAGE CSS */
     #chapter-container{
         text-align: left;
         line-height: 1.2;
-        font-size: 15px;
+        font-size: 14px;
         font-weight:300;
         background:#fff!important;
         color:#222!important;
         font-family: 'Roboto', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         padding: 4rem 3rem 2rem;
     }
-    #chapter-container h2, h3{font-weight:400;color:#222!important;}
-    #chapter-container h2{margin-top: 3em}
+    #chapter-container h2, #chapter-container h3{font-weight:400;color:#222!important;}
+    #chapter-container h2{margin-top: 1em; font-size: 1.75em}
     #chapter-container code{background:#F5F2F0}
-    #chapter-container .p-unit p{font-weight:300; font-size: 14px; line-height: 1.78; color:#222!important;}
+    #chapter-container  p.p-unit{font-weight:300; font-size: 1em; line-height: 1.78; color:#222!important;}
+    #chapter-container  li p.p-unit{margin-bottom: 0; font-size: 1em;}
+    
     #chapter-container .prism-code{
         padding:0 1rem;
+    }
+    #chapter-container li.booklist-item{
+        font-size: 1em;
+    }
+    #chapter-container ul.booklist{
+        font-size: 1em;
+    }
+    #chapter-container .chapter-head{
+        overflow: hidden;
+    }
+    #chapter-container .chapter-head h3{
+        color:#aaa;font-weight: 400 
     }

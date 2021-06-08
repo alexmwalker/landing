@@ -32,29 +32,28 @@ svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink
     .page-wrapper.arrive-1(xmlns='http://www.w3.org/1999/xhtml')
       #chapter-container
         #chapter-content
+          div.chapter-head
+            div(style='width: 70%; float:left; text-align: right')
+              h1(style='font-weight: 400; font-size: 3em ')
+                | The Document Object Model
+              h3 Darren Jones
+            div(style='border-left: 1px #333 solid; margin-left:5%; width: 20%;float:left;text-align: center')
+              | Chapter
+              span(style='color:rgb(68,82,102);font-size:6rem; font-weight: 500; display: block; margin-top: 1.5rem') 6
           .p-unit
-            div(style='overflow:hidden')
-              div(style='width: 70%; float:left; text-align: right')
-                h1(style='font-weight: 400 ')
-                  | The Document Object Model
-                h3(style='color:#aaa;font-weight: 400 ') Darren Jones
-              div(style='border-left: 1px #333 solid; margin-left:5%; width: 20%;float:left;text-align: center')
-                | Chapter
-                span(style='color:rgb(68,82,102);font-size:6rem; font-weight: 500; display: block; margin-top: 1.5rem') 6
-          .p-unit
-            p
+            p.p-unit
               | The Document Object Model (DOM) allows
               | you to access elements of a web page and enable interaction with the page by adding and removing
               | elements, changing the order, content and attributes of elements, and even altering how they are styled.
           .p-unit
-            p.p-unit(data-block='k01nwu3g')
+            p.p-unit
               | In this chapter, we&rsquo;ll cover the
               | following topics:
           .p-unit
-            ul.sc-fzXfLP.eukCKF(data-block='k01nwu3h')
-              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+            ul.booklist
+              li.booklist-item
                 p.p-unit Introduction to the DOM
-              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+              li.booklist-item
                 p.p-unit
                   | Getting elements &horbar;&nbsp;
                   code.sc-fzXfOq.ILXMh getElementById
@@ -66,31 +65,29 @@ svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink
                   code.sc-fzXfOq.ILXMh querySelector
                   |  and&nbsp;
                   code.sc-fzXfOq.ILXMh querySelectorAll
-              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+              li.booklist-item
                 p.p-unit Navigating the DOM
-              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+              li.booklist-item
                 p.p-unit Getting and setting an element&rsquo;s attributes
-              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+              li.booklist-item
                 p.p-unit Updating the DOM by creating dynamic markup
-              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+              li.booklist-item
                 p.p-unit Changing the CSS of an element
-              li.sc-AykKE.sc-fzXfLQ.ktTlYN
+              li.booklist-item
                 p.p-unit
                   | Our project &horbar; we&apos;ll dynamically insert each question
                   | into the HTML
           .p-unit
             h2.sc-AykKF.iMpVdq( letter-spacing='-0.03em')
-              | The Document
-              | Object Model
+              | The Document Object Model
           .p-unit
             h3.sc-AykKF.cHPaKb( letter-spacing='-0.03em')
-              | What is the
-              | DOM?
+              | What is the DOM?
           .p-unit
-            p.p-unit.bookmark-section-1.arrive-2(data-block='k01nwu3k')
+            p.p-unit.bookmark-section-1.arrive-2
               | The Document Object Model, or DOM for short, represents an HTML document as a network of connected nodes that form a tree-like structure.
           .p-unit
-            p.p-unit(data-block='k01nwu3l')
+            p.p-unit
               | The DOM treats everything on a web page
               | as a node. HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML
               | tag is the root node, and every other part of the document is a child node of this.
@@ -220,11 +217,11 @@ svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink
                 | Here are a couple of useful shortcuts that will help
                 | speed things up when you&apos;re using the console:
               ul.sc-fzXfLP.eukCKF
-                li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                li.booklist-item
                   p.p-unit
                     | Pressing TAB will autocomplete any methods and
                     | should show you a list of possible methods
-                li.sc-AykKE.sc-fzXfLQ.ktTlYN
+                li.booklist-item
                   p.p-unit
                     | Pressing the UP arrow key will select the
                     | previous command entered.
