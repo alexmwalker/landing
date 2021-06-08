@@ -3195,7 +3195,7 @@ html.offline #offline-notification {
 @media (min-width: 48em) {
   /* pad the top on non-phones*/
   .reader-demo .demo-placement {
-    margin-left: -10rem;
+    margin-left: -9rem;
   }
   .reader-demo .demo-placement .laptop-wrapper {
     width: 100%;
