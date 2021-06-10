@@ -1,5 +1,5 @@
 .
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 938 586">
+     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 938 586">
         <defs>
             <style>
                 @import url(&quot;https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;family=Roboto:wght@300;500;700&amp;display=swap&quot;);
@@ -40,7 +40,7 @@
                 }
 
                 .cursor {
-                    transition: all 1s ease-in-out;
+                    transition: all 1s cubic-bezier(.21,0,.25,1);
                 }
                 .touchzone{
                 cursor:pointer;
@@ -51,15 +51,22 @@
                 .bookmark-section-1, .bookmark-section-2{
                 fill:#fff;
                 }
+                #live-code-tab-open{
+                  display: none;
+                }
                 /* DEMO STATE TRIGGERED */
                 .demo-1 .cursor {
                     transform: translate(450px, -120px);
+                    
                 }
                 .demo-1 #code-panel-pos {
                     transform: matrix(0.9, 0, 0, 0.9, 180, 47);
                     transition-delay: 1s;
                 }
-
+                .demo-1 #live-code-tab-open{
+                  display: block;
+                  cursor: pointer;
+                }
                 .demo-2 .cursor {
                     transform: translate(-80px, 120px);
                 }
@@ -155,8 +162,7 @@
                     }
                 }
                 #cursor-click .plick{
-                transform: none;
-                transition: none;
+                 transition: none;
                 }
                 .demo-1 #cursor-click .plick,
                 .demo-2 #cursor-click .plick,
@@ -164,7 +170,7 @@
                 .demo-4 #cursor-click .plick{
                     transform: translate(-120px, 0px);
                     transition: transform .3s steps(3);
-                    transition-delay: .9s;
+                    transition-delay: .8s;
                 }
             </style>
 
@@ -331,23 +337,22 @@
         
         <symbol id="link-icon" viewbox="0 0 25 25" >
             <g transform="rotate(-45 12 12)">
-            <rect width="6" height="6" x="0" y="1" fill="none" stroke="#fff" stroke-width="2" rx="2" />
-            <rect fill="#fff" width="2" height="8" x="2" y="4"  />
-            <rect width="6" height="6" x="0" y="10" fill="none" stroke="#fff" stroke-width="2" rx="2" />
+              <rect width="6" height="6" x="0" y="1" fill="none" stroke="#fff" stroke-width="2" rx="2" />
+              <rect fill="#fff" width="2" height="8" x="2" y="4"  />
+              <rect width="6" height="6" x="0" y="10" fill="none" stroke="#fff" stroke-width="2" rx="2" />
             </g>
         </symbol>
         
         <symbol id="keyboard-base">
-            <g class="keyboard">
-            <rect width="938" height="11" y="565" fill="url(#upperbase)"/>
-            <path fill="#C4C4C4" d="M0 575h938c0 6-5 11-11 11H11c-6 0-11-5-11-11z"/>
-            <g>
-                <path fill="#e9e9e9" d="M389.8 564.4l159.8.1a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
-                <path fill="url(#cutout-1)" d="M389.5 565h159.8a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
-                <path fill="url(#cutout-2)" d="M389.5 565l160-.7a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
-            </g>
+           <g class="keyboard">
+             <rect width="938" height="11" y="565" fill="url(#upperbase)"/>
+             <path fill="#C4C4C4" d="M0 575h938c0 6-5 11-11 11H11c-6 0-11-5-11-11z"/>
+               <g>
+                   <path fill="#e9e9e9" d="M389.8 564.4l159.8.1a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
+                   <path fill="url(#cutout-1)" d="M389.5 565h159.8a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
+                   <path fill="url(#cutout-2)" d="M389.5 565l160-.7a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
+               </g>
             <g class="keys" fill="#aaa">
-
                 <rect width="41" height="4" x="42" y="561" />
                 <rect width="41" height="4" x="90" y="561" />
                 <rect width="41" height="4" x="138" y="561" />
@@ -360,17 +365,17 @@
                 <rect width="41" height="4" x="810" y="561" />
                 <rect width="41" height="4" x="858" y="561" />
             </g>     
-        </g>
+          </g>
         </symbol>
         
         <symbol id="note-1" viewbox="0 0 275 110" class="shadow note">  
             <rect x="4" width="275" height="110" fill="#FFE794"/>
-            <polygon points="210, -130 200,10 160,10" style="fill:#FFE794;" />
+            <polygon points="205,-120 200,10 160,10" style="fill:#FFE794;" />
             <g class="numberlist">
                 <circle cx="36" cy="32" r="8" fill="orangered"/>
                 <text fill="#fff" font-size="13" font-weight="500" x="32" y="36.5">1</text>
             </g>
-            <text fill="black" font-size="18"><tspan x="50" y="38.6">Write and edit code in a</tspan><tspan x="34" y="59.6">live coding environment  </tspan><tspan x="34" y="80.6">without leaving your book.</tspan></text>
+            <text fill="black" font-size="18"><tspan x="50" y="38.6">Write and edit code in a</tspan><tspan x="34" dy="1.25em">live coding environment  </tspan><tspan x="34" dy="1.25em">without leaving your book.</tspan></text>
         </symbol>
         
         <symbol id="note-2" viewbox="0 0 275 110" class="shadow note">  
@@ -391,7 +396,6 @@
                 <text fill="#fff" font-size="13" font-weight="500" x="32" y="36.5">3</text>
             </g>
             <text fill="black" font-size="18"><tspan x="50" y="38.6">Easily share text and code  </tspan><tspan x="34" y="59.6">samples with friends - even </tspan><tspan x="34" y="80.6">if they don’t have the book.</tspan></text>
-    
         </symbol>
         
         <symbol id="note-4">  
@@ -401,29 +405,29 @@
         
         <symbol id="code-panel" viewBox="0 0 761 710" class="shadow">
             <g id="coder" clip-path="url(#clip0)">
-            <rect id="work-panel-base" width="486" height="711" x="275" y="0" fill="#252E32"/>
+               <rect id="work-panel-base" width="486" height="711" x="275" y="0" fill="#252E32"/>
             <g id="dir-panel-base">
-            <rect width="9" height="711" x="31" fill="#38464C"/>
-            <rect width="4" height="711" fill="#1F282C" x="40" />
-            <rect width="40" height="711" x="42" y="0" fill="#283134"/>
-            <text fill="#2A95D0" font-family="Roboto" font-size="16" >
-                <tspan x="50" y="28">&lt;/&gt;</tspan>
-            </text>
-            <rect width="2" height="33" x="80" y="8" fill="#2A95D0"/>
-            <g id="dir-tools" transform="translate(0,-50)">
-                <path id="share" stroke="#CFD1D1" d="M62.4 588.2l-2.7 1.8m-.3 2.4l2.9 2.5M60 591a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm6-4a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm0 9a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2z"/>
-                <g id="settings" stroke="#CFD1D1">
-                <path d="M59.7 690.5v2.3c.5.1 2.7.1 3.2 0v-2.3l1.2-.6L66 691a10 10 0 001.7-2.5l-2.1-1.2v-1.2l2.1-1.2a10 10 0 00-1.7-2.5l-1.9 1-1.2-.6v-2.3c-.5-.1-2.7-.1-3.2 0v2.3l-1.1.6-2.1-1c-.4.3-1.4 2.1-1.5 2.5l2 1.2v1.2l-2 1.2c.1.4 1.1 2.2 1.5 2.5l2.1-1.1 1.1.6z" style="stroke-width:.75px"/>
-                <path d="M63.1 686.8c0 1-.8 1.8-1.9 1.8-1 0-1.8-.8-1.8-1.8 0-1.1.8-1.9 1.8-1.9 1.1 0 1.9.8 1.9 1.9z" style="stroke-width:.75px"/>
-                </g>
-                <g id="help">
-                <circle cx="61.5" cy="642" r="7.4" style="stroke:#cfd1d1"/>
-                <path d="M59.4 639.9c0-.7.9-1.6 2.4-1.6 1.4 0 2.1.9 2.1 1.6 0 1-1 1.1-1.6 1.6-.4.4-.8 1.1-.7 2.4" style="stroke:#cfd1d1;stroke-linecap:round"/>
-                <circle cx="61.6" cy="645.7" r=".7" style="fill:#d8d8d8"/>
-                </g>
-            </g>
-            <rect width="193" height="711" fill="#38464C" x="82"/>
-                <g id="file-directory">
+              <rect width="9" height="711" x="31" fill="#38464C"/>
+              <rect width="4" height="711" fill="#1F282C" x="40" />
+              <rect width="40" height="711" x="42" y="0" fill="#283134"/>
+              <text fill="#2A95D0" font-family="Roboto" font-size="16" >
+                  <tspan x="50" y="28">&lt;/&gt;</tspan>
+              </text>
+              <rect width="2" height="33" x="80" y="8" fill="#2A95D0"/>
+              <g id="dir-tools" transform="translate(0,-50)">
+                  <path id="share" stroke="#CFD1D1" d="M62.4 588.2l-2.7 1.8m-.3 2.4l2.9 2.5M60 591a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm6-4a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm0 9a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2z"/>
+                  <g id="settings" stroke="#CFD1D1">
+                  <path d="M59.7 690.5v2.3c.5.1 2.7.1 3.2 0v-2.3l1.2-.6L66 691a10 10 0 001.7-2.5l-2.1-1.2v-1.2l2.1-1.2a10 10 0 00-1.7-2.5l-1.9 1-1.2-.6v-2.3c-.5-.1-2.7-.1-3.2 0v2.3l-1.1.6-2.1-1c-.4.3-1.4 2.1-1.5 2.5l2 1.2v1.2l-2 1.2c.1.4 1.1 2.2 1.5 2.5l2.1-1.1 1.1.6z" style="stroke-width:.75px"/>
+                  <path d="M63.1 686.8c0 1-.8 1.8-1.9 1.8-1 0-1.8-.8-1.8-1.8 0-1.1.8-1.9 1.8-1.9 1.1 0 1.9.8 1.9 1.9z" style="stroke-width:.75px"/>
+                  </g>
+                  <g id="help">
+                  <circle cx="61.5" cy="642" r="7.4" style="stroke:#cfd1d1"/>
+                  <path d="M59.4 639.9c0-.7.9-1.6 2.4-1.6 1.4 0 2.1.9 2.1 1.6 0 1-1 1.1-1.6 1.6-.4.4-.8 1.1-.7 2.4" style="stroke:#cfd1d1;stroke-linecap:round"/>
+                  <circle cx="61.6" cy="645.7" r=".7" style="fill:#d8d8d8"/>
+                  </g>
+              </g>
+              <rect width="193" height="711" fill="#38464C" x="82"/>
+              <g id="file-directory">
                     <text id="FILETREE" fill="#E5E5E5" font-size="13" font-weight="900">
                         <tspan x="90" y="21.9">FILETREE</tspan>
                     </text>
@@ -442,11 +446,9 @@
                         <text fill="#E5E5E5" font-size="13" font-weight="500">
                             <tspan x="129" y="116.9">notes.txt</tspan>
                         </text>
-                        <g>
-                            <path stroke="#E5E5E5"
-                                d="M118 105.5v4.5h4.5v11.5h-12v-16h7.5zm-4 7h5-5zm0 2.5h5-5zm0 2.5h5-5z" />
-                            <line x1="118.1" x2="122.6" y1="105.4" y2="109.9" style="stroke:#e5e5e5" />
-                        </g>
+                           <path stroke="#E5E5E5"
+                               d="M118 105.5v4.5h4.5v11.5h-12v-16h7.5zm-4 7h5-5zm0 2.5h5-5zm0 2.5h5-5z" />
+                           <line x1="118.1" x2="122.6" y1="105.4" y2="109.9" style="stroke:#e5e5e5" />
                     </g>
                     <g id="quiz">
                         <text id="quiz_2" fill="#E5E5E5" font-size="13" font-weight="500">
@@ -457,22 +459,22 @@
                     <use width="17.1" height="12" transform="translate(410.6 270.5)" href="#folder-open" />
                 </g>
             
-                <g id="sidetab">
+                <g id="sidetab" style="cursor:pointer">
                     <path id="sidetab_2" fill="#283134" d="M0 70a10 10 0 0110-10h21v172H10a10 10 0 01-10-10V70z" />
                     <text id="&lt;/&gt;_2" fill="#2A95D0" font-size="16" font-weight="bold">
                         <tspan x="4" y="96">&lt;/&gt;</tspan>
                     </text>
                     <text fill="#2A95D0" font-size="15" font-weight="500" letter-spacing="0em"
                         style="white-space:pre" transform="rotate(-90 99 92)">
-                    <tspan x="0" y="14.1">LIVE CODE</tspan>
-                </text>
+                       <tspan x="0" y="14.1">LIVE CODE</tspan>
+                    </text>
                 </g>
                         
                 <use width="17.1" height="12" transform="translate(88.9 38.5)" href="#folder-open" />
             </g>
             <g id="code-window">
                 <rect id="codebase" width="486" height="430" fill="#2B3336" transform="matrix(1 0 0 -1 275 431)" />
-                <text style="fill:#d1d2d3;font-weight:500;white-space:pre">
+                <text style="font-size:15px; fill:#d1d2d3;font-weight:500;white-space:pre">
                     <tspan x="305" y="55.3"> window.</tspan><tspan style="fill:url(#color-2)">onload</tspan><tspan style="fill:url(#color-3)">=</tspan><tspan style="fill:url(#color-4)">function</tspan><tspan>() { </tspan>
                     <tspan x="325" y="76.3"> </tspan><tspan style="fill:url(#color-2)">setTimeout</tspan><tspan>(() </tspan><tspan style="fill:url(#color-4)">=&gt;</tspan><tspan> { </tspan>
                     <tspan x="335" y="97.3"> </tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> quiz </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> [ </tspan>
@@ -660,15 +662,16 @@
                     </style>
                     <path fill="#fff" d="M0 0h1900v6000H0z"/> 
                     <g class="chapter-head">
-                        <text style="white-space:pre" font-weight="400" fill="#333" font-family="Roboto" font-size="79" letter-spacing="-2.5" text-anchor="end">
-                        <tspan x="1300" y="270">The Document Object</tspan><tspan x="2000" dy="1.25em">​</tspan><tspan>Model</tspan>
+                        <text style="white-space:pre" font-weight="400" fill="#333" font-family="Roboto" font-size="79" letter-spacing="-2.5" >
+                            <tspan x="600" y="270">The Document Object</tspan>
+                            <tspan x="1100" y="370">Model</tspan>
                         </text>
                         <text style="white-space:pre" x="1300" y="450" fill="#898989" font-family="Roboto" font-size="54" letter-spacing="1.9" text-anchor="end">Darren Jones</text>
                         <path stroke="#000" d="M1349 200v262"/>
 
                         <g class="chapter-no" transform="translate(1450 200)">
-                        <path d="M163.7 187a69.5 69.5 0 00-20.5-48.6 75.4 75.4 0 00-50.4-19.9c-10.9 0-20.7 2.6-29 7.5a46.4 46.4 0 00-19 20.5c.2-22 4.6-39.2 13.2-51.3a40.7 40.7 0 0134.6-18.4 50.8 50.8 0 0144 26.2l18.7-19.6A72 72 0 0093.1 49 69.2 69.2 0 0061 56.6a67.5 67.5 0 00-24.5 22.5c-7 9.8-12.1 22.1-15.8 36.8a208.8 208.8 0 00-5.5 51.3c0 14.4 1.7 27 5.2 38.3A79.5 79.5 0 0035.5 234 62.7 62.7 0 0059.1 252c9.3 4 19.3 6 30.9 6a75.7 75.7 0 0052.4-20.4 69.5 69.5 0 0015.5-22.8 68.9 68.9 0 005.8-27.6zM90 230.9a41.7 41.7 0 01-30.9-13 44.7 44.7 0 01-12.6-30.7 43.4 43.4 0 0112.7-30.2 41.7 41.7 0 0147.5-9.5 45.6 45.6 0 0123.3 23c2.3 5.2 3.4 11 3.4 16.7a41.7 41.7 0 01-13 30.8 41.3 41.3 0 01-30.5 13z" fill="#3C485B"/>
-                        <path d="M0 17.8c0 2.2.4 4.3 1.2 6.4a17.5 17.5 0 008.5 9.6 15.1 15.1 0 0010.7 1 16.7 16.7 0 007.3-4c1-1 1.7-2.1 2.3-3.4L25.5 25a10 10 0 01-9 5.6c-1.7 0-3.1-.4-4.5-1a11 11 0 01-3.5-2.8c-1-1.2-1.7-2.5-2.2-4a14.3 14.3 0 012-13.2 9.7 9.7 0 018.1-4 11.7 11.7 0 015 1.3c.7.4 1.4 1 2.1 1.6.7.8 1.3 1.6 1.7 2.6l4.3-2.8a13.7 13.7 0 00-13-7.4A16.1 16.1 0 001.1 11.7c-.8 2-1.1 4-1.1 6zM56.8 35V19.7c0-1.3-.1-2.6-.4-3.9a9.8 9.8 0 00-1.2-3.2c-.6-1-1.5-1.7-2.5-2.2-1-.6-2.3-.9-3.8-.9a10.5 10.5 0 00-9.3 5.5V0h-5.3v35h5.3V20.1c.2-.9.6-1.6 1.1-2.3a8 8 0 011.8-2c.6-.4 1.3-.9 2-1.2.8-.2 1.5-.4 2.3-.4a4 4 0 013.5 1.7c.8 1 1.2 2.8 1.2 5V35h5.3zM69.6 35.5a11.4 11.4 0 009.5-4.6l.1 1.6a3 3 0 001 2c.6.5 1.4.8 2.4.8h1c.5 0 .9-.2 1.4-.3v-4.5c-1 0-1.4-.5-1.4-1.7v-9c0-3.3-1-5.9-2.9-7.7-1.9-1.7-4.6-2.6-8-2.6-3.5 0-6.9 1.1-10 3.3l1.5 3.3c1.4-.9 2.7-1.6 4-2 1.3-.6 2.7-.9 4-.9 2 0 3.5.6 4.6 1.6 1 1 1.5 2.5 1.5 4.4v1.7a18.5 18.5 0 00-6.6-1.2c-1.6 0-3 .2-4.3.6-1.3.4-2.4 1-3.4 1.6a7 7 0 00-2.9 5.7 7.4 7.4 0 002.4 5.7c.8.7 1.6 1.3 2.7 1.6 1 .4 2.2.6 3.4.6zm1.5-3.9a5 5 0 01-3.6-1.2 4 4 0 01-1.4-3.2c0-1.3.6-2.4 1.8-3.2a8 8 0 014.6-1.2 15.5 15.5 0 015.8 1v3.4c0 .6-.3 1.2-1 1.8-.6.9-1.5 1.5-2.6 2-1.2.4-2.4.6-3.6.6zM104.3 35.5c1.6 0 3.1-.3 4.5-1a11.7 11.7 0 005.8-6.9c.5-1.6.8-3.3.8-5.1a14.3 14.3 0 00-3.3-9.1c-1-1.2-2.3-2.1-3.8-2.8a11.1 11.1 0 00-10 .2 11 11 0 00-3.6 3.6V10H90v35.4h5.3v-15c.9 1.6 2.1 2.8 3.7 3.8 1.5 1 3.3 1.4 5.3 1.4zm-1.7-4.5a6 6 0 01-2.3-.4 7.9 7.9 0 01-3.7-2.9c-.6-.7-1-1.4-1.3-2.2V19c.2-.7.5-1.4 1-2l1.7-1.5c.6-.5 1.3-.8 2-1.1a6.8 6.8 0 015.3.3c1 .5 1.8 1 2.4 1.8a9 9 0 012.3 6 10 10 0 01-.5 3.1 8.4 8.4 0 01-4 4.7c-.8.5-1.8.7-3 .7zM133.8 33.7l-1-4.1-1.6.6c-.6.3-1.4.4-2 .4a3 3 0 01-2-.6c-.4-.4-.7-1-.8-2V14h5.5v-4h-5.5V1.6h-5.3v8.2h-3.3V14h3.3v15.7c0 1 .2 2 .5 2.7A4 4 0 00123 34c.6.5 1.2.8 2 1 .7.2 1.5.3 2.3.3 1.4 0 2.6-.2 3.8-.6 1.2-.3 2.1-.7 2.8-1zM148.2 35.5c2.7 0 5-.6 7-1.8 2-1.2 3.5-2.7 4.3-4.6l-4.5-1.3a7 7 0 01-1 1.6c-.5.5-1 .9-1.6 1.2a8.4 8.4 0 01-4 1c-1 0-1.9-.1-2.8-.5-.8-.3-1.6-.8-2.3-1.5a8.4 8.4 0 01-2.5-5.4H161v-.8l.1-1c0-1.8-.3-3.4-1-5a12 12 0 00-6.5-6.8 13.6 13.6 0 00-10.7 0 12.6 12.6 0 00-6.8 7c-.6 1.6-.9 3.2-.9 5a13.2 13.2 0 003.6 9 12 12 0 004.1 3c1.6.6 3.4 1 5.3 1zm7.7-15h-15.2c.1-1 .3-2 .8-2.8a7 7 0 011.6-2.3c.7-.6 1.4-1.1 2.3-1.5a7.8 7.8 0 018 1.5c.7.6 1.2 1.4 1.7 2.3.4.9.7 1.8.8 2.9zM179.5 14.5V9.7H178.2c-1.7 0-3.1.7-4.5 1.7s-2.5 2.4-3.4 4.2V9.9h-4.9V35h5.3V19.7a7.3 7.3 0 013.4-3.8c1.5-.8 3.4-1.3 5.4-1.4z" fill="#8EA0B3"/>
+                            <path d="M163.7 187a69.5 69.5 0 00-20.5-48.6 75.4 75.4 0 00-50.4-19.9c-10.9 0-20.7 2.6-29 7.5a46.4 46.4 0 00-19 20.5c.2-22 4.6-39.2 13.2-51.3a40.7 40.7 0 0134.6-18.4 50.8 50.8 0 0144 26.2l18.7-19.6A72 72 0 0093.1 49 69.2 69.2 0 0061 56.6a67.5 67.5 0 00-24.5 22.5c-7 9.8-12.1 22.1-15.8 36.8a208.8 208.8 0 00-5.5 51.3c0 14.4 1.7 27 5.2 38.3A79.5 79.5 0 0035.5 234 62.7 62.7 0 0059.1 252c9.3 4 19.3 6 30.9 6a75.7 75.7 0 0052.4-20.4 69.5 69.5 0 0015.5-22.8 68.9 68.9 0 005.8-27.6zM90 230.9a41.7 41.7 0 01-30.9-13 44.7 44.7 0 01-12.6-30.7 43.4 43.4 0 0112.7-30.2 41.7 41.7 0 0147.5-9.5 45.6 45.6 0 0123.3 23c2.3 5.2 3.4 11 3.4 16.7a41.7 41.7 0 01-13 30.8 41.3 41.3 0 01-30.5 13z" fill="#3C485B"/>
+                            <path d="M0 17.8c0 2.2.4 4.3 1.2 6.4a17.5 17.5 0 008.5 9.6 15.1 15.1 0 0010.7 1 16.7 16.7 0 007.3-4c1-1 1.7-2.1 2.3-3.4L25.5 25a10 10 0 01-9 5.6c-1.7 0-3.1-.4-4.5-1a11 11 0 01-3.5-2.8c-1-1.2-1.7-2.5-2.2-4a14.3 14.3 0 012-13.2 9.7 9.7 0 018.1-4 11.7 11.7 0 015 1.3c.7.4 1.4 1 2.1 1.6.7.8 1.3 1.6 1.7 2.6l4.3-2.8a13.7 13.7 0 00-13-7.4A16.1 16.1 0 001.1 11.7c-.8 2-1.1 4-1.1 6zM56.8 35V19.7c0-1.3-.1-2.6-.4-3.9a9.8 9.8 0 00-1.2-3.2c-.6-1-1.5-1.7-2.5-2.2-1-.6-2.3-.9-3.8-.9a10.5 10.5 0 00-9.3 5.5V0h-5.3v35h5.3V20.1c.2-.9.6-1.6 1.1-2.3a8 8 0 011.8-2c.6-.4 1.3-.9 2-1.2.8-.2 1.5-.4 2.3-.4a4 4 0 013.5 1.7c.8 1 1.2 2.8 1.2 5V35h5.3zM69.6 35.5a11.4 11.4 0 009.5-4.6l.1 1.6a3 3 0 001 2c.6.5 1.4.8 2.4.8h1c.5 0 .9-.2 1.4-.3v-4.5c-1 0-1.4-.5-1.4-1.7v-9c0-3.3-1-5.9-2.9-7.7-1.9-1.7-4.6-2.6-8-2.6-3.5 0-6.9 1.1-10 3.3l1.5 3.3c1.4-.9 2.7-1.6 4-2 1.3-.6 2.7-.9 4-.9 2 0 3.5.6 4.6 1.6 1 1 1.5 2.5 1.5 4.4v1.7a18.5 18.5 0 00-6.6-1.2c-1.6 0-3 .2-4.3.6-1.3.4-2.4 1-3.4 1.6a7 7 0 00-2.9 5.7 7.4 7.4 0 002.4 5.7c.8.7 1.6 1.3 2.7 1.6 1 .4 2.2.6 3.4.6zm1.5-3.9a5 5 0 01-3.6-1.2 4 4 0 01-1.4-3.2c0-1.3.6-2.4 1.8-3.2a8 8 0 014.6-1.2 15.5 15.5 0 015.8 1v3.4c0 .6-.3 1.2-1 1.8-.6.9-1.5 1.5-2.6 2-1.2.4-2.4.6-3.6.6zM104.3 35.5c1.6 0 3.1-.3 4.5-1a11.7 11.7 0 005.8-6.9c.5-1.6.8-3.3.8-5.1a14.3 14.3 0 00-3.3-9.1c-1-1.2-2.3-2.1-3.8-2.8a11.1 11.1 0 00-10 .2 11 11 0 00-3.6 3.6V10H90v35.4h5.3v-15c.9 1.6 2.1 2.8 3.7 3.8 1.5 1 3.3 1.4 5.3 1.4zm-1.7-4.5a6 6 0 01-2.3-.4 7.9 7.9 0 01-3.7-2.9c-.6-.7-1-1.4-1.3-2.2V19c.2-.7.5-1.4 1-2l1.7-1.5c.6-.5 1.3-.8 2-1.1a6.8 6.8 0 015.3.3c1 .5 1.8 1 2.4 1.8a9 9 0 012.3 6 10 10 0 01-.5 3.1 8.4 8.4 0 01-4 4.7c-.8.5-1.8.7-3 .7zM133.8 33.7l-1-4.1-1.6.6c-.6.3-1.4.4-2 .4a3 3 0 01-2-.6c-.4-.4-.7-1-.8-2V14h5.5v-4h-5.5V1.6h-5.3v8.2h-3.3V14h3.3v15.7c0 1 .2 2 .5 2.7A4 4 0 00123 34c.6.5 1.2.8 2 1 .7.2 1.5.3 2.3.3 1.4 0 2.6-.2 3.8-.6 1.2-.3 2.1-.7 2.8-1zM148.2 35.5c2.7 0 5-.6 7-1.8 2-1.2 3.5-2.7 4.3-4.6l-4.5-1.3a7 7 0 01-1 1.6c-.5.5-1 .9-1.6 1.2a8.4 8.4 0 01-4 1c-1 0-1.9-.1-2.8-.5-.8-.3-1.6-.8-2.3-1.5a8.4 8.4 0 01-2.5-5.4H161v-.8l.1-1c0-1.8-.3-3.4-1-5a12 12 0 00-6.5-6.8 13.6 13.6 0 00-10.7 0 12.6 12.6 0 00-6.8 7c-.6 1.6-.9 3.2-.9 5a13.2 13.2 0 003.6 9 12 12 0 004.1 3c1.6.6 3.4 1 5.3 1zm7.7-15h-15.2c.1-1 .3-2 .8-2.8a7 7 0 011.6-2.3c.7-.6 1.4-1.1 2.3-1.5a7.8 7.8 0 018 1.5c.7.6 1.2 1.4 1.7 2.3.4.9.7 1.8.8 2.9zM179.5 14.5V9.7H178.2c-1.7 0-3.1.7-4.5 1.7s-2.5 2.4-3.4 4.2V9.9h-4.9V35h5.3V19.7a7.3 7.3 0 013.4-3.8c1.5-.8 3.4-1.3 5.4-1.4z" fill="#8EA0B3"/>
                         </g>
                     </g>
                     
@@ -737,7 +740,7 @@
 
         </foreignObject>
 
-
+        <use href="#topbar" width="820" x="60" y="-262" />
         <!-- DEMO STAGES  -->
 
         <g class="stage-1"  clip-path="url(#screen-mask)">
@@ -775,14 +778,15 @@
         <rect class="reset" id="reset" width="820" height="500" fill="red" fill-opacity="0" x="60" y="50"/>
 
         <rect class="touchzone" id="live-code-tab" width="40" height="150" fill="red" fill-opacity="0" x="840" y="90"/>
+        <rect class="reset" id="live-code-tab-open" width="35" height="140" fill="red" fill-opacity="0" x="320" y="90"/>
 
         
 
         <!-- Keyboard and base  --> 
         <g class="foreground">
-            <use href="#topbar" width="820" x="60" y="-262" />
+            
             <use href="#keyboard-base" />
         </g>
         
         
-    </svg>
+    </svg> 
