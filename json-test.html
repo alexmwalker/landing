@@ -870,20 +870,30 @@
           $('.price-unit').addClass('monthly-account');
         });
       
-        /* add class to trigger demo switches */
+        /* add class to trigger DEMO switches */
       
-        $('.screen-1').click(function(){
-          $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
-        });
-        $('.screen-2').click(function(){
-          $('.laptop-wrapper').addClass('demo-2').removeClass('demo-1').removeClass('demo-3').removeClass('demo-4');
-        });
-        $('.screen-3').click(function(){
-          $('.laptop-wrapper').addClass('demo-3').removeClass('demo-1').removeClass('demo-2').removeClass('demo-4');
-        });
-        $('.screen-4').click(function(){
-          $('.laptop-wrapper').addClass('demo-4').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3');
-        });
+           /* CLICKABLE INSIDE THE SVG */
+      
+            $('#live-code-tab').click(function(){ 
+              $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
+            });
+           $('#reset').click(function(){ 
+              $('.laptop-wrapper').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
+            });
+      
+           /* THE BUTTONS IN THE HTML */
+           $('.screen-1').click(function(){
+              $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
+            });
+            $('.screen-2').click(function(){
+              $('.laptop-wrapper').addClass('demo-2').removeClass('demo-1').removeClass('demo-3').removeClass('demo-4');
+            });
+            $('.screen-3').click(function(){
+              $('.laptop-wrapper').addClass('demo-3').removeClass('demo-1').removeClass('demo-2').removeClass('demo-4');
+            });
+            $('.screen-4').click(function(){
+              $('.laptop-wrapper').addClass('demo-4').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3');
+            });
       });
       
       
