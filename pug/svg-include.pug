@@ -7,7 +7,7 @@
                 text {
                     font-family: "Roboto", sans-serif;
                 }
-                .reset{display: none}
+
                 #code-window text {
                     font-family: "Roboto Mono", monospace;
                 }
@@ -21,7 +21,7 @@
                     rx: 2;
                 }
                 .note text{
-                font-weight: 500;
+                    font-weight: 500;
                 }
                 /* DEFAULTS */
                 .shadow {
@@ -45,8 +45,8 @@
                 .reveal {
                     opacity: 0;
                 }
-                .bookmark-section-1, .bookmark-section-2{
-                fill:#fff;
+                .bookmark-section-2, .bookmark-section-3{
+                    background: #fff;
                 }
                 #live-code-tab-open{
                   display: none;
@@ -68,21 +68,21 @@
                     transform: translate(-80px, 120px);
                 }
                 .demo-2 foreignObject .page-wrapper {
-                    margin-top: -1500px;
+                    margin-top: -3400px;
                 }
-                .demo-2 foreignObject .bookmark-section-1 {
-                    fill: #faffc8;
+                .demo-2 foreignObject .bookmark-section-2 {
+                    background: #faffc8;
                     transition-delay: 1s;
                 }
-
+                .reset{display: none}
                 .demo-3 .cursor {
                     transform: translate(-41px, -153px);
                 }
                 .demo-3 foreignObject .page-wrapper {
-                    margin-top: -850px;
+                    margin-top: -2650px ;
                 }
-                .demo-3 foreignObject .bookmark-section-2 {
-                    fill: #faffc8;
+                .demo-3 foreignObject .bookmark-section-3 {
+                    background: #faffc8;
                     transition-delay: 1s;
                 }
 
@@ -877,7 +877,7 @@
                     <div class="p-unit">
                         <div class="h2-level">History of the DOM</div>
                     </div>
-                    <div class="p-unit bookmark-section-2">
+                    <div class="p-unit ">
                         <div>In the early days of the web, browser
                             vendors such as Netscape and Microsoft developed their own distinct ways of accessing and altering parts
                             of a web page. In the beginning, they tended to focus on common page elements such as images, links and
@@ -907,7 +907,7 @@
                     <div class="p-unit">
                         <div class="h2-level">An Example Web Page</div>
                     </div>
-                    <div class="p-unit">
+                    <div class="p-unit bookmark-section-3">
                         <div>To illustrate the DOM concepts covered
                             in this chapter, we’ll use a basic web page that contains a heading and three paragraph elements. Save
                             the following code in a file called&nbsp;<code class="svg-code">heroes.html</code> :</div>
@@ -930,7 +930,7 @@
                                     whitespace that is in the HTML document as text nodes.</div>
                             </div>
                         </div>
-                    <div class="p-unit bookmark-section-1">
+                    <div class="p-unit bookmark-section-2">
                         <div>Because we're using the browser, the best way to follow along with the examples in this chapter is to use the console
                             built into the web browser (we discussed how to use this in Chapter 1). This will allow you to enter commands that interact
                             with the elements on the web page and see the results. The screenshot below shows the page with the console open.</div>
