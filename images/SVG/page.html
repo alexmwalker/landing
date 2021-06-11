@@ -1,0 +1,406 @@
+<style>
+    #chapter-container {
+    line-height: 1.778em;
+    color: #222;
+    font-family: Roboto, "Trebuchet MS", sans-serif;
+    margin: 4em 3em 3em;
+    font-size: 16px;
+    }
+    .chapter-head-left {
+    width: 70%;
+    float: left;
+    text-align: right;
+    position: relative;
+    }
+    .chapter-head-left:before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: -1em;
+    border-left: 1px #999 solid;
+    }
+    .chapter-head-right {
+    padding-top: 1em;
+    width: 30%;
+    float: right;
+    text-align: center;
+    }
+    .chapter-content {
+    margin-bottom: 2em;
+    }
+    .prism-code {
+    padding: 0.9em;
+    color: rgb(0, 0, 0);
+    background-color: rgb(245, 242, 240);
+    }
+
+    .h1-level {
+    font-size: 2.25em;
+    margin: 0.5em 0 0;
+    line-height: 1.2em;
+    }
+
+    .h2-level {
+    margin: 1.5em 0 1em;
+    font-size: 2em;
+    }
+
+    .h3-level {
+    font-weight: 400;
+    font-size: 1.5em;
+    margin: 2em 0 1em;
+    }
+    .h4-level {
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 2em 0 1.78em;
+    }
+    .p-unit {
+    font-weight: 300;
+    line-height: 1.778em;
+    font-family: Roboto, "Trebuchet MS", sans-serif;
+    font-size: 1em;
+    margin-bottom: 1.78em;
+    }
+    .svg-li .p-unit {
+    margin-bottom: 0.89em;
+    }
+    .svg-code {
+    font-family: Monaco, "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    padding: 0.2em 0.2em;
+    background: #f5f2f0;
+    color: #222;
+    }
+    table {
+    margin: 1em 0 1.5em;
+    }
+    .p-label {
+    fill: black;
+    white-space: pre;
+    font-family: Halant, serif;
+    font-size: 21px;
+    }
+    figure {
+    margin: 1em 0;
+    }
+    figcaption {
+    font-style: italic;
+    color: #666;
+    }
+</style>
+<div id="chapter-container" class="body-text">
+	<div class="chapter-content">
+		<div style="overflow:hidden">
+			<div class="chapter-head-left">
+				<div class="h1-level">The Document Object <br> Model</div>
+                <div class="h3-level" style="color:#aaa;">Darren Jones</div>
+            </div>
+            <div class="chapter-head-right">Chapter
+                <span style="color:rgb(68,82,102);font-size:7rem; font-weight: 500; display: block; margin-top: 2rem">6</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-unit">
+        <div>The Document Object Model (DOM) allows
+            you to access elements of a web page and enable interaction with the page by adding and removing
+            elements, changing the order, content and attributes of elements, and even altering how they are styled.
+        </div>
+    </div>
+    <div class="p-unit">
+        <div>In this chapter, we’ll cover the following topics:</div>
+    </div>
+    <div class="p-unit">
+        <ul class="list-ul">
+            <li class="svg-li">
+                <div class="p-unit">Introduction to the DOM</div>
+            </li>
+            <li class="svg-li">
+                <div class="p-unit">Getting elements ―&nbsp;<code class="svg-code">getElementById</code>
+                    ,&nbsp;<code class="svg-code">getElementsByClassName</code> ,&nbsp;<code
+                        class="svg-code">getElementsByTagName</code> ,&nbsp;<code class="svg-code">querySelector</code>
+                    and&nbsp;<code class="svg-code">querySelectorAll</code> </div>
+            </li>
+            <li class="svg-li">
+                <div class="p-unit">Navigating the DOM</div>
+            </li>
+            <li class="svg-li">
+                <div class="p-unit">Getting and setting an element’s attributes</div>
+            </li>
+            <li class="svg-li">
+                <div class="p-unit">Updating the DOM by creating dynamic markup</div>
+            </li>
+            <li class="svg-li">
+                <div class="p-unit">Changing the CSS of an element</div>
+            </li>
+            <li class="svg-li">
+                <div class="p-unit">Our project ― we'll dynamically insert each question into the HTML</div>
+            </li>
+        </ul>
+    </div>
+    <div class="h2-level">
+        The Document Object Model
+    </div>
+
+    <div class="h3-level">
+        What is the DOM?
+    </div>
+
+    <div class="p-unit">
+        <div>The Document Object Model, or DOM for
+            short, represents an HTML document as a network of connected nodes that form a tree-like structure.
+        </div>
+
+    </div>
+    <div class="p-unit">
+        <div>The DOM treats everything on a web page
+            as a node. HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML
+            tag is the root node, and every other part of the document is a child node of this.</div>
+    </div>
+    <div class="p-unit">
+        <div>Take the following piece of HTML as an
+            example:</div>
+    </div>
+    <div class="p-unit">
+        <pre class="sc-fzXfNi prism-code language-js"
+            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><code><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">p </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'warning'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Something has gone </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">em</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">very</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">em</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"> wrong</span><span class="token operator" style="color: rgb(6, 50, 137);">!</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">p</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span></div></code></pre>
+
+    </div>
+    <div class="p-unit">
+        <div>This can be represented as the tree
+            diagram shown below.</div>
+    </div>
+
+    <figure class="imagefig">
+        <div class="image-wrapper">
+            <svg width="267" height="400" viewBox="0 0 267 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <rect width="267" height="400" fill="white" />
+                <path
+                    d="M33.5 200.5C30.833 190.17 36 162 78 132C120 102 130 71.5 129.5 60M129.5 60C130.17 73.17 141.2 106 180 132C218.8 158 227.8 188.5 227.5 200.5M129.5 60V347.5"
+                    stroke="black" />
+                <text class="p-label">
+                    <tspan x="82.3" y="23">p.warning</tspan>
+                </text>
+                <text class="p-label">
+                    <tspan x="3.7" y="180">#text</tspan>
+                </text>
+                <text class="p-label">
+                    <tspan x="201.7" y="180">#text</tspan>
+                </text>
+                <text class="p-label">
+                    <tspan x="102.7" y="337">#text</tspan>
+                </text>
+                <text class="p-label">
+                    <tspan x="113.7" y="180">em</tspan>
+                </text>
+                <circle cx="129" cy="52" r="19.5" fill="#3A80B6" stroke="#33629E" stroke-width="3" />
+                <circle cx="129" cy="209" r="19.5" fill="#3A80B6" stroke="#33629E" stroke-width="3" />
+                <circle cx="228" cy="209" r="19.5" fill="#FFCE00" stroke="#FFA100" stroke-width="3" />
+                <circle cx="129" cy="366" r="19.5" fill="#FFCE00" stroke="#FFA100" stroke-width="3" />
+                <circle cx="30" cy="209" r="19.5" fill="#00BE56" stroke="#0AA234" stroke-width="3" />
+            </svg>
+        </div>
+        <figcaption>The DOM tree</figcaption>
+    </figure>
+    <div class="p-unit">
+        <div>The DOM is not actually part of
+            JavaScript because it is<em>language agnostic</em>(although JavaScript is, by far, the language most
+            commonly used with it). This means it can be used in any programming language, not just JavaScript. We
+            can use JavaScript to access and modify different parts of a web page using a special built-in object
+            called&nbsp;<code class="svg-code">document</code> .</div>
+    </div>
+    <div class="p-unit">
+        <div class="h2-level">History of the DOM</div>
+    </div>
+    <div class="p-unit">
+        <div>In the early days of the web, browser
+            vendors such as Netscape and Microsoft developed their own distinct ways of accessing and altering parts
+            of a web page. In the beginning, they tended to focus on common page elements such as images, links and
+            forms – this was known as Dynamic HTML (DHTML). These methods became known as DOM level 0, or legacy
+            DOM. Some of the more common methods, such as those used for selecting images and forms, can still be
+            used in the current DOM.</div>
+    </div>
+    <div class="p-unit">
+        <div>The World Wide Web Consortium (W3C)
+            started to standardize the process, and created the DOM level 1 in 1998. This introduced a complete
+            model for web pages that allowed every part of them to be navigated.</div>
+    </div>
+    <div class="p-unit">
+        <div>The DOM level 2 specification was
+            published in 2000 and introduced the popular&nbsp;<code class="svg-code">getElementById()</code>
+            method, which made it much easier to access specific elements on a web page. The DOM level 3
+            specification was published in 2004, and since then the W3C has abandoned using levels. The DOM
+            specification is developed as a <a href="https://www.w3.org/TR/dom/" target="_blank"  color="link" class="sc-AykKE sc-AykKI ehacSg">living standard</a>.</div>
+    </div>
+    <div class="p-unit">
+        <div>Despite the standardization process,
+            browsers have not always implemented the DOM consistently, so it’s been difficult to program for in the
+            past. Fortunately, since Internet Explorer 8, DOM support has been much more consistent, and modern
+            browsers now implement the current DOM level 3. They’re also implementing more of the new DOM level 4
+            features with every update.</div>
+    </div>
+    <div class="p-unit">
+        <div class="h2-level">An Example Web Page</div>
+    </div>
+    <div class="p-unit">
+        <div>To illustrate the DOM concepts covered
+            in this chapter, we’ll use a basic web page that contains a heading and three paragraph elements. Save
+            the following code in a file called&nbsp;<code class="svg-code">heroes.html</code> :</div>
+    </div>
+
+        <pre class=" prism-code language-js"><code><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">!</span><span class="token plain">doctype html</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">html lang</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">"en"</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">head</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">meta charset</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">"utf-8"</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">title</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Justice League</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">title</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">head</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">body</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">header</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">h1 id</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'title'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Justice League</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">h1</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">header</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">ul id</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'roster'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">li </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'hero'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Superman</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">li</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">li </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'vigilante hero'</span><span class="token plain"> id</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'bats'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Batman</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">li</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">li </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'hero'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Wonder Woman</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">li</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">ul</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">body</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">html</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span></div></code></pre>
+
+	<div class="p-unit">
+		<div>Below is a node tree diagram for the&nbsp;
+			<code class="svg-code">&lt;ul&gt;</code> element with a class of&nbsp;<code
+	                class="svg-code">roster</code> :</div>
+	    </div>
+	
+	    <div class="p-unit">
+	        <div type="note" class="sc-AykKD sc-fzXfRb iRllY">
+	            <div class="h4-level">What's With the Extra Text
+	                Nodes?</div>
+	            <div class="p-unit">There appear to be some extra #text nodes in this
+	                diagram, even in places where there isn't any text. This is because the DOM also stores any
+	                whitespace that is in the HTML document as text nodes.</div>
+	        </div>
+	    </div>
+	<div class="p-unit">
+		<div>Because we're using the browser, the best way to follow along with the examples in this chapter is to use the console
+			built into the web browser (we discussed how to use this in Chapter 1). This will allow you to enter commands that interact
+			with the elements on the web page and see the results. The screenshot below shows the page with the console open.</div>
+    </div>
+
+
+	<div class="p-unit">
+		<div type="note" class="sc-AykKD sc-fzXfRb iRllY">
+			<div class="h4-level">Console Shortcuts</div>
+			<div class="p-unit">Here are a couple of useful shortcuts that will help speed things up when you're using the console:</div>
+			<ul class="list-ul">
+				<li class="svg-li">
+					<div class="p-unit">Pressing TAB will autocomplete any methods and should show you a list of possible methods</div>
+				</li>
+				<li class="svg-li">
+					<div class="p-unit">Pressing the UP arrow key will select the previous command entered.</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="p-unit">
+		<div class="h2-level">Getting Elements</div>
+	</div>
+	<div class="p-unit">
+		<div>The DOM provides several methods that allow us to access any element on a page. These methods will return a node object
+			or a node list, which is an array-like object. These objects can then be assigned to a variable and be inspected or modified.
+		</div>
+	</div>
+	<div class="p-unit">
+		<div>For example, we can access the&nbsp;
+			<code class="svg-code">body</code> element of a web page and assign it to the
+	            variable&nbsp;<code class="svg-code">body</code> by entering the following code into the browser
+	            console:</div>
+	    </div>
+    <div class="p-unit">
+        <pre class="sc-fzXfNi prism-code language-js"
+            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><code><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token keyword" style="color: rgb(0, 119, 170);">const</span><span class="token plain"> body </span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token plain"> document</span><span class="token punctuation" style="color: rgb(153, 153, 153);">.</span><span class="token plain">body</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span></div></code></pre>
+
+    </div>
+    <div class="p-unit">
+        <div>Now we have a reference to the body
+            element, we can check its type:</div>
+    </div>
+    <div class="p-unit">
+        <pre class="sc-fzXfNi prism-code language-js"
+            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><code><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token keyword" style="color: rgb(0, 119, 170);">typeof</span><span class="token plain"> body</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;&lt;</span><span class="token plain"> </span><span class="token string" style="color: rgb(102, 153, 0);">"object"</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span></div></code></pre>
+
+    </div>
+    <div class="p-unit">
+        <div>This is a special&nbsp;<code class="svg-code">Node</code> object with a number of properties and methods
+            that we can use
+            to find information about, or modify, the&nbsp;<code class="svg-code">body</code> element.</div>
+
+    </div>
+    <div class="p-unit">
+        <div>For example, we can use the&nbsp;<code class="svg-code">nodeType</code> property to find out what type of
+            node it is:</div>
+    </div>
+    <div class="p-unit">
+        <pre class="sc-fzXfNi prism-code language-js"
+            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><code><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">body</span><span class="token punctuation" style="color: rgb(153, 153, 153);">.</span><span class="token plain">nodeType</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;&lt;</span><span class="token plain"> </span><span class="token number" style="color: rgb(6, 50, 137);">1</span></div></code></pre>
+
+    </div>
+    <div class="p-unit">
+        <div>All nodes have a numerical code to
+            signify what type they are. These are summmarized in the table below.</div>
+    </div>
+    <div class="sc-AykKD sc-fzXfNj cxdGoc">
+        <div style="overflow: auto;">
+            <table class="sc-fzXfLR hvYwyO">
+                <thead>
+                    <tr>
+                        <th   class="sc-AykKE sc-fzXfLS hkszCE">Code</th>
+                        <th   class="sc-AykKE sc-fzXfLS hkszCE">Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">1</td>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">element</td>
+                    </tr>
+                    <tr>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">2</td>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">attribute</td>
+                    </tr>
+                    <tr>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">3</td>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">text</td>
+                    </tr>
+                    <tr>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">8</td>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">comment</td>
+                    </tr>
+                    <tr>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">9</td>
+                        <td   class="sc-AykKE sc-fzXfLS hjTjQd">body</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="p-unit">
+        <div>There are other types not covered in
+            the table, but these aren’t used in HTML documents. As we can see from the table, a code of&nbsp;<code
+                class="svg-code">1</code> confirms that&nbsp;<code class="svg-code">body</code> is an
+            element node.</div>
+    </div>
+    <div class="p-unit">
+        <div>We can also use the&nbsp;<code class="svg-code">nodeName</code> property to find the name of the element:
+        </div>
+    </div>
+    <div class="p-unit">
+        <pre class="sc-fzXfNi prism-code language-js"
+            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><code><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">body</span><span class="token punctuation" style="color: rgb(153, 153, 153);">.</span><span class="token plain">nodeName</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;&lt;</span><span class="token plain"> </span><span class="token string" style="color: rgb(102, 153, 0);">"BODY"</span></div></code></pre>
+
+    </div>
+    <div class="p-unit">
+        <div>Note that the element name is returned in uppercase letters.</div>
+    </div>
+    <div class="p-unit">
+        <div>This is a live reference to what is
+            displayed in the browser. You can see this by hovering your cursor over the reference in the console and
+            see it highlighted in the main viewport, as illustrated in the screenshot below:</div>
+    </div>
+
+    <div class="p-unit">
+        <div class="h3-level">Legacy DOM Shortcut Methods</div>
+    </div>
+
+    <div class="sc-AykKD sc-fzXfQS rAwJU"><a href="/premium/books/javascript-novice-to-ninja-2nd-edition/read/7"><span
+                  class="sc-AykKE deXwit">NEXT:</span><span  
+                class="sc-AykKE jzXezb">Events</span></a>
+    </div>
+</div>
