@@ -1,0 +1,22 @@
+<svg width="499" height="239" viewBox="0 0 499 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="499" height="239" rx="4" fill="#222222" />
+    <line y1="48.5" x2="499" y2="48.5" stroke="#324959" />
+    <rect x="15" y="105" width="469" height="78" fill="#2C2C2C" />
+    <line x1="316.5" y1="196" x2="316.5" y2="227" stroke="#324959" />
+    <rect x="333" y="192" width="151" height="37" rx="18.5" fill="#009AF9" />
+    <text fill="white" font-family="Roboto" font-size="14"
+        font-weight="bold">
+        <tspan x="378" y="214.785">Copy Link</tspan>
+    </text>
+    <text fill="#009AF9" font-family="Roboto" font-size="15">
+        <tspan x="29" y="129.127">https://www.sitepoint.com/premium/books/learn-to-code-with-</tspan>
+        <tspan x="29" y="147.127">javascript/read/1/kml7wxl6?fromShare=true</tspan>
+    </text>
+    <text fill="#768996" font-size="14">
+        <tspan x="41" y="78.7852">Anybody with this link can view this part of the book.</tspan>
+    </text>
+    <text fill="white" font-size="19"
+        font-weight="500">
+        <tspan x="41" y="35.4941">Send as a link to this paragraph</tspan>
+    </text>
+</svg>
