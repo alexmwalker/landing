@@ -1,104 +1,61 @@
-svg(xmlns='http://www.w3.org/2000/svg', xlink='http://www.w3.org/1999/xlink', fill='none', viewBox='0 0 938 586')
+svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='none' viewbox='0 0 938 586')
   defs
-    style.
-      
-      .hide{
-          clip-path: url(#show-nothing);
-          }
-          .show{
-          clip-path: url(#screen-mask);   
-          }
-          .keys rect{
-            rx: 2;
-          }
-      
-    //  CLIP-PATHS 
-    clipPath#screen-mask
-      rect(fill='#fff', width='820', height='525', x='60', y='20')
-    clipPath#show-nothing
-      // show nothing 
-    //  SYMBOLS 
-    symbol#screen-1
-      g
-        rect(width='820', height='525', x='60', y='20', style='fill: rgb(186, 218, 85);', rx='3')
-        text(x='446.9', y='282.3', style='white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;') 1
-    symbol#screen-2
-      g
-        rect(width='820', height='525', x='60', y='20', style='fill: rgb(86, 218, 185);', rx='3')
-        text(x='446.9', y='282.3', style='white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;') 2
-    symbol#screen-3
-      g
-        rect(width='820', height='525', x='60', y='20', style='fill: rgb(185, 65, 185);', rx='3')
-        text(x='446.9', y='282.3', style='white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;') 3
-    symbol#screen-4
-      g
-        rect(width='820', height='525', x='60', y='20', style='fill: rgb(86, 86, 185);', rx='3')
-        text(x='446.9', y='282.3', style='white-space: pre; fill: rgb(51, 51, 51); font-size: 28px;') 4
-    //  GRADIENTS 
-    linearGradient#reflection(x1='-66', x2='1027', y1='-28', y2='318', gradientTransform='matrix(1 0 0 1.02386 0 0)', gradientUnits='userSpaceOnUse')
-      stop
-      stop(offset='.4')
-      stop(offset='.5', stop-color='#393939')
-      stop(offset='.8', stop-color='#313131')
-      stop(offset='.8')
-      stop(offset='1')
-    linearGradient#laptop-edge(x1='356.1', x2='669', y1='-69.3', y2='728.8', gradientTransform='matrix(1 0 0 1.02386 0 0)', gradientUnits='userSpaceOnUse')
-      stop(stop-color='#E5E5E5')
-      stop(offset='.2', stop-color='#D5D5D5')
-      stop(offset='.8', stop-color='#C4C4C4')
-      stop(offset='1', stop-color='#4F4F4F')
-    linearGradient#upperbase(x1='469', x2='469', y1='565', y2='576', gradientUnits='userSpaceOnUse')
-      stop(stop-color='#fff')
-      stop(offset='1', stop-color='#E5E5E5')
-    linearGradient#cutout-1(x1='390.5', x2='551', y1='581', y2='581', gradientTransform='translate(.3 -2)', gradientUnits='userSpaceOnUse')
-      stop(stop-color='#333', stop-opacity='.4')
-      stop(offset='.2', stop-color='#333', stop-opacity='0')
-      stop(offset='.8', stop-color='#333', stop-opacity='.1')
-      stop(offset='1', stop-opacity='.2')
-    linearGradient#cutout-2(x1='469', x2='469', y1='567', y2='581', gradientTransform='matrix(.99997 -.00719 .00476 .66295 -2.1 191.8)', gradientUnits='userSpaceOnUse')
-      stop(style='stop-opacity:.39;stop-color:rgba(51,51,51,.92)')
-      stop(offset='1', style='stop-opacity:0;stop-color:rgba(51,51,51,.03)')
-    linearGradient#gradient-2(x1='390.5', x2='551', y1='581', y2='581', gradientTransform='translate(73.6 2.5)', gradientUnits='userSpaceOnUse')
-      stop(stop-color='#333', stop-opacity='.4')
-      stop(offset='.2', stop-color='#333', stop-opacity='0')
-      stop(offset='.8', stop-color='#333', stop-opacity='.1')
-      stop(offset='1', stop-opacity='.2')
-    linearGradient#specular-reflection(gradientUnits='userSpaceOnUse', x1='516.5', y1='13', x2='516.5', y2='543.2', gradientTransform='matrix(0.171577, -0.98517, 1.564056, 0.272397, -56.521532, 734.224792)')
-      stop(offset='0', style='stop-opacity: 0.09; stop-color: rgb(255, 255, 255);')
-      stop(offset='0.443', style='stop-opacity: 0; stop-color: rgb(255, 255, 255);')
-      stop(offset='0.80', style='stop-color: rgb(255, 255, 255); stop-opacity: 0.12;')
-      stop(offset='0.81', style='stop-color: rgb(255, 255, 255); stop-opacity: 0;')
-      stop(offset='1', style='stop-color: rgb(255, 255, 255); stop-opacity: 0.06;')
-  //  DEFS 
-  rect(width='875', height='575.4', x='31', y='2', fill='#000', stroke='url(#laptop-edge)', stroke-width='4', rx='23.4', ry='23.4')
-  //  DEMOS Fit in here 
-  use.screen.screen-1(href='#screen-1')
-  use.screen.screen-2(href='#screen-2')
-  use.screen.screen-3(href='#screen-3')
-  use.screen.screen-4(href='#screen-4')
-  rect(width='875', height='570', x='31', y='2', fill='url(#specular-reflection)', rx='23.4', ry='23.4')
-  g.keyboard
-    rect(width='938', height='11', y='565', fill='url(#upperbase)')
+    include demo-styles.pug
 
-        
-    path(fill='#C4C4C4', d='M0 575h938c0 6-5 11-11 11H11c-6 0-11-5-11-11z')
+    // CLIP-PATHS
+    clippath#screen-mask
+      rect(fill='#fff' width='820' height='525' x='60' y='20')
+    clippath#show-nothing
+      // show nothing
+    clippath#clip0
+      rect(width='761' height='710' fill='#fff')
+    // / CLIP-PATHS
 
-        
-    g.thumbgroove
-        
-      path(fill='#e9e9e9', d='M389.8 564.4l159.8.1a14 14 0 01-14 14h-132a14 14 0 01-14-14z')
-      path(fill='url(#cutout-1)', d='M389.5 565h159.8a14 14 0 01-14 14h-132a14 14 0 01-14-14z')
-      path(fill='url(#cutout-2)', d='M389.5 565l160-.7a14 14 0 01-14 14h-132a14 14 0 01-14-14z')
-    g.keys
-       
-      rect(width='41', height='4', x='42', y='561', fill='#aaa')
-      rect(width='41', height='4', x='90', y='561', fill='#aaa')
-      rect(width='41', height='4', x='138', y='561', fill='#aaa')
-      rect(width='41', height='4', x='186', y='561', fill='#aaa')
-      rect(width='41', height='4', x='234', y='561', fill='#aaa')
-      rect(width='373', height='4', x='282', y='561', fill='#aaa')
-      rect(width='41', height='4', x='666', y='561', fill='#aaa')
-      rect(width='41', height='4', x='714', y='561', fill='#aaa')
-      rect(width='41', height='4', x='762', y='561', fill='#aaa')
-      rect(width='41', height='4', x='810', y='561', fill='#aaa')
-      rect(width='41', height='4', x='858', y='561', fill='#aaa')
+    // SYMBOLS 
+    include demo-symbols.pug
+
+    // GRADIENTS
+    include demo-gradients.pug
+
+  // / DEFS
+
+
+  // BODY STARTS HERE
+  g.screen-back
+    rect(width='875' height='575.4' x='31' y='2' fill='#000' stroke='url(#laptop-edge)' stroke-width='4' rx='23.4' ry='23.4')
+    rect(width='820' height='525' x='60' y='20' style='fill: rgb(86, 118, 185);' rx='3')
+
+
+  // FOREIGNOBJECT
+  // Book page is actually HTML inserted as a foreign object
+  foreignobject(x='60' y='20' width='820' height='525' style='overflow-x: hidden;overflow-y: scroll;')
+    // HTML page version
+    //include html-page-embed.pug
+    .page-wrapper
+      include page-embed-svg.pug
+    
+
+
+
+  g.stage-1(clip-path='url(#screen-mask)')
+    use#code-panel-pos.arrive-2(href='#code-panel')
+    use.reveal.arrive-3(href='#note-1' width='275' x='380' y='170')
+    circle.kaboom.reveal.arrive-4(cx='700' cy='170' r='10' fill='none' stroke-width='0px' stroke='#2D9CDB')
+  g.stage-2(clip-path='url(#screen-mask)')
+    use.reveal.arrive-3(href='#bookmark-widget' width='150' x='250' y='70')
+    use.reveal.arrive-4(href='#note-2' width='275' x='450' y='0')
+    circle.kaboom.reveal.arrive-4(cx='290' cy='355' r='10' fill='none' stroke-width='0px' stroke='#2D9CDB')
+  g.stage-3(clip-path='url(#screen-mask)')
+    rect.reveal.arrive-2(width='910' height='550' fill='black' fill-opacity='0.5')
+    use.reveal.arrive-2(href='#bookmark-widget' width='160' x='250' y='-180')
+    use.reveal.arrive-3(href='#share-panel' width='500' x='200' y='0')
+    use.reveal.arrive-4(href='#note-3' width='345' x='400' y='-183')
+    circle.kaboom.reveal.arrive-4(cx='370' cy='100' r='10' fill='none' stroke-width='0px' stroke='#2D9CDB')
+  g.stage-4(clip-path='url(#screen-mask)')
+    use.reveal.arrive-4(href='#note-3' x='400' y='400')
+  use.cursor(href='#hand-cursor' width='30' x='400')
+  g.foreground
+    use(href='#topbar' width='820' x='60' y='-262')
+    rect.reflection(width='875' height='570' x='31' y='2' fill='url(#specular-reflection)' style='mix-blend-mode: overlay; pointer-events:none' rx='23.4' ry='23.4')
+    use(href='#keyboard-base')
+// SVG: end

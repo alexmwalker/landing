@@ -2783,7 +2783,10 @@ html.offline #offline-notification {
 .reader-demo .container {
   width: 90%;
 }
-.reader-demo h3, .reader-demo a, .reader-demo p {
+.reader-demo .ui-area h3 {
+  color: #eee;
+}
+.reader-demo a, .reader-demo p {
   color: #eee;
   margin-bottom: calc(var(--baseline)/2);
 }
@@ -2800,36 +2803,20 @@ html.offline #offline-notification {
   width: 100%;
 }
 
-.screen {
-  display: none;
-}
-
 .demo-1 {
-  border: 1px orange solid;
-}
-.demo-1 .screen-1 {
-  display: block;
+  outline: 1px orange solid;
 }
 
 .demo-2 {
-  border: 1px greenyellow solid;
-}
-.demo-2 .screen-2 {
-  display: block;
+  outline: 1px greenyellow solid;
 }
 
 .demo-3 {
-  border: 1px #46a0f3 solid;
-}
-.demo-3 .screen-3 {
-  display: block;
+  outline: 1px #46a0f3 solid;
 }
 
 .demo-4 {
-  border: 1px #ce2eee solid;
-}
-.demo-4 .screen-4 {
-  display: block;
+  outline: 1px #ce2eee solid;
 }
 
 .demo-points {
@@ -2878,6 +2865,15 @@ html.offline #offline-notification {
   margin: 0;
 }
 
+@media (min-width: 48em) {
+  /* pad the top on non-phones*/
+  .reader-demo .demo-placement {
+    margin-left: -9rem;
+  }
+  .reader-demo .demo-placement .laptop-wrapper {
+    width: 100%;
+  }
+}
 .authors {
   padding: calc(var(--baseline)*2) 0 calc(var(--baseline)*2);
   background: #F7F5F5;
@@ -3164,17 +3160,6 @@ that need device level targeting. This is where we do it. */
 @media (min-width: 48em) {
   [class*=sm-only] {
     display: block;
-  }
-
-  .price-unit {
-    margin: calc(var(--baseline) * 2) 0 calc(var(--baseline) / 2);
-  }
-
-  .laptop-wrapper {
-    margin: 0 0 0 -25%;
-  }
-  .laptop-wrapper svg {
-    width: 125%;
   }
 }
 .pink {
