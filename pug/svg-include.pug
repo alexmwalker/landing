@@ -46,10 +46,10 @@
                     opacity: 0;
                 }
                 .bookmark-section-2, .bookmark-section-3{
-                    background: #fff;
+                    background: rgba(255,255,255,0);
                 }
                 #live-code-tab-open{
-                  display: none;
+                    display: none;
                 }
                 /* DEMO STATE TRIGGERED */
                 .demo-1 .cursor {
@@ -61,8 +61,8 @@
                     transition-delay: 1s;
                 }
                 .demo-1 #live-code-tab-open{
-                  display: block;
-                  cursor: pointer;
+                    display: block;
+                    cursor: pointer;
                 }
                 .demo-2 .cursor {
                     transform: translate(-80px, 120px);
@@ -85,6 +85,9 @@
                     background: #faffc8;
                     transition-delay: 1s;
                 }
+                
+                
+
 
                 /* ###  STAGED TRANSITIONS  ### */
                 .arrive-1,
@@ -158,7 +161,7 @@
                     }
                 }
                 #cursor-click .plick{
-                 transition: none;
+                    transition: none;
                 }
                 .demo-1 #cursor-click .plick,
                 .demo-2 #cursor-click .plick,
@@ -177,6 +180,22 @@
                         font-family: Roboto, "Trebuchet MS", sans-serif;
                         margin: 4em 3em 3em;
                         font-size: 16px;
+                        
+                    }
+                              
+                    .demo-4 foreignObject {
+                        background:#222;
+                        color: #eee;
+                        transition: all 1s;
+                    
+                    }
+
+                    .page-wrapper{
+                        left: 0rem;
+                        width: 90%;
+                        margin: 0 5%;
+                        position: absolute;
+  
                     }
                     .chapter-head-left {
                         width: 70%;
@@ -206,12 +225,7 @@
                     .chapter-content {
                         margin-bottom: 2em;
                     }
-                    .prism-code {
-                        padding: 0.9em;
-                        color: rgb(0, 0, 0);
-                        background-color: rgb(245, 242, 240);
-                        font-size: 15px;
-                    }
+                    
 
                     .h1-level {
                         font-size: 2.25em;
@@ -255,6 +269,38 @@
                         background: #f5f2f0;
                         color: #222;
                     }
+                    .prism-code {
+                        padding: 0.9em;
+                        color: rgb(0, 0, 0);
+                        background-color: rgb(245, 242, 240);
+                        font-size: 15px;
+                    }
+             pre .keyword{color: rgb(178, 151, 98);}
+             pre .operator{ color: rgb(6, 50, 137);}
+             pre .token-line{color: rgb(0, 0, 0);}
+             pre .plain{color: rgb(0, 0, 0);}
+             pre .string{color: rgb(102, 153, 0);}
+             pre .punctuation{color: rgb(153, 153, 153)}
+             pre .number{color: rgb(6, 50, 137);}
+
+             /* DARK MODE SWITCH  */
+             .demo-4 .h1-level,
+             .demo-4 .h2-level,
+             .demo-4 .h3-level,
+             .demo-4 .h4-level,
+             .demo-4 figcaption,
+             .demo-4 table,
+             .demo-4 .p-unit{color: #eee;}
+             .demo-4 .svg-code{background-color: #345;color: #eee;}
+             .demo-4 .prism-code{background-color: #345; color: #eee;}
+             .demo-4 pre .token-line{color: #eee;}
+             .demo-4 pre .keyword{color: rgb(154, 134, 253);}
+             .demo-4 pre .operator{color: rgb(103, 205, 204);}
+             
+             .demo-4 pre .plain{color: #eee;}
+             .demo-4 pre .string{ color: rgb(102, 153, 0);}
+             .demo-4 pre .punctuation{color: rgb(153, 153, 153)}
+             .demo-4 pre .number{color: rgb(6, 50, 137);}
                     table {
                         margin: 1em 0 1.5em;
                     }
@@ -380,7 +426,7 @@
                 <path d="M19.2 22.8v8M24.2 22.8v8M29.2 22.8v8"/>
                 </g>
             </symbol>
-    
+
             <symbol id="cursor-click" viewBox="0 0 40 40" class="shadow"> 
                 <g class="plick"> <!-- sprite animation by transition -->
                 <use href="#cursor-frame" />
@@ -436,21 +482,21 @@
         
         <symbol id="link-icon" viewbox="0 0 25 25" >
             <g transform="rotate(-45 12 12)">
-              <rect width="6" height="6" x="0" y="1" fill="none" stroke="#fff" stroke-width="2" rx="2" />
-              <rect fill="#fff" width="2" height="8" x="2" y="4"  />
-              <rect width="6" height="6" x="0" y="10" fill="none" stroke="#fff" stroke-width="2" rx="2" />
+                <rect width="6" height="6" x="0" y="1" fill="none" stroke="#fff" stroke-width="2" rx="2" />
+                <rect fill="#fff" width="2" height="8" x="2" y="4"  />
+                <rect width="6" height="6" x="0" y="10" fill="none" stroke="#fff" stroke-width="2" rx="2" />
             </g>
         </symbol>
         
         <symbol id="keyboard-base">
-           <g class="keyboard">
-             <rect width="938" height="11" y="565" fill="url(#upperbase)"/>
-             <path fill="#C4C4C4" d="M0 575h938c0 6-5 11-11 11H11c-6 0-11-5-11-11z"/>
-               <g>
-                   <path fill="#e9e9e9" d="M389.8 564.4l159.8.1a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
-                   <path fill="url(#cutout-1)" d="M389.5 565h159.8a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
-                   <path fill="url(#cutout-2)" d="M389.5 565l160-.7a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
-               </g>
+            <g class="keyboard">
+                <rect width="938" height="11" y="565" fill="url(#upperbase)"/>
+                <path fill="#C4C4C4" d="M0 575h938c0 6-5 11-11 11H11c-6 0-11-5-11-11z"/>
+                <g>
+                    <path fill="#e9e9e9" d="M389.8 564.4l159.8.1a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
+                    <path fill="url(#cutout-1)" d="M389.5 565h159.8a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
+                    <path fill="url(#cutout-2)" d="M389.5 565l160-.7a14 14 0 01-14 14h-132a14 14 0 01-14-14z" />
+                </g>
             <g class="keys" fill="#aaa">
                 <rect width="41" height="4" x="42" y="561" />
                 <rect width="41" height="4" x="90" y="561" />
@@ -464,7 +510,7 @@
                 <rect width="41" height="4" x="810" y="561" />
                 <rect width="41" height="4" x="858" y="561" />
             </g>     
-          </g>
+            </g>
         </symbol>
         
         <symbol id="note-1" viewbox="0 0 275 110" class="shadow note">  
@@ -504,29 +550,29 @@
         
         <symbol id="code-panel" viewBox="0 0 761 710" class="shadow">
             <g id="coder" clip-path="url(#clip0)">
-               <rect id="work-panel-base" width="486" height="711" x="275" y="0" fill="#252E32"/>
+                <rect id="work-panel-base" width="486" height="711" x="275" y="0" fill="#252E32"/>
             <g id="dir-panel-base">
-              <rect width="9" height="711" x="31" fill="#38464C"/>
-              <rect width="4" height="711" fill="#1F282C" x="40" />
-              <rect width="40" height="711" x="42" y="0" fill="#283134"/>
-              <text fill="#2A95D0" font-family="Roboto" font-size="16" >
-                  <tspan x="50" y="28">&lt;/&gt;</tspan>
-              </text>
-              <rect width="2" height="33" x="80" y="8" fill="#2A95D0"/>
-              <g id="dir-tools" transform="translate(0,-50)">
-                  <path id="share" stroke="#CFD1D1" d="M62.4 588.2l-2.7 1.8m-.3 2.4l2.9 2.5M60 591a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm6-4a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm0 9a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2z"/>
-                  <g id="settings" stroke="#CFD1D1">
-                  <path d="M59.7 690.5v2.3c.5.1 2.7.1 3.2 0v-2.3l1.2-.6L66 691a10 10 0 001.7-2.5l-2.1-1.2v-1.2l2.1-1.2a10 10 0 00-1.7-2.5l-1.9 1-1.2-.6v-2.3c-.5-.1-2.7-.1-3.2 0v2.3l-1.1.6-2.1-1c-.4.3-1.4 2.1-1.5 2.5l2 1.2v1.2l-2 1.2c.1.4 1.1 2.2 1.5 2.5l2.1-1.1 1.1.6z" style="stroke-width:.75px"/>
-                  <path d="M63.1 686.8c0 1-.8 1.8-1.9 1.8-1 0-1.8-.8-1.8-1.8 0-1.1.8-1.9 1.8-1.9 1.1 0 1.9.8 1.9 1.9z" style="stroke-width:.75px"/>
-                  </g>
-                  <g id="help">
-                  <circle cx="61.5" cy="642" r="7.4" style="stroke:#cfd1d1"/>
-                  <path d="M59.4 639.9c0-.7.9-1.6 2.4-1.6 1.4 0 2.1.9 2.1 1.6 0 1-1 1.1-1.6 1.6-.4.4-.8 1.1-.7 2.4" style="stroke:#cfd1d1;stroke-linecap:round"/>
-                  <circle cx="61.6" cy="645.7" r=".7" style="fill:#d8d8d8"/>
-                  </g>
-              </g>
-              <rect width="193" height="711" fill="#38464C" x="82"/>
-              <g id="file-directory">
+                <rect width="9" height="711" x="31" fill="#38464C"/>
+                <rect width="4" height="711" fill="#1F282C" x="40" />
+                <rect width="40" height="711" x="42" y="0" fill="#283134"/>
+                <text fill="#2A95D0" font-family="Roboto" font-size="16" >
+                    <tspan x="50" y="28">&lt;/&gt;</tspan>
+                </text>
+                <rect width="2" height="33" x="80" y="8" fill="#2A95D0"/>
+                <g id="dir-tools" transform="translate(0,-50)">
+                    <path id="share" stroke="#CFD1D1" d="M62.4 588.2l-2.7 1.8m-.3 2.4l2.9 2.5M60 591a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm6-4a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2zm0 9a2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2z"/>
+                    <g id="settings" stroke="#CFD1D1">
+                    <path d="M59.7 690.5v2.3c.5.1 2.7.1 3.2 0v-2.3l1.2-.6L66 691a10 10 0 001.7-2.5l-2.1-1.2v-1.2l2.1-1.2a10 10 0 00-1.7-2.5l-1.9 1-1.2-.6v-2.3c-.5-.1-2.7-.1-3.2 0v2.3l-1.1.6-2.1-1c-.4.3-1.4 2.1-1.5 2.5l2 1.2v1.2l-2 1.2c.1.4 1.1 2.2 1.5 2.5l2.1-1.1 1.1.6z" style="stroke-width:.75px"/>
+                    <path d="M63.1 686.8c0 1-.8 1.8-1.9 1.8-1 0-1.8-.8-1.8-1.8 0-1.1.8-1.9 1.8-1.9 1.1 0 1.9.8 1.9 1.9z" style="stroke-width:.75px"/>
+                    </g>
+                    <g id="help">
+                    <circle cx="61.5" cy="642" r="7.4" style="stroke:#cfd1d1"/>
+                    <path d="M59.4 639.9c0-.7.9-1.6 2.4-1.6 1.4 0 2.1.9 2.1 1.6 0 1-1 1.1-1.6 1.6-.4.4-.8 1.1-.7 2.4" style="stroke:#cfd1d1;stroke-linecap:round"/>
+                    <circle cx="61.6" cy="645.7" r=".7" style="fill:#d8d8d8"/>
+                    </g>
+                </g>
+                <rect width="193" height="711" fill="#38464C" x="82"/>
+                <g id="file-directory">
                     <text id="FILETREE" fill="#E5E5E5" font-size="13" font-weight="900">
                         <tspan x="90" y="21.9">FILETREE</tspan>
                     </text>
@@ -545,9 +591,9 @@
                         <text fill="#E5E5E5" font-size="13" font-weight="500">
                             <tspan x="129" y="116.9">notes.txt</tspan>
                         </text>
-                           <path stroke="#E5E5E5"
-                               d="M118 105.5v4.5h4.5v11.5h-12v-16h7.5zm-4 7h5-5zm0 2.5h5-5zm0 2.5h5-5z" />
-                           <line x1="118.1" x2="122.6" y1="105.4" y2="109.9" style="stroke:#e5e5e5" />
+                            <path stroke="#E5E5E5"
+                                d="M118 105.5v4.5h4.5v11.5h-12v-16h7.5zm-4 7h5-5zm0 2.5h5-5zm0 2.5h5-5z" />
+                            <line x1="118.1" x2="122.6" y1="105.4" y2="109.9" style="stroke:#e5e5e5" />
                     </g>
                     <g id="quiz">
                         <text id="quiz_2" fill="#E5E5E5" font-size="13" font-weight="500">
@@ -565,7 +611,7 @@
                     </text>
                     <text fill="#2A95D0" font-size="15" font-weight="500" letter-spacing="0em"
                         style="white-space:pre" transform="rotate(-90 99 92)">
-                       <tspan x="0" y="14.1">LIVE CODE</tspan>
+                        <tspan x="0" y="14.1">LIVE CODE</tspan>
                     </text>
                 </g>
                         
@@ -731,7 +777,7 @@
         
         
             <!-- / SYMBOLS -->
-     
+        
         </defs>
 
 
@@ -750,7 +796,7 @@
         <!-- FOREIGNOBJECT -->
 
 
-        <foreignObject x="60" y="20" width="820" height="525" clip-path="url(#screen-mask)" style="padding-left:20px;overflow-x: hidden; overflow-y: scroll; " >
+        <foreignObject x="0" y="20" width="880" height="525" clip-path="url(#screen-mask)" style="padding-left:20px;overflow-x: hidden; overflow-y: scroll; " >
         
             <div class="page-wrapper">
 
@@ -828,7 +874,7 @@
                     </div>
                     <div class="p-unit">
                         <pre class="sc-fzXfNi prism-code language-js"
-                            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">p </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'warning'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Something has gone </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">em</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">very</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">em</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"> wrong</span><span class="token operator" style="color: rgb(6, 50, 137);">!</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">p</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span></div></pre>
+                            ><div class="token-line" ><span class="operator">&lt;</span><span class="plain">p </span><span class="keyword">class</span><span class="operator">=</span><span class="string">'warning'</span><span class="operator">&gt;</span><span class="plain">Something has gone </span><span class="operator">&lt;</span><span class="plain">em</span><span class="operator">&gt;</span><span class="plain">very</span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">em</span><span class="operator">&gt;</span><span class="plain"> wrong</span><span class="operator">!</span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">p</span><span class="operator">&gt;</span></div></pre>
 
                     </div>
                     <div class="p-unit">
@@ -913,7 +959,7 @@
                             the following code in a file called&nbsp;<code class="svg-code">heroes.html</code> :</div>
                     </div>
 
-                        <pre class=" prism-code language-js"><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">!</span><span class="token plain">doctype html</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">html lang</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">"en"</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">head</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">meta charset</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">"utf-8"</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">title</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Justice League</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">title</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">head</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">body</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">header</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">h1 id</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'title'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Justice League</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">h1</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">header</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">ul id</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'roster'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">li </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'hero'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Superman</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">li</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">li </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'vigilante hero'</span><span class="token plain"> id</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'bats'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Batman</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">li</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token plain">li </span><span class="token keyword" style="color: rgb(0, 119, 170);">class</span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token string" style="color: rgb(102, 153, 0);">'hero'</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain">Wonder Woman</span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">li</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">    </span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">ul</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">body</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;</span><span class="token operator" style="color: rgb(6, 50, 137);">/</span><span class="token plain">html</span><span class="token operator" style="color: rgb(6, 50, 137);">&gt;</span></div></pre>
+                        <pre class=" prism-code language-js"><div class="token-line" ><span class="operator">&lt;</span><span class="operator">!</span><span class="plain">doctype html</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;</span><span class="plain">html lang</span><span class="operator">=</span><span class="string">"en"</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;</span><span class="plain">head</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;</span><span class="plain">meta charset</span><span class="operator">=</span><span class="string">"utf-8"</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;</span><span class="plain">title</span><span class="operator">&gt;</span><span class="plain">Justice League</span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">title</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">head</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;</span><span class="plain">body</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain">    </span><span class="operator">&lt;</span><span class="plain">header</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain">    </span><span class="operator">&lt;</span><span class="plain">h1 id</span><span class="operator">=</span><span class="string">'title'</span><span class="operator">&gt;</span><span class="plain">Justice League</span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">h1</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain">    </span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">header</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain">    </span><span class="operator">&lt;</span><span class="plain">ul id</span><span class="operator">=</span><span class="string">'roster'</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain">    </span><span class="operator">&lt;</span><span class="plain">li </span><span class="keyword">class</span><span class="operator">=</span><span class="string">'hero'</span><span class="operator">&gt;</span><span class="plain">Superman</span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">li</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain">    </span><span class="operator">&lt;</span><span class="plain">li </span><span class="keyword">class</span><span class="operator">=</span><span class="string">'vigilante hero'</span><span class="plain"> id</span><span class="operator">=</span><span class="string">'bats'</span><span class="operator">&gt;</span><span class="plain">Batman</span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">li</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain">    </span><span class="operator">&lt;</span><span class="plain">li </span><span class="keyword">class</span><span class="operator">=</span><span class="string">'hero'</span><span class="operator">&gt;</span><span class="plain">Wonder Woman</span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">li</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain">    </span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">ul</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">body</span><span class="operator">&gt;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;</span><span class="operator">/</span><span class="plain">html</span><span class="operator">&gt;</span></div></pre>
 
                     <div class="p-unit">
                         <div>Below is a node tree diagram for the&nbsp;
@@ -967,7 +1013,7 @@
                         </div>
                     <div class="p-unit">
                         <pre class="sc-fzXfNi prism-code language-js"
-                            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token keyword" style="color: rgb(0, 119, 170);">const</span><span class="token plain"> body </span><span class="token operator" style="color: rgb(6, 50, 137);">=</span><span class="token plain"> document</span><span class="token punctuation" style="color: rgb(153, 153, 153);">.</span><span class="token plain">body</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span></div></pre>
+                            ><div class="token-line" ><span class="keyword">const</span><span class="plain"> body </span><span class="operator">=</span><span class="plain"> document</span><span class="punctuation">.</span><span class="plain">body</span><span class="punctuation">;</span></div></pre>
 
                     </div>
                     <div class="p-unit">
@@ -976,7 +1022,7 @@
                     </div>
                     <div class="p-unit">
                         <pre class="sc-fzXfNi prism-code language-js"
-                            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token keyword" style="color: rgb(0, 119, 170);">typeof</span><span class="token plain"> body</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;&lt;</span><span class="token plain"> </span><span class="token string" style="color: rgb(102, 153, 0);">"object"</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span></div></pre>
+                            ><div class="token-line" ><span class="keyword">typeof</span><span class="plain"> body</span><span class="punctuation">;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;&lt;</span><span class="plain"> </span><span class="string">"object"</span><span class="punctuation">;</span></div></pre>
 
                     </div>
                     <div class="p-unit">
@@ -991,7 +1037,7 @@
                     </div>
                     <div class="p-unit">
                         <pre class="sc-fzXfNi prism-code language-js"
-                            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">body</span><span class="token punctuation" style="color: rgb(153, 153, 153);">.</span><span class="token plain">nodeType</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;&lt;</span><span class="token plain"> </span><span class="token number" style="color: rgb(6, 50, 137);">1</span></div></pre>
+                            ><div class="token-line" ><span class="plain">body</span><span class="punctuation">.</span><span class="plain">nodeType</span><span class="punctuation">;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;&lt;</span><span class="plain"> </span><span class="number">1</span></div></pre>
 
                     </div>
                     <div class="p-unit">
@@ -1044,7 +1090,7 @@
                     </div>
                     <div class="p-unit">
                         <pre class="sc-fzXfNi prism-code language-js"
-                            style="color: rgb(0, 0, 0); background-color: rgb(245, 242, 240);"><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain">body</span><span class="token punctuation" style="color: rgb(153, 153, 153);">.</span><span class="token plain">nodeName</span><span class="token punctuation" style="color: rgb(153, 153, 153);">;</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(0, 0, 0);"><span class="token plain"></span><span class="token operator" style="color: rgb(6, 50, 137);">&lt;&lt;</span><span class="token plain"> </span><span class="token string" style="color: rgb(102, 153, 0);">"BODY"</span></div></pre>
+                            ><div class="token-line" ><span class="plain">body</span><span class="punctuation">.</span><span class="plain">nodeName</span><span class="punctuation">;</span><span class="plain"></span></div><div class="token-line" ><span class="plain"></span><span class="operator">&lt;&lt;</span><span class="plain"> </span><span class="string">"BODY"</span></div></pre>
 
                     </div>
                     <div class="p-unit">
@@ -1111,12 +1157,9 @@
         
 
         <!-- Keyboard and base  --> 
-        <g class="foreground">
-            
+        <g class="foreground">     
             <use href="#keyboard-base" />
         </g>
         
         
-    </svg>     
- 
-
+    </svg>
