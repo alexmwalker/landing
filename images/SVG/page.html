@@ -1,96 +1,102 @@
 <style>
-    #chapter-container {
-    line-height: 1.778em;
-    color: #222;
-    font-family: Roboto, "Trebuchet MS", sans-serif;
-    margin: 4em 3em 3em;
-    font-size: 16px;
-    }
-    .chapter-head-left {
-    width: 70%;
-    float: left;
-    text-align: right;
-    position: relative;
-    }
-    .chapter-head-left:before {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 100%;
-    top: 0;
-    right: -1em;
-    border-left: 1px #999 solid;
-    }
-    .chapter-head-right {
-    padding-top: 1em;
-    width: 30%;
-    float: right;
-    text-align: center;
-    }
-    .chapter-content {
-    margin-bottom: 2em;
-    }
-    .prism-code {
-    padding: 0.9em;
-    color: rgb(0, 0, 0);
-    background-color: rgb(245, 242, 240);
-    }
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;family=Roboto:wght@300;500;700&amp;display=swap");
 
-    .h1-level {
-    font-size: 2.25em;
-    margin: 0.5em 0 0;
-    line-height: 1.2em;
-    }
+#chapter-container {
+  line-height: 1.778em;
+  color: #222;
+  font-family: Roboto, "Trebuchet MS", sans-serif;
+  margin: 4em 3em 3em;
+  font-size: 16px;
+}
+.chapter-head-left {
+  width: 70%;
+  float: left;
+  text-align: right;
+  position: relative;
+}
+.chapter-head-left .h3-level {
+  margin-top: 0.5em;
+} 
+.chapter-head-left:before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  top: 0;
+  right: -3em;
+  border-left: 1px #999 solid;
+}
+.chapter-head-right {
+  padding-top: 1em;
+  width: 30%;
+  float: right;
+  text-align: center;
+}
+.chapter-content {
+  margin-bottom: 2em;
+}
+.prism-code {
+  padding: 0.9em;
+  color: rgb(0, 0, 0);
+  background-color: rgb(245, 242, 240);
+}
 
-    .h2-level {
-    margin: 1.5em 0 1em;
-    font-size: 2em;
-    }
+.h1-level {
+  font-size: 2.25em;
+  margin: 0.5em 0 0;
+  line-height: 1.2em;
+}
 
-    .h3-level {
-    font-weight: 400;
-    font-size: 1.5em;
-    margin: 2em 0 1em;
-    }
-    .h4-level {
-    font-weight: 400;
-    font-size: 1.2em;
-    margin: 2em 0 1.78em;
-    }
-    .p-unit {
-    font-weight: 300;
-    line-height: 1.778em;
-    font-family: Roboto, "Trebuchet MS", sans-serif;
-    font-size: 1em;
-    margin-bottom: 1.78em;
-    }
-    .svg-li .p-unit {
-    margin-bottom: 0.89em;
-    }
-    .svg-code {
-    font-family: Monaco, "Courier New", Courier, monospace;
-    font-size: 0.9em;
-    padding: 0.2em 0.2em;
-    background: #f5f2f0;
-    color: #222;
-    }
-    table {
-    margin: 1em 0 1.5em;
-    }
-    .p-label {
-    fill: black;
-    white-space: pre;
-    font-family: Halant, serif;
-    font-size: 21px;
-    }
-    figure {
-    margin: 1em 0;
-    }
-    figcaption {
-    font-style: italic;
-    color: #666;
-    }
+.h2-level {
+  margin: 1.5em 0 1em;
+  font-size: 2em;
+}
+
+.h3-level {
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 2em 0 1em;
+}
+.h4-level {
+  font-weight: 400;
+  font-size: 1.2em;
+  margin: 2em 0 1.78em;
+}
+.p-unit {
+  font-weight: 300;
+  line-height: 1.778em;
+  font-family: Roboto, "Trebuchet MS", sans-serif;
+  font-size: 1em;
+  margin-bottom: 1.78em;
+}
+.svg-li .p-unit {
+  margin-bottom: 0.89em;
+}
+.svg-code {
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  padding: 0.2em 0.2em;
+  background: #f5f2f0;
+  color: #222;
+}
+table {
+  margin: 1em 0 1.5em;
+}
+.p-label {
+  fill: black;
+  white-space: pre;
+  font-family: Halant, serif;
+  font-size: 21px;
+}
+figure {
+  margin: 1em 0;
+}
+figcaption {
+  font-style: italic;
+  color: #666;
+}
+
 </style>
 <div id="chapter-container" class="body-text">
 	<div class="chapter-content">

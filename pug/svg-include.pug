@@ -54,7 +54,6 @@
                 /* DEMO STATE TRIGGERED */
                 .demo-1 .cursor {
                     transform: translate(450px, -120px);
-                    
                 }
                 .demo-1 #code-panel-pos {
                     transform: matrix(0.9, 0, 0, 0.9, 180, 47);
@@ -86,7 +85,9 @@
                     transition-delay: 1s;
                 }
                 
-                
+                .demo-4 .cursor {
+                    transform: translate(225px, -242px);
+                }
 
 
                 /* ###  STAGED TRANSITIONS  ### */
@@ -183,12 +184,7 @@
                         
                     }
                               
-                    .demo-4 foreignObject {
-                        background:#222;
-                        color: #eee;
-                        transition: all 1s;
                     
-                    }
 
                     .page-wrapper{
                         left: 0rem;
@@ -284,6 +280,12 @@
              pre .number{color: rgb(6, 50, 137);}
 
              /* DARK MODE SWITCH  */
+             .demo-4 foreignObject {
+                        background:#222;
+                        color: #eee;
+                        transition: all 1s;
+                        transition-delay: 1s;
+                    }
              .demo-4 .h1-level,
              .demo-4 .h2-level,
              .demo-4 .h3-level,
@@ -291,7 +293,7 @@
              .demo-4 figcaption,
              .demo-4 table,
              .demo-4 .chapter-head-right,
-             .demo-4 .p-unit{color: #eee;}
+             .demo-4 .p-unit{color: #eee; transition-delay: 3s; transition:all 1s}
              .demo-4 .svg-code{background-color: #345;color: #eee;}
              .demo-4 .prism-code{background-color: #345; color: #eee;}
              .demo-4 pre .token-line{color: #eee;}
@@ -544,9 +546,14 @@
             <text fill="black" font-size="18"><tspan x="50" y="38.6">Easily share text and code  </tspan><tspan x="34" y="59.6">samples with friends - even </tspan><tspan x="34" y="80.6">if they don’t have the book.</tspan></text>
         </symbol>
         
-        <symbol id="note-4">  
+        <symbol id="note-4" viewbox="0 0 275 110" class="shadow note">  
             <rect x="4" width="275" height="110" fill="#FFE794"/>
-            <text fill="black" font-size="18"><tspan x="34" y="38.6">Bookmark your favorite </tspan><tspan x="34" y="59.6">text and code samples for </tspan><tspan x="34" y="80.6">later reference.</tspan></text>
+            <polygon points="170,10 228,-40 200,10" fill="#fFE794" />
+         <g class="numberlist">
+                <circle cx="36" cy="32" r="8" fill="orangered"/>
+                <text fill="#fff" font-size="13" font-weight="500" x="32" y="36.5">4</text>
+            </g>
+            <text fill="black" font-size="18"><tspan x="50" y="38.6">Give your eyes a break </tspan><tspan x="34" y="59.6">while taking your learning</tspan><tspan x="34" y="80.6">into the night.</tspan></text>
         </symbol>    
         
         <symbol id="code-panel" viewBox="0 0 761 710" class="shadow">
@@ -916,10 +923,10 @@
                     </figure>
                     <div class="p-unit">
                         <div>The DOM is not actually part of
-                            JavaScript because it is<em>language agnostic</em>(although JavaScript is, by far, the language most
+                            JavaScript because it is <em>language agnostic</em> (although JavaScript is, by far, the language most
                             commonly used with it). This means it can be used in any programming language, not just JavaScript. We
                             can use JavaScript to access and modify different parts of a web page using a special built-in object
-                            called&nbsp;<code class="svg-code">document</code> .</div>
+                            called <code class="svg-code">document</code>.</div>
                     </div>
                     <div class="p-unit">
                         <div class="h2-level">History of the DOM</div>
@@ -1140,7 +1147,7 @@
 
 
         <g class="stage-4" clip-path="url(#screen-mask)">
-            <use href="#note-3" x="400" y="400" class="reveal arrive-4"/>
+            <use href="#note-4" x="400" y="-160" width="275" class="reveal arrive-4"/>
         </g>
 
 
@@ -1163,4 +1170,4 @@
         </g>
         
         
-    </svg>
+    </svg>  
