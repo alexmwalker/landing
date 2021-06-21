@@ -400,137 +400,143 @@
   <!--script(src="scripts/typography.js" , type="text/javascript")-->
   <!--script(src="scripts/hopscotch.js" , type="text/javascript")-->
   <script>
-    $(document).ready(function(){
-      $('.showmobile').click(function(){
-        $(this).toggleClass('open');
-      });
+     $(document).ready(function(){
+       $('.showmobile').click(function(){
+         $(this).toggleClass('open');
+       });
     
-      $('.loggedout a').click(function(){
-        $('.login-panel').toggleClass('open');
-      });
+       $('.loggedout a').click(function(){
+         $('.login-panel').toggleClass('open');
+       });
     
-      $('input#books').click(function(){
-        $('.book-unit').fadeToggle("1000");
-      });
+       $('input#books').click(function(){
+         $('.book-unit').fadeToggle("1000");
+       });
     
-      $('input#courses').click(function(){
-        $('.course-unit').fadeToggle("1000");
-      });
+       $('input#courses').click(function(){
+         $('.course-unit').fadeToggle("1000");
+       });
     
-      $('input#talks').click(function(){
-        $('.techtalk-unit').fadeToggle("1000");
-      });
+       $('input#talks').click(function(){
+         $('.techtalk-unit').fadeToggle("1000");
+       });
     
-      $('input#articles').click(function(){
-        $('.article-unit').fadeToggle("1000");
-      });
-      /* trigger the proce switch graphic */
-      $('.item-1').click(function(){
-        $('.price-unit').removeClass('monthly-account');
-      });
-      $('.item-3').click(function(){
-        $('.price-unit').addClass('monthly-account');
-      });
+       $('input#articles').click(function(){
+         $('.article-unit').fadeToggle("1000");
+       });
+       /* trigger the proce switch graphic */
+       $('.item-1').click(function(){
+         $('.price-unit').removeClass('monthly-account');
+       });
+       $('.item-3').click(function(){
+         $('.price-unit').addClass('monthly-account');
+       });
     
-      /* add class to trigger DEMO switches */
+       /* add class to trigger DEMO switches */
     
-         /* CLICKABLE INSIDE THE SVG */
+    /* CLICKABLE INSIDE THE SVG */
+          
+           $('#live-code-tab').click(function(){ 
+             $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
+           });
+          $('.reset').click(function(){ 
+             $('.laptop-wrapper').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
+           });
+          $('rect[id="darkmode-switch"]').click(function(){ 
+             $('.laptop-wrapper').addClass('demo-4').removeClass('demo-2').removeClass('demo-3').removeClass('demo-1');
+           });
     
-          $('#live-code-tab').click(function(){ 
-            $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
-          });
-         $('#reset').click(function(){ 
-            $('.laptop-wrapper').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
-          });
-    
-         /* THE BUTTONS IN THE HTML */
-         $('.screen-1').click(function(){
-            $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
-          });
-          $('.screen-2').click(function(){
-            $('.laptop-wrapper').addClass('demo-2').removeClass('demo-1').removeClass('demo-3').removeClass('demo-4');
-          });
-          $('.screen-3').click(function(){
-            $('.laptop-wrapper').addClass('demo-3').removeClass('demo-1').removeClass('demo-2').removeClass('demo-4');
-          });
-          $('.screen-4').click(function(){
-            $('.laptop-wrapper').addClass('demo-4').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3');
-          });
-    });
+          /* THE BUTTONS IN THE HTML */
+          $('.screen-1').click(function(){
+             $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
+           });
+           $('.screen-2').click(function(){
+             $('.laptop-wrapper').addClass('demo-2').removeClass('demo-1').removeClass('demo-3').removeClass('demo-4');
+           });
+           $('.screen-3').click(function(){
+             $('.laptop-wrapper').addClass('demo-3').removeClass('demo-1').removeClass('demo-2').removeClass('demo-4');
+           });
+           $('.screen-4').click(function(){
+             $('.laptop-wrapper').addClass('demo-4').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3');
+           });
+     });
     
     
-      $(window).resize(function(){ /* close the menu on screen resize */
-        $('.showmobile').removeClass('open');
-        $('.login-panel').removeClass('open');
-      });
+       $(window).resize(function(){ /* close the menu on screen resize */
+         $('.showmobile').removeClass('open');
+         $('.login-panel').removeClass('open');
+       });
   </script>
   <!--script(src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js", type="text/javascript")-->
   <!--script(src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" , type="text/javascript")-->
   <!--script(src="scripts/typography.js" , type="text/javascript")-->
   <!--script(src="scripts/hopscotch.js" , type="text/javascript")-->
   <script>
-    $(document).ready(function(){
-      $('.showmobile').click(function(){
-        $(this).toggleClass('open');
-      });
+     $(document).ready(function(){
+       $('.showmobile').click(function(){
+         $(this).toggleClass('open');
+       });
     
-      $('.loggedout a').click(function(){
-        $('.login-panel').toggleClass('open');
-      });
+       $('.loggedout a').click(function(){
+         $('.login-panel').toggleClass('open');
+       });
     
-      $('input#books').click(function(){
-        $('.book-unit').fadeToggle("1000");
-      });
+       $('input#books').click(function(){
+         $('.book-unit').fadeToggle("1000");
+       });
     
-      $('input#courses').click(function(){
-        $('.course-unit').fadeToggle("1000");
-      });
+       $('input#courses').click(function(){
+         $('.course-unit').fadeToggle("1000");
+       });
     
-      $('input#talks').click(function(){
-        $('.techtalk-unit').fadeToggle("1000");
-      });
+       $('input#talks').click(function(){
+         $('.techtalk-unit').fadeToggle("1000");
+       });
     
-      $('input#articles').click(function(){
-        $('.article-unit').fadeToggle("1000");
-      });
-      /* trigger the proce switch graphic */
-      $('.item-1').click(function(){
-        $('.price-unit').removeClass('monthly-account');
-      });
-      $('.item-3').click(function(){
-        $('.price-unit').addClass('monthly-account');
-      });
+       $('input#articles').click(function(){
+         $('.article-unit').fadeToggle("1000");
+       });
+       /* trigger the proce switch graphic */
+       $('.item-1').click(function(){
+         $('.price-unit').removeClass('monthly-account');
+       });
+       $('.item-3').click(function(){
+         $('.price-unit').addClass('monthly-account');
+       });
     
-      /* add class to trigger DEMO switches */
+       /* add class to trigger DEMO switches */
     
-         /* CLICKABLE INSIDE THE SVG */
+    /* CLICKABLE INSIDE THE SVG */
+          
+           $('#live-code-tab').click(function(){ 
+             $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
+           });
+          $('.reset').click(function(){ 
+             $('.laptop-wrapper').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
+           });
+          $('rect[id="darkmode-switch"]').click(function(){ 
+             $('.laptop-wrapper').addClass('demo-4').removeClass('demo-2').removeClass('demo-3').removeClass('demo-1');
+           });
     
-          $('#live-code-tab').click(function(){ 
-            $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
-          });
-         $('#reset').click(function(){ 
-            $('.laptop-wrapper').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
-          });
-    
-         /* THE BUTTONS IN THE HTML */
-         $('.screen-1').click(function(){
-            $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
-          });
-          $('.screen-2').click(function(){
-            $('.laptop-wrapper').addClass('demo-2').removeClass('demo-1').removeClass('demo-3').removeClass('demo-4');
-          });
-          $('.screen-3').click(function(){
-            $('.laptop-wrapper').addClass('demo-3').removeClass('demo-1').removeClass('demo-2').removeClass('demo-4');
-          });
-          $('.screen-4').click(function(){
-            $('.laptop-wrapper').addClass('demo-4').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3');
-          });
-    });
+          /* THE BUTTONS IN THE HTML */
+          $('.screen-1').click(function(){
+             $('.laptop-wrapper').addClass('demo-1').removeClass('demo-2').removeClass('demo-3').removeClass('demo-4');
+           });
+           $('.screen-2').click(function(){
+             $('.laptop-wrapper').addClass('demo-2').removeClass('demo-1').removeClass('demo-3').removeClass('demo-4');
+           });
+           $('.screen-3').click(function(){
+             $('.laptop-wrapper').addClass('demo-3').removeClass('demo-1').removeClass('demo-2').removeClass('demo-4');
+           });
+           $('.screen-4').click(function(){
+             $('.laptop-wrapper').addClass('demo-4').removeClass('demo-1').removeClass('demo-2').removeClass('demo-3');
+           });
+     });
     
     
-      $(window).resize(function(){ /* close the menu on screen resize */
-        $('.showmobile').removeClass('open');
-        $('.login-panel').removeClass('open');
-      });
+       $(window).resize(function(){ /* close the menu on screen resize */
+         $('.showmobile').removeClass('open');
+         $('.login-panel').removeClass('open');
+       });
   </script>
 </body>
