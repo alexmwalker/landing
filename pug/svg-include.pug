@@ -175,48 +175,38 @@
 
                     /* EMBEDDED CSS */ 
 
-                        #chapter-container {
-                            line-height: 1.778em;
-                            color: #222;
-                            font-family: Roboto, "Trebuchet MS", sans-serif;
-                            margin: 4em 3em 3em;
-                            font-size: 16px;  
-                        }
-                        .page-wrapper{
-                            left: 0rem;
-                            width: 90%;
-                            margin: 0 5%;
-                            position: absolute;
-    
-                        }
-                        .chapter-head-left {
-                            width: 70%;
-                            float: left;
-                            text-align: right;
-                            position: relative;
-                        }
-                        .chapter-head-left .h3-level {
-                            margin-top: 0.5em;
-                        } 
-                        .chapter-head-left:before {
-                            display: block;
-                            position: absolute;
-                            content: "";
-                            width: 1px;
-                            height: 100%;
-                            top: 0;
-                            right: -3em;
-                            border-left: 1px #999 solid;
-                        }
-                        .chapter-head-right {
-                            padding-top: 1em;
-                            width: 30%;
-                            float: right;
-                            text-align: center;
-                        }
-                        .chapter-content {
-                            margin-bottom: 2em;
-                        }
+                    #chapter-container {
+                        line-height: 1.778em;
+                        color: #222;
+                        font-family: Roboto, "Trebuchet MS", sans-serif;
+                        margin: 4em 3em 3em;
+                        font-size: 16px;  
+                    }
+                    .page-wrapper{
+                        left: 0rem;
+                        width: 90%;
+                        padding-top:50px;
+                        margin: 0 5%;
+                    }
+                    .chapter-head-left {
+                        width: 65%;
+                        float: left;
+                        text-align: right;
+                    }
+                    .chapter-head-left .h3-level {
+                        margin-top: 0.5em;
+                    } 
+                    .chapter-head-right {
+                        padding-top: 1em;
+                        width: 30%;
+                        float: right;
+                        text-align: center;
+                        border-left: 1px #ccc solid;
+                    }
+                    .chapter-content {
+                        margin-bottom: 2em;
+                    }
+                    
                         
 
                         .h1-level {
@@ -408,10 +398,8 @@
                         </g>
                     </symbol>
 
-                <symbol id="close" viewBox="0 0 7.6 7.6">
-                        <path fill="#CFCFCF"
-                            d="M400.4 17.1l-1-1-2.8 2.8-2.8-2.8-1 1 2.8 2.8-2.8 2.8 1 1 2.8-2.8 2.8 2.8 1-1-2.8-2.8 2.8-2.8z"
-                            transform="translate(-392.8 -16.1)" />
+                <symbol id="close" viewbox="0 0 8 8" fill="none" >
+                    <path d="M4 2.8L2.2 1l-.7.7 1.8 1.8-1.8 1.8.7.7L4 4.2 5.8 6l.7-.7-1.8-1.8 1.8-1.8-.7-.7L4 2.8z" fill="#C4C4C4"/>
                 </symbol>
 
                 <symbol id="new-item" viewBox="0 0 13 13">
@@ -545,7 +533,7 @@
             <symbol id="note-4" viewbox="0 0 275 110" class="shadow note">  
                 <rect x="4" width="275" height="110" fill="#FFE794"/>
                 <polygon points="170,10 228,-40 200,10" fill="#fFE794" />
-            <g class="numberlist">
+                <g class="numberlist">
                     <circle cx="36" cy="32" r="8" fill="orangered"/>
                     <text fill="#fff" font-size="13" font-weight="500" x="32" y="36.5">4</text>
                 </g>
@@ -618,166 +606,166 @@
                             <tspan x="0" y="14.1">LIVE CODE</tspan>
                         </text>
                     </g>
-                            
+                        
                     <use width="17.1" height="12" transform="translate(88.9 38.5)" href="#folder-open" />
                 </g>
-                <g id="code-window">
-                    <rect id="codebase" width="486" height="430" fill="#2B3336" transform="matrix(1 0 0 -1 275 431)" />
-                    <text style="font-size:15px; fill:#d1d2d3;font-weight:500;white-space:pre">
-                        <tspan x="305" y="55.3"> window.</tspan><tspan style="fill:url(#color-2)">onload</tspan><tspan style="fill:url(#color-3)">=</tspan><tspan style="fill:url(#color-4)">function</tspan><tspan>() { </tspan>
-                        <tspan x="325" y="76.3"> </tspan><tspan style="fill:url(#color-2)">setTimeout</tspan><tspan>(() </tspan><tspan style="fill:url(#color-4)">=&gt;</tspan><tspan> { </tspan>
-                        <tspan x="335" y="97.3"> </tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> quiz </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> [ </tspan>
-                        <tspan x="365" y="118.3"> { name: </tspan><tspan style="fill:url(#color-1)">&quot;Superman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Clark Kent&quot;</tspan><tspan> }, </tspan>
-                        <tspan x="365" y="139.3"> { name: </tspan><tspan style="fill:#86cd95">&quot;Wonder Woman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Diana Prince&quot;</tspan><tspan> }, </tspan>
-                        <tspan x="365" y="160.3"> { name: </tspan><tspan style="fill:url(#color-1)">&quot;Batman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Bruce Wayne&quot;</tspan><tspan> }, </tspan><tspan x="305" y="181.3"> ]; </tspan>
-                        <tspan x="305" y="202.3"> </tspan>
-                        <tspan x="315" y="223.3"> </tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> game </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> { </tspan>
-                        <tspan x="335" y="244.3"> </tspan><tspan style="fill:url(#color-2)">start</tspan><tspan>(</tspan><tspan style="fill:url(#color-3)">quiz</tspan><tspan>){ </tspan>
-                        <tspan x="365" y="265.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.questions </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> [</tspan><tspan style="fill:url(#color-3)">...</tspan><tspan>quiz]; </tspan>
-                        <tspan x="365" y="286.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.score </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan style="fill:url(#color-2)"> 0</tspan><tspan>; </tspan>
-                        <tspan x="365" y="307.3"> </tspan><tspan style="fill:url(#color-5)">// main game loop</tspan>
-                        <tspan x="365" y="328.3"> </tspan><tspan style="fill:url(#color-4)">for</tspan><tspan>(</tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> question </tspan><tspan style="fill:url(#color-3)">of</tspan><tspan> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.questions){ </tspan>
-                        <tspan x="365" y="349.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.question </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> question;</tspan>
-                    </text>
-                    <g id="line-numbers">
-                        <rect width="27" height="350" x="275" y="41" style="fill:#232c2e" />
-                        <text style="fill:#c4c4c4;font-size:16px;font-weight:500;white-space:pre">
-                            <tspan x="289.4" y="55.7">1</tspan>
-                            <tspan x="289.4" y="76.7">2</tspan>
-                            <tspan x="289.4" y="97.7">3</tspan>
-                            <tspan x="289.4" y="118.7">4</tspan>
-                            <tspan x="289.4" y="139.7">5</tspan>
-                            <tspan x="289.4" y="160.7">6</tspan>
-                            <tspan x="289.4" y="181.7">7</tspan>
-                            <tspan x="289.4" y="202.7">8</tspan>
-                            <tspan x="289.4" y="223.7">9</tspan>
-                            <tspan x="279.8" y="244.7">10</tspan>
-                            <tspan x="279.8" y="265.7">11</tspan>
-                            <tspan x="279.8" y="286.7">12</tspan>
-                            <tspan x="279.8" y="307.7">13</tspan>
-                            <tspan x="279.8" y="328.7">14</tspan>
-                            <tspan x="279.8" y="349.7">15</tspan>
+                    <g id="code-window">
+                        <rect id="codebase" width="486" height="430" fill="#2B3336" transform="matrix(1 0 0 -1 275 431)" />
+                        <text style="font-size:15px; fill:#d1d2d3;font-weight:500;white-space:pre">
+                            <tspan x="305" y="55.3"> window.</tspan><tspan style="fill:url(#color-2)">onload</tspan><tspan style="fill:url(#color-3)">=</tspan><tspan style="fill:url(#color-4)">function</tspan><tspan>() { </tspan>
+                            <tspan x="325" y="76.3"> </tspan><tspan style="fill:url(#color-2)">setTimeout</tspan><tspan>(() </tspan><tspan style="fill:url(#color-4)">=&gt;</tspan><tspan> { </tspan>
+                            <tspan x="335" y="97.3"> </tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> quiz </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> [ </tspan>
+                            <tspan x="365" y="118.3"> { name: </tspan><tspan style="fill:url(#color-1)">&quot;Superman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Clark Kent&quot;</tspan><tspan> }, </tspan>
+                            <tspan x="365" y="139.3"> { name: </tspan><tspan style="fill:#86cd95">&quot;Wonder Woman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Diana Prince&quot;</tspan><tspan> }, </tspan>
+                            <tspan x="365" y="160.3"> { name: </tspan><tspan style="fill:url(#color-1)">&quot;Batman&quot;</tspan><tspan>,realName: </tspan><tspan style="fill:url(#color-1)">&quot;Bruce Wayne&quot;</tspan><tspan> }, </tspan><tspan x="305" y="181.3"> ]; </tspan>
+                            <tspan x="305" y="202.3"> </tspan>
+                            <tspan x="315" y="223.3"> </tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> game </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> { </tspan>
+                            <tspan x="335" y="244.3"> </tspan><tspan style="fill:url(#color-2)">start</tspan><tspan>(</tspan><tspan style="fill:url(#color-3)">quiz</tspan><tspan>){ </tspan>
+                            <tspan x="365" y="265.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.questions </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> [</tspan><tspan style="fill:url(#color-3)">...</tspan><tspan>quiz]; </tspan>
+                            <tspan x="365" y="286.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.score </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan style="fill:url(#color-2)"> 0</tspan><tspan>; </tspan>
+                            <tspan x="365" y="307.3"> </tspan><tspan style="fill:url(#color-5)">// main game loop</tspan>
+                            <tspan x="365" y="328.3"> </tspan><tspan style="fill:url(#color-4)">for</tspan><tspan>(</tspan><tspan style="fill:url(#color-4)">const</tspan><tspan> question </tspan><tspan style="fill:url(#color-3)">of</tspan><tspan> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.questions){ </tspan>
+                            <tspan x="365" y="349.3"> </tspan><tspan style="fill:url(#color-4)">this</tspan><tspan>.question </tspan><tspan style="fill:url(#color-3)">=</tspan><tspan> question;</tspan>
                         </text>
+                        <g id="line-numbers">
+                            <rect width="27" height="350" x="275" y="41" style="fill:#232c2e" />
+                            <text style="fill:#c4c4c4;font-size:16px;font-weight:500;white-space:pre">
+                                <tspan x="289.4" y="55.7">1</tspan>
+                                <tspan x="289.4" y="76.7">2</tspan>
+                                <tspan x="289.4" y="97.7">3</tspan>
+                                <tspan x="289.4" y="118.7">4</tspan>
+                                <tspan x="289.4" y="139.7">5</tspan>
+                                <tspan x="289.4" y="160.7">6</tspan>
+                                <tspan x="289.4" y="181.7">7</tspan>
+                                <tspan x="289.4" y="202.7">8</tspan>
+                                <tspan x="289.4" y="223.7">9</tspan>
+                                <tspan x="279.8" y="244.7">10</tspan>
+                                <tspan x="279.8" y="265.7">11</tspan>
+                                <tspan x="279.8" y="286.7">12</tspan>
+                                <tspan x="279.8" y="307.7">13</tspan>
+                                <tspan x="279.8" y="328.7">14</tspan>
+                                <tspan x="279.8" y="349.7">15</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="code-tabs">
+                        <g id="tab-4-active">
+                            <path  fill="#313E44"
+                                d="M626 5a5 5 0 00-5 5v25H275v5h486v-5h-41V10a5 5 0 00-5-5h-89z" />
+                            <text id="main" fill="#E5E5E5" font-size="14" font-weight="bold">
+                                <tspan x="628" y="24.8">main.js</tspan>
+                            </text>
+                            <use x="693" y="15" width="13" height="13"  href="#close" />
+                        </g>
+                        <g id="tab-3">
+                            <text fill="#E5E5E5" font-size="14" font-weight="bold">
+                                <tspan x="524" y="24.8">styles.css</tspan>
+                            </text>
+                            <use x="597" y="15" width="13" height="13"  href="#close" />
+                        </g>
+                        <g id="tab-2">
+                            <rect  width="1" height="18" x="516" y="11" fill="#C4C4C4" class="breaker" />
+                            <text fill="#E5E5E5" font-size="14" font-weight="bold">
+                                <tspan x="422" y="24.8">heroes.h..</tspan>
+                            </text>
+                         <use x="492" y="15" width="13" height="13"  href="#close" />
+                        </g>
+                        <g id="tab-1">
+                            <rect width="1" height="18" x="413" y="11" fill="#C4C4C4" class="breaker" />
+                            <text fill="#E5E5E5" font-size="14" font-weight="bold">
+                                <tspan x="319" y="24.8">notes.txt</tspan>
+                            </text>
+                         <use x="390" y="15" width="13" height="13"  href="#close" />
+                        </g>
+                        <g id="folder">
+                            <path id="thumbtab" fill="#334248" d="M274 5h15a13 13 0 0113 13v1a13 13 0 01-13 13h-15V5z" />
+                            <use width="13" height="13" transform="matrix(1 0 0 1 734.2 13.8)" href="#new-item" />
+                            <use width="17.1" height="12" transform="translate(279.3 13.5)" href="#folder-open" />
+                        </g>
+                        <rect width="1" height="18" x="310" y="11" fill="#C4C4C4" class="breaker" />
+                    </g>
+                    <g id="browser">
+                        <g id="browser-window">
+                            <rect width="486" height="279" x="275" y="431" fill="#fff" />
+                            <g fill="#ddd">
+                                <rect width="486" height="45" x="275" y="431"  />
+                            </g>
+                            <rect class="address-bar" width="411" height="30" x="312.5" y="437.5" fill="#fff"
+                                stroke="#C4C4C4" />
+                            <text fill="#889198" font-size="15" font-weight="500">
+                                <tspan x="429" y="457.1">Open an HTML file to view</tspan>
+                            </text>
+                            <path class="reload" stroke="#889198"
+                                d="M295.4 450.6h4.6m0 0a6.2 6.2 0 00-6-4.6 6 6 0 104 10.5m2-5.9V446"
+                                style="stroke-width:1.25px" />
+                            <path class="expand" stroke="#889198"
+                                d="M748 453.5v4.5c0 .6-.4 1-1 1h-9a1 1 0 01-1-1v-9c0-.6.4-1 1-1h4.5m-2.5 7l9-9m0 0v4m0-4h-4" />
+                        </g>
+                    <g id="browser-tab">
+                            <use width="13" height="13" transform="matrix(.89533 0 0 .89533 459.8 406)" href="#new-item" />
+                            <path fill="#324046" d="M281 397a2 2 0 00-2 2v28h-4v4h486v-4H445v-28a2 2 0 00-2-2H281z" />
+                            <text fill="#E5E5E5" font-size="14" font-weight="bold">
+                                <tspan x="308" y="416">Web Browser</tspan>
+                            </text>
+                        <use href="#globe-icon" stroke="#E5E5E5" width="16" x="285" y="56" />
+                            <use x="420" y="407" width="13" height="13"  href="#close" />
+                        </g>
+                    </g>
+                    <g id="code-tools">
+                        <rect width="488" height="36" x="273" y="355" fill="#334248" />
+                        <g id="edit" fill="#2A95D0">
+                            <path d="M298.4 365.7a1 1 0 00-1.4 0l-1.4 1.4 3.5 3.6 1.5-1.5c.3-.3.3-1 0-1.4l-2.2-2z" />
+                            <path fill-rule="evenodd"
+                                d="M294.9 367.8l3.5 3.6-7.1 7.1a1 1 0 01-.7.3h-2.1a1 1 0 01-1-1v-2.1c0-.3 0-.6.3-.7l7.1-7.2zm-6.4 7.8h.7v1.4h1.5v.7h-2.2v-2z" clip-rule="evenodd" />
+                        </g>
+                        <g id="bin" fill="#FF5960">
+                            <path
+                                d="M327 366h4l1 1h3v1h-12v-1h3l1-1zM334 369h-10l.5 9c0 .6.4 1 1 1h7c.6 0 1-.4 1-1l.5-9z" />
+                        </g>
+                        <g class="dl">
+                            <path fill="#C4C4C4" fill-rule="evenodd"
+                                d="M362 366.4c0-.2.2-.4.4-.4h2.2c.2 0 .4.2.4.4v4.6h2c.4 0 .6.5.3.7l-3.5 3.9c-.1.2-.5.2-.6 0l-3.5-3.9c-.3-.2-.1-.7.3-.7h2v-4.6zm-4 8.6h4l1.2 1.3c.1.2.5.2.6 0l1.2-1.3h4c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1h-11c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1zm8 2h1v1h-1v-1zm3 0h-1v1h1v-1z" clip-rule="evenodd" />
+                        </g>
+                        <g id="tool-handle">
+                            <rect width="6" height="30" x="271.5" y="342.5" fill="#324147" stroke="#243239" rx="1.5" />
+                            <path stroke="#E5E5E5" d="M273.5 350v15" />
+                            <path stroke="#E5E5E5" d="M275.5 350v15" />
+                        </g>
                     </g>
                 </g>
-                        <g id="code-tabs">
-                            <g id="tab-4-active">
-                                <path  fill="#313E44"
-                                    d="M626 5a5 5 0 00-5 5v25H275v5h486v-5h-41V10a5 5 0 00-5-5h-89z" />
-                                <text id="main" fill="#E5E5E5" font-size="14" font-weight="bold">
-                                    <tspan x="628" y="24.8">main.js</tspan>
-                                </text>
-                                <use width="7.6" height="7.6" transform="matrix(.89533 0 0 .89533 696.5 16.7)" href="#close" />
-                            </g>
-                            <g id="tab-3">
-                                <text fill="#E5E5E5" font-size="14" font-weight="bold">
-                                    <tspan x="524" y="24.8">styles.css</tspan>
-                                </text>
-                                <use width="7.6" height="7.6" transform="translate(604.4 16.9)" href="#close" />
-                            </g>
-                            <g id="tab-2">
-                                <use width="7.6" height="7.6" transform="translate(495.9 16.7)" href="#close" />
-                                <rect  width="1" height="18" x="516" y="11" fill="#C4C4C4" class="breaker" />
-                                <text fill="#E5E5E5" font-size="14" font-weight="bold">
-                                    <tspan x="422" y="24.8">heroes.h..</tspan>
-                                </text>
-                            </g>
-                            <g id="tab-1">
-                                <use width="7.6" height="7.6" transform="translate(391.2 15.9)" href="#close" />
-                                <rect width="1" height="18" x="413" y="11" fill="#C4C4C4" class="breaker" />
-                                <text fill="#E5E5E5" font-size="14" font-weight="bold">
-                                    <tspan x="319" y="24.8">notes.txt</tspan>
-                                </text>
-                            </g>
-                            <g id="folder">
-                                <path id="thumbtab" fill="#334248" d="M274 5h15a13 13 0 0113 13v1a13 13 0 01-13 13h-15V5z" />
-                                <use width="13" height="13" transform="matrix(1 0 0 1 734.2 13.8)" href="#new-item" />
-                                <use width="17.1" height="12" transform="translate(279.3 13.5)" href="#folder-open" />
-                            </g>
-                            <rect width="1" height="18" x="310" y="11" fill="#C4C4C4" class="breaker" />
-                        </g>
-                        <g id="browser">
-                            <g id="browser-window">
-                                <rect width="486" height="279" x="275" y="431" fill="#fff" />
-                                <g fill="#ddd">
-                                    <rect width="486" height="45" x="275" y="431"  />
-                                </g>
-                                <rect class="address-bar" width="411" height="30" x="312.5" y="437.5" fill="#fff"
-                                    stroke="#C4C4C4" />
-                                <text fill="#889198" font-size="15" font-weight="500">
-                                    <tspan x="429" y="457.1">Open an HTML file to view</tspan>
-                                </text>
-                                <path class="reload" stroke="#889198"
-                                    d="M295.4 450.6h4.6m0 0a6.2 6.2 0 00-6-4.6 6 6 0 104 10.5m2-5.9V446"
-                                    style="stroke-width:1.25px" />
-                                <path class="expand" stroke="#889198"
-                                    d="M748 453.5v4.5c0 .6-.4 1-1 1h-9a1 1 0 01-1-1v-9c0-.6.4-1 1-1h4.5m-2.5 7l9-9m0 0v4m0-4h-4" />
-                            </g>
-                        <g id="browser-tab">
-                                <use width="13" height="13" transform="matrix(.89533 0 0 .89533 459.8 406)" href="#new-item" />
-                                <path fill="#324046" d="M281 397a2 2 0 00-2 2v28h-4v4h486v-4H445v-28a2 2 0 00-2-2H281z" />
-                                <text fill="#E5E5E5" font-size="14" font-weight="bold">
-                                    <tspan x="308" y="416">Web Browser</tspan>
-                                </text>
-                            <use href="#globe-icon" stroke="#E5E5E5" width="16" x="285" y="56" />
-                                
-                                <use width="7.6" height="7.6" transform="translate(423.5 409)" href="#close" />
-                            </g>
-                        </g>
-                        <g id="code-tools">
-                            <rect width="488" height="36" x="273" y="355" fill="#334248" />
-                            <g id="edit" fill="#2A95D0">
-                                <path d="M298.4 365.7a1 1 0 00-1.4 0l-1.4 1.4 3.5 3.6 1.5-1.5c.3-.3.3-1 0-1.4l-2.2-2z" />
-                                <path fill-rule="evenodd"
-                                    d="M294.9 367.8l3.5 3.6-7.1 7.1a1 1 0 01-.7.3h-2.1a1 1 0 01-1-1v-2.1c0-.3 0-.6.3-.7l7.1-7.2zm-6.4 7.8h.7v1.4h1.5v.7h-2.2v-2z" clip-rule="evenodd" />
-                            </g>
-                            <g id="bin" fill="#FF5960">
-                                <path
-                                    d="M327 366h4l1 1h3v1h-12v-1h3l1-1zM334 369h-10l.5 9c0 .6.4 1 1 1h7c.6 0 1-.4 1-1l.5-9z" />
-                            </g>
-                            <g class="dl">
-                                <path fill="#C4C4C4" fill-rule="evenodd"
-                                    d="M362 366.4c0-.2.2-.4.4-.4h2.2c.2 0 .4.2.4.4v4.6h2c.4 0 .6.5.3.7l-3.5 3.9c-.1.2-.5.2-.6 0l-3.5-3.9c-.3-.2-.1-.7.3-.7h2v-4.6zm-4 8.6h4l1.2 1.3c.1.2.5.2.6 0l1.2-1.3h4c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1h-11c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1zm8 2h1v1h-1v-1zm3 0h-1v1h1v-1z" clip-rule="evenodd" />
-                            </g>
-                            <g id="tool-handle">
-                                <rect width="6" height="30" x="271.5" y="342.5" fill="#324147" stroke="#243239" rx="1.5" />
-                                <path stroke="#E5E5E5" d="M273.5 350v15" />
-                                <path stroke="#E5E5E5" d="M275.5 350v15" />
-                            </g>
-                        </g>
-                    </g>
-                </symbol>
-            
+            </symbol>
+        
             <symbol id="share-panel" viewBox="0 0 499 239" fill="none" class="shadow">
                 <rect width="499" height="239" rx="4" fill="#222222" />
-                    <use href="#link-icon" width="35" height="25" x="15" y="12" />
-                    <text fill="white" font-size="19" font-weight="500">
+                <use href="#link-icon" width="35" height="25" x="15" y="12" />
+                <text fill="white" font-size="19" font-weight="500">
                     <tspan x="41" y="35.5">Send as a link to this paragraph</tspan>
-                    </text>
-                    <use fill="#fff" width="15" height="15" x="462" y=" 16px" href="#close" />
-                    <line x1="3" y1="48.5" x2="499" y2="48.5" stroke="#444" />
+                </text>
+                <use fill="#fff" width="20" height="20" x="462" y="16" href="#close" />
+                <line x1="3" y1="48.5" x2="499" y2="48.5" stroke="#444" />
 
-                    <use href="#globe-icon" stroke="#768996" width="16" x="16" y="-46" />
-                    <text fill="#768996" font-size="14">
-                        <tspan x="41" y="78.8">Anybody with this link can view this part of the book.</tspan>
+                <use href="#globe-icon" stroke="#768996" width="16" x="16" y="-46" />
+                <text fill="#768996" font-size="14">
+                    <tspan x="41" y="78.8">Anybody with this link can view this part of the book.</tspan>
+                </text>
+            
+                <rect x="15" y="105" width="469" height="78" fill="#323232" />
+            
+                <text fill="#009AF9" font-family="Roboto" font-size="15">
+                    <tspan x="29" y="129.1">https://www.sitepoint.com/premium/books/learn-to-code-with-</tspan>
+                    <tspan x="29" y="147.1">javascript/read/1/kml7wxl6?fromShare=true</tspan>
+                </text>
+            
+            
+                <line x1="316.5" y1="196" x2="316.5" y2="227" stroke="#444" />
+                <g class="cta-blue">
+                    <rect x="333" y="192" width="151" height="37" rx="18.5" fill="#009AF9" />
+                    <text fill="white" font-family="Roboto" font-size="14" font-weight="bold">
+                        <tspan x="378" y="214.8">Copy Link</tspan>
                     </text>
-                
-                    <rect x="15" y="105" width="469" height="78" fill="#323232" />
-                
-                    <text fill="#009AF9" font-family="Roboto" font-size="15">
-                        <tspan x="29" y="129.1">https://www.sitepoint.com/premium/books/learn-to-code-with-</tspan>
-                        <tspan x="29" y="147.1">javascript/read/1/kml7wxl6?fromShare=true</tspan>
-                    </text>
-                
-                
-                    <line x1="316.5" y1="196" x2="316.5" y2="227" stroke="#444" />
-                    <g class="cta-blue">
-                        <rect x="333" y="192" width="151" height="37" rx="18.5" fill="#009AF9" />
-                        <text fill="white" font-family="Roboto" font-size="14" font-weight="bold">
-                            <tspan x="378" y="214.8">Copy Link</tspan>
-                        </text>
-                    </g>
-                </symbol>
+                </g>
+            </symbol>
+
             
             
                 <!-- / SYMBOLS -->
